@@ -1,0 +1,59 @@
+@import "../../styles/ConfigStyles/abstracts/Variables.scss";
+@import "../../styles/ConfigStyles/abstracts/Mixins.scss";
+@import "../../styles/ConfigStyles/base/Base.scss";
+@import "../../styles/ConfigStyles/layout/Grid.scss";
+@import "../../styles/ConfigStyles/base/Utilities";
+
+.section-hero{
+    align-items: center;
+    background-color: $color-grey-light;
+    justify-content: space-between;
+    margin: 4rem 4rem 0 4rem;
+    border-radius: 2rem;
+    padding: 4rem;
+    display: flex;
+    flex-direction: row;
+
+    body.dark-mode &{
+        background-color: $color-black-base;
+    }
+
+    @include respond(phone){
+        padding:2rem;
+    }
+
+    @include respond(tab-port){
+        flex-direction: column;
+        margin: 4rem 4rem 0 4rem;
+    }
+
+    &__text-container{
+        width: 50%;
+        @include respond(tab-port){
+            width: 100%;
+        }
+        
+
+    }
+    &__hi-text{
+        display: flex;
+        align-items: center;
+        margin-right: 1rem;
+    }
+    &__icon{
+        margin-right: 2rem;
+    }
+    &__name{
+        font-weight: 400;
+        &--rol{
+            font-weight: 700;
+            color: $color-yellow-dark;
+        }
+    }
+    &__img{
+        width: auto;
+        @include respond(tab-port){
+        width: 100%;
+        }
+    }
+}

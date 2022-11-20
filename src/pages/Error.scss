@@ -1,0 +1,27 @@
+@import "../styles/ConfigStyles/abstracts/Variables.scss";
+@import "../styles/ConfigStyles/abstracts/Mixins.scss";
+@import "../styles/ConfigStyles/base/Base.scss";
+@import "../styles/ConfigStyles/layout/Grid.scss";
+@import "../styles/ConfigStyles/base/Utilities";
+
+.error-section{
+    margin: auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 4rem;
+
+    & .img img{
+        width: 50rem;
+
+        @include respond(phone){
+            width: 100%;
+        }
+    }
+    &.img{
+        justify-content: center;
+    }
+
+}

@@ -1,0 +1,145 @@
+@import "../../styles/ConfigStyles/abstracts/Variables.scss";
+@import "../../styles/ConfigStyles/abstracts/Mixins.scss";
+@import "../../styles/ConfigStyles/base/Base.scss";
+@import "../../styles/ConfigStyles/layout/Grid.scss";
+@import "../../styles/ConfigStyles/base/Utilities";
+
+.hero-contact{
+    align-items: center;
+    background-color: $color-grey-light;
+    display: flex;
+    height: 50rem;
+    justify-content: center;
+    padding: 4rem;
+    width: 100%;
+
+    body.dark-mode &{
+        background-color: $color-black-base;
+    }
+
+    @include respond(tab-port){
+        height: auto;
+    }
+
+    &__container{
+        align-items: center;
+        display: flex;
+        width: $width-container;
+        justify-content: space-between;
+        padding: 0 4rem ;
+
+
+    @include respond(tab-port){
+        flex-direction: column;
+        height: auto;
+        padding: 0;
+    }
+    }
+
+    &__img{
+        width: auto;
+        @include respond(tab-port){
+            margin-top: 4rem;
+        }
+        @include respond(phone){
+            width: 100%;
+        }
+    }
+    
+
+}
+
+.contact-btns{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+
+    & img{
+        margin-bottom: 2rem;
+        height: 20rem;
+        width: 20rem;
+    }
+
+    & h2{
+        margin-bottom: 2rem;
+    }
+
+    &__text-box{
+        margin-bottom: 4rem;
+    }
+    
+
+    &__btns{
+        
+        display: flex;
+        justify-content: space-between;
+
+        @include respond(tab-port){
+            align-items: center;
+            justify-content: center;
+            flex-direction: column-reverse;
+            width: 100%;
+        }
+
+    }
+}
+
+.messageContainer{
+    border-radius: .4rem;
+    top: -6rem;
+    left: 0%;
+    right: 0%;
+    text-align: center;
+    margin: auto;
+    padding: 1rem;
+    position: absolute;
+    background-color: $color-yellow-light;  
+    height: auto;
+    width: 10rem;
+    z-index: 995;
+    
+    & .message{
+        color: $color-white;
+        font-size: 1.8rem;
+
+    }
+}
+.messageActive{
+    display: block;
+}
+.message-inactive{
+    display: none;
+}
+.message-animation{
+    animation: clipboard .3s ease-out;
+    animation-fill-mode: backwards;
+}
+.email{
+    margin: 0;
+}
+
+.button-container{
+    position: relative;
+}
+
+.messageContainer2{
+    top: -2rem;
+    left: 0%;
+    right: 0%;
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    height: auto;
+    width: auto;
+    z-index: 995;
+    
+    & .message{
+        border-radius: .4rem;
+        color: $color-yellow-light;
+        font-size: 1.4rem;
+        margin: 1rem;
+
+    }
+}

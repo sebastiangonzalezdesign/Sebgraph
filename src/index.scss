@@ -1,0 +1,33 @@
+@import './styles/ConfigStyles/base/Animations.scss';
+@import './styles/ConfigStyles/base/Base.scss';
+@import './styles/ConfigStyles/base/Dark.scss';
+@import './styles/ConfigStyles/base/Tipography.scss';
+@import './styles/ConfigStyles/base/Utilities.scss';
+
+
+@import './styles/ConfigStyles/abstracts/Mixins.scss';
+@import './styles/ConfigStyles/abstracts/Variables.scss';
+
+@import './styles/ConfigStyles/layout/Grid.scss';
+
+
+
+/* html {
+    box-sizing: border-box;
+    font-size: 10px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ccc;
+}
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+    margin: 0;
+  }
+
+Link{
+    margin-right: 2rem;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+} */

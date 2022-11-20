@@ -1,0 +1,48 @@
+@import "../styles/ConfigStyles/abstracts/Variables.scss";
+@import "../styles/ConfigStyles/abstracts/Mixins.scss";
+
+.footer{
+    background-color:  $color-grey-light;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem;
+    text-align: center;
+    margin-top: 2rem;
+
+    body.dark-mode &{
+        background-color: $color-black-base;
+    }
+
+
+    @include respond(phone){
+        padding-bottom: 14rem;
+    }
+
+    &__heading{
+        margin-bottom: 2rem;
+    }
+    &__text{
+        margin-bottom: 4rem;
+    }
+
+    
+    &__social-container{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+    &__social-item{
+        font-size: 6rem;
+        text-decoration: none;
+        color: $color-brown-dark;
+
+        body.dark-mode &{
+            color: $color-yellow-light;
+        }
+
+        &:not(:last-child) {
+            margin-right: 3rem;
+        }
+    }
+}

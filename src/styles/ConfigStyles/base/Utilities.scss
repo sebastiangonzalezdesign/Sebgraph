@@ -1,0 +1,75 @@
+@import "../abstracts/Variables.scss";
+
+.none {
+    // display: none;
+    visibility: hidden;
+    opacity: 0;
+    order: 1;
+}
+.d-none{
+    display: none;
+}
+.display-none{
+    display: none !important;
+}
+.mb-20{
+    margin-bottom: 2rem;
+}
+
+.mb-40{
+    margin-bottom: 4rem;
+}
+
+.mt-40{
+    margin-top: 4rem;
+
+}
+.is-active {
+    display: flex !important;
+  }
+
+.menu-active{
+    opacity: 1 !important;
+    &__link{
+        font-weight: 600 !important;
+    }
+}
+.menu-inactive{
+    opacity: .4;
+}
+
+.flex{
+    display: flex !important;
+}
+
+.tooltip-active{
+    visibility: visible !important;
+    opacity: 1  !important;
+}
+
+// animations
+.move-in-heading{
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards;
+}
+.move-in-subtitle{
+    animation: moveInBottom .5s ease-out 1s;
+    animation-fill-mode: backwards;
+}
+.header-animation{
+    animation: moveInTop .5s ease-out .5s;
+    animation-fill-mode: backwards;
+    @include respond(phone){
+        animation: none;
+    }
+}
+
+.img-hero-animation{
+    animation: moveInRight .5s ease-in .80s;
+    animation-fill-mode: backwards;
+    
+}
+
+.bg-white{
+    background-color: $color-white !important;
+}
