@@ -5,119 +5,72 @@
 @import "../styles/ConfigStyles/base/Utilities";
 
 .btn {
-    margin: 2rem;
-    position: relative;
-    text-decoration: none;
-    cursor: pointer;
+  margin: 2rem;
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  text-align: center;
+  transition: all 0.3s;
+  font-weight: $font-weight-bold;
+  font-family: $headings-font-family;
+  line-height: $text-line-height;
+  @include respond(phone) {
+    /* position: static; */
+  }
+  &,
+  &:link,
+  &:visited {
+    border: none;
     outline: none;
-    position: relative;
-    text-align: center;
-    @include respond(phone){
-        /* position: static; */
+    //Change for the <button> element
+    //border: none;
+    // cursor: pointer;
+  }
 
-    }
-    &,
-    &:link,
-    &:visited {
-        border-radius: 1rem;
-        font-size: 1.8rem;
-        font-weight: 700;
-        transition: all .2s;
-        outline: none;
-        padding: 2rem;
-        width: 30rem;
-        text-align: center;
-        transition: all .2s;
+  &--primary {
+    background-color: $light-primary-default;
+    border-radius: $boder-full;
+    color: $light-textIcon-primary-white;
 
-        //Change for the <button> element
-        //border: none;
-        // cursor: pointer;
-    }
-    
     &:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 1rem 2rem rgba($color-black,.2);
-        
+      background-color: $light-primary-hover;
+    }
+  }
 
-        &::after {
-            transform: scaleX(1.3) scaleY(1.4);
-            opacity: 0;
-            
-        }
-    }
-    
-    &:active,
-    &:focus {
-        outline: none;
-        transform: translateY(-1px);
-        box-shadow: 0 .5rem 1rem rgba($color-black,.2);
-        @include respond(phone){
-            transform: none;
-        }
-    
-        
-    }
-    
-    &--primary {
-        background-color: $color-yellow-dark;
-        border: none;
-        color: $color-white;
+  &--secondary {
+    background-color: $light-textIcon-primary-white;
+    border-radius: $boder-full;
+    border: 1px solid $core-color-neutral-300;
+    color: $light-textIcon-primary-black;
 
-        &::after {
-            background-color: $color-yellow-light;
-        }
+    &:hover {
+      background-color: $core-color-neutral-200;
+      border: 1px solid $core-color-base-black;
     }
+  }
 
-    &--secondary {
-        background-color: $color-white;
-        border: 1px solid $color-yellow-dark;
-        color: $color-yellow-dark;
+  &--animated {
+    animation: moveInBottom 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
+  }
 
-        &::after {
-            background-color: $color-white;
-            border: 1px solid $color-yellow-dark;
-        }
-    }
-    
-    &::after {
-        content: "";
-        display: flex;
-        align-items: center;
-        height: 100%;
-        width: 100%;
-        top: 0;
-        left: 0;
-        border-radius: 1rem;
-        position: absolute;
-
-        z-index: -1;
-        transition: all .4s;
-        @include respond(phone){
-            display: none;
-    
-        }
-    }
-    
-    &--animated {
-        animation: moveInBottom .5s ease-out .75s;
-        animation-fill-mode: backwards;
-    }
-
-    &__copy{
-        text-decoration: none;
-        color: $color-white;
-    }
+  &__copy {
+    text-decoration: none;
+    color: $color-white;
+  }
 }
 
 /* Button size */
 
-.btn--medium{
-    padding: 1rem 2rem;
-    font-size: 1.6rem;
+.btn--md {
+  padding: 1rem 2rem;
+  height: 2.5rem;
 }
 
-.btn--large {
-    padding: 2rem 3rem;
-    font-size: 2rem;
-
+.btn--lg {
+  font-size: $button-font-size-100;
+  padding: 0 1.5rem;
+  height: 3rem;
 }
