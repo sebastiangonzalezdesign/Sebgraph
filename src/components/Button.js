@@ -1,4 +1,5 @@
 import "./Button.scss";
+import React from "react";
 
 const STYLES = ["btn--primary", "btn--secondary"];
 

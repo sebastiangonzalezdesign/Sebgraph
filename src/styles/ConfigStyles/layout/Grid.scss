@@ -1,222 +1,198 @@
-.container-home{
-    display:grid;
-    grid-template-rows: repeat(2, auto);
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 4rem;
-    margin: auto;
-    max-width: 144rem;
+.container-home {
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 4rem;
+  margin: auto;
+  max-width: 75rem;
 
-    grid-template-areas: 
-                          "info info info info"
-                          "portfolio portfolio portfolio portfolio"
-                          ;
+  grid-template-areas:
+    "info info info info"
+    "portfolio portfolio portfolio portfolio";
 
-
-/*     .header{
+  /*     .header{
         grid-area: head;
         align-self: center;
 
     } */
-    .section-hero{
-        grid-area: info;
-        
-    }
-    .section-portfolio{
-        grid-area: portfolio;
-    }
-/*     .footer{
+  .section-hero {
+    grid-area: info;
+    margin: auto;
+  }
+  .section-portfolio {
+    grid-area: portfolio;
+  }
+  /*     .footer{
         grid-area: footer;
     } */
 }
 
-.container-about{
-    display:grid;
-    grid-template-rows: repeat(2, auto);
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 4rem;
-    margin: auto;
-    
+.container-about {
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 4rem;
+  margin: auto;
 
+  grid-template-areas:
+    "hero hero hero hero"
+    "perfil perfil perfil perfil";
 
-    grid-template-areas: 
-                         "hero hero hero hero"
-                         "perfil perfil perfil perfil";
-    
-    
-
-    .hero-about{
-        grid-area: hero;
-
-    }
-    .profile{
-        grid-area: perfil;
-
-    }
-
-
+  .hero-about {
+    grid-area: hero;
+  }
+  .profile {
+    grid-area: perfil;
+  }
 }
 
-.container-cv{
-    display:grid;
-    grid-template-rows: repeat(6, auto);
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 4rem;
-    margin: auto;
-    max-width: $width-container;
+.container-cv {
+  display: grid;
+  grid-template-rows: repeat(6, auto);
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 4rem;
+  margin: auto;
+  max-width: $width-container;
+  padding: 4rem;
+
+  grid-template-areas:
+    "name-cv name-cv name-cv name-cv name-cv"
+    "profile-cv profile-cv profile-cv profile-cv profile-cv"
+    "experience-cv experience-cv experience-cv education-cv education-cv"
+    "skills-cv skills-cv skills-cv languages-cv languages-cv"
+    "skills-cv skills-cv skills-cv hobbies-cv hobbies-cv"
+    "download-cv download-cv download-cv download-cv download-cv";
+
+  @include respond(tab-port) {
+    grid-template-rows: repeat(8, auto);
+    grid-gap: 2rem;
+    padding: 0 2rem;
+
+    grid-template-areas:
+      "name-cv name-cv name-cv name-cv name-cv"
+      "profile-cv profile-cv profile-cv profile-cv profile-cv"
+      "experience-cv experience-cv experience-cv experience-cv experience-cv"
+      "education-cv education-cv education-cv education-cv education-cv"
+      "skills-cv skills-cv skills-cv skills-cv skills-cv"
+      "languages-cv languages-cv languages-cv languages-cv languages-cv"
+      "hobbies-cv hobbies-cv hobbies-cv hobbies-cv hobbies-cv"
+      "download-cv download-cv download-cv download-cv download-cv";
+    width: auto;
+  }
+
+  .name-cv {
+    border-radius: 2rem;
+    grid-area: name-cv;
+    background-color: $color-white;
     padding: 4rem;
 
-    grid-template-areas: "name-cv name-cv name-cv name-cv name-cv"
-                         "profile-cv profile-cv profile-cv profile-cv profile-cv"
-                         "experience-cv experience-cv experience-cv education-cv education-cv"
-                         "skills-cv skills-cv skills-cv languages-cv languages-cv"
-                         "skills-cv skills-cv skills-cv hobbies-cv hobbies-cv"
-                         "download-cv download-cv download-cv download-cv download-cv";
-
-     @include respond(tab-port){
-        grid-template-rows: repeat(8, auto);
-        grid-gap: 2rem;
-        padding: 0 2rem;
-
-        grid-template-areas: "name-cv name-cv name-cv name-cv name-cv"
-        "profile-cv profile-cv profile-cv profile-cv profile-cv"
-        "experience-cv experience-cv experience-cv experience-cv experience-cv"
-        "education-cv education-cv education-cv education-cv education-cv"
-        "skills-cv skills-cv skills-cv skills-cv skills-cv"
-        "languages-cv languages-cv languages-cv languages-cv languages-cv"
-        "hobbies-cv hobbies-cv hobbies-cv hobbies-cv hobbies-cv"
-        "download-cv download-cv download-cv download-cv download-cv";
-        width: auto;
-        
-    }
-                    
-    
-    .name-cv{
-        border-radius: 2rem;
-        grid-area: name-cv;
-        background-color: $color-white;
-        padding: 4rem;
-
-        & h1{
-            color: $color-black;
-            body.dark-mode &{
-                color: $color-white;
-            }
-        }
-
-        & span{
-            color: $color-black;
-            body.dark-mode &{
-                color: $color-white;
-            }
-        }
-
-        body.dark-mode &{
-            background-color: $color-black;
-        }
-
-    }
-    .profile-cv{
-        border-radius: 2rem;
-        grid-area: profile-cv;
-        background-color: $color-grey-light;
-        padding: 4rem;
-
-        body.dark-mode &{
-            background-color: $color-black-base;
-        }
-
-    }
-    .experience-cv{
-        border-radius: 2rem;
-        grid-area: experience-cv;
-        background-color: $color-brown-dark;
-        padding: 4rem;
-
-    }
-    .education-cv{
-        border-radius: 2rem;
-        grid-area: education-cv;
-        background-color: $color-grey-light;
-        padding: 4rem;
-
-        body.dark-mode &{
-            background-color: $color-black-base;
-        }
-
-    }
-    .skills-cv{
-        border-radius: 2rem;
-        grid-area: skills-cv;
-        background-color: $color-grey-light;
-        padding: 4rem;
-
-        body.dark-mode &{
-            background-color: $color-black-base;
-        }
-
-    }
-    .languages-cv{
-        border-radius: 2rem;
-        grid-area: languages-cv;
-        background-color: $color-yellow-dark;
-        padding: 4rem;
-    }
-    .hobbies-cv{
-        border-radius: 2rem;
-        grid-area: hobbies-cv;
-        background-color: $color-yellow-light;
-        padding: 4rem;
-
-    }
-    .download-cv{
-        border-radius: 2rem;
-        grid-area: download-cv;
-        background-color: $color-white;
-        padding: 4rem;
-
-        body.dark-mode &{
-            background-color: $color-black-base;
-        }
-
+    & h1 {
+      color: $color-black;
+      body.dark-mode & {
+        color: $color-white;
+      }
     }
 
+    & span {
+      color: $color-black;
+      body.dark-mode & {
+        color: $color-white;
+      }
+    }
+
+    body.dark-mode & {
+      background-color: $color-black;
+    }
+  }
+  .profile-cv {
+    border-radius: 2rem;
+    grid-area: profile-cv;
+    background-color: $color-grey-light;
+    padding: 4rem;
+
+    body.dark-mode & {
+      background-color: $color-black-base;
+    }
+  }
+  .experience-cv {
+    border-radius: 2rem;
+    grid-area: experience-cv;
+    background-color: $color-brown-dark;
+    padding: 4rem;
+  }
+  .education-cv {
+    border-radius: 2rem;
+    grid-area: education-cv;
+    background-color: $color-grey-light;
+    padding: 4rem;
+
+    body.dark-mode & {
+      background-color: $color-black-base;
+    }
+  }
+  .skills-cv {
+    border-radius: 2rem;
+    grid-area: skills-cv;
+    background-color: $color-grey-light;
+    padding: 4rem;
+
+    body.dark-mode & {
+      background-color: $color-black-base;
+    }
+  }
+  .languages-cv {
+    border-radius: 2rem;
+    grid-area: languages-cv;
+    background-color: $color-yellow-dark;
+    padding: 4rem;
+  }
+  .hobbies-cv {
+    border-radius: 2rem;
+    grid-area: hobbies-cv;
+    background-color: $color-yellow-light;
+    padding: 4rem;
+  }
+  .download-cv {
+    border-radius: 2rem;
+    grid-area: download-cv;
+    background-color: $color-white;
+    padding: 4rem;
+
+    body.dark-mode & {
+      background-color: $color-black-base;
+    }
+  }
 }
 
-.container-contact{
-    display:grid;
-    grid-template-rows: repeat(2, auto);
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 4rem;
-    margin: auto;
+.container-contact {
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 4rem;
+  margin: auto;
 
-    grid-template-areas: 
-                         "hero-contact hero-contact hero-contact hero-contact"
-                         "info info info info";
-    
+  grid-template-areas:
+    "hero-contact hero-contact hero-contact hero-contact"
+    "info info info info";
 
-    .hero-contact{
-        grid-area: hero-contact;
-
-    }
-    .contact-btns{
-        grid-area: info;
-        padding: 4rem;
-
-    }
-
-
+  .hero-contact {
+    grid-area: hero-contact;
+  }
+  .contact-btns {
+    grid-area: info;
+    padding: 4rem;
+  }
 }
 
-.container-porfolio-modal{
-    display:grid;
-    grid-template-rows: repeat(7, auto);
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 4rem;
-    margin: auto;
-    max-width: 140rem;
-    
+.container-porfolio-modal {
+  display: grid;
+  grid-template-rows: repeat(7, auto);
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 4rem;
+  margin: auto;
+  max-width: 140rem;
 
-    grid-template-areas: 
+  grid-template-areas:
     "hero-modal hero-modal hero-modal hero-modal"
     "brief brief brief brief"
     "define define define define"
@@ -225,38 +201,30 @@
     "visual visual visual visual"
     "other other other other";
 
-    .modal__header{
-        grid-area: hero-modal;
-
-    }
-    .modal__project-info{
-        grid-area: brief;
-
-    }
-    .modal__define{
-        grid-area: define;
-        max-width: $width-container;
-
-    }
-    .modal__ideate{
-        grid-area: ideate;
-        max-width: $width-container;
-
-    }
-    .modal__prototyte{
-        grid-area: prototype;
-        max-width: $width-container;
-
-    }
-    .modal__visual-design{
-        grid-area: visual;
-        max-width: $width-container;
-
-    }
-    .modal__other-projects{
-        grid-area: other;
-        max-width: $width-container;
-
-    }
-
+  .modal__header {
+    grid-area: hero-modal;
+  }
+  .modal__project-info {
+    grid-area: brief;
+  }
+  .modal__define {
+    grid-area: define;
+    max-width: $width-container;
+  }
+  .modal__ideate {
+    grid-area: ideate;
+    max-width: $width-container;
+  }
+  .modal__prototyte {
+    grid-area: prototype;
+    max-width: $width-container;
+  }
+  .modal__visual-design {
+    grid-area: visual;
+    max-width: $width-container;
+  }
+  .modal__other-projects {
+    grid-area: other;
+    max-width: $width-container;
+  }
 }

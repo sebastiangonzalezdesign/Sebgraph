@@ -1,62 +1,64 @@
 body {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  /*font-size: 16px;*/
-  line-height: 1.7;
-  //color: $color-grey-dark;
+  font-family: $paragraph-font-family;
+  font-weight: $font-weight-regular;
+  line-height: $text-line-height;
 }
 .heading-primary {
-  color: $color-black-base;
+  font-family: $headings-font-family;
+  color: $light-textIcon-primary-black;
   backface-visibility: hidden;
   margin-bottom: 2.5rem;
-  font-size: 3rem;
-  line-height: 120%;
+  font-size: $display-font-size-200;
+  line-height: $heading-line-height;
+  font-weight: $font-weight-bold;
 
   body.dark-mode & {
-    color: $color-white;
+    color: $dark-textIcon-primary-white;
   }
 
   @include respond(phone) {
-    font-size: 3.2rem;
+    font-size: $headings-font-size-100;
   }
 }
 .heading-secondary {
-  color: $color-black-base;
+  font-family: $headings-font-family;
+  color: $light-textIcon-primary-black;
   backface-visibility: hidden;
-  font-size: 2.25rem;
-  line-height: 120%;
+  font-size: $headings-font-size-100;
+  line-height: $heading-line-height;
+  font-weight: $font-weight-bold;
 
   body.dark-mode & {
-    color: $color-white;
+    color: $dark-textIcon-primary-white;
   }
 }
 
 .heading-tertiary {
-  color: $color-black-base;
+  font-family: $headings-font-family;
+  color: $light-textIcon-primary-black;
   backface-visibility: hidden;
-  font-size: 1.5rem;
-  line-height: 120%;
-  font-weight: 700;
+  font-size: $headings-font-size-200;
+  line-height: $heading-line-height;
+  font-weight: $font-weight-bold;
 
   body.dark-mode & {
-    color: $color-white;
+    color: $dark-textIcon-primary-white;
   }
 
   @include respond(phone) {
-    font-size: 1.3125rem;
+    font-size: $headings-font-size-100;
   }
-}
-.body-large {
-  font-size: 1.125rem;
 }
 
 .paragraph {
-  font-size: 1rem;
-
-  /*     &:not(:last-child) {
-        margin-bottom: 3rem;
-    } */
+  font-family: $paragraph-font-family;
+  font-weight: $font-weight-regular;
+  line-height: $text-line-height;
+  font-size: $paragraph-font-size-100;
 }
 .small {
-  font-size: 0.75rem;
+  font-family: $paragraph-font-family;
+  font-weight: $font-weight-medium;
+  line-height: $text-line-height;
+  font-size: $paragraph-font-size-400;
 }
