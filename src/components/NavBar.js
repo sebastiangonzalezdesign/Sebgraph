@@ -35,8 +35,11 @@ const NavBar = () => {
 
         <div className="header__menu">
           <nav className="header__navigation">
-            <ul className={nav ? "header__list active" : "header__list"}>
-              <li className="header__item" onClick={handleNav}>
+            <ul className={nav ? "header__list  active" : "header__list"}>
+              <li
+                className={nav ? "header__item text-animation" : "header__item"}
+                onClick={handleNav}
+              >
                 <NavLink
                   className="header__link"
                   exact
@@ -46,7 +49,10 @@ const NavBar = () => {
                   Work
                 </NavLink>
               </li>
-              <li className="header__item" onClick={handleNav}>
+              <li
+                className={nav ? "header__item text-animation" : "header__item"}
+                onClick={handleNav}
+              >
                 <NavLink
                   className="header__link"
                   exact
@@ -56,7 +62,10 @@ const NavBar = () => {
                   About
                 </NavLink>
               </li>
-              <li className="header__item" onClick={handleNav}>
+              <li
+                className={nav ? "header__item text-animation" : "header__item"}
+                onClick={handleNav}
+              >
                 <NavLink
                   className="header__link"
                   exact
@@ -66,7 +75,10 @@ const NavBar = () => {
                   CV
                 </NavLink>
               </li>
-              <li className="header__item" onClick={handleNav}>
+              <li
+                className={nav ? "header__item text-animation" : "header__item"}
+                onClick={handleNav}
+              >
                 <NavLink
                   className="header__link"
                   exact
