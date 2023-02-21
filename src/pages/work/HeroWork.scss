@@ -7,46 +7,59 @@
 .section-hero {
   align-items: center;
   justify-content: space-between;
-  padding: 4rem 1.5rem 0 1.5rem;
+  padding: 4rem 1.5rem 1.5rem;
   display: flex;
   flex-direction: row;
+  gap: $spacings-6;
 
   body.dark-mode & {
     color: $dark-textIcon-primary-white;
   }
 
-  @include respond(phone) {
-    padding-top: 8rem;
-  }
-
   @include respond(tab-port) {
+    padding-top: 8rem;
     flex-direction: column;
-    margin: 4rem 4rem 0 4rem;
   }
 
-  &__text-container {
-    width: 50%;
+  &__container {
+    width: 60%;
+    &__text-container {
+      margin-bottom: $spacings-11;
+
+      & h1 {
+        margin-bottom: $spacings-6;
+      }
+      & p {
+        color: $light-textIcon-secondary-black;
+      }
+      @include respond(tab-port) {
+        text-align: center;
+      }
+    }
     @include respond(tab-port) {
       width: 100%;
     }
   }
-  &__hi-text {
+  &__btn-container {
+    max-width: 100%;
     display: flex;
-    align-items: center;
-    margin-right: 1rem;
-  }
-  &__icon {
-    margin-right: 2rem;
-  }
-  &__name {
-    font-weight: 400;
-    &--rol {
-      font-weight: 700;
-      color: $color-yellow-dark;
+    gap: $spacings-3;
+
+    @include respond(tab-port) {
+      justify-content: center;
+    }
+
+    & Button {
+      flex-wrap: wrap;
+      width: 200px;
+      @include respond(phone) {
+        width: 100%;
+      }
     }
   }
+
   &__img {
-    width: auto;
+    width: 40%;
     @include respond(tab-port) {
       width: 100%;
     }
