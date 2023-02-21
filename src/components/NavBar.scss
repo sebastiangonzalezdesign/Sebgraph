@@ -45,11 +45,6 @@
     body.dark-mode & {
       color: $dark-textIcon-primary-white;
     }
-
-    @include respond(phone) {
-      flex-direction: column;
-      margin: 0;
-    }
   }
   &__icon {
     width: 2rem;
@@ -58,11 +53,6 @@
   &__menu {
     display: flex;
     flex-direction: row;
-
-    @include respond(phone) {
-      justify-content: center;
-      margin-right: 0;
-    }
   }
 
   &__list {
@@ -73,47 +63,34 @@
     width: 100%;
     gap: $spacings-7;
 
-    @include respond(phone) {
-      align-items: center;
-      backface-visibility: hidden;
-      background-color: $color-white;
-      border-top: 2px solid $color-yellow-light;
-      width: 100vw;
+    @include respond(tab-port) {
+      position: absolute;
+      height: 100vh;
       justify-content: center;
+      flex-direction: column;
       align-items: center;
-      margin: auto;
-
-      body.dark-mode & {
-        background-color: $color-black;
-      }
+      background-color: $light-bg-surface;
+      left: -100vh;
+      top: 0;
+      transition: 0.4s ease;
     }
   }
   &__item {
     width: auto;
     cursor: pointer;
     transition: all 0.4s ease-in-out;
+  }
 
-    @include respond(phone) {
-      justify-content: center;
-      align-items: center;
-      display: flex;
-      flex-direction: column;
-      margin: auto;
-    }
-  }
-  &__icon-responsive {
-    width: auto;
-    display: none;
-    margin: auto;
-    @include respond(phone) {
-      display: flex;
-      margin: auto;
-    }
-  }
   &__link {
     opacity: 0.5;
     font-size: $label-font-size-100;
-    @include respond(phone) {
+    font-family: $label-font-size-100;
+    font-weight: $font-weight-medium;
+    line-height: $text-line-height;
+    text-decoration: none;
+
+    @include respond(tab-port) {
+      font-size: $headings-font-size-100;
       margin: auto;
     }
     &:link,
@@ -136,30 +113,15 @@
   }
 }
 
-.menu {
-  color: white;
-  &__link {
-    margin-right: 2rem;
-    text-decoration: none;
-    color: white;
-    font-weight: 600;
-  }
-}
-
-.active {
+.link-active {
   font-weight: 600 !important;
-  color: $color-black;
+  color: $light-textIcon-primary-black;
   opacity: 1;
 }
-
-a {
-  font-family: $label-font-size-100;
-  font-weight: $font-weight-medium;
-  line-height: $text-line-height;
-  text-decoration: none;
-  color: black;
+.header .active {
+  left: 0;
+  transition: 0.5s ease;
 }
-
 .header-bg {
   background-color: rgba(241, 243, 249, 0.9);
 }
@@ -173,4 +135,24 @@ a {
   flex-direction: row;
   height: 5rem;
   padding: 0 1.5rem;
+
+  & .hamburger {
+    background-color: red;
+    height: $spacings-9;
+    width: $spacings-9;
+    border-radius: $spacings-1;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index: 9999;
+    @include respond(tab-port) {
+      display: flex;
+    }
+
+    & .icon {
+      margin: auto;
+      width: $spacings-6;
+      height: $spacings-6;
+    }
+  }
 }

@@ -1,9 +1,7 @@
 import "./DarkModeButton.scss";
 import { useContext } from "react";
 import ThemeContext from "../context/ThemeContext";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
-import React from "react";
+import { SunIcon, MoonIcon } from "@heroicons/react/24/outline";
 
 const DarkModeButton = () => {
   const { theme, handleTheme } = useContext(ThemeContext);
@@ -19,7 +17,7 @@ const DarkModeButton = () => {
           value="light"
         />
         <div id="lightContainer" className="container-icon">
-          <FontAwesomeIcon className="radio-btn" icon={faSun} />
+          <SunIcon className="radio-btn" />
         </div>
       </label>
 
@@ -32,11 +30,7 @@ const DarkModeButton = () => {
           value="dark"
         />
         <div id="darkContainer" className="container-icon">
-          <FontAwesomeIcon
-            onClick={handleTheme}
-            className="radio-btn"
-            icon={faMoon}
-          />
+          <MoonIcon onClick={handleTheme} className="radio-btn" />
         </div>
       </label>
     </div>

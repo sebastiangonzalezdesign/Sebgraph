@@ -1,14 +1,11 @@
 import "./NavBar.scss";
 import { NavLink } from "react-router-dom";
 import Logo from "../img/logo.svg";
-import AboutIcon from "../img/about-icon.svg";
-import ContactIcon from "../img/contact-icon.svg";
-import CvIcon from "../img/cv-icon.svg";
-import WorkIcon from "../img/work-icon.svg";
 import { useContext, useState } from "react";
 import ThemeContext from "../context/ThemeContext";
 import DarkModeButton from "./DarkModeButton";
 import React from "react";
+import { Bars3BottomRightIcon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const NavBar = () => {
   const { theme } = useContext(ThemeContext);
@@ -22,8 +19,11 @@ const NavBar = () => {
       setColor(false);
     }
   };
-
   window.addEventListener("scroll", changeColor);
+
+  //mobile navigation
+  const [nav, setNav] = useState(false);
+  const handleNav = () => setNav(!nav);
 
   return (
     <header className={color ? `header header-bg ${theme}` : `header ${theme}`}>
@@ -35,72 +35,58 @@ const NavBar = () => {
 
         <div className="header__menu">
           <nav className="header__navigation">
-            <ul className="header__list">
-              <li className="header__item">
+            <ul className={nav ? "header__list active" : "header__list"}>
+              <li className="header__item" onClick={handleNav}>
                 <NavLink
                   className="header__link"
                   exact
                   to="/"
-                  activeClassName="active"
+                  activeClassName="link-active"
                 >
-                  <img
-                    className="header__icon-responsive"
-                    src={WorkIcon}
-                    alt="Work icon"
-                  />
                   Work
                 </NavLink>
               </li>
-              <li className="header__item">
+              <li className="header__item" onClick={handleNav}>
                 <NavLink
                   className="header__link"
                   exact
                   to="/about"
-                  activeClassName="active"
+                  activeClassName="link-active"
                 >
-                  <img
-                    className="header__icon-responsive"
-                    src={AboutIcon}
-                    alt="About icon"
-                  />
                   About
                 </NavLink>
               </li>
-              <li className="header__item">
+              <li className="header__item" onClick={handleNav}>
                 <NavLink
                   className="header__link"
                   exact
                   to="/cv"
-                  activeClassName="active"
+                  activeClassName="link-active"
                 >
-                  <img
-                    className="header__icon-responsive"
-                    src={CvIcon}
-                    alt="CV icon"
-                  />
                   CV
                 </NavLink>
               </li>
-              <li className="header__item">
+              <li className="header__item" onClick={handleNav}>
                 <NavLink
                   className="header__link"
                   exact
                   to="/contact"
-                  activeClassName="active"
+                  activeClassName="link-active"
                 >
-                  <img
-                    className="header__icon-responsive"
-                    src={ContactIcon}
-                    alt="Contact icon"
-                  />
                   Contact
                 </NavLink>
               </li>
             </ul>
           </nav>
         </div>
-
-        <DarkModeButton></DarkModeButton>
+        <DarkModeButton />
+        <div className="hamburger" onClick={handleNav}>
+          {!nav ? (
+            <Bars3BottomRightIcon className="icon" />
+          ) : (
+            <XMarkIcon className="icon" />
+          )}
+        </div>
       </nav>
     </header>
   );
