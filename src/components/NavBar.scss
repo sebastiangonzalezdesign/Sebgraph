@@ -76,6 +76,7 @@
       top: 0;
       transition: 0.4s ease;
       opacity: 0;
+      display: none;
     }
   }
   &__item {
@@ -125,6 +126,7 @@
   top: 0;
   transition: 0.5s ease;
   opacity: 1;
+  display: flex;
 }
 .header .text-animation {
   animation: 0.5s moveInBottom ease;
@@ -147,7 +149,7 @@
 
   & .hamburger {
     border: 1px solid $core-color-neutral-400;
-    border-radius: $boder-md;
+    border-radius: $border-md;
     cursor: pointer;
     color: $light-textIcon-primary-black;
     height: $spacings-9;

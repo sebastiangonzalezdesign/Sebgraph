@@ -5,6 +5,8 @@
   grid-gap: 4rem;
   margin: auto;
   max-width: 75rem;
+  width: 100vw;
+  padding: 0 1.5rem;
 
   grid-template-areas:
     "info info info info"
@@ -18,9 +20,14 @@
   .section-hero {
     grid-area: info;
     margin: auto;
+    max-width: 75rem;
+    width: 100%;
   }
   .section-portfolio {
     grid-area: portfolio;
+    margin: auto;
+    max-width: 75rem;
+    width: 100%;
   }
   /*     .footer{
         grid-area: footer;

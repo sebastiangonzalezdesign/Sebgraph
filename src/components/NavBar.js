@@ -37,7 +37,9 @@ const NavBar = () => {
           <nav className="header__navigation">
             <ul className={nav ? "header__list  active" : "header__list"}>
               <li
-                className={nav ? "header__item text-animation" : "header__item"}
+                className={
+                  nav ? "header__item text-animation " : "header__item"
+                }
                 onClick={handleNav}
               >
                 <NavLink

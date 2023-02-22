@@ -6,8 +6,9 @@
 
 .section-hero {
   align-items: center;
+  height: 723px;
   justify-content: space-between;
-  padding: 4rem 1.5rem 1.5rem;
+  /*   padding: 5rem 1.5rem 0 1.5rem; */
   display: flex;
   flex-direction: row;
   gap: $spacings-6;
@@ -17,6 +18,7 @@
   }
 
   @include respond(tab-port) {
+    height: auto;
     padding-top: 8rem;
     flex-direction: column;
   }

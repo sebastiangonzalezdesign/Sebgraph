@@ -20,8 +20,6 @@ import { useProject } from "../../hooks/useProject";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-
-
 export default function Portfolio() {
   const [selected, setSelected] = useState("all");
   const [data, setData] = useState([]);
@@ -31,19 +29,13 @@ export default function Portfolio() {
 
   /* Scroll animation */
   useEffect(() => {
-    Aos.init({duration: 1000});
-
-},[]);
-
-
-
-
+    Aos.init({ duration: 1000 });
+  }, []);
 
   let refProject = useRef();
 
   /* console.log( refThumbnail.current.children.item(0).textContent); */
   /* console.log(refThumbnail, refProject); */
-
 
   const list = [
     {
@@ -92,19 +84,16 @@ export default function Portfolio() {
   //Función para los eventos onClick de los thumbnails
 
   const thumbnailsOnClick = (e) => {
-        if(e.currentTarget.textContent === "Solve For TomorrowCheil | 2020"){
-            setDataPortfolio(Solve);
-        }
-        else if(e.currentTarget.textContent === "AV Expert AppCheil | 2020") {
-            setDataPortfolio(AV);
-        }
-        else if(e.currentTarget.textContent === "Essilor AppCheil | 2020") {
-            setDataPortfolio(Essilor);
-        }
-        else if(e.currentTarget.textContent === "Landing S21Cheil | 2020") {
-            setDataPortfolio(Landing);
-        }
-/* 
+    if (e.currentTarget.textContent === "Solve For TomorrowCheil | 2020") {
+      setDataPortfolio(Solve);
+    } else if (e.currentTarget.textContent === "AV Expert AppCheil | 2020") {
+      setDataPortfolio(AV);
+    } else if (e.currentTarget.textContent === "Essilor AppCheil | 2020") {
+      setDataPortfolio(Essilor);
+    } else if (e.currentTarget.textContent === "Landing S21Cheil | 2020") {
+      setDataPortfolio(Landing);
+    }
+    /* 
     e.currentTarget.textContent === "Solve For TomorrowCheil | 2020"
       ? setDataPortfolio(Solve)
       : e.currentTarget.textContent === "AV Expert AppCheil | 2020"
@@ -116,9 +105,7 @@ export default function Portfolio() {
       : console.log("falla"); */
 
     openProject();
-    
   };
-
 
   return (
     <>
@@ -135,11 +122,10 @@ export default function Portfolio() {
           ))}
         </ul>
 
-        <article  className="section-portfolio__container-grid">
-          
+        <article className="section-portfolio__container-grid">
           {data.map((d) => (
             <figure
-              data-aos="fade-up" 
+              data-aos="fade-up"
               ref={refProject}
               id={d.id}
               onClick={thumbnailsOnClick}
@@ -160,7 +146,6 @@ export default function Portfolio() {
             </figure>
           ))}
 
-
           {dataPortfolio.map((dataPortfolio) => (
             <Project
               id={dataPortfolio.id}
@@ -169,13 +154,15 @@ export default function Portfolio() {
               closeProject={closeProject}
             >
               <>
-                {dataPortfolio.id === 1 && <SolveForTomorrow key={dataPortfolio.id}/>}
-                {dataPortfolio.id === 2 && <AvExpert key={dataPortfolio.id}/>}
-                {dataPortfolio.id === 3 && <EssilorAPP key={dataPortfolio.id}/>}
-                {dataPortfolio.id === 4 && <LandingPage/>}
+                {dataPortfolio.id === 1 && (
+                  <SolveForTomorrow key={dataPortfolio.id} />
+                )}
+                {dataPortfolio.id === 2 && <AvExpert key={dataPortfolio.id} />}
+                {dataPortfolio.id === 3 && (
+                  <EssilorAPP key={dataPortfolio.id} />
+                )}
+                {dataPortfolio.id === 4 && <LandingPage />}
               </>
-
-
             </Project>
           ))}
         </article>
