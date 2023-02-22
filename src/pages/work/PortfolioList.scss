@@ -1,15 +1,18 @@
 @import "../../styles/ConfigStyles/abstracts/Variables.scss";
-.portfolioList{
-    cursor: pointer;
-    font-size: 1.6rem;
-    font-weight: 600;
-    margin-right: 5rem;
-    padding: .7rem 1.6rem;
+.portfolioList {
+  cursor: pointer;
+  padding: 1rem;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  color: $light-textIcon-secondary-black;
+  border-radius: $border-full;
+  width: auto;
+  &:hover {
+    background-color: $light-primary-bg;
+  }
 
-    &.active{
-        background-color: $color-yellow-dark;
-        border-radius: .8rem;
-        color: $color-grey-light;
-    }
+  &.active {
+    color: $light-textIcon-primary-black;
+    font-size: $font-weight-bold;
+  }
 }
-

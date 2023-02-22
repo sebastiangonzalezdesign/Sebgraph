@@ -18,13 +18,13 @@ const HeroWork = () => {
       <article className="section-hero__container">
         <div className="section-hero__container__text-container">
           <h1
-            className="display-100--bold"
+            className="display__100--bold"
             data-aos="fade-up"
             data-aos-delay="500"
           >
             Hi! I’m Sebastian
           </h1>
-          <p className="paragraph">
+          <p className="paragraph__100--regular">
             I will help you to connect the users with your digital products
             through great experiences and memorable interfaces.
           </p>

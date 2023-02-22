@@ -30,7 +30,7 @@
 
   &--primary {
     background-color: $light-primary-default;
-    border-radius: $boder-full;
+    border-radius: $border-full;
     color: $light-textIcon-primary-white;
 
     &:hover {
@@ -40,7 +40,7 @@
 
   &--secondary {
     background-color: $light-textIcon-primary-white;
-    border-radius: $boder-full;
+    border-radius: $border-full;
     border: 1px solid $core-color-neutral-300;
     color: $light-textIcon-primary-black;
 
