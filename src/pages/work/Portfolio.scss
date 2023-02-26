@@ -31,58 +31,94 @@
     }
   }
   &__container-grid {
-    align-items: center;
+    cursor: pointer;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    gap: $spacings-6;
     width: 100%;
   }
 
   &__card-project {
-    align-items: center;
-    cursor: pointer;
+    align-items: start;
     display: flex;
-    justify-content: center;
-    width: 50rem;
-    height: 50rem;
-    border-radius: 2rem;
-    position: relative;
+    flex: 1 auto;
+    width: 500px;
+    height: auto;
+    border-radius: $border-xl;
+    background-color: $light-bg-surface;
+    padding: $spacings-6;
     transition: all 0.5s ease;
-    animation: portfolio 0.5s ease-in-out;
+    animation: portfolio 0.3s ease;
     animation-fill-mode: backwards;
     overflow: hidden;
+    gap: $spacings-6;
+    @include respond(tab-port) {
+      animation: none;
+      width: 100%;
+      height: auto;
+    }
     @include respond(phone) {
       animation: none;
+      width: 100%;
+      flex-direction: column;
+      height: auto;
     }
-
     &:hover {
-      background-color: $color-black-base;
-      img {
+      background-color: $light-primary-bg;
+      & img {
         transform: scale(110%);
-        opacity: 0.2;
+        opacity: 0.4;
         z-index: 0;
       }
     }
   }
 
-  &__text-card {
-    position: absolute;
-
-    h2,
-    p,
-    a {
-      color: $color-white;
-    }
-  }
   &__img {
-    width: 100%;
+    border-radius: $border-lg;
+    width: 40%;
     height: 100%;
     object-fit: cover;
     z-index: 1;
     transition: all 0.5s ease;
+    @include respond(phone) {
+      width: 100%;
+    }
+    /* 
+    &:hover {
+      transform: scale(110%);
+      opacity: 0.2;
+      z-index: 0;
+    } */
+  }
+
+  &__text-card {
+    width: 60%;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    gap: $spacings-8;
+    h2 {
+      color: $light-textIcon-primary-black;
+    }
+    span,
+    p {
+      color: $light-textIcon-secondary-black;
+    }
+    & .head-text {
+      display: flex;
+      flex-direction: column;
+      gap: $spacings-3;
+    }
+    @include respond(phone) {
+      width: 100%;
+    }
   }
 }
 
+button {
+  max-width: 320px;
+  width: 100%;
+}
 .d-none {
   display: none;
 }
