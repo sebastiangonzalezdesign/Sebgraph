@@ -1,0 +1,473 @@
+@import "../../styles/ConfigStyles/base/Animations.scss";
+@import "../../styles/ConfigStyles/abstracts/Variables.scss";
+@import "../../styles/ConfigStyles/abstracts/Mixins.scss";
+@import "../../styles/ConfigStyles/base/Base.scss";
+@import "../../styles/ConfigStyles/layout/Grid.scss";
+@import "../../styles/ConfigStyles/base/Utilities";
+
+.animation-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  height: auto;
+  width: auto;
+  padding: 4rem;
+  @include respond(phone) {
+    flex-direction: column;
+  }
+  .animation-box {
+    width: 50rem;
+    margin: 2rem;
+
+    @include respond(phone) {
+      width: 100%;
+    }
+  }
+  .animation {
+    border-radius: 1.6rem;
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .animation-dark {
+    border-radius: 1.6rem;
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    background-color: $color-black-base;
+  }
+}
+
+/* -----------revisar css ------------- */
+.project {
+  align-items: center;
+  justify-content: center;
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 4rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /*     background-color: rgba(0,0,0,0.75); */
+  background-color: $color-white;
+  border-radius: 20px 20px 0px 0px;
+  box-shadow: 0 0 0 5em rgba($color-black-base, 0.5);
+}
+
+.is-open {
+  animation: 0.4s modalIn ease-in-out;
+  display: flex;
+}
+.is-close {
+  animation: 0.4s modalOut ease-in-out;
+}
+.project-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  align-self: flex-start;
+  overflow-y: auto;
+  padding: 0;
+  border-radius: 20px 20px 0px 0px;
+}
+.project-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+/* --------------------mi css-------------------- */
+
+.modal {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: $color-white;
+  border-radius: 20px 20px 0px 0px;
+  box-shadow: 0 0 0 5em rgba($color-black-base, 0.5);
+  position: fixed;
+  z-index: 999;
+  top: 4rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-y: scroll;
+  &__container {
+    max-width: 200rem;
+    position: relative;
+  }
+
+  &__close {
+    background: $color-yellow-dark;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba($color-black, 0.5);
+    height: 3em;
+    position: fixed;
+    right: 1em;
+    top: 2rem;
+    border: 1px solid $color-white;
+    width: 3em;
+    outline: none;
+    cursor: pointer;
+    z-index: 999;
+  }
+  &__icon {
+    fill: $color-white;
+    width: 2em;
+    height: 2em;
+  }
+  &__header {
+    align-items: center;
+    background-color: $color-grey-light;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    min-height: 50rem;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+  }
+  &__header-av {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(34, 34, 34, 0.8),
+        rgba(20, 12, 3, 0.8)
+      ),
+      url(https://sebgraph.co/images/projects/av/hero-image-av.png);
+  }
+  &__header-essilor {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(34, 34, 34, 0.9),
+        rgba(20, 12, 3, 0.9)
+      ),
+      url(https://sebgraph.co/images/projects/essilor/hero-image-essilor.png);
+  }
+  &__header-solve-for-tomorrow {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(34, 34, 34, 0.9),
+        rgba(20, 12, 3, 0.9)
+      ),
+      url(https://sebgraph.co/images/projects/solve/hero-image-solve-for-tomorrow.png);
+  }
+  &__header-landing-s21 {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(34, 34, 34, 0.9),
+        rgba(20, 12, 3, 0.9)
+      ),
+      url(https://sebgraph.co/images/projects/landing-s21/hero-image-landing-s21.png);
+  }
+
+  &__project-info {
+    border-radius: 2rem;
+    box-shadow: 0px 4px 2px rgba(34, 34, 34, 0.1);
+    margin: 4rem;
+
+    justify-content: center;
+    max-width: 140rem;
+    display: flex;
+    padding: 4rem;
+
+    @include respond(tab-port) {
+      width: 100%;
+      margin: 0;
+      padding: 2rem;
+      margin-bottom: 4rem;
+    }
+  }
+  &__define {
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+    @include respond(tab-port) {
+      padding: 2rem;
+    }
+  }
+  &__text-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+  &__img-container {
+    align-items: center;
+    background-color: $color-grey-light;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    width: auto;
+    padding: 4rem;
+
+    @include respond(tab-port) {
+      padding: 2rem;
+      height: auto;
+      width: auto;
+    }
+  }
+  &__img-container-dark {
+    align-items: center;
+    background-color: $color-black-base;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    width: auto;
+    padding: 4rem;
+
+    @include respond(tab-port) {
+      padding: 2rem;
+      height: auto;
+      width: auto;
+    }
+  }
+
+  &__img-complete {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+
+    @include respond(tab-port) {
+      height: auto;
+      width: 100%;
+    }
+  }
+  &__img-complete:not(:last-child) {
+    margin-bottom: 4rem;
+  }
+  &__title {
+    margin-bottom: 2rem;
+  }
+  &__text {
+    max-width: 80rem;
+    margin: auto;
+    text-align: left;
+  }
+  &__template {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 4rem;
+    width: 100%;
+    @include respond(tab-port) {
+      width: 100%;
+      margin: 0;
+      padding: 2rem;
+      margin-bottom: 4rem;
+    }
+  }
+  &__subtitle {
+    margin-bottom: 2rem;
+  }
+  &__ideate {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 4rem;
+    width: 100%;
+    @include respond(tab-port) {
+      width: 100%;
+      margin: 0;
+      padding: 2rem;
+      margin-bottom: 4rem;
+    }
+  }
+  &__prototype {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 4rem;
+
+    @include respond(tab-port) {
+      width: 100%;
+      margin: 0;
+      padding: 2rem;
+      margin-bottom: 4rem;
+    }
+  }
+  &__visual-design {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 4rem;
+    width: 100%;
+    @include respond(tab-port) {
+      width: 100%;
+      margin: 0;
+      padding: 2rem;
+    }
+  }
+  &__other-projects {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 4rem;
+    @include respond(tab-port) {
+      width: 100%;
+      margin: 0;
+      padding: 2rem;
+      margin-bottom: 4rem;
+    }
+  }
+}
+
+.modal-header {
+  &__text-box {
+    display: flex;
+    flex-direction: column;
+  }
+  &__title {
+    color: $color-yellow-dark;
+    margin-bottom: $gutter-vertical;
+  }
+  &__info-content {
+    display: flex;
+    flex-direction: column;
+    color: $color-white;
+    text-align: center;
+  }
+  &__text {
+    font-size: 5rem;
+  }
+}
+
+.project-info {
+  &__container {
+    display: flex;
+    @include respond(tab-port) {
+      flex-direction: column;
+    }
+  }
+  &__img {
+    background-color: $color-grey-light;
+    border-radius: 2rem;
+    margin-right: 4rem;
+    width: 50rem;
+    height: 30rem;
+    object-fit: cover;
+    @include respond(tab-port) {
+      margin: auto;
+      margin-bottom: 4rem;
+      width: 100%;
+    }
+  }
+  &__text-box {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  &__name {
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+}
+
+.define {
+  margin-bottom: 4rem;
+  &__boxes {
+    display: flex;
+    justify-content: center;
+    @include respond(tab-port) {
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+  &__box {
+    background-color: $color-black-base;
+    border-radius: 2rem;
+    padding: 4rem;
+    width: 50%;
+    text-align: left;
+
+    & h3,
+    ol,
+    ul,
+    li,
+    p {
+      color: $color-white;
+    }
+
+    body.dark-mode & {
+      background-color: $color-black;
+    }
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
+  }
+  &__box:not(:last-child) {
+    margin-right: 4rem;
+    @include respond(tab-port) {
+      margin-right: 0;
+      margin-bottom: 4rem;
+    }
+  }
+  &__goal-list {
+    list-style: none;
+    flex-direction: column;
+  }
+  &__goal-item::before {
+    content: "•";
+    color: $color-yellow-dark;
+    margin-right: 1rem;
+  }
+
+  &__mindset-box:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  &__mindset-box {
+    & span {
+      color: $color-yellow-dark;
+      font-weight: 700;
+    }
+  }
+}
+
+.prototype {
+  & picture {
+    margin-bottom: 4rem;
+  }
+
+  &__text-img {
+    & img {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__text {
+    margin-bottom: 2rem;
+  }
+  &__title {
+    text-align: center;
+  }
+}
+
+.visual-design {
+  & picture {
+    margin-bottom: 4rem;
+  }
+}
+
+.end {
+  &__text {
+    color: $color-yellow-dark;
+  }
+  &__line {
+    border: 3px solid $color-black;
+    width: 6rem;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+}

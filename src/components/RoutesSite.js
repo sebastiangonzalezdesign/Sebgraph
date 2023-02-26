@@ -6,6 +6,7 @@ import Contact from "../pages/contact/Contact";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 import React from "react";
+import SolveForTomorrow from "../pages/projects/SolveForTomorrow";
 /* import DarkModeButton from "./DarkModeButton"; */
 import { ThemeProvider } from "../context/ThemeContext";
 import Error404 from "../pages/Error404";
@@ -23,6 +24,12 @@ const RoutesSite = () => {
           <Route exact path="/about" component={About} />
           <Route exact path="/cv" component={CV} />
           <Route exact path="/contact" component={Contact} />
+
+          <Route
+            exact
+            path="/projects/solve-for-tomorrow"
+            component={SolveForTomorrow}
+          />
           <Route path="*" component={Error404} />
         </Switch>
         <Footer />
