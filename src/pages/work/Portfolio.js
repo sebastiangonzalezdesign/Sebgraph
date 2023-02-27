@@ -1,12 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-/* import Project from "../../components/projects/Project";
-
-import AvExpert from "../../components/projects/AvExpert";
-import SolveForTomorrow from "../../components/projects/SolveForTomorrow";
-import EssilorAPP from "../../components/projects/Essilor";
-import LandingPage from "../../components/projects/Landing"; */
 import { Link } from "react-router-dom";
-
 import "./Portfolio.scss";
 import PortfolioList from "./PortfolioList";
 import {
@@ -81,39 +74,6 @@ export default function Portfolio() {
     }
   }, [selected]);
 
-  // useEffect portfolio
-
-  //Función para los eventos onClick de los thumbnails
-
-  /*   const thumbnailsOnClick = (e) => {
-    if (e.currentTarget.textContent.includes("Solve For Tomorrow")) {
-      setDataPortfolio(Solve);
-    } else if (e.currentTarget.textContent.includes("AV Expert")) {
-      setDataPortfolio(AV);
-    } else if (e.currentTarget.textContent.includes("Essilor")) {
-      setDataPortfolio(Essilor);
-    } else if (e.currentTarget.textContent.includes("Landing S21")) {
-      setDataPortfolio(Landing);
-    }
-
-    openProject();
-  }; */
-
-  /* -------Function to set the link------------ */
-  /*   let { url, path } = useRouteMatch();
-
-  const setLink = (e) => {
-    if (e.currentTarget.textContent.includes("Solve For Tomorrow")) {
-      url.concat("solve-for-tomorrow");
-    } else if (e.currentTarget.textContent.includes("AV Expert")) {
-      url.push(avExpert);
-    } else if (e.currentTarget.textContent.includes("Essilor")) {
-      url.push(essilor);
-    } else if (e.currentTarget.textContent.includes("Landing S21")) {
-      url.push(landing);
-    }
-  }; */
-
   return (
     <>
       <section className="section-portfolio">
@@ -135,13 +95,12 @@ export default function Portfolio() {
         >
           {data.map((d) => (
             <Link
-              to={`/projects/${d.projectLink}`}
+              to={`/projects/${d.key}`}
               ref={refProject}
               id={d.id}
-              /* onClick={thumbnailsOnClick} */
-              /* onClick={() => setDataPortfolio(Solve)}  */
+              path={d.key}
               key={d.id}
-              className="section-portfolio__card-project"
+              className="section-portfolio__card-project link"
             >
               <img className="section-portfolio__img" src={d.img} alt="Tech" />
               <div className="section-portfolio__text-card">
@@ -160,23 +119,6 @@ export default function Portfolio() {
           ))}
         </article>
       </section>
-      {/*       {dataPortfolio.map((dataPortfolio) => (
-        <Project
-          id={dataPortfolio.id}
-          key={dataPortfolio.id}
-          isOpen={isOpenProject}
-          closeProject={closeProject}
-        >
-          <>
-            {dataPortfolio.id === 1 && (
-              <SolveForTomorrow key={dataPortfolio.id} />
-            )}
-            {dataPortfolio.id === 2 && <AvExpert key={dataPortfolio.id} />}
-            {dataPortfolio.id === 3 && <EssilorAPP key={dataPortfolio.id} />}
-            {dataPortfolio.id === 4 && <LandingPage />}
-          </>
-        </Project>
-      ))} */}
     </>
   );
 }
