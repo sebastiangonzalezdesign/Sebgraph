@@ -39,7 +39,7 @@
   }
 
   &__card-project {
-    align-items: start;
+    align-items: flex-start;
     display: flex;
     flex: 1 auto;
     width: 500px;
@@ -93,7 +93,7 @@
 
   &__text-card {
     width: 60%;
-    text-align: start;
+    text-align: flex-start;
     display: flex;
     flex-direction: column;
     gap: $spacings-8;
@@ -121,4 +121,7 @@ button {
 }
 .d-none {
   display: none;
+}
+.link {
+  text-decoration: none;
 }

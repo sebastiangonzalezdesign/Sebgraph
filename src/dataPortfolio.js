@@ -9,7 +9,6 @@ export const Solve = [
     date: "2021",
     companyTitle: "Company:",
     company: "Samsung Colombia",
-    projectLink: "solve-for-tomorrow",
 
     subtitleResume: "Website",
     titleResume: "Context",
