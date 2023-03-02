@@ -1,4 +1,4 @@
-import ImgHome from "../../img/img-home.svg";
+/* import ImgHome from "../../img/img-home.svg"; */
 import "./HeroWork.scss";
 import { useContext, useEffect } from "react";
 import ThemeContext from "../../context/ThemeContext";
@@ -6,6 +6,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import React from "react";
 import { Button } from "../../components/Button";
+import Hero3D from "../../components/Hero3D";
 
 const HeroWork = () => {
   const { theme } = useContext(ThemeContext);
@@ -48,13 +49,15 @@ const HeroWork = () => {
         </div>
       </article>
 
-      <img
+      <Hero3D className="section-hero__3d" />
+
+      {/*       <img
         className="section-hero__img"
         data-aos="flip-right"
         data-aos-delay="1000"
         src={ImgHome}
         alt="sebgraph illustration"
-      />
+      /> */}
     </section>
   );
 };
