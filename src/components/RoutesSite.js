@@ -13,11 +13,13 @@ import Landing from "../pages/projects/Landing";
 
 import { ThemeProvider } from "../context/ThemeContext";
 import Error404 from "../pages/Error404";
+import ScrollToTop from "./ScrollToTop";
 
 const RoutesSite = () => {
   return (
     <ThemeProvider>
       <Router>
+        <ScrollToTop />
         <NavBar />
 
         <Switch>

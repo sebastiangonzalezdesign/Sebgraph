@@ -8,8 +8,6 @@ import {
   visualPortfolio,
   codePortfolio,
 } from "../../data";
-/* import { Solve, AV, Essilor, Landing } from "../../dataPortfolio";
-import { useProject } from "../../hooks/useProject"; */
 import { Button } from "../../components/Button";
 
 import Aos from "aos";
@@ -77,47 +75,56 @@ export default function Portfolio() {
   return (
     <>
       <section className="section-portfolio">
-        <ul data-aos="fade-up">
-          {list.map((item) => (
-            <PortfolioList
-              key={item.id}
-              title={item.title}
-              active={selected === item.id}
-              setSelected={setSelected}
-              id={item.id}
-            />
-          ))}
-        </ul>
+        <h2 className="heading__100--bold">Recent Work</h2>
+        <div className="section-portfolio__projects-container">
+          <ul data-aos="fade-up">
+            {list.map((item) => (
+              <PortfolioList
+                key={item.id}
+                title={item.title}
+                active={selected === item.id}
+                setSelected={setSelected}
+                id={item.id}
+              />
+            ))}
+          </ul>
 
-        <article
-          className="section-portfolio__container-grid"
-          data-aos="fade-up"
-        >
-          {data.map((d) => (
-            <Link
-              to={`/projects/${d.key}`}
-              ref={refProject}
-              id={d.id}
-              path={d.key}
-              key={d.id}
-              className="section-portfolio__card-project link"
-            >
-              <img className="section-portfolio__img" src={d.img} alt="Tech" />
-              <div className="section-portfolio__text-card">
-                <div className="head-text">
-                  <h2 id={d.id} className="heading__200--bold">
-                    {d.title}
-                  </h2>
-                  <span className="paragraph__200--medium">
-                    {d.company} | {d.year}
-                  </span>
+          <article
+            className="section-portfolio__container-grid"
+            data-aos="fade-up"
+          >
+            {data.map((d) => (
+              <Link
+                to={`/projects/${d.key}`}
+                ref={refProject}
+                id={d.id}
+                path={d.key}
+                key={d.id}
+                className="section-portfolio__card-project link"
+              >
+                <div className="section-portfolio__img-container">
+                  <img
+                    className="section-portfolio__img"
+                    src={d.img}
+                    alt="Tech"
+                  />
                 </div>
-                <p className="paragraph__100--regular">{d.text}</p>
-                <Button /* onClick={thumbnailsOnClick} */>View Case</Button>
-              </div>
-            </Link>
-          ))}
-        </article>
+                <div className="section-portfolio__text-card">
+                  <div className="head-text">
+                    <h2 id={d.id} className="heading__200--bold">
+                      {d.title}
+                    </h2>
+                    <span className="paragraph__200--medium">
+                      {d.company} | {d.year}
+                    </span>
+                  </div>
+                  <p className="paragraph__100--regular">{d.text}</p>
+                  <Button /* onClick={thumbnailsOnClick} */>View Case</Button>
+                </div>
+              </Link>
+            ))}
+          </article>
+        </div>
       </section>
     </>
   );
