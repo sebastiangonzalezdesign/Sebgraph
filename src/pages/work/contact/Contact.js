@@ -1,6 +1,6 @@
 import "./Contact.scss";
-import profileImg from "../../img/avatar-profile.svg";
-import { Button } from "../../components/Button";
+import profileImg from "../../../img/avatar-profile.svg";
+import { Button } from "../../../components/Button";
 import EmailCopy from "./CopyMail";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -13,23 +13,27 @@ const Contact = () => {
   }, []);
 
   return (
-    <main className="container-contact">
-      <section className="contact-btns">
-        <article className="contact-btns__text-box">
-          <img
-            data-aos="flip-right"
-            className="profile__img mt-40"
-            src={profileImg}
-            alt="avatar sebgraph"
-          />
-          <p className="paragraph">
+    <section className="section-contact">
+      <div className="contact-container">
+        <div className="contact-container__heading">
+          <h2 className="heading__100--bold ">Contact</h2>
+          <p className="paragraph__100--regular contact-container__paragraph">
             Please, feel free to contact me and let me be part of your great
             project.
           </p>
+        </div>
+        <article className="contact-container__text-box">
+          <img
+            data-aos="flip-right"
+            className="profile__img"
+            src={profileImg}
+            alt="avatar sebgraph"
+          />
         </article>
-        <div className="contact-btns__btns">
+        <div className="contact-container__btns">
           <a href="mailto:sebgraph7@gmail.com" className="email">
             <Button
+              className="contact-container__btn"
               type="button"
               buttonStyle="btn--secondary"
               buttonSize="btn--large"
@@ -44,8 +48,8 @@ const Contact = () => {
 
           <EmailCopy />
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
   );
 };
 

@@ -7,17 +7,29 @@
 .profile__img {
   width: 7.5rem;
 }
-.contact-btns {
+
+.contact-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   margin: auto;
-  gap: 3rem;
+  gap: 4rem;
+  padding: 2rem;
+  max-width: 75rem;
+
+  &__heading {
+    width: 100%;
+    text-align: start;
+  }
+  &__paragraph {
+    color: $light-textIcon-secondary-black;
+  }
 
   &__btns {
     display: flex;
     gap: 1.5rem;
+    justify-content: center;
 
     @include respond(tab-port) {
       align-items: center;
@@ -26,11 +38,17 @@
       width: 100%;
     }
   }
+  & Button {
+    width: 320px;
+    @include respond(phone) {
+      width: 100%;
+    }
+  }
 }
 
-.messageContainer {
+/* .messageContainer {
   border-radius: 0.4rem;
-  top: -6rem;
+  top: -8rem;
   left: 0%;
   right: 0%;
   text-align: center;
@@ -41,12 +59,13 @@
   height: auto;
   width: 10rem;
   z-index: 995;
+  width: 100%;
 
   & .message {
     color: $color-white;
-    font-size: 1.8rem;
+    font-size: $label-font-size-500;
   }
-}
+} */
 .messageActive {
   display: block;
 }
@@ -59,6 +78,7 @@
 }
 .email {
   margin: 0;
+  width: 320px;
 }
 
 .button-container {
@@ -66,7 +86,7 @@
 }
 
 .messageContainer2 {
-  top: -2rem;
+  top: -3rem;
   left: 0%;
   right: 0%;
   text-align: center;
@@ -78,8 +98,9 @@
 
   & .message {
     border-radius: 0.4rem;
-    color: $color-yellow-light;
-    font-size: 1.4rem;
+    color: $light-textIcon-primary-white;
+    font-size: $label-font-size-200;
+    font-weight: $font-weight-medium;
     margin: 1rem;
   }
 }

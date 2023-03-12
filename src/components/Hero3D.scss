@@ -1,0 +1,17 @@
+@import "../styles/ConfigStyles/abstracts/Variables.scss";
+@import "../styles/ConfigStyles/abstracts/Mixins.scss";
+
+/* .scene {
+  width: 40%;
+  @include respond(tab-port) {
+    width: 100%;
+    overflow: hidden;
+  }
+} */
+#scene {
+  height: 600px;
+
+  @include respond(tab-port) {
+    height: 500px !important;
+  }
+}

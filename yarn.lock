@@ -1721,10 +1721,10 @@
     "lodash.debounce" "^4.0.8"
     "react-merge-refs" "^2.0.1"
 
-"@splinetool/runtime@*":
-  "integrity" "sha512-P3FsPfFSC6+lUYaSFv0tJd6wTnX6cma6RsW6cv7ezAXk5sI33A5mRm2SnrmccIfvofDPtjW9Bq6ntv8uO3ZG1g=="
-  "resolved" "https://registry.npmjs.org/@splinetool/runtime/-/runtime-0.9.247.tgz"
-  "version" "0.9.247"
+"@splinetool/runtime@*", "@splinetool/runtime@^0.9.259":
+  "integrity" "sha512-Kua6LBNA2YK6KheGXMQRFGAFguAQLCwJiGDwYxncwZGWhsyipQmKkF7ZQaUyYqrw11Qlr+/OzU26o4KIT0oNcA=="
+  "resolved" "https://registry.npmjs.org/@splinetool/runtime/-/runtime-0.9.259.tgz"
+  "version" "0.9.259"
   dependencies:
     "on-change" "^4.0.0"
     "semver-compare" "^1.0.0"

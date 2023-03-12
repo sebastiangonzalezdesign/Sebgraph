@@ -3,7 +3,7 @@ import Portfolio from "../../pages/work/Portfolio";
 import { useContext } from "react";
 import ThemeContext from "../../context/ThemeContext";
 import React from "react";
-import Contact from "../contact/Contact";
+import Contact from "../../pages/work/contact/Contact";
 
 const Work = () => {
   const { theme } = useContext(ThemeContext);
