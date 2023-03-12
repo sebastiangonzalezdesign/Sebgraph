@@ -16,11 +16,6 @@
   &__navigation {
     z-index: 1500;
   }
-
-  body.dark-mode & {
-    background-color: $color-yellow-dark;
-  }
-
   @include respond(phone) {
   }
 
@@ -43,10 +38,6 @@
     gap: 0.625rem;
     font-size: $headings-font-size-200;
     z-index: 9999;
-
-    body.dark-mode & {
-      color: $dark-textIcon-primary-white;
-    }
   }
   &__icon {
     width: 2rem;
@@ -136,7 +127,6 @@
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
-
 .navbar {
   max-width: 75rem;
   margin: auto;

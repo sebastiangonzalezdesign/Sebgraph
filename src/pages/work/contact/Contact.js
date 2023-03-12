@@ -1,4 +1,4 @@
-import "./Contact.scss";
+import "../../work/contact/Contact.scss";
 import profileImg from "../../../img/avatar-profile.svg";
 import { Button } from "../../../components/Button";
 import EmailCopy from "./CopyMail";

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "../../../components/Button";
-import "./Contact.scss";
+import "../../work/contact/Contact.scss";
 
 const EmailCopy = () => {
   const [copySuccessMessage, setCopySuccessMessage] = useState("");
