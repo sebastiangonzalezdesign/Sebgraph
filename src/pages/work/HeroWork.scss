@@ -14,13 +14,8 @@
   flex-direction: row;
   gap: $spacings-6;
 
-  body.dark-mode & {
-    color: $dark-textIcon-primary-white;
-  }
-
   @include respond(tab-port) {
     height: auto;
-    padding-top: 8rem;
     flex-direction: column;
   }
 
@@ -39,6 +34,7 @@
       }
     }
     @include respond(tab-port) {
+      padding-top: 8rem;
       height: auto;
       width: 100%;
     }

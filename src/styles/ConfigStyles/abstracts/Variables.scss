@@ -1,3 +1,5 @@
+@import "../abstracts/Mixins.scss";
+
 // COLORS
 $color-yellow-light: #ffa939;
 $color-yellow-dark: #ef9700;
@@ -128,7 +130,7 @@ $light-textIcon-disabled-black: rgba(29, 36, 51, 0.65);
 $dark-bg-default: $core-color-neutral-1000;
 $dark-bg-surface: $core-color-neutral-900;
 
-$dark-primary-bg: $core-color-blue-900;
+$dark-primary-bg: $core-color-blue-1000;
 $dark-primary-default: $core-color-blue-400;
 $dark-primary-hover: $core-color-blue-500;
 $dark-primary-pressed: $core-color-blue-600;
@@ -228,3 +230,49 @@ $gutter-horizontal: 4rem;
 
 //WIDTH
 $width-container: 140rem;
+
+.light {
+  background-color: $light-bg-default;
+  color: $light-textIcon-primary-black;
+}
+
+.dark {
+  background-color: $dark-bg-default;
+  color: $dark-textIcon-primary-white;
+
+  .header {
+    &__text,
+    &__link {
+      color: white;
+    }
+    &__list {
+      @include respond(tab-port) {
+        background-color: $dark-bg-surface;
+      }
+    }
+  }
+
+  /* ------Home--------- */
+  //hero section
+  .section-hero {
+    &__heading {
+      color: $dark-textIcon-primary-white;
+    }
+    &__paragraph {
+      color: $dark-textIcon-secondary-white;
+    }
+  }
+
+  //Portfolio
+  .portfolioList {
+    color: $dark-textIcon-secondary-white;
+
+    &:hover {
+      background-color: $dark-primary-bg;
+    }
+
+    &.active {
+      color: $dark-textIcon-primary-white;
+    }
+  }
+}

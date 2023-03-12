@@ -12,7 +12,7 @@ import React from "react";
 const Footer = () => {
   const { theme } = useContext(ThemeContext);
   return (
-    <footer className={`footer ${theme}`}>
+    <footer id="footer" className={`footer ${theme}`}>
       <div className="footer__text-container">
         <h2 className="footer__heading heading__100--bold">
           Let’s work together

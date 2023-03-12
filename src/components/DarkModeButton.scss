@@ -4,8 +4,8 @@
 @import "../styles/ConfigStyles/layout/Grid.scss";
 @import "../styles/ConfigStyles/base/Utilities";
 
-.dark {
-  background-color: $color-black;
+/* .dark {
+  background-color: red;
   color: $color-white;
 
   & h1,
@@ -46,7 +46,7 @@
     background-color: $color-black-base;
   }
   .modal__container {
-    background-color: $color-black-base;
+    background-color: red;
   }
   .modal__container h1 {
     color: $color-yellow-dark;
@@ -58,7 +58,7 @@
     background-color: $color-grey-light;
   }
   .define__box {
-    background-color: $color-black;
+    background-color: red;
   }
 
   .hero-about {
@@ -118,7 +118,7 @@
       color: $color-white;
     }
   }
-}
+} */
 
 .radio-buttons {
   border-radius: 0.4rem;
@@ -173,7 +173,7 @@
   }
 }
 
-.bg-yellow {
+/* .bg-yellow {
   background-color: $color-yellow-light;
   color: white;
 }
@@ -183,3 +183,4 @@
 .disabled {
   pointer-events: none;
 }
+ */

@@ -80,16 +80,7 @@ const NavBar = () => {
               <li
                 className={nav ? "header__item text-animation" : "header__item"}
                 onClick={handleNav}
-              >
-                <NavLink
-                  className="header__link"
-                  exact
-                  to="/contact"
-                  activeClassName="link-active"
-                >
-                  Contact
-                </NavLink>
-              </li>
+              ></li>
             </ul>
           </nav>
         </div>

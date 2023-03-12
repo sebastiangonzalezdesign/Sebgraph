@@ -1,6 +1,6 @@
 .container-home {
   display: grid;
-  grid-template-rows: repeat(2, auto);
+  grid-template-rows: repeat(3, auto);
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 4rem;
   margin: auto;
@@ -42,7 +42,7 @@
   .section-contact {
     grid-area: contact;
     margin: auto;
-    background-color: $light-primary-default;
+    background-color: $light-primary-hover;
     width: 100%;
   }
   /*     .footer{

@@ -75,7 +75,9 @@ export default function Portfolio() {
   return (
     <>
       <section className="section-portfolio">
-        <h2 className="heading__100--bold">Recent Work</h2>
+        <h2 className="heading__100--bold section-portfolio__heading">
+          Recent Work
+        </h2>
         <div className="section-portfolio__projects-container">
           <ul data-aos="fade-up">
             {list.map((item) => (
@@ -119,7 +121,7 @@ export default function Portfolio() {
                     </span>
                   </div>
                   <p className="paragraph__100--regular">{d.text}</p>
-                  <Button /* onClick={thumbnailsOnClick} */>View Case</Button>
+                  <Button className="section-portfolio__btn">View Case</Button>
                 </div>
               </Link>
             ))}

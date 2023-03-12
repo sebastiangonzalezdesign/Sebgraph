@@ -1,9 +1,8 @@
 @import "../../../styles/ConfigStyles/abstracts/Variables.scss";
 @import "../../../styles/ConfigStyles/abstracts/Mixins.scss";
 @import "../../../styles/ConfigStyles/base/Base.scss";
-@import "../../../styles/ConfigStyles/base/Tipography.scss";
 @import "../../../styles/ConfigStyles/layout/Grid.scss";
-@import "../../../styles/ConfigStyles/base/Utilities";
+@import "../../../styles/ConfigStyles/base/Utilities.scss";
 
 .profile__img {
   width: 7.5rem;
@@ -22,9 +21,13 @@
   &__heading {
     width: 100%;
     text-align: start;
+    color: $light-textIcon-primary-white;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
   }
   &__paragraph {
-    color: $light-textIcon-secondary-black;
+    color: $light-textIcon-secondary-white;
   }
 
   &__btns {
@@ -99,7 +102,7 @@
 
   & .message {
     border-radius: 0.4rem;
-    color: $light-primary-default;
+    color: $light-textIcon-primary-white;
     font-size: $label-font-size-200;
     font-weight: $font-weight-medium;
     margin: 1rem;

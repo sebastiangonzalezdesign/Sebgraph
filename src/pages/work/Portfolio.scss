@@ -61,6 +61,12 @@
     overflow: hidden;
     gap: $spacings-6;
     border: 1px solid $core-color-neutral-400;
+
+    .dark & {
+      background-color: $dark-bg-surface;
+      border: 1px solid $core-color-neutral-600;
+    }
+
     @include respond(tab-port) {
       animation: none;
       width: 100%;
@@ -75,6 +81,10 @@
     &:hover {
       background-color: $light-primary-bg;
       border: 1px solid $core-color-neutral-500;
+      .dark & {
+        border: 1px solid $core-color-neutral-600;
+        background-color: $dark-primary-bg;
+      }
       & img {
         transform: scale(110%);
         opacity: 0.4;
@@ -119,10 +129,16 @@
     gap: $spacings-8;
     h2 {
       color: $light-textIcon-primary-black;
+      .dark & {
+        color: $dark-textIcon-primary-white;
+      }
     }
     span,
     p {
       color: $light-textIcon-secondary-black;
+      .dark & {
+        color: $dark-textIcon-secondary-white;
+      }
     }
     & .head-text {
       display: flex;
@@ -133,12 +149,15 @@
       width: 100%;
     }
   }
+  &__btn {
+    max-width: 320px;
+    width: 100%;
+    @include respond(phone) {
+      width: 100%;
+    }
+  }
 }
 
-button {
-  max-width: 320px;
-  width: 100%;
-}
 .d-none {
   display: none;
 }

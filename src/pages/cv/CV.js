@@ -14,7 +14,7 @@ import "aos/dist/aos.css";
 
 const CV = () => {
   return (
-    <main className="container-cv mt-40">
+    <main className="container-cv">
       <section className="name-cv">
         <article className="name-cv__text-box">
           <h1 className="heading-primary">Sebastian González</h1>
