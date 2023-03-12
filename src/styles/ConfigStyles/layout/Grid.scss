@@ -4,13 +4,21 @@
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 4rem;
   margin: auto;
-  max-width: 75rem;
-  width: 100vw;
-  padding: 0 1.5rem;
+  width: 100%;
+  padding: 0;
 
   grid-template-areas:
     "info info info info"
-    "portfolio portfolio portfolio portfolio";
+    "portfolio portfolio portfolio portfolio"
+    "contact contact contact contact";
+
+  @include respond(tab-port) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "info info"
+      "portfolio portfolio "
+      "contact contact";
+  }
 
   /*     .header{
         grid-area: head;
@@ -22,11 +30,19 @@
     margin: auto;
     max-width: 75rem;
     width: 100%;
+    padding: 0 1.5rem;
   }
   .section-portfolio {
     grid-area: portfolio;
     margin: auto;
     max-width: 75rem;
+    width: 100%;
+    padding: 0 1.5rem;
+  }
+  .section-contact {
+    grid-area: contact;
+    margin: auto;
+    background-color: $light-primary-default;
     width: 100%;
   }
   /*     .footer{
@@ -171,11 +187,13 @@
   }
 }
 
-.container-contact {
+/* .container-contact {
   display: grid;
   grid-template-rows: repeat(2, auto);
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 4rem;
+  width: 100%;
+  max-width: 75rem;
   margin: auto;
 
   grid-template-areas:
@@ -189,7 +207,7 @@
     grid-area: info;
     padding: 4rem;
   }
-}
+} */
 
 .container-porfolio-modal {
   display: grid;
