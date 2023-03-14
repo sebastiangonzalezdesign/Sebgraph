@@ -49,9 +49,10 @@ html {
 
 body {
   box-sizing: border-box;
+  background-color: var(--bg);
 }
 
 ::selection {
-  background-color: $light-primary-default;
-  color: $core-color-base-white;
+  background-color: var(--light-primary-default);
+  color: var(--core-color-base-white);
 }

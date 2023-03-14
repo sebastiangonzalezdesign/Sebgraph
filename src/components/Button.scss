@@ -29,24 +29,24 @@
   }
 
   &--primary {
-    background-color: $light-primary-default;
+    background-color: var(--primary-default);
     border-radius: $border-full;
-    color: $light-textIcon-primary-white;
+    color: var(--light-textIcon-primary-white);
 
     &:hover {
-      background-color: $light-primary-hover;
+      background-color: var(--light-primary-hover);
     }
   }
 
   &--secondary {
-    background-color: $light-textIcon-primary-white;
+    background-color: var(--light-textIcon-primary-white);
     border-radius: $border-full;
-    border: 1px solid $core-color-neutral-300;
-    color: $light-textIcon-primary-black;
+    border: 1px solid var(--core-color-neutral-300);
+    color: var(--light-textIcon-primary-black);
 
     &:hover {
-      background-color: $core-color-neutral-200;
-      border: 1px solid $core-color-base-black;
+      background-color: var(--core-color-neutral-200);
+      border: 1px solid var(--core-color-base-black);
     }
   }
 

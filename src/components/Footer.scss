@@ -2,7 +2,7 @@
 @import "../styles/ConfigStyles/abstracts/Mixins.scss";
 
 .footer {
-  background-color: $light-bg-medium;
+  background-color: var(--bg-medium);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -31,11 +31,11 @@
   &__social-item {
     font-size: 3rem;
     text-decoration: none;
-    color: $light-primary-default;
+    color: var(--light-primary-default);
     transition: all 0.3s ease;
 
     &:hover {
-      color: $light-primary-hover;
+      color: var(--light-primary-hover);
     }
   }
 }

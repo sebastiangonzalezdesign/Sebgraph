@@ -30,7 +30,7 @@
     align-items: center;
     text-decoration: none;
     outline: none;
-    color: $light-textIcon-primary-black;
+    color: var(--light-textIcon-primary-black);
     width: 10.75rem;
     height: auto;
     font-family: $headings-font-family;
@@ -62,7 +62,7 @@
       justify-content: center;
       flex-direction: column;
       align-items: center;
-      background-color: $light-bg-surface;
+      background-color: var-(-light-bg-surface);
       left: 0;
       top: 0;
       transition: 0.4s ease;
@@ -110,7 +110,7 @@
 
 .link-active {
   font-weight: 600 !important;
-  color: $light-textIcon-primary-black;
+  color: var(--light-textIcon-primary-black);
   opacity: 1;
 }
 .header .active {
@@ -138,10 +138,10 @@
   padding: 0 1.5rem;
 
   & .hamburger {
-    border: 1px solid $core-color-neutral-400;
+    border: 1px solid var(--core-color-neutral-400);
     border-radius: $border-md;
     cursor: pointer;
-    color: $light-textIcon-primary-black;
+    color: var(--light-textIcon-primary-black);
     height: $spacings-9;
     width: $spacings-9;
     justify-content: center;
@@ -150,8 +150,8 @@
     z-index: 9999;
 
     &:hover {
-      border: 1px solid $core-color-neutral-500;
-      background-color: $light-primary-bg;
+      border: 1px solid var(--core-color-neutral-500);
+      background-color: var(--light-primary-bg);
     }
     @include respond(tab-port) {
       display: flex;

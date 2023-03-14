@@ -53,19 +53,14 @@
     width: auto;
     height: auto;
     border-radius: $border-xl;
-    background-color: $light-bg-surface;
+    background-color: var(--light-bg-surface);
     padding: $spacings-6;
     transition: all 0.5s ease;
     animation: portfolio 0.3s ease;
     animation-fill-mode: backwards;
     overflow: hidden;
     gap: $spacings-6;
-    border: 1px solid $core-color-neutral-400;
-
-    .dark & {
-      background-color: $dark-bg-surface;
-      border: 1px solid $core-color-neutral-600;
-    }
+    border: 1px solid var(--core-color-neutral-400);
 
     @include respond(tab-port) {
       animation: none;
@@ -79,12 +74,8 @@
       height: auto;
     }
     &:hover {
-      background-color: $light-primary-bg;
-      border: 1px solid $core-color-neutral-500;
-      .dark & {
-        border: 1px solid $core-color-neutral-600;
-        background-color: $dark-primary-bg;
-      }
+      background-color: var(--light-primary-bg);
+      border: 1px solid var(--core-color-neutral-500);
       & img {
         transform: scale(110%);
         opacity: 0.4;
@@ -128,17 +119,11 @@
     flex-direction: column;
     gap: $spacings-8;
     h2 {
-      color: $light-textIcon-primary-black;
-      .dark & {
-        color: $dark-textIcon-primary-white;
-      }
+      color: var(--light-textIcon-primary-black);
     }
     span,
     p {
-      color: $light-textIcon-secondary-black;
-      .dark & {
-        color: $dark-textIcon-secondary-white;
-      }
+      color: var(--light-textIcon-secondary-black);
     }
     & .head-text {
       display: flex;

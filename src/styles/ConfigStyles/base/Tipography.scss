@@ -324,15 +324,11 @@ body {
 }
 .heading-primary {
   font-family: $headings-font-family;
-  color: $light-textIcon-primary-black;
+  color: var(--light-textIcon-primary-black);
   backface-visibility: hidden;
   font-size: $display-font-size-200;
   line-height: $heading-line-height;
   font-weight: $font-weight-bold;
-
-  body.dark-mode & {
-    color: $dark-textIcon-primary-white;
-  }
 
   @include respond(phone) {
     font-size: $headings-font-size-100;
@@ -340,28 +336,20 @@ body {
 }
 .heading-secondary {
   font-family: $headings-font-family;
-  color: $light-textIcon-primary-black;
+  color: var(--light-textIcon-primary-black);
   backface-visibility: hidden;
   font-size: $headings-font-size-100;
   line-height: $heading-line-height;
   font-weight: $font-weight-bold;
-
-  body.dark-mode & {
-    color: $dark-textIcon-primary-white;
-  }
 }
 
 .heading-tertiary {
   font-family: $headings-font-family;
-  color: $light-textIcon-primary-black;
+  color: var(--light-textIcon-primary-black);
   backface-visibility: hidden;
   font-size: $headings-font-size-200;
   line-height: $heading-line-height;
   font-weight: $font-weight-bold;
-
-  body.dark-mode & {
-    color: $dark-textIcon-primary-white;
-  }
 
   @include respond(phone) {
     font-size: $headings-font-size-100;

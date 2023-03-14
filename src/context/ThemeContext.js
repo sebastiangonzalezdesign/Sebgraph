@@ -8,10 +8,21 @@ const initialTheme = "light";
 const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(initialTheme);
 
+  const setDark = () => {
+    localStorage.setItem("theme", "dark");
+    document.querySelector("body").setAttribute("data-theme", "dark");
+  };
+  const setLight = () => {
+    localStorage.setItem("theme", "light");
+    document.querySelector("body").setAttribute("data-theme", "light");
+  };
+
   const handleTheme = (e) => {
     if (e.target.value === "light") {
+      setLight();
       setTheme("light");
     } else {
+      setDark();
       setTheme("dark");
     }
   };
