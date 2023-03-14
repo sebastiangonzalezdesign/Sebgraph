@@ -42,7 +42,7 @@
   .section-contact {
     grid-area: contact;
     margin: auto;
-    background-color: $light-primary-hover;
+    background-color: var(--light-primary-hover);
     width: 100%;
   }
   /*     .footer{

@@ -11,32 +11,29 @@ import AvExpert from "../pages/projects/AvExpert";
 import Essilor from "../pages/projects/Essilor";
 import Landing from "../pages/projects/Landing";
 
-import { ThemeProvider } from "../context/ThemeContext";
 import Error404 from "../pages/Error404";
 import ScrollToTop from "./ScrollToTop";
 
 const RoutesSite = () => {
   return (
-    <ThemeProvider>
-      <Router>
-        <ScrollToTop />
-        <NavBar />
+    <Router>
+      <ScrollToTop />
 
-        <Switch>
-          <Route exact path="/" component={Work} />
-          <Route exact path="/about" component={About} />
-          <Route exact path="/cv" component={CV} />
+      <NavBar />
+      <Switch>
+        <Route exact path="/" component={Work} />
+        <Route exact path="/about" component={About} />
+        <Route exact path="/cv" component={CV} />
 
-          <Route exact path="/projects/solve" component={SolveForTomorrow} />
-          <Route exact path="/projects/AV" component={AvExpert} />
-          <Route exact path="/projects/Essilor" component={Essilor} />
-          <Route exact path="/projects/Landing" component={Landing} />
+        <Route exact path="/projects/solve" component={SolveForTomorrow} />
+        <Route exact path="/projects/AV" component={AvExpert} />
+        <Route exact path="/projects/Essilor" component={Essilor} />
+        <Route exact path="/projects/Landing" component={Landing} />
 
-          <Route path="*" component={Error404} />
-        </Switch>
-        <Footer />
-      </Router>
-    </ThemeProvider>
+        <Route path="*" component={Error404} />
+      </Switch>
+      <Footer />
+    </Router>
   );
 };
 

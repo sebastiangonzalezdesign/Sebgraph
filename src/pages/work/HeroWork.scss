@@ -27,7 +27,7 @@
         margin-bottom: $spacings-6;
       }
       & p {
-        color: $light-textIcon-secondary-black;
+        color: var(--light-textIcon-secondary-black);
       }
       @include respond(tab-port) {
         text-align: center;

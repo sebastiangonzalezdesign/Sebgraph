@@ -25,6 +25,7 @@
     "react-script": "^2.0.5",
     "react-scripts": "^5.0.1",
     "sass": "^1.58.3",
+    "use-local-storage": "^2.3.6",
     "web-vitals": "^1.0.1"
   },
   "homepage": "https://sebgraph.co/",

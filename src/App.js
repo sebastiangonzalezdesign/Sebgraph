@@ -1,12 +1,15 @@
 import RoutesSite from "./components/RoutesSite";
 import "./index.scss";
 import React from "react";
+import { ThemeProvider } from "./context/ThemeContext";
 
 function App() {
   return (
-    <div className="app">
-      <RoutesSite />
-    </div>
+    <ThemeProvider>
+      <div className="app">
+        <RoutesSite />
+      </div>
+    </ThemeProvider>
   );
 }
 
