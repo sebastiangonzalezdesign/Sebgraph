@@ -21,7 +21,8 @@ $color-black: #000;
 /* colors */
 :root {
   --core-color-base-white: #ffffff;
-  --core-color-base-black: #1d2433;
+  --core-color-base-black: #1f1b34;
+  --core-color-base-black-medium: #1f2033;
 
   --core-color-blue-100: #f0f5ff;
   --core-color-blue-200: #dce7fe;
@@ -89,7 +90,8 @@ $color-black: #000;
   --core-color-neutral-900: #1b1f27;
   --core-color-neutral-1000: #0a0d14;
 
-  --button-bg: blue;
+  --core-color-overlay1: rgba(241, 243, 249, 0.8);
+  --core-color-overlay1-invert: rgba(31, 32, 51, 0.8);
 }
 
 /* SEMANTIC */
@@ -98,6 +100,27 @@ $color-black: #000;
   --light-bg-default: var(--core-color-base-white);
   --bg-medium: var(--core-color-neutral-200);
   --light-bg-surface: var(--core-color-neutral-100);
+
+  /* -----Button------ */
+  //primary
+  --primary-button-bg: var(--core-color-blue-700);
+  --primary-button-hover: var(--core-color-blue-800);
+  --primary-button-active: var(--core-color-blue-900);
+  --primary-button-text: var(--core-color-base-white);
+  //secondary
+  --secondary-button-bg: var(--core-color-base-white);
+  --secondary-button-bg-hover: var(--core-color-neutral-200);
+  --secondary-button-active: var(--core-color-blue-100);
+  --secondary-button-text: var(--core-color-base-black);
+  --secondary-button-border: var(--core-color-neutral-300);
+  --secondary-button-border-hover: var(--core-color-base-black);
+  --secondary-button-border-active: var(--core-color-blue-700);
+
+  /* -----Header------ */
+  --header-bg-scroll: var(--core-color-overlay1);
+  --header-text: var(--core-color-base-black);
+  --header-logo: var(--core-color-base-black);
+  --header-menu-bg: var(--core-color-neutral-100);
 
   --primary-bg: var(--core-color-blue-100);
   --primary-default: var(--core-color-blue-700);
@@ -133,10 +156,31 @@ $color-black: #000;
 }
 /* dark */
 [data-theme="dark"] {
-  --bg: var(--core-color-neutral-1000);
+  --bg: var(--core-color-base-black);
   --dark-bg-default: $core-color-neutral-1000;
   --bg-medium: var(--core-color-neutral-900);
   --dark-bg-surface: $core-color-neutral-900;
+
+  /* -----Button------ */
+  //primary
+  --primary-button-bg: var(--core-color-blue-400);
+  --primary-button-hover: var(--core-color-blue-500);
+  --primary-button-active: var(--core-color-blue-600);
+  --primary-button-text: var(--core-color-base-black);
+  //secondary
+  --secondary-button-bg: var(--core-color-base-black);
+  --secondary-button-bg-hover: var(--core-color-neutral-800);
+  --secondary-button-active: var(--core-color-blue-900);
+  --secondary-button-text: var(--core-color-base-white);
+  --secondary-button-border: var(--core-color-neutral-700);
+  --secondary-button-border-hover: var(--core-color-base-white);
+  --secondary-button-border-active: var(--core-color-blue-400);
+
+  /* -----Header------ */
+  --header-bg-scroll: var(--core-color-overlay1-invert);
+  --header-text: var(--core-color-base-white);
+  --header-logo: var(--core-color-base-white);
+  --header-menu-bg: var(--core-color-neutral-900);
 
   --primary-bg: $core-color-blue-1000;
   --primary-default: var(--core-color-blue-400);
