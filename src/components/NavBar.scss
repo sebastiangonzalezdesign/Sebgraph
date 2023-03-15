@@ -30,7 +30,7 @@
     align-items: center;
     text-decoration: none;
     outline: none;
-    color: var(--light-textIcon-primary-black);
+    color: var(--header-logo);
     width: 10.75rem;
     height: auto;
     font-family: $headings-font-family;
@@ -62,7 +62,7 @@
       justify-content: center;
       flex-direction: column;
       align-items: center;
-      background-color: var-(-light-bg-surface);
+      background-color: var(--header-menu-bg);
       left: 0;
       top: 0;
       transition: 0.4s ease;
@@ -91,26 +91,22 @@
     &:link,
     &:visited {
       font-weight: 400;
-      color: $color-black-base;
+      color: var(--header-text);
       text-decoration: none;
       text-transform: capitalize;
       transition: all 0.4s;
     }
     &:hover,
     &:active {
-      color: $color-black-base;
+      color: var(--header-text);
       font-weight: 600;
-    }
-
-    body.dark-mode & {
-      color: $color-white;
     }
   }
 }
 
 .link-active {
   font-weight: 600 !important;
-  color: var(--light-textIcon-primary-black);
+  color: var(--header-text);
   opacity: 1;
 }
 .header .active {
@@ -123,7 +119,7 @@
   animation: 0.5s moveInBottom ease;
 }
 .header-bg {
-  background-color: rgba(241, 243, 249, 0.8);
+  background-color: var(--header-bg-scroll);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
