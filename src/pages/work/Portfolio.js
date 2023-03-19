@@ -74,7 +74,7 @@ export default function Portfolio() {
 
   return (
     <>
-      <section className="section-portfolio">
+      <section id="work" className="section-portfolio">
         <h2 className="heading__100--bold section-portfolio__heading">
           Recent Work
         </h2>

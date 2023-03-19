@@ -8,7 +8,7 @@ const DarkModeButton = () => {
 
   return (
     <div className={`radio-buttons ${theme}`}>
-      <label className="custom-radio" htmlFor="light">
+      <label htmlFor="light" className="custom-radio">
         <input
           type="radio"
           name="theme"
@@ -21,7 +21,7 @@ const DarkModeButton = () => {
         </div>
       </label>
 
-      <label className="custom-radio" htmlFor="dark">
+      <label htmlFor="dark" className="custom-radio">
         <input
           type="radio"
           name="theme"

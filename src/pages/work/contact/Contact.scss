@@ -21,13 +21,13 @@
   &__heading {
     width: 100%;
     text-align: start;
-    color: var(--light-textIcon-primary-white);
+    color: var(--textIcon-primary);
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
   }
   &__paragraph {
-    color: var(--light-textIcon-secondary-white);
+    color: var(--textIcon-secondary);
   }
 
   &__btns {
@@ -102,7 +102,7 @@
 
   & .message {
     border-radius: 0.4rem;
-    color: var(--light-textIcon-primary-white);
+    color: var(--textIcon-link);
     font-size: $label-font-size-200;
     font-weight: $font-weight-medium;
     margin: 1rem;

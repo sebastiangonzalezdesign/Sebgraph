@@ -7,6 +7,7 @@ import "aos/dist/aos.css";
 import React from "react";
 import { Button } from "../../components/Button";
 import Hero3D from "../../components/Hero3D";
+import Cv from "../../documents/cv-sebastian-gonzalez.pdf";
 
 const HeroWork = () => {
   const { theme } = useContext(ThemeContext);
@@ -19,6 +20,7 @@ const HeroWork = () => {
       <article className="section-hero__container">
         <div className="section-hero__container__text-container">
           <h1
+            id="work"
             className="display__100--bold section-hero__heading"
             data-aos="fade-up"
             data-aos-delay="500"
@@ -39,13 +41,15 @@ const HeroWork = () => {
           >
             View work
           </Button>
-          <Button
-            type="button"
-            buttonStyle="btn--primary"
-            buttonSize="btn--large"
-          >
-            Download CV
-          </Button>
+          <a href={Cv} rel="noreferrer" download="">
+            <Button
+              type="button"
+              buttonStyle="btn--primary"
+              buttonSize="btn--large"
+            >
+              Download CV
+            </Button>
+          </a>
         </div>
       </article>
 

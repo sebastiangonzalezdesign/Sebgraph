@@ -1,6 +1,4 @@
 .dark_mode {
-  /*   margin-top: -20px;
-  margin-left: 10px; */
   display: flex;
 }
 
@@ -11,10 +9,9 @@
   width: 65px;
   height: 40px;
   position: relative;
-  background: #ebebeb;
+  background: var(--core-color-base-white);
   border-radius: 8px;
-  box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4),
-    inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+  border: 1px solid var(--core-color-neutral-400);
   cursor: pointer;
   transition: 0.3s ease;
   justify-content: center;
@@ -25,11 +22,10 @@
   width: 30px;
   height: 30px;
   position: absolute;
-  top: 6px;
-  left: 4px;
-  background: linear-gradient(180deg, #ffcc89, #d8860b);
+  top: 4px;
+  left: 3px;
+  background: var(--core-color-blue-200);
   border-radius: 8px;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
 }
 .dark_mode_input {
@@ -38,12 +34,13 @@
   visibility: hidden;
 }
 .dark_mode_input:checked + .dark_mode_label {
-  background: #242424;
+  background: var(--core-color-neutral-800);
+  border: 1px solid var(--core-color-neutral-600);
 }
 .dark_mode_input:checked + .dark_mode_label:after {
   left: 62px;
   transform: translateX(-100%);
-  background: linear-gradient(180deg, #777, #3a3a3a);
+  background: var(--core-color-neutral-1000);
 }
 .dark_mode_label:active:after {
   width: 30px;
@@ -52,20 +49,19 @@
 .dark_mode_label .svg {
   width: 20px;
   z-index: 100;
+  stroke: var(--core-color-blue-800);
 }
 .dark_mode_label .sun {
   left: 5px;
-  fill: #fff;
   transition: 0.3s;
 }
 .dark_mode_label .moon {
   left: 40px;
-  fill: #7e7e7e;
   transition: 0.3s;
 }
 .dark_mode_input:checked + .dark_mode_label svg.sun {
-  fill: #7e7e7e;
+  stroke: var(--core-color-blue-400);
 }
 .dark_mode_input:checked + .dark_mode_label svg.moon {
-  fill: #fff;
+  stroke: var(--core-color-blue-400);
 }

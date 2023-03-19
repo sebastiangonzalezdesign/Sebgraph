@@ -1,0 +1,19 @@
+@import "../styles/ConfigStyles/abstracts/Variables.scss";
+.back-button {
+  border: 1px solid var(--hamburger-button-border);
+  background-color: var(--hamburger-button-bg);
+  border-radius: $border-md;
+  width: fit-content;
+  position: fixed;
+  right: 0;
+  margin: 1.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border: none;
+  bottom: 20%;
+  cursor: pointer;
+  &__icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
