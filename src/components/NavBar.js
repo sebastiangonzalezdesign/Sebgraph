@@ -10,7 +10,7 @@ const NavBar = () => {
   //change nav color when scrolling
   const [color, setColor] = useState(false);
   const changeColor = () => {
-    if (window.scrollY >= 80) {
+    if (window.scrollY >= 20) {
       setColor(true);
     } else {
       setColor(false);
@@ -81,14 +81,16 @@ const NavBar = () => {
             </ul>
           </nav>
         </div>
-        <DarkMode />
+        <div className="header__actions-container">
+          <DarkMode />
 
-        <div className="hamburger" onClick={handleNav}>
-          {!nav ? (
-            <Bars3BottomRightIcon className="icon" />
-          ) : (
-            <XMarkIcon className="icon" />
-          )}
+          <div className="hamburger" onClick={handleNav}>
+            {!nav ? (
+              <Bars3BottomRightIcon className="icon" />
+            ) : (
+              <XMarkIcon className="icon" />
+            )}
+          </div>
         </div>
       </nav>
     </header>

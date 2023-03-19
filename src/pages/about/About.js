@@ -12,20 +12,20 @@ const About = () => {
 
   return (
     <main className="container-about">
-      <section data-aos="fade-up" className="hero-about">
+      <section className="hero-about">
         <article className="hero-about__hero-container">
           <div className="hero-about__text">
             <h1
               data-aos="fade-up"
               data-aos-delay="500"
-              className="heading-primary "
+              className="heading__100--bold "
             >
               Sebastian González
             </h1>
             <span
               data-aos="fade-up"
               data-aos-delay="900"
-              className="heading-tertiary"
+              className="heading__300--bold"
             >
               Profile
             </span>
@@ -42,12 +42,18 @@ const About = () => {
 
       <section className="profile">
         <article className="profile__container">
-          <figure data-aos="fade-up" className="name-cv__img"></figure>
+          <figure
+            data-aos="fade-up"
+            className="name-cv__img profile__img"
+          ></figure>
           <div className="profile__text-box">
-            <h3 data-aos="fade-up" className="heading-secondary profile__text">
+            <h3 data-aos="fade-up" className="heading__200--bold profile__text">
               Who i am
             </h3>
-            <p data-aos="fade-up" className="paragraph profile__paragraph">
+            <p
+              data-aos="fade-up"
+              className="paragraph__100--medium profile__paragraph"
+            >
               I´m an UI designer focused on create interactive products and
               services with relevant experiences for the people. I have
               participated in different projects with talented teams and

@@ -10,6 +10,9 @@
   text-align: center;
   width: 100%;
   gap: 3rem;
+  &__text {
+    color: var(--textIcon-secondary);
+  }
 
   &__text-container {
     display: flex;
@@ -31,11 +34,11 @@
   &__social-item {
     font-size: 3rem;
     text-decoration: none;
-    color: var(--light-primary-default);
+    color: var(--primary-button-bg);
     transition: all 0.3s ease;
 
     &:hover {
-      color: var(--light-primary-hover);
+      color: var(--primary-button-hover);
     }
   }
 }

@@ -13,12 +13,12 @@ import Landing from "../pages/projects/Landing";
 
 import Error404 from "../pages/Error404";
 import ScrollToTop from "./ScrollToTop";
+import BackToTopButton from "./BackToTopButton";
 
 const RoutesSite = () => {
   return (
     <Router>
       <ScrollToTop />
-
       <NavBar />
       <Switch>
         <Route exact path="/" component={Work} />
@@ -32,6 +32,7 @@ const RoutesSite = () => {
 
         <Route path="*" component={Error404} />
       </Switch>
+      <BackToTopButton />
       <Footer />
     </Router>
   );

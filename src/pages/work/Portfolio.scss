@@ -9,6 +9,17 @@
   flex-direction: column;
   gap: 2.5rem;
   width: 100%;
+  &__heading {
+    color: var(--textIcon-primary);
+  }
+  a {
+    text-decoration: none;
+    color: var(--textIcon-primary);
+    p,
+    span {
+      color: var(--textIcon-secondary);
+    }
+  }
 
   &__projects-container {
     display: flex;
@@ -53,14 +64,14 @@
     width: auto;
     height: auto;
     border-radius: $border-xl;
-    background-color: var(--light-bg-surface);
+    background-color: var(--card-bg);
     padding: $spacings-6;
     transition: all 0.5s ease;
     animation: portfolio 0.3s ease;
     animation-fill-mode: backwards;
     overflow: hidden;
     gap: $spacings-6;
-    border: 1px solid var(--core-color-neutral-400);
+    border: 1px solid var(--card-bg-border);
 
     @include respond(tab-port) {
       animation: none;
@@ -74,8 +85,8 @@
       height: auto;
     }
     &:hover {
-      background-color: var(--light-primary-bg);
-      border: 1px solid var(--core-color-neutral-500);
+      background-color: var(--card-bg-hover);
+      border: 1px solid var(--card-bg-border-hover);
       & img {
         transform: scale(110%);
         opacity: 0.4;

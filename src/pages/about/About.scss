@@ -4,95 +4,92 @@
 @import "../../styles/ConfigStyles/layout/Grid.scss";
 @import "../../styles/ConfigStyles/base/Utilities";
 
-.hero-about{
+.hero-about {
+  align-items: center;
+  display: flex;
+  height: 50rem;
+  justify-content: center;
+  padding: 2.5rem;
+  padding-top: 8rem;
+  width: 100%;
+  background-color: var(--bg-medium);
+  @include respond(tab-port) {
+    height: auto;
+  }
+
+  &__text {
+    @include respond(phone) {
+      text-align: center;
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  &__hero-container {
     align-items: center;
-    background-color: $color-grey-light;
     display: flex;
-    height: 50rem;
-    justify-content: center;
-    padding: 4rem;
-    width: 100%;
+    width: $width-container;
+    justify-content: space-between;
+    padding: 0 4rem;
 
-    body.dark-mode &{
-        background-color: $color-black-base;
+    @include respond(tab-port) {
+      flex-direction: column;
+      height: auto;
+      padding: 0;
     }
+  }
 
-    @include respond(tab-port){
-        height: auto;
+  &__img {
+    width: auto;
+
+    @include respond(phone) {
+      width: 100%;
+      margin-top: 2.5rem;
     }
-
-    &__hero-container{
-        align-items: center;
-        display: flex;
-        width: $width-container;
-        justify-content: space-between;
-        padding: 0 4rem ;
-
-
-    @include respond(tab-port){
-        flex-direction: column;
-        height: auto;
-        padding: 0;
-    }
-    }
-
-    &__img{
-        width: auto;
-        
-        @include respond(phone){
-            width: 100%;
-            margin-top: 4rem;
-        }
-    }
-    
-
+  }
 }
 
-.profile{
+.profile {
+  align-items: center;
+  display: flex;
+  height: 50rem;
+  justify-content: center;
+  padding: 2.5rem;
+  width: 100%;
+
+  @include respond(tab-port) {
+    height: auto;
+  }
+
+  &__container {
     align-items: center;
     display: flex;
-    height: 50rem;
-    justify-content: center;
-    padding: 4rem;
+    justify-content: space-between;
+    padding: 0 2.5rem;
+    width: $width-container;
+    gap: 1.5rem;
     width: 100%;
 
-    @include respond(tab-port){
-        height: auto;
+    @include respond(tab-port) {
+      flex-direction: column;
+      height: auto;
+      padding: 0;
     }
+  }
 
-    &__container{
-        align-items: center;
-        display: flex;
-        justify-content: space-between;
-        padding: 0 4rem;
-        width: $width-container;
+  &__text-box {
+    width: 60rem;
 
-        @include respond(tab-port){
-            flex-direction: column;
-            height: auto;
-            padding: 0;
-        }
+    @include respond(tab-port) {
+      width: 100%;
     }
-
-    &__text-box{
-        width: 60rem;
-
-        @include respond(tab-port){
-            width: 100%;
-        }
-
+  }
+  & figure {
+    @include respond(phone) {
+      width: 100%;
     }
-    &__img{
-        width: auto;
-        @include respond(phone){
-            width: 50%;
-            margin-bottom: $gutter-medium;
-        }
-
-    }
-    :is(&__text , &__paragraph){
-        margin-bottom: $gutter-medium;
-
-    }
-
+  }
+  :is(&__text, &__paragraph) {
+    margin-bottom: $gutter-medium;
+  }
 }

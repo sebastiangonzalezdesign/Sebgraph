@@ -4,15 +4,15 @@
   padding: 1rem;
   transition: all 0.3s ease;
   border-radius: 8px;
-  color: var(--light-textIcon-secondary-black);
+  color: var(--textIcon-primary);
   border-radius: $border-full;
   width: auto;
   &:hover {
-    background-color: var(--light-primary-bg);
+    background-color: var(--primary-bg);
   }
 
   &.active {
-    color: var(--light-textIcon-primary-black);
+    color: var(--textIcon-primary);
     font-size: $font-weight-bold;
   }
 }

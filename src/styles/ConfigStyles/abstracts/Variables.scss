@@ -23,6 +23,7 @@ $color-black: #000;
   --core-color-base-white: #ffffff;
   --core-color-base-black: #1f1b34;
   --core-color-base-black-medium: #1f2033;
+  --core-color-base-black-darker: #151226;
 
   --core-color-blue-100: #f0f5ff;
   --core-color-blue-200: #dce7fe;
@@ -92,6 +93,17 @@ $color-black: #000;
 
   --core-color-overlay1: rgba(241, 243, 249, 0.8);
   --core-color-overlay1-invert: rgba(31, 32, 51, 0.8);
+
+  --core-color-gradient1: linear-gradient(
+    309deg,
+    var(--core-color-purple-700),
+    var(--core-color-purple-1000)
+  );
+  --core-color-gradient2: linear-gradient(
+    309deg,
+    var(--core-color-purple-300),
+    var(--core-color-purple-100)
+  );
 }
 
 /* SEMANTIC */
@@ -99,7 +111,8 @@ $color-black: #000;
 :root [data-theme="light"] {
   --light-bg-default: var(--core-color-base-white);
   --bg-medium: var(--core-color-neutral-200);
-  --light-bg-surface: var(--core-color-neutral-100);
+  --bg-darker: var(--core-color-blue-100);
+  --bg-gradient-purple: var(--core-color-gradient2);
 
   /* -----Button------ */
   //primary
@@ -115,12 +128,38 @@ $color-black: #000;
   --secondary-button-border: var(--core-color-neutral-300);
   --secondary-button-border-hover: var(--core-color-base-black);
   --secondary-button-border-active: var(--core-color-blue-700);
+  //Hamburger menu
+  --hamburger-button-bg: var(--core-color-base-white);
+  --hamburger-button-color: var(--core-color-base-black);
+  --hamburger-button-hover: var(--core-color-blue-100);
+  --hamburger-button-border: var(--core-color-neutral-400);
+  --hamburger-button-border-hover: var(--core-color-neutral-500);
 
   /* -----Header------ */
   --header-bg-scroll: var(--core-color-overlay1);
   --header-text: var(--core-color-base-black);
   --header-logo: var(--core-color-base-black);
   --header-menu-bg: var(--core-color-neutral-100);
+
+  /* -----Text & Icon------ */
+  --textIcon-primary: var(--core-color-base-black);
+  --textIcon-primary-white: var(--core-color-base-white);
+  --textIcon-primary-inverse: var(--core-color-base-white);
+  --textIcon-secondary: rgba(29, 36, 51, 0.8);
+  --textIcon-secondary-inverse: rgba(255, 255, 255, 0.6);
+  --textIcon-disabled: rgba(255, 255, 255, 0.6);
+  --textIcon-disabled-inverse: rgba(29, 36, 51, 0.65);
+  --textIcon-link: var(--core-color-blue-700);
+
+  /* --------Card---------- */
+  --card-bg: var(--core-color-base);
+  --card-bg-hover: var(--core-color-blue-100);
+  --card-bg-border: var(--core-color-neutral-400);
+  --card-bg-border-hover: var(--core-color-neutral-500);
+
+  /* --------Progress---------- */
+  --progress-bar: var(--core-color-blue-700);
+  --progress-bar-bg: var(--core-color-neutral-400);
 
   --primary-bg: var(--core-color-blue-100);
   --primary-default: var(--core-color-blue-700);
@@ -156,10 +195,10 @@ $color-black: #000;
 }
 /* dark */
 [data-theme="dark"] {
-  --bg: var(--core-color-base-black);
-  --dark-bg-default: $core-color-neutral-1000;
-  --bg-medium: var(--core-color-neutral-900);
-  --dark-bg-surface: $core-color-neutral-900;
+  --bg-default: var(--core-color-base-black);
+  --bg-medium: var(--core-color-base-black-medium);
+  --bg-darker: var(--core-color-base-black-darker);
+  --bg-gradient-purple: var(--core-color-gradient1);
 
   /* -----Button------ */
   //primary
@@ -175,12 +214,38 @@ $color-black: #000;
   --secondary-button-border: var(--core-color-neutral-700);
   --secondary-button-border-hover: var(--core-color-base-white);
   --secondary-button-border-active: var(--core-color-blue-400);
+  //Hamburger menu
+  --hamburger-button-bg: var(--core-color-neutral-800);
+  --hamburger-button-color: var(--core-color-base-white);
+  --hamburger-button-hover: var(--core-color-blue-600);
+  --hamburger-button-border: var(--core-color-neutral-600);
+  --hamburger-button-border-hover: var(--core-color-neutral-500);
 
   /* -----Header------ */
   --header-bg-scroll: var(--core-color-overlay1-invert);
   --header-text: var(--core-color-base-white);
   --header-logo: var(--core-color-base-white);
   --header-menu-bg: var(--core-color-neutral-900);
+
+  /* -----Text & Icon------ */
+  --textIcon-primary: var(--core-color-base-white);
+  --textIcon-primary-white: var(--core-color-base-white);
+  --textIcon--primary-inverse: var(--core-color-base-black);
+  --textIcon-secondary: rgba(255, 255, 255, 0.8);
+  --textIcon-secondary-inverse: rgba(255, 255, 255, 0.8);
+  --textIcon-disabled: rgba(29, 36, 51, 0.65);
+  --textIcon-disabled-inverse: rgba(255, 255, 255, 0.6);
+  --textIcon-link: var(--core-color-blue-400);
+
+  /* --------Card---------- */
+  --card-bg: var(--core-color-base-black-darker);
+  --card-bg-hover: var(--core-color-base-black-medium);
+  --card-bg-border: var(--core-color-neutral-600);
+  --card-bg-border-hover: var(--core-color-neutral-400);
+
+  /* --------Progress---------- */
+  --progress-bar: var(--core-color-blue-300);
+  --progress-bar-bg: var(--core-color-neutral-800);
 
   --primary-bg: $core-color-blue-1000;
   --primary-default: var(--core-color-blue-400);
