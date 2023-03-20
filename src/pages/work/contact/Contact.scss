@@ -34,19 +34,27 @@
     display: flex;
     gap: 1.5rem;
     justify-content: center;
+    width: auto;
 
     @include respond(tab-port) {
       align-items: center;
       justify-content: center;
       flex-direction: column-reverse;
+    }
+    @include respond(phone) {
       width: 100%;
     }
   }
   & Button {
-    max-width: 320px;
+    width: 320px;
     @include respond(phone) {
       width: 100%;
     }
+  }
+}
+.email {
+  @include respond(phone) {
+    width: 100%;
   }
 }
 .messageActive {
