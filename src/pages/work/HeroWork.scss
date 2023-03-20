@@ -9,7 +9,6 @@
   align-items: center;
   height: 723px;
   justify-content: space-between;
-  /*   padding: 5rem 1.5rem 0 1.5rem; */
   display: flex;
   flex-direction: row;
   gap: $spacings-6;
@@ -43,10 +42,13 @@
   &__btn-container {
     max-width: 100%;
     display: flex;
-    gap: $spacings-3;
+    gap: $spacings-4;
 
     @include respond(tab-port) {
       justify-content: center;
+    }
+    @include respond(phone) {
+      flex-direction: column;
     }
 
     & Button {
