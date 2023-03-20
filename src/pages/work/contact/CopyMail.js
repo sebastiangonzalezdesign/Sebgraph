@@ -32,13 +32,14 @@ const EmailCopy = () => {
   }
 
   return (
-    <div className="button-container">
+    <div className="contact-container__btns">
       <div className="messageContainer2">
         <span className="message ">
           {copySuccessMessage} {instructions}
         </span>
       </div>
       <Button
+        className="contact-container__btn"
         onClick={copyEmail}
         onMouseOver={showInstruction}
         onMouseOut={hideInstruction}

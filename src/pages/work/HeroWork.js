@@ -34,13 +34,15 @@ const HeroWork = () => {
         </div>
 
         <div className="section-hero__btn-container">
-          <Button
-            type="button"
-            buttonStyle="btn--secondary"
-            buttonSize="btn--large"
-          >
-            View work
-          </Button>
+          <a href="mailto:sebgraph7@gmail.com" className="email">
+            <Button
+              type="button"
+              buttonStyle="btn--secondary"
+              buttonSize="btn--large"
+            >
+              Contact me
+            </Button>
+          </a>
           <a href={Cv} rel="noreferrer" download="">
             <Button
               type="button"

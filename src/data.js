@@ -6,7 +6,7 @@ export const allPortfolio = [
     year: "2020",
     title: "Solve For Tomorrow",
     img: "https://sebgraph.co/images/thumbnails/thumbnail-solve-for-tomorrow.png",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices tincidunt nulla et cursus.",
+    text: "Solve For Tomorrow is a global Samsung initiative that rewards the new ideas which change the communities.",
   },
   {
     id: 2,
@@ -15,6 +15,7 @@ export const allPortfolio = [
     year: "2020",
     title: "AV Expert App",
     img: "https://sebgraph.co/images/thumbnails/thumbnail-av-expert.png",
+    text: "AV Expert is an app launched for promoters that providing relevant information of audio and video products.",
   },
   {
     id: 3,
@@ -23,6 +24,7 @@ export const allPortfolio = [
     year: "2020",
     title: "Essilor App",
     img: "https://sebgraph.co/images/thumbnails/thumbnail-essilor.png",
+    text: "Essilor application is a proposal for the brand that allow the people involved in the commercial process.",
   },
 
   {
@@ -32,6 +34,7 @@ export const allPortfolio = [
     year: "2020",
     title: "Landing S21",
     img: "https://sebgraph.co/images/thumbnails/thumbnail-landing-s21.png",
+    text: "The S21 landing page that promote new product launching and features",
   },
 ];
 
@@ -43,6 +46,7 @@ export const uiPortfolio = [
     year: "2020",
     title: "Solve For Tomorrow",
     img: "https://sebgraph.co/images/thumbnails/thumbnail-solve-for-tomorrow.png",
+    text: "Solve For Tomorrow is a global Samsung initiative that rewards the new ideas which change the communities.",
   },
   {
     id: 2,
@@ -51,6 +55,7 @@ export const uiPortfolio = [
     year: "2020",
     title: "AV Expert App",
     img: "https://sebgraph.co/images/thumbnails/thumbnail-av-expert.png",
+    text: "AV Expert is an app launched for promoters that providing relevant information of audio and video products.",
   },
   {
     id: 3,
@@ -59,6 +64,7 @@ export const uiPortfolio = [
     year: "2020",
     title: "Essilor App",
     img: "https://sebgraph.co/images/thumbnails/thumbnail-essilor.png",
+    text: "Essilor application is a proposal for the brand that allow the people involved in the commercial process.",
   },
 ];
 
@@ -70,6 +76,7 @@ export const visualPortfolio = [
     year: "2020",
     title: "Essilor App",
     img: "https://sebgraph.co/images/thumbnails/thumbnail-essilor.png",
+    text: "Essilor application is a proposal for the brand that allow the people involved in the commercial process.",
   },
 ];
 
@@ -81,6 +88,7 @@ export const codePortfolio = [
     year: "2020",
     title: "Solve For Tomorrow",
     img: "https://sebgraph.co/images/thumbnails/thumbnail-solve-for-tomorrow.png",
+    text: "Solve For Tomorrow is a global Samsung initiative that rewards the new ideas which change the communities.",
   },
   {
     id: 2,
@@ -89,5 +97,6 @@ export const codePortfolio = [
     year: "2020",
     title: "AV Expert App",
     img: "https://sebgraph.co/images/thumbnails/thumbnail-av-expert.png",
+    text: "AV Expert is an app launched for promoters that providing relevant information of audio and video products.",
   },
 ];
