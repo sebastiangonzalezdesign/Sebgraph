@@ -43,33 +43,12 @@
     }
   }
   & Button {
-    width: 320px;
+    max-width: 320px;
     @include respond(phone) {
       width: 100%;
     }
   }
 }
-
-/* .messageContainer {
-  border-radius: 0.4rem;
-  top: -8rem;
-  left: 0%;
-  right: 0%;
-  text-align: center;
-  margin: auto;
-  padding: 1rem;
-  position: absolute;
-  background-color: $color-yellow-light;
-  height: auto;
-  width: 10rem;
-  z-index: 995;
-  width: 100%;
-
-  & .message {
-    color: $color-white;
-    font-size: $label-font-size-500;
-  }
-} */
 .messageActive {
   display: block;
 }
@@ -79,10 +58,6 @@
 .message-animation {
   animation: clipboard 0.3s ease-out;
   animation-fill-mode: backwards;
-}
-.email {
-  margin: 0;
-  width: 320px;
 }
 
 .button-container {

@@ -3,7 +3,9 @@ import React from "react";
 
 const ThemeContext = createContext();
 
-const initialTheme = "dark";
+const initialTheme = document
+  .querySelector("body")
+  .setAttribute("data-theme", "light");
 
 const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(initialTheme);

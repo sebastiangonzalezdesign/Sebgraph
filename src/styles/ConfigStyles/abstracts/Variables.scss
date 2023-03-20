@@ -128,6 +128,13 @@ $color-black: #000;
   --secondary-button-border: var(--core-color-neutral-300);
   --secondary-button-border-hover: var(--core-color-base-black);
   --secondary-button-border-active: var(--core-color-blue-700);
+
+  //Icon Button
+  --icon-button-bg: var(--core-color-base-white);
+  --icon-button-color: var(--core-color-base-black);
+  --icon-button-hover: var(--core-color-blue-100);
+  --icon-button-border: var(--core-color-blue-700);
+  --icon-button-border-hover: var(--core-color-blue-800);
   //Hamburger menu
   --hamburger-button-bg: var(--core-color-base-white);
   --hamburger-button-color: var(--core-color-base-black);
@@ -214,6 +221,12 @@ $color-black: #000;
   --secondary-button-border: var(--core-color-neutral-700);
   --secondary-button-border-hover: var(--core-color-base-white);
   --secondary-button-border-active: var(--core-color-blue-400);
+  //Icon Button
+  --icon-button-bg: var(--core-color-base-black-darker);
+  --icon-button-color: var(--core-color-base-white);
+  --icon-button-hover: var(--core-color-base-black-medium);
+  --icon-button-border: var(--core-color-blue-400);
+  --icon-button-border-hover: var(--core-color-blue-600);
   //Hamburger menu
   --hamburger-button-bg: var(--core-color-neutral-800);
   --hamburger-button-color: var(--core-color-base-white);
@@ -348,46 +361,3 @@ $gutter-horizontal: 4rem;
 
 //WIDTH
 $width-container: 140rem;
-
-/* .dark {
-  .header {
-    &__text,
-    &__link {
-      color: white;
-    }
-    &__list {
-      @include respond(tab-port) {
-        background-color: $dark-bg-surface;
-      }
-    }
-  } */
-/* ------Home--------- */
-//hero section
-/*   .section-hero {
-    &__heading {
-      color: $dark-textIcon-primary-white;
-    }
-    &__paragraph {
-      color: $dark-textIcon-secondary-white;
-    }
-  } */
-
-//Portfolio
-/*   .portfolioList {
-    color: $dark-textIcon-secondary-white;
-
-    &:hover {
-      background-color: $dark-primary-bg;
-    }
-
-    &.active {
-      color: $dark-textIcon-primary-white;
-    }
-  } */
-
-/* ------Footer--------- */
-/*   #footer {
-    background-color: red;
-  }
-}
- */

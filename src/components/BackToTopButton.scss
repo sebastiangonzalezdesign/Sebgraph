@@ -1,19 +1,23 @@
 @import "../styles/ConfigStyles/abstracts/Variables.scss";
 .back-button {
-  border: 1px solid var(--hamburger-button-border);
-  background-color: var(--hamburger-button-bg);
+  border: 1px solid var(--icon-button-border);
+  background-color: var(--icon-button-bg);
   border-radius: $border-md;
   width: fit-content;
   position: fixed;
-  right: 0;
-  margin: 1.5rem;
-  width: 3.5rem;
-  height: 3.5rem;
-  border: none;
-  bottom: 20%;
+  right: 2%;
+  width: 3rem;
+  height: 3rem;
+  bottom: 10%;
   cursor: pointer;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: var(--icon-button-hover);
+    border: 1px solid var(--icon-button-border-hover);
+  }
   &__icon {
-    width: 2.5rem;
-    height: 2.5rem;
+    color: var(--icon-button-color);
+    width: 2rem;
+    height: 2rem;
   }
 }
