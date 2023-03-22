@@ -47,29 +47,28 @@ const CV = () => {
                 Cheil World Wide / Bogotá / 2019 - currently
               </span>
             </div>
-            <ol>
-              <ul className="experience-cv__items paragraph">
-                <li className="paragraph__100--medium experience-cv__item">
-                  Develop of interface design for websites and apps on new
-                  functionalities within iterative processes for huge brands
-                  like Samsung.
-                </li>
-                <li className="paragraph__100--medium experience-cv__item">
-                  Wireframes and prototype development for different products.
-                </li>
-                <li className="paragraph__100--medium experience-cv__item">
-                  Develop, managing and maintaining of design systems.{" "}
-                </li>
-                <li className="paragraph__100--medium experience-cv__item">
-                  Communication and understanding of UX process and teams
-                  transforming different research results in visual interfaces.
-                </li>
-                <li className="paragraph__100--medium experience-cv__item">
-                  Communication with development team to create consistent
-                  components.
-                </li>
-              </ul>
-            </ol>
+
+            <ul className="experience-cv__items paragraph">
+              <li className="paragraph__100--medium experience-cv__item">
+                Develop of interface design for websites and apps on new
+                functionalities within iterative processes for huge brands like
+                Samsung.
+              </li>
+              <li className="paragraph__100--medium experience-cv__item">
+                Wireframes and prototype development for different products.
+              </li>
+              <li className="paragraph__100--medium experience-cv__item">
+                Develop, managing and maintaining of design systems.{" "}
+              </li>
+              <li className="paragraph__100--medium experience-cv__item">
+                Communication and understanding of UX process and teams
+                transforming different research results in visual interfaces.
+              </li>
+              <li className="paragraph__100--medium experience-cv__item">
+                Communication with development team to create consistent
+                components.
+              </li>
+            </ul>
           </div>
 
           <div className="experience-cv__experience-container">
@@ -79,30 +78,27 @@ const CV = () => {
                 Solutions Group / Bogotá / 2015 - 2019
               </span>
             </div>
-            <ol>
-              <ul className="experience-cv__items paragraph">
-                <li className="paragraph__100--medium experience-cv__item">
-                  Conceptualization, design, and coding for a new e-commerce
-                  platform for the innovation lab of the company called
-                  ProtoLab, using UX research methodologies and interface
-                  design.
-                </li>
-                <li className="paragraph__100--medium experience-cv__item">
-                  Communication and understanding of UX process with different
-                  research methods like emphaty maps, user journeys and
-                  interviews.
-                </li>
-                <li className="paragraph__100--medium experience-cv__item">
-                  Develop of digital products focused in websites design and
-                  social media content.{" "}
-                </li>
-                <li className="paragraph__100--medium experience-cv__item">
-                  Participation in digital campaigns and global brand
-                  activations of projects with global brands like Coca-Cola and
-                  Av-inbev.
-                </li>
-              </ul>
-            </ol>
+
+            <ul className="experience-cv__items paragraph">
+              <li className="paragraph__100--medium experience-cv__item">
+                Conceptualization, design, and coding for a new e-commerce
+                platform for the innovation lab of the company called ProtoLab,
+                using UX research methodologies and interface design.
+              </li>
+              <li className="paragraph__100--medium experience-cv__item">
+                Communication and understanding of UX process with different
+                research methods like emphaty maps, user journeys and
+                interviews.
+              </li>
+              <li className="paragraph__100--medium experience-cv__item">
+                Develop of digital products focused in websites design and
+                social media content.{" "}
+              </li>
+              <li className="paragraph__100--medium experience-cv__item">
+                Participation in digital campaigns and global brand activations
+                of projects with global brands like Coca-Cola and Av-inbev.
+              </li>
+            </ul>
           </div>
         </article>
       </section>

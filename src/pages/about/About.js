@@ -42,10 +42,7 @@ const About = () => {
 
       <section className="profile">
         <article className="profile__container">
-          <figure
-            data-aos="fade-up"
-            className="name-cv__img profile__img"
-          ></figure>
+          <figure data-aos="fade-up" className="name-cv__img"></figure>
           <div className="profile__text-box">
             <h3 data-aos="fade-up" className="heading__200--bold profile__text">
               Who i am
