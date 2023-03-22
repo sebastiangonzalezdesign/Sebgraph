@@ -25,6 +25,7 @@ const Footer = () => {
             href="https://www.linkedin.com/in/sebgraph"
             target="_blank"
             rel="noreferrer"
+            aria-label="View Linkedin profile"
           >
             <FontAwesomeIcon icon={faLinkedin}></FontAwesomeIcon>
           </a>
@@ -33,6 +34,7 @@ const Footer = () => {
             href="https://www.behance.net/seb-graph"
             target="_blank"
             rel="noreferrer"
+            aria-label="View Behance profile"
           >
             <FontAwesomeIcon icon={faBehanceSquare}></FontAwesomeIcon>
           </a>
@@ -41,6 +43,7 @@ const Footer = () => {
             href="https://www.instagram.com/sebgraph/"
             target="_blank"
             rel="noreferrer"
+            aria-label="View Instagram profile"
           >
             <FontAwesomeIcon icon={faInstagramSquare}></FontAwesomeIcon>
           </a>

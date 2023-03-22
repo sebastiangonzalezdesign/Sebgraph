@@ -1,0 +1,13 @@
+@import "../styles/ConfigStyles/abstracts/Variables.scss";
+@import "../styles/ConfigStyles/abstracts/Mixins.scss";
+
+.spinner {
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--core-color-base-black-medium);
+    width: 100vw;
+    height: 100vh;
+  }
+}

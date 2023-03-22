@@ -27,9 +27,6 @@ export default function Portfolio() {
 
   let refProject = useRef();
 
-  /* console.log( refThumbnail.current.children.item(0).textContent); */
-  /* console.log(refThumbnail, refProject); */
-
   const list = [
     {
       id: "all",
@@ -109,6 +106,7 @@ export default function Portfolio() {
                     className="section-portfolio__img"
                     src={d.img}
                     alt="Tech"
+                    loading="lazy"
                   />
                 </div>
                 <div className="section-portfolio__text-card">

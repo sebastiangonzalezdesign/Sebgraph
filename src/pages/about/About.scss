@@ -30,7 +30,7 @@
     display: flex;
     width: $width-container;
     justify-content: space-between;
-    padding: 0 4rem;
+    max-width: 75rem;
 
     @include respond(tab-port) {
       flex-direction: column;
@@ -65,10 +65,9 @@
     align-items: center;
     display: flex;
     justify-content: space-between;
-    padding: 0 2.5rem;
     width: $width-container;
     gap: 1.5rem;
-    width: 100%;
+    max-width: 75rem;
 
     @include respond(tab-port) {
       flex-direction: column;

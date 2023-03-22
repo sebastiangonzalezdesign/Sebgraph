@@ -107,7 +107,7 @@
   .name-cv {
     border-radius: 2rem;
     grid-area: name-cv;
-    padding: 4rem;
+    padding: $spacings-9;
     max-width: 75rem;
     width: 100%;
     &__img {
@@ -117,42 +117,42 @@
   .profile-cv {
     border-radius: 2rem;
     grid-area: profile-cv;
-    padding: 4rem;
+    padding: $spacings-9;
     max-width: 75rem;
     width: 100%;
   }
   .experience-cv {
     border-radius: 2rem;
     grid-area: experience-cv;
-    padding: 4rem;
+    padding: $spacings-9;
     max-width: 75rem;
     width: 100%;
   }
   .education-cv {
     border-radius: 2rem;
     grid-area: education-cv;
-    padding: 4rem;
+    padding: $spacings-9;
     max-width: 75rem;
     width: 100%;
   }
   .skills-cv {
     border-radius: 2rem;
     grid-area: skills-cv;
-    padding: 4rem;
+    padding: $spacings-9;
     max-width: 75rem;
     width: 100%;
   }
   .languages-cv {
     border-radius: 2rem;
     grid-area: languages-cv;
-    padding: 4rem;
+    padding: $spacings-9;
     max-width: 75rem;
     width: 100%;
   }
   .hobbies-cv {
     border-radius: 2rem;
     grid-area: hobbies-cv;
-    padding: 4rem;
+    padding: $spacings-9;
     max-width: 75rem;
     width: 100%;
   }
