@@ -330,8 +330,8 @@
     background-color: $color-grey-light;
     border-radius: 2rem;
     margin-right: 4rem;
-    width: 50rem;
-    height: 30rem;
+    width: 31.25rem;
+    height: 18.75rem;
     object-fit: cover;
     @include respond(tab-port) {
       margin: auto;
@@ -364,7 +364,7 @@
   &__box {
     background-color: var(--bg-medium);
     border-radius: 2rem;
-    padding: 4rem;
+    padding: 2.5rem;
     width: 50%;
     text-align: left;
 

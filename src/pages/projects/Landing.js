@@ -38,7 +38,7 @@ const LandingPage = () => {
             <article className="project-info__container">
               <img
                 className="project-info__img"
-                src="https://sebgraph.co/images/projects/essilor/project.png"
+                src="https://sebgraph.co/images/projects/landing-s21/project.png"
                 loading="lazy"
                 alt="AV Expert project"
               />
