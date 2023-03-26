@@ -32,8 +32,8 @@ const CV = lazy(() => import("../pages/cv/CV"));
 
 const RoutesSite = () => {
   return (
-    <Router>
-      <Suspense fallback={<Spinner />}>
+    <Suspense fallback={<Spinner />}>
+      <Router>
         <ScrollToTop />
         <NavBar />
         <Switch>
@@ -50,8 +50,8 @@ const RoutesSite = () => {
         </Switch>
         <BackToTopButton />
         <Footer />
-      </Suspense>
-    </Router>
+      </Router>
+    </Suspense>
   );
 };
 

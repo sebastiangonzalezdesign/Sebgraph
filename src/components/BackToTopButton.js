@@ -5,7 +5,7 @@ import { ArrowUpIcon } from "@heroicons/react/24/outline";
 const BackToTopButton = () => {
   const [top, setTop] = useState(false);
   const showBack = () => {
-    if (window.scrollY >= 1080) {
+    if (window.scrollY >= 800) {
       setTop(true);
     } else {
       setTop(false);
