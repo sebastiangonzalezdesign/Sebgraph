@@ -18,8 +18,10 @@ const Contact = () => {
         <div className="contact-container__heading">
           <h2 className="heading__100--bold ">Contact</h2>
           <p className="paragraph__100--regular contact-container__paragraph">
-            Please, feel free to contact me and let me be part of your great
-            project.
+            If you have a project you'd like to collaborate on or would like to
+            learn more about my services, I'd love to hear from you. You can
+            reach me by email clicking below. I'll get back to you as soon as
+            possible. Let's create something great together!
           </p>
         </div>
         <article className="contact-container__text-box">

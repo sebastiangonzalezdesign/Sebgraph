@@ -18,8 +18,13 @@
     flex-direction: column;
   }
 
-  &__container {
-    &__text-container {
+  &__text-container {
+    width: 60%;
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
+    &__text {
       margin-bottom: $spacings-11;
 
       & h1 {
@@ -60,10 +65,9 @@
     }
   }
 
-  &__3d {
-    width: auto;
-    height: auto;
-
+  &__3d-container {
+    width: 60%;
+    height: 100%;
     @include respond(tab-port) {
       width: 100%;
     }
