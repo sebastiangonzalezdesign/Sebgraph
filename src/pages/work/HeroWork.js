@@ -19,19 +19,24 @@ const HeroWork = () => {
   }, []);
   return (
     <section className={`section-hero ${theme}`}>
-      <article className="section-hero__container">
-        <div className="section-hero__container__text-container">
+      <article className="section-hero__text-container">
+        <div className="section-hero__text-container__text">
           <h1
             id="work"
             className="display__100--bold section-hero__heading"
             data-aos="fade-up"
             data-aos-delay="500"
           >
-            Hi! I’m Sebastian
+            Creating digital experiences
           </h1>
           <p className="paragraph__100--regular section-hero__paragraph">
-            I will help you to connect the users with your digital products
-            through great experiences and memorable interfaces.
+            Hi, I'm <strong>Sebastian González, </strong>a UI/Visual designer
+            with a strong desire to continuously improve my design system and
+            coding skills to create memorable digital experiences that connect
+            users to your products. With a passion for innovation and a deep
+            understanding of user behavior, I craft exceptional interfaces that
+            engage and inspire. Let's collaborate to create something
+            unforgettable.
           </p>
         </div>
 
@@ -56,9 +61,11 @@ const HeroWork = () => {
           </a>
         </div>
       </article>
-      <Suspense>
-        <Hero3D className="section-hero__3d" />
-      </Suspense>
+      <div className="section-hero__3d-container">
+        <Suspense>
+          <Hero3D className="section-hero__3d" />
+        </Suspense>
+      </div>
     </section>
   );
 };
