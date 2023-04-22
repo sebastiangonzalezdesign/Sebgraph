@@ -23,7 +23,7 @@ const HeroWork = () => {
         <div className="section-hero__text-container__text">
           <h1
             id="work"
-            className="display__100--bold section-hero__heading"
+            className="display__200--bold section-hero__heading"
             data-aos="fade-up"
             data-aos-delay="500"
           >
