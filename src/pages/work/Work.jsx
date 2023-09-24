@@ -3,9 +3,9 @@
 /* import Contact from "../../pages/work/contact/Contact"; */
 import React, { lazy } from "react";
 
-const HeroWork = lazy(() => import("../work/HeroWork"));
-const Portfolio = lazy(() => import("../../pages/work/Portfolio"));
-const Contact = lazy(() => import("../../pages/work/contact/Contact"));
+const HeroWork = lazy(() => import("./HeroWork"));
+const Portfolio = lazy(() => import("./Portfolio"));
+const Contact = lazy(() => import("./contact/Contact"));
 
 const Work = () => {
   return (
