@@ -2,6 +2,9 @@ import React, { useState, useEffect, useRef } from "react";
 import { Solve } from "../../dataPortfolio";
 import "./ProjectStyles.scss";
 import lottie from "lottie-web";
+import { default as desarrolloSostenible } from '../../img/desarrollo_sostenible.json';
+import { default as versionesAnteriores } from '../../img/versiones-anteriores.json';
+import { default as recursos } from '../../img/recursos.json';
 
 const SolveForTomorrow = () => {
   const [dataPortfolio] = useState(Solve);
@@ -16,7 +19,7 @@ const SolveForTomorrow = () => {
       renderer: "svg",
       loop: true,
       autoplay: true,
-      animationData: require("../../img/desarrollo_sostenible.json"),
+      animationData: desarrolloSostenible,
     });
 
     lottie.loadAnimation({
@@ -24,7 +27,7 @@ const SolveForTomorrow = () => {
       renderer: "svg",
       loop: true,
       autoplay: true,
-      animationData: require("../../img/versiones-anteriores.json"),
+      animationData: versionesAnteriores,
     });
 
     lottie.loadAnimation({
@@ -32,7 +35,7 @@ const SolveForTomorrow = () => {
       renderer: "svg",
       loop: true,
       autoplay: true,
-      animationData: require("../../img/recursos.json"),
+      animationData: recursos,
     });
   }, []);
 

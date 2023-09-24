@@ -4,14 +4,14 @@ import React, { lazy } from "react";
 import Error404 from "../pages/Error404";
 import ScrollToTop from "./ScrollToTop";
 import BackToTopButton from "./BackToTopButton";
-import { Suspense } from "react/cjs/react.production.min";
+import { Suspense } from "react";
 import Spinner from "./Spinner";
 
 const NavBar = lazy(() => import("./NavBar"));
 const Footer = lazy(() => import("./Footer"));
 const AvExpert = lazy(() => import("../pages/projects/AvExpert"));
 const SolveForTomorrow = lazy(() =>
-  import("../pages/projects/SolveForTomorrow")
+  import("../pages/projects/SolveForTomorrow.jsx")
 );
 const Essilor = lazy(() => import("../pages/projects/Essilor"));
 const Landing = lazy(() => import("../pages/projects/Landing"));
@@ -39,6 +39,7 @@ const RoutesSite = () => {
           <Route path="*" component={Error404} />
         </Switch>
         <BackToTopButton />
+        
         <Footer />
       </Router>
     </Suspense>

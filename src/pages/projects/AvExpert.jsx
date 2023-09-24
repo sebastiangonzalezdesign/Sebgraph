@@ -2,6 +2,11 @@ import React, { useState, useRef, useEffect } from "react";
 import "./ProjectStyles.scss";
 import { AV } from "../../dataPortfolio";
 import lottie from "lottie-web";
+import { default as busqueda } from '../../img/busqueda.json';
+import { default as calificacionInicio } from '../../img/calificacion-inicio.json';
+import { default as calificacionFin } from '../../img/calificacion-fin.json';
+
+
 
 const AvExpert = () => {
   const [dataPortfolio] = useState(AV);
@@ -15,7 +20,7 @@ const AvExpert = () => {
       renderer: "svg",
       loop: true,
       autoplay: true,
-      animationData: require("../../img/busqueda.json"),
+      animationData: busqueda,
     });
 
     lottie.loadAnimation({
@@ -23,7 +28,7 @@ const AvExpert = () => {
       renderer: "svg",
       loop: true,
       autoplay: true,
-      animationData: require("../../img/calificacion-inicio.json"),
+      animationData: calificacionInicio,
     });
 
     lottie.loadAnimation({
@@ -31,7 +36,7 @@ const AvExpert = () => {
       renderer: "svg",
       loop: true,
       autoplay: true,
-      animationData: require("../../img/calificacion-fin.json"),
+      animationData: calificacionFin,
     });
   }, []);
 
