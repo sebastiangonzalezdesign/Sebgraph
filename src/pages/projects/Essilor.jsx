@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import "./ProjectStyles.scss";
 import { Essilor } from "../../dataPortfolio";
 
+
 const EssilorAPP = () => {
   const [dataPortfolio] = useState(Essilor);
 
   return (
     <>
+
       {dataPortfolio.map((dataPortfolio) => (
         /* CONTAINER */
         <section key={dataPortfolio.id} className="modal__container">
@@ -403,6 +405,7 @@ const EssilorAPP = () => {
           </section>
         </section>
       ))}
+         
     </>
   );
 };

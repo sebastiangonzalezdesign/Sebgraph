@@ -10,9 +10,11 @@ const Contact = lazy(() => import("./contact/Contact"));
 const Work = () => {
   return (
     <main className={"container-home"}>
+
       <HeroWork />
       <Portfolio />
       <Contact />
+
     </main>
   );
 };

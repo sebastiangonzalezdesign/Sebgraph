@@ -7,8 +7,6 @@ import React from "react";
 import { Button } from "../../components/Button";
 /* import Hero3D from "../../components/Hero3D"; */
 import Cv from "../../documents/cv-sebastian-gonzalez.pdf";
-import { Suspense } from "react/cjs/react.production.min";
-import Spinner from "../../components/Spinner";
 const Hero3D = lazy(() => import("../../components/Hero3D"));
 
 const HeroWork = () => {
@@ -62,9 +60,9 @@ const HeroWork = () => {
         </div>
       </article>
       <div className="section-hero__3d-container">
-        <Suspense fallback={<Spinner/>}>
+
           <Hero3D className="section-hero__3d" />
-        </Suspense>
+
       </div>
     </section>
   );

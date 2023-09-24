@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import "./ProjectStyles.scss";
 import { Landing } from "../../dataPortfolio";
 
+
 const LandingPage = () => {
   const [dataPortfolio] = useState(Landing);
 
   return (
     <>
+
       {dataPortfolio.map((dataPortfolio) => (
         /* CONTAINER */
         <section key={dataPortfolio.id} className="modal__container">
@@ -390,6 +392,7 @@ const LandingPage = () => {
           </section>
         </section>
       ))}
+
     </>
   );
 };

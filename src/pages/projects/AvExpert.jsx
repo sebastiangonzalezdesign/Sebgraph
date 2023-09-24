@@ -8,13 +8,16 @@ import { default as calificacionFin } from '../../img/calificacion-fin.json';
 
 
 
+
 const AvExpert = () => {
   const [dataPortfolio] = useState(AV);
   const container1 = useRef(null);
   const container2 = useRef(null);
   const container3 = useRef(null);
 
+
   useEffect(() => {
+    if (container1.current) {
     lottie.loadAnimation({
       container: container1.current,
       renderer: "svg",
@@ -22,7 +25,9 @@ const AvExpert = () => {
       autoplay: true,
       animationData: busqueda,
     });
+  }
 
+  if (container2.current) {
     lottie.loadAnimation({
       container: container2.current,
       renderer: "svg",
@@ -30,7 +35,9 @@ const AvExpert = () => {
       autoplay: true,
       animationData: calificacionInicio,
     });
+  }
 
+    if (container3.current) {
     lottie.loadAnimation({
       container: container3.current,
       renderer: "svg",
@@ -38,10 +45,12 @@ const AvExpert = () => {
       autoplay: true,
       animationData: calificacionFin,
     });
+  }
   }, []);
 
   return (
     <>
+
       {dataPortfolio.map((dataPortfolio) => (
         /* CONTAINER */
         <section key={dataPortfolio.id} className="modal__container">
@@ -515,6 +524,7 @@ const AvExpert = () => {
           </section>
         </section>
       ))}
+
     </>
   );
 };
