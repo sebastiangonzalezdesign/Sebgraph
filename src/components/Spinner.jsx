@@ -1,6 +1,9 @@
 import { Puff } from "react-loader-spinner";
 import "./Spinner.scss";
 
+
+
+
 const Spinner = () => {
   return (
     <div className="spinner__container">

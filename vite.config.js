@@ -7,24 +7,34 @@ const path = require('path');
 // https://vitejs.dev/config/
 export default defineConfig({
     envPrefix: 'REACT_APP_',
-  // This changes the out put dir from dist to build
-  // comment this out if that isn't relevant for your project
-  build: {
-    outDir: "build",
-  },
-  resolve:{
-    alias:{
-        '@' : path.resolve(__dirname, './src')
+    // This changes the output dir from dist to build
+    // Comment this out if it isn't relevant for your project
+    build: {
+        outDir: "dist",
+        chunkSizeWarningLimit: 2000,  // Adjust chunk size warning limit
+        rollupOptions: {
+            output: {
+                manualChunks(id) {
+                    if (id.includes('node_modules')) {
+                        return 'vendor';
+                    }
+                }
+            }
+        }
     },
-  },
-  plugins: [
-    react(),
-    envCompatible(),
-    svgrPlugin({
-      svgrOptions: {
-        icon: true,
-        // ...svgr options (https://react-svgr.com/docs/options/)
-      },
-    }),
-  ],
+    resolve: {
+        alias: {
+            '@' : path.resolve(__dirname, './src')
+        },
+    },
+    plugins: [
+        react(),
+        envCompatible(),
+        svgrPlugin({
+            svgrOptions: {
+                icon: true,
+                // ...svgr options (https://react-svgr.com/docs/options/)
+            },
+        }),
+    ],
 });

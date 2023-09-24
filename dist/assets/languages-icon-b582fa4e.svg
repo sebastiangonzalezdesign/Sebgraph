@@ -1,0 +1,9 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M50 100C77.6142 100 100 77.6142 100 50C100 22.3858 77.6142 0 50 0C22.3858 0 0 22.3858 0 50C0 77.6142 22.3858 100 50 100Z" fill="#F3ECEB"/>
+<path d="M66 50C66 62.4 59.9 73.3 50.5 80C66.8 79.7 79.9 66.4 79.9 50H66Z" fill="#F3ECEB" stroke="#222222" stroke-miterlimit="10"/>
+<path d="M66.0001 50H80.0001C80.0001 33.6 66.9001 20.3 50.6001 20C59.9001 26.7 66.0001 37.6 66.0001 50Z" fill="#F3ECEB" stroke="#222222" stroke-miterlimit="10"/>
+<path d="M49.4 20C33.1 20.3 20 33.6 20 50H34C34 37.6 40.1 26.7 49.4 20Z" fill="#F3ECEB" stroke="#222222" stroke-miterlimit="10"/>
+<path d="M34 50H20C20 66.4 33.1 79.7 49.4 80C40.1 73.3 34 62.4 34 50Z" fill="#F3ECEB" stroke="#222222" stroke-miterlimit="10"/>
+<path d="M66 50H34C34 62.4 40.1 73.3 49.5 80C49.7 80 49.9 80 50.1 80C50.3 80 50.5 80 50.7 80C59.9 73.3 66 62.4 66 50Z" fill="#00BFFF" stroke="#222222" stroke-miterlimit="10"/>
+<path d="M34 50H66.1C66.1 37.6 60 26.7 50.6 20C50.4 20 50.2 20 50 20C49.8 20 49.6 20 49.4 20C40.1 26.7 34 37.6 34 50Z" fill="#00BFFF" stroke="#222222" stroke-miterlimit="10"/>
+</svg>
