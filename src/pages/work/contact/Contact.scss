@@ -1,93 +1,98 @@
-@import "../../../styles/ConfigStyles/abstracts/Variables.scss";
-@import "../../../styles/ConfigStyles/abstracts/Mixins.scss";
-@import "../../../styles/ConfigStyles/base/Base.scss";
-@import "../../../styles/ConfigStyles/layout/Grid.scss";
-@import "../../../styles/ConfigStyles/base/Utilities.scss";
+@import '../../../styles/ConfigStyles/abstracts/Variables.scss';
+@import '../../../styles/ConfigStyles/abstracts/Mixins.scss';
+@import '../../../styles/ConfigStyles/base/Base.scss';
+@import '../../../styles/ConfigStyles/layout/Grid.scss';
+@import '../../../styles/ConfigStyles/base/Utilities.scss';
 
 .profile__img {
-  width: 7.5rem;
+    width: 7.5rem;
 }
 
 .contact-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  margin: auto;
-  gap: 4rem;
-  padding: 2rem;
-  max-width: 75rem;
-
-  &__heading {
-    width: 100%;
-    text-align: start;
-    color: var(--textIcon-primary);
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-  }
-  &__paragraph {
-    color: var(--textIcon-secondary);
-  }
-
-  &__btns {
-    display: flex;
-    gap: 1.5rem;
     justify-content: center;
-    width: auto;
+    text-align: center;
+    margin: auto;
+    gap: 4rem;
+    padding: 2rem;
+    max-width: 75rem;
 
-    @include respond(tab-port) {
-      align-items: center;
-      justify-content: center;
-      flex-direction: column-reverse;
+    &__heading {
+        width: 100%;
+        text-align: start;
+        color: var(--textIcon-primary);
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
     }
-    @include respond(phone) {
-      width: 100%;
+    &__paragraph {
+        color: var(--textIcon-secondary);
     }
-  }
-  & Button {
-    width: 320px;
-    @include respond(phone) {
-      width: 100%;
+
+    &__btns {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+        width: auto;
+
+        @include respond(tab-port) {
+            align-items: center;
+            justify-content: center;
+            flex-direction: column-reverse;
+        }
+        @include respond(phone) {
+            width: 100%;
+        }
     }
-  }
+    & Button {
+        width: 320px;
+        @include respond(phone) {
+            width: 100%;
+        }
+    }
 }
 .email {
-  @include respond(phone) {
-    width: 100%;
-  }
+    @include respond(phone) {
+        width: 100%;
+    }
 }
 .messageActive {
-  display: block;
+    display: block;
 }
 .message-inactive {
-  display: none;
+    display: none;
 }
 .message-animation {
-  animation: clipboard 0.3s ease-out;
-  animation-fill-mode: backwards;
+    animation: clipboard 0.3s ease-out;
+    animation-fill-mode: backwards;
 }
 
 .button-container {
-  position: relative;
+    position: relative;
 }
 
 .messageContainer2 {
-  top: -3rem;
-  left: 0%;
-  right: 0%;
-  text-align: center;
-  margin: auto;
-  position: absolute;
-  height: auto;
-  width: auto;
-  z-index: 995;
+    top: -3rem;
+    left: 0%;
+    right: 0%;
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    height: auto;
+    width: auto;
+    z-index: 995;
 
-  & .message {
-    border-radius: 0.4rem;
-    color: var(--textIcon-link);
-    font-size: $label-font-size-200;
-    font-weight: $font-weight-medium;
-    margin: 1rem;
-  }
+    & .message {
+        border-radius: 0.4rem;
+        color: var(--textIcon-link);
+        font-size: $label-font-size-200;
+        font-weight: $font-weight-medium;
+        margin: 1rem;
+    }
+}
+
+.character {
+    width: 200px;
+    height: 200px;
 }

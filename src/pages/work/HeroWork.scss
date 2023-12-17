@@ -1,75 +1,76 @@
-@import "../../styles/ConfigStyles/abstracts/Variables.scss";
-@import "../../styles/ConfigStyles/abstracts/Mixins.scss";
-@import "../../styles/ConfigStyles/base/Base.scss";
-@import "../../styles/ConfigStyles/layout/Grid.scss";
-@import "../../styles/ConfigStyles/base/Utilities";
+@import '../../styles/ConfigStyles/abstracts/Variables.scss';
+@import '../../styles/ConfigStyles/abstracts/Mixins.scss';
+@import '../../styles/ConfigStyles/base/Base.scss';
+@import '../../styles/ConfigStyles/layout/Grid.scss';
+@import '../../styles/ConfigStyles/base/Utilities';
 
 .section-hero {
-  position: relative;
-  align-items: center;
-  height: 723px;
-  justify-content: space-between;
-  display: flex;
-  flex-direction: row;
-  gap: $spacings-6;
-
-  @include respond(tab-port) {
-    height: auto;
-    flex-direction: column;
-  }
-
-  &__text-container {
-    width: 60%;
-
-    @include respond(tab-port) {
-      width: 100%;
-    }
-    &__text {
-      margin-bottom: $spacings-11;
-
-      & h1 {
-        margin-bottom: $spacings-6;
-        color: var(--textIcon-primary);
-      }
-      & p {
-        color: var(--textIcon-secondary);
-      }
-      @include respond(tab-port) {
-        text-align: center;
-      }
-    }
-    @include respond(tab-port) {
-      padding-top: 8rem;
-      height: auto;
-      width: 100%;
-    }
-  }
-  &__btn-container {
-    max-width: 100%;
+    position: relative;
+    align-items: center;
+    height: 723px;
+    justify-content: space-between;
     display: flex;
-    gap: $spacings-4;
+    flex-direction: row;
+    gap: $spacings-6;
 
     @include respond(tab-port) {
-      justify-content: center;
-    }
-    @include respond(phone) {
-      flex-direction: column;
+        height: auto;
+        flex-direction: column;
     }
 
-    & Button {
-      flex-wrap: wrap;
-      width: 200px;
-      @include respond(phone) {
-        width: 100%;
-      }
-    }
-  }
+    &__text-container {
+        width: 60%;
 
-  &__3d-container {
-    width: 60%;
-    height: 100%;
-    @include respond(tab-port) {
-      width: 100%;
+        @include respond(tab-port) {
+            width: 100%;
+        }
+        &__text {
+            margin-bottom: $spacings-11;
+
+            & h1 {
+                margin-bottom: $spacings-6;
+                color: var(--textIcon-primary);
+            }
+            & p {
+                color: var(--textIcon-secondary);
+            }
+            @include respond(tab-port) {
+                text-align: center;
+            }
+        }
+        @include respond(tab-port) {
+            padding-top: 8rem;
+            height: auto;
+            width: 100%;
+        }
     }
-  }
+    &__btn-container {
+        max-width: 100%;
+        display: flex;
+        gap: $spacings-4;
+
+        @include respond(tab-port) {
+            justify-content: center;
+        }
+        @include respond(phone) {
+            flex-direction: column;
+        }
+
+        & Button {
+            flex-wrap: wrap;
+            width: 200px;
+            @include respond(phone) {
+                width: 100%;
+            }
+        }
+    }
+
+    &__3d-container {
+        padding-top: 40px;
+        width: 60%;
+        height: 100%;
+        @include respond(tab-port) {
+            width: 100%;
+        }
+    }
 }
