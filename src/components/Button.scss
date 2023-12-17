@@ -1,72 +1,72 @@
-@import "../styles/ConfigStyles/abstracts/Variables.scss";
-@import "../styles/ConfigStyles/abstracts/Mixins.scss";
-@import "../styles/ConfigStyles/base/Base.scss";
-@import "../styles/ConfigStyles/layout/Grid.scss";
-@import "../styles/ConfigStyles/base/Utilities";
+@import '../styles/ConfigStyles/abstracts/Variables.scss';
+@import '../styles/ConfigStyles/abstracts/Mixins.scss';
+@import '../styles/ConfigStyles/base/Base.scss';
+@import '../styles/ConfigStyles/layout/Grid.scss';
+@import '../styles/ConfigStyles/base/Utilities';
 
 .btn {
-  position: relative;
-  text-decoration: none;
-  cursor: pointer;
-  outline: none;
-  position: relative;
-  text-align: center;
-  transition: all 0.3s ease;
-  font-weight: $font-weight-bold;
-  font-family: $headings-font-family;
-  line-height: $text-line-height;
-  &,
-  &:link,
-  &:visited {
-    border: none;
-    outline: none;
-  }
-
-  &--primary {
-    background-color: var(--primary-button-bg);
-    border-radius: $border-full;
-    color: var(--primary-button-text);
-
-    &:hover {
-      background-color: var(--primary-button-hover);
-    }
-    &:active {
-      background-color: var(--primary-button-active);
-    }
-  }
-
-  &--secondary {
-    background-color: var(--secondary-button-bg);
-    border-radius: $border-full;
-    border: 1px solid var(--secondary-button-border);
-    color: var(--secondary-button-text);
-
-    &:hover {
-      background-color: var(--secondary-button-bg-hover);
-      border: 1px solid var(--secondary-button-border-hover);
-    }
-  }
-
-  &--animated {
-    animation: moveInBottom 0.5s ease-out 0.75s;
-    animation-fill-mode: backwards;
-  }
-
-  &__copy {
+    position: relative;
     text-decoration: none;
-    color: $color-white;
-  }
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    text-align: center;
+    transition: all 0.3s ease;
+    font-weight: $font-weight-bold;
+    font-family: $headings-font-family;
+    line-height: $text-line-height;
+    &,
+    &:link,
+    &:visited {
+        border: none;
+        outline: none;
+    }
+
+    &--primary {
+        background-color: var(--primary-button-bg);
+        border-radius: $border-md;
+        color: var(--primary-button-text);
+
+        &:hover {
+            background-color: var(--primary-button-hover);
+        }
+        &:active {
+            background-color: var(--primary-button-active);
+        }
+    }
+
+    &--secondary {
+        background-color: var(--secondary-button-bg);
+        border-radius: $border-md;
+        border: 1px solid var(--secondary-button-border);
+        color: var(--secondary-button-text);
+
+        &:hover {
+            background-color: var(--secondary-button-bg-hover);
+            border: 1px solid var(--secondary-button-border-hover);
+        }
+    }
+
+    &--animated {
+        animation: moveInBottom 0.5s ease-out 0.75s;
+        animation-fill-mode: backwards;
+    }
+
+    &__copy {
+        text-decoration: none;
+        color: $color-white;
+    }
 }
 
 /* Button size */
 
 .btn--md {
-  padding: 1rem 2rem;
-  height: 2.5rem;
+    padding: 1rem 2rem;
+    height: 2.5rem;
 }
 
 .btn--lg {
-  font-size: $button-font-size-100;
-  padding: 0 1.5rem;
-  height: 3rem;
+    font-size: $button-font-size-100;
+    padding: 0 1.5rem;
+    height: 3rem;
 }
