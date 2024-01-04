@@ -1,1 +1,0 @@
-import{j as s,Y as t,_ as n}from"./vendor-223ebf26.js";const o=t.lazy(()=>n(()=>import("./vendor-223ebf26.js").then(e=>e.h),["assets/vendor-223ebf26.js","assets/vendor-73168167.css"]));function i(){return s.jsx(o,{id:"scene",scene:"https://prod.spline.design/pm1nUvLjlHNtgX4N/scene.splinecode"})}export{i as default};
