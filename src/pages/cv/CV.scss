@@ -1,183 +1,181 @@
-@import "../../styles/ConfigStyles/abstracts/Variables.scss";
-@import "../../styles/ConfigStyles/abstracts/Mixins.scss";
-@import "../../styles/ConfigStyles/base/Base.scss";
-@import "../../styles/ConfigStyles/layout/Grid.scss";
-@import "../../styles/ConfigStyles/base/Utilities";
+@import '../../styles/ConfigStyles/abstracts/Variables.scss';
+@import '../../styles/ConfigStyles/abstracts/Mixins.scss';
+@import '../../styles/ConfigStyles/base/Base.scss';
+@import '../../styles/ConfigStyles/layout/Grid.scss';
+@import '../../styles/ConfigStyles/base/Utilities';
 
 .icon {
-  margin-bottom: $gutter-medium;
+    margin-bottom: $gutter-medium;
 }
 .subtitle {
-  margin-bottom: $gutter-vertical;
+    margin-bottom: $gutter-vertical;
 }
 .name-cv {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
 
-  @include respond(tab-port) {
-    flex-direction: column-reverse;
-  }
-  &__img {
-    border-radius: 2rem;
-    border: solid 3px $color-grey-light;
-    width: 35rem;
-    height: 28rem;
-    background-image: url(https://sebgraph.co/images/about/avatar.png);
-    background-size: cover;
-    background-repeat: no-repeat;
     @include respond(tab-port) {
-      margin-bottom: $gutter-medium;
+        flex-direction: column-reverse;
     }
-  }
+    &__img {
+        border-radius: 2rem;
+        border: solid 3px $color-grey-light;
+        width: 35rem;
+        height: 28rem;
+        background-image: url(https://sebgraph.co/images/about/avatar.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        @include respond(tab-port) {
+            margin-bottom: $gutter-medium;
+        }
+    }
 }
 
 .profile-cv {
-  background-color: var(--bg-medium);
+    background-color: var(--bg-medium);
 }
 
 .experience-cv {
-  background-image: var(--bg-gradient-purple);
-  &__head-container {
-    margin-bottom: $gutter-medium;
-  }
-  &__items {
-    list-style: none;
-  }
-  &__item::before {
-    content: "•";
-    color: var(--textIcon-link);
-    font-size: 1.5rem;
-    margin-right: 1rem;
-  }
-  &__experience-container:not(:last-child) {
-    margin-bottom: $gutter-vertical;
-  }
+    background-image: var(--bg-gradient-purple);
+    &__head-container {
+        margin-bottom: $gutter-medium;
+    }
+    &__items {
+        list-style: none;
+    }
+    &__item::before {
+        content: '•';
+        color: var(--textIcon-link);
+        font-size: 1.5rem;
+        margin-right: 1rem;
+    }
+    &__experience-container:not(:last-child) {
+        margin-bottom: $gutter-vertical;
+    }
 }
 
 .education-cv {
-  background-color: var(--bg-darker);
-  &__course-name {
-    color: $color-yellow-dark;
-    margin-bottom: $gutter-small;
-  }
-  &__university {
-    font-weight: 600;
-  }
-  &__course:not(:last-child) {
-    margin-bottom: $gutter-vertical;
-  }
+    background-color: var(--bg-darker);
+    &__course-name {
+        margin-bottom: $gutter-small;
+    }
+    &__university {
+        font-weight: 600;
+    }
+    &__course:not(:last-child) {
+        margin-bottom: $gutter-vertical;
+    }
 }
 
 .skills-cv {
-  background-color: var(--bg-darker);
+    background-color: var(--bg-darker);
 
-  ::-webkit-progress-bar {
-    background-color: var(--progress-bar-bg);
-    height: 0.5rem;
-    border-radius: 0.5rem;
-  }
-  progress[value]::-webkit-progress-value {
-    background-color: var(--progress-bar);
-    border-radius: 0.5rem;
-  }
+    ::-webkit-progress-bar {
+        background-color: var(--progress-bar-bg);
+        height: 0.5rem;
+        border-radius: 0.5rem;
+    }
+    progress[value]::-webkit-progress-value {
+        background-color: var(--progress-bar);
+        border-radius: 0.5rem;
+    }
 
-  &__bar-container {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    gap: 1.5rem;
-  }
-  &__bar {
-    background: none;
-    width: 100%;
-  }
-  &__field {
-    margin-bottom: $gutter-medium;
-    color: $color-yellow-dark;
-    font-weight: 600;
-  }
-  &__skill:not(:last-child) {
-    margin-bottom: $gutter-vertical;
-  }
-  &__item:not(:last-child) {
-    margin-bottom: $gutter-medium;
-  }
+    &__bar-container {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        gap: 1.5rem;
+    }
+    &__bar {
+        background: none;
+        width: 100%;
+    }
+    &__field {
+        margin-bottom: $gutter-medium;
+        font-weight: 600;
+    }
+    &__skill:not(:last-child) {
+        margin-bottom: $gutter-vertical;
+    }
+    &__item:not(:last-child) {
+        margin-bottom: $gutter-medium;
+    }
 }
 
 .languages-cv {
-  background-color: var(--bg-medium);
+    background-color: var(--bg-medium);
 
-  &__bar-container {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-  }
-  &__bar {
-    width: 80%;
-  }
+    &__bar-container {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__bar {
+        width: 80%;
+    }
 
-  /*   progress {
+    /*   progress {
     -webkit-appearance: none;
   } */
 
-  ::-webkit-progress-bar {
-    background-color: rgba(255, 255, 255, 0.2);
-    height: 0.5rem;
-    border-radius: 0.5rem;
-  }
-  progress[value]::-webkit-progress-value {
-    background-color: $color-white;
-    border-radius: 0.5rem;
-  }
+    ::-webkit-progress-bar {
+        background-color: rgba(255, 255, 255, 0.2);
+        height: 0.5rem;
+        border-radius: 0.5rem;
+    }
+    progress[value]::-webkit-progress-value {
+        background-color: $color-white;
+        border-radius: 0.5rem;
+    }
 }
 
 .hobbies-cv {
-  background-image: var(--bg-gradient-purple);
-  &__icons {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    gap: 2rem;
-    flex-wrap: wrap;
-    @include respond(tab-port) {
-      justify-content: space-around;
+    background-image: var(--bg-gradient-purple);
+    &__icons {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        gap: 2rem;
+        flex-wrap: wrap;
+        @include respond(tab-port) {
+            justify-content: space-around;
+        }
     }
-  }
-  &__icon {
-    width: 5rem;
-    height: 5rem;
-    background-color: $color-white;
-    border-radius: 50%;
-  }
-  &__icon:not(:last-child) {
-    @include respond(tab-port) {
-      margin-right: 1rem;
+    &__icon {
+        width: 5rem;
+        height: 5rem;
+        background-color: $color-white;
+        border-radius: 50%;
     }
-  }
+    &__icon:not(:last-child) {
+        @include respond(tab-port) {
+            margin-right: 1rem;
+        }
+    }
 }
 
 .download-cv {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  margin: auto;
-
-  &__btns {
-    justify-content: center;
     display: flex;
-    gap: 3rem;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
 
-    & button {
-      max-width: 20rem;
-      width: 100%;
-    }
+    &__btns {
+        justify-content: center;
+        display: flex;
+        gap: 3rem;
 
-    @include respond(tab-port) {
-      flex-direction: column-reverse;
-      width: 100%;
+        & button {
+            max-width: 20rem;
+            width: 100%;
+        }
+
+        @include respond(tab-port) {
+            flex-direction: column-reverse;
+            width: 100%;
+        }
     }
-  }
 }
