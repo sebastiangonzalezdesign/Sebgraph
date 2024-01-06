@@ -1,28 +1,28 @@
-@import "../styles/ConfigStyles/abstracts/Variables.scss";
+@import '../styles/ConfigStyles/abstracts/Variables.scss';
 .back-button {
-  border: 1px solid var(--icon-button-border);
-  background-color: var(--icon-button-bg);
-  border-radius: $border-md;
-  width: fit-content;
-  position: fixed;
-  right: 2%;
-  width: 3rem;
-  height: 3rem;
-  bottom: 10%;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  &:hover {
-    background-color: var(--icon-button-hover);
-    border: 1px solid var(--icon-button-border-hover);
-  }
-  &__icon {
-    color: var(--icon-button-color);
-    width: 2rem;
-    height: 2rem;
-  }
+    border: 1px solid var(--icon-button-border);
+    background-color: var(--icon-button-bg);
+    border-radius: $border-md;
+    width: fit-content;
+    position: fixed;
+    right: 2%;
+    width: 3rem;
+    height: 3rem;
+    bottom: 10%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover {
+        background-color: var(--icon-button-hover);
+        border: 1px solid var(--icon-button-border-hover);
+    }
+    &__icon {
+        color: var(--icon-button-color);
+        width: 2rem;
+        height: 2rem;
+    }
 }
 
 .no-show {
-  transition: all 0.3s ease;
-  display: none;
+    transition: all 0.3s ease;
+    display: none;
 }

@@ -26,6 +26,7 @@ const RoutesSite = () => {
             <Router>
                 <ScrollToTop />
                 <NavBar />
+
                 <Switch>
                     <Route exact path="/" component={Work} />
                     <Route exact path="/about" component={About} />

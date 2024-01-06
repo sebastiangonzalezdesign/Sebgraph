@@ -45,13 +45,15 @@
             width: 100%;
         }
     }
-    & Button {
+    Button {
         width: 320px;
+
         @include respond(phone) {
             width: 100%;
         }
     }
 }
+
 .email {
     @include respond(phone) {
         width: 100%;
@@ -89,6 +91,20 @@
         font-size: $label-font-size-200;
         font-weight: $font-weight-medium;
         margin: 1rem;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    &.messageActive {
+        display: block;
+
+        & .message {
+            opacity: 1;
+        }
+    }
+
+    &.message-inactive {
+        display: none;
     }
 }
 

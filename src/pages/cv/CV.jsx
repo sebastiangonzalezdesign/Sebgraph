@@ -12,6 +12,7 @@ import Cv from '../../documents/cv-sebastian-gonzalez.pdf'
 import Skills from '../../img/skills-icon.svg'
 import 'aos/dist/aos.css'
 import { Button } from '../../components/Button'
+import Chip from '../../components/Chip'
 
 const CV = () => {
     return (
@@ -164,132 +165,86 @@ const CV = () => {
 
             <section className="skills-cv">
                 <img className="icon" src={Skills} alt="" />
-                <article className="skills-cv__skills-container">
+                <article className="skills-cv__skills-section-container">
                     <h2 className="heading__200--bold subtitle">Skills</h2>
-                    <div className="skills-cv__skill">
-                        <h3 className="heading__300--bold skills-cv__field">
-                            Professional
-                        </h3>
-                        <div className="skills-cv__item">
-                            <p className="paragraph__100--medium">
-                                Time management
-                            </p>
-                            <div className="skills-cv__bar-container">
-                                <progress
-                                    className="skills-cv__bar"
-                                    value="90"
-                                    max="100"
-                                ></progress>
-                                <p className="skills-cv__percent paragraph__100--medium">
-                                    90%
-                                </p>
-                            </div>
-                        </div>
-                        <div className="skills-cv__item">
-                            <p className="paragraph__100--medium">Teamwork</p>
-                            <div className="skills-cv__bar-container">
-                                <progress
-                                    className="skills-cv__bar"
-                                    value="85"
-                                    max="100"
-                                ></progress>
-                                <p className="skills-cv__percent paragraph__100--medium">
-                                    85%
-                                </p>
-                            </div>
-                        </div>
-                        <div className="skills-cv__item">
-                            <p className="paragraph__100--medium">
-                                Flexibility
-                            </p>
-                            <div className="skills-cv__bar-container">
-                                <progress
-                                    className="skills-cv__bar"
-                                    value="75"
-                                    max="100"
-                                ></progress>
-                                <p className="skills-cv__percent paragraph__100--medium">
-                                    75%
-                                </p>
-                            </div>
-                        </div>
-                        <div className="skills-cv__item">
-                            <p className="paragraph__100--medium">
-                                Communication
-                            </p>
-                            <div className="skills-cv__bar-container">
-                                <progress
-                                    className="skills-cv__bar"
-                                    value="70"
-                                    max="100"
-                                ></progress>
-                                <p className="skills-cv__percent paragraph__100--medium">
-                                    70%
-                                </p>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div className="skills-cv__skill">
-                        <h3 className="heading__300--bold skills-cv__field">
-                            Technical
-                        </h3>
-                        <div className="skills-cv__item">
-                            <p className="paragraph__100--medium">
-                                Prototyping figma XD
-                            </p>
-                            <div className="skills-cv__bar-container">
-                                <progress
-                                    className="skills-cv__bar"
-                                    value="90"
-                                    max="100"
-                                ></progress>
-                                <p className="skills-cv__percent paragraph__100--medium">
-                                    90%
-                                </p>
+                    <div className="skills-cv__skills-container">
+                        <div className="skills-cv__skill">
+                            <h3 className="heading__300--bold skills-cv__field">
+                                Professional
+                            </h3>
+
+                            <div className="skills-cv__container-items">
+                                <div className="skills-cv__item">
+                                    <Chip label="Time Management" />
+                                </div>
+                                <div className="skills-cv__item">
+                                    <Chip label="Teamwork" />
+                                </div>
+                                <div className="skills-cv__item">
+                                    <Chip label="Flexibility" />
+                                </div>
+                                <div className="skills-cv__item">
+                                    <Chip label="Communication" />
+                                </div>
+                                <div className="skills-cv__item">
+                                    <Chip label="System Thinking" />
+                                </div>
                             </div>
                         </div>
-                        <div className="skills-cv__item">
-                            <p className="paragraph__100--medium">
-                                HTML / CSS - SASS
-                            </p>
-                            <div className="skills-cv__bar-container">
-                                <progress
-                                    className="skills-cv__bar"
-                                    value="85"
-                                    max="100"
-                                ></progress>
-                                <p className="skills-cv__percent paragraph__100--medium">
-                                    85%
-                                </p>
-                            </div>
-                        </div>
-                        <div className="skills-cv__item">
-                            <p className="paragraph__100--medium">JavaScript</p>
-                            <div className="skills-cv__bar-container">
-                                <progress
-                                    className="skills-cv__bar"
-                                    value="30"
-                                    max="100"
-                                ></progress>
-                                <p className="skills-cv__percent paragraph__100--medium">
-                                    30%
-                                </p>
-                            </div>
-                        </div>
-                        <div className="skills-cv__item">
-                            <p className="paragraph__100--medium">
-                                Visual Design
-                            </p>
-                            <div className="skills-cv__bar-container">
-                                <progress
-                                    className="skills-cv__bar"
-                                    value="85"
-                                    max="100"
-                                ></progress>
-                                <p className="skills-cv__percent paragraph__100--medium">
-                                    85%
-                                </p>
+
+                        <div className="skills-cv__skill">
+                            <h3 className="heading__300--bold skills-cv__field">
+                                Technical
+                            </h3>
+
+                            <div className="skills-cv__container-items">
+                                <div className="skills-cv__item">
+                                    <Chip
+                                        label="Figma"
+                                        proficiency="Advanced"
+                                    />
+                                </div>
+                                <div className="skills-cv__item">
+                                    <div className="skills-cv__item">
+                                        <Chip
+                                            label="HTML | CSS-SASS"
+                                            proficiency="Intermediate"
+                                        />
+                                    </div>
+                                </div>
+                                <div className="skills-cv__item">
+                                    <div className="skills-cv__item">
+                                        <Chip
+                                            label="JavaScript"
+                                            proficiency="Basic"
+                                        />
+                                    </div>
+                                </div>
+                                <div className="skills-cv__item">
+                                    <div className="skills-cv__item">
+                                        <Chip
+                                            label="React"
+                                            proficiency="Basic"
+                                        />
+                                    </div>
+                                </div>
+                                <div className="skills-cv__item">
+                                    <div className="skills-cv__item">
+                                        <Chip
+                                            label="Visual Design"
+                                            proficiency="Advanced"
+                                        />
+                                    </div>
+                                </div>
+                                <div className="skills-cv__item">
+                                    <div className="skills-cv__item">
+                                        <Chip
+                                            label="Design Systems"
+                                            proficiency="Intermediate"
+                                        />
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -300,49 +255,15 @@ const CV = () => {
                 <img className="icon" src={Languages} alt="language" />
                 <article className="languages-cv__text-box">
                     <h2 className="heading__200--bold subtitle">Languages</h2>
-                    <div className="languages-cv__item">
-                        <p className="paragraph__100--medium languages-cv__language">
-                            English
-                        </p>
-                        <div className="languages-cv__bar-container">
-                            <progress
-                                className="languages-cv__bar"
-                                value="75"
-                                max="100"
-                            ></progress>
-                            <p className="languages-cv__percent paragraph__100--medium">
-                                B2
-                            </p>
+                    <div className="languages-cv__container-items">
+                        <div className="languages-cv__item">
+                            <Chip label="English" proficiency="B2" />
                         </div>
-                    </div>
-                    <div className="languages-cv__item">
-                        <p className="paragraph__100--medium languages-cv__language">
-                            Portuguese
-                        </p>
-                        <div className="languages-cv__bar-container">
-                            <progress
-                                className="languages-cv__bar"
-                                value="75"
-                                max="100"
-                            ></progress>
-                            <p className="languages-cv__percent paragraph__100--medium">
-                                B2
-                            </p>
+                        <div className="languages-cv__item">
+                            <Chip label="Portuguese" proficiency="B2" />
                         </div>
-                    </div>
-                    <div className="languages-cv__item">
-                        <p className="paragraph__100--medium languages-cv__language">
-                            Spanish
-                        </p>
-                        <div className="languages-cv__bar-container">
-                            <progress
-                                className="languages-cv__bar"
-                                value="100"
-                                max="100"
-                            ></progress>
-                            <p className="languages-cv__percent paragraph__100--medium">
-                                Native
-                            </p>
+                        <div className="languages-cv__item">
+                            <Chip label="Spanish" proficiency="Native" />
                         </div>
                     </div>
                 </article>
