@@ -1,22 +1,32 @@
-import '../../work/contact/Contact.scss'
+import './Contact.scss'
 import profileImg from '../../../img/contact.svg'
 import { Button } from '../../../components/Button'
-import EmailCopy from './CopyMail'
+import CopyToClipboard from 'react-copy-to-clipboard'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Contact = () => {
+    const [copySuccess, setCopySuccess] = useState(false)
+    const email = 'sebgraph7@gmail.com'
+
     /* Scroll animation */
     useEffect(() => {
         Aos.init({ duration: 1000 })
     }, [])
 
+    const handleCopyClick = () => {
+        setCopySuccess(true)
+        setTimeout(() => {
+            setCopySuccess(false)
+        }, 1500) // Display the success message for 3 seconds
+    }
+
     return (
         <section className="section-contact">
             <div className="contact-container">
                 <div className="contact-container__heading">
-                    <h2 className="heading__100--bold ">Contact</h2>
+                    <h2 className="heading__100--bold">Contact</h2>
                     <p className="paragraph__100--regular contact-container__paragraph">
                         If you have a project you'd like to collaborate on or
                         would like to learn more about my services, I'd love to
@@ -34,9 +44,9 @@ const Contact = () => {
                     />
                 </article>
                 <div className="contact-container__btns">
-                    <a href="mailto:sebgraph7@gmail.com" className="email">
+                    <a href={`mailto:${email}`} className="email">
                         <Button
-                            className="contact-container__btn"
+                            className="contact-container__email-btn"
                             type="button"
                             buttonStyle="btn--secondary"
                             buttonSize="btn--large"
@@ -45,11 +55,20 @@ const Contact = () => {
                         </Button>
                     </a>
 
-                    {/*                 <button id="myBtn" data-clipboard-text="sebgraph7&commat;gmail&period;com"  className="tippy-box copy-button btn-contact btn-contact--primary btn-contact--animated">
-                    Copy mail
-                </button> */}
+                    <CopyToClipboard text={email} onCopy={handleCopyClick}>
+                        <Button
+                            className="contact-container__copy-btn"
+                            onMouseLeave={() => setCopySuccess(false)}
+                        >
+                            {copySuccess ? `Mail copied!` : 'Copy mail'}
+                        </Button>
+                    </CopyToClipboard>
 
-                    <EmailCopy />
+                    {copySuccess && (
+                        <div className="messageContainer2 messageActive">
+                            <span className="message">{`${email} copied to clipboard`}</span>
+                        </div>
+                    )}
                 </div>
             </div>
         </section>

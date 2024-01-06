@@ -1,0 +1,16 @@
+@import '../styles/ConfigStyles/abstracts/Variables.scss';
+.chip {
+    background-color: var(--chip-bg);
+    padding: $spacings-1 $spacings-3;
+    display: inline-block;
+    border-radius: $border-full;
+    width: fit-content;
+
+    .label {
+        color: var(--chip-text);
+    }
+
+    .proficiency {
+        color: var(--chip-text);
+    }
+}

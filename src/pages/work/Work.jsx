@@ -1,22 +1,21 @@
 /* import HeroWork from "../work/HeroWork"; */
 /* import Portfolio from "../../pages/work/Portfolio"; */
 /* import Contact from "../../pages/work/contact/Contact"; */
-import React, { lazy } from "react";
+import React, { lazy } from 'react'
+import BackButton from '../../components/BackButton'
 
-const HeroWork = lazy(() => import("./HeroWork"));
-const Portfolio = lazy(() => import("./Portfolio"));
-const Contact = lazy(() => import("./contact/Contact"));
+const HeroWork = lazy(() => import('./HeroWork'))
+const Portfolio = lazy(() => import('./Portfolio'))
+const Contact = lazy(() => import('./contact/Contact'))
 
 const Work = () => {
-  return (
-    <main className={"container-home"}>
+    return (
+        <main className={'container-home'}>
+            <HeroWork />
+            <Portfolio />
+            <Contact />
+        </main>
+    )
+}
 
-      <HeroWork />
-      <Portfolio />
-      <Contact />
-
-    </main>
-  );
-};
-
-export default Work;
+export default Work
