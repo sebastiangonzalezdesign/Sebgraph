@@ -81,7 +81,7 @@ const SolveForTomorrow = () => {
                         <article className="project-info__container">
                             <img
                                 className="project-info__img"
-                                src="https://sebgraph.co/images/projects/solve/project.png"
+                                src="https://sebgraph.com/images/projects/solve/project.png"
                                 loading="lazy"
                                 alt="AV Expert project"
                             />
@@ -174,12 +174,12 @@ const SolveForTomorrow = () => {
 
                         <picture className="modal__img-container">
                             <source
-                                srcSet="https://sebgraph.co/images/projects/solve/user-persona-responsive.png"
+                                srcSet="https://sebgraph.com/images/projects/solve/user-persona-responsive.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.co/images/projects/solve/user-persona.png"
+                                src="https://sebgraph.com/images/projects/solve/user-persona.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
@@ -193,12 +193,12 @@ const SolveForTomorrow = () => {
 
                         <picture className="modal__img-container">
                             <source
-                                srcSet="https://sebgraph.co/images/projects/solve/empathy-map.png"
+                                srcSet="https://sebgraph.com/images/projects/solve/empathy-map.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.co/images/projects/solve/empathy-map.png"
+                                src="https://sebgraph.com/images/projects/solve/empathy-map.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
@@ -212,12 +212,12 @@ const SolveForTomorrow = () => {
 
                         <picture className="modal__img-container">
                             <source
-                                srcSet="https://sebgraph.co/images/projects/solve/user-flow.png"
+                                srcSet="https://sebgraph.com/images/projects/solve/user-flow.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.co/images/projects/solve/user-flow.png"
+                                src="https://sebgraph.com/images/projects/solve/user-flow.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
@@ -235,12 +235,12 @@ const SolveForTomorrow = () => {
                             </h3>
                             <picture className="modal__img-container">
                                 <source
-                                    srcSet="https://sebgraph.co/images/projects/solve/mid-fidelity-wireframes.png"
+                                    srcSet="https://sebgraph.com/images/projects/solve/mid-fidelity-wireframes.png"
                                     media="(max-width:900px)"
                                 />
                                 <img
                                     className="modal__img-complete"
-                                    src="https://sebgraph.co/images/projects/solve/mid-fidelity-wireframes.png"
+                                    src="https://sebgraph.com/images/projects/solve/mid-fidelity-wireframes.png"
                                     loading="lazy"
                                     alt="ideate"
                                 />
@@ -252,12 +252,12 @@ const SolveForTomorrow = () => {
                             </h3>
                             <picture className="modal__img-container">
                                 <source
-                                    srcSet="https://sebgraph.co/images/projects/solve/high-fidelity-wireframes.png"
+                                    srcSet="https://sebgraph.com/images/projects/solve/high-fidelity-wireframes.png"
                                     media="(max-width:900px)"
                                 />
                                 <img
                                     className="modal__img-complete"
-                                    src="https://sebgraph.co/images/projects/solve/high-fidelity-wireframes.png"
+                                    src="https://sebgraph.com/images/projects/solve/high-fidelity-wireframes.png"
                                     loading="lazy"
                                     alt="ideate"
                                 />
@@ -277,12 +277,12 @@ const SolveForTomorrow = () => {
 
                         <picture className="modal__img-container">
                             <source
-                                srcSet="https://sebgraph.co/images/projects/solve/moodboard.png"
+                                srcSet="https://sebgraph.com/images/projects/solve/moodboard.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.co/images/projects/solve/moodboard.png"
+                                src="https://sebgraph.com/images/projects/solve/moodboard.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
@@ -309,12 +309,12 @@ const SolveForTomorrow = () => {
                         </article>
                         <picture className="modal__img-container mb-20">
                             <source
-                                srcSet="https://sebgraph.co/images/projects/solve/brand.png"
+                                srcSet="https://sebgraph.com/images/projects/solve/brand.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.co/images/projects/solve/brand.png"
+                                src="https://sebgraph.com/images/projects/solve/brand.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
@@ -330,12 +330,12 @@ const SolveForTomorrow = () => {
                         </article>
                         <picture className="modal__img-container mb-20">
                             <source
-                                srcSet="https://sebgraph.co/images/projects/solve/colors.png"
+                                srcSet="https://sebgraph.com/images/projects/solve/colors.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.co/images/projects/solve/colors.png"
+                                src="https://sebgraph.com/images/projects/solve/colors.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
@@ -351,12 +351,12 @@ const SolveForTomorrow = () => {
                         </article>
                         <picture className="modal__img-container mb-20">
                             <source
-                                srcSet="https://sebgraph.co/images/projects/solve/tipography.png"
+                                srcSet="https://sebgraph.com/images/projects/solve/tipography.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.co/images/projects/solve/tipography.png"
+                                src="https://sebgraph.com/images/projects/solve/tipography.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
@@ -372,12 +372,12 @@ const SolveForTomorrow = () => {
                         </article>
                         <picture className="modal__img-container mb-20">
                             <source
-                                srcSet="https://sebgraph.co/images/projects/solve/imagery.png"
+                                srcSet="https://sebgraph.com/images/projects/solve/imagery.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.co/images/projects/solve/imagery.png"
+                                src="https://sebgraph.com/images/projects/solve/imagery.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
@@ -393,60 +393,60 @@ const SolveForTomorrow = () => {
                         </article>
                         <picture className="modal__img-container mb-20">
                             <source
-                                srcSet="https://sebgraph.co/images/projects/solve/buttons.png"
+                                srcSet="https://sebgraph.com/images/projects/solve/buttons.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.co/images/projects/solve/buttons.png"
+                                src="https://sebgraph.com/images/projects/solve/buttons.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
                         </picture>
                         <picture className="modal__img-container mb-20">
                             <source
-                                srcSet="https://sebgraph.co/images/projects/solve/forms.png"
+                                srcSet="https://sebgraph.com/images/projects/solve/forms.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.co/images/projects/solve/forms.png"
+                                src="https://sebgraph.com/images/projects/solve/forms.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
                         </picture>
                         <picture className="modal__img-container mb-20">
                             <source
-                                srcSet="https://sebgraph.co/images/projects/solve/icons.png"
+                                srcSet="https://sebgraph.com/images/projects/solve/icons.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.co/images/projects/solve/icons.png"
+                                src="https://sebgraph.com/images/projects/solve/icons.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
                         </picture>
                         <picture className="modal__img-container mb-20">
                             <source
-                                srcSet="https://sebgraph.co/images/projects/solve/cards.png"
+                                srcSet="https://sebgraph.com/images/projects/solve/cards.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.co/images/projects/solve/cards.png"
+                                src="https://sebgraph.com/images/projects/solve/cards.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
                         </picture>
                         <picture className="modal__img-container">
                             <source
-                                srcSet="https://sebgraph.co/images/projects/solve/organisms.png"
+                                srcSet="https://sebgraph.com/images/projects/solve/organisms.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.co/images/projects/solve/organisms.png"
+                                src="https://sebgraph.com/images/projects/solve/organisms.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
@@ -508,12 +508,12 @@ const SolveForTomorrow = () => {
 
                         <picture className="modal__img-container mb-20">
                             <source
-                                srcSet="https://sebgraph.co/images/projects/solve/form.png"
+                                srcSet="https://sebgraph.com/images/projects/solve/form.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.co/images/projects/solve/form.png"
+                                src="https://sebgraph.com/images/projects/solve/form.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
@@ -529,12 +529,12 @@ const SolveForTomorrow = () => {
                         </article>
                         <picture className="modal__img-container mb-20">
                             <source
-                                srcSet="https://sebgraph.co/images/projects/solve/previous-versions.png"
+                                srcSet="https://sebgraph.com/images/projects/solve/previous-versions.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.co/images/projects/solve/previous-versions.png"
+                                src="https://sebgraph.com/images/projects/solve/previous-versions.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
@@ -550,12 +550,12 @@ const SolveForTomorrow = () => {
                         </article>
                         <picture className="modal__img-container mb-20">
                             <source
-                                srcSet="https://sebgraph.co/images/projects/solve/resources.png"
+                                srcSet="https://sebgraph.com/images/projects/solve/resources.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.co/images/projects/solve/resources.png"
+                                src="https://sebgraph.com/images/projects/solve/resources.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
@@ -564,12 +564,12 @@ const SolveForTomorrow = () => {
 
                     <picture>
                         <source
-                            srcSet="https://sebgraph.co/images/projects/solve/final-img.png"
+                            srcSet="https://sebgraph.com/images/projects/solve/final-img.png"
                             media="(max-width:900px)"
                         />
                         <img
                             className="modal__img-complete"
-                            src="https://sebgraph.co/images/projects/solve/final-img.png"
+                            src="https://sebgraph.com/images/projects/solve/final-img.png"
                             loading="lazy"
                             alt="prototyping"
                         />
