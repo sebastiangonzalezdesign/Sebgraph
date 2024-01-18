@@ -41,7 +41,7 @@ const LandingPage = () => {
                         <article className="project-info__container">
                             <img
                                 className="project-info__img"
-                                src="https://sebgraph.co/images/projects/landing-s21/project.png"
+                                src="https://sebgraph.com/images/projects/landing-s21/project.png"
                                 loading="lazy"
                                 alt="AV Expert project"
                             />
@@ -123,12 +123,12 @@ const LandingPage = () => {
                             </h3>
                             <picture className="modal__img-container">
                                 <source
-                                    srcSet="https://sebgraph.co/images/projects/landing-s21/mid-fidelity.png"
+                                    srcSet="https://sebgraph.com/images/projects/landing-s21/mid-fidelity.png"
                                     media="(max-width:900px)"
                                 />
                                 <img
                                     className="modal__img-complete"
-                                    src="https://sebgraph.co/images/projects/landing-s21/mid-fidelity.png"
+                                    src="https://sebgraph.com/images/projects/landing-s21/mid-fidelity.png"
                                     loading="lazy"
                                     alt="ideate"
                                 />
@@ -140,12 +140,12 @@ const LandingPage = () => {
                             </h3>
                             <picture className="modal__img-container">
                                 <source
-                                    srcSet="https://sebgraph.co/images/projects/landing-s21/high-fidelity.png"
+                                    srcSet="https://sebgraph.com/images/projects/landing-s21/high-fidelity.png"
                                     media="(max-width:900px)"
                                 />
                                 <img
                                     className="modal__img-complete"
-                                    src="https://sebgraph.co/images/projects/landing-s21/high-fidelity.png"
+                                    src="https://sebgraph.com/images/projects/landing-s21/high-fidelity.png"
                                     loading="lazy"
                                     alt="ideate"
                                 />
@@ -173,12 +173,12 @@ const LandingPage = () => {
                         </article>
                         <picture className="modal__img-container mb-20">
                             <source
-                                srcSet="https://sebgraph.co/images/projects/landing-s21/brand.png"
+                                srcSet="https://sebgraph.com/images/projects/landing-s21/brand.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.co/images/projects/landing-s21/brand.png"
+                                src="https://sebgraph.com/images/projects/landing-s21/brand.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
@@ -194,12 +194,12 @@ const LandingPage = () => {
                         </article>
                         <picture className="modal__img-container mb-20">
                             <source
-                                srcSet="https://sebgraph.co/images/projects/landing-s21/colors.png"
+                                srcSet="https://sebgraph.com/images/projects/landing-s21/colors.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.co/images/projects/landing-s21/colors.png"
+                                src="https://sebgraph.com/images/projects/landing-s21/colors.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
@@ -215,12 +215,12 @@ const LandingPage = () => {
                         </article>
                         <picture className="modal__img-container mb-20">
                             <source
-                                srcSet="https://sebgraph.co/images/projects/landing-s21/tipography.png"
+                                srcSet="https://sebgraph.com/images/projects/landing-s21/tipography.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.co/images/projects/landing-s21/tipography.png"
+                                src="https://sebgraph.com/images/projects/landing-s21/tipography.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
@@ -236,12 +236,12 @@ const LandingPage = () => {
                         </article>
                         <picture className="modal__img-container-dark mb-20">
                             <source
-                                srcSet="https://sebgraph.co/images/projects/landing-s21/imagery.png"
+                                srcSet="https://sebgraph.com/images/projects/landing-s21/imagery.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.co/images/projects/landing-s21/imagery.png"
+                                src="https://sebgraph.com/images/projects/landing-s21/imagery.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
@@ -257,24 +257,24 @@ const LandingPage = () => {
                         </article>
                         <picture className="modal__img-container-dark mb-20">
                             <source
-                                srcSet="https://sebgraph.co/images/projects/landing-s21/components.png"
+                                srcSet="https://sebgraph.com/images/projects/landing-s21/components.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.co/images/projects/landing-s21/components.png"
+                                src="https://sebgraph.com/images/projects/landing-s21/components.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
                         </picture>
                         <picture className="modal__img-container-dark mb-20">
                             <source
-                                srcSet="https://sebgraph.co/images/projects/landing-s21/icons.png"
+                                srcSet="https://sebgraph.com/images/projects/landing-s21/icons.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.co/images/projects/landing-s21/icons.png"
+                                src="https://sebgraph.com/images/projects/landing-s21/icons.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
@@ -293,12 +293,12 @@ const LandingPage = () => {
 
                         <picture className="modal__img-container mb-20">
                             <source
-                                srcSet="https://sebgraph.co/images/projects/landing-s21/final-design.png"
+                                srcSet="https://sebgraph.com/images/projects/landing-s21/final-design.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.co/images/projects/landing-s21/final-design.png"
+                                src="https://sebgraph.com/images/projects/landing-s21/final-design.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
@@ -315,12 +315,12 @@ const LandingPage = () => {
 
                         <picture className="modal__img-container mb-20">
                             <source
-                                srcSet="https://sebgraph.co/images/projects/landing-s21/specifications.png"
+                                srcSet="https://sebgraph.com/images/projects/landing-s21/specifications.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.co/images/projects/landing-s21/specifications.png"
+                                src="https://sebgraph.com/images/projects/landing-s21/specifications.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
@@ -336,12 +336,12 @@ const LandingPage = () => {
                         </article>
                         <picture className="modal__img-container mb-20">
                             <source
-                                srcSet="https://sebgraph.co/images/projects/landing-s21/360.png"
+                                srcSet="https://sebgraph.com/images/projects/landing-s21/360.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.co/images/projects/landing-s21/360.png"
+                                src="https://sebgraph.com/images/projects/landing-s21/360.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
@@ -357,12 +357,12 @@ const LandingPage = () => {
                         </article>
                         <picture className="modal__img-container mb-20">
                             <source
-                                srcSet="https://sebgraph.co/images/projects/landing-s21/compare.png"
+                                srcSet="https://sebgraph.com/images/projects/landing-s21/compare.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.co/images/projects/landing-s21/compare.png"
+                                src="https://sebgraph.com/images/projects/landing-s21/compare.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
@@ -371,12 +371,12 @@ const LandingPage = () => {
 
                     <picture>
                         <source
-                            srcSet="https://sebgraph.co/images/projects/landing-s21/final-img.png"
+                            srcSet="https://sebgraph.com/images/projects/landing-s21/final-img.png"
                             media="(max-width:900px)"
                         />
                         <img
                             className="modal__img-complete"
-                            src="https://sebgraph.co/images/projects/landing-s21/final-img.png"
+                            src="https://sebgraph.com/images/projects/landing-s21/final-img.png"
                             loading="lazy"
                             alt="prototyping"
                         />
