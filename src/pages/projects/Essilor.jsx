@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './ProjectStyles.scss'
 import { Essilor } from '../../dataPortfolio'
+import BackButton from '../../components/BackButton'
 
 const EssilorAPP = () => {
     const [dataPortfolio] = useState(Essilor)
@@ -10,6 +11,7 @@ const EssilorAPP = () => {
             {dataPortfolio.map((dataPortfolio) => (
                 /* CONTAINER */
                 <section key={dataPortfolio.id} className="modal__container">
+                    <BackButton />
                     {/* Section porfolio header */}
                     <div className="modal__header modal__header-essilor">
                         <div className="modal-header__text-box">

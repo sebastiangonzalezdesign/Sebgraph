@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './ProjectStyles.scss'
 import { Landing } from '../../dataPortfolio'
+import BackButton from '../../components/BackButton'
 
 const LandingPage = () => {
     const [dataPortfolio] = useState(Landing)
@@ -10,6 +11,7 @@ const LandingPage = () => {
             {dataPortfolio.map((dataPortfolio) => (
                 /* CONTAINER */
                 <section key={dataPortfolio.id} className="modal__container">
+                    <BackButton />
                     {/* Section porfolio header */}
                     <div className="modal__header modal__header-landing-s21">
                         <div className="modal-header__text-box">

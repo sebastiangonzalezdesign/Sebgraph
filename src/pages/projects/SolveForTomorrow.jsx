@@ -5,6 +5,7 @@ import lottie from 'lottie-web'
 import { default as desarrolloSostenible } from '../../img/desarrollo_sostenible.json'
 import { default as versionesAnteriores } from '../../img/versiones-anteriores.json'
 import { default as recursos } from '../../img/recursos.json'
+import BackButton from '../../components/BackButton'
 
 const SolveForTomorrow = () => {
     const [dataPortfolio] = useState(Solve)
@@ -50,6 +51,7 @@ const SolveForTomorrow = () => {
             {dataPortfolio.map((dataPortfolio) => (
                 /* CONTAINER */
                 <section key={dataPortfolio.id} className="modal__container">
+                    <BackButton />
                     {/* Section porfolio header */}
                     <div className="modal__header modal__header-solve-for-tomorrow">
                         <div className="modal-header__text-box">

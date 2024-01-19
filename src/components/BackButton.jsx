@@ -1,7 +1,7 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
 import { Button } from './Button'
-import './BackButton.scss'
+import { ArrowLeftIcon } from '@heroicons/react/24/outline'
 
 const BackButton = () => {
     const history = useHistory()
@@ -15,8 +15,10 @@ const BackButton = () => {
             className="back-btn"
             onClick={goBack}
             type="button"
-            buttonStyle="btn--primary"
-            buttonSize="btn--large"
+            buttonStyle="btn--secondary"
+            buttonSize="btn--md"
+            iconLeft={<ArrowLeftIcon />}
+            fixedPosition={true}
         >
             Back
         </Button>

@@ -5,6 +5,7 @@ import lottie from 'lottie-web'
 import { default as busqueda } from '../../img/busqueda.json'
 import { default as calificacionInicio } from '../../img/calificacion-inicio.json'
 import { default as calificacionFin } from '../../img/calificacion-fin.json'
+import BackButton from '../../components/BackButton'
 
 const AvExpert = () => {
     const [dataPortfolio] = useState(AV)
@@ -49,6 +50,7 @@ const AvExpert = () => {
             {dataPortfolio.map((dataPortfolio) => (
                 /* CONTAINER */
                 <section key={dataPortfolio.id} className="modal__container">
+                    <BackButton />
                     {/* Section porfolio header */}
                     <div className="modal__header modal__header-av">
                         <div className="modal-header__text-box">
