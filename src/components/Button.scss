@@ -56,17 +56,39 @@
         text-decoration: none;
         color: $color-white;
     }
+
+    &--fixed {
+        position: fixed;
+        top: 14%; // Adjust as needed
+        left: 2%; // Adjust as needed
+        z-index: 1000; // Adjust as needed
+        // Add any other styles for fixed position
+    }
 }
 
 /* Button size */
 
 .btn--md {
-    padding: 1rem 2rem;
-    height: 2.5rem;
+    padding: 0 1rem;
+    height: 3rem;
 }
 
 .btn--lg {
     font-size: $button-font-size-100;
     padding: 0 1.5rem;
     height: 3rem;
+}
+
+/* Button + icon */
+.btn-icon-container {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.btn__icon {
+    width: 20px;
+    height: 20px;
 }
