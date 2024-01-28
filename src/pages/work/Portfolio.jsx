@@ -4,9 +4,9 @@ import './Portfolio.scss'
 import PortfolioList from './PortfolioList'
 import {
     allPortfolio,
-    uiPortfolio,
-    visualPortfolio,
+    uiVisualPortfolio,
     codePortfolio,
+    dsPortfolio,
 } from '../../data'
 import { Button } from '../../components/Button'
 
@@ -33,12 +33,16 @@ export default function Portfolio() {
             title: 'All',
         },
         {
-            id: 'ui',
-            title: 'UI',
+            id: 'ui/visual',
+            title: 'UI/Visual',
         },
-        {
+        /*         {
             id: 'visual',
             title: 'Visual',
+        }, */
+        {
+            id: 'ds',
+            title: 'Design System',
         },
         {
             id: 'code',
@@ -52,12 +56,16 @@ export default function Portfolio() {
                 setData(allPortfolio)
                 break
 
-            case 'ui':
-                setData(uiPortfolio)
+            case 'ui/visual':
+                setData(uiVisualPortfolio)
                 break
 
-            case 'visual':
+            /*             case 'visual':
                 setData(visualPortfolio)
+                break */
+
+            case 'ds':
+                setData(dsPortfolio)
                 break
 
             case 'code':
@@ -92,44 +100,53 @@ export default function Portfolio() {
                         className="section-portfolio__container-grid"
                         data-aos="fade-up"
                     >
-                        {data.map((d) => (
-                            <Link
-                                to={`/projects/${d.key}`}
-                                ref={refProject}
-                                id={d.id}
-                                path={d.key}
-                                key={d.id}
-                                className="section-portfolio__card-project link"
-                            >
-                                <div className="section-portfolio__img-container">
-                                    <img
-                                        className="section-portfolio__img"
-                                        src={d.img}
-                                        alt="Tech"
-                                        loading="lazy"
-                                    />
-                                </div>
-                                <div className="section-portfolio__text-card">
-                                    <div className="head-text">
-                                        <h2
-                                            id={d.id}
-                                            className="heading__200--bold"
-                                        >
-                                            {d.title}
-                                        </h2>
-                                        <span className="paragraph__200--medium">
-                                            {d.company} | {d.year}
-                                        </span>
+                        {data
+                            /* sort the cards from most recent */
+                            .sort((a, b) => {
+                                const yearA = parseInt(a.year)
+                                const yearB = parseInt(b.year)
+
+                                return yearB - yearA
+                            })
+
+                            .map((d) => (
+                                <Link
+                                    to={`/projects/${d.key}`}
+                                    ref={refProject}
+                                    id={d.id}
+                                    path={d.key}
+                                    key={d.id}
+                                    className="section-portfolio__card-project link"
+                                >
+                                    <div className="section-portfolio__img-container">
+                                        <img
+                                            className="section-portfolio__img"
+                                            src={d.img}
+                                            alt="Tech"
+                                            loading="lazy"
+                                        />
                                     </div>
-                                    <p className="paragraph__100--regular">
-                                        {d.text}
-                                    </p>
-                                    <Button className="section-portfolio__btn">
-                                        View Case
-                                    </Button>
-                                </div>
-                            </Link>
-                        ))}
+                                    <div className="section-portfolio__text-card">
+                                        <div className="head-text">
+                                            <h2
+                                                id={d.id}
+                                                className="heading__200--bold"
+                                            >
+                                                {d.title}
+                                            </h2>
+                                            <span className="paragraph__200--medium">
+                                                {d.company} | {d.year}
+                                            </span>
+                                        </div>
+                                        <p className="paragraph__100--regular">
+                                            {d.text}
+                                        </p>
+                                        <Button className="section-portfolio__btn">
+                                            View Case
+                                        </Button>
+                                    </div>
+                                </Link>
+                            ))}
                     </article>
                 </div>
             </section>

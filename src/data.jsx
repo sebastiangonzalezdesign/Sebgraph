@@ -36,9 +36,19 @@ export const allPortfolio = [
         img: 'https://sebgraph.com/images/thumbnails/thumbnail-landing-s21.webp',
         text: 'The S21 landing page that promote new product launching and features',
     },
+
+    {
+        id: 5,
+        key: 'Aleph',
+        company: 'Cheil',
+        year: '2022',
+        title: 'Design System',
+        img: '',
+        text: '--',
+    },
 ]
 
-export const uiPortfolio = [
+export const uiVisualPortfolio = [
     {
         id: 1,
         key: 'solve',
@@ -68,7 +78,7 @@ export const uiPortfolio = [
     },
 ]
 
-export const visualPortfolio = [
+/* export const visualPortfolio = [
     {
         id: 3,
         key: 'essilor',
@@ -78,7 +88,7 @@ export const visualPortfolio = [
         img: 'https://sebgraph.com/images/thumbnails/thumbnail-essilor.webp',
         text: 'Essilor application is a proposal for the brand that allow the people involved in the commercial process.',
     },
-]
+] */
 
 export const codePortfolio = [
     {
@@ -98,5 +108,17 @@ export const codePortfolio = [
         title: 'AV Expert App',
         img: 'https://sebgraph.com/images/thumbnails/thumbnail-av-expert.webp',
         text: 'AV Expert is an app launched for promoters that providing relevant information of audio and video products.',
+    },
+]
+
+export const dsPortfolio = [
+    {
+        id: 5,
+        key: 'Aleph',
+        company: 'Cheil',
+        year: '2022',
+        title: 'Design System',
+        img: '',
+        text: '--',
     },
 ]

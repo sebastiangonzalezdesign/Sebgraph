@@ -15,6 +15,7 @@ const SolveForTomorrow = lazy(() =>
 )
 const Essilor = lazy(() => import('../pages/projects/Essilor'))
 const Landing = lazy(() => import('../pages/projects/Landing'))
+const AlephDS = lazy(() => import('../pages/projects/Aleph'))
 
 const About = lazy(() => import('../pages/about/About'))
 const Work = lazy(() => import('../pages/work/Work'))
@@ -40,6 +41,7 @@ const RoutesSite = () => {
                     <Route exact path="/projects/AV" component={AvExpert} />
                     <Route exact path="/projects/Essilor" component={Essilor} />
                     <Route exact path="/projects/Landing" component={Landing} />
+                    <Route exact path="/projects/Aleph" component={AlephDS} />
 
                     <Route path="*" component={Error404} />
                 </Switch>

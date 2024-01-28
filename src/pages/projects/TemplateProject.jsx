@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import './AvExpert.scss'
-import { Solve, AV, Essilor, Landing } from '../../dataPortfolio'
+import { Solve, AV, Essilor, Landing, AlephDS } from '../../dataPortfolio'
 
 export default function TemplateProject() {
-    const [dataPortfolio] = useState(Solve, AV, Essilor, Landing)
+    const [dataPortfolio] = useState(Solve, AV, Essilor, Landing, AlephDS)
 
     return (
         <>
