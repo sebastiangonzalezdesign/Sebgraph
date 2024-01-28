@@ -62,15 +62,13 @@ const About = () => {
                             data-aos="fade-up"
                             className="paragraph__100--medium profile__paragraph"
                         >
-                            I´m an UI designer focused on create interactive
-                            products and services with relevant experiences for
-                            the people. I have participated in different
-                            projects with talented teams and incredible brands
-                            like Samsung that have helped me to improve my
-                            personal and professional skills, I’m passionate
-                            about creating huge projects that connect the people
-                            with relevant experiences which help them to develop
-                            complex tasks in a simple way.
+                            Hi, I'm Sebastian González, a UI/Visual designer
+                            driven to refine my design and coding skills.
+                            Passionate about creating unforgettable digital
+                            experiences that connect users to products. I've
+                            collaborated on projects with brands like Samsung,
+                            enhancing my expertise. Let's work together to craft
+                            something extraordinary.
                         </p>
                         <img
                             data-aos="fade-up"
