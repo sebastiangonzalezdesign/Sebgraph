@@ -139,6 +139,14 @@
             ),
             url(https://sebgraph.com/images/projects/landing-s21/hero-image-landing-s21.png);
     }
+    &__header-aleph {
+        background-image: linear-gradient(
+                to right bottom,
+                rgba(34, 34, 34, 0.9),
+                rgba(20, 12, 3, 0.9)
+            ),
+            url(https://sebgraph.com/images/projects/aleph/hero-image-aleph.png);
+    }
 
     &__project-info {
         border-radius: 2rem;
