@@ -367,7 +367,7 @@ export const Aleph = [
         company: '--',
 
         subtitleResume: 'Design System',
-        titleResume: 'Geospactial Imagery Platform',
+        titleResume: 'Geospatial Imagery Platform',
         contentResume:
             'Demystifying the world, one map at a time. Aleph is an intuitive platform that provides high-resolution satellite imagery and unlock the power of geospatial data.',
 
@@ -389,5 +389,9 @@ export const Aleph = [
             'Development teams are building overlapping features with different codebases, resulting in wasted resources and potential maintenance issues.',
         finding4:
             'Implementing a centralized component library and style guide would foster design and development collaboration, ensuring consistency and streamlining future product iterations.',
+        inventoryTitle: 'Inventory',
+        inventoryDescription:
+            'To create a solid foundation for the design system, we conducted a comprehensive inventory of existing styles and UI elements across all web and mobile interfaces. Through manual audits and collaborative workshops, we identified a total of 20 unique buttons, with 20% displaying inconsistencies in color, font, and padding. Additionally, we discovered 15 variations of form elements and inconsistencies in data visualization styles. This inventory process revealed 25 recurring components and patterns with potential for unification. By streamlining these elements, we aimed to reduce design and development overhead, promote consistency across the platform, and improve user experience.',
+        foundationsTitle: 'Foundations',
     },
 ]

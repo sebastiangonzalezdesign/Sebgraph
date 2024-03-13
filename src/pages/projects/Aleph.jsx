@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './ProjectStyles.scss'
 import { Aleph } from '../../dataPortfolio'
 import BackButton from '../../components/BackButton'
+import '../../styles/ConfigStyles/base/Utilities.scss'
 
 const AlephDS = () => {
     const [dataPortfolio] = useState(Aleph)
@@ -13,7 +14,7 @@ const AlephDS = () => {
                 <section key={dataPortfolio.id} className="modal__container">
                     <BackButton />
                     {/* Section porfolio header */}
-                    <div className="modal__header modal__header-landing-s21">
+                    <div className="modal__header modal__header-aleph">
                         <div className="modal-header__text-box">
                             <h1 className="heading__100--bold modal-header__title">
                                 {dataPortfolio.headTitle}
@@ -43,9 +44,9 @@ const AlephDS = () => {
                         <article className="project-info__container">
                             <img
                                 className="project-info__img"
-                                src="https://sebgraph.com/images/projects/landing-s21/project.png"
+                                src="https://sebgraph.com/images/projects/aleph/project.png"
                                 loading="lazy"
-                                alt="AV Expert project"
+                                alt="Geospatial"
                             />
                             <div className="project-info__text-box">
                                 <span className="paragraph__300--medium">
@@ -118,106 +119,55 @@ const AlephDS = () => {
                         </article>
                     </section>
 
+                    {/* Section Inventory */}
                     <section className="modal__template">
                         <article className="mb-20">
                             <h1 className="heading__100--bold modal__title modal__text-box">
-                                {dataPortfolio.title9}
+                                {dataPortfolio.inventoryTitle}
                             </h1>
-                            <p className="paragraph__100--medium modal__text">
-                                {dataPortfolio.finalContent}
+                            <p className="paragraph__100--regular modal__text">
+                                {dataPortfolio.inventoryDescription}
                             </p>
                         </article>
 
-                        <picture className="modal__img-container mb-20">
+                        <picture className="modal__img-container">
                             <source
-                                srcSet="https://sebgraph.com/images/projects/landing-s21/final-design.png"
+                                srcSet="https://sebgraph.com/images/projects/aleph/inventory.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.com/images/projects/landing-s21/final-design.png"
+                                src="https://sebgraph.com/images/projects/aleph/inventory.png"
                                 loading="lazy"
-                                alt="ideate"
+                                alt="inventory"
                             />
                         </picture>
+                    </section>
 
+                    {/* Section Foundations */}
+                    <section className="modal__template">
                         <article className="modal__text-box">
-                            <h3 className="heading__300--bold modal__subtitle">
-                                {dataPortfolio.specificationsTitle}
+                            <h3 className="heading__100--bold modal__subtitle">
+                                {dataPortfolio.foundationsTitle}
                             </h3>
                             <p className="paragraph__100--medium modal__text">
                                 {dataPortfolio.specificationsContent}
                             </p>
                         </article>
 
-                        <picture className="modal__img-container mb-20">
+                        <picture className="modal__img-container">
                             <source
-                                srcSet="https://sebgraph.com/images/projects/landing-s21/specifications.png"
+                                srcSet="https://sebgraph.com/images/projects/aleph/Structure.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.com/images/projects/landing-s21/specifications.png"
+                                src="https://sebgraph.com/images/projects/aleph/Structure.png"
                                 loading="lazy"
-                                alt="ideate"
-                            />
-                        </picture>
-
-                        <article className="modal__text-box">
-                            <h3 className="heading__300--bold modal__subtitle">
-                                {dataPortfolio.viewTitle}
-                            </h3>
-                            <p className="paragraph__100--medium modal__text">
-                                {dataPortfolio.viewContent}
-                            </p>
-                        </article>
-                        <picture className="modal__img-container mb-20">
-                            <source
-                                srcSet="https://sebgraph.com/images/projects/landing-s21/360.png"
-                                media="(max-width:900px)"
-                            />
-                            <img
-                                className="modal__img-complete"
-                                src="https://sebgraph.com/images/projects/landing-s21/360.png"
-                                loading="lazy"
-                                alt="ideate"
-                            />
-                        </picture>
-
-                        <article className="modal__text-box">
-                            <h3 className="heading__300--bold modal__subtitle">
-                                {dataPortfolio.compareTitle}
-                            </h3>
-                            <p className="paragraph__100--medium modal__text">
-                                {dataPortfolio.compareContent}
-                            </p>
-                        </article>
-                        <picture className="modal__img-container mb-20">
-                            <source
-                                srcSet="https://sebgraph.com/images/projects/landing-s21/compare.png"
-                                media="(max-width:900px)"
-                            />
-                            <img
-                                className="modal__img-complete"
-                                src="https://sebgraph.com/images/projects/landing-s21/compare.png"
-                                loading="lazy"
-                                alt="ideate"
+                                alt="Structure"
                             />
                         </picture>
                     </section>
-
-                    <picture>
-                        <source
-                            srcSet="https://sebgraph.com/images/projects/landing-s21/final-img.png"
-                            media="(max-width:900px)"
-                        />
-                        <img
-                            className="modal__img-complete"
-                            src="https://sebgraph.com/images/projects/landing-s21/final-img.png"
-                            loading="lazy"
-                            alt="prototyping"
-                        />
-                    </picture>
 
                     {/* <!-- Ending --> */}
                     <section className="modal__other-projects end">

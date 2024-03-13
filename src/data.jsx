@@ -43,8 +43,8 @@ export const allPortfolio = [
         company: 'Cheil',
         year: '2022',
         title: 'Design System',
-        img: '',
-        text: '--',
+        img: 'https://sebgraph.com/images/thumbnails/thumbnail-aleph.png',
+        text: 'Bringing geospatial data to life. Explore with our intuitive design system.',
     },
 ]
 
@@ -118,7 +118,7 @@ export const dsPortfolio = [
         company: 'Cheil',
         year: '2022',
         title: 'Design System',
-        img: '',
-        text: '--',
+        img: 'https://sebgraph.com/images/thumbnails/thumbnail-aleph.png',
+        text: 'Bringing geospatial data to life. Explore with our intuitive design system.',
     },
 ]
