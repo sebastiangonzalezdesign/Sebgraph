@@ -151,11 +151,11 @@ const AlephDS = () => {
                                 {dataPortfolio.foundationsTitle}
                             </h3>
                             <p className="paragraph__100--medium modal__text">
-                                {dataPortfolio.specificationsContent}
+                                {dataPortfolio.foundationsDescription}
                             </p>
                         </article>
 
-                        <picture className="modal__img-container">
+                        <picture className="modal__img-container mb-20">
                             <source
                                 srcSet="https://sebgraph.com/images/projects/aleph/Structure.png"
                                 media="(max-width:900px)"
@@ -167,10 +167,158 @@ const AlephDS = () => {
                                 alt="Structure"
                             />
                         </picture>
+                        <picture className="modal__img-container mb-20">
+                            <source
+                                srcSet="https://sebgraph.com/images/projects/aleph/Colors.png"
+                                media="(max-width:900px)"
+                            />
+                            <img
+                                className="modal__img-complete"
+                                src="https://sebgraph.com/images/projects/aleph/Colors.png"
+                                loading="lazy"
+                                alt="Structure"
+                            />
+                        </picture>
+                        <picture className="modal__img-container mb-20">
+                            <source
+                                srcSet="https://sebgraph.com/images/projects/aleph/Colors2.png"
+                                media="(max-width:900px)"
+                            />
+                            <img
+                                className="modal__img-complete"
+                                src="https://sebgraph.com/images/projects/aleph/Colors2.png"
+                                loading="lazy"
+                                alt="Structure"
+                            />
+                        </picture>
+                        <picture className="modal__img-container mb-20">
+                            <source
+                                srcSet="https://sebgraph.com/images/projects/aleph/Typography.png"
+                                media="(max-width:900px)"
+                            />
+                            <img
+                                className="modal__img-complete"
+                                src="https://sebgraph.com/images/projects/aleph/Typography.png"
+                                loading="lazy"
+                                alt="Structure"
+                            />
+                        </picture>
+                        <picture className="modal__img-container mb-20">
+                            <source
+                                srcSet="https://sebgraph.com/images/projects/aleph/Spacings.png"
+                                media="(max-width:900px)"
+                            />
+                            <img
+                                className="modal__img-complete"
+                                src="https://sebgraph.com/images/projects/aleph/Spacings.png"
+                                loading="lazy"
+                                alt="Structure"
+                            />
+                        </picture>
+                        <picture className="modal__img-container mb-20">
+                            <source
+                                srcSet="https://sebgraph.com/images/projects/aleph/Imagery.png"
+                                media="(max-width:900px)"
+                            />
+                            <img
+                                className="modal__img-complete"
+                                src="https://sebgraph.com/images/projects/aleph/Imagery.png"
+                                loading="lazy"
+                                alt="Structure"
+                            />
+                        </picture>
+                    </section>
+
+                    {/* Section Components */}
+                    <section className="modal__template">
+                        <article className="modal__text-box">
+                            <h3 className="heading__100--bold modal__subtitle">
+                                {dataPortfolio.componentsTitle}
+                            </h3>
+                            <p className="paragraph__100--medium modal__text">
+                                {dataPortfolio.componentsDescription}
+                            </p>
+                        </article>
+                        <picture className="modal__img-container mb-20">
+                            <source
+                                srcSet="https://sebgraph.com/images/projects/aleph/Component-List.png"
+                                media="(max-width:900px)"
+                            />
+                            <img
+                                className="modal__img-complete"
+                                src="https://sebgraph.com/images/projects/aleph/Component-List.png"
+                                loading="lazy"
+                                alt="Structure"
+                            />
+                        </picture>
+                        <picture className="modal__img-container mb-20">
+                            <source
+                                srcSet="https://sebgraph.com/images/projects/aleph/Basic-Components.png"
+                                media="(max-width:900px)"
+                            />
+                            <img
+                                className="modal__img-complete"
+                                src="https://sebgraph.com/images/projects/aleph/Basic-Components.png"
+                                loading="lazy"
+                                alt="Structure"
+                            />
+                        </picture>
+                        <picture className="modal__img-container mb-20">
+                            <source
+                                srcSet="https://sebgraph.com/images/projects/aleph/Complex-Components.png"
+                                media="(max-width:900px)"
+                            />
+                            <img
+                                className="modal__img-complete"
+                                src="https://sebgraph.com/images/projects/aleph/Complex-Components.png"
+                                loading="lazy"
+                                alt="Structure"
+                            />
+                        </picture>
                     </section>
 
                     {/* <!-- Ending --> */}
                     <section className="modal__other-projects end">
+                        <article className="modal__text-box">
+                            <h3 className="heading__100--bold modal__subtitle">
+                                {dataPortfolio.resultsTitle}
+                            </h3>
+                            <p className="paragraph__100--medium modal__text">
+                                {dataPortfolio.resultsDescription}
+                                <ul className="p-20">
+                                    <li className="mt-20">
+                                        <strong>
+                                            {dataPortfolio.strongBullet1}
+                                        </strong>
+                                        &nbsp;
+                                        {dataPortfolio.contentBullet1}
+                                    </li>
+                                    <br />
+                                    <li>
+                                        <strong>
+                                            {dataPortfolio.strongBullet2}
+                                        </strong>
+                                        &nbsp;
+                                        {dataPortfolio.contentBullet2}
+                                    </li>
+                                    <br />
+                                    <li>{dataPortfolio.contentBullet3}</li>
+                                </ul>
+                            </p>
+                        </article>
+
+                        <picture className="modal__img-container mb-20">
+                            <source
+                                srcSet="https://sebgraph.com/images/projects/aleph/Results.png"
+                                media="(max-width:900px)"
+                            />
+                            <img
+                                className="modal__img-complete"
+                                src="https://sebgraph.com/images/projects/aleph/Results.png"
+                                loading="lazy"
+                                alt="Structure"
+                            />
+                        </picture>
                         <article className="modal__text-box">
                             <hr className="end__line" />
                             <h2 className="heading__200--bold modal__title end__text">

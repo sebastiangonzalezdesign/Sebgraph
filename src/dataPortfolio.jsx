@@ -364,7 +364,7 @@ export const Aleph = [
         dateTitle: 'Date:',
         date: '2022',
         companyTitle: 'Company:',
-        company: '--',
+        company: 'Globant',
 
         subtitleResume: 'Design System',
         titleResume: 'Geospatial Imagery Platform',
@@ -391,7 +391,23 @@ export const Aleph = [
             'Implementing a centralized component library and style guide would foster design and development collaboration, ensuring consistency and streamlining future product iterations.',
         inventoryTitle: 'Inventory',
         inventoryDescription:
-            'To create a solid foundation for the design system, we conducted a comprehensive inventory of existing styles and UI elements across all web and mobile interfaces. Through manual audits and collaborative workshops, we identified a total of 20 unique buttons, with 20% displaying inconsistencies in color, font, and padding. Additionally, we discovered 15 variations of form elements and inconsistencies in data visualization styles. This inventory process revealed 25 recurring components and patterns with potential for unification. By streamlining these elements, we aimed to reduce design and development overhead, promote consistency across the platform, and improve user experience.',
+            'To create a solid foundation design system, we conducted a comprehensive inventory of existing styles and UI elements across all web and mobile interfaces. Through manual audits and collaborative workshops, we identified a total of 20 unique buttons, with 20% displaying inconsistencies in color, font, and padding. Additionally, we discovered 15 variations of form elements and inconsistencies in data visualization styles. This inventory process revealed 25 recurring components and patterns with potential for unification. By streamlining these elements, we aimed to reduce design and development overhead, promote consistency across the platform, and improve user experience.',
         foundationsTitle: 'Foundations',
+        foundationsDescription:
+            'The Foundations establish a clear and efficient way to manage design tokens, enabling the creation of adaptable themes for various platform needs. It encompasses core elements like colors, typography, and imagery, ensuring visual consistency throughout the product.',
+        componentsTitle: 'Components',
+        componentsDescription:
+            'Following the atomic design methodology, the component library includes a range of elements, starting with fundamental building blocks and scaling up to complex components required for data-centered map visualizations and interactions.',
+        resultsTitle: 'Results',
+        resultsDescription:
+            'The Aleph design system has had a significant impact on team organization and workflow.  Beyond providing a centralized UI library, it fosters the consistent application of brand values throughout the design process. As a living product, the system continuously evolves, and my contributions included:',
+        strongBullet1: 'Scalable System Structure:',
+        contentBullet1:
+            'I designed a scalable system structure, positively impacting team workflow and reducing design implementation time.',
+        strongBullet2: 'Comprehensive Support:',
+        contentBullet2:
+            'My support encompassed onboarding, documentation, design token creation, component development, prototyping & wireframing, and facilitating clear communication and synchronization with the development team.',
+        contentBullet3:
+            'By implementing the Aleph design system, we achieved a 15% increase in expert users time spent on data exploration tasks and a 20% reduction in design implementation time by developers.',
     },
 ]
