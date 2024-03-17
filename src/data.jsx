@@ -42,7 +42,7 @@ export const allPortfolio = [
         key: 'Aleph',
         company: 'Cheil',
         year: '2022',
-        title: 'Design System',
+        title: 'Aleph Design System',
         img: 'https://sebgraph.com/images/thumbnails/thumbnail-aleph.png',
         text: 'Bringing geospatial data to life. Explore with our intuitive design system.',
     },
@@ -100,15 +100,6 @@ export const codePortfolio = [
         img: 'https://sebgraph.com/images/thumbnails/thumbnail-solve-for-tomorrow.webp',
         text: 'Solve For Tomorrow is a global Samsung initiative that rewards the new ideas which change the communities.',
     },
-    {
-        id: 2,
-        key: 'av',
-        company: 'Cheil',
-        year: '2020',
-        title: 'AV Expert App',
-        img: 'https://sebgraph.com/images/thumbnails/thumbnail-av-expert.webp',
-        text: 'AV Expert is an app launched for promoters that providing relevant information of audio and video products.',
-    },
 ]
 
 export const dsPortfolio = [
@@ -117,7 +108,7 @@ export const dsPortfolio = [
         key: 'Aleph',
         company: 'Cheil',
         year: '2022',
-        title: 'Design System',
+        title: 'Aleph Design System',
         img: 'https://sebgraph.com/images/thumbnails/thumbnail-aleph.png',
         text: 'Bringing geospatial data to life. Explore with our intuitive design system.',
     },
