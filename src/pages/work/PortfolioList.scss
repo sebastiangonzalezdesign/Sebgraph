@@ -1,18 +1,22 @@
-@import "../../styles/ConfigStyles/abstracts/Variables.scss";
+@import '../../styles/ConfigStyles/abstracts/Variables.scss';
 .portfolioList {
-  cursor: pointer;
-  padding: 1rem;
-  transition: all 0.3s ease;
-  border-radius: 8px;
-  color: var(--textIcon-primary);
-  border-radius: $border-full;
-  width: auto;
-  &:hover {
-    background-color: var(--primary-bg);
-  }
-
-  &.active {
+    cursor: pointer;
+    padding: 1rem;
+    transition: all 0.3s ease;
+    border-radius: 8px;
     color: var(--textIcon-primary);
-    font-size: $font-weight-bold;
-  }
+    border-radius: $border-full;
+    width: auto;
+    @include respond(phone) {
+        padding: 1rem 0.5rem;
+    }
+
+    &:hover {
+        background-color: var(--primary-bg);
+    }
+
+    &.active {
+        color: var(--textIcon-primary);
+        font-size: $font-weight-bold;
+    }
 }
