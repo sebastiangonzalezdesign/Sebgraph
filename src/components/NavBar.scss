@@ -1,170 +1,174 @@
-@import "../styles/ConfigStyles/abstracts/Variables.scss";
-@import "../styles/ConfigStyles/abstracts/Mixins.scss";
-@import "../styles/ConfigStyles/base/Base.scss";
-@import "../styles/ConfigStyles/layout/Grid.scss";
-@import "../styles/ConfigStyles/base/Utilities";
-@import "../styles/ConfigStyles/base/Animations.scss";
+//@import "../styles/ConfigStyles/abstracts/Variables.scss";
+//@import "../styles/ConfigStyles/abstracts/Mixins.scss";
+//@import "../styles/ConfigStyles/base/Base.scss";
+//@import "../styles/ConfigStyles/layout/Grid.scss";
+//@import "../styles/ConfigStyles/base/Utilities";
+//@import "../styles/ConfigStyles/base/Animations.scss";
+
+@use '../styles/ConfigStyles/abstracts' as *;
+@use '../styles/ConfigStyles/base' as *;
+@use '../styles/ConfigStyles/layout' as *;
 
 .header {
-  position: fixed;
-  width: 100%;
-  text-align: center;
-  height: 5rem;
-  z-index: 1;
-  transition: 0.2s ease-in;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    height: 5rem;
+    z-index: 1;
+    transition: 0.2s ease-in;
 
-  &__navigation {
-    z-index: 1500;
-  }
-  @include respond(phone) {
-  }
+    &__navigation {
+        z-index: 1500;
+    }
+    @include respond(phone) {
+    }
 
-  /*     &__container{
+    /*     &__container{
         display: flex;
         justify-content: space-between;
         width: $width-container;
     } */
 
-  &__logo-box {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    outline: none;
-    color: var(--header-logo);
-    width: 10.75rem;
-    height: auto;
-    font-family: $headings-font-family;
-    font-weight: $font-weight-bold;
-    gap: 0.625rem;
-    font-size: $headings-font-size-200;
-    z-index: 9999;
-  }
-  &__icon {
-    width: 2rem;
-  }
-
-  &__menu {
-    display: flex;
-    flex-direction: row;
-  }
-
-  &__list {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    text-align: center;
-    width: 100%;
-    gap: $spacings-7;
-
-    @include respond(tab-port) {
-      position: absolute;
-      height: 100vh;
-      justify-content: center;
-      flex-direction: column;
-      align-items: center;
-      background-color: var(--header-menu-bg);
-      left: 0;
-      top: 0;
-      transition: 0.4s ease;
-      opacity: 0;
-      display: none;
+    &__logo-box {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        outline: none;
+        color: var(--header-logo);
+        width: 10.75rem;
+        height: auto;
+        font-family: $headings-font-family;
+        font-weight: $font-weight-bold;
+        gap: 0.625rem;
+        font-size: $headings-font-size-200;
+        z-index: 9999;
     }
-  }
-  &__item {
-    width: auto;
-    cursor: pointer;
-    transition: all 0.4s ease-in-out;
-  }
+    &__icon {
+        width: 2rem;
+    }
 
-  &__link {
-    opacity: 0.5;
-    font-size: $label-font-size-100;
-    font-family: $label-font-size-100;
-    font-weight: $font-weight-medium;
-    line-height: $text-line-height;
-    text-decoration: none;
+    &__menu {
+        display: flex;
+        flex-direction: row;
+    }
 
-    @include respond(tab-port) {
-      font-size: $headings-font-size-100;
-      margin: auto;
+    &__list {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        text-align: center;
+        width: 100%;
+        gap: $spacings-7;
+
+        @include respond(tab-port) {
+            position: absolute;
+            height: 100vh;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            background-color: var(--header-menu-bg);
+            left: 0;
+            top: 0;
+            transition: 0.4s ease;
+            opacity: 0;
+            display: none;
+        }
     }
-    &:link,
-    &:visited {
-      font-weight: 400;
-      color: var(--header-text);
-      text-decoration: none;
-      text-transform: capitalize;
-      transition: all 0.4s;
+    &__item {
+        width: auto;
+        cursor: pointer;
+        transition: all 0.4s ease-in-out;
     }
-    &:hover,
-    &:active {
-      color: var(--header-text);
-      font-weight: 600;
+
+    &__link {
+        opacity: 0.5;
+        font-size: $label-font-size-100;
+        font-family: $label-font-size-100;
+        font-weight: $font-weight-medium;
+        line-height: $text-line-height;
+        text-decoration: none;
+
+        @include respond(tab-port) {
+            font-size: $headings-font-size-100;
+            margin: auto;
+        }
+        &:link,
+        &:visited {
+            font-weight: 400;
+            color: var(--header-text);
+            text-decoration: none;
+            text-transform: capitalize;
+            transition: all 0.4s;
+        }
+        &:hover,
+        &:active {
+            color: var(--header-text);
+            font-weight: 600;
+        }
     }
-  }
-  &__actions-container {
-    display: flex;
-    gap: $spacings-4;
-  }
+    &__actions-container {
+        display: flex;
+        gap: $spacings-4;
+    }
 }
 
 .link-active {
-  font-weight: 600 !important;
-  color: var(--header-text);
-  opacity: 1;
+    font-weight: 600 !important;
+    color: var(--header-text);
+    opacity: 1;
 }
 .header .active {
-  top: 0;
-  transition: 0.5s ease;
-  opacity: 1;
-  display: flex;
+    top: 0;
+    transition: 0.5s ease;
+    opacity: 1;
+    display: flex;
 }
 .header .text-animation {
-  animation: 0.5s moveInBottom ease;
+    animation: 0.5s moveInBottom ease;
 }
 .header-bg {
-  background-color: var(--header-bg-scroll);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+    background-color: var(--header-bg-scroll);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 .navbar {
-  max-width: 75rem;
-  margin: auto;
-  justify-content: space-between;
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  height: 5rem;
-  padding: 0 1.5rem;
-
-  & .hamburger {
-    border: 1px solid var(--hamburger-button-border);
-    background-color: var(--hamburger-button-bg);
-    border-radius: $border-md;
-    cursor: pointer;
-    color: var(--hamburger-button-color);
-    height: $spacings-9;
-    width: $spacings-9;
-    justify-content: center;
+    max-width: 75rem;
+    margin: auto;
+    justify-content: space-between;
     align-items: center;
-    display: none;
-    z-index: 9999;
-    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: row;
+    height: 5rem;
+    padding: 0 1.5rem;
 
-    &:hover {
-      border: 1px solid var(--hamburger-button-border);
-      background-color: var(--hamburger-button-hover);
-    }
-    @include respond(tab-port) {
-      display: flex;
-    }
+    & .hamburger {
+        border: 1px solid var(--hamburger-button-border);
+        background-color: var(--hamburger-button-bg);
+        border-radius: $border-md;
+        cursor: pointer;
+        color: var(--hamburger-button-color);
+        height: $spacings-9;
+        width: $spacings-9;
+        justify-content: center;
+        align-items: center;
+        display: none;
+        z-index: 9999;
+        transition: all 0.3s ease;
 
-    & .icon {
-      margin: auto;
-      width: $spacings-6;
-      height: $spacings-6;
+        &:hover {
+            border: 1px solid var(--hamburger-button-border);
+            background-color: var(--hamburger-button-hover);
+        }
+        @include respond(tab-port) {
+            display: flex;
+        }
+
+        & .icon {
+            margin: auto;
+            width: $spacings-6;
+            height: $spacings-6;
+        }
     }
-  }
 }
 
 /* .navbar a {

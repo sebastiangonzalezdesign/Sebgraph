@@ -1,360 +1,361 @@
-@import "../abstracts/Variables.scss";
+//@import "../abstracts/Variables.scss";
+@use '../abstracts' as *;
 /* ---Display Styles---- */
 .display {
-  &__100 {
-    &--regular {
-      font-family: $headings-font-family;
-      font-weight: $font-weight-regular;
-      line-height: $heading-line-height;
-      font-size: $display-font-size-100;
-      color: var(--textIcon-primary);
+    &__100 {
+        &--regular {
+            font-family: $headings-font-family;
+            font-weight: $font-weight-regular;
+            line-height: $heading-line-height;
+            font-size: $display-font-size-100;
+            color: var(--textIcon-primary);
+        }
+        &--bold {
+            font-family: $headings-font-family;
+            font-weight: $font-weight-bold;
+            line-height: $heading-line-height;
+            font-size: $display-font-size-100;
+            color: var(--textIcon-primary);
+        }
     }
-    &--bold {
-      font-family: $headings-font-family;
-      font-weight: $font-weight-bold;
-      line-height: $heading-line-height;
-      font-size: $display-font-size-100;
-      color: var(--textIcon-primary);
-    }
-  }
 
-  &__200 {
-    &--regular {
-      font-family: $headings-font-family;
-      font-weight: $font-weight-regular;
-      line-height: $heading-line-height;
-      font-size: $display-font-size-200;
-      color: var(--textIcon-primary);
+    &__200 {
+        &--regular {
+            font-family: $headings-font-family;
+            font-weight: $font-weight-regular;
+            line-height: $heading-line-height;
+            font-size: $display-font-size-200;
+            color: var(--textIcon-primary);
+        }
+        &--bold {
+            font-family: $headings-font-family;
+            font-weight: $font-weight-bold;
+            line-height: $heading-line-height;
+            font-size: $display-font-size-200;
+            color: var(--textIcon-primary);
+        }
     }
-    &--bold {
-      font-family: $headings-font-family;
-      font-weight: $font-weight-bold;
-      line-height: $heading-line-height;
-      font-size: $display-font-size-200;
-      color: var(--textIcon-primary);
-    }
-  }
 }
 
 /* ----------Heading styles------------- */
 .heading {
-  &__100 {
-    &--regular {
-      font-family: $headings-font-family;
-      font-weight: $font-weight-regular;
-      line-height: $heading-line-height;
-      font-size: $headings-font-size-100;
-      color: var(--textIcon-primary);
+    &__100 {
+        &--regular {
+            font-family: $headings-font-family;
+            font-weight: $font-weight-regular;
+            line-height: $heading-line-height;
+            font-size: $headings-font-size-100;
+            color: var(--textIcon-primary);
+        }
+        &--bold {
+            font-family: $headings-font-family;
+            font-weight: $font-weight-bold;
+            line-height: $heading-line-height;
+            font-size: $headings-font-size-100;
+            color: var(--textIcon-primary);
+        }
     }
-    &--bold {
-      font-family: $headings-font-family;
-      font-weight: $font-weight-bold;
-      line-height: $heading-line-height;
-      font-size: $headings-font-size-100;
-      color: var(--textIcon-primary);
-    }
-  }
 
-  &__200 {
-    &--regular {
-      font-family: $headings-font-family;
-      font-weight: $font-weight-regular;
-      line-height: $heading-line-height;
-      font-size: $headings-font-size-200;
-      color: var(--textIcon-primary);
+    &__200 {
+        &--regular {
+            font-family: $headings-font-family;
+            font-weight: $font-weight-regular;
+            line-height: $heading-line-height;
+            font-size: $headings-font-size-200;
+            color: var(--textIcon-primary);
+        }
+        &--bold {
+            font-family: $headings-font-family;
+            font-weight: $font-weight-bold;
+            line-height: $heading-line-height;
+            font-size: $headings-font-size-200;
+            color: var(--textIcon-primary);
+        }
     }
-    &--bold {
-      font-family: $headings-font-family;
-      font-weight: $font-weight-bold;
-      line-height: $heading-line-height;
-      font-size: $headings-font-size-200;
-      color: var(--textIcon-primary);
+    &__300 {
+        &--regular {
+            font-family: $headings-font-family;
+            font-weight: $font-weight-regular;
+            line-height: $heading-line-height;
+            font-size: $headings-font-size-300;
+            color: var(--textIcon-primary);
+        }
+        &--bold {
+            font-family: $headings-font-family;
+            font-weight: $font-weight-bold;
+            line-height: $heading-line-height;
+            font-size: $headings-font-size-300;
+            color: var(--textIcon-primary);
+        }
     }
-  }
-  &__300 {
-    &--regular {
-      font-family: $headings-font-family;
-      font-weight: $font-weight-regular;
-      line-height: $heading-line-height;
-      font-size: $headings-font-size-300;
-      color: var(--textIcon-primary);
-    }
-    &--bold {
-      font-family: $headings-font-family;
-      font-weight: $font-weight-bold;
-      line-height: $heading-line-height;
-      font-size: $headings-font-size-300;
-      color: var(--textIcon-primary);
-    }
-  }
 }
 /* ----------Paragraph styles------------- */
 .paragraph {
-  &__100 {
-    &--regular {
-      font-family: $headings-font-family;
-      font-weight: $font-weight-regular;
-      line-height: $text-line-height;
-      font-size: $paragraph-font-size-100;
-      color: var(--textIcon-secondary);
+    &__100 {
+        &--regular {
+            font-family: $headings-font-family;
+            font-weight: $font-weight-regular;
+            line-height: $text-line-height;
+            font-size: $paragraph-font-size-100;
+            color: var(--textIcon-secondary);
+        }
+        &--medium {
+            font-family: $headings-font-family;
+            font-weight: $font-weight-medium;
+            line-height: $text-line-height;
+            font-size: $paragraph-font-size-100;
+            color: var(--textIcon-secondary);
+        }
+        &--bold {
+            font-family: $headings-font-family;
+            font-weight: $font-weight-bold;
+            line-height: $text-line-height;
+            font-size: $paragraph-font-size-100;
+            color: var(--textIcon-secondary);
+        }
     }
-    &--medium {
-      font-family: $headings-font-family;
-      font-weight: $font-weight-medium;
-      line-height: $text-line-height;
-      font-size: $paragraph-font-size-100;
-      color: var(--textIcon-secondary);
-    }
-    &--bold {
-      font-family: $headings-font-family;
-      font-weight: $font-weight-bold;
-      line-height: $text-line-height;
-      font-size: $paragraph-font-size-100;
-      color: var(--textIcon-secondary);
-    }
-  }
 
-  &__200 {
-    &--regular {
-      font-family: $headings-font-family;
-      font-weight: $font-weight-regular;
-      line-height: $text-line-height;
-      font-size: $paragraph-font-size-200;
-      color: var(--textIcon-secondary);
+    &__200 {
+        &--regular {
+            font-family: $headings-font-family;
+            font-weight: $font-weight-regular;
+            line-height: $text-line-height;
+            font-size: $paragraph-font-size-200;
+            color: var(--textIcon-secondary);
+        }
+        &--medium {
+            font-family: $headings-font-family;
+            font-weight: $font-weight-medium;
+            line-height: $text-line-height;
+            font-size: $paragraph-font-size-200;
+            color: var(--textIcon-secondary);
+        }
+        &--bold {
+            font-family: $headings-font-family;
+            font-weight: $font-weight-bold;
+            line-height: $text-line-height;
+            font-size: $paragraph-font-size-200;
+            color: var(--textIcon-secondary);
+        }
     }
-    &--medium {
-      font-family: $headings-font-family;
-      font-weight: $font-weight-medium;
-      line-height: $text-line-height;
-      font-size: $paragraph-font-size-200;
-      color: var(--textIcon-secondary);
+    &__300 {
+        &--regular {
+            font-family: $headings-font-family;
+            font-weight: $font-weight-regular;
+            line-height: $text-line-height;
+            font-size: $paragraph-font-size-300;
+            color: var(--textIcon-secondary);
+        }
+        &--medium {
+            font-family: $headings-font-family;
+            font-weight: $font-weight-medium;
+            line-height: $text-line-height;
+            font-size: $paragraph-font-size-300;
+            color: var(--textIcon-secondary);
+        }
+        &--bold {
+            font-family: $headings-font-family;
+            font-weight: $font-weight-bold;
+            line-height: $text-line-height;
+            font-size: $paragraph-font-size-300;
+            color: var(--textIcon-secondary);
+        }
     }
-    &--bold {
-      font-family: $headings-font-family;
-      font-weight: $font-weight-bold;
-      line-height: $text-line-height;
-      font-size: $paragraph-font-size-200;
-      color: var(--textIcon-secondary);
+    &__400 {
+        &--regular {
+            font-family: $headings-font-family;
+            font-weight: $font-weight-regular;
+            line-height: $text-line-height;
+            font-size: $paragraph-font-size-400;
+            color: var(--textIcon-secondary);
+        }
+        &--medium {
+            font-family: $headings-font-family;
+            font-weight: $font-weight-medium;
+            line-height: $text-line-height;
+            font-size: $paragraph-font-size-400;
+            color: var(--textIcon-secondary);
+        }
+        &--bold {
+            font-family: $headings-font-family;
+            font-weight: $font-weight-bold;
+            line-height: $text-line-height;
+            font-size: $paragraph-font-size-400;
+            color: var(--textIcon-secondary);
+        }
     }
-  }
-  &__300 {
-    &--regular {
-      font-family: $headings-font-family;
-      font-weight: $font-weight-regular;
-      line-height: $text-line-height;
-      font-size: $paragraph-font-size-300;
-      color: var(--textIcon-secondary);
+    &__500 {
+        &--regular {
+            font-family: $headings-font-family;
+            font-weight: $font-weight-regular;
+            line-height: $text-line-height;
+            font-size: $paragraph-font-size-500;
+            color: var(--textIcon-secondary);
+        }
+        &--medium {
+            font-family: $headings-font-family;
+            font-weight: $font-weight-medium;
+            line-height: $text-line-height;
+            font-size: $paragraph-font-size-500;
+            color: var(--textIcon-secondary);
+        }
+        &--bold {
+            font-family: $headings-font-family;
+            font-weight: $font-weight-bold;
+            line-height: $text-line-height;
+            font-size: $paragraph-font-size-500;
+            color: var(--textIcon-secondary);
+        }
     }
-    &--medium {
-      font-family: $headings-font-family;
-      font-weight: $font-weight-medium;
-      line-height: $text-line-height;
-      font-size: $paragraph-font-size-300;
-      color: var(--textIcon-secondary);
-    }
-    &--bold {
-      font-family: $headings-font-family;
-      font-weight: $font-weight-bold;
-      line-height: $text-line-height;
-      font-size: $paragraph-font-size-300;
-      color: var(--textIcon-secondary);
-    }
-  }
-  &__400 {
-    &--regular {
-      font-family: $headings-font-family;
-      font-weight: $font-weight-regular;
-      line-height: $text-line-height;
-      font-size: $paragraph-font-size-400;
-      color: var(--textIcon-secondary);
-    }
-    &--medium {
-      font-family: $headings-font-family;
-      font-weight: $font-weight-medium;
-      line-height: $text-line-height;
-      font-size: $paragraph-font-size-400;
-      color: var(--textIcon-secondary);
-    }
-    &--bold {
-      font-family: $headings-font-family;
-      font-weight: $font-weight-bold;
-      line-height: $text-line-height;
-      font-size: $paragraph-font-size-400;
-      color: var(--textIcon-secondary);
-    }
-  }
-  &__500 {
-    &--regular {
-      font-family: $headings-font-family;
-      font-weight: $font-weight-regular;
-      line-height: $text-line-height;
-      font-size: $paragraph-font-size-500;
-      color: var(--textIcon-secondary);
-    }
-    &--medium {
-      font-family: $headings-font-family;
-      font-weight: $font-weight-medium;
-      line-height: $text-line-height;
-      font-size: $paragraph-font-size-500;
-      color: var(--textIcon-secondary);
-    }
-    &--bold {
-      font-family: $headings-font-family;
-      font-weight: $font-weight-bold;
-      line-height: $text-line-height;
-      font-size: $paragraph-font-size-500;
-      color: var(--textIcon-secondary);
-    }
-  }
 }
 
 /* ----------Button styles------------- */
 .button {
-  &__100 {
-    &--bold {
-      font-family: $headings-font-family;
-      font-weight: $font-weight-bold;
-      line-height: $heading-line-height;
-      font-size: $button-font-size-100;
-      color: var(--textIcon-primary);
+    &__100 {
+        &--bold {
+            font-family: $headings-font-family;
+            font-weight: $font-weight-bold;
+            line-height: $heading-line-height;
+            font-size: $button-font-size-100;
+            color: var(--textIcon-primary);
+        }
     }
-  }
 
-  &__200 {
-    &--bold {
-      font-family: $headings-font-family;
-      font-weight: $font-weight-bold;
-      line-height: $heading-line-height;
-      font-size: $button-font-size-200;
-      color: var(--textIcon-primary);
+    &__200 {
+        &--bold {
+            font-family: $headings-font-family;
+            font-weight: $font-weight-bold;
+            line-height: $heading-line-height;
+            font-size: $button-font-size-200;
+            color: var(--textIcon-primary);
+        }
     }
-  }
-  &__300 {
-    &--bold {
-      font-family: $headings-font-family;
-      font-weight: $font-weight-bold;
-      line-height: $heading-line-height;
-      font-size: $button-font-size-300;
-      color: var(--textIcon-primary);
+    &__300 {
+        &--bold {
+            font-family: $headings-font-family;
+            font-weight: $font-weight-bold;
+            line-height: $heading-line-height;
+            font-size: $button-font-size-300;
+            color: var(--textIcon-primary);
+        }
     }
-  }
 }
 /* ----------Label styles------------- */
 .label {
-  &__100 {
-    &--regular {
-      font-family: $headings-font-family;
-      font-weight: $font-weight-regular;
-      line-height: $heading-line-height;
-      font-size: $label-font-size-100;
-      color: var(--textIcon-primary);
+    &__100 {
+        &--regular {
+            font-family: $headings-font-family;
+            font-weight: $font-weight-regular;
+            line-height: $heading-line-height;
+            font-size: $label-font-size-100;
+            color: var(--textIcon-primary);
+        }
+        &--medium {
+            font-family: $headings-font-family;
+            font-weight: $font-weight-medium;
+            line-height: $heading-line-height;
+            font-size: $label-font-size-100;
+            color: var(--textIcon-primary);
+        }
+        &--bold {
+            font-family: $headings-font-family;
+            font-weight: $font-weight-bold;
+            line-height: $heading-line-height;
+            font-size: $label-font-size-100;
+            color: var(--textIcon-primary);
+        }
     }
-    &--medium {
-      font-family: $headings-font-family;
-      font-weight: $font-weight-medium;
-      line-height: $heading-line-height;
-      font-size: $label-font-size-100;
-      color: var(--textIcon-primary);
-    }
-    &--bold {
-      font-family: $headings-font-family;
-      font-weight: $font-weight-bold;
-      line-height: $heading-line-height;
-      font-size: $label-font-size-100;
-      color: var(--textIcon-primary);
-    }
-  }
 
-  &__200 {
-    &--regular {
-      font-family: $headings-font-family;
-      font-weight: $font-weight-regular;
-      line-height: $heading-line-height;
-      font-size: $label-font-size-200;
-      color: var(--textIcon-primary);
+    &__200 {
+        &--regular {
+            font-family: $headings-font-family;
+            font-weight: $font-weight-regular;
+            line-height: $heading-line-height;
+            font-size: $label-font-size-200;
+            color: var(--textIcon-primary);
+        }
+        &--medium {
+            font-family: $headings-font-family;
+            font-weight: $font-weight-medium;
+            line-height: $heading-line-height;
+            font-size: $label-font-size-200;
+            color: var(--textIcon-primary);
+        }
+        &--bold {
+            font-family: $headings-font-family;
+            font-weight: $font-weight-bold;
+            line-height: $heading-line-height;
+            font-size: $label-font-size-200;
+            color: var(--textIcon-primary);
+        }
     }
-    &--medium {
-      font-family: $headings-font-family;
-      font-weight: $font-weight-medium;
-      line-height: $heading-line-height;
-      font-size: $label-font-size-200;
-      color: var(--textIcon-primary);
+    &__300 {
+        &--regular {
+            font-family: $headings-font-family;
+            font-weight: $font-weight-regular;
+            line-height: $heading-line-height;
+            font-size: $label-font-size-300;
+            color: var(--textIcon-primary);
+        }
+        &--medium {
+            font-family: $headings-font-family;
+            font-weight: $font-weight-medium;
+            line-height: $heading-line-height;
+            font-size: $label-font-size-300;
+            color: var(--textIcon-primary);
+        }
+        &--bold {
+            font-family: $headings-font-family;
+            font-weight: $font-weight-bold;
+            line-height: $heading-line-height;
+            font-size: $label-font-size-300;
+        }
     }
-    &--bold {
-      font-family: $headings-font-family;
-      font-weight: $font-weight-bold;
-      line-height: $heading-line-height;
-      font-size: $label-font-size-200;
-      color: var(--textIcon-primary);
+    &__400 {
+        &--regular {
+            font-family: $headings-font-family;
+            font-weight: $font-weight-regular;
+            line-height: $heading-line-height;
+            font-size: $label-font-size-400;
+            color: var(--textIcon-primary);
+        }
+        &--medium {
+            font-family: $headings-font-family;
+            font-weight: $font-weight-medium;
+            line-height: $heading-line-height;
+            font-size: $label-font-size-400;
+            color: var(--textIcon-primary);
+        }
+        &--bold {
+            font-family: $headings-font-family;
+            font-weight: $font-weight-bold;
+            line-height: $heading-line-height;
+            font-size: $label-font-size-400;
+            color: var(--textIcon-primary);
+        }
     }
-  }
-  &__300 {
-    &--regular {
-      font-family: $headings-font-family;
-      font-weight: $font-weight-regular;
-      line-height: $heading-line-height;
-      font-size: $label-font-size-300;
-      color: var(--textIcon-primary);
+    &__500 {
+        &--regular {
+            font-family: $headings-font-family;
+            font-weight: $font-weight-regular;
+            line-height: $heading-line-height;
+            font-size: $label-font-size-500;
+            color: var(--textIcon-primary);
+        }
+        &--medium {
+            font-family: $headings-font-family;
+            font-weight: $font-weight-medium;
+            line-height: $heading-line-height;
+            font-size: $label-font-size-500;
+            color: var(--textIcon-primary);
+        }
+        &--bold {
+            font-family: $headings-font-family;
+            font-weight: $font-weight-bold;
+            line-height: $heading-line-height;
+            font-size: $label-font-size-500;
+            color: var(--textIcon-primary);
+        }
     }
-    &--medium {
-      font-family: $headings-font-family;
-      font-weight: $font-weight-medium;
-      line-height: $heading-line-height;
-      font-size: $label-font-size-300;
-      color: var(--textIcon-primary);
-    }
-    &--bold {
-      font-family: $headings-font-family;
-      font-weight: $font-weight-bold;
-      line-height: $heading-line-height;
-      font-size: $label-font-size-300;
-    }
-  }
-  &__400 {
-    &--regular {
-      font-family: $headings-font-family;
-      font-weight: $font-weight-regular;
-      line-height: $heading-line-height;
-      font-size: $label-font-size-400;
-      color: var(--textIcon-primary);
-    }
-    &--medium {
-      font-family: $headings-font-family;
-      font-weight: $font-weight-medium;
-      line-height: $heading-line-height;
-      font-size: $label-font-size-400;
-      color: var(--textIcon-primary);
-    }
-    &--bold {
-      font-family: $headings-font-family;
-      font-weight: $font-weight-bold;
-      line-height: $heading-line-height;
-      font-size: $label-font-size-400;
-      color: var(--textIcon-primary);
-    }
-  }
-  &__500 {
-    &--regular {
-      font-family: $headings-font-family;
-      font-weight: $font-weight-regular;
-      line-height: $heading-line-height;
-      font-size: $label-font-size-500;
-      color: var(--textIcon-primary);
-    }
-    &--medium {
-      font-family: $headings-font-family;
-      font-weight: $font-weight-medium;
-      line-height: $heading-line-height;
-      font-size: $label-font-size-500;
-      color: var(--textIcon-primary);
-    }
-    &--bold {
-      font-family: $headings-font-family;
-      font-weight: $font-weight-bold;
-      line-height: $heading-line-height;
-      font-size: $label-font-size-500;
-      color: var(--textIcon-primary);
-    }
-  }
 }
 /* ------------------------------------ */
