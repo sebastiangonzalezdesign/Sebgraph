@@ -1,44 +1,41 @@
-@import "../styles/ConfigStyles/abstracts/Variables.scss";
-@import "../styles/ConfigStyles/abstracts/Mixins.scss";
-
 .footer {
-  background-color: var(--bg-medium);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 3rem;
-  text-align: center;
-  width: 100%;
-  gap: 3rem;
-  &__text {
-    color: var(--textIcon-secondary);
-  }
-
-  &__text-container {
+    background-color: var(--bg-medium);
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-  }
-
-  &__social-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  &__social-icons {
-    display: flex;
     justify-content: center;
-    gap: 1.5rem;
-  }
-  &__social-item {
-    font-size: 3rem;
-    text-decoration: none;
-    color: var(--primary-button-bg);
-    transition: all 0.3s ease;
-
-    &:hover {
-      color: var(--primary-button-hover);
+    padding: 3rem;
+    text-align: center;
+    width: 100%;
+    gap: 3rem;
+    &__text {
+        color: var(--textIcon-secondary);
     }
-  }
+
+    &__text-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    &__social-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    &__social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+    &__social-item {
+        font-size: 3rem;
+        text-decoration: none;
+        color: var(--primary-button-bg);
+        transition: all 0.3s ease;
+
+        &:hover {
+            color: var(--primary-button-hover);
+        }
+    }
 }

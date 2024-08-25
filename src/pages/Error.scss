@@ -1,10 +1,8 @@
-@import "../styles/ConfigStyles/abstracts/Variables.scss";
-@import "../styles/ConfigStyles/abstracts/Mixins.scss";
-@import "../styles/ConfigStyles/base/Base.scss";
-@import "../styles/ConfigStyles/layout/Grid.scss";
-@import "../styles/ConfigStyles/base/Utilities";
+@use '../styles/ConfigStyles/abstracts' as *;
+@use '../styles/ConfigStyles/base' as *;
+@use '../styles/ConfigStyles/layout' as *;
 
-.error-section{
+.error-section {
     margin: auto;
     width: 80%;
     display: flex;
@@ -13,15 +11,14 @@
     text-align: center;
     margin-top: 4rem;
 
-    & .img img{
+    & .img img {
         width: 50rem;
 
-        @include respond(phone){
+        @include respond(phone) {
             width: 100%;
         }
     }
-    &.img{
+    &.img {
         justify-content: center;
     }
-
 }

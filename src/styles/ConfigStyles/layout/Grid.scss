@@ -1,3 +1,4 @@
+@use '../abstracts' as *;
 .container-home {
     display: grid;
     grid-template-rows: repeat(3, auto);

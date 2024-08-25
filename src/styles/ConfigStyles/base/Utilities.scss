@@ -1,4 +1,5 @@
-@import '../abstracts/Variables.scss';
+//@import '../abstracts/Variables.scss';
+@use '../abstracts' as *;
 
 .none {
     // display: none;

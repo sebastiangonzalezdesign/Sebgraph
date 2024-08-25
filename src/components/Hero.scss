@@ -1,5 +1,4 @@
-@import '../styles/ConfigStyles/abstracts/Variables.scss';
-@import '../styles/ConfigStyles/abstracts/Mixins.scss';
+@use '../styles/ConfigStyles/abstracts' as *;
 
 .hero-container {
     width: 600px;

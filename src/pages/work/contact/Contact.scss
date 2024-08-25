@@ -1,8 +1,6 @@
-@import '../../../styles/ConfigStyles/abstracts/Variables.scss';
-@import '../../../styles/ConfigStyles/abstracts/Mixins.scss';
-@import '../../../styles/ConfigStyles/base/Base.scss';
-@import '../../../styles/ConfigStyles/layout/Grid.scss';
-@import '../../../styles/ConfigStyles/base/Utilities.scss';
+@use '../../../styles/ConfigStyles/abstracts' as *;
+@use '../../../styles/ConfigStyles/base' as *;
+@use '../../../styles/ConfigStyles/layout' as *;
 
 .profile__img {
     width: 7.5rem;
