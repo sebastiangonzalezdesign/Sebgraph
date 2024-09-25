@@ -1,0 +1,26 @@
+@use '../abstracts/' as *;
+
+:root {
+    // Loop through the color map and set custom properties
+    @each $color, $shade-map in $colors {
+        @each $shade, $value in $shade-map {
+            --#{$color}-#{$shade}: #{$value};
+        }
+    }
+
+    // Loop through the font sizes for the 'small' screen size
+    @each $screen-size, $size-map in $font-sizes {
+        @if $screen-size == small {
+            @each $size-name, $size-value in $size-map {
+                --fs-#{$size-name}: #{$size-value};
+            }
+        } @else {
+            // Use media queries for other screen sizes
+            @include mq($screen-size) {
+                @each $size-name, $size-value in $size-map {
+                    --fs-#{$size-name}: #{$size-value};
+                }
+            }
+        }
+    }
+}

@@ -14,7 +14,7 @@
         'portfolio portfolio portfolio portfolio'
         'contact contact contact contact';
 
-    @include respond(tab-port) {
+    @include mq(medium) {
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas:
             'info info'
@@ -90,7 +90,7 @@
         'languages-cv languages-cv languages-cv hobbies-cv hobbies-cv'
         'download-cv download-cv download-cv download-cv download-cv';
 
-    @include respond(tab-port) {
+    @include mq(medium) {
         grid-template-rows: repeat(8, auto);
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 2rem;
