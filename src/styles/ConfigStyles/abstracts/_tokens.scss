@@ -1,0 +1,23 @@
+@use 'colors' as *;
+@use 'typography' as *;
+@use 'sizes' as *;
+
+// Layout
+$grid-gap: 1.5rem;
+$flex-group-gap: 1rem;
+
+$hero-padding: clamp(15rem, 15vh, 20rem);
+$section-padding: clamp(3rem, 10vh, 7rem);
+
+$card-body-padding: clamp(2rem, 3.5vw, 5rem);
+
+$container-min-margin-inline: $size-4;
+$container-max-width: 60rem;
+$container-max-width-narrow: 40rem;
+$container-max-width-wide: 75rem;
+
+// Color Semantic Tokens
+$color-text-default: $color-neutral-1000;
+$color-background-default: $color-neutral-50;
+$color-text-interactive-default: $color-primary-500;
+$color-text-interactive-hover: $color-primary-600;

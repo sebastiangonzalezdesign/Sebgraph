@@ -27,10 +27,10 @@
 
             & h1 {
                 margin-bottom: $spacings-6;
-                color: var(--textIcon-primary);
+                color: $color-text-default;
             }
             & p {
-                color: var(--textIcon-secondary);
+                color: $color-text-default;
             }
             @include respond(tab-port) {
                 text-align: center;

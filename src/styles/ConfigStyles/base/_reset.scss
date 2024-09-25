@@ -1,0 +1,27 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+* {
+    scroll-behavior: smooth;
+    &::-webkit-scrollbar-track {
+        background-color: var(--core-color-neutral-100);
+    }
+
+    &::-webkit-scrollbar {
+        width: 0.5rem;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--core-color-purple-700);
+        border-radius: 5rem;
+    }
+}
