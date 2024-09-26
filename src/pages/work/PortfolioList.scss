@@ -6,9 +6,8 @@
     transition: all 0.3s ease;
     border-radius: 8px;
     color: var(--textIcon-primary);
-    border-radius: $border-full;
     width: auto;
-    @include respond(phone) {
+    @include mq(small) {
         padding: 1rem 0.5rem;
     }
 

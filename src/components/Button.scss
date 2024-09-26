@@ -3,45 +3,46 @@
 @use '../styles/ConfigStyles/layout' as *;
 
 .btn {
-    position: relative;
+    //position: relative;
+    display: inline-flex;
     text-decoration: none;
     cursor: pointer;
-    outline: none;
-    position: relative;
-    text-align: center;
+    //outline: none;
+    border: $button-border;
+    //text-align: center;
     transition: all 0.3s ease;
-    font-weight: $font-weight-bold;
-    font-family: $headings-font-family;
-    line-height: $text-line-height;
+    font-weight: $button-font-weight;
+    font-family: $button-font-family;
+    line-height: 150%;
     &,
     &:link,
     &:visited {
-        border: none;
-        outline: none;
+        border: $button-border;
+        //outline: none;
     }
 
     &--primary {
-        background-color: var(--primary-button-bg);
-        border-radius: $border-md;
-        color: var(--primary-button-text);
+        background-color: $button-primary-background;
+        border-radius: $button-border-radius;
+        color: $button-primary-color;
 
         &:hover {
-            background-color: var(--primary-button-hover);
+            background-color: $button-primary-background-hover;
         }
         &:active {
-            background-color: var(--primary-button-active);
+            background-color: $button-primary-background-active;
         }
     }
 
     &--secondary {
-        background-color: var(--secondary-button-bg);
-        border-radius: $border-md;
-        border: 1px solid var(--secondary-button-border);
-        color: var(--secondary-button-text);
+        background-color: $button-secondary-background;
+        border-radius: $button-border-radius;
+        border: 1px solid $button-secondary-border;
+        color: $button-secondary-color;
 
         &:hover {
-            background-color: var(--secondary-button-bg-hover);
-            border: 1px solid var(--secondary-button-border-hover);
+            background-color: $button-secondary-background-hover;
+            border: 1px solid $button-secondary-border-hover;
         }
     }
 
@@ -52,7 +53,7 @@
 
     &__copy {
         text-decoration: none;
-        color: $color-white;
+        color: $color-text-default-inverse;
     }
 
     &--fixed {
@@ -67,13 +68,13 @@
 /* Button size */
 
 .btn--md {
-    padding: 0 1rem;
+    padding: $button-padding-default;
     height: 3rem;
 }
 
 .btn--lg {
-    font-size: $button-font-size-100;
-    padding: 0 1.5rem;
+    //font-size: $button-font-size-100;
+    padding: $button-padding-default;
     height: 3rem;
 }
 

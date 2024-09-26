@@ -13,8 +13,6 @@
     &__navigation {
         z-index: 1500;
     }
-    @include respond(phone) {
-    }
 
     /*     &__container{
         display: flex;
@@ -27,13 +25,13 @@
         align-items: center;
         text-decoration: none;
         outline: none;
-        color: var(--header-logo);
+        //color: var(--header-logo);
         width: 10.75rem;
         height: auto;
-        font-family: $headings-font-family;
+        //font-family: $headings-font-family;
         font-weight: $font-weight-bold;
         gap: 0.625rem;
-        font-size: $headings-font-size-200;
+        font-size: $font-size-500;
         z-index: 9999;
     }
     &__icon {
@@ -51,9 +49,9 @@
         list-style: none;
         text-align: center;
         width: 100%;
-        gap: $spacings-7;
+        gap: $size-8;
 
-        @include respond(tab-port) {
+        @include mq(medium) {
             position: absolute;
             height: 100vh;
             justify-content: center;
@@ -75,27 +73,27 @@
 
     &__link {
         opacity: 0.5;
-        font-size: $label-font-size-100;
-        font-family: $label-font-size-100;
-        font-weight: $font-weight-medium;
-        line-height: $text-line-height;
+        font-size: $line-height-body;
+        font-family: $link-font-family;
+        font-weight: $link-font-weight;
+        line-height: $line-height-body;
         text-decoration: none;
 
-        @include respond(tab-port) {
-            font-size: $headings-font-size-100;
+        @include mq(medium) {
+            font-size: $link-font-size;
             margin: auto;
         }
         &:link,
         &:visited {
             font-weight: 400;
-            color: var(--header-text);
+            color: $link-primary-color-visited;
             text-decoration: none;
             text-transform: capitalize;
             transition: all 0.4s;
         }
         &:hover,
         &:active {
-            color: var(--header-text);
+            color: $link-primary-color-hover;
             font-weight: 600;
         }
     }
@@ -107,7 +105,7 @@
 
 .link-active {
     font-weight: 600 !important;
-    color: var(--header-text);
+    color: $link-primary-color-active;
     opacity: 1;
 }
 .header .active {
@@ -152,7 +150,7 @@
             border: 1px solid var(--hamburger-button-border);
             background-color: var(--hamburger-button-hover);
         }
-        @include respond(tab-port) {
+        @include mq(medium) {
             display: flex;
         }
 
