@@ -27,31 +27,31 @@
         width: 100%;
     }
     ul {
-        border-radius: $border-full;
+        border-radius: $button-border-radius;
         gap: 0.25rem;
         list-style: none;
         display: flex;
         width: auto;
         justify-content: flex-start;
         text-align: center;
-        @include respond(phone) {
+        @include mq(small) {
             padding: 0.25rem;
             margin: auto;
         }
     }
     li {
         flex: 1;
-        @include respond(phone) {
+        @include mq(small) {
         }
     }
     &__container-grid {
         cursor: pointer;
-        grid-gap: $spacings-6;
+        grid-gap: $size-6;
         width: 100%;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
 
-        @include respond(tab-port) {
+        @include mq(medium) {
             grid-template-columns: 1fr;
         }
     }
@@ -71,7 +71,7 @@
         gap: $spacings-6;
         border: 1px solid var(--card-bg-border);
 
-        @include respond(tab-port) {
+        @include mq(medium) {
             animation: none;
             width: 100%;
             height: auto;
@@ -90,7 +90,7 @@
                 opacity: 0.4;
                 z-index: 0;
 
-                @include respond(tab-port) {
+                @include mq(medium) {
                     transform: none;
                 }
             }

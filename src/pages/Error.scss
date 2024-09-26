@@ -14,7 +14,7 @@
     & .img img {
         width: 50rem;
 
-        @include respond(phone) {
+        @include mq(small) {
             width: 100%;
         }
     }

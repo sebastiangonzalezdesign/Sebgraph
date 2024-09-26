@@ -2,6 +2,7 @@
 @use 'sass:math';
 @use 'sass:map';
 @use 'breakpoints' as *;
+@use 'tokens' as *;
 
 @mixin mq($size) {
     @if map.has-key($breakpoints, $size) {
@@ -20,4 +21,15 @@
     } @else {
         @error 'the keyword #{$size} is not in the $breakpoints map';
     }
+}
+
+@mixin heading($fs, $color: $body-text-color) {
+    font-size: $fs;
+    color: $color;
+
+    font-family: $card-heading-font-family;
+    text-transform: $card-heading-text-transform;
+    letter-spacing: $card-heading-letter-spacing;
+    font-weight: $card-heading-font-weight;
+    line-height: $card-heading-line-height;
 }
