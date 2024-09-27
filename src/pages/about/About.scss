@@ -11,12 +11,12 @@
     padding-top: 8rem;
     width: 100%;
     background-color: var(--bg-medium);
-    @include respond(tab-port) {
+    @include mq(medium) {
         height: auto;
     }
 
     &__text {
-        @include respond(phone) {
+        @include mq(small) {
             text-align: center;
             width: 100%;
             justify-content: center;
@@ -30,7 +30,7 @@
         justify-content: space-between;
         max-width: 75rem;
 
-        @include respond(tab-port) {
+        @include mq(medium) {
             flex-direction: column;
             height: auto;
             padding: 0;
@@ -41,7 +41,7 @@
         width: 400px;
         height: 400px;
 
-        @include respond(phone) {
+        @include mq(small) {
             width: 80%;
             margin-top: 2.5rem;
         }
@@ -56,7 +56,7 @@
     padding: 2.5rem;
     width: 100%;
 
-    @include respond(tab-port) {
+    @include mq(medium) {
         height: auto;
     }
 
@@ -68,7 +68,7 @@
         gap: 1.5rem;
         max-width: 75rem;
 
-        @include respond(tab-port) {
+        @include mq(medium) {
             flex-direction: column;
             height: auto;
             padding: 0;
@@ -78,12 +78,12 @@
     &__text-box {
         width: 60rem;
 
-        @include respond(tab-port) {
+        @include mq(medium) {
             width: 100%;
         }
     }
     & figure {
-        @include respond(phone) {
+        @include mq(small) {
             width: 100%;
         }
     }

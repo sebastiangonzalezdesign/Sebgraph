@@ -5,18 +5,18 @@
     padding: 1rem;
     transition: all 0.3s ease;
     border-radius: 8px;
-    color: var(--textIcon-primary);
+    color: $body-text-color;
     width: auto;
     @include mq(small) {
         padding: 1rem 0.5rem;
     }
 
     &:hover {
-        background-color: var(--primary-bg);
+        background-color: $color-primary-500;
     }
 
     &.active {
-        color: var(--textIcon-primary);
+        color: $color-text-default-inverse;
         font-size: $font-weight-bold;
     }
 }

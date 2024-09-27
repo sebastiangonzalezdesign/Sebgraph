@@ -19,13 +19,13 @@
     &__heading {
         width: 100%;
         text-align: start;
-        color: var(--textIcon-primary);
+        color: $color-text-default;
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
     }
     &__paragraph {
-        color: var(--textIcon-secondary);
+        color: $color-text-secondary;
     }
 
     &__btns {
@@ -34,26 +34,26 @@
         justify-content: center;
         width: auto;
 
-        @include respond(tab-port) {
+        @include mq(medium) {
             align-items: center;
             justify-content: center;
             flex-direction: column-reverse;
         }
-        @include respond(phone) {
+        @include mq(small) {
             width: 100%;
         }
     }
     Button {
         width: 320px;
 
-        @include respond(phone) {
+        @include mq(small) {
             width: 100%;
         }
     }
 }
 
 .email {
-    @include respond(phone) {
+    @include mq(small) {
         width: 100%;
     }
 }
@@ -85,9 +85,9 @@
 
     & .message {
         border-radius: 0.4rem;
-        color: var(--textIcon-link);
-        font-size: $label-font-size-200;
-        font-weight: $font-weight-medium;
+        color: $label-color;
+        font-size: $label-font-size;
+        font-weight: $label-font-weight;
         margin: 1rem;
         opacity: 0;
         transition: opacity 0.5s ease-in-out;

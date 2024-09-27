@@ -4,11 +4,13 @@
 
 .header {
     position: fixed;
+    align-content: center;
     width: 100%;
     text-align: center;
-    height: 5rem;
+    height: $size-13;
     z-index: 1;
     transition: 0.2s ease-in;
+    color: $site-header-color;
 
     &__navigation {
         z-index: 1500;
@@ -28,7 +30,7 @@
         //color: var(--header-logo);
         width: 10.75rem;
         height: auto;
-        //font-family: $headings-font-family;
+        //font-family: $font-family-accent;
         font-weight: $font-weight-bold;
         gap: 0.625rem;
         font-size: $font-size-500;
@@ -73,10 +75,11 @@
 
     &__link {
         opacity: 0.5;
-        font-size: $line-height-body;
+        font-size: $link-font-size;
         font-family: $link-font-family;
         font-weight: $link-font-weight;
         line-height: $line-height-body;
+        padding: $link-padding;
         text-decoration: none;
 
         @include mq(medium) {
@@ -94,18 +97,22 @@
         &:hover,
         &:active {
             color: $link-primary-color-hover;
+            background-color: $link-primary-color-active;
+            border-radius: $link-border-radius;
             font-weight: 600;
         }
     }
     &__actions-container {
         display: flex;
-        gap: $spacings-4;
+        gap: $size-4;
     }
 }
 
 .link-active {
-    font-weight: 600 !important;
+    font-weight: $link-font-weight-active !important;
     color: $link-primary-color-active;
+    background-color: $link-primary-color-active;
+    border-radius: $link-border-radius;
     opacity: 1;
 }
 .header .active {
@@ -129,17 +136,17 @@
     align-items: center;
     display: flex;
     flex-direction: row;
-    height: 5rem;
+    height: auto;
     padding: 0 1.5rem;
 
     & .hamburger {
         border: 1px solid var(--hamburger-button-border);
         background-color: var(--hamburger-button-bg);
-        border-radius: $border-md;
+        border-radius: $border-radius-1;
         cursor: pointer;
         color: var(--hamburger-button-color);
-        height: $spacings-9;
-        width: $spacings-9;
+        height: $size-9;
+        width: $size-9;
         justify-content: center;
         align-items: center;
         display: none;
@@ -156,8 +163,8 @@
 
         & .icon {
             margin: auto;
-            width: $spacings-6;
-            height: $spacings-6;
+            width: $size-6;
+            height: $size-6;
         }
     }
 }

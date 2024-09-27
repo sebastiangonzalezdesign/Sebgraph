@@ -1,9 +1,9 @@
 @use '../styles/ConfigStyles/abstracts' as *;
 .chip {
     background-color: var(--chip-bg);
-    padding: $spacings-1 $spacings-3;
+    padding: $chip-padding;
     display: inline-block;
-    border-radius: $border-full;
+    border-radius: $border-radius-full;
     width: fit-content;
 
     .label {

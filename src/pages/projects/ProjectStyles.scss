@@ -10,14 +10,14 @@
     height: auto;
     width: auto;
     padding: 4rem;
-    @include respond(phone) {
+    @include mq(small) {
         flex-direction: column;
     }
     .animation-box {
         width: 50rem;
         margin: 2rem;
 
-        @include respond(phone) {
+        @include mq(small) {
             width: 100%;
         }
     }
@@ -33,7 +33,7 @@
         height: auto;
         width: 100%;
         object-fit: cover;
-        background-color: $color-black-base;
+        background-color: $color-background-inverse;
     }
 }
 
@@ -49,9 +49,9 @@
     left: 0;
     right: 0;
     /*     background-color: rgba(0,0,0,0.75); */
-    background-color: $color-white;
+    background-color: $color-background-default;
     border-radius: 20px 20px 0px 0px;
-    box-shadow: 0 0 0 5em rgba($color-black-base, 0.5);
+    box-shadow: $box-shadow-3;
 }
 
 .project-container {
@@ -71,9 +71,9 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-color: $color-white;
+    background-color: $color-background-default;
     border-radius: 20px 20px 0px 0px;
-    box-shadow: 0 0 0 5em rgba($color-black-base, 0.5);
+    box-shadow: $box-shadow-3;
     position: fixed;
     z-index: 999;
     top: 4rem;
@@ -88,13 +88,13 @@
     }
 
     &__icon {
-        fill: $color-white;
+        fill: $color-icon-default;
         width: 2em;
         height: 2em;
     }
     &__header {
         align-items: center;
-        background-color: $color-grey-light;
+        background-color: $color-neutral-300;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -155,7 +155,7 @@
         display: flex;
         padding: 4rem;
 
-        @include respond(tab-port) {
+        @include mq(medium) {
             width: 100%;
             margin: 0;
             padding: 2rem;
@@ -169,7 +169,7 @@
         flex-direction: column;
         text-align: center;
 
-        @include respond(tab-port) {
+        @include mq(medium) {
             padding: 2rem;
         }
     }
@@ -181,7 +181,7 @@
     }
     &__img-container {
         align-items: center;
-        background-color: $color-grey-light;
+        background-color: $color-neutral-100;
         border-radius: 2rem;
         display: flex;
         justify-content: center;
@@ -189,7 +189,7 @@
         width: auto;
         padding: 4rem;
 
-        @include respond(tab-port) {
+        @include mq(medium) {
             padding: 2rem;
             height: auto;
             width: auto;
@@ -197,7 +197,7 @@
     }
     &__img-container-dark {
         align-items: center;
-        background-color: $color-black-base;
+        background-color: $color-background-inverse;
         border-radius: 2rem;
         display: flex;
         justify-content: center;
@@ -205,7 +205,7 @@
         width: auto;
         padding: 4rem;
 
-        @include respond(tab-port) {
+        @include mq(medium) {
             padding: 2rem;
             height: auto;
             width: auto;
@@ -217,7 +217,7 @@
         width: 100%;
         object-fit: cover;
 
-        @include respond(tab-port) {
+        @include mq(medium) {
             height: auto;
             width: 100%;
         }
@@ -239,7 +239,7 @@
         flex-direction: column;
         padding: 4rem;
         width: 100%;
-        @include respond(tab-port) {
+        @include mq(medium) {
             width: 100%;
             margin: 0;
             padding: 2rem;
@@ -255,7 +255,7 @@
         flex-direction: column;
         padding: 4rem;
         width: 100%;
-        @include respond(tab-port) {
+        @include mq(medium) {
             width: 100%;
             margin: 0;
             padding: 2rem;
@@ -268,7 +268,7 @@
         flex-direction: column;
         padding: 4rem;
 
-        @include respond(tab-port) {
+        @include mq(medium) {
             width: 100%;
             margin: 0;
             padding: 2rem;
@@ -281,7 +281,7 @@
         flex-direction: column;
         padding: 4rem;
         width: 100%;
-        @include respond(tab-port) {
+        @include mq(medium) {
             width: 100%;
             margin: 0;
             padding: 2rem;
@@ -292,7 +292,7 @@
         justify-content: center;
         flex-direction: column;
         padding: 4rem;
-        @include respond(tab-port) {
+        @include mq(medium) {
             width: 100%;
             margin: 0;
             padding: 2rem;
@@ -307,8 +307,8 @@
         flex-direction: column;
     }
     &__title {
-        color: var(--textIcon-primary-white);
-        margin-bottom: $gutter-vertical;
+        color: $color-text-default;
+        margin-bottom: $size-11;
     }
     &__info-content {
         display: flex;
@@ -316,7 +316,7 @@
 
         text-align: center;
         & p {
-            color: var(--textIcon-secondary-inverse);
+            color: $color-text-secondary-inverse;
         }
     }
     &__text {
@@ -327,18 +327,18 @@
 .project-info {
     &__container {
         display: flex;
-        @include respond(tab-port) {
+        @include mq(medium) {
             flex-direction: column;
         }
     }
     &__img {
-        background-color: $color-grey-light;
+        background-color: $color-neutral-100;
         border-radius: 2rem;
         margin-right: 4rem;
         width: 31.25rem;
         height: 18.75rem;
         object-fit: cover;
-        @include respond(tab-port) {
+        @include mq(medium) {
             margin: auto;
             margin-bottom: 4rem;
             width: 100%;
@@ -360,7 +360,7 @@
     &__boxes {
         display: flex;
         justify-content: center;
-        @include respond(tab-port) {
+        @include mq(medium) {
             align-items: center;
             flex-direction: column;
             width: 100%;
@@ -381,13 +381,13 @@
             color: var(--textIcon-secondary);
         }
 
-        @include respond(tab-port) {
+        @include mq(medium) {
             width: 100%;
         }
     }
     &__box:not(:last-child) {
         margin-right: 4rem;
-        @include respond(tab-port) {
+        @include mq(medium) {
             margin-right: 0;
             margin-bottom: 4rem;
         }

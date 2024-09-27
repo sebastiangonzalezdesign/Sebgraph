@@ -8,7 +8,7 @@
     gap: 2.5rem;
     width: 100%;
     &__heading {
-        color: var(--textIcon-primary);
+        color: $body-text-color;
     }
     a {
         text-decoration: none;
@@ -61,30 +61,30 @@
         display: flex;
         width: auto;
         height: auto;
-        border-radius: $border-xl;
-        background-color: var(--card-bg);
-        padding: $spacings-6;
+        border-radius: $border-radius-2;
+        background-color: $card-background-default;
+        padding: $size-6;
         transition: all 0.5s ease;
         animation: portfolio 0.3s ease;
         animation-fill-mode: backwards;
         overflow: hidden;
-        gap: $spacings-6;
-        border: 1px solid var(--card-bg-border);
+        gap: $size-6;
+        border: 1px solid $card-border;
 
         @include mq(medium) {
             animation: none;
             width: 100%;
             height: auto;
         }
-        @include respond(phone) {
+        @include mq(small) {
             animation: none;
             width: 100%;
             flex-direction: column;
             height: auto;
         }
         &:hover {
-            background-color: var(--card-bg-hover);
-            border: 1px solid var(--card-bg-border-hover);
+            background-color: $card-background-hover;
+            border: 1px solid $card-border-hover;
             & img {
                 transform: scale(110%);
                 opacity: 0.4;
@@ -99,10 +99,10 @@
 
     &__img-container {
         width: 40%;
-        border-radius: $border-lg;
+        border-radius: $border-radius-2;
         overflow: hidden;
         height: 17.5rem;
-        @include respond(phone) {
+        @include mq(small) {
             width: 100%;
         }
     }
@@ -126,7 +126,7 @@
         text-align: flex-start;
         display: flex;
         flex-direction: column;
-        gap: $spacings-8;
+        gap: $size-8;
         h2 {
             color: var(--light-textIcon-primary-black);
         }
@@ -137,16 +137,16 @@
         & .head-text {
             display: flex;
             flex-direction: column;
-            gap: $spacings-3;
+            gap: $size-3;
         }
-        @include respond(phone) {
+        @include mq(small) {
             width: 100%;
         }
     }
     &__btn {
         max-width: 320px;
         width: 100%;
-        @include respond(phone) {
+        @include mq(small) {
             width: 100%;
         }
     }
