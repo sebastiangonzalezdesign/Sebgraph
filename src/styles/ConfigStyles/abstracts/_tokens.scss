@@ -6,6 +6,11 @@
 $grid-gap: 1.5rem;
 $flex-group-gap: 1rem;
 
+$gutter-vertical: $size-11;
+$gutter-medium: $size-8;
+$gutter-small: $size-4;
+$gutter-horizontal: $size-11;
+
 $hero-padding: clamp(15rem, 15vh, 20rem);
 $section-padding: clamp(3rem, 10vh, 7rem);
 
@@ -21,14 +26,18 @@ $container-max-width-wide: 75rem;
 $color-text-default: $color-neutral-1000;
 $color-text-default-inverse: $color-neutral-50;
 $color-text-secondary: $color-neutral-800;
+$color-text-secondary-inverse: $color-neutral-600;
 $color-text-interactive-default: $color-primary-500;
-$color-text-interactive-hover: $color-primary-600;
+$color-text-interactive-hover: $color-primary-100;
 
 $color-background-default: $color-neutral-50;
+$color-background-inverse: $color-neutral-900;
 
 $letter-spacing-loose: 0.16em;
 $line-height-body: 150%;
 $line-height-heading: 120%;
+
+$color-icon-default: $color-neutral-50;
 
 // body
 $body-font-family: $font-family-base;
@@ -45,14 +54,16 @@ $link-color-hover: $color-text-interactive-hover;
 // border-radius
 $border-radius-1: $size-2;
 $border-radius-2: $size-4;
+$border-radius-full: 9999px;
 
 // shadows
 $box-shadow-1: 0 $size-1 $size-4 rgb(0 0 0 / 0.05);
 $box-shadow-2: 0 $size-1 $size-4 rgb(0 0 0 / 0.15);
+$box-shadow-3: 0 0 0 5em rgba($color-background-inverse, 0.5);
 
 // Buttons
 
-$button-font-family: $body-font-family;
+$button-font-family: $font-family-accent;
 $button-font-size: $font-size-600;
 $button-font-weight: $font-weight-bold;
 $button-padding-default: $size-3 $size-9; // 12px 32px
@@ -75,17 +86,23 @@ $button-secondary-border-hover: $color-neutral-600;
 // Links
 $link-primary-color: $color-primary-500;
 $link-primary-color-visited: $color-primary-900;
-$link-primary-color-active: $color-primary-900;
+$link-primary-color-active: $color-neutral-300;
 $link-primary-color-hover: $color-primary-700;
-$link-font-family: $body-font-family;
-$link-font-size: $font-size-600;
+$link-font-family: $font-family-accent;
+$link-font-size: $font-size-400;
 $link-font-weight: $font-weight-semi-bold;
+$link-font-weight-active: $font-weight-bold;
+$link-padding: $size-2 $size-5;
+$link-border-radius: $border-radius-full;
 
 // cards
 $card-flow-spacing: $size-2;
 $card-body-padding: $size-8;
-$card-background-default: $color-primary-100;
+$card-background-default: $color-neutral-50;
+$card-background-hover: $color-neutral-400;
 $card-color-default: $body-background-color;
+$card-border: $color-neutral-400;
+$card-border-hover: $color-neutral-400;
 $card-font-family: $body-font-family;
 $card-border-radius: $border-radius-2;
 $card-box-shadow: $box-shadow-1;
@@ -97,3 +114,28 @@ $card-heading-font-weight: $font-weight-bold;
 $card-heading-letter-spacing: $letter-spacing-loose;
 $card-heading-line-height: 1;
 $card-heading-text-transform: uppercase;
+
+// Label
+$label-color: $color-primary-500;
+$label-font-size: $font-size-400;
+$label-font-weight: $font-weight-semi-bold;
+
+// Chip
+$chip-padding: $size-1 $size-3;
+
+// site header
+//$site-header-background-color: $color-neutral-50;
+$site-header-color: $color-neutral-900;
+//$site-header-padding: $size-8 0;
+//$side-header-margin: 0;
+//$site-header-justification: space-between;
+//$site-header-alignment: start;
+
+// navigation
+$navigation-color: $site-header-color;
+//$navigation-color-hover: $color-primary-300;
+//$navigation-font-family: $font-family-accent;
+//$navigation-font-size: $font-size-400;
+//$navigation-font-weight: $font-weight-bold;
+//$navigation-letter-spacing: $letter-spacing-wide;
+//$navigation-spacing: $size-9;

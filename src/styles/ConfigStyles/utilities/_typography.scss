@@ -41,14 +41,14 @@
 .heading {
     &__100 {
         &--regular {
-            font-family: $font-family-base;
+            font-family: $font-family-accent;
             font-weight: $font-weight-default;
             line-height: $line-height-heading;
             font-size: $font-size-700;
             color: var(--textIcon-primary);
         }
         &--bold {
-            font-family: $font-family-base;
+            font-family: $font-family-accent;
             font-weight: $font-weight-bold;
             line-height: $line-height-heading;
             font-size: $font-size-700;
@@ -58,14 +58,14 @@
 
     &__200 {
         &--regular {
-            font-family: $font-family-base;
+            font-family: $font-family-accent;
             font-weight: $font-weight-default;
             line-height: $line-height-heading;
             font-size: $font-size-600;
             color: var(--textIcon-primary);
         }
         &--bold {
-            font-family: $font-family-base;
+            font-family: $font-family-accent;
             font-weight: $font-weight-bold;
             line-height: $line-height-heading;
             font-size: $font-size-600;
@@ -74,14 +74,14 @@
     }
     &__300 {
         &--regular {
-            font-family: $font-family-base;
+            font-family: $font-family-accent;
             font-weight: $font-weight-default;
             line-height: $line-height-heading;
             font-size: $font-size-500;
             color: var(--textIcon-primary);
         }
         &--bold {
-            font-family: $font-family-base;
+            font-family: $font-family-accent;
             font-weight: $font-weight-bold;
             line-height: $line-height-heading;
             font-size: $font-size-500;
@@ -213,7 +213,7 @@
 .button {
     &__100 {
         &--bold {
-            font-family: $font-family-base;
+            font-family: $font-family-accent;
             font-weight: $font-weight-bold;
             line-height: $line-height-heading;
             font-size: $font-size-500;
@@ -223,7 +223,7 @@
 
     &__200 {
         &--bold {
-            font-family: $font-family-base;
+            font-family: $font-family-accent;
             font-weight: $font-weight-bold;
             line-height: $line-height-heading;
             font-size: $font-size-400;
@@ -232,7 +232,7 @@
     }
     &__300 {
         &--bold {
-            font-family: $font-family-base;
+            font-family: $font-family-accent;
             font-weight: $font-weight-bold;
             line-height: $line-height-heading;
             font-size: $font-size-300;

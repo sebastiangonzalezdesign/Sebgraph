@@ -9,9 +9,9 @@
     justify-content: space-between;
     display: flex;
     flex-direction: row;
-    gap: $spacings-6;
+    gap: $size-6;
 
-    @include respond(tab-port) {
+    @include mq(medium) {
         height: auto;
         flex-direction: column;
     }
@@ -19,24 +19,24 @@
     &__text-container {
         width: 60%;
 
-        @include respond(tab-port) {
+        @include mq(medium) {
             width: 100%;
         }
         &__text {
-            margin-bottom: $spacings-11;
+            margin-bottom: $size-11;
 
             & h1 {
-                margin-bottom: $spacings-6;
+                margin-bottom: $size-6;
                 color: $color-text-default;
             }
             & p {
                 color: $color-text-default;
             }
-            @include respond(tab-port) {
+            @include mq(medium) {
                 text-align: center;
             }
         }
-        @include respond(tab-port) {
+        @include mq(medium) {
             padding-top: 8rem;
             height: auto;
             width: 100%;
@@ -45,19 +45,19 @@
     &__btn-container {
         max-width: 100%;
         display: flex;
-        gap: $spacings-4;
+        gap: $size-4;
 
-        @include respond(tab-port) {
+        @include mq(medium) {
             justify-content: center;
         }
-        @include respond(phone) {
+        @include mq(small) {
             flex-direction: column;
         }
 
         & Button {
             flex-wrap: wrap;
             width: 200px;
-            @include respond(phone) {
+            @include mq(small) {
                 width: 100%;
             }
         }
@@ -67,7 +67,7 @@
         padding-top: 40px;
         width: 60%;
         height: 100%;
-        @include respond(tab-port) {
+        @include mq(medium) {
             width: 100%;
         }
     }

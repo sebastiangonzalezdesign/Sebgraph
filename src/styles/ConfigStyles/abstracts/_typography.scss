@@ -1,8 +1,8 @@
 $-ff-sans: 'Poppins', sans-serif;
 $-ff-serif: 'Lora', serif;
 
-$font-family-base: $-ff-sans;
-$font-family-accent: $-ff-serif;
+$font-family-base: $-ff-serif;
+$font-family-accent: $-ff-sans;
 
 $-fw-400: 400;
 $-fw-500: 500;
@@ -20,6 +20,9 @@ $font-sizes: (
         '600': 1.125rem,
         '500': 1.125rem,
         '400': 1rem,
+        '300': 0.875rem,
+        '200': 0.75rem,
+        '100': 0.625rem,
     ),
     'large': (
         '900': 3.75rem,
@@ -28,9 +31,15 @@ $font-sizes: (
         '600': 1.3125rem,
         '500': 1.125rem,
         '400': 1rem,
+        '300': 0.875rem,
+        '200': 0.75rem,
+        '100': 0.625rem,
     ),
 );
 
+$font-size-100: var(--fs-100);
+$font-size-200: var(--fs-200);
+$font-size-300: var(--fs-300);
 $font-size-400: var(--fs-400);
 $font-size-500: var(--fs-500);
 $font-size-600: var(--fs-600);

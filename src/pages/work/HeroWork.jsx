@@ -1,4 +1,5 @@
 import './HeroWork.scss'
+import '../../styles/ConfigStyles/utilities/_index.scss'
 import { lazy, useContext, useEffect } from 'react'
 import ThemeContext from '../../context/ThemeContext'
 import Aos from 'aos'

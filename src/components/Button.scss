@@ -5,15 +5,19 @@
 .btn {
     //position: relative;
     display: inline-flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
     cursor: pointer;
     //outline: none;
     border: $button-border;
+    border-radius: $button-border-radius;
     //text-align: center;
     transition: all 0.3s ease;
     font-weight: $button-font-weight;
     font-family: $button-font-family;
     line-height: 150%;
+    padding: $button-padding-default;
     &,
     &:link,
     &:visited {
@@ -23,7 +27,6 @@
 
     &--primary {
         background-color: $button-primary-background;
-        border-radius: $button-border-radius;
         color: $button-primary-color;
 
         &:hover {
@@ -36,7 +39,6 @@
 
     &--secondary {
         background-color: $button-secondary-background;
-        border-radius: $button-border-radius;
         border: 1px solid $button-secondary-border;
         color: $button-secondary-color;
 
