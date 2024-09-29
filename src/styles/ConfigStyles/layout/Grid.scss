@@ -5,7 +5,7 @@
     display: grid;
     grid-template-rows: repeat(3, auto);
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 4rem;
+    grid-gap: $size-6;
     margin: auto;
     width: 100%;
     padding: 0;

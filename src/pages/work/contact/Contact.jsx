@@ -26,7 +26,12 @@ const Contact = () => {
         <section className="section-contact">
             <div className="contact-container">
                 <div className="contact-container__heading">
-                    <h2 className="heading__100--bold">Contact</h2>
+                    <div className="section-portfolio__heading-container">
+                        <h2 className="heading__100--bold section-portfolio__heading">
+                            Contact
+                        </h2>
+                        <div className="section-portfolio__divider" />
+                    </div>
                     <p className="paragraph__100--regular contact-container__paragraph">
                         If you have a project you'd like to collaborate on or
                         would like to learn more about my services, I'd love to

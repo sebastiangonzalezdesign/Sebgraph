@@ -16,99 +16,115 @@ import 'aos/dist/aos.css'
 export default function Portfolio() {
     const [selected, setSelected] = useState('all')
     const [data, setData] = useState([])
-    /*   const [dataPortfolio, setDataPortfolio] = useState([]);
+    const [delayedSelected, setDelayedSelected] = useState('all')
 
-  const [isOpenProject, openProject, closeProject] = useProject(false); */
+    const labelRefs = useRef([]) // Store references to each label
 
-    /* Scroll animation */
+    // Scroll animation
     useEffect(() => {
         Aos.init({ duration: 1000 })
     }, [])
 
     let refProject = useRef()
 
+    //Project list
     const list = [
-        {
-            id: 'all',
-            title: 'All',
-        },
-        {
-            id: 'ui/visual',
-            title: 'UI/Visual',
-        },
-        /*         {
-            id: 'visual',
-            title: 'Visual',
-        }, */
-        {
-            id: 'ds',
-            title: 'Design System',
-        },
-        {
-            id: 'code',
-            title: 'Code',
-        },
+        { id: 'all', title: 'All' },
+        { id: 'ui/visual', title: 'UI/Visual' },
+        { id: 'ds', title: 'DS' },
+        { id: 'code', title: 'Code' },
     ]
 
+    // Update portfolio data based on the selected tab
     useEffect(() => {
         switch (selected) {
             case 'all':
                 setData(allPortfolio)
                 break
-
             case 'ui/visual':
                 setData(uiVisualPortfolio)
                 break
-
-            /*             case 'visual':
-                setData(visualPortfolio)
-                break */
-
             case 'ds':
                 setData(dsPortfolio)
                 break
-
             case 'code':
                 setData(codePortfolio)
                 break
-
             default:
                 setData(allPortfolio)
         }
     }, [selected])
 
+    //Delay click Tab
+    const handleTabChange = (id) => {
+        // Set the selected tab immediately
+        setSelected(id)
+
+        // Delay the application of the active class
+        setTimeout(() => {
+            setDelayedSelected(id)
+        }, 160) // Adjust delay as needed to match the glider movement duration
+    }
+
     return (
         <>
             <section id="work" className="section-portfolio">
-                <h2 className="heading__100--bold section-portfolio__heading">
-                    Recent Work
-                </h2>
+                <div className="section-portfolio__heading-container">
+                    <h2 className="heading__100--bold section-portfolio__heading">
+                        Work
+                        <span className="section-portfolio__heading-decoration"></span>
+                    </h2>
+                    <div className="section-portfolio__divider" />
+                </div>
+
                 <div className="section-portfolio__projects-container">
-                    <ul data-aos="fade-up">
+                    {/* Rendering the tabs using radio inputs */}
+                    <div className="section-portfolio__tabs">
                         {list.map((item) => (
-                            <PortfolioList
-                                key={item.id}
-                                title={item.title}
-                                active={selected === item.id}
-                                setSelected={setSelected}
-                                id={item.id}
-                            />
+                            <React.Fragment key={item.id}>
+                                {/* Radio input for tab selection */}
+                                <input
+                                    type="radio"
+                                    id={`radio-${item.id}`}
+                                    name="tabs"
+                                    checked={selected === item.id}
+                                    onChange={() => handleTabChange(item.id)}
+                                    style={{ display: 'none' }}
+                                />
+                                <label
+                                    className={`section-portfolio__tab ${
+                                        delayedSelected === item.id
+                                            ? 'active'
+                                            : ''
+                                    }`}
+                                    htmlFor={`radio-${item.id}`}
+                                >
+                                    {item.title}
+                                </label>
+                            </React.Fragment>
                         ))}
-                    </ul>
+                        <span
+                            className="section-portfolio__glider"
+                            style={{
+                                transform: `translateX(${
+                                    list.findIndex(
+                                        (item) => item.id === selected
+                                    ) * 100
+                                }%)`,
+                            }}
+                        ></span>
+                    </div>
 
                     <article
                         className="section-portfolio__container-grid"
                         data-aos="fade-up"
                     >
                         {data
-                            /* sort the cards from most recent */
                             .sort((a, b) => {
                                 const yearA = parseInt(a.year)
                                 const yearB = parseInt(b.year)
-
                                 return yearB - yearA
                             })
-
                             .map((d) => (
                                 <Link
                                     to={`/projects/${d.key}`}

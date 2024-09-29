@@ -8,36 +8,33 @@
     width: 100%;
     text-align: center;
     height: $size-13;
-    z-index: 1;
+    z-index: 99;
     transition: 0.2s ease-in;
-    color: $site-header-color;
+    //color: $site-header-color;
 
     &__navigation {
         z-index: 1500;
     }
-
-    /*     &__container{
-        display: flex;
-        justify-content: space-between;
-        width: $width-container;
-    } */
 
     &__logo-box {
         display: flex;
         align-items: center;
         text-decoration: none;
         outline: none;
-        //color: var(--header-logo);
-        width: 10.75rem;
+        width: auto;
         height: auto;
-        //font-family: $font-family-accent;
         font-weight: $font-weight-bold;
         gap: 0.625rem;
         font-size: $font-size-500;
         z-index: 9999;
+        color: $color-icon-background-default;
     }
     &__icon {
-        width: 2rem;
+        width: $size-10;
+        transition: color 0.3s ease;
+        &:hover {
+            color: $color-icon-background-hover;
+        }
     }
 
     &__menu {
@@ -74,32 +71,31 @@
     }
 
     &__link {
-        opacity: 0.5;
-        font-size: $link-font-size;
-        font-family: $link-font-family;
-        font-weight: $link-font-weight;
+        //opacity: 0.5;
+        font-size: $navbar-link-font-size;
+        font-family: $navbar-link-font-family;
+        font-weight: $navbar-link-font-weight;
         line-height: $line-height-body;
-        padding: $link-padding;
+        padding: $navbar-link-padding;
         text-decoration: none;
+        color: $navbar-link-color-default;
+        transition: all 0.4s;
 
         @include mq(medium) {
-            font-size: $link-font-size;
+            font-size: $navbar-link-font-size-mobile;
             margin: auto;
         }
         &:link,
         &:visited {
-            font-weight: 400;
-            color: $link-primary-color-visited;
+            color: $navbar-link-color-default;
             text-decoration: none;
-            text-transform: capitalize;
-            transition: all 0.4s;
+            //text-transform: capitalize;
         }
         &:hover,
         &:active {
-            color: $link-primary-color-hover;
-            background-color: $link-primary-color-active;
-            border-radius: $link-border-radius;
-            font-weight: 600;
+            background-color: $navbar-link-background-hover;
+            color: $navbar-link-color-default;
+            border-radius: $navbar-link-border-radius;
         }
     }
     &__actions-container {
@@ -109,17 +105,15 @@
 }
 
 .link-active {
-    font-weight: $link-font-weight-active !important;
-    color: $link-primary-color-active;
-    background-color: $link-primary-color-active;
+    background-color: $navbar-link-background-active;
     border-radius: $link-border-radius;
-    opacity: 1;
+    font-weight: 600;
 }
 .header .active {
     top: 0;
     transition: 0.5s ease;
-    opacity: 1;
     display: flex;
+    opacity: 1;
 }
 .header .text-animation {
     animation: 0.5s moveInBottom ease;

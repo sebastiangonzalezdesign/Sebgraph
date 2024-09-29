@@ -2,21 +2,22 @@
 
 .portfolioList {
     cursor: pointer;
+    font-family: $tabs-font-family;
     padding: 1rem;
     transition: all 0.3s ease;
-    border-radius: 8px;
-    color: $body-text-color;
+    color: $tabs-color-default;
     width: auto;
+    border: 1px solid $tabs-border-color;
     @include mq(small) {
         padding: 1rem 0.5rem;
     }
 
+    &.active {
+        border: 1px solid red;
+        color: red;
+        font-weight: bold;
+    }
     &:hover {
         background-color: $color-primary-500;
-    }
-
-    &.active {
-        color: $color-text-default-inverse;
-        font-size: $font-weight-bold;
     }
 }
