@@ -70,11 +70,11 @@ export default function Portfolio() {
         <>
             <section id="work" className="section-portfolio">
                 <div className="section-portfolio__heading-container">
+                    {/* <div className="section-portfolio__divider" /> */}
                     <h2 className="heading__100--bold section-portfolio__heading">
                         Work
                         <span className="section-portfolio__heading-decoration"></span>
                     </h2>
-                    <div className="section-portfolio__divider" />
                 </div>
 
                 <div className="section-portfolio__projects-container">
@@ -120,11 +120,7 @@ export default function Portfolio() {
                         data-aos="fade-up"
                     >
                         {data
-                            .sort((a, b) => {
-                                const yearA = parseInt(a.year)
-                                const yearB = parseInt(b.year)
-                                return yearB - yearA
-                            })
+                            .sort((a, b) => a.order - b.order)
                             .map((d) => (
                                 <Link
                                     to={`/projects/${d.key}`}
@@ -132,16 +128,8 @@ export default function Portfolio() {
                                     id={d.id}
                                     path={d.key}
                                     key={d.id}
-                                    className="section-portfolio__card-project link"
+                                    className={`section-portfolio__card-project link ${d.bgClass}`}
                                 >
-                                    <div className="section-portfolio__img-container">
-                                        <img
-                                            className="section-portfolio__img"
-                                            src={d.img}
-                                            alt="Tech"
-                                            loading="lazy"
-                                        />
-                                    </div>
                                     <div className="section-portfolio__text-card">
                                         <div className="head-text">
                                             <h2
@@ -150,16 +138,18 @@ export default function Portfolio() {
                                             >
                                                 {d.title}
                                             </h2>
-                                            <span className="paragraph__200--medium">
-                                                {d.company} | {d.year}
+                                            <span className="paragraph__200--medium overview">
+                                                {d.overview}
                                             </span>
                                         </div>
-                                        <p className="paragraph__100--regular">
-                                            {d.text}
-                                        </p>
-                                        <Button className="section-portfolio__btn">
-                                            View Case
-                                        </Button>
+                                    </div>
+                                    <div className="section-portfolio__img-container">
+                                        <img
+                                            className="section-portfolio__img"
+                                            src={d.img}
+                                            alt="Tech"
+                                            loading="lazy"
+                                        />
                                     </div>
                                 </Link>
                             ))}

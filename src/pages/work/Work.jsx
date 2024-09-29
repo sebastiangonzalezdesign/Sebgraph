@@ -12,7 +12,9 @@ const Work = () => {
     return (
         <main className={'container-home'}>
             <HeroWork />
+
             <Portfolio />
+
             <Contact />
         </main>
     )

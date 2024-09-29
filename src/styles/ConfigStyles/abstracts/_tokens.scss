@@ -2,6 +2,8 @@
 @use 'typography' as *;
 @use 'sizes' as *;
 
+$active-theme: $light;
+
 // Layout
 $grid-gap: 1.5rem;
 $flex-group-gap: 1rem;
@@ -31,6 +33,11 @@ $color-text-interactive-default: $color-primary-500;
 $color-text-interactive-hover: $color-primary-100;
 
 $color-background-default: $color-neutral-50;
+$color-background-aleph: $color-brand-aleph;
+$color-background-solve: $color-brand-solve;
+$color-background-av: $color-brand-av;
+$color-background-essilor: $color-brand-essilor;
+$color-background-landing: $color-brand-landing;
 $color-background-inverse: $color-neutral-900;
 
 $letter-spacing-loose: 0.16em;
@@ -130,8 +137,13 @@ $tabs-border-radius: $border-radius-full;
 $card-flow-spacing: $size-2;
 $card-body-padding: $size-8;
 $card-background-default: $color-neutral-50;
-$card-background-hover: $color-neutral-400;
-$card-color-default: $body-background-color;
+$card-background-aleph: $color-background-aleph;
+$card-background-solve: $color-background-solve;
+$card-background-av: $color-background-av;
+$card-background-essilor: $color-background-essilor;
+$card-background-landing: $color-background-landing;
+$card-background-hover: $color-primary-200;
+$card-color-default: $color-neutral-50;
 $card-border: $color-neutral-400;
 $card-border-hover: $color-neutral-400;
 $card-font-family: $body-font-family;
@@ -140,11 +152,13 @@ $card-box-shadow: $box-shadow-1;
 $card-line-height: 1.25;
 $card-heading-font-family: $font-family-accent;
 $card-heading-color-default: $card-color-default;
-$card-heading-font-size: $font-size-600;
+$card-heading-font-size: $font-size-700;
+$card-overview-font-size: $font-size-400;
 $card-heading-font-weight: $font-weight-bold;
 $card-heading-letter-spacing: $letter-spacing-loose;
 $card-heading-line-height: 1;
 $card-heading-text-transform: uppercase;
+$card-padding: $size-8;
 
 // Label
 $label-color: $color-primary-500;
@@ -153,6 +167,11 @@ $label-font-weight: $font-weight-semi-bold;
 
 // Chip
 $chip-padding: $size-1 $size-3;
+
+// Footer
+$footer-background: $color-neutral-800;
+$footer-color: $color-neutral-50;
+$footer-color-icon: $color-neutral-50;
 
 // site header
 //$site-header-background-color: $color-neutral-50;

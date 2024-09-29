@@ -8,14 +8,12 @@
             font-weight: $font-weight-default;
             line-height: $line-height-heading;
             font-size: $font-size-900;
-            color: var(--textIcon-primary);
         }
         &--bold {
             font-family: $font-family-accent;
             font-weight: $font-weight-bold;
             line-height: $line-height-heading;
             font-size: $font-size-900;
-            color: var(--textIcon-primary);
         }
     }
 
@@ -25,14 +23,12 @@
             font-weight: $font-weight-default;
             line-height: $line-height-heading;
             font-size: $font-size-800;
-            color: var(--textIcon-primary);
         }
         &--bold {
             font-family: $font-family-accent;
             font-weight: $font-weight-bold;
             line-height: $line-height-heading;
             font-size: $font-size-800;
-            color: var(--textIcon-primary);
         }
     }
 }
@@ -45,14 +41,12 @@
             font-weight: $font-weight-default;
             line-height: $line-height-heading;
             font-size: $font-size-700;
-            color: var(--textIcon-primary);
         }
         &--bold {
             font-family: $font-family-accent;
             font-weight: $font-weight-bold;
             line-height: $line-height-heading;
             font-size: $font-size-700;
-            color: var(--textIcon-primary);
         }
     }
 
@@ -62,14 +56,12 @@
             font-weight: $font-weight-default;
             line-height: $line-height-heading;
             font-size: $font-size-600;
-            color: var(--textIcon-primary);
         }
         &--bold {
             font-family: $font-family-accent;
             font-weight: $font-weight-bold;
             line-height: $line-height-heading;
             font-size: $font-size-600;
-            color: var(--textIcon-primary);
         }
     }
     &__300 {
@@ -78,14 +70,12 @@
             font-weight: $font-weight-default;
             line-height: $line-height-heading;
             font-size: $font-size-500;
-            color: var(--textIcon-primary);
         }
         &--bold {
             font-family: $font-family-accent;
             font-weight: $font-weight-bold;
             line-height: $line-height-heading;
             font-size: $font-size-500;
-            color: var(--textIcon-primary);
         }
     }
 }
@@ -97,21 +87,18 @@
             font-weight: $font-weight-default;
             line-height: $line-height-body;
             font-size: $font-size-500;
-            color: var(--textIcon-secondary);
         }
         &--medium {
             font-family: $font-family-base;
             font-weight: $font-weight-semi-bold;
             line-height: $line-height-body;
             font-size: $font-size-500;
-            color: var(--textIcon-secondary);
         }
         &--bold {
             font-family: $font-family-base;
             font-weight: $font-weight-bold;
             line-height: $line-height-body;
             font-size: $font-size-500;
-            color: var(--textIcon-secondary);
         }
     }
 
@@ -121,21 +108,18 @@
             font-weight: $font-weight-default;
             line-height: $line-height-body;
             font-size: $font-size-400;
-            color: var(--textIcon-secondary);
         }
         &--medium {
             font-family: $font-family-base;
             font-weight: $font-weight-semi-bold;
             line-height: $line-height-body;
             font-size: $font-size-400;
-            color: var(--textIcon-secondary);
         }
         &--bold {
             font-family: $font-family-base;
             font-weight: $font-weight-bold;
             line-height: $line-height-body;
             font-size: $font-size-400;
-            color: var(--textIcon-secondary);
         }
     }
     &__300 {
@@ -144,21 +128,18 @@
             font-weight: $font-weight-default;
             line-height: $line-height-body;
             font-size: $font-size-300;
-            color: var(--textIcon-secondary);
         }
         &--medium {
             font-family: $font-family-base;
             font-weight: $font-weight-semi-bold;
             line-height: $line-height-body;
             font-size: $font-size-300;
-            color: var(--textIcon-secondary);
         }
         &--bold {
             font-family: $font-family-base;
             font-weight: $font-weight-bold;
             line-height: $line-height-body;
             font-size: $font-size-300;
-            color: var(--textIcon-secondary);
         }
     }
     &__400 {
@@ -167,21 +148,18 @@
             font-weight: $font-weight-default;
             line-height: $line-height-body;
             font-size: $font-size-200;
-            color: var(--textIcon-secondary);
         }
         &--medium {
             font-family: $font-family-base;
             font-weight: $font-weight-semi-bold;
             line-height: $line-height-body;
             font-size: $font-size-200;
-            color: var(--textIcon-secondary);
         }
         &--bold {
             font-family: $font-family-base;
             font-weight: $font-weight-bold;
             line-height: $line-height-body;
             font-size: $font-size-200;
-            color: var(--textIcon-secondary);
         }
     }
     &__500 {
@@ -190,21 +168,18 @@
             font-weight: $font-weight-default;
             line-height: $line-height-body;
             font-size: $font-size-100;
-            color: var(--textIcon-secondary);
         }
         &--medium {
             font-family: $font-family-base;
             font-weight: $font-weight-semi-bold;
             line-height: $line-height-body;
             font-size: $font-size-100;
-            color: var(--textIcon-secondary);
         }
         &--bold {
             font-family: $font-family-base;
             font-weight: $font-weight-bold;
             line-height: $line-height-body;
             font-size: $font-size-100;
-            color: var(--textIcon-secondary);
         }
     }
 }
@@ -217,7 +192,6 @@
             font-weight: $font-weight-bold;
             line-height: $line-height-heading;
             font-size: $font-size-500;
-            color: var(--textIcon-primary);
         }
     }
 
@@ -227,7 +201,6 @@
             font-weight: $font-weight-bold;
             line-height: $line-height-heading;
             font-size: $font-size-400;
-            color: var(--textIcon-primary);
         }
     }
     &__300 {
@@ -236,7 +209,6 @@
             font-weight: $font-weight-bold;
             line-height: $line-height-heading;
             font-size: $font-size-300;
-            color: var(--textIcon-primary);
         }
     }
 }
@@ -248,21 +220,18 @@
             font-weight: $font-weight-default;
             line-height: $line-height-heading;
             font-size: $font-size-500;
-            color: var(--textIcon-primary);
         }
         &--medium {
             font-family: $font-family-base;
             font-weight: $font-weight-semi-bold;
             line-height: $line-height-heading;
             font-size: $font-size-500;
-            color: var(--textIcon-primary);
         }
         &--bold {
             font-family: $font-family-base;
             font-weight: $font-weight-bold;
             line-height: $line-height-heading;
             font-size: $font-size-500;
-            color: var(--textIcon-primary);
         }
     }
 
@@ -272,21 +241,18 @@
             font-weight: $font-weight-default;
             line-height: $line-height-heading;
             font-size: $font-size-400;
-            color: var(--textIcon-primary);
         }
         &--medium {
             font-family: $font-family-base;
             font-weight: $font-weight-semi-bold;
             line-height: $line-height-heading;
             font-size: $font-size-400;
-            color: var(--textIcon-primary);
         }
         &--bold {
             font-family: $font-family-base;
             font-weight: $font-weight-bold;
             line-height: $line-height-heading;
             font-size: $font-size-400;
-            color: var(--textIcon-primary);
         }
     }
     &__300 {
@@ -295,14 +261,12 @@
             font-weight: $font-weight-default;
             line-height: $line-height-heading;
             font-size: $font-size-300;
-            color: var(--textIcon-primary);
         }
         &--medium {
             font-family: $font-family-base;
             font-weight: $font-weight-semi-bold;
             line-height: $line-height-heading;
             font-size: $font-size-300;
-            color: var(--textIcon-primary);
         }
         &--bold {
             font-family: $font-family-base;
@@ -317,21 +281,18 @@
             font-weight: $font-weight-default;
             line-height: $line-height-heading;
             font-size: $font-size-200;
-            color: var(--textIcon-primary);
         }
         &--medium {
             font-family: $font-family-base;
             font-weight: $font-weight-semi-bold;
             line-height: $line-height-heading;
             font-size: $font-size-200;
-            color: var(--textIcon-primary);
         }
         &--bold {
             font-family: $font-family-base;
             font-weight: $font-weight-bold;
             line-height: $line-height-heading;
             font-size: $font-size-200;
-            color: var(--textIcon-primary);
         }
     }
     &__500 {
@@ -340,21 +301,18 @@
             font-weight: $font-weight-default;
             line-height: $line-height-heading;
             font-size: $font-size-100;
-            color: var(--textIcon-primary);
         }
         &--medium {
             font-family: $font-family-base;
             font-weight: $font-weight-semi-bold;
             line-height: $line-height-heading;
             font-size: $font-size-100;
-            color: var(--textIcon-primary);
         }
         &--bold {
             font-family: $font-family-base;
             font-weight: $font-weight-bold;
             line-height: $line-height-heading;
             font-size: $font-size-100;
-            color: var(--textIcon-primary);
         }
     }
 }
