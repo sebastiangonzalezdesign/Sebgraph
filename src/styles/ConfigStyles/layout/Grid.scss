@@ -34,13 +34,30 @@
         max-width: 75rem;
         width: 100%;
         padding: 0 1.5rem;
+        overflow: hidden;
     }
     .section-portfolio {
         grid-area: portfolio;
         margin: auto;
         max-width: 75rem;
         width: 100%;
-        padding: 0 1.5rem;
+        padding: $size-8 $size-6;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 49.4%;
+            width: 100vw;
+            height: 100%;
+            background-color: $color-neutral-200;
+            transform: translateX(-50%);
+            z-index: -1;
+            @include mq(medium) {
+                left: 49.2%;
+            }
+        }
     }
     .section-contact {
         grid-area: contact;

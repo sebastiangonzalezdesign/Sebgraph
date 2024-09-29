@@ -1,8 +1,9 @@
-@import '../styles/ConfigStyles/abstracts/Variables.scss';
+//@import '../styles/ConfigStyles/abstracts/Variables.scss';
+@use '../styles/ConfigStyles/abstracts/' as *;
 .back-button {
     border: 1px solid var(--icon-button-border);
-    background-color: var(--icon-button-bg);
-    border-radius: $border-md;
+    background-color: $color-primary-200;
+    border-radius: 16px;
     width: fit-content;
     position: fixed;
     right: 2%;

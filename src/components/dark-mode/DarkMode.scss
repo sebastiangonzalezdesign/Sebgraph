@@ -1,67 +1,69 @@
+@use '../../styles/ConfigStyles/abstracts/' as *;
+
 .dark_mode {
-  display: flex;
+    display: flex;
 }
 
 .dark_mode_label {
-  padding: 0.2rem 0.4rem;
-  display: flex;
-  gap: 0.5rem;
-  width: 65px;
-  height: 40px;
-  position: relative;
-  background: var(--core-color-base-white);
-  border-radius: 8px;
-  border: 1px solid var(--core-color-neutral-400);
-  cursor: pointer;
-  transition: 0.3s ease;
-  justify-content: center;
+    padding: 0.2rem 0.4rem;
+    display: flex;
+    gap: 0.5rem;
+    width: 65px;
+    height: 40px;
+    position: relative;
+    background: $color-neutral-900;
+    border-radius: 8px;
+    border: 1px solid $color-neutral-600;
+    cursor: pointer;
+    transition: 0.3s ease;
+    justify-content: center;
 }
 
 .dark_mode_label:after {
-  content: "";
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  top: 4px;
-  left: 3px;
-  background: var(--core-color-blue-200);
-  border-radius: 8px;
-  transition: all 0.3s ease;
+    content: '';
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 4px;
+    left: 3px;
+    background: $color-primary-900;
+    border-radius: 8px;
+    transition: all 0.3s ease;
 }
 .dark_mode_input {
-  width: 0;
-  height: 0;
-  visibility: hidden;
+    width: 0;
+    height: 0;
+    visibility: hidden;
 }
 .dark_mode_input:checked + .dark_mode_label {
-  background: var(--core-color-neutral-800);
-  border: 1px solid var(--core-color-neutral-600);
+    background: $color-neutral-200;
+    border: 1px solid $color-neutral-400;
 }
 .dark_mode_input:checked + .dark_mode_label:after {
-  left: 62px;
-  transform: translateX(-100%);
-  background: var(--core-color-neutral-1000);
+    left: 62px;
+    transform: translateX(-100%);
+    background: $color-neutral-300;
 }
 .dark_mode_label:active:after {
-  width: 30px;
+    width: 30px;
 }
 
 .dark_mode_label .svg {
-  width: 20px;
-  z-index: 100;
-  stroke: var(--core-color-blue-800);
+    width: 20px;
+    z-index: 100;
+    stroke: $color-primary-300;
 }
 .dark_mode_label .sun {
-  left: 5px;
-  transition: 0.3s;
+    left: 5px;
+    transition: 0.3s;
 }
 .dark_mode_label .moon {
-  left: 40px;
-  transition: 0.3s;
+    left: 40px;
+    transition: 0.3s;
 }
 .dark_mode_input:checked + .dark_mode_label svg.sun {
-  stroke: var(--core-color-blue-400);
+    stroke: $color-primary-700;
 }
 .dark_mode_input:checked + .dark_mode_label svg.moon {
-  stroke: var(--core-color-blue-400);
+    stroke: $color-primary-800;
 }

@@ -29,8 +29,8 @@ const Contact = () => {
                     <div className="section-portfolio__heading-container">
                         <h2 className="heading__100--bold section-portfolio__heading">
                             Contact
+                            <span className="section-portfolio__heading-decoration"></span>
                         </h2>
-                        <div className="section-portfolio__divider" />
                     </div>
                     <p className="paragraph__100--regular contact-container__paragraph">
                         If you have a project you'd like to collaborate on or
@@ -40,40 +40,41 @@ const Contact = () => {
                         something great together!
                     </p>
                 </div>
-                <article className="contact-container__text-box">
-                    <img
-                        data-aos="fade-up"
-                        className="profile__img"
-                        src={profileImg}
-                        alt="avatar sebgraph"
-                    />
-                </article>
-                <div className="contact-container__btns">
-                    <a href={`mailto:${email}`} className="email">
-                        <Button
-                            className="contact-container__email-btn"
-                            type="button"
-                            buttonStyle="btn--secondary"
-                            buttonSize="btn--large"
-                        >
-                            Email me
-                        </Button>
-                    </a>
-
-                    <CopyToClipboard text={email} onCopy={handleCopyClick}>
-                        <Button
-                            className="contact-container__copy-btn"
-                            onMouseLeave={() => setCopySuccess(false)}
-                        >
-                            {copySuccess ? `Mail copied!` : 'Copy mail'}
-                        </Button>
-                    </CopyToClipboard>
-
-                    {copySuccess && (
-                        <div className="messageContainer2 messageActive">
-                            <span className="message">{`${email} copied to clipboard`}</span>
-                        </div>
-                    )}
+                <div className="section-portfolio__divider"></div>
+                <div className="contact-container__actions">
+                    <article className="contact-container__text-box">
+                        <img
+                            data-aos="fade-up"
+                            className="profile__img"
+                            src={profileImg}
+                            alt="avatar sebgraph"
+                        />
+                    </article>
+                    <div className="contact-container__btns">
+                        <a href={`mailto:${email}`} className="email">
+                            <Button
+                                className="contact-container__email-btn"
+                                type="button"
+                                buttonStyle="btn--secondary"
+                                buttonSize="btn--large"
+                            >
+                                Email me
+                            </Button>
+                        </a>
+                        <CopyToClipboard text={email} onCopy={handleCopyClick}>
+                            <Button
+                                className="contact-container__copy-btn"
+                                onMouseLeave={() => setCopySuccess(false)}
+                            >
+                                {copySuccess ? `Mail copied!` : 'Copy mail'}
+                            </Button>
+                        </CopyToClipboard>
+                        {copySuccess && (
+                            <div className="messageContainer2 messageActive">
+                                <span className="message">{`${email} copied to clipboard`}</span>
+                            </div>
+                        )}
+                    </div>
                 </div>
             </div>
         </section>
