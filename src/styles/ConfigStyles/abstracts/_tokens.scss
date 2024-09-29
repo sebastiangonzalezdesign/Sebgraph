@@ -38,6 +38,8 @@ $line-height-body: 150%;
 $line-height-heading: 120%;
 
 $color-icon-default: $color-neutral-50;
+$color-icon-background-default: $color-neutral-900;
+$color-icon-background-hover: $color-neutral-600;
 
 // body
 $body-font-family: $font-family-base;
@@ -94,6 +96,35 @@ $link-font-weight: $font-weight-semi-bold;
 $link-font-weight-active: $font-weight-bold;
 $link-padding: $size-2 $size-5;
 $link-border-radius: $border-radius-full;
+
+// NavBar
+$navbar-link-color-default: $color-neutral-900;
+$navbar-link-color-visited: $color-neutral-900;
+$navbar-link-color-hover: $color-neutral-900;
+$navbar-link-background-hover: $color-neutral-300;
+$navbar-link-background-active: $color-neutral-300;
+$navbar-link-font-family: $font-family-accent;
+$navbar-link-font-size: $font-size-400;
+$navbar-link-font-size-mobile: $font-size-700;
+$navbar-link-font-weight: $font-weight-semi-bold;
+$navbar-link-font-weight-active: $font-weight-bold;
+$navbar-link-padding: $size-2 $size-5;
+$navbar-link-border-radius: $border-radius-full;
+
+// Tabs
+$tabs-color-default: $color-neutral-900;
+$tabs-color-hover: $color-primary-900;
+$tabs-color-active: $color-neutral-900;
+$tabs-border-color: $color-neutral-400;
+$tabs-background-default: $color-neutral-50;
+$tabs-background-hover: $color-primary-300;
+$tabs-background-active: $color-primary-200;
+$tabs-font-family: $font-family-accent;
+$tabs-font-size: $font-size-400;
+$tabs-font-weight: $font-weight-semi-bold;
+$tabs-font-weight-active: $font-weight-bold;
+$tabs-padding: $size-2 $size-5;
+$tabs-border-radius: $border-radius-full;
 
 // cards
 $card-flow-spacing: $size-2;

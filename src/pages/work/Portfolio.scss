@@ -7,8 +7,37 @@
     flex-direction: column;
     gap: 2.5rem;
     width: 100%;
+    &__heading-container {
+        display: flex;
+        flex-direction: column;
+        gap: $size-3;
+    }
     &__heading {
         color: $body-text-color;
+        position: relative;
+        display: inline-block; /* Ensures the decoration wraps around the text */
+        padding: 20px 0; /* Add some padding for spacing */
+        z-index: 1; /* Keep the text on top of the decoration */
+        width: fit-content;
+    }
+    &__heading-decoration {
+        content: '';
+        position: absolute;
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Offset by half its width */
+        bottom: 0; /* Position at the bottom of the heading */
+        width: 100%; /* Full width of the heading */
+        height: 30%; /* Height of the decoration */
+        background-color: rgba(255, 0, 0, 0.2); /* Change color as needed */
+
+        top: 50%;
+        z-index: -1; /* Place behind the text */
+    }
+    &__divider {
+        width: 100%;
+        height: 2px;
+        background-color: #ccc;
+        margin: 1rem 0;
     }
     a {
         text-decoration: none;
@@ -27,8 +56,6 @@
         width: 100%;
     }
     ul {
-        border-radius: $button-border-radius;
-        gap: 0.25rem;
         list-style: none;
         display: flex;
         width: auto;
@@ -149,6 +176,58 @@
         @include mq(small) {
             width: 100%;
         }
+    }
+
+    // New tab styles
+    &__tabs {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+        position: relative;
+        overflow: hidden;
+
+        & input[type='radio'] {
+            position: absolute; // Remove from flow
+            opacity: 0; // Hide from view
+            width: 0; // No space taken
+            height: 0; // No space taken
+        }
+    }
+
+    &__tab {
+        cursor: pointer;
+        padding: 1rem;
+        font-size: 1.25rem;
+        font-family: $tabs-font-family;
+        border-radius: 999px;
+        transition: color 0.15s ease, background-color 0.15s ease; // Transition for smoothness
+        position: relative;
+        text-align: center;
+        z-index: 3;
+        flex: 1;
+        font-size: $tabs-font-size;
+        transition: color 0.3s ease;
+
+        // Active state styles
+        &.active {
+            color: $tabs-color-active; // Define this in your ConfigStyles
+            //background-color: $tabs-background-active; // Define this in your ConfigStyles
+            font-weight: $tabs-font-weight-active;
+        }
+    }
+
+    &__glider {
+        left: 0;
+        text-align: center;
+        position: absolute;
+        height: 52px;
+        width: calc(100% / 4);
+        background-color: $tabs-background-active; // Define in your ConfigStyles
+        z-index: 2; // Keep it on top of tabs
+        border-radius: 99px;
+        transform: translateX(0);
+        transition: transform 0.3s cubic-bezier(0.42, 0, 0.58, 1);
     }
 }
 
