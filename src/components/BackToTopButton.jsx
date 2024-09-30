@@ -21,7 +21,7 @@ const BackToTopButton = () => {
     return (
         <button
             onClick={backTop}
-            className={`${top ? 'back-button' : 'no-show'} ${theme === 'dark'}`}
+            className={`${top ? 'back-button' : 'no-show'} ${theme}`}
         >
             <ArrowUpIcon className="back-button__icon" />
         </button>

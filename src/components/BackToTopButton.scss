@@ -1,8 +1,8 @@
 //@import '../styles/ConfigStyles/abstracts/Variables.scss';
 @use '../styles/ConfigStyles/abstracts/' as *;
 .back-button {
-    border: 1px solid var(--icon-button-border);
-    background-color: $color-primary-200;
+    border: 1px solid $color-neutral-900;
+    background-color: $color-primary-800;
     border-radius: 16px;
     width: fit-content;
     position: fixed;
@@ -13,11 +13,11 @@
     cursor: pointer;
     transition: all 0.3s ease;
     &:hover {
-        background-color: var(--icon-button-hover);
-        border: 1px solid var(--icon-button-border-hover);
+        background-color: $color-primary-400;
+        border: 1px solid $color-neutral-400;
     }
     &__icon {
-        color: var(--icon-button-color);
+        color: $color-primary-200;
         width: 2rem;
         height: 2rem;
     }

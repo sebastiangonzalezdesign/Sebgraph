@@ -56,7 +56,7 @@ const ThemeProvider = ({ children }) => {
 
     const toggleTheme = () => {
         // Toggle between light and dark themes
-        setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'))
+        setTheme((prevTheme) => (prevTheme === 'dark' ? 'light' : 'dark'))
     }
 
     const data = { theme, toggleTheme }
