@@ -59,8 +59,15 @@
     }
 }
 
-// Styles for dark mode using the data-theme attribute on body
-:root[data-theme='dark'] {
+body[data-theme='light'] {
+    @each $color, $shade-map in $light {
+        @each $shade, $value in $shade-map {
+            --#{$color}-#{$shade}: #{$value};
+        }
+    }
+}
+
+body[data-theme='dark'] {
     @each $color, $shade-map in $dark {
         @each $shade, $value in $shade-map {
             --#{$color}-#{$shade}: #{$value};
@@ -68,13 +75,22 @@
     }
 }
 
-// Optional: If you still want to respect the user's system preference for dark mode
-@media (prefers-color-scheme: dark) {
-    :root:not([data-theme='light']) {
-        @each $color, $shade-map in $dark {
-            @each $shade, $value in $shade-map {
-                --#{$color}-#{$shade}: #{$value};
-            }
-        }
-    }
-}
+// Styles for dark mode using the data-theme attribute on body
+//:root[data-theme='dark'] {
+//    @each $color, $shade-map in $dark {
+//        @each $shade, $value in $shade-map {
+//            --#{$color}-#{$shade}: #{$value};
+//        }
+//    }
+//}
+//
+//// Optional: If you still want to respect the user's system preference for dark mode
+//@media (prefers-color-scheme: dark) {
+//    :root:not([data-theme='light']) {
+//        @each $color, $shade-map in $dark {
+//            @each $shade, $value in $shade-map {
+//                --#{$color}-#{$shade}: #{$value};
+//            }
+//        }
+//    }
+//}

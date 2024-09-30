@@ -44,6 +44,11 @@
     transform: translateX(-100%);
     background: $color-neutral-300;
 }
+// Light mode (not checked)
+.dark_mode_input:not(:checked) + .dark_mode_label:after {
+    left: 2px;
+    background: $color-neutral-200; // Light mode indicator color
+}
 .dark_mode_label:active:after {
     width: 30px;
 }

@@ -52,7 +52,7 @@ const DarkMode = () => {
                 type="checkbox"
                 id="darkmode-toggle"
                 onChange={toggleTheme}
-                checked={theme === 'dark'} // Bind to current theme
+                checked={theme === 'dark'}
             />
             <label className="dark_mode_label" htmlFor="darkmode-toggle">
                 <SunIcon className="sun svg" />
