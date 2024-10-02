@@ -285,26 +285,26 @@ const AlephDS = () => {
                             </h3>
                             <p className="paragraph__100--medium modal__text">
                                 {dataPortfolio.resultsDescription}
-                                <ul className="p-20">
-                                    <li className="mt-20">
-                                        <strong>
-                                            {dataPortfolio.strongBullet1}
-                                        </strong>
-                                        &nbsp;
-                                        {dataPortfolio.contentBullet1}
-                                    </li>
-                                    <br />
-                                    <li>
-                                        <strong>
-                                            {dataPortfolio.strongBullet2}
-                                        </strong>
-                                        &nbsp;
-                                        {dataPortfolio.contentBullet2}
-                                    </li>
-                                    <br />
-                                    <li>{dataPortfolio.contentBullet3}</li>
-                                </ul>
                             </p>
+                            <ul className="p-20">
+                                <li className="mt-20">
+                                    <strong>
+                                        {dataPortfolio.strongBullet1}
+                                    </strong>
+                                    &nbsp;
+                                    {dataPortfolio.contentBullet1}
+                                </li>
+                                <br />
+                                <li>
+                                    <strong>
+                                        {dataPortfolio.strongBullet2}
+                                    </strong>
+                                    &nbsp;
+                                    {dataPortfolio.contentBullet2}
+                                </li>
+                                <br />
+                                <li>{dataPortfolio.contentBullet3}</li>
+                            </ul>
                         </article>
 
                         <picture className="modal__img-container mb-20">
