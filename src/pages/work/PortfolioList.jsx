@@ -18,24 +18,45 @@ import './PortfolioList.scss'
 }
  */
 
-export default function PortfolioList({ id, title, active, setSelected }) {
+//export default function PortfolioList({ id, title, active, setSelected }) {
+//    return (
+//        <div>
+//            <input
+//                type="radio"
+//                id={`radio-${id}`}
+//                name="tabs"
+//                checked={active}
+//                onChange={() => setSelected(id)}
+//                style={{ display: 'none' }} // Hide the radio button
+//            />
+//            <label
+//                className={`tab ${active ? 'active' : ''}`}
+//                htmlFor={`radio-${id}`}
+//            >
+//                {title}
+//                {active && <span className="notification">2</span>}
+//            </label>
+//        </div>
+//    )
+//}
+
+export default function PortfolioList({ id, title, active, handleTabChange }) {
     return (
-        <div>
+        <React.Fragment>
             <input
                 type="radio"
                 id={`radio-${id}`}
                 name="tabs"
                 checked={active}
-                onChange={() => setSelected(id)}
-                style={{ display: 'none' }} // Hide the radio button
+                onChange={() => handleTabChange(id)} // Call the function to change the tab
+                style={{ display: 'none' }} // Hide the radio input
             />
             <label
-                className={`tab ${active ? 'active' : ''}`}
-                htmlFor={`radio-${id}`}
+                className={`section-portfolio__tab ${active ? 'active' : ''}`}
+                htmlFor={`radio-${id}`} // Connect the label to the radio input
             >
                 {title}
-                {active && <span className="notification">2</span>}
             </label>
-        </div>
+        </React.Fragment>
     )
 }

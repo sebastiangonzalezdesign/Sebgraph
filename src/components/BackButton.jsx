@@ -1,15 +1,15 @@
-import React from 'react'
-import { useHistory } from 'react-router-dom'
+import React, { useContext } from 'react'
+import { useHistory } from 'react-router-dom' // Use useHistory for v5
 import { Button } from './Button'
 import { ArrowLeftIcon } from '@heroicons/react/24/outline'
 import ThemeContext from '../context/ThemeContext'
 
 const BackButton = () => {
     const { theme } = useContext(ThemeContext)
-    const history = useHistory()
+    const history = useHistory() // For v5
 
     const goBack = () => {
-        history.goBack()
+        history.goBack() // Go back to the previous page
     }
 
     return (
