@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom' // Use useHistory for v5
 import { Button } from './Button'
 import { ArrowLeftIcon } from '@heroicons/react/24/outline'
 import ThemeContext from '../context/ThemeContext'
+import './BackButton'
 
 const BackButton = () => {
     const { theme } = useContext(ThemeContext)

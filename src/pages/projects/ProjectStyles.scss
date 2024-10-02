@@ -44,7 +44,7 @@
     display: none;
     position: fixed;
     z-index: 999;
-    top: 4rem;
+    top: $size-13;
     bottom: 0;
     left: 0;
     right: 0;
@@ -82,7 +82,7 @@
     right: 0;
     overflow-y: scroll;
     &__container {
-        padding-top: 5rem;
+        padding-top: $size-13;
         max-width: 200rem;
         position: relative;
     }

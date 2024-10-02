@@ -28,6 +28,10 @@
         font-size: $font-size-500;
         z-index: 9999;
         color: $color-icon-background-default;
+
+        & .svg-foreground {
+            fill: $color-neutral-100;
+        }
     }
     &__icon {
         width: $size-10;
@@ -56,7 +60,7 @@
             justify-content: center;
             flex-direction: column;
             align-items: center;
-            background-color: var(--header-menu-bg);
+            background-color: $color-neutral-blue-100;
             left: 0;
             top: 0;
             transition: 0.4s ease;
@@ -116,10 +120,12 @@
     opacity: 1;
 }
 .header .text-animation {
-    animation: 0.5s moveInBottom ease;
+    @include mq(large) {
+        animation: 0.5s moveInBottom ease;
+    }
 }
 .header-bg {
-    background-color: var(--header-bg-scroll);
+    background-color: $color-opacity-blue-100;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
 }
@@ -134,8 +140,8 @@
     padding: 0 1.5rem;
 
     & .hamburger {
-        border: 1px solid var(--hamburger-button-border);
-        background-color: var(--hamburger-button-bg);
+        border: 1px solid $color-neutral-400;
+        background-color: $color-neutral-50;
         border-radius: $border-radius-1;
         cursor: pointer;
         color: var(--hamburger-button-color);
@@ -148,8 +154,8 @@
         transition: all 0.3s ease;
 
         &:hover {
-            border: 1px solid var(--hamburger-button-border);
-            background-color: var(--hamburger-button-hover);
+            border: 1px solid $color-primary-400;
+            background-color: $color-primary-100;
         }
         @include mq(medium) {
             display: flex;
