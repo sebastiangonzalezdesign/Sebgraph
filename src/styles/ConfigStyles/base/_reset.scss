@@ -1,3 +1,5 @@
+@use '../abstracts/' as *;
+
 *,
 *::before,
 *::after {
@@ -21,7 +23,7 @@
     }
 
     &::-webkit-scrollbar-thumb {
-        background-color: var(--core-color-purple-700);
+        background-color: hsl(219, 93%, 68%);
         border-radius: 5rem;
     }
 }

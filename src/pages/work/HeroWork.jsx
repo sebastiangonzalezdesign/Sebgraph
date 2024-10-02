@@ -28,7 +28,11 @@ const HeroWork = () => {
                     >
                         Creating digital experiences
                     </h1>
-                    <p className="paragraph__100--regular section-hero__paragraph">
+                    <p
+                        data-aos="fade-up"
+                        data-aos-delay="500"
+                        className="paragraph__100--regular section-hero__paragraph"
+                    >
                         Hi, I'm <strong>Sebastian González, </strong>a UI/Visual
                         designer with a strong desire to continuously improve my
                         design system and coding skills to create memorable

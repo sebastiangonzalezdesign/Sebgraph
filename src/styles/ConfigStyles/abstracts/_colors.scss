@@ -70,6 +70,21 @@ $-clr-gray-800: hsl(220, 14%, 16%);
 $-clr-gray-900: hsl(220, 18%, 12%);
 $-clr-gray-1000: hsl(222, 33%, 5%);
 
+$-clr-gray-blue-50: hsl(255, 25%, 97%);
+$-clr-gray-blue-100: hsl(250, 32%, 95%); // Lightest shade
+$-clr-gray-blue-200: hsl(250, 32%, 85%); // Light shade
+$-clr-gray-blue-300: hsl(250, 32%, 75%); // Slightly darker
+$-clr-gray-blue-400: hsl(250, 32%, 65%); // Medium-light shade
+$-clr-gray-blue-500: hsl(250, 32%, 55%); // Medium shade
+$-clr-gray-blue-600: hsl(250, 32%, 45%); // Medium-dark shade
+$-clr-gray-blue-700: hsl(250, 32%, 35%); // Darker shade
+$-clr-gray-blue-800: hsl(250, 32%, 25%); // Dark shade
+$-clr-gray-blue-900: hsl(250, 32%, 15%); // Base
+$-clr-gray-blue-1000: hsl(250, 32%, 13%); // Darkest shade
+
+$-clr-gray-blue-opacity-100: hsla(220, 94%, 92%, 0.6);
+$-clr-gray-blue-opacity-900: hsla(250, 32%, 15%, 0.6);
+
 //Custom colors
 $light: (
     'neutral': (
@@ -84,6 +99,19 @@ $light: (
         '800': $-clr-gray-800,
         '900': $-clr-gray-900,
         '1000': $-clr-black,
+    ),
+    'neutral-blue': (
+        '50': $-clr-gray-blue-50,
+        '100': $-clr-gray-blue-100,
+        '200': $-clr-gray-blue-200,
+        '300': $-clr-gray-blue-300,
+        '400': $-clr-gray-blue-400,
+        '500': $-clr-gray-blue-500,
+        '600': $-clr-gray-blue-600,
+        '700': $-clr-gray-blue-700,
+        '800': $-clr-gray-blue-800,
+        '900': $-clr-gray-blue-900,
+        '1000': $-clr-gray-blue-1000,
     ),
     'accent': (
         '100': $-clr-yellow-100,
@@ -112,6 +140,13 @@ $light: (
         'essilor': $-clr-purple-800,
         'landing': $-clr-gray-700,
     ),
+    'fixed': (
+        'white': $-clr-white,
+        'black': $-clr-black-darker,
+    ),
+    'opacity': (
+        'blue-100': $-clr-gray-blue-opacity-100,
+    ),
 );
 
 // Dark Colors
@@ -128,6 +163,19 @@ $dark: (
         '800': $-clr-gray-200,
         '900': $-clr-gray-100,
         '1000': $-clr-white,
+    ),
+    'neutral-blue': (
+        '50': $-clr-gray-blue-900,
+        '100': $-clr-gray-blue-1000,
+        '200': $-clr-gray-blue-900,
+        '300': $-clr-gray-blue-800,
+        '400': $-clr-gray-blue-700,
+        '500': $-clr-gray-blue-600,
+        '600': $-clr-gray-blue-500,
+        '700': $-clr-gray-blue-400,
+        '800': $-clr-gray-blue-300,
+        '900': $-clr-gray-blue-200,
+        '1000': $-clr-gray-blue-100,
     ),
     'accent': (
         '100': $-clr-yellow-900,
@@ -156,6 +204,13 @@ $dark: (
         'essilor': $-clr-purple-800,
         'landing': $-clr-gray-700,
     ),
+    'fixed': (
+        'white': $-clr-white,
+        'black': $-clr-black-darker,
+    ),
+    'opacity': (
+        'blue-100': $-clr-gray-blue-opacity-900,
+    ),
 );
 
 //Context colors
@@ -170,6 +225,18 @@ $color-neutral-700: var(--neutral-700);
 $color-neutral-800: var(--neutral-800);
 $color-neutral-900: var(--neutral-900);
 $color-neutral-1000: var(--neutral-1000);
+
+$color-neutral-blue-50: var(--neutral-blue-50);
+$color-neutral-blue-100: var(--neutral-blue-100);
+$color-neutral-blue-200: var(--neutral-blue-200);
+$color-neutral-blue-300: var(--neutral-blue-300);
+$color-neutral-blue-400: var(--neutral-blue-400);
+$color-neutral-blue-500: var(--neutral-blue-500);
+$color-neutral-blue-600: var(--neutral-blue-600);
+$color-neutral-blue-700: var(--neutral-blue-700);
+$color-neutral-blue-800: var(--neutral-blue-800);
+$color-neutral-blue-900: var(--neutral-blue-900);
+$color-neutral-blue-1000: var(--neutral-blue-1000);
 
 $color-accent-100: var(--accent-100);
 $color-accent-200: var(--accent-200);
@@ -196,3 +263,8 @@ $color-brand-solve: var(--brand-solve);
 $color-brand-av: var(--brand-av);
 $color-brand-essilor: var(--brand-essilor);
 $color-brand-landing: var(--brand-landing);
+
+$color-fixed-white: var(--fixed-white);
+$color-fixed-black: var(--fixed-black);
+
+$color-opacity-blue-100: var(--opacity-blue-100);

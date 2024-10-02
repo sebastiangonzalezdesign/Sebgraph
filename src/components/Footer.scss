@@ -11,6 +11,7 @@
     }
     &__heading {
         width: 100%;
+        color: $color-fixed-white;
     }
 
     &__container {
@@ -43,7 +44,7 @@
         height: 2.5rem;
 
         &:hover {
-            color: var(--primary-button-hover);
+            color: $footer-color-icon-hover;
         }
     }
 }
