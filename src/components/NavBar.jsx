@@ -1,14 +1,17 @@
 import './NavBar.scss'
 import { NavLink } from 'react-router-dom'
-//import Logo from '../img/logo.svg'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import React from 'react'
 import { Bars3BottomRightIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import DarkMode from './dark-mode/DarkMode'
 
 const NavBar = () => {
-    //change nav color when scrolling
+    // State to track header color
     const [color, setColor] = useState(false)
+    // State for mobile navigation
+    const [nav, setNav] = useState(false)
+
+    // Function to change the color based on scroll position
     const changeColor = () => {
         if (window.scrollY >= 20) {
             setColor(true)
@@ -16,10 +19,17 @@ const NavBar = () => {
             setColor(false)
         }
     }
-    window.addEventListener('scroll', changeColor)
 
-    //mobile navigation
-    const [nav, setNav] = useState(false)
+    // useEffect to handle adding/removing the scroll event listener
+    useEffect(() => {
+        window.addEventListener('scroll', changeColor)
+
+        // Cleanup function to remove the event listener
+        return () => {
+            window.removeEventListener('scroll', changeColor)
+        }
+    }, []) // Empty dependency array means it runs once when the component mounts
+
     const handleNav = () => setNav(!nav)
 
     return (
@@ -49,14 +59,13 @@ const NavBar = () => {
                             fill="currentColor"
                         />
                     </svg>
-                    {/*                     <img className="header__icon" src={Logo} alt="logo"></img> */}
                 </a>
 
                 <div className="header__menu">
                     <nav className="header__navigation">
                         <ul
                             className={
-                                nav ? 'header__list  active' : 'header__list'
+                                nav ? 'header__list active' : 'header__list'
                             }
                         >
                             <li
@@ -68,10 +77,12 @@ const NavBar = () => {
                                 onClick={handleNav}
                             >
                                 <NavLink
-                                    className="header__link"
-                                    exact
+                                    className={({ isActive }) =>
+                                        isActive
+                                            ? 'header__link link-active'
+                                            : 'header__link'
+                                    }
                                     to="/"
-                                    activeClassName="link-active"
                                 >
                                     Work
                                 </NavLink>
@@ -85,10 +96,12 @@ const NavBar = () => {
                                 onClick={handleNav}
                             >
                                 <NavLink
-                                    className="header__link"
-                                    exact
+                                    className={({ isActive }) =>
+                                        isActive
+                                            ? 'header__link link-active'
+                                            : 'header__link'
+                                    }
                                     to="/about"
-                                    activeClassName="link-active"
                                 >
                                     About
                                 </NavLink>
@@ -102,26 +115,21 @@ const NavBar = () => {
                                 onClick={handleNav}
                             >
                                 <NavLink
-                                    className="header__link"
-                                    exact
+                                    className={({ isActive }) =>
+                                        isActive
+                                            ? 'header__link link-active'
+                                            : 'header__link'
+                                    }
                                     to="/cv"
-                                    activeClassName="link-active"
                                 >
                                     CV
                                 </NavLink>
                             </li>
-                            <li
-                                className={
-                                    nav ? 'header__item' : 'header__item'
-                                }
-                                onClick={handleNav}
-                            ></li>
                         </ul>
                     </nav>
                 </div>
                 <div className="header__actions-container">
                     <DarkMode />
-
                     <div className="hamburger" onClick={handleNav}>
                         {!nav ? (
                             <Bars3BottomRightIcon className="icon" />

@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import svgrPlugin from 'vite-plugin-svgr'
 import envCompatible from 'vite-plugin-env-compatible'
-import Vue from '@vitejs/plugin-vue' // Import the plugin
+//import Vue from '@vitejs/plugin-vue' // Import the plugin
 
 const path = require('path')
 
@@ -38,7 +38,7 @@ export default defineConfig({
                 // ...svgr options (https://react-svgr.com/docs/options/)
             },
         }),
-        Vue(), // Add the Vue plugin
+        //Vue(), // Add the Vue plugin
     ],
     assetsInclude: ['**/*.riv'],
 })

@@ -1,6 +1,6 @@
 import React from 'react'
 import './Hero.scss'
-import { Suspense } from 'react/cjs/react.production.min'
+import { Suspense } from 'react'
 import Rive from '@rive-app/react-canvas'
 import HeroAnimation from '../img/hero.riv'
 

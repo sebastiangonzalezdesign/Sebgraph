@@ -2,6 +2,13 @@ import './Button.scss'
 import React from 'react'
 import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/outline'
 
+// Framer Motion Variables
+const fadeUpVariants = {
+    initial: { opacity: 0, y: 200 }, // Initial state
+    animate: { opacity: 1, y: 0 }, // Animation state
+    exit: { opacity: 0, y: 0 }, // Exit state
+}
+
 const STYLES = ['btn--primary', 'btn--secondary']
 
 const SIZE = ['btn--lg', 'btn--md']
@@ -26,7 +33,7 @@ export const Button = ({
 
     return (
         <button
-            className={`btn btn--animated ${checkButtonStyle} ${checkButtonSize} ${
+            className={`btn  ${checkButtonStyle} ${checkButtonSize} ${
                 fixedPosition ? 'btn--fixed' : ''
             }`}
             onClick={onClick}

@@ -1,10 +1,7 @@
 import './Footer.scss'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-    faLinkedin,
-    faBehanceSquare,
-    faInstagramSquare,
-} from '@fortawesome/free-brands-svg-icons'
+import LinkedInIcon from '../img/linkedin-icon.svg?react'
+import InstagramIcon from '../img/instagram-icon.svg?react'
+import MailIcon from '../img/mail-icon.svg?react'
 import React from 'react'
 import Logo from '../img/logo-footer.svg'
 
@@ -29,9 +26,7 @@ const Footer = () => {
                             rel="noreferrer"
                             aria-label="View Linkedin profile"
                         >
-                            <FontAwesomeIcon
-                                icon={faLinkedin}
-                            ></FontAwesomeIcon>
+                            <LinkedInIcon className="footer__svg" />
                         </a>
                         <a
                             className="footer__social-item"
@@ -40,9 +35,7 @@ const Footer = () => {
                             rel="noreferrer"
                             aria-label="View Behance profile"
                         >
-                            <FontAwesomeIcon
-                                icon={faBehanceSquare}
-                            ></FontAwesomeIcon>
+                            <MailIcon className="footer__svg" />
                         </a>
                         <a
                             className="footer__social-item"
@@ -51,9 +44,7 @@ const Footer = () => {
                             rel="noreferrer"
                             aria-label="View Instagram profile"
                         >
-                            <FontAwesomeIcon
-                                icon={faInstagramSquare}
-                            ></FontAwesomeIcon>
+                            <InstagramIcon className="footer__svg" />
                         </a>
                     </div>
                 </div>
