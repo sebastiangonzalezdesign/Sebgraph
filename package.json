@@ -1,68 +1,62 @@
 {
-  "name": "sebgraph-portfolio",
-  "version": "0.1.0",
-  "homepage": "https://sebgraph.co/",
-  "private": true,
-  "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.35",
-    "@fortawesome/free-brands-svg-icons": "^5.15.3",
-    "@fortawesome/free-regular-svg-icons": "^5.15.3",
-    "@fortawesome/free-solid-svg-icons": "^5.15.3",
-    "@fortawesome/react-fontawesome": "^0.1.14",
-    "@heroicons/react": "^2.0.16",
-    "@rive-app/react-canvas": "^4.5.0",
-    "@splinetool/react-spline": "^2.2.6",
-    "@splinetool/runtime": "^0.9.269",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "aos": "^2.3.4",
-    "css-loader": "^6.7.3",
-    "lottie-web": "^5.12.2",
-    "node-sass": "^8.0.0",
-    "react": "^17.0.2",
-    "react-copy-to-clipboard": "^5.1.0",
-    "react-dom": "^17.0.2",
-    "react-loader-spinner": "^5.3.4",
-    "react-router-dom": "^5.2.0",
-    "react-script": "^2.0.5",
-    "sass": "^1.58.3",
-    "use-local-storage": "^2.3.6",
-    "vite-plugin-env-compatible": "^1.1.1",
-    "web-vitals": "^1.0.1"
-  },
-  "scripts": {
-    "start": "vite",
-    "build": "vite build",
-    "test": "vite test",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "serve": "vite preview"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "@vitejs/plugin-react": "^4.0.4",
-    "@vitejs/plugin-react-refresh": "^1.3.6",
-    "@vitejs/plugin-vue": "^4.4.0",
-    "vite": "^4.4.9",
-    "vite-plugin-svgr": "^4.0.0",
-    "vite-plugin-vue": "^0.0.1"
-  }
+    "name": "sebgraph-portfolio",
+    "version": "0.1.0",
+    "homepage": "https://sebgraph.co/",
+    "private": true,
+    "dependencies": {
+        "@heroicons/react": "^2.0.16",
+        "@rive-app/react-canvas": "^4.5.0",
+        "@splinetool/react-spline": "^2.2.6",
+        "@splinetool/runtime": "^0.9.269",
+        "@testing-library/jest-dom": "^5.11.4",
+        "@testing-library/react": "^11.1.0",
+        "@testing-library/user-event": "^12.1.10",
+        "aos": "^2.3.4",
+        "css-loader": "^6.7.3",
+        "framer-motion": "^11.11.0",
+        "lottie-web": "^5.12.2",
+        "node-sass": "^8.0.0",
+        "react": "^18.3.1",
+        "react-copy-to-clipboard": "^5.1.0",
+        "react-dom": "^18.3.1",
+        "react-loader-spinner": "^5.3.4",
+        "react-router-dom": "^6.26.2",
+        "react-script": "^2.0.5",
+        "sass": "^1.58.3",
+        "use-local-storage": "^2.3.6",
+        "vite-plugin-env-compatible": "^1.1.1",
+        "web-vitals": "^1.0.1"
+    },
+    "scripts": {
+        "start": "vite",
+        "build": "vite build",
+        "test": "vite test",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build",
+        "serve": "vite preview"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "@vitejs/plugin-react": "^4.0.4",
+        "@vitejs/plugin-react-refresh": "^1.3.6",
+        "vite": "^4.4.9",
+        "vite-plugin-svgr": "^4.0.0"
+    }
 }

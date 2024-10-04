@@ -15,11 +15,11 @@ const AlephDS = () => {
                     <BackButton />
                     {/* Section porfolio header */}
                     <div className="modal__header modal__header-aleph">
-                        <div className="modal-header__text-box">
-                            <h1 className="heading__100--bold modal-header__title">
+                        <div className="modal__header__text-box">
+                            <h1 className="display__200--bold modal__header__title">
                                 {dataPortfolio.headTitle}
                             </h1>
-                            <article className="modal-header__info-content">
+                            <article className="modal__header__info-content">
                                 <p className="paragraph__100--medium">
                                     <strong> {dataPortfolio.roleTitle} </strong>
                                     {dataPortfolio.role}
@@ -63,66 +63,62 @@ const AlephDS = () => {
                     </section>
 
                     {/* <!-- Section define --> */}
-                    <section className="modal__define define">
-                        <article className="modal__text-box">
-                            <h1 className="heading__100--bold modal__title">
+                    <section className="modal__define__box">
+                        <article className="modal__define__text-box">
+                            <h1 className="display__100--bold modal__title">
                                 {dataPortfolio.titleIntroduction}
                             </h1>
-                            <p className="paragraph__100--medium modal__text">
+                            <p className="paragraph__100--medium ">
                                 {dataPortfolio.contentIntroduction}
                             </p>
                         </article>
-                        <article className="define__boxes">
-                            <div className="define__box define__box--dark">
-                                <h3 className="heading__300--bold modal__title">
+                        <article className="modal__define__boxes">
+                            <div className="modal__define__box-goals">
+                                <h3 className="heading__300--bold ">
                                     {dataPortfolio.goalsTitle}
                                 </h3>
                                 <ol>
-                                    <ul className="define__goal-list">
-                                        <li className="paragraph__200--regular define__goal-item">
+                                    <ul className="modal__define__goal-list">
+                                        <li className="paragraph__200--regular modal__define__goal-item">
                                             {dataPortfolio.goal1}
                                         </li>
-                                        <li className="paragraph__200--regular define__goal-item">
+                                        <li className="paragraph__200--regular modal__define__goal-item">
                                             {dataPortfolio.goal2}
                                         </li>
-                                        <li className="paragraph__200--regular define__goal-item">
+                                        <li className="paragraph__200--regular modal__define__goal-item">
                                             {dataPortfolio.goal3}
                                         </li>
                                     </ul>
                                 </ol>
                             </div>
-                            <div className="define__box">
-                                <h3 className="heading__300--bold modal__title">
+                            <div className="modal__define__box-goals">
+                                <h3 className="heading__300--bold ">
                                     {dataPortfolio.findingsTitle}
                                 </h3>
-                                <div className="define__mindset-box">
-                                    <p className="paragraph__200--regular">
-                                        {dataPortfolio.finding1}
-                                    </p>
-                                </div>
-                                <div className="define__mindset-box">
-                                    <p className="paragraph__200--regular">
-                                        {dataPortfolio.finding2}
-                                    </p>
-                                </div>
-                                <div className="define__mindset-box">
-                                    <p className="paragraph__200--regular">
-                                        {dataPortfolio.finding3}
-                                    </p>
-                                </div>
-                                <div className="define__mindset-box">
-                                    <p className="paragraph__200--regular">
-                                        {dataPortfolio.finding4}
-                                    </p>
-                                </div>
+                                <ol>
+                                    <ul className="modal__define__goal-list">
+                                        <li className="paragraph__200--regular modal__define__goal-item">
+                                            {dataPortfolio.finding1}
+                                        </li>
+                                        <li className="paragraph__200--regular modal__define__goal-item">
+                                            {dataPortfolio.finding2}
+                                        </li>
+                                        <li className="paragraph__200--regular modal__define__goal-item">
+                                            {dataPortfolio.finding3}
+                                        </li>
+                                        <li className="paragraph__200--regular modal__define__goal-item">
+                                            {dataPortfolio.finding4}
+                                        </li>
+                                    </ul>
+                                </ol>
                             </div>
                         </article>
                     </section>
 
                     {/* Section Inventory */}
                     <section className="modal__template">
-                        <article className="mb-20">
-                            <h1 className="heading__100--bold modal__title modal__text-box">
+                        <article className="mb-20 modal__template__text-box">
+                            <h1 className="display__100--bold modal__title">
                                 {dataPortfolio.inventoryTitle}
                             </h1>
                             <p className="paragraph__100--regular modal__text">

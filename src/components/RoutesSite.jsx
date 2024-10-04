@@ -1,10 +1,9 @@
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import React, { lazy } from 'react'
+import React, { lazy, Suspense } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom' // Ensure Routes is imported correctly
 
 import Error404 from '../pages/Error404'
 import ScrollToTop from './ScrollToTop'
 import BackToTopButton from './BackToTopButton'
-import { Suspense } from 'react'
 import Spinner from './Spinner'
 
 const NavBar = lazy(() => import('./NavBar'))
@@ -28,25 +27,22 @@ const RoutesSite = () => {
                 <ScrollToTop />
                 <NavBar />
 
-                <Switch>
-                    <Route exact path="/" component={Work} />
-                    <Route exact path="/about" component={About} />
-                    <Route exact path="/cv" component={CV} />
-
+                <Routes>
+                    <Route path="/" element={<Work />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/cv" element={<CV />} />
                     <Route
-                        exact
                         path="/projects/solve"
-                        component={SolveForTomorrow}
+                        element={<SolveForTomorrow />}
                     />
-                    <Route exact path="/projects/AV" component={AvExpert} />
-                    <Route exact path="/projects/Essilor" component={Essilor} />
-                    <Route exact path="/projects/Landing" component={Landing} />
-                    <Route exact path="/projects/Aleph" component={AlephDS} />
+                    <Route path="/projects/AV" element={<AvExpert />} />
+                    <Route path="/projects/Essilor" element={<Essilor />} />
+                    <Route path="/projects/Landing" element={<Landing />} />
+                    <Route path="/projects/Aleph" element={<AlephDS />} />
+                    <Route path="*" element={<Error404 />} />
+                </Routes>
 
-                    <Route path="*" component={Error404} />
-                </Switch>
                 <BackToTopButton />
-
                 <Footer />
             </Router>
         </Suspense>

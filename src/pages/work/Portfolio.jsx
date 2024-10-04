@@ -8,8 +8,6 @@ import {
     codePortfolio,
     dsPortfolio,
 } from '../../data'
-import Aos from 'aos'
-import 'aos/dist/aos.css'
 
 export default function Portfolio() {
     const [selected, setSelected] = useState('all')
@@ -17,11 +15,6 @@ export default function Portfolio() {
     const [delayedSelected, setDelayedSelected] = useState('all')
 
     const refProject = useRef()
-
-    // Scroll animation
-    useEffect(() => {
-        Aos.init({ duration: 1000 })
-    }, [])
 
     // Project list
     const list = [
@@ -91,10 +84,7 @@ export default function Portfolio() {
                     ></span>
                 </div>
 
-                <article
-                    className="section-portfolio__container-grid"
-                    data-aos="fade-up"
-                >
+                <article className="section-portfolio__container-grid">
                     {data
                         .sort((a, b) => a.order - b.order)
                         .map((d) => (

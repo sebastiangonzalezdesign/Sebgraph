@@ -1,7 +1,7 @@
 // Global color tokens
 $-clr-white: hsl(0, 0%, 100%);
 $-clr-black: hsl(249, 31%, 15%);
-$-clr-black-medium: hsl(237, 24%, 16%);
+$-clr-black-medium: hsl(237, 23%, 30%);
 $-clr-black-darker: hsl(249, 35%, 10%);
 
 $-clr-blue-100: hsl(219, 100%, 97%);
@@ -143,6 +143,7 @@ $light: (
     'fixed': (
         'white': $-clr-white,
         'black': $-clr-black-darker,
+        'black-medium': $-clr-black-medium,
     ),
     'opacity': (
         'blue-100': $-clr-gray-blue-opacity-100,
@@ -207,6 +208,7 @@ $dark: (
     'fixed': (
         'white': $-clr-white,
         'black': $-clr-black-darker,
+        'black-medium': $-clr-black-medium,
     ),
     'opacity': (
         'blue-100': $-clr-gray-blue-opacity-900,
@@ -266,5 +268,6 @@ $color-brand-landing: var(--brand-landing);
 
 $color-fixed-white: var(--fixed-white);
 $color-fixed-black: var(--fixed-black);
+$color-fixed-black-medium: var(--fixed-black-medium);
 
 $color-opacity-blue-100: var(--opacity-blue-100);
