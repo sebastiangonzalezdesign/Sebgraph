@@ -1,16 +1,16 @@
 @use '../styles/ConfigStyles/abstracts' as *;
 .chip {
-    background-color: var(--chip-bg);
+    background-color: $chip-background-color;
     padding: $chip-padding;
     display: inline-block;
     border-radius: $border-radius-full;
     width: fit-content;
 
     .label {
-        color: var(--chip-text);
+        color: $chip-color;
     }
 
     .proficiency {
-        color: var(--chip-text);
+        color: $chip-color;
     }
 }

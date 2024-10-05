@@ -146,9 +146,13 @@ $light: (
         'white': $-clr-white,
         'black': $-clr-black-darker,
         'black-medium': $-clr-black-medium,
+        'soft-blue': $-clr-blue-200,
     ),
     'opacity': (
         'blue-100': $-clr-gray-blue-opacity-100,
+    ),
+    'gradients': (
+        'purple': linear-gradient(309deg, $-clr-purple-300, $-clr-purple-100),
     ),
 );
 
@@ -213,9 +217,13 @@ $dark: (
         'white': $-clr-white,
         'black': $-clr-black-darker,
         'black-medium': $-clr-black-medium,
+        'soft-blue': $-clr-blue-200,
     ),
     'opacity': (
         'blue-100': $-clr-gray-blue-opacity-900,
+    ),
+    'gradients': (
+        'purple': linear-gradient(309deg, $-clr-purple-700, $-clr-purple-1000),
     ),
 );
 
@@ -273,5 +281,8 @@ $color-brand-landing: var(--brand-landing);
 $color-fixed-white: var(--fixed-white);
 $color-fixed-black: var(--fixed-black);
 $color-fixed-black-medium: var(--fixed-black-medium);
+$color-fixed-soft-blue: var(--fixed-soft-blue);
 
 $color-opacity-blue-100: var(--opacity-blue-100);
+
+$color-gradient-purple: var(--gradients-purple);

@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import './ProjectStyles.scss'
 import { Aleph } from '../../dataPortfolio'
 import BackButton from '../../components/BackButton'
-import '../../styles/ConfigStyles/base/Utilities.scss'
 
 const AlephDS = () => {
     const [dataPortfolio] = useState(Aleph)

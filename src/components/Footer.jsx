@@ -28,15 +28,7 @@ const Footer = () => {
                         >
                             <LinkedInIcon className="footer__svg" />
                         </a>
-                        <a
-                            className="footer__social-item"
-                            href="https://www.behance.net/seb-graph"
-                            target="_blank"
-                            rel="noreferrer"
-                            aria-label="View Behance profile"
-                        >
-                            <MailIcon className="footer__svg" />
-                        </a>
+
                         <a
                             className="footer__social-item"
                             href="https://www.instagram.com/sebgraph/"
@@ -45,6 +37,15 @@ const Footer = () => {
                             aria-label="View Instagram profile"
                         >
                             <InstagramIcon className="footer__svg" />
+                        </a>
+                        <a
+                            className="footer__social-item"
+                            href="mailto:sebgraph7@gmail.com"
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label="Send Email to Sebastian"
+                        >
+                            <MailIcon className="footer__svg" />
                         </a>
                     </div>
                 </div>

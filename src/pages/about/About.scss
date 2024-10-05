@@ -5,99 +5,72 @@
 .hero-about {
     align-items: center;
     display: flex;
-    height: 50rem;
+    height: 40rem;
     justify-content: center;
     padding: 2.5rem;
     padding-top: 8rem;
     width: 100%;
-    background-color: var(--bg-medium);
+    gap: 3rem;
     @include mq(medium) {
+        flex-direction: column;
         height: auto;
+    }
+    &__hero-container {
+        width: 100%;
+        flex: 1;
     }
 
     &__text {
+        overflow: hidden;
+
         @include mq(small) {
-            text-align: center;
             width: 100%;
-            justify-content: center;
         }
     }
 
-    &__hero-container {
-        align-items: center;
-        display: flex;
-        width: $width-container;
-        justify-content: space-between;
-        max-width: 75rem;
-
-        @include mq(medium) {
-            flex-direction: column;
-            height: auto;
-            padding: 0;
-        }
+    &__text-carousel {
+        overflow: hidden; // Hide overflowing content
+        height: 220px; // Set a height based on your text size (adjust as necessary)
+        position: relative;
+        color: $color-primary-700;
+        width: 100%;
     }
 
     &__character {
+        flex: 1;
         width: 400px;
         height: 400px;
 
         @include mq(small) {
-            width: 80%;
             margin-top: 2.5rem;
         }
     }
-}
 
-.profile {
-    align-items: center;
-    display: flex;
-    height: 50rem;
-    justify-content: center;
-    padding: 2.5rem;
-    width: 100%;
-
-    @include mq(medium) {
-        height: auto;
-    }
-
-    &__container {
-        align-items: center;
+    /* Right content */
+    &__description {
         display: flex;
-        justify-content: space-between;
-        width: $width-container;
-        gap: 1.5rem;
-        max-width: 75rem;
+        flex-direction: column;
+        flex: 1;
+        gap: $size-6;
+    }
+    &__img-container {
+        border-radius: 1rem;
+        border: solid 3px #f5f5f5;
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+        position: relative;
 
-        @include mq(medium) {
-            flex-direction: column;
-            height: auto;
-            padding: 0;
+        &__img {
+            position: absolute;
+            width: 250px;
+            top: 60%; // Center vertically
+            left: 50%;
+            transform: translate(
+                -50%,
+                -50%
+            ); // Move the image back by half its size
+            object-fit: cover;
         }
     }
-
-    &__text-box {
-        width: 60rem;
-
-        @include mq(medium) {
-            width: 100%;
-        }
-    }
-    & figure {
-        @include mq(small) {
-            width: 100%;
-        }
-    }
-    :is(&__text, &__paragraph) {
-        margin-bottom: $gutter-medium;
-    }
-}
-
-.name-cv__img {
-    border-radius: 2rem;
-    border: solid 3px #f5f5f5;
-    width: 35rem;
-    height: 28rem;
-    background-image: url(https://sebgraph.com/images/about/avatar.png);
-    background-size: cover;
-    background-repeat: no-repeat;
 }

@@ -222,38 +222,12 @@
             padding: 2rem;
         }
 
-        /*         &__boxes {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            justify-content: center;
-            @include mq(medium) {
-                align-items: center;
-                flex-direction: column;
-                width: 100%;
-            }
-        }
-        &__text-box {
-            display: flex;
-            width: 80%;
-            & p,
-            h1 {
-                width: 50%;
-            }
-            @include mq(medium) {
-                flex-direction: column;
-                width: 100%;
-            }
-        } */
-
         &__box {
-            //background-color: var(--bg-medium);
             align-items: center;
             border-radius: 2rem;
             display: flex;
             flex-direction: column;
-            //padding: 2.5rem;
-            //width: 80%;
+
             text-align: left;
             gap: $size-10;
 
@@ -362,39 +336,7 @@
             margin-bottom: 4rem;
         }
     }
-    /*     &__text-box {
-        display: flex;
-        margin-bottom: 4rem;
-        text-align: center;
-        width: 100%;
-        gap: $size-11;
-    }
-    &__title {
-        text-align: left;
-        width: 50%;
-    }
-    &__text {
-        width: 50%;
-        margin: auto;
-        text-align: left;
-    } */
 
-    /*   &__img-container-dark {
-        align-items: center;
-        background-color: $color-background-inverse;
-        border-radius: 2rem;
-        display: flex;
-        justify-content: center;
-        height: auto;
-        width: auto;
-        padding: 4rem;
-
-        @include mq(medium) {
-            padding: 2rem;
-            height: auto;
-            width: auto;
-        }
-    } */
     /* ----------  End Definition Section ---------- */
 
     /* ----------  Results Section ---------- */

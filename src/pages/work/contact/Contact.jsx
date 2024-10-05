@@ -1,19 +1,20 @@
 import './Contact.scss'
-import profileImg from '../../../img/contact.svg'
+
 import { Button } from '../../../components/Button'
 import CopyToClipboard from 'react-copy-to-clipboard'
-import Aos from 'aos'
-import 'aos/dist/aos.css'
 import React, { useEffect, useState } from 'react'
+import { useRive } from '@rive-app/react-canvas'
 
 const Contact = () => {
     const [copySuccess, setCopySuccess] = useState(false)
     const email = 'sebgraph7@gmail.com'
 
-    /* Scroll animation */
-    useEffect(() => {
-        Aos.init({ duration: 1000 })
-    }, [])
+    /* Rive animation */
+    const { RiveComponent } = useRive({
+        src: 'character-about.riv',
+        stateMachines: 'State Machine 1',
+        autoplay: true,
+    })
 
     const handleCopyClick = () => {
         setCopySuccess(true)
@@ -43,12 +44,7 @@ const Contact = () => {
                 <div className="section-portfolio__divider"></div>
                 <div className="contact-container__actions">
                     <article className="contact-container__text-box">
-                        <img
-                            data-aos="fade-up"
-                            className="profile__img"
-                            src={profileImg}
-                            alt="avatar sebgraph"
-                        />
+                        <RiveComponent className="contact-container__character"></RiveComponent>
                     </article>
                     <div className="contact-container__btns">
                         <a href={`mailto:${email}`} className="email">

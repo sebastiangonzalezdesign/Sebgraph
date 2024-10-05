@@ -32,11 +32,11 @@
 }
 
 .profile-cv {
-    background-color: var(--bg-medium);
+    background-color: $color-neutral-blue-100;
 }
 
 .experience-cv {
-    background-image: var(--bg-gradient-purple);
+    background-image: $color-gradient-purple;
     &__head-container {
         margin-bottom: $gutter-medium;
     }
@@ -45,7 +45,7 @@
     }
     &__item::before {
         content: '•';
-        color: var(--textIcon-link);
+        color: $color-primary-600;
         font-size: 1.5rem;
         margin-right: 1rem;
     }
@@ -55,7 +55,7 @@
 }
 
 .education-cv {
-    background-color: var(--bg-darker);
+    background-color: $color-neutral-blue-100;
     &__course-name {
         margin-bottom: $gutter-small;
     }
@@ -68,8 +68,7 @@
 }
 
 .skills-cv {
-    background-color: var(--bg-darker);
-
+    background-color: $color-neutral-blue-100;
     &__skills-section-container {
         display: flex;
         flex-direction: column;
@@ -99,7 +98,7 @@
 }
 
 .languages-cv {
-    background-color: var(--bg-medium);
+    background-color: $color-neutral-blue-100;
 
     &__container-items {
         display: flex;
@@ -115,7 +114,7 @@
 }
 
 .hobbies-cv {
-    background-image: var(--bg-gradient-purple);
+    background-image: $color-gradient-purple;
     &__icons {
         display: flex;
         justify-content: space-between;
