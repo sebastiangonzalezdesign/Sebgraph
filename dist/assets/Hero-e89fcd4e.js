@@ -1,1 +1,0 @@
-import{j as s,n as e,o as r}from"./vendor-784aecd1.js";const o="/assets/hero-14f46274.riv";function t(){return s.jsx(e,{children:s.jsx("div",{className:"hero-container",children:s.jsx(r,{src:o})})})}export{t as default};
