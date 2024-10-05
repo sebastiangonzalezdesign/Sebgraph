@@ -15,7 +15,7 @@ export const Solve = [
         contentResume:
             'Solve For Tomorrow is a global Samsung initiative that rewards the new ideas which change the communities, this contest is focused to students and their teachers looking for innovation and creativity with new projects.',
 
-        titleIntroduction: '01. Project introduction',
+        titleIntroduction: 'Project intro',
         contentIntroduction:
             'To understand the multiple ideas and projects we started reviewing previous contests and the possible interests of the students and teachers to show  their creations and how can impact in the community.',
 
@@ -39,21 +39,21 @@ export const Solve = [
         ideateContent:
             'With the ux team research, I identified some key points to transform them in an attractive interface that allows the users, in this case students of schools and teachers to find easily the tools to register their proposals and provide them with information in the best way.',
 
-        title2: '02. User persona',
+        title2: 'User persona',
 
-        title3: '03. Empathy map',
+        title3: 'Empathy map',
 
-        title4: '04. User Flow',
+        title4: 'User Flow',
 
-        title5: '05. Wireframes',
+        title5: 'Wireframes',
         midFidelityTitle: 'Mid Fidelity',
         highFidelityTitle: 'High fidelity',
 
-        title6: '06. Moodboard',
+        title6: 'Moodboard',
         moodboardContent:
             'In order to define the visual design we develop a moodboard that evoke innovation and calm in a learning environment.',
 
-        title7: '07. Style guide',
+        title7: 'Style guide',
         styleContent:
             'With this style guide I defined some visual foundations that will help to develop the design system of the platform, providing consistency to all elements.',
         brandTitle: 'Brand',
@@ -76,11 +76,11 @@ export const Solve = [
         componentsContent:
             'The creation of a components library allowed us to define elements that  facilitated the communication with development team and the delivery of assets, in this way the visual aspects of the interface could be consistent with the porpuse, for this reason I create the assets with atomic design methodology.',
 
-        title8: '08. Animations',
+        title8: 'Animations',
         animationsContent:
             'The use of simple animations regarding with the illustrations provide the interface value knowing the target group of this project, in this case the animations were developed with svg using the Lottie library and supporting the performance of the site with the small size of the assets.',
 
-        title9: '09. Final design',
+        title9: 'Final design',
         finalContent:
             'Finally we presented a responsive site with all requirements considering both the brand and the users of the contest, following I going to explain the relevant sections and how them works.',
 
@@ -115,7 +115,7 @@ export const AV = [
         contentResume:
             'AV Expert is an app launched for promoters looking for a solution that provide them relevant information of audio and video products, this app allow the user to control and interact easily bringing the tools for a successful sale and communication with the customer.',
 
-        titleIntroduction: '01. Project introduction',
+        titleIntroduction: ' Project intro',
         contentIntroduction:
             'At the beginning of the project we had the opportunity to talk with promoters and identify the needs at the time of sales, they told us about their process and what tools are important to have a better communication with the costumer, we defined the goals and found the following thoughts of the costumers:',
 
@@ -137,15 +137,15 @@ export const AV = [
         ideateContent:
             'We used different research tools with the UX team such user journeys, user empathy and interviews to help to understand their needs, motivations and frustrations, based on it, we have identified relevant points to improve.',
 
-        title2: '02. User persona',
+        title2: 'User persona',
 
-        title4: '03. User Flow',
+        title4: 'User Flow',
 
-        title5: '04. Wireframes',
+        title5: 'Wireframes',
         midFidelityTitle: 'Mid Fidelity',
         highFidelityTitle: 'High fidelity',
 
-        title7: '06. Style guide',
+        title7: 'Style guide',
         styleContent:
             'For the design system, I was based on brand values and developed a colour palette that identified the av category with a dark pattern with a gold color contrast that highlighted relevant information, also I defined a type scale with the Samsung fonts and developed components with these rules that provide consistency to the flow.',
         brandTitle: 'Brand',
@@ -168,11 +168,11 @@ export const AV = [
         componentsContent:
             'The creation of a components library allowed us to define elements that  facilitated the communication with development team and the delivery of assets, in this way the visual aspects of the interface could be consistent with the porpuse, for this reason I create the assets with atomic design methodology.',
 
-        title8: '07. Animations',
+        title8: 'Animations',
         animationsContent:
             'The animations with icons provide feedback to users about a current action or state, in this case the animations were used to empty states and success or error tasks.',
 
-        title9: '08. Final design',
+        title9: 'Final design',
         finalContent:
             'Finally we presented an Android App that meet the requirements and is an useful referent for all promoters in the sales time.',
 
@@ -207,7 +207,7 @@ export const Essilor = [
         contentResume:
             'Essilor application is a proposal for the brand that allow the people involved in the commercial process of the company, for example: optical shops, optometrist and promoters have a good option to earn benefits through their sales.',
 
-        titleIntroduction: '01. Project introduction',
+        titleIntroduction: 'Project intro',
         contentIntroduction:
             'The first stage in the planning of the app was to understand well the different roles in the process and identify the possible needs and interests of each person, through this research it was possible to find the following insights:',
 
@@ -231,13 +231,13 @@ export const Essilor = [
         ideateContent:
             'With the research results of the UX team, I identified important information that allowed me to create a basic structure of the app that work for all profiles.',
 
-        title2: '02. Empathy map',
+        title2: 'Empathy map',
 
-        title5: '03. Wireframes',
+        title5: 'Wireframes',
         midFidelityTitle: 'Mid Fidelity',
         highFidelityTitle: 'High fidelity',
 
-        title7: '04. Style guide',
+        title7: 'Style guide',
         styleContent:
             'For the design system, I was based on brand values and developed a colour palette that identified the Essilor brand and optical shops environments with a light pattern, the colours were used to provide a  differentiation for each profile, also I defined a type scale with the official fonts of Essilor, and used a component library that allow to solve tasks easily.',
         brandTitle: 'Brand',
@@ -260,7 +260,7 @@ export const Essilor = [
         componentsContent:
             'The creation of a components library allowed us to define elements that  facilitated the communication with development team and the delivery of assets, in this way the visual aspects of the interface could be consistent with the porpuse, for this reason I create the assets with atomic design methodology.',
 
-        title9: '05. Final design',
+        title9: 'Final design',
         finalContent:
             'Finally we presented an Application that solve the primary goal that is promote the space where the participants in this visual care process obtains benefits and learn more about their work.',
 
@@ -291,7 +291,7 @@ export const Landing = [
         contentResume:
             'The S21 landing page was made for the launching of the device and allows to inform about its features and have a 360 view of the phone.',
 
-        titleIntroduction: '01. Project introduction',
+        titleIntroduction: 'Project intro',
         contentIntroduction:
             'The requirement asked for a site that allows the user have all new features of the launching and have detailed information of the functionalities.',
 
@@ -309,11 +309,11 @@ export const Landing = [
         user2Content:
             'We would like to know about all features and models of this phone, how much is it and what about offers.',
 
-        title5: '02. Wireframes',
+        title5: 'Wireframes',
         midFidelityTitle: 'Mid Fidelity',
         highFidelityTitle: 'High fidelity',
 
-        title7: '03. Style guide',
+        title7: 'Style guide',
         styleContent:
             'For the visual structure I used the official elements of the samsung brand and applied the basic colour palette and the official font for titles and body text, designing the site through modules. ',
         brandTitle: 'Brand',
@@ -336,7 +336,7 @@ export const Landing = [
         componentsContent:
             'The structure of this landing page follow the global Samsung guides and the local .com site, we create an structure were the user find easily the detailed information of each feature.',
 
-        title9: '04. Final design',
+        title9: 'Final design',
         finalContent:
             'Finally we presented a landing page that meet the requirements to communicate the new release and provide information of the phone features.',
 

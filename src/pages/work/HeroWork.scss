@@ -1,6 +1,7 @@
 @use '../../styles/ConfigStyles/abstracts' as *;
 @use '../../styles/ConfigStyles/base' as *;
 @use '../../styles/ConfigStyles/layout' as *;
+@use '../../styles/ConfigStyles/utilities' as *;
 
 .section-hero {
     position: relative;
@@ -34,7 +35,7 @@
                 color: $color-text-default;
             }
             @include mq(medium) {
-                text-align: center;
+                text-align: left;
             }
         }
         @include mq(medium) {
