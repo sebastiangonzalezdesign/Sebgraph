@@ -25,6 +25,7 @@ const RoutesSite = () => {
         <Suspense fallback={<Spinner />}>
             <Router>
                 <ScrollToTop />
+
                 <NavBar />
 
                 <Routes>

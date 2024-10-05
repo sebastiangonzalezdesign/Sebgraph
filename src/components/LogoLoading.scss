@@ -1,0 +1,21 @@
+.logo-loading {
+    width: fit-content;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //    z-index: 1;
+}
+.box {
+    border-radius: 50%;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: red;
+    z-index: 0;
+}
+.paths {
+    width: auto;
+    position: relative;
+    z-index: 1;
+}

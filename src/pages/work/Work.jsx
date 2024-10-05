@@ -2,6 +2,7 @@
 /* import Portfolio from "../../pages/work/Portfolio"; */
 /* import Contact from "../../pages/work/contact/Contact"; */
 import React, { lazy } from 'react'
+
 //import BackButton from '../../components/BackButton'
 //import { Aleph } from '../../dataPortfolio'
 
