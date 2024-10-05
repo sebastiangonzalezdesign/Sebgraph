@@ -9,7 +9,11 @@ const Footer = () => {
     return (
         <footer id="footer" className="footer">
             <div className="footer__container">
-                <img className="footer__logo" src={Logo}></img>
+                <img
+                    className="footer__logo"
+                    alt="Sebastian Gonzalez Logo"
+                    src={Logo}
+                ></img>
                 <h2 className="footer__heading display__200--bold">
                     Let’s work together
                 </h2>
@@ -25,6 +29,7 @@ const Footer = () => {
                             target="_blank"
                             rel="noreferrer"
                             aria-label="View Linkedin profile"
+                            alt="Linkdin"
                         >
                             <LinkedInIcon className="footer__svg" />
                         </a>
@@ -35,6 +40,7 @@ const Footer = () => {
                             target="_blank"
                             rel="noreferrer"
                             aria-label="View Instagram profile"
+                            alt="Instagram"
                         >
                             <InstagramIcon className="footer__svg" />
                         </a>
@@ -44,6 +50,7 @@ const Footer = () => {
                             target="_blank"
                             rel="noreferrer"
                             aria-label="Send Email to Sebastian"
+                            alt="Sebastian's Email"
                         >
                             <MailIcon className="footer__svg" />
                         </a>
