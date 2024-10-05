@@ -41,4 +41,14 @@ export default defineConfig({
         //Vue(), // Add the Vue plugin
     ],
     assetsInclude: ['**/*.riv'],
+
+    // Adding SCSS modern-compiler option
+    css: {
+        preprocessorOptions: {
+            scss: {
+                api: 'modern',
+                silenceDeprecations: ['mixed-decls'], // Using the modern Dart Sass API
+            },
+        },
+    },
 })

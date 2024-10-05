@@ -20,7 +20,7 @@ export default function Portfolio() {
     const list = [
         { id: 'all', title: 'All' },
         { id: 'ui/visual', title: 'UI/Visual' },
-        { id: 'ds', title: 'Design System' },
+        { id: 'ds', title: 'DS' },
         { id: 'code', title: 'Code' },
     ]
 

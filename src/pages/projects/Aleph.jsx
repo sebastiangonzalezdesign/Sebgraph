@@ -64,11 +64,11 @@ const AlephDS = () => {
 
                     {/* <!-- Section define --> */}
                     <section className="modal__define__box">
-                        <article className="modal__define__text-box">
+                        <article className="modal__main-text-box">
                             <h1 className="display__100--bold modal__title">
                                 {dataPortfolio.titleIntroduction}
                             </h1>
-                            <p className="paragraph__100--medium ">
+                            <p className="paragraph__100--medium modal__paragraph">
                                 {dataPortfolio.contentIntroduction}
                             </p>
                         </article>
@@ -117,11 +117,11 @@ const AlephDS = () => {
 
                     {/* Section Inventory */}
                     <section className="modal__template">
-                        <article className="mb-20 modal__template__text-box">
-                            <h1 className="display__100--bold modal__title">
+                        <article className="mb-20 modal__main-text-box">
+                            <h1 className="display__100--bold modal__title modal__main-text-box">
                                 {dataPortfolio.inventoryTitle}
                             </h1>
-                            <p className="paragraph__100--regular modal__text">
+                            <p className="paragraph__100--regular modal__paragraph">
                                 {dataPortfolio.inventoryDescription}
                             </p>
                         </article>
@@ -142,11 +142,11 @@ const AlephDS = () => {
 
                     {/* Section Foundations */}
                     <section className="modal__template">
-                        <article className="modal__text-box">
+                        <article className="modal__secondary-text-box">
                             <h3 className="heading__100--bold modal__subtitle">
                                 {dataPortfolio.foundationsTitle}
                             </h3>
-                            <p className="paragraph__100--medium modal__text">
+                            <p className="paragraph__100--medium ">
                                 {dataPortfolio.foundationsDescription}
                             </p>
                         </article>
@@ -227,7 +227,7 @@ const AlephDS = () => {
 
                     {/* Section Components */}
                     <section className="modal__template">
-                        <article className="modal__text-box">
+                        <article className="modal__secondary-text-box">
                             <h3 className="heading__100--bold modal__subtitle">
                                 {dataPortfolio.componentsTitle}
                             </h3>
@@ -274,8 +274,8 @@ const AlephDS = () => {
                     </section>
 
                     {/* <!-- Ending --> */}
-                    <section className="modal__other-projects end">
-                        <article className="modal__text-box">
+                    <section className="modal__other-projects modal__end">
+                        <article className="modal__secondary-text-box">
                             <h3 className="heading__100--bold modal__subtitle">
                                 {dataPortfolio.resultsTitle}
                             </h3>
@@ -316,8 +316,7 @@ const AlephDS = () => {
                             />
                         </picture>
                         <article className="modal__text-box">
-                            <hr className="end__line" />
-                            <h2 className="heading__200--bold modal__title end__text">
+                            <h2 className="display__200--regular modal__title modal__end__text">
                                 Thank you
                             </h2>
                         </article>

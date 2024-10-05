@@ -37,9 +37,8 @@
         padding: 4rem;
 
         @include mq(medium) {
-            padding: 2rem;
             height: auto;
-            width: auto;
+            width: 100%;
         }
     }
     &__img-complete {
@@ -59,12 +58,24 @@
     &__title,
     &__paragraph {
         color: $color-text-default;
+        flex: 1;
     }
     &__subtitle {
         color: $color-text-secondary;
     }
-    &__text-box {
+    &__main-text-box {
         width: 80%;
+        display: flex;
+        gap: $size-10;
+        @include mq(medium) {
+            flex-direction: column;
+        }
+    }
+    &__secondary-text-box {
+        width: 80%;
+        flex-direction: column;
+        display: flex;
+        gap: $size-3;
     }
     /* ---------- Head content styles ---------- */
     &__header {
@@ -237,11 +248,12 @@
 
         &__box {
             //background-color: var(--bg-medium);
+            align-items: center;
             border-radius: 2rem;
             display: flex;
             flex-direction: column;
-            padding: 2.5rem;
-            width: 80%;
+            //padding: 2.5rem;
+            //width: 80%;
             text-align: left;
             gap: $size-10;
 
@@ -283,8 +295,11 @@
         &__boxes {
             display: flex;
             gap: 3rem;
+            width: 80%;
             @include mq(large) {
                 flex-direction: column;
+                width: 100%;
+                padding: 0 2rem;
             }
         }
         &__box-goals {
@@ -339,16 +354,12 @@
         padding: 4rem 0;
         width: 100%;
         align-items: center;
+
         @include mq(medium) {
             width: 100%;
             margin: 0;
-            padding: 2rem;
+
             margin-bottom: 4rem;
-        }
-        &__text-box {
-            display: flex;
-            gap: $size-10;
-            width: 80%;
         }
     }
     /*     &__text-box {
@@ -384,6 +395,32 @@
             width: auto;
         }
     } */
+    /* ----------  End Definition Section ---------- */
+
+    /* ----------  Results Section ---------- */
+
+    &__end {
+        align-items: center;
+        gap: 3rem;
+
+        &__text {
+            padding: $size-3;
+            color: $color-primary-700;
+            text-align: center;
+        }
+    }
+    &__other-projects {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 4rem;
+        @include mq(medium) {
+            width: 100%;
+            margin: 0;
+            padding: 2rem;
+            margin-bottom: 4rem;
+        }
+    }
 
     &__ideate {
         display: flex;
@@ -423,18 +460,6 @@
             padding: 2rem;
         }
     }
-    &__other-projects {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        padding: 4rem;
-        @include mq(medium) {
-            width: 100%;
-            margin: 0;
-            padding: 2rem;
-            margin-bottom: 4rem;
-        }
-    }
 }
 
 .prototype {
@@ -463,6 +488,7 @@
 }
 
 .end {
+    background-color: red;
     &__text {
         color: var(--textIcon-link);
     }
@@ -476,4 +502,10 @@
 
 .back {
     position: fixed;
+}
+
+.animation {
+    display: flex;
+
+    width: 100%;
 }

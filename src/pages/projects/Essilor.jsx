@@ -15,10 +15,10 @@ const EssilorAPP = () => {
                     {/* Section porfolio header */}
                     <div className="modal__header modal__header-essilor">
                         <div className="modal-header__text-box">
-                            <h1 className="heading__100--bold modal-header__title">
+                            <h1 className="display__200--bold modal__header__title">
                                 {dataPortfolio.headTitle}
                             </h1>
-                            <article className="modal-header__info-content">
+                            <article className="modal__header__info-content">
                                 <p className="paragraph__100--medium">
                                     <strong> {dataPortfolio.roleTitle} </strong>
                                     {dataPortfolio.role}
@@ -62,39 +62,39 @@ const EssilorAPP = () => {
                     </section>
 
                     {/* <!-- Section define --> */}
-                    <section className="modal__define define">
-                        <article className="modal__text-box">
+                    <section className="modal__define__box">
+                        <article className="modal__main-text-box">
                             <h1 className="heading__100--bold modal__title">
                                 {dataPortfolio.titleIntroduction}
                             </h1>
-                            <p className="paragraph__100--medium modal__text">
+                            <p className="paragraph__100--medium modal__paragraph">
                                 {dataPortfolio.contentIntroduction}
                             </p>
                         </article>
-                        <article className="define__boxes">
-                            <div className="define__box define__box--dark">
-                                <h3 className="heading__300--bold modal__title">
+                        <article className="modal__define__boxes">
+                            <div className="modal__define__box-goals ">
+                                <h3 className="heading__300--bold">
                                     {dataPortfolio.goalsTitle}
                                 </h3>
                                 <ol>
-                                    <ul className="define__goal-list">
-                                        <li className="paragraph__200--medium define__goal-item">
+                                    <ul className="modal__define__goal-list">
+                                        <li className="paragraph__200--medium modal__define__goal-item">
                                             {dataPortfolio.goal1}
                                         </li>
-                                        <li className="paragraph__200--medium define__goal-item">
+                                        <li className="paragraph__200--medium modal__define__goal-item">
                                             {dataPortfolio.goal2}
                                         </li>
-                                        <li className="paragraph__200--medium define__goal-item">
+                                        <li className="paragraph__200--medium modal__define__goal-item">
                                             {dataPortfolio.goal3}
                                         </li>
-                                        <li className="paragraph__200--medium define__goal-item">
+                                        <li className="paragraph__200--medium modal__define__goal-item">
                                             {dataPortfolio.goal4}
                                         </li>
                                     </ul>
                                 </ol>
                             </div>
-                            <div className="define__box">
-                                <h3 className="heading__300--bold modal__title">
+                            <div className="modal__define__box-goals">
+                                <h3 className="heading__300--bold">
                                     {dataPortfolio.customerTitle}
                                 </h3>
                                 <div className="define__mindset-box">
@@ -119,20 +119,22 @@ const EssilorAPP = () => {
 
                     {/* <!-- Section ideate --> */}
                     <section className="modal__template">
-                        <article className="modal__text-box">
-                            <h2 className="heading__200--bold modal__title">
+                        <article className="modal__main-text-box">
+                            <h2 className="display__100--bold modal__title modal__main-text-box">
                                 {dataPortfolio.ideateTitle}
                             </h2>
-                            <p className="paragraph__100--medium modal__text">
+                            <p className="paragraph__100--medium modal__paragraph">
                                 {dataPortfolio.ideateContent}
                             </p>
                         </article>
                     </section>
 
                     <section className="modal__template">
-                        <h1 className="heading__100--bold modal__title modal__text-box">
-                            {dataPortfolio.title2}
-                        </h1>
+                        <article className="modal__secondary-text-box">
+                            <h1 className="heading__100--bold modal__subtitle">
+                                {dataPortfolio.title2}
+                            </h1>
+                        </article>
 
                         <picture className="modal__img-container">
                             <source
@@ -149,57 +151,56 @@ const EssilorAPP = () => {
                     </section>
 
                     <section className="modal__template">
-                        <h1 className="heading__100--bold modal__title modal__text-box">
-                            {dataPortfolio.title5}
-                        </h1>
-
-                        <article className="modal__text-box">
+                        <article className="modal__secondary-text-box">
+                            <h1 className="heading__100--bold modal__subtitle">
+                                {dataPortfolio.title5}
+                            </h1>
                             <h3 className="heading__300--bold modal__subtitle">
                                 {dataPortfolio.midFidelityTitle}
                             </h3>
-                            <picture className="modal__img-container">
-                                <source
-                                    srcSet="https://sebgraph.com/images/projects/essilor/mid-fidelity.png"
-                                    media="(max-width:900px)"
-                                />
-                                <img
-                                    className="modal__img-complete"
-                                    src="https://sebgraph.com/images/projects/essilor/mid-fidelity.png"
-                                    loading="lazy"
-                                    alt="ideate"
-                                />
-                            </picture>
                         </article>
-                        <article className="modal__text-box">
+                        <picture className="modal__img-container">
+                            <source
+                                srcSet="https://sebgraph.com/images/projects/essilor/mid-fidelity.png"
+                                media="(max-width:900px)"
+                            />
+                            <img
+                                className="modal__img-complete"
+                                src="https://sebgraph.com/images/projects/essilor/mid-fidelity.png"
+                                loading="lazy"
+                                alt="ideate"
+                            />
+                        </picture>
+                        <article className="modal__secondary-text-box">
                             <h3 className="heading__300--bold modal__subtitle">
                                 {dataPortfolio.highFidelityTitle}
                             </h3>
-                            <picture className="modal__img-container">
-                                <source
-                                    srcSet="https://sebgraph.com/images/projects/essilor/high-fidelity.png"
-                                    media="(max-width:900px)"
-                                />
-                                <img
-                                    className="modal__img-complete"
-                                    src="https://sebgraph.com/images/projects/essilor/high-fidelity.png"
-                                    loading="lazy"
-                                    alt="ideate"
-                                />
-                            </picture>
                         </article>
+                        <picture className="modal__img-container">
+                            <source
+                                srcSet="https://sebgraph.com/images/projects/essilor/high-fidelity.png"
+                                media="(max-width:900px)"
+                            />
+                            <img
+                                className="modal__img-complete"
+                                src="https://sebgraph.com/images/projects/essilor/high-fidelity.png"
+                                loading="lazy"
+                                alt="ideate"
+                            />
+                        </picture>
                     </section>
 
                     <section className="modal__template">
-                        <article className="modal__text-box">
-                            <h1 className="heading__100--bold modal__title modal__text-box">
+                        <article className="modal__main-text-box">
+                            <h1 className="display__100--bold modal__title">
                                 {dataPortfolio.title7}
                             </h1>
-                            <p className="paragraph__100--medium modal__text">
+                            <p className="paragraph__100--medium modal__paragraph">
                                 {dataPortfolio.styleContent}
                             </p>
                         </article>
 
-                        <article className="modal__text-box">
+                        <article className="modal__secondary-text-box">
                             <h3 className="heading__300--bold modal__subtitle">
                                 {dataPortfolio.brandTitle}
                             </h3>
@@ -220,7 +221,7 @@ const EssilorAPP = () => {
                             />
                         </picture>
 
-                        <article className="modal__text-box">
+                        <article className="modal__secondary-text-box">
                             <h3 className="heading__300--bold modal__subtitle">
                                 {dataPortfolio.colorsTitle}
                             </h3>
@@ -241,7 +242,7 @@ const EssilorAPP = () => {
                             />
                         </picture>
 
-                        <article className="modal__text-box">
+                        <article className="modal__secondary-text-box">
                             <h3 className="heading__300--bold modal__subtitle">
                                 {dataPortfolio.tipographyTitle}
                             </h3>
@@ -262,7 +263,7 @@ const EssilorAPP = () => {
                             />
                         </picture>
 
-                        <article className="modal__text-box">
+                        <article className="modal__secondary-text-box">
                             <h3 className="heading__300--bold modal__subtitle">
                                 {dataPortfolio.imageryTitle}
                             </h3>
@@ -283,7 +284,7 @@ const EssilorAPP = () => {
                             />
                         </picture>
 
-                        <article className="modal__text-box">
+                        <article className="modal__secondary-text-box">
                             <h3 className="heading__300--bold modal__subtitle">
                                 {dataPortfolio.componentsTitle}
                             </h3>
@@ -318,11 +319,11 @@ const EssilorAPP = () => {
                     </section>
 
                     <section className="modal__template">
-                        <article className="mb-20">
-                            <h1 className="heading__100--bold modal__title modal__text-box">
+                        <article className="mb-20 modal__main-text-box">
+                            <h1 className="display__100--bold modal__title ">
                                 {dataPortfolio.title9}
                             </h1>
-                            <p className="paragraph__100--medium modal__text">
+                            <p className="paragraph__100--medium modal__paragraph">
                                 {dataPortfolio.finalContent}
                             </p>
                         </article>
@@ -340,7 +341,7 @@ const EssilorAPP = () => {
                             />
                         </picture>
 
-                        <article className="modal__text-box">
+                        <article className="modal__secondary-text-box">
                             <h3 className="heading__300--bold modal__subtitle">
                                 {dataPortfolio.scanTitle}
                             </h3>
@@ -362,7 +363,7 @@ const EssilorAPP = () => {
                             />
                         </picture>
 
-                        <article className="modal__text-box">
+                        <article className="modal__secondary-text-box">
                             <h3 className="heading__300--bold modal__subtitle">
                                 {dataPortfolio.redeemTitle}
                             </h3>
@@ -398,10 +399,9 @@ const EssilorAPP = () => {
                     </picture>
 
                     {/* <!-- Ending --> */}
-                    <section className="modal__other-projects end">
-                        <article className="modal__text-box">
-                            <hr className="end__line" />
-                            <h2 className="heading__200--bold modal__title end__text">
+                    <section className="modal__other-projects modal__end">
+                        <article className="modal_secondary-text-box">
+                            <h2 className="display__200--regular modal__title modal__end__text">
                                 Thank you
                             </h2>
                         </article>
