@@ -22,7 +22,7 @@ const CV = lazy(() => import('../pages/cv/CV'))
 
 const RoutesSite = () => {
     return (
-        <Suspense fallback={<Spinner />}>
+        <Suspense fallback={<Spinner duration={5000} />}>
             <Router>
                 <ScrollToTop />
 

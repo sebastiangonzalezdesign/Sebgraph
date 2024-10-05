@@ -10,21 +10,66 @@ import Paint from '../../img/paint.svg'
 import Cook from '../../img/cook.svg'
 import Cv from '../../documents/cv-sebastian-gonzalez.pdf'
 import Skills from '../../img/skills-icon.svg'
-import 'aos/dist/aos.css'
+import { motion } from 'framer-motion'
+import '../../styles/ConfigStyles/utilities/_index.scss'
+
 import { Button } from '../../components/Button'
 import Chip from '../../components/Chip'
 
 const CV = () => {
+    // Framer Motion Variables
+    const fadeUpVariants = {
+        initial: { opacity: 0, y: 100 }, // Start slightly below and invisible
+        animate: { opacity: 1, y: 0 }, // Fade in and move to original position
+        exit: { opacity: 0, y: -20 }, // Fade out and move slightly above
+    }
+
     return (
         <main className="container-cv">
             <section className="name-cv">
                 <article className="name-cv__text-box">
-                    <h1 className="heading__100--bold">Sebastian González</h1>
-                    <span className="heading__300--bold">UI Designer.</span>
+                    <motion.h1
+                        className="display__200--bold"
+                        initial="initial"
+                        animate="animate"
+                        exit="exit"
+                        variants={fadeUpVariants}
+                        transition={{
+                            type: 'spring',
+                            stiffness: 45,
+                        }}
+                    >
+                        Sebastian González
+                    </motion.h1>
+                    <motion.p
+                        className="heading__100--bold"
+                        initial="initial"
+                        animate="animate"
+                        exit="exit"
+                        variants={fadeUpVariants}
+                        transition={{
+                            delay: 0.03,
+                            type: 'spring',
+                            stiffness: 45,
+                        }}
+                    >
+                        Curriculum
+                    </motion.p>
                 </article>
             </section>
 
-            <section className="profile-cv">
+            <motion.section
+                className="profile-cv"
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                variants={fadeUpVariants}
+                transition={{
+                    delay: 0.05,
+                    type: 'spring',
+                    stiffness: 45,
+                }}
+            >
                 <img className="icon" src={Profile} alt="profile" />
                 <article className="profile-cv__text-box">
                     <h2 className="heading__100--bold subtitle">Profile</h2>
@@ -36,19 +81,19 @@ const CV = () => {
                         meaningful experiences.
                     </p>
                 </article>
-            </section>
+            </motion.section>
 
             <section className="experience-cv">
                 <img className="icon" src={Experience} alt="experience" />
                 <article className="experience-cv__text-box">
-                    <h2 className="heading__200--bold subtitle">Experience</h2>
+                    <h2 className="heading__100--bold subtitle">Experience</h2>
                     <div className="experience-cv__experience-container">
                         <div className="experience-cv__head-container">
                             <h3 className="heading__300--bold">
-                                Sr Visual / UI Designer
+                                Sr Visual | UI Designer
                             </h3>
                             <span className="paragraph__300--medium">
-                                Globant / Bogotá / September 2021 - currently
+                                Globant | Bogotá | September 2021 - currently
                             </span>
                         </div>
 
@@ -119,7 +164,7 @@ const CV = () => {
             <section className="education-cv">
                 <img className="icon" src={Education} alt="education" />
                 <article className="education-cv__text-box">
-                    <h2 className="heading__200--bold subtitle">Education</h2>
+                    <h2 className="heading__100--bold subtitle">Education</h2>
                     <div className="education-cv__course">
                         <h3 className="heading__300--bold education-cv__course-name">
                             Meta Front-End Developer
@@ -166,7 +211,7 @@ const CV = () => {
             <section className="skills-cv">
                 <img className="icon" src={Skills} alt="" />
                 <article className="skills-cv__skills-section-container">
-                    <h2 className="heading__200--bold subtitle">Skills</h2>
+                    <h2 className="heading__100--bold subtitle">Skills</h2>
 
                     <div className="skills-cv__skills-container">
                         <div className="skills-cv__skill">
@@ -283,7 +328,7 @@ const CV = () => {
             </section>
 
             <section className="download-cv">
-                <h2 className="heading__200--bold subtitle">Let’s talk</h2>
+                <h2 className="display__200--regular subtitle">Let’s talk</h2>
                 <div className="download-cv__btns">
                     <a href={Cv} rel="noreferrer" target="_blank">
                         <Button

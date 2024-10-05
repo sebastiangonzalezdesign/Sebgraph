@@ -1,13 +1,12 @@
 import './HeroWork.scss'
 import '../../styles/ConfigStyles/utilities/_index.scss'
-import { Suspense, lazy, useContext, useState, useEffect } from 'react'
+import { Suspense, lazy, useContext } from 'react'
 import ThemeContext from '../../context/ThemeContext'
 import React from 'react'
 import { Button } from '../../components/Button'
 import Cv from '../../documents/cv-sebastian-gonzalez.pdf'
 const Hero = lazy(() => import('../../components/Hero'))
 import { motion } from 'framer-motion'
-import LogoLoading from '../../components/LogoLoading'
 
 // Framer Motion Variables
 const fadeUpVariants = {
@@ -18,38 +17,14 @@ const fadeUpVariants = {
 
 const HeroWork = () => {
     const { theme } = useContext(ThemeContext)
-    const [isMobile, setIsMobile] = useState(false)
-    const [isPageLoaded, setIsPageLoaded] = useState(false)
-
-    // Check if the screen is mobile
-    useEffect(() => {
-        const handleResize = () => {
-            setIsMobile(window.innerWidth < 768) // Customize width for mobile
-        }
-        handleResize() // Check initially
-        window.addEventListener('resize', handleResize)
-        return () => {
-            window.removeEventListener('resize', handleResize)
-        }
-    }, [])
-
-    // Handle initial page load
-    useEffect(() => {
-        const handlePageLoad = () => setIsPageLoaded(true)
-        window.addEventListener('load', handlePageLoad)
-        return () => {
-            window.removeEventListener('load', handlePageLoad)
-        }
-    }, [])
 
     return (
         <section className={`section-hero ${theme}`}>
             <article className="section-hero__text-container">
                 <div className="section-hero__text-container__text">
-                    <LogoLoading />
                     <motion.h1
                         id="work"
-                        className="display__200--bold section-hero__heading"
+                        className="display__100--bold section-hero__heading"
                         variants={fadeUpVariants}
                         initial="initial"
                         animate="animate"
@@ -119,7 +94,7 @@ const HeroWork = () => {
 
             {/* Apply animation conditionally */}
             <motion.div
-                variants={isMobile || isPageLoaded ? null : fadeUpVariants}
+                variants={fadeUpVariants}
                 initial="initial"
                 animate="animate"
                 exit="exit"

@@ -1,18 +1,10 @@
-import { Puff } from 'react-loader-spinner'
 import './Spinner.scss'
+import LogoLoading from './LogoLoading'
 
 const Spinner = () => {
     return (
         <div className="spinner__container">
-            <Puff
-                className="spinner__icon"
-                height="80"
-                width="80"
-                radius={1}
-                color="#ffff"
-                ariaLabel="loading"
-                visible={true}
-            />
+            <LogoLoading />
         </div>
     )
 }

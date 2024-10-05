@@ -209,7 +209,7 @@
         // Active state styles
         &.active {
             color: $tabs-color-active; // Define this in your ConfigStyles
-            //background-color: $tabs-background-active; // Define this in your ConfigStyles
+
             font-weight: $tabs-font-weight-active;
         }
     }

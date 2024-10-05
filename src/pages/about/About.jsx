@@ -1,81 +1,133 @@
 import './About.scss'
-import signProfile from '../../img/sign-profile.svg'
-import Aos from 'aos'
-import 'aos/dist/aos.css'
-import React, { useEffect } from 'react'
-import { useRive } from '@rive-app/react-canvas'
+import { motion } from 'framer-motion'
+import React, { useEffect, useState } from 'react'
 
 const About = () => {
-    useEffect(() => {
-        Aos.init({ duration: 1000 })
-    }, [])
+    // Framer Motion Variables
+    const fadeUpVariants = {
+        initial: { opacity: 0, y: 200 }, // Start slightly below and invisible
+        animate: { opacity: 1, y: 0 }, // Fade in and move to original position
+        exit: { opacity: 0, y: -20 }, // Fade out and move slightly above
+    }
 
-    /* Rive animation */
-    const { RiveComponent } = useRive({
-        src: 'character-about.riv',
-        stateMachines: 'State Machine 1',
-        autoplay: true,
-    })
+    // Framer Motion Variables for Carousel Animation
+    const carouselVariants = {
+        initial: {
+            opacity: 0,
+            y: -50, // Start 50px down
+        },
+        animate: {
+            opacity: 1,
+            y: 0, // Move to original position
+        },
+        exit: {
+            opacity: 0,
+            y: 50, // Move up 50px when exiting
+        },
+        transition: {
+            type: 'spring',
+            duration: 0.8,
+            bounce: 0.6,
+            stiffness: 100,
+        },
+    }
+
+    // Avatar image URL
+    const avatarUrl = 'https://sebgraph.com/images/about/avatar.png'
+
+    // Array of texts to cycle through
+    const texts = [
+        'I try to code my ideas.',
+        'I like to illustrate.',
+        'I love biking.',
+        'I like to apply system thinking.',
+    ]
+
+    const [currentIndex, setCurrentIndex] = useState(0)
+
+    // Change the text index at a set interval
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length)
+        }, 3000) // Change text every 3 seconds
+
+        return () => clearInterval(interval) // Cleanup on component unmount
+    }, [texts.length])
 
     return (
         <main className="container-about">
             <section className="hero-about">
                 <article className="hero-about__hero-container">
-                    <div className="hero-about__text">
-                        <h1
-                            data-aos="fade-up"
-                            data-aos-delay="500"
-                            className="heading__100--bold "
-                        >
-                            Sebastian González
-                        </h1>
-                        <span
-                            data-aos="fade-up"
-                            data-aos-delay="900"
-                            className="heading__300--bold"
-                        >
-                            Profile
-                        </span>
-                    </div>
-                    <RiveComponent
-                        data-aos="flip-right"
-                        data-aos-delay="1000"
-                        className="hero-about__character"
-                    ></RiveComponent>
-                </article>
-            </section>
+                    <motion.div
+                        className="hero-about__text"
+                        initial="initial"
+                        animate="animate"
+                        exit="exit"
+                        variants={fadeUpVariants}
+                        transition={{
+                            type: 'spring',
+                            stiffness: 45,
+                        }}
+                    >
+                        {/* Static Text */}
+                        <motion.h1 className="display__200--bold section-hero__heading">
+                            Hi! I'm Sebastian
+                        </motion.h1>
 
-            <section className="profile">
-                <article className="profile__container">
-                    <figure
-                        data-aos="fade-up"
-                        className="name-cv__img"
-                    ></figure>
-                    <div className="profile__text-box">
-                        <h3
-                            data-aos="fade-up"
-                            className="heading__200--bold profile__text"
-                        >
-                            Who i am
-                        </h3>
-                        <p
-                            data-aos="fade-up"
-                            className="paragraph__100--medium profile__paragraph"
-                        >
-                            Hi, I'm Sebastian González, a UI/Visual designer
-                            driven to refine my design and coding skills.
-                            Passionate about creating unforgettable digital
-                            experiences that connect users to products. I've
-                            collaborated on projects with brands like Samsung,
-                            enhancing my expertise. Let's work together to craft
-                            something extraordinary.
-                        </p>
+                        {/* Carousel Text Animation */}
+                        <motion.div className="hero-about__text-carousel">
+                            <motion.h1
+                                className="display__100--bold"
+                                key={currentIndex} // Ensure re-render on text change
+                                initial="initial"
+                                animate="animate"
+                                exit="exit"
+                                variants={carouselVariants}
+                                transition={carouselVariants.transition}
+                            >
+                                {texts[currentIndex]}
+                            </motion.h1>
+                        </motion.div>
+                    </motion.div>
+                </article>
+                <article className="hero-about__description">
+                    <motion.figure
+                        className="hero-about__img-container"
+                        initial="initial"
+                        animate="animate"
+                        exit="exit"
+                        variants={fadeUpVariants}
+                        transition={{
+                            delay: 0.1,
+                            type: 'spring',
+                            stiffness: 45,
+                        }}
+                    >
                         <img
-                            data-aos="fade-up"
-                            src={signProfile}
-                            alt="sebgraph"
+                            className="hero-about__img-container__img"
+                            src={avatarUrl}
+                            alt="Sebastian González's avatar"
                         />
-                    </div>
+                    </motion.figure>
+                    <motion.p
+                        className="paragraph__100--medium profile__paragraph"
+                        initial="initial"
+                        animate="animate"
+                        exit="exit"
+                        variants={fadeUpVariants}
+                        transition={{
+                            delay: 0.2,
+                            type: 'spring',
+                            stiffness: 45,
+                        }}
+                    >
+                        Hi, I'm Sebastian González, a UI/Visual designer driven
+                        to refine my design and coding skills. Passionate about
+                        creating unforgettable digital experiences that connect
+                        users to products. I've collaborated on projects with
+                        brands like Samsung, enhancing my expertise. Let's work
+                        together to craft something extraordinary.
+                    </motion.p>
                 </article>
             </section>
         </main>

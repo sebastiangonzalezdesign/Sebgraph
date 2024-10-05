@@ -1,21 +1,26 @@
+@use '../styles/ConfigStyles/abstracts' as *;
 .logo-loading {
-    width: fit-content;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    //    z-index: 1;
-}
-.box {
-    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    background-color: $color-fixed-black;
+    padding: 0.6rem;
+    border-radius: 0.5rem;
     position: absolute;
-    width: 20px;
-    height: 20px;
-    background: red;
-    z-index: 0;
-}
-.paths {
-    width: auto;
-    position: relative;
-    z-index: 1;
+    left: 50vw;
+    top: 50vh;
+    //    z-index: 1;
+
+    &__paths {
+        width: auto;
+        position: relative;
+        z-index: 1;
+        color: $color-fixed-white;
+        stroke: url(#gradient);
+        &__path {
+            stroke-width: 3;
+        }
+    }
+    &__gradient stop {
+        animation: gradient-animation 3s ease-in-out infinite;
+    }
 }

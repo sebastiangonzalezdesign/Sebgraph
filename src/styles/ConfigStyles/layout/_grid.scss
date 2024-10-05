@@ -30,6 +30,7 @@
     } */
     .section-hero {
         grid-area: info;
+        margin-top: 3rem;
         margin: auto;
         max-width: 75rem;
         width: 100%;
@@ -39,6 +40,7 @@
     .section-portfolio {
         grid-area: portfolio;
         margin: auto;
+
         max-width: 75rem;
         width: 100%;
         padding: $size-8 $size-6;
@@ -76,6 +78,7 @@
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 4rem;
     margin: auto;
+    max-width: 75rem;
     width: 100%;
 
     grid-template-areas:
