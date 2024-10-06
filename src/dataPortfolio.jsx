@@ -411,3 +411,61 @@ export const Aleph = [
             'By implementing the Aleph design system, we achieved a 15% increase in expert users time spent on data exploration tasks and a 20% reduction in design implementation time by developers.',
     },
 ]
+
+export const Hub = [
+    {
+        id: 6,
+        key: 'hub',
+        headTitle: 'Hub Design System',
+        roleTitle: 'Role:',
+        role: 'Design System Designer',
+        dateTitle: 'Date:',
+        date: '2022',
+        companyTitle: 'Company:',
+        company: 'Globant',
+
+        subtitleResume: 'Design System',
+        titleResume: 'Carnival Cruise',
+        contentResume:
+            'Demystifying the world, one map at a time. Aleph is an intuitive platform that provides high-resolution satellite imagery and unlock the power of geospatial data.',
+
+        titleIntroduction: 'Problem Statement',
+        contentIntroduction:
+            'How can I create a design system that empowers diverse users (researchers, educators, analysts) to explore complex satellite imagery intuitively and efficiently? My goal is to minimize cognitive load, maximize user engagement (increase data exploration by 20%), and overcome the limitations of traditional UI approaches in this uncommon field.',
+
+        goalsTitle: 'Project Goals',
+        goal1: "Establish a unified visual language for Aleph's interface and branding, ensuring consistency across platforms and future growth.",
+        goal2: 'Foster an open dialogue with stakeholders throughout the design process, ensuring alignment and buy-in on key decisions.',
+        goal3: 'Create intuitive features that guide users through data exploration, simplifying complex satellite data requests and fostering independent learning.',
+
+        findingsTitle: 'Findings and opportunities to improve',
+        finding1:
+            'Certain UI elements like buttons and cards display varying styles across the platform, potentially confusing users and hindering intuitive navigation.',
+        finding2:
+            'Lack of established design patterns for data visualization and interaction leads to developer confusion and inconsistent user experiences.',
+        finding3:
+            'Development teams are building overlapping features with different codebases, resulting in wasted resources and potential maintenance issues.',
+        finding4:
+            'Implementing a centralized component library and style guide would foster design and development collaboration, ensuring consistency and streamlining future product iterations.',
+        inventoryTitle: 'Inventory',
+        inventoryDescription:
+            'To create a solid foundation design system, we conducted a comprehensive inventory of existing styles and UI elements across all web and mobile interfaces. Through manual audits and collaborative workshops, we identified a total of 20 unique buttons, with 20% displaying inconsistencies in color, font, and padding. Additionally, we discovered 15 variations of form elements and inconsistencies in data visualization styles. This inventory process revealed 25 recurring components and patterns with potential for unification. By streamlining these elements, we aimed to reduce design and development overhead, promote consistency across the platform, and improve user experience.',
+        foundationsTitle: 'Foundations',
+        foundationsDescription:
+            'The Foundations establish a clear and efficient way to manage design tokens, enabling the creation of adaptable themes for various platform needs. It encompasses core elements like colors, typography, and imagery, ensuring visual consistency throughout the product.',
+        componentsTitle: 'Components',
+        componentsDescription:
+            'Following the atomic design methodology, the component library includes a range of elements, starting with fundamental building blocks and scaling up to complex components required for data-centered map visualizations and interactions.',
+        resultsTitle: 'Results',
+        resultsDescription:
+            'The Aleph design system has had a significant impact on team organization and workflow.  Beyond providing a centralized UI library, it fosters the consistent application of brand values throughout the design process. As a living product, the system continuously evolves, and my contributions included:',
+        strongBullet1: 'Scalable System Structure:',
+        contentBullet1:
+            'I designed a scalable system structure, positively impacting team workflow and reducing design implementation time.',
+        strongBullet2: 'Comprehensive Support:',
+        contentBullet2:
+            'My support encompassed onboarding, documentation, design token creation, component development, prototyping & wireframing, and facilitating clear communication and synchronization with the development team.',
+        contentBullet3:
+            'By implementing the Aleph design system, we achieved a 15% increase in expert users time spent on data exploration tasks and a 20% reduction in design implementation time by developers.',
+    },
+]
