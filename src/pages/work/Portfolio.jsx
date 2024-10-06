@@ -92,7 +92,7 @@ export default function Portfolio() {
                                 to={`/projects/${d.key}`}
                                 ref={refProject}
                                 id={d.id}
-                                key={d.id}
+                                key={d.key}
                                 className={`section-portfolio__card-project link ${d.bgClass}`}
                             >
                                 <div className="section-portfolio__text-card">

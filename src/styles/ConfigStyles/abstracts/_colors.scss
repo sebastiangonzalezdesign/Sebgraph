@@ -136,6 +136,7 @@ $light: (
         '900': $-clr-blue-900,
     ),
     'brand': (
+        'hub': $-clr-blue-500,
         'aleph': $-clr-gray-800,
         'solve': $-clr-blue-700,
         'av': $-clr-yellow-1000,
@@ -207,6 +208,7 @@ $dark: (
         '900': $-clr-blue-200,
     ),
     'brand': (
+        'hub': $-clr-blue-500,
         'aleph': $-clr-gray-800,
         'solve': $-clr-blue-700,
         'av': $-clr-yellow-1000,
@@ -272,6 +274,7 @@ $color-primary-700: var(--primary-700);
 $color-primary-800: var(--primary-800);
 $color-primary-900: var(--primary-900);
 
+$color-brand-hub: var(--brand-hub);
 $color-brand-aleph: var(--brand-aleph);
 $color-brand-solve: var(--brand-solve);
 $color-brand-av: var(--brand-av);

@@ -7,7 +7,7 @@ export const allPortfolio = [
         overview: 'Samsung contest | Web | UI | Lottie',
         img: 'https://sebgraph.com/images/thumbnails/thumbnail-solve-for-tomorrow2.webp',
         bgClass: 'card-background-solve',
-        order: '2',
+        order: '3',
     },
     {
         id: 2,
@@ -16,7 +16,7 @@ export const allPortfolio = [
         overview: 'Samsung | Mobile | UI | Prototyping | Lottie',
         img: 'https://sebgraph.com/images/thumbnails/thumbnail-av-expert2.webp',
         bgClass: 'card-background-av',
-        order: '3',
+        order: '4',
     },
     {
         id: 3,
@@ -25,7 +25,7 @@ export const allPortfolio = [
         overview: 'Mobile | UI | Mockups',
         img: 'https://sebgraph.com/images/thumbnails/thumbnail-essilor2.webp',
         bgClass: 'card-background-essilor',
-        order: '4',
+        order: '5',
     },
 
     {
@@ -35,7 +35,7 @@ export const allPortfolio = [
         overview: 'Samsung launching | Web | UI | Prototyping',
         img: 'https://sebgraph.com/images/thumbnails/thumbnail-landing-s21-2.webp',
         bgClass: 'card-background-landing',
-        order: '5',
+        order: '6',
     },
 
     {
@@ -45,6 +45,15 @@ export const allPortfolio = [
         overview: 'Design System | Geospatial | Web | UI | Tokens',
         img: 'https://sebgraph.com/images/thumbnails/thumbnail-aleph2.webp',
         bgClass: 'card-background-aleph',
+        order: '2',
+    },
+    {
+        id: 6,
+        key: 'hub',
+        title: 'Hub Design System',
+        overview: 'Design System | Cruisers | iOS | Android | Tokens',
+        img: 'https://sebgraph.com/images/thumbnails/thumbnail-hub-design-system.webp',
+        bgClass: 'card-background-hub',
         order: '1',
     },
 ]
@@ -93,12 +102,21 @@ export const codePortfolio = [
 
 export const dsPortfolio = [
     {
+        id: 6,
+        key: 'hub',
+        title: 'Hub Design System',
+        overview: 'Design System | Cruisers | iOS | Android | Tokens',
+        img: 'https://sebgraph.com/images/thumbnails/thumbnail-hub-design-system.webp',
+        bgClass: 'card-background-hub',
+        order: '1',
+    },
+    {
         id: 5,
         key: 'Aleph',
         title: 'Aleph Design System',
         overview: 'Design System | Geospatial | Web | UI | Tokens',
         img: 'https://sebgraph.com/images/thumbnails/thumbnail-aleph2.webp',
         bgClass: 'card-background-aleph',
-        order: '1',
+        order: '2',
     },
 ]
