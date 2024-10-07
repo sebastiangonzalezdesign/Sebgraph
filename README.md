@@ -3,6 +3,7 @@
 -- Thumbnail --
 
 1. Add the info for the thumbnail in data.jsx within the category
+2. Add the new background color in abstracts/\_colors, then in \_tokens and finally add the new class in utilities/\_cards.scss
 
 -- Project --
 

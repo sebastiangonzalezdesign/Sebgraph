@@ -15,6 +15,7 @@ const SolveForTomorrow = lazy(() =>
 const Essilor = lazy(() => import('../pages/projects/Essilor'))
 const Landing = lazy(() => import('../pages/projects/Landing'))
 const AlephDS = lazy(() => import('../pages/projects/Aleph'))
+const HubDS = lazy(() => import('../pages/projects/Hub'))
 
 const About = lazy(() => import('../pages/about/About'))
 const Work = lazy(() => import('../pages/work/Work'))
@@ -40,6 +41,7 @@ const RoutesSite = () => {
                     <Route path="/projects/Essilor" element={<Essilor />} />
                     <Route path="/projects/Landing" element={<Landing />} />
                     <Route path="/projects/Aleph" element={<AlephDS />} />
+                    <Route path="/projects/Hub" element={<HubDS />} />
                     <Route path="*" element={<Error404 />} />
                 </Routes>
 
