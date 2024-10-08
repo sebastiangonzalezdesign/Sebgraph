@@ -89,7 +89,11 @@ export default function Portfolio() {
                         .sort((a, b) => a.order - b.order)
                         .map((d) => (
                             <Link
-                                to={`/projects/${d.key}`}
+                                to={
+                                    d.protected === 'yes'
+                                        ? '/projects/password-page'
+                                        : `/projects/${d.key}`
+                                }
                                 ref={refProject}
                                 id={d.id}
                                 key={d.key}

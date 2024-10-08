@@ -5,6 +5,7 @@ import Error404 from '../pages/Error404'
 import ScrollToTop from './ScrollToTop'
 import BackToTopButton from './BackToTopButton'
 import Spinner from './Spinner'
+import ProtectedRoute from './ProtectedRoute'
 
 const NavBar = lazy(() => import('./NavBar'))
 const Footer = lazy(() => import('./Footer'))
@@ -20,6 +21,7 @@ const HubDS = lazy(() => import('../pages/projects/Hub'))
 const About = lazy(() => import('../pages/about/About'))
 const Work = lazy(() => import('../pages/work/Work'))
 const CV = lazy(() => import('../pages/cv/CV'))
+const PasswordPage = lazy(() => import('../pages/PasswordPage'))
 
 const RoutesSite = () => {
     return (
@@ -41,7 +43,20 @@ const RoutesSite = () => {
                     <Route path="/projects/Essilor" element={<Essilor />} />
                     <Route path="/projects/Landing" element={<Landing />} />
                     <Route path="/projects/Aleph" element={<AlephDS />} />
-                    <Route path="/projects/Hub" element={<HubDS />} />
+
+                    {/* Password-protected Hub Design System route */}
+                    <Route
+                        path="/projects/Hub"
+                        element={
+                            <ProtectedRoute>
+                                <HubDS />
+                            </ProtectedRoute>
+                        }
+                    />
+                    <Route
+                        path="/projects/password-page"
+                        element={<PasswordPage />}
+                    />
                     <Route path="*" element={<Error404 />} />
                 </Routes>
 
