@@ -82,7 +82,7 @@ const AvExpert = () => {
                         <article className="project-info__container">
                             <img
                                 className="project-info__img"
-                                src="https://sebgraph.com/images/projects/av/project.png"
+                                src="https://sebastiangonzalez.design/images/projects/av/project.png"
                                 loading="lazy"
                                 alt="AV Expert project"
                             />
@@ -176,12 +176,12 @@ const AvExpert = () => {
 
                         <picture className="modal__img-container">
                             <source
-                                srcSet="https://sebgraph.com/images/projects/av/user-persona-responsive.png"
+                                srcSet="https://sebastiangonzalez.design/images/projects/av/user-persona-responsive.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.com/images/projects/av/user-persona.png"
+                                src="https://sebastiangonzalez.design/images/projects/av/user-persona.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
@@ -195,12 +195,12 @@ const AvExpert = () => {
 
                         <picture className="modal__img-container">
                             <source
-                                srcSet="https://sebgraph.com/images/projects/av/user-flow.png"
+                                srcSet="https://sebastiangonzalez.design/images/projects/av/user-flow.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.com/images/projects/av/user-flow.png"
+                                src="https://sebastiangonzalez.design/images/projects/av/user-flow.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
@@ -218,12 +218,12 @@ const AvExpert = () => {
                         </article>
                         <picture className="modal__img-container">
                             <source
-                                srcSet="https://sebgraph.com/images/projects/av/mid-fidelity.png"
+                                srcSet="https://sebastiangonzalez.design/images/projects/av/mid-fidelity.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.com/images/projects/av/mid-fidelity.png"
+                                src="https://sebastiangonzalez.design/images/projects/av/mid-fidelity.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
@@ -234,12 +234,12 @@ const AvExpert = () => {
                             </h3>
                             <picture className="modal__img-container">
                                 <source
-                                    srcSet="https://sebgraph.com/images/projects/av/high-fidelity.png"
+                                    srcSet="https://sebastiangonzalez.design/images/projects/av/high-fidelity.png"
                                     media="(max-width:900px)"
                                 />
                                 <img
                                     className="modal__img-complete"
-                                    src="https://sebgraph.com/images/projects/av/high-fidelity.png"
+                                    src="https://sebastiangonzalez.design/images/projects/av/high-fidelity.png"
                                     loading="lazy"
                                     alt="ideate"
                                 />
@@ -267,12 +267,12 @@ const AvExpert = () => {
                         </article>
                         <picture className="modal__img-container mb-20">
                             <source
-                                srcSet="https://sebgraph.com/images/projects/av/brand.png"
+                                srcSet="https://sebastiangonzalez.design/images/projects/av/brand.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.com/images/projects/av/brand.png"
+                                src="https://sebastiangonzalez.design/images/projects/av/brand.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
@@ -288,12 +288,12 @@ const AvExpert = () => {
                         </article>
                         <picture className="modal__img-container mb-20">
                             <source
-                                srcSet="https://sebgraph.com/images/projects/av/colors.png"
+                                srcSet="https://sebastiangonzalez.design/images/projects/av/colors.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.com/images/projects/av/colors.png"
+                                src="https://sebastiangonzalez.design/images/projects/av/colors.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
@@ -309,12 +309,12 @@ const AvExpert = () => {
                         </article>
                         <picture className="modal__img-container mb-20">
                             <source
-                                srcSet="https://sebgraph.com/images/projects/av/tipography.png"
+                                srcSet="https://sebastiangonzalez.design/images/projects/av/tipography.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.com/images/projects/av/tipography.png"
+                                src="https://sebastiangonzalez.design/images/projects/av/tipography.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
@@ -330,12 +330,12 @@ const AvExpert = () => {
                         </article>
                         <picture className="modal__img-container-dark mb-20">
                             <source
-                                srcSet="https://sebgraph.com/images/projects/av/imagery.png"
+                                srcSet="https://sebastiangonzalez.design/images/projects/av/imagery.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.com/images/projects/av/imagery.png"
+                                src="https://sebastiangonzalez.design/images/projects/av/imagery.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
@@ -351,36 +351,36 @@ const AvExpert = () => {
                         </article>
                         <picture className="modal__img-container-dark mb-20">
                             <source
-                                srcSet="https://sebgraph.com/images/projects/av/components.png"
+                                srcSet="https://sebastiangonzalez.design/images/projects/av/components.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.com/images/projects/av/components.png"
+                                src="https://sebastiangonzalez.design/images/projects/av/components.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
                         </picture>
                         <picture className="modal__img-container-dark mb-20">
                             <source
-                                srcSet="https://sebgraph.com/images/projects/av/cards.png"
+                                srcSet="https://sebastiangonzalez.design/images/projects/av/cards.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.com/images/projects/av/cards.png"
+                                src="https://sebastiangonzalez.design/images/projects/av/cards.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
                         </picture>
                         <picture className="modal__img-container-dark mb-20">
                             <source
-                                srcSet="https://sebgraph.com/images/projects/av/icons.png"
+                                srcSet="https://sebastiangonzalez.design/images/projects/av/icons.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.com/images/projects/av/icons.png"
+                                src="https://sebastiangonzalez.design/images/projects/av/icons.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
@@ -433,12 +433,12 @@ const AvExpert = () => {
 
                         <picture className="modal__img-container mb-20">
                             <source
-                                srcSet="https://sebgraph.com/images/projects/av/final-design.png"
+                                srcSet="https://sebastiangonzalez.design/images/projects/av/final-design.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.com/images/projects/av/final-design.png"
+                                src="https://sebastiangonzalez.design/images/projects/av/final-design.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
@@ -455,12 +455,12 @@ const AvExpert = () => {
 
                         <picture className="modal__img-container mb-20">
                             <source
-                                srcSet="https://sebgraph.com/images/projects/av/keywords.png"
+                                srcSet="https://sebastiangonzalez.design/images/projects/av/keywords.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.com/images/projects/av/keywords.png"
+                                src="https://sebastiangonzalez.design/images/projects/av/keywords.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
@@ -476,12 +476,12 @@ const AvExpert = () => {
                         </article>
                         <picture className="modal__img-container mb-20">
                             <source
-                                srcSet="https://sebgraph.com/images/projects/av/advanced-search.png"
+                                srcSet="https://sebastiangonzalez.design/images/projects/av/advanced-search.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.com/images/projects/av/advanced-search.png"
+                                src="https://sebastiangonzalez.design/images/projects/av/advanced-search.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
@@ -497,12 +497,12 @@ const AvExpert = () => {
                         </article>
                         <picture className="modal__img-container mb-20">
                             <source
-                                srcSet="https://sebgraph.com/images/projects/av/product-library.png"
+                                srcSet="https://sebastiangonzalez.design/images/projects/av/product-library.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.com/images/projects/av/product-library.png"
+                                src="https://sebastiangonzalez.design/images/projects/av/product-library.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
@@ -511,12 +511,12 @@ const AvExpert = () => {
 
                     <picture>
                         <source
-                            srcSet="https://sebgraph.com/images/projects/av/final-img.png"
+                            srcSet="https://sebastiangonzalez.design/images/projects/av/final-img.png"
                             media="(max-width:900px)"
                         />
                         <img
                             className="modal__img-complete"
-                            src="https://sebgraph.com/images/projects/av/final-img.png"
+                            src="https://sebastiangonzalez.design/images/projects/av/final-img.png"
                             loading="lazy"
                             alt="prototyping"
                         />

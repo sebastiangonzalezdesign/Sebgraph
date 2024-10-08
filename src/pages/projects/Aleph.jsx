@@ -43,7 +43,7 @@ const AlephDS = () => {
                         <article className="project-info__container">
                             <img
                                 className="project-info__img"
-                                src="https://sebgraph.com/images/projects/aleph/project.png"
+                                src="https://sebastiangonzalez.design/images/projects/aleph/project.png"
                                 loading="lazy"
                                 alt="Geospatial"
                             />
@@ -127,12 +127,12 @@ const AlephDS = () => {
 
                         <picture className="modal__img-container">
                             <source
-                                srcSet="https://sebgraph.com/images/projects/aleph/inventory.png"
+                                srcSet="https://sebastiangonzalez.design/images/projects/aleph/inventory.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.com/images/projects/aleph/inventory.png"
+                                src="https://sebastiangonzalez.design/images/projects/aleph/inventory.png"
                                 loading="lazy"
                                 alt="inventory"
                             />
@@ -152,72 +152,72 @@ const AlephDS = () => {
 
                         <picture className="modal__img-container mb-20">
                             <source
-                                srcSet="https://sebgraph.com/images/projects/aleph/Structure.png"
+                                srcSet="https://sebastiangonzalez.design/images/projects/aleph/Structure.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.com/images/projects/aleph/Structure.png"
+                                src="https://sebastiangonzalez.design/images/projects/aleph/Structure.png"
                                 loading="lazy"
                                 alt="Structure"
                             />
                         </picture>
                         <picture className="modal__img-container mb-20">
                             <source
-                                srcSet="https://sebgraph.com/images/projects/aleph/Colors.png"
+                                srcSet="https://sebastiangonzalez.design/images/projects/aleph/Colors.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.com/images/projects/aleph/Colors.png"
+                                src="https://sebastiangonzalez.design/images/projects/aleph/Colors.png"
                                 loading="lazy"
                                 alt="Structure"
                             />
                         </picture>
                         <picture className="modal__img-container mb-20">
                             <source
-                                srcSet="https://sebgraph.com/images/projects/aleph/Colors2.png"
+                                srcSet="https://sebastiangonzalez.design/images/projects/aleph/Colors2.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.com/images/projects/aleph/Colors2.png"
+                                src="https://sebastiangonzalez.design/images/projects/aleph/Colors2.png"
                                 loading="lazy"
                                 alt="Structure"
                             />
                         </picture>
                         <picture className="modal__img-container mb-20">
                             <source
-                                srcSet="https://sebgraph.com/images/projects/aleph/Typography.png"
+                                srcSet="https://sebastiangonzalez.design/images/projects/aleph/Typography.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.com/images/projects/aleph/Typography.png"
+                                src="https://sebastiangonzalez.design/images/projects/aleph/Typography.png"
                                 loading="lazy"
                                 alt="Structure"
                             />
                         </picture>
                         <picture className="modal__img-container mb-20">
                             <source
-                                srcSet="https://sebgraph.com/images/projects/aleph/Spacings.png"
+                                srcSet="https://sebastiangonzalez.design/images/projects/aleph/Spacings.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.com/images/projects/aleph/Spacings.png"
+                                src="https://sebastiangonzalez.design/images/projects/aleph/Spacings.png"
                                 loading="lazy"
                                 alt="Structure"
                             />
                         </picture>
                         <picture className="modal__img-container mb-20">
                             <source
-                                srcSet="https://sebgraph.com/images/projects/aleph/Imagery.png"
+                                srcSet="https://sebastiangonzalez.design/images/projects/aleph/Imagery.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.com/images/projects/aleph/Imagery.png"
+                                src="https://sebastiangonzalez.design/images/projects/aleph/Imagery.png"
                                 loading="lazy"
                                 alt="Structure"
                             />
@@ -236,36 +236,36 @@ const AlephDS = () => {
                         </article>
                         <picture className="modal__img-container mb-20">
                             <source
-                                srcSet="https://sebgraph.com/images/projects/aleph/Component-List.png"
+                                srcSet="https://sebastiangonzalez.design/images/projects/aleph/Component-List.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.com/images/projects/aleph/Component-List.png"
+                                src="https://sebastiangonzalez.design/images/projects/aleph/Component-List.png"
                                 loading="lazy"
                                 alt="Structure"
                             />
                         </picture>
                         <picture className="modal__img-container mb-20">
                             <source
-                                srcSet="https://sebgraph.com/images/projects/aleph/Basic-Components.png"
+                                srcSet="https://sebastiangonzalez.design/images/projects/aleph/Basic-Components.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.com/images/projects/aleph/Basic-Components.png"
+                                src="https://sebastiangonzalez.design/images/projects/aleph/Basic-Components.png"
                                 loading="lazy"
                                 alt="Structure"
                             />
                         </picture>
                         <picture className="modal__img-container mb-20">
                             <source
-                                srcSet="https://sebgraph.com/images/projects/aleph/Complex-Components.png"
+                                srcSet="https://sebastiangonzalez.design/images/projects/aleph/Complex-Components.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.com/images/projects/aleph/Complex-Components.png"
+                                src="https://sebastiangonzalez.design/images/projects/aleph/Complex-Components.png"
                                 loading="lazy"
                                 alt="Structure"
                             />
@@ -304,12 +304,12 @@ const AlephDS = () => {
 
                         <picture className="modal__img-container mb-20">
                             <source
-                                srcSet="https://sebgraph.com/images/projects/aleph/Results.png"
+                                srcSet="https://sebastiangonzalez.design/images/projects/aleph/Results.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.com/images/projects/aleph/Results.png"
+                                src="https://sebastiangonzalez.design/images/projects/aleph/Results.png"
                                 loading="lazy"
                                 alt="Structure"
                             />

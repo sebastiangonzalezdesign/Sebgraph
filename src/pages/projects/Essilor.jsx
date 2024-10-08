@@ -43,7 +43,7 @@ const EssilorAPP = () => {
                         <article className="project-info__container">
                             <img
                                 className="project-info__img"
-                                src="https://sebgraph.com/images/projects/essilor/project.png"
+                                src="https://sebastiangonzalez.design/images/projects/essilor/project.png"
                                 loading="lazy"
                                 alt="AV Expert project"
                             />
@@ -138,12 +138,12 @@ const EssilorAPP = () => {
 
                         <picture className="modal__img-container">
                             <source
-                                srcSet="https://sebgraph.com/images/projects/essilor/empathy-map-responsive.png"
+                                srcSet="https://sebastiangonzalez.design/images/projects/essilor/empathy-map-responsive.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.com/images/projects/essilor/empathy-map.png"
+                                src="https://sebastiangonzalez.design/images/projects/essilor/empathy-map.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
@@ -161,12 +161,12 @@ const EssilorAPP = () => {
                         </article>
                         <picture className="modal__img-container">
                             <source
-                                srcSet="https://sebgraph.com/images/projects/essilor/mid-fidelity.png"
+                                srcSet="https://sebastiangonzalez.design/images/projects/essilor/mid-fidelity.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.com/images/projects/essilor/mid-fidelity.png"
+                                src="https://sebastiangonzalez.design/images/projects/essilor/mid-fidelity.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
@@ -178,12 +178,12 @@ const EssilorAPP = () => {
                         </article>
                         <picture className="modal__img-container">
                             <source
-                                srcSet="https://sebgraph.com/images/projects/essilor/high-fidelity.png"
+                                srcSet="https://sebastiangonzalez.design/images/projects/essilor/high-fidelity.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.com/images/projects/essilor/high-fidelity.png"
+                                src="https://sebastiangonzalez.design/images/projects/essilor/high-fidelity.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
@@ -210,12 +210,12 @@ const EssilorAPP = () => {
                         </article>
                         <picture className="modal__img-container mb-20">
                             <source
-                                srcSet="https://sebgraph.com/images/projects/essilor/brand.png"
+                                srcSet="https://sebastiangonzalez.design/images/projects/essilor/brand.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.com/images/projects/essilor/brand.png"
+                                src="https://sebastiangonzalez.design/images/projects/essilor/brand.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
@@ -231,12 +231,12 @@ const EssilorAPP = () => {
                         </article>
                         <picture className="modal__img-container mb-20">
                             <source
-                                srcSet="https://sebgraph.com/images/projects/essilor/colors.png"
+                                srcSet="https://sebastiangonzalez.design/images/projects/essilor/colors.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.com/images/projects/essilor/colors.png"
+                                src="https://sebastiangonzalez.design/images/projects/essilor/colors.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
@@ -252,12 +252,12 @@ const EssilorAPP = () => {
                         </article>
                         <picture className="modal__img-container mb-20">
                             <source
-                                srcSet="https://sebgraph.com/images/projects/essilor/tipography.png"
+                                srcSet="https://sebastiangonzalez.design/images/projects/essilor/tipography.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.com/images/projects/essilor/tipography.png"
+                                src="https://sebastiangonzalez.design/images/projects/essilor/tipography.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
@@ -273,12 +273,12 @@ const EssilorAPP = () => {
                         </article>
                         <picture className="modal__img-container mb-20">
                             <source
-                                srcSet="https://sebgraph.com/images/projects/essilor/imagery.png"
+                                srcSet="https://sebastiangonzalez.design/images/projects/essilor/imagery.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.com/images/projects/essilor/imagery.png"
+                                src="https://sebastiangonzalez.design/images/projects/essilor/imagery.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
@@ -294,24 +294,24 @@ const EssilorAPP = () => {
                         </article>
                         <picture className="modal__img-container mb-20">
                             <source
-                                srcSet="https://sebgraph.com/images/projects/essilor/components.png"
+                                srcSet="https://sebastiangonzalez.design/images/projects/essilor/components.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.com/images/projects/essilor/components.png"
+                                src="https://sebastiangonzalez.design/images/projects/essilor/components.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
                         </picture>
                         <picture className="modal__img-container mb-20">
                             <source
-                                srcSet="https://sebgraph.com/images/projects/essilor/icons.png"
+                                srcSet="https://sebastiangonzalez.design/images/projects/essilor/icons.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.com/images/projects/essilor/icons.png"
+                                src="https://sebastiangonzalez.design/images/projects/essilor/icons.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
@@ -330,12 +330,12 @@ const EssilorAPP = () => {
 
                         <picture className="modal__img-container mb-20">
                             <source
-                                srcSet="https://sebgraph.com/images/projects/essilor/final-design.png"
+                                srcSet="https://sebastiangonzalez.design/images/projects/essilor/final-design.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.com/images/projects/essilor/final-design.png"
+                                src="https://sebastiangonzalez.design/images/projects/essilor/final-design.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
@@ -352,12 +352,12 @@ const EssilorAPP = () => {
 
                         <picture className="modal__img-container mb-20">
                             <source
-                                srcSet="https://sebgraph.com/images/projects/essilor/scan-code.png"
+                                srcSet="https://sebastiangonzalez.design/images/projects/essilor/scan-code.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.com/images/projects/essilor/scan-code.png"
+                                src="https://sebastiangonzalez.design/images/projects/essilor/scan-code.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
@@ -373,12 +373,12 @@ const EssilorAPP = () => {
                         </article>
                         <picture className="modal__img-container mb-20">
                             <source
-                                srcSet="https://sebgraph.com/images/projects/essilor/redeem.png"
+                                srcSet="https://sebastiangonzalez.design/images/projects/essilor/redeem.png"
                                 media="(max-width:900px)"
                             />
                             <img
                                 className="modal__img-complete"
-                                src="https://sebgraph.com/images/projects/essilor/redeem.png"
+                                src="https://sebastiangonzalez.design/images/projects/essilor/redeem.png"
                                 loading="lazy"
                                 alt="ideate"
                             />
@@ -387,12 +387,12 @@ const EssilorAPP = () => {
 
                     <picture>
                         <source
-                            srcSet="https://sebgraph.com/images/projects/essilor/final-img.png"
+                            srcSet="https://sebastiangonzalez.design/images/projects/essilor/final-img.png"
                             media="(max-width:900px)"
                         />
                         <img
                             className="modal__img-complete"
-                            src="https://sebgraph.com/images/projects/essilor/final-img.png"
+                            src="https://sebastiangonzalez.design/images/projects/essilor/final-img.png"
                             loading="lazy"
                             alt="prototyping"
                         />
