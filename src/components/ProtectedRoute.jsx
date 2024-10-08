@@ -1,45 +1,27 @@
-// src/ProtectedRoute.jsx
 import React, { useEffect, useState } from 'react'
 import { Navigate } from 'react-router-dom'
-import { db } from '../../firebase' // Your Firebase configuration
-import { doc, getDoc } from 'firebase/firestore'
 
 const ProtectedRoute = ({ children }) => {
     const [hasAccess, setHasAccess] = useState(false)
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        const checkAccess = async () => {
-            const passwordDocRef = doc(
-                db,
-                'dynamicPasswords',
-                'currentPassword'
-            )
-            const passwordDoc = await getDoc(passwordDocRef)
+        // Check if access is stored in localStorage
+        const accessGranted = localStorage.getItem('projectAccess') === 'true'
 
-            if (passwordDoc.exists()) {
-                const storedPassword = passwordDoc.data().password
-                const accessGranted =
-                    localStorage.getItem('projectAccess') === 'true'
-
-                if (accessGranted) {
-                    setHasAccess(true)
-                } else {
-                    // Optional: Redirect to password page if no access
-                    setHasAccess(false)
-                }
-            } else {
-                console.error('No such document!')
-            }
-
+        if (accessGranted) {
+            // If access is already granted, no need to check Firestore, just allow access
+            setHasAccess(true)
+            setLoading(false)
+        } else {
+            // No access granted, redirect to password page
+            setHasAccess(false)
             setLoading(false)
         }
-
-        checkAccess()
     }, [])
 
     if (loading) {
-        return <div>Loading...</div> // Optional: Show a loading spinner while checking access
+        return <div>Loading...</div> // Show a loading spinner while checking access
     }
 
     return hasAccess ? children : <Navigate to="/projects/password-page" />

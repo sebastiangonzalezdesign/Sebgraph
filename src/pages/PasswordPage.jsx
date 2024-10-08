@@ -1,27 +1,23 @@
-// src/pages/PasswordPage.jsx
-import React, { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
-import { db } from '../../firebase' // Import your Firebase configuration
+import React, { useEffect, useState } from 'react'
+import { db } from '../../firebase' // Import your firebase config
 import { doc, getDoc } from 'firebase/firestore'
+import { useNavigate } from 'react-router-dom'
 import './PasswordPage.scss'
+import Hub from './projects/Hub'
+import BackButton from '../components/BackButton'
 
-export default function PasswordPage() {
-    const [password, setPassword] = useState('')
-    const [error, setError] = useState('')
-    const [correctPassword, setCorrectPassword] = useState('')
+const PasswordPage = () => {
+    const [inputPassword, setInputPassword] = useState('')
+    const [accessGranted, setAccessGranted] = useState(false)
+    const [correctPassword, setCorrectPassword] = useState(null) // State to store the correct password
     const navigate = useNavigate()
 
     useEffect(() => {
         const fetchPassword = async () => {
-            const passwordDocRef = doc(
-                db,
-                'dynamicPasswords',
-                'currentPassword'
-            )
-            const passwordDoc = await getDoc(passwordDocRef)
-
-            if (passwordDoc.exists()) {
-                setCorrectPassword(passwordDoc.data().password)
+            const docRef = doc(db, 'settings', 'access') // Reference to the password document
+            const docSnap = await getDoc(docRef)
+            if (docSnap.exists()) {
+                setCorrectPassword(docSnap.data().password) // Set the correct password from Firestore
             } else {
                 console.error('No such document!')
             }
@@ -30,30 +26,45 @@ export default function PasswordPage() {
         fetchPassword()
     }, [])
 
-    const handlePasswordSubmit = (e) => {
+    const handlePasswordChange = (e) => {
+        setInputPassword(e.target.value)
+    }
+
+    const handleSubmit = (e) => {
         e.preventDefault()
-        if (password === correctPassword) {
-            localStorage.setItem('projectAccess', 'true') // Save access to localStorage
-            navigate('/projects/Hub') // Redirect to the Hub project page if password is correct
+        if (inputPassword === correctPassword) {
+            setAccessGranted(true)
+            localStorage.setItem('projectAccess', 'true')
+            navigate('/projects/Hub')
         } else {
-            setError('Incorrect password. Please try again.')
+            alert('Incorrect password. Please try again.')
         }
     }
 
     return (
         <div className="password-page">
-            <h2>Enter Password to Access Hub Design System</h2>
-            <form onSubmit={handlePasswordSubmit}>
-                <input
-                    type="password"
-                    placeholder="Enter password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                />
-                <button type="submit">Submit</button>
-            </form>
-            {error && <p className="error-message">{error}</p>}
+            <BackButton />
+            {accessGranted ? (
+                <div>
+                    <h2>Your Project Info</h2>
+                    <Hub />
+                    {/* Render your project info here */}
+                </div>
+            ) : (
+                <form onSubmit={handleSubmit}>
+                    <label htmlFor="password">Enter Password:</label>
+                    <input
+                        type="password"
+                        id="password"
+                        value={inputPassword}
+                        onChange={handlePasswordChange}
+                        required
+                    />
+                    <button type="submit">Submit</button>
+                </form>
+            )}
         </div>
     )
 }
+
+export default PasswordPage
