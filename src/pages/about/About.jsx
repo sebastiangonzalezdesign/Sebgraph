@@ -33,7 +33,7 @@ const About = () => {
     }
 
     // Avatar image URL
-    const avatarUrl = 'https://sebgraph.com/images/about/avatar.png'
+    const avatarUrl = 'https://sebastiangonzalez.design/images/about/avatar.png'
 
     // Array of texts to cycle through
     const texts = [
