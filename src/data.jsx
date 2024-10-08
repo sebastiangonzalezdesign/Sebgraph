@@ -8,6 +8,7 @@ export const allPortfolio = [
         img: 'https://sebgraph.com/images/thumbnails/thumbnail-solve-for-tomorrow2.webp',
         bgClass: 'card-background-solve',
         order: '3',
+        protected: 'no',
     },
     {
         id: 2,
@@ -17,6 +18,7 @@ export const allPortfolio = [
         img: 'https://sebgraph.com/images/thumbnails/thumbnail-av-expert2.webp',
         bgClass: 'card-background-av',
         order: '4',
+        protected: 'no',
     },
     {
         id: 3,
@@ -26,6 +28,7 @@ export const allPortfolio = [
         img: 'https://sebgraph.com/images/thumbnails/thumbnail-essilor2.webp',
         bgClass: 'card-background-essilor',
         order: '5',
+        protected: 'no',
     },
 
     {
@@ -36,6 +39,7 @@ export const allPortfolio = [
         img: 'https://sebgraph.com/images/thumbnails/thumbnail-landing-s21-2.webp',
         bgClass: 'card-background-landing',
         order: '6',
+        protected: 'no',
     },
 
     {
@@ -46,6 +50,7 @@ export const allPortfolio = [
         img: 'https://sebgraph.com/images/thumbnails/thumbnail-aleph2.webp',
         bgClass: 'card-background-aleph',
         order: '2',
+        protected: 'no',
     },
     {
         id: 6,
@@ -55,6 +60,7 @@ export const allPortfolio = [
         img: 'https://sebgraph.com/images/thumbnails/thumbnail-hub-design-system.webp',
         bgClass: 'card-background-hub',
         order: '1',
+        protected: 'yes',
     },
 ]
 
@@ -67,6 +73,7 @@ export const uiVisualPortfolio = [
         img: 'https://sebgraph.com/images/thumbnails/thumbnail-solve-for-tomorrow2.webp',
         bgClass: 'card-background-solve',
         order: '2',
+        protected: 'no',
     },
     {
         id: 2,
@@ -76,6 +83,7 @@ export const uiVisualPortfolio = [
         img: 'https://sebgraph.com/images/thumbnails/thumbnail-av-expert2.webp',
         bgClass: 'card-background-av',
         order: '3',
+        protected: 'no',
     },
     {
         id: 3,
@@ -85,6 +93,7 @@ export const uiVisualPortfolio = [
         img: 'https://sebgraph.com/images/thumbnails/thumbnail-essilor2.webp',
         bgClass: 'card-background-essilor',
         order: '4',
+        protected: 'no',
     },
 ]
 
@@ -97,6 +106,7 @@ export const codePortfolio = [
         img: 'https://sebgraph.com/images/thumbnails/thumbnail-solve-for-tomorrow2.webp',
         bgClass: 'card-background-solve',
         order: '2',
+        protected: 'no',
     },
 ]
 
@@ -109,6 +119,7 @@ export const dsPortfolio = [
         img: 'https://sebgraph.com/images/thumbnails/thumbnail-hub-design-system.webp',
         bgClass: 'card-background-hub',
         order: '1',
+        protected: 'yes',
     },
     {
         id: 5,
@@ -118,5 +129,6 @@ export const dsPortfolio = [
         img: 'https://sebgraph.com/images/thumbnails/thumbnail-aleph2.webp',
         bgClass: 'card-background-aleph',
         order: '2',
+        protected: 'no',
     },
 ]
