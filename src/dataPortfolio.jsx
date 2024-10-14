@@ -420,52 +420,57 @@ export const Hub = [
         roleTitle: 'Role:',
         role: 'Design System Designer',
         dateTitle: 'Date:',
-        date: '2022',
+        date: '2024',
         companyTitle: 'Company:',
         company: 'Globant',
 
         subtitleResume: 'Design System',
-        titleResume: 'Carnival Cruise',
+        titleResume: 'Hub',
         contentResume:
-            'Demystifying the world, one map at a time. Aleph is an intuitive platform that provides high-resolution satellite imagery and unlock the power of geospatial data.',
+            'Hub is a mobile application designed to organize various activities and services related to a cruise itinerary. The application offers functionalities for both pre-cruise planning and onboard experiences, ensuring users have an enjoyable and seamless journey.',
 
-        titleIntroduction: 'Problem Statement',
+        titleIntroduction: 'Project Overview',
         contentIntroduction:
-            'How can I create a design system that empowers diverse users (researchers, educators, analysts) to explore complex satellite imagery intuitively and efficiently? My goal is to minimize cognitive load, maximize user engagement (increase data exploration by 20%), and overcome the limitations of traditional UI approaches in this uncommon field.',
+            'I joined the team to support the Design, Development, and Product teams in improving the current component library and helping to define an official Design System. The library supported components for both iOS and Android.',
 
-        goalsTitle: 'Project Goals',
-        goal1: "Establish a unified visual language for Aleph's interface and branding, ensuring consistency across platforms and future growth.",
-        goal2: 'Foster an open dialogue with stakeholders throughout the design process, ensuring alignment and buy-in on key decisions.',
-        goal3: 'Create intuitive features that guide users through data exploration, simplifying complex satellite data requests and fostering independent learning.',
-
-        findingsTitle: 'Findings and opportunities to improve',
+        findingsTitle: 'Findings',
         finding1:
-            'Certain UI elements like buttons and cards display varying styles across the platform, potentially confusing users and hindering intuitive navigation.',
+            'There was an established workflow process to deliver components, but it wasn’t clear enough.',
         finding2:
-            'Lack of established design patterns for data visualization and interaction leads to developer confusion and inconsistent user experiences.',
+            'The interface used different styles for colors and typography, but there wasn’t a solid foundation guide that was scalable.',
         finding3:
-            'Development teams are building overlapping features with different codebases, resulting in wasted resources and potential maintenance issues.',
+            'The handoff process for components was centralized in a single Figma file that worked as a source of truth for developers.',
         finding4:
-            'Implementing a centralized component library and style guide would foster design and development collaboration, ensuring consistency and streamlining future product iterations.',
-        inventoryTitle: 'Inventory',
+            'The Dev team had the initiative to implement a theme model for the app.',
+        whatIDidTitle: 'What I did?',
+        whatIDidDescription:
+            'First, I organized a process to follow for component requests and handoff to the development team in Figma, clarifying the tasks for the different team members and the Design System Owner.',
+        inventoryTitle: 'Interface Inventory',
         inventoryDescription:
-            'To create a solid foundation design system, we conducted a comprehensive inventory of existing styles and UI elements across all web and mobile interfaces. Through manual audits and collaborative workshops, we identified a total of 20 unique buttons, with 20% displaying inconsistencies in color, font, and padding. Additionally, we discovered 15 variations of form elements and inconsistencies in data visualization styles. This inventory process revealed 25 recurring components and patterns with potential for unification. By streamlining these elements, we aimed to reduce design and development overhead, promote consistency across the platform, and improve user experience.',
+            'To have a better understanding of the visual styles used throughout the app, I did an inventory reviewing each component of the interface.',
+        themeImplementationyTitle: 'Theme implementation process',
+        themeImplementationyDescription:
+            'The initial scope to implement themes was intended to consider first colors and typography. It was a shared process of Design/Development to identify the best strategies to implement without affecting the current workflow.',
         foundationsTitle: 'Foundations',
         foundationsDescription:
-            'The Foundations establish a clear and efficient way to manage design tokens, enabling the creation of adaptable themes for various platform needs. It encompasses core elements like colors, typography, and imagery, ensuring visual consistency throughout the product.',
-        componentsTitle: 'Components',
+            'We redefined the system foundations: Colors, Typography, Elevation, Spacings, Icons, and Branding to set a scalable model that allows for improving the consistency and scalability of the component library.',
+        tokensTitle: 'Design Tokens',
+        tokensDescription:
+            'The model was defined with Global and Semantic tokens to simplify the theme implementation. The first tokens were defined for Colors and Typography, documenting categories that simplify and give flexibility to the current interface use cases.',
+        componentsTitle: 'Components Migration',
         componentsDescription:
-            'Following the atomic design methodology, the component library includes a range of elements, starting with fundamental building blocks and scaling up to complex components required for data-centered map visualizations and interactions.',
-        resultsTitle: 'Results',
-        resultsDescription:
-            'The Aleph design system has had a significant impact on team organization and workflow.  Beyond providing a centralized UI library, it fosters the consistent application of brand values throughout the design process. As a living product, the system continuously evolves, and my contributions included:',
-        strongBullet1: 'Scalable System Structure:',
-        contentBullet1:
-            'I designed a scalable system structure, positively impacting team workflow and reducing design implementation time.',
-        strongBullet2: 'Comprehensive Support:',
-        contentBullet2:
-            'My support encompassed onboarding, documentation, design token creation, component development, prototyping & wireframing, and facilitating clear communication and synchronization with the development team.',
-        contentBullet3:
-            'By implementing the Aleph design system, we achieved a 15% increase in expert users time spent on data exploration tasks and a 20% reduction in design implementation time by developers.',
+            'After exploring alternatives to implement without affecting the workflow based on a single Figma library, we decided to duplicate the components in a new library and apply the theme separately to have more control during the process and align with the development stages. Then, the components were reviewed along with development during the migration process.',
+        pagesTitle: 'Pages Migration',
+        pagesDescription:
+            'The current Figma Library was linked to many design files that contain flows of the app. To avoid overriding current pages, we defined a process to update the screens with the new library gradually. Once this process was completed, the old library was unpublished.Pages Migration',
+        resultsTitle: 'The Results',
+        resultsBullet1:
+            'The design system adoption increased by developers and product teams.',
+        resultsBullet2:
+            'The handoff process became smoother, reducing the time by token documentation..',
+        resultsBullet3:
+            'The discrepancies between design mockups and implementation were reduced.',
+        resultsBullet4:
+            'The color structure is prepared to add more brand themes.',
     },
 ]

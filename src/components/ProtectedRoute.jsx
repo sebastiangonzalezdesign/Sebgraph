@@ -8,23 +8,20 @@ const ProtectedRoute = ({ children }) => {
     useEffect(() => {
         // Check if access is stored in localStorage
         const accessGranted = localStorage.getItem('projectAccess') === 'true'
-
-        if (accessGranted) {
-            // If access is already granted, no need to check Firestore, just allow access
-            setHasAccess(true)
-            setLoading(false)
-        } else {
-            // No access granted, redirect to password page
-            setHasAccess(false)
-            setLoading(false)
-        }
+        setHasAccess(accessGranted)
+        setLoading(false)
     }, [])
 
     if (loading) {
         return <div>Loading...</div> // Show a loading spinner while checking access
     }
 
-    return hasAccess ? children : <Navigate to="/projects/password-page" />
+    // If access is not granted, redirect to password page
+    return hasAccess ? (
+        children
+    ) : (
+        <Navigate to="/projects/password-page" replace />
+    )
 }
 
 export default ProtectedRoute
