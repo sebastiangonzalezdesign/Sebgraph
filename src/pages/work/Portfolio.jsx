@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react'
+import React, { useEffect, useState, useRef, forwardRef } from 'react'
 import { Link } from 'react-router-dom'
 import './Portfolio.scss'
 import PortfolioList from './PortfolioList'
@@ -8,8 +8,9 @@ import {
     codePortfolio,
     dsPortfolio,
 } from '../../data'
+import { LockClosedIcon } from '@heroicons/react/24/outline'
 
-export default function Portfolio() {
+const Portfolio = forwardRef((props, ref) => {
     const [selected, setSelected] = useState('all')
     const [data, setData] = useState([])
     const [delayedSelected, setDelayedSelected] = useState('all')
@@ -53,7 +54,7 @@ export default function Portfolio() {
     }
 
     return (
-        <section id="work" className="section-portfolio">
+        <section ref={ref} id="work" className="section-portfolio">
             <div className="section-portfolio__heading-container">
                 <h2 className="heading__100--bold section-portfolio__heading">
                     Work
@@ -103,9 +104,12 @@ export default function Portfolio() {
                                     <div className="head-text">
                                         <h2
                                             id={d.id}
-                                            className="heading__200--bold"
+                                            className="heading__200--bold section-portfolio__title-and-icon"
                                         >
                                             {d.title}
+                                            {d.protected === 'yes' && (
+                                                <LockClosedIcon className="section-portfolio__title-and-icon__lock-icon" />
+                                            )}
                                         </h2>
                                         <span className="paragraph__200--medium overview">
                                             {d.overview}
@@ -126,4 +130,6 @@ export default function Portfolio() {
             </div>
         </section>
     )
-}
+})
+
+export default Portfolio

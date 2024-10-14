@@ -5,11 +5,14 @@ import { useNavigate } from 'react-router-dom'
 import './PasswordPage.scss'
 import Hub from './projects/Hub'
 import BackButton from '../components/BackButton'
+import { Button } from '../components/Button'
+import { LockClosedIcon } from '@heroicons/react/24/outline'
 
 const PasswordPage = () => {
     const [inputPassword, setInputPassword] = useState('')
     const [accessGranted, setAccessGranted] = useState(false)
     const [correctPassword, setCorrectPassword] = useState(null) // State to store the correct password
+    const [errorMessage, setErrorMessage] = useState('') // State for error message
     const navigate = useNavigate()
 
     useEffect(() => {
@@ -28,16 +31,25 @@ const PasswordPage = () => {
 
     const handlePasswordChange = (e) => {
         setInputPassword(e.target.value)
+        setErrorMessage('') // Clear error message on input change
     }
 
     const handleSubmit = (e) => {
         e.preventDefault()
+
+        // Check if the input field is empty
+        if (!inputPassword) {
+            setErrorMessage('Please fill out the password field.') // Set custom message for empty input
+            return
+        }
+
+        // Validate password
         if (inputPassword === correctPassword) {
             setAccessGranted(true)
             localStorage.setItem('projectAccess', 'true')
-            navigate('/projects/Hub')
+            navigate('/projects/Hub', { replace: true })
         } else {
-            alert('Incorrect password. Please try again.')
+            setErrorMessage('Incorrect password. Please try again.') // Set error message for incorrect password
         }
     }
 
@@ -48,20 +60,58 @@ const PasswordPage = () => {
                 <div>
                     <h2>Your Project Info</h2>
                     <Hub />
-                    {/* Render your project info here */}
                 </div>
             ) : (
-                <form onSubmit={handleSubmit}>
-                    <label htmlFor="password">Enter Password:</label>
-                    <input
-                        type="password"
-                        id="password"
-                        value={inputPassword}
-                        onChange={handlePasswordChange}
-                        required
-                    />
-                    <button type="submit">Submit</button>
-                </form>
+                <div className="password-page__container">
+                    <div className="password-page__text-box">
+                        <LockClosedIcon className="password-page__icon" />
+                        <h3 className="heading__100--bold">
+                            This Project Requires a Password
+                        </h3>
+                        <p>
+                            This project showcases one of my design system
+                            works. To gain full access, please enter the
+                            password provided to you. If you haven't received it
+                            or need assistance, feel free to contact me
+                            directly.
+                        </p>
+                    </div>
+                    <form
+                        className="password-page__form"
+                        onSubmit={handleSubmit}
+                    >
+                        <div className="password-page__input-container">
+                            <input
+                                className="password-page__input"
+                                type="password"
+                                id="password"
+                                value={inputPassword}
+                                onChange={handlePasswordChange}
+                                required
+                            />
+                            <label
+                                className="password-page__label"
+                                htmlFor="password"
+                            >
+                                Enter Password
+                            </label>
+                            {/* Conditionally render the error message */}
+                            {errorMessage && (
+                                <p className="password-page__error-message paragraph__300--bold">
+                                    {errorMessage}
+                                </p>
+                            )}
+                        </div>
+
+                        <Button
+                            buttonStyle="btn--primary"
+                            buttonSize="btn--large"
+                            type="submit"
+                        >
+                            Submit
+                        </Button>
+                    </form>
+                </div>
             )}
         </div>
     )

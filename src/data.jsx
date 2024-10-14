@@ -49,7 +49,7 @@ export const allPortfolio = [
         overview: 'Design System | Geospatial | Web | UI | Tokens',
         img: 'https://sebastiangonzalez.design/images/thumbnails/thumbnail-aleph2.webp',
         bgClass: 'card-background-aleph',
-        order: '2',
+        order: '1',
         protected: 'no',
     },
     {
@@ -59,7 +59,7 @@ export const allPortfolio = [
         overview: 'Design System | Cruisers | iOS | Android | Tokens',
         img: 'https://sebastiangonzalez.design/images/thumbnails/thumbnail-hub-design-system.webp',
         bgClass: 'card-background-hub',
-        order: '1',
+        order: '2',
         protected: 'yes',
     },
 ]
@@ -118,7 +118,7 @@ export const dsPortfolio = [
         overview: 'Design System | Cruisers | iOS | Android | Tokens',
         img: 'https://sebastiangonzalez.design/images/thumbnails/thumbnail-hub-design-system.webp',
         bgClass: 'card-background-hub',
-        order: '1',
+        order: '2',
         protected: 'yes',
     },
     {
@@ -128,7 +128,7 @@ export const dsPortfolio = [
         overview: 'Design System | Geospatial | Web | UI | Tokens',
         img: 'https://sebastiangonzalez.design/images/thumbnails/thumbnail-aleph2.webp',
         bgClass: 'card-background-aleph',
-        order: '2',
+        order: '1',
         protected: 'no',
     },
 ]

@@ -26,38 +26,6 @@ const CV = () => {
 
     return (
         <main className="container-cv">
-            <section className="name-cv">
-                <article className="name-cv__text-box">
-                    <motion.h1
-                        className="display__200--bold"
-                        initial="initial"
-                        animate="animate"
-                        exit="exit"
-                        variants={fadeUpVariants}
-                        transition={{
-                            type: 'spring',
-                            stiffness: 45,
-                        }}
-                    >
-                        Sebastian González
-                    </motion.h1>
-                    <motion.p
-                        className="heading__100--bold"
-                        initial="initial"
-                        animate="animate"
-                        exit="exit"
-                        variants={fadeUpVariants}
-                        transition={{
-                            delay: 0.03,
-                            type: 'spring',
-                            stiffness: 45,
-                        }}
-                    >
-                        Curriculum
-                    </motion.p>
-                </article>
-            </section>
-
             <motion.section
                 className="profile-cv"
                 initial="initial"
@@ -65,7 +33,6 @@ const CV = () => {
                 exit="exit"
                 variants={fadeUpVariants}
                 transition={{
-                    delay: 0.05,
                     type: 'spring',
                     stiffness: 45,
                 }}
@@ -83,7 +50,18 @@ const CV = () => {
                 </article>
             </motion.section>
 
-            <section className="experience-cv">
+            <motion.section
+                className="experience-cv"
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                variants={fadeUpVariants}
+                transition={{
+                    delay: 0.03,
+                    type: 'spring',
+                    stiffness: 45,
+                }}
+            >
                 <img className="icon" src={Experience} alt="experience" />
                 <article className="experience-cv__text-box">
                     <h2 className="heading__100--bold subtitle">Experience</h2>
@@ -159,9 +137,20 @@ const CV = () => {
                         </ul>
                     </div>
                 </article>
-            </section>
+            </motion.section>
 
-            <section className="education-cv">
+            <motion.section
+                className="education-cv"
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                variants={fadeUpVariants}
+                transition={{
+                    delay: 0.05,
+                    type: 'spring',
+                    stiffness: 45,
+                }}
+            >
                 <img className="icon" src={Education} alt="education" />
                 <article className="education-cv__text-box">
                     <h2 className="heading__100--bold subtitle">Education</h2>
@@ -206,7 +195,7 @@ const CV = () => {
                         <hr />
                     </div>
                 </article>
-            </section>
+            </motion.section>
 
             <section className="skills-cv">
                 <img className="icon" src={Skills} alt="" />
