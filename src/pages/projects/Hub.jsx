@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import './ProjectStyles.scss'
 import { Hub as HubDS } from '../../dataPortfolio'
 import BackButton from '../../components/BackButton'
+import ImageModalZoom from '../../components/ImageModalZoom'
 
 const Hub = () => {
     const [dataPortfolio] = useState(HubDS)
@@ -18,7 +19,7 @@ const Hub = () => {
                 <section key={dataPortfolio.id} className="modal__container">
                     <BackButton />
                     {/* Section porfolio header */}
-                    <div className="modal__header modal__header-aleph">
+                    <div className="modal__header modal__header-hub">
                         <div className="modal__header__text-box">
                             <h1 className="display__200--bold modal__header__title">
                                 {dataPortfolio.headTitle}
@@ -48,9 +49,9 @@ const Hub = () => {
                         <article className="project-info__container">
                             <img
                                 className="project-info__img"
-                                src="https://sebastiangonzalez.design/images/projects/aleph/project.png"
+                                src="https://sebastiangonzalez.design/images/projects/hub/project-hub.webp"
                                 loading="lazy"
-                                alt="Geospatial"
+                                alt="Design System"
                             />
                             <div className="project-info__text-box">
                                 <span className="paragraph__300--medium">
@@ -114,22 +115,23 @@ const Hub = () => {
                                 {dataPortfolio.whatIDidDescription}
                             </p>
                         </article>
-
-                        <picture className="modal__img-container">
-                            <source
-                                srcSet="https://sebastiangonzalez.design/images/projects/aleph/inventory.png"
-                                media="(max-width:900px)"
-                            />
-                            <img
-                                className="modal__img-complete"
-                                src="https://sebastiangonzalez.design/images/projects/aleph/inventory.png"
-                                loading="lazy"
-                                alt="inventory"
-                            />
-                        </picture>
+                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/hub/process.webp">
+                            <picture className="modal__img-container">
+                                <source
+                                    srcSet="https://sebastiangonzalez.design/images/projects/hub/process.webp"
+                                    media="(max-width:900px)"
+                                />
+                                <img
+                                    className="modal__img-complete"
+                                    src="https://sebastiangonzalez.design/images/projects/hub/process.webp"
+                                    loading="lazy"
+                                    alt="What I did?"
+                                />
+                            </picture>
+                        </ImageModalZoom>
                     </section>
 
-                    {/* Inteface Inventory */}
+                    {/* Interface Inventory */}
                     <section className="modal__template">
                         <article className="modal__secondary-text-box">
                             <h3 className="heading__100--bold modal__subtitle">
@@ -139,18 +141,20 @@ const Hub = () => {
                                 {dataPortfolio.inventoryDescription}
                             </p>
                         </article>
-                        <picture className="modal__img-container mb-20">
-                            <source
-                                srcSet="https://sebastiangonzalez.design/images/projects/aleph/Component-List.png"
-                                media="(max-width:900px)"
-                            />
-                            <img
-                                className="modal__img-complete"
-                                src="https://sebastiangonzalez.design/images/projects/aleph/Component-List.png"
-                                loading="lazy"
-                                alt="Structure"
-                            />
-                        </picture>
+                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/hub/inventory.webp">
+                            <picture className="modal__img-container mb-20">
+                                <source
+                                    srcSet="https://sebastiangonzalez.design/images/projects/hub/inventory.webp"
+                                    media="(max-width:900px)"
+                                />
+                                <img
+                                    className="modal__img-complete"
+                                    src="https://sebastiangonzalez.design/images/projects/hub/inventory.webp"
+                                    loading="lazy"
+                                    alt="Interface inventory"
+                                />
+                            </picture>
+                        </ImageModalZoom>
                     </section>
 
                     {/* Theme Implementation */}
@@ -163,6 +167,7 @@ const Hub = () => {
                                 {dataPortfolio.themeImplementationyDescription}
                             </p>
                         </article>
+
                         {/* Foundations */}
                         <article className="modal__secondary-text-box">
                             <h3 className="heading__100--bold modal__subtitle">
@@ -172,18 +177,20 @@ const Hub = () => {
                                 {dataPortfolio.foundationsDescription}
                             </p>
                         </article>
-                        <picture className="modal__img-container mb-20">
-                            <source
-                                srcSet="https://sebastiangonzalez.design/images/projects/aleph/Component-List.png"
-                                media="(max-width:900px)"
-                            />
-                            <img
-                                className="modal__img-complete"
-                                src="https://sebastiangonzalez.design/images/projects/aleph/Component-List.png"
-                                loading="lazy"
-                                alt="Structure"
-                            />
-                        </picture>
+                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/hub/foundations.webp">
+                            <picture className="modal__img-container mb-20">
+                                <source
+                                    srcSet="https://sebastiangonzalez.design/images/projects/hub/foundations.webp"
+                                    media="(max-width:900px)"
+                                />
+                                <img
+                                    className="modal__img-complete"
+                                    src="https://sebastiangonzalez.design/images/projects/hub/foundations.webp"
+                                    loading="lazy"
+                                    alt="Foundations"
+                                />
+                            </picture>
+                        </ImageModalZoom>
 
                         {/* Tokens */}
                         <article className="modal__secondary-text-box">
@@ -195,18 +202,20 @@ const Hub = () => {
                             </p>
                         </article>
 
-                        <picture className="modal__img-container mb-20">
-                            <source
-                                srcSet="https://sebastiangonzalez.design/images/projects/aleph/Component-List.png"
-                                media="(max-width:900px)"
-                            />
-                            <img
-                                className="modal__img-complete"
-                                src="https://sebastiangonzalez.design/images/projects/aleph/Component-List.png"
-                                loading="lazy"
-                                alt="Structure"
-                            />
-                        </picture>
+                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/hub/tokens.webp">
+                            <picture className="modal__img-container mb-20">
+                                <source
+                                    srcSet="https://sebastiangonzalez.design/images/projects/hub/tokens.webp"
+                                    media="(max-width:900px)"
+                                />
+                                <img
+                                    className="modal__img-complete"
+                                    src="https://sebastiangonzalez.design/images/projects/hub/tokens.webp"
+                                    loading="lazy"
+                                    alt="Design Tokens"
+                                />
+                            </picture>
+                        </ImageModalZoom>
 
                         {/* Components */}
                         <article className="modal__secondary-text-box">
@@ -218,18 +227,20 @@ const Hub = () => {
                             </p>
                         </article>
 
-                        <picture className="modal__img-container mb-20">
-                            <source
-                                srcSet="https://sebastiangonzalez.design/images/projects/aleph/Component-List.png"
-                                media="(max-width:900px)"
-                            />
-                            <img
-                                className="modal__img-complete"
-                                src="https://sebastiangonzalez.design/images/projects/aleph/Component-List.png"
-                                loading="lazy"
-                                alt="Structure"
-                            />
-                        </picture>
+                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/hub/components.webp">
+                            <picture className="modal__img-container mb-20">
+                                <source
+                                    srcSet="https://sebastiangonzalez.design/images/projects/hub/components.webp"
+                                    media="(max-width:900px)"
+                                />
+                                <img
+                                    className="modal__img-complete"
+                                    src="https://sebastiangonzalez.design/images/projects/hub/components.webp"
+                                    loading="lazy"
+                                    alt="Components Migration"
+                                />
+                            </picture>
+                        </ImageModalZoom>
 
                         {/* Pages */}
                         <article className="modal__secondary-text-box">
@@ -241,18 +252,20 @@ const Hub = () => {
                             </p>
                         </article>
 
-                        <picture className="modal__img-container mb-20">
-                            <source
-                                srcSet="https://sebastiangonzalez.design/images/projects/aleph/Component-List.png"
-                                media="(max-width:900px)"
-                            />
-                            <img
-                                className="modal__img-complete"
-                                src="https://sebastiangonzalez.design/images/projects/aleph/Component-List.png"
-                                loading="lazy"
-                                alt="Structure"
-                            />
-                        </picture>
+                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/hub/pages.webp">
+                            <picture className="modal__img-container mb-20">
+                                <source
+                                    srcSet="https://sebastiangonzalez.design/images/projects/hub/pages.webp"
+                                    media="(max-width:900px)"
+                                />
+                                <img
+                                    className="modal__img-complete"
+                                    src="https://sebastiangonzalez.design/images/projects/hub/pages.webp"
+                                    loading="lazy"
+                                    alt="Pages Migration"
+                                />
+                            </picture>
+                        </ImageModalZoom>
                     </section>
 
                     {/* <!-- Results --> */}
