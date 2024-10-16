@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Navigate } from 'react-router-dom'
+import Spinner from './Spinner'
 
 const ProtectedRoute = ({ children }) => {
     const [hasAccess, setHasAccess] = useState(false)
@@ -13,7 +14,7 @@ const ProtectedRoute = ({ children }) => {
     }, [])
 
     if (loading) {
-        return <div>Loading...</div> // Show a loading spinner while checking access
+        return <Spinner /> // Show a loading spinner while checking access
     }
 
     // If access is not granted, redirect to password page

@@ -45,6 +45,7 @@
         height: auto;
         width: 100%;
         object-fit: cover;
+        cursor: zoom-in;
 
         @include mq(medium) {
             height: auto;
@@ -150,6 +151,14 @@
                 rgba(20, 12, 3, 0.9)
             ),
             url(https://sebastiangonzalez.design/images/projects/aleph/hero-image-aleph.png);
+    }
+    &__header-hub {
+        background-image: linear-gradient(
+                to right bottom,
+                rgba(34, 34, 34, 0.9),
+                rgba(20, 12, 3, 0.9)
+            ),
+            url(https://sebastiangonzalez.design/images/projects/hub/hero-image-hub.webp);
     }
     /* ----------  End Head content styles ---------- */
 
