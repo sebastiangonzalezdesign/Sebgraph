@@ -29,16 +29,17 @@ const Contact = () => {
                 <div className="contact-container__heading">
                     <div className="section-portfolio__heading-container">
                         <h2 className="heading__100--bold section-portfolio__heading">
-                            Contact
+                            Let’s Connect
                             <span className="section-portfolio__heading-decoration"></span>
                         </h2>
                     </div>
                     <p className="paragraph__100--regular contact-container__paragraph">
-                        If you have a project you'd like to collaborate on or
-                        would like to learn more about my services, I'd love to
-                        hear from you. You can reach me by email clicking below.
-                        I'll get back to you as soon as possible. Let's create
-                        something great together!
+                        Got a project in mind or just curious to learn more
+                        about what I do? I’d love to chat! Whether you need help
+                        designing a product or building out a design system,
+                        feel free to drop me an email by clicking below. I’ll
+                        get back to you as soon as I can. Let’s create something
+                        amazing together!
                     </p>
                 </div>
                 <div className="section-portfolio__divider"></div>

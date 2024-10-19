@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './ProjectStyles.scss'
 import { Landing } from '../../dataPortfolio'
 import BackButton from '../../components/BackButton'
+import ImageModalZoom from '../../components/ImageModalZoom'
 
 const LandingPage = () => {
     const [dataPortfolio] = useState(Landing)
@@ -123,35 +124,39 @@ const LandingPage = () => {
                                 {dataPortfolio.midFidelityTitle}
                             </h3>
                         </article>
-                        <picture className="modal__img-container">
-                            <source
-                                srcSet="https://sebastiangonzalez.design/images/projects/landing-s21/mid-fidelity.png"
-                                media="(max-width:900px)"
-                            />
-                            <img
-                                className="modal__img-complete"
-                                src="https://sebastiangonzalez.design/images/projects/landing-s21/mid-fidelity.png"
-                                loading="lazy"
-                                alt="ideate"
-                            />
-                        </picture>
+                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/landing-s21/mid-fidelity.png">
+                            <picture className="modal__img-container">
+                                <source
+                                    srcSet="https://sebastiangonzalez.design/images/projects/landing-s21/mid-fidelity.png"
+                                    media="(max-width:900px)"
+                                />
+                                <img
+                                    className="modal__img-complete"
+                                    src="https://sebastiangonzalez.design/images/projects/landing-s21/mid-fidelity.png"
+                                    loading="lazy"
+                                    alt="ideate"
+                                />
+                            </picture>
+                        </ImageModalZoom>
                         <article className="modal__secondary-text-box">
                             <h3 className="heading__300--bold modal__subtitle">
                                 {dataPortfolio.highFidelityTitle}
                             </h3>
                         </article>
-                        <picture className="modal__img-container">
-                            <source
-                                srcSet="https://sebastiangonzalez.design/images/projects/landing-s21/high-fidelity.png"
-                                media="(max-width:900px)"
-                            />
-                            <img
-                                className="modal__img-complete"
-                                src="https://sebastiangonzalez.design/images/projects/landing-s21/high-fidelity.png"
-                                loading="lazy"
-                                alt="ideate"
-                            />
-                        </picture>
+                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/landing-s21/high-fidelity.png">
+                            <picture className="modal__img-container">
+                                <source
+                                    srcSet="https://sebastiangonzalez.design/images/projects/landing-s21/high-fidelity.png"
+                                    media="(max-width:900px)"
+                                />
+                                <img
+                                    className="modal__img-complete"
+                                    src="https://sebastiangonzalez.design/images/projects/landing-s21/high-fidelity.png"
+                                    loading="lazy"
+                                    alt="ideate"
+                                />
+                            </picture>
+                        </ImageModalZoom>
                     </section>
 
                     <section className="modal__template">
@@ -172,18 +177,20 @@ const LandingPage = () => {
                                 {dataPortfolio.brandContent}
                             </p>
                         </article>
-                        <picture className="modal__img-container mb-20">
-                            <source
-                                srcSet="https://sebastiangonzalez.design/images/projects/landing-s21/brand.png"
-                                media="(max-width:900px)"
-                            />
-                            <img
-                                className="modal__img-complete"
-                                src="https://sebastiangonzalez.design/images/projects/landing-s21/brand.png"
-                                loading="lazy"
-                                alt="ideate"
-                            />
-                        </picture>
+                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/landing-s21/brand.png">
+                            <picture className="modal__img-container mb-20">
+                                <source
+                                    srcSet="https://sebastiangonzalez.design/images/projects/landing-s21/brand.png"
+                                    media="(max-width:900px)"
+                                />
+                                <img
+                                    className="modal__img-complete"
+                                    src="https://sebastiangonzalez.design/images/projects/landing-s21/brand.png"
+                                    loading="lazy"
+                                    alt="ideate"
+                                />
+                            </picture>
+                        </ImageModalZoom>
 
                         <article className="modal__secondary-text-box">
                             <h3 className="heading__300--bold modal__subtitle">
@@ -193,18 +200,20 @@ const LandingPage = () => {
                                 {dataPortfolio.colorsContent}
                             </p>
                         </article>
-                        <picture className="modal__img-container mb-20">
-                            <source
-                                srcSet="https://sebastiangonzalez.design/images/projects/landing-s21/colors.png"
-                                media="(max-width:900px)"
-                            />
-                            <img
-                                className="modal__img-complete"
-                                src="https://sebastiangonzalez.design/images/projects/landing-s21/colors.png"
-                                loading="lazy"
-                                alt="ideate"
-                            />
-                        </picture>
+                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/landing-s21/colors.png">
+                            <picture className="modal__img-container mb-20">
+                                <source
+                                    srcSet="https://sebastiangonzalez.design/images/projects/landing-s21/colors.png"
+                                    media="(max-width:900px)"
+                                />
+                                <img
+                                    className="modal__img-complete"
+                                    src="https://sebastiangonzalez.design/images/projects/landing-s21/colors.png"
+                                    loading="lazy"
+                                    alt="ideate"
+                                />
+                            </picture>
+                        </ImageModalZoom>
 
                         <article className="modal__secondary-text-box">
                             <h3 className="heading__300--bold modal__subtitle">
@@ -214,18 +223,20 @@ const LandingPage = () => {
                                 {dataPortfolio.tipographyContent}
                             </p>
                         </article>
-                        <picture className="modal__img-container mb-20">
-                            <source
-                                srcSet="https://sebastiangonzalez.design/images/projects/landing-s21/tipography.png"
-                                media="(max-width:900px)"
-                            />
-                            <img
-                                className="modal__img-complete"
-                                src="https://sebastiangonzalez.design/images/projects/landing-s21/tipography.png"
-                                loading="lazy"
-                                alt="ideate"
-                            />
-                        </picture>
+                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/landing-s21/tipography.png">
+                            <picture className="modal__img-container mb-20">
+                                <source
+                                    srcSet="https://sebastiangonzalez.design/images/projects/landing-s21/tipography.png"
+                                    media="(max-width:900px)"
+                                />
+                                <img
+                                    className="modal__img-complete"
+                                    src="https://sebastiangonzalez.design/images/projects/landing-s21/tipography.png"
+                                    loading="lazy"
+                                    alt="ideate"
+                                />
+                            </picture>
+                        </ImageModalZoom>
 
                         <article className="modal__secondary-text-box">
                             <h3 className="heading__300--bold modal__subtitle">
@@ -235,18 +246,20 @@ const LandingPage = () => {
                                 {dataPortfolio.imageryContent}
                             </p>
                         </article>
-                        <picture className="modal__img-container-dark mb-20">
-                            <source
-                                srcSet="https://sebastiangonzalez.design/images/projects/landing-s21/imagery.png"
-                                media="(max-width:900px)"
-                            />
-                            <img
-                                className="modal__img-complete"
-                                src="https://sebastiangonzalez.design/images/projects/landing-s21/imagery.png"
-                                loading="lazy"
-                                alt="ideate"
-                            />
-                        </picture>
+                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/landing-s21/imagery.png">
+                            <picture className="modal__img-container-dark mb-20">
+                                <source
+                                    srcSet="https://sebastiangonzalez.design/images/projects/landing-s21/imagery.png"
+                                    media="(max-width:900px)"
+                                />
+                                <img
+                                    className="modal__img-complete"
+                                    src="https://sebastiangonzalez.design/images/projects/landing-s21/imagery.png"
+                                    loading="lazy"
+                                    alt="ideate"
+                                />
+                            </picture>
+                        </ImageModalZoom>
 
                         <article className="modal__secondary-text-box">
                             <h3 className="heading__300--bold modal__subtitle">
@@ -256,30 +269,34 @@ const LandingPage = () => {
                                 {dataPortfolio.componentsContent}
                             </p>
                         </article>
-                        <picture className="modal__img-container-dark mb-20">
-                            <source
-                                srcSet="https://sebastiangonzalez.design/images/projects/landing-s21/components.png"
-                                media="(max-width:900px)"
-                            />
-                            <img
-                                className="modal__img-complete"
-                                src="https://sebastiangonzalez.design/images/projects/landing-s21/components.png"
-                                loading="lazy"
-                                alt="ideate"
-                            />
-                        </picture>
-                        <picture className="modal__img-container-dark mb-20">
-                            <source
-                                srcSet="https://sebastiangonzalez.design/images/projects/landing-s21/icons.png"
-                                media="(max-width:900px)"
-                            />
-                            <img
-                                className="modal__img-complete"
-                                src="https://sebastiangonzalez.design/images/projects/landing-s21/icons.png"
-                                loading="lazy"
-                                alt="ideate"
-                            />
-                        </picture>
+                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/landing-s21/components.png">
+                            <picture className="modal__img-container-dark mb-20">
+                                <source
+                                    srcSet="https://sebastiangonzalez.design/images/projects/landing-s21/components.png"
+                                    media="(max-width:900px)"
+                                />
+                                <img
+                                    className="modal__img-complete"
+                                    src="https://sebastiangonzalez.design/images/projects/landing-s21/components.png"
+                                    loading="lazy"
+                                    alt="ideate"
+                                />
+                            </picture>
+                        </ImageModalZoom>
+                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/landing-s21/icons.png">
+                            <picture className="modal__img-container-dark mb-20">
+                                <source
+                                    srcSet="https://sebastiangonzalez.design/images/projects/landing-s21/icons.png"
+                                    media="(max-width:900px)"
+                                />
+                                <img
+                                    className="modal__img-complete"
+                                    src="https://sebastiangonzalez.design/images/projects/landing-s21/icons.png"
+                                    loading="lazy"
+                                    alt="ideate"
+                                />
+                            </picture>
+                        </ImageModalZoom>
                     </section>
 
                     <section className="modal__template">
@@ -292,18 +309,20 @@ const LandingPage = () => {
                             </p>
                         </article>
 
-                        <picture className="modal__img-container mb-20">
-                            <source
-                                srcSet="https://sebastiangonzalez.design/images/projects/landing-s21/final-design.png"
-                                media="(max-width:900px)"
-                            />
-                            <img
-                                className="modal__img-complete"
-                                src="https://sebastiangonzalez.design/images/projects/landing-s21/final-design.png"
-                                loading="lazy"
-                                alt="ideate"
-                            />
-                        </picture>
+                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/landing-s21/final-design.png">
+                            <picture className="modal__img-container mb-20">
+                                <source
+                                    srcSet="https://sebastiangonzalez.design/images/projects/landing-s21/final-design.png"
+                                    media="(max-width:900px)"
+                                />
+                                <img
+                                    className="modal__img-complete"
+                                    src="https://sebastiangonzalez.design/images/projects/landing-s21/final-design.png"
+                                    loading="lazy"
+                                    alt="ideate"
+                                />
+                            </picture>
+                        </ImageModalZoom>
 
                         <article className="modal__secondary-text-box">
                             <h3 className="heading__300--bold modal__subtitle">
@@ -313,19 +332,20 @@ const LandingPage = () => {
                                 {dataPortfolio.specificationsContent}
                             </p>
                         </article>
-
-                        <picture className="modal__img-container mb-20">
-                            <source
-                                srcSet="https://sebastiangonzalez.design/images/projects/landing-s21/specifications.png"
-                                media="(max-width:900px)"
-                            />
-                            <img
-                                className="modal__img-complete"
-                                src="https://sebastiangonzalez.design/images/projects/landing-s21/specifications.png"
-                                loading="lazy"
-                                alt="ideate"
-                            />
-                        </picture>
+                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/landing-s21/specifications.png">
+                            <picture className="modal__img-container mb-20">
+                                <source
+                                    srcSet="https://sebastiangonzalez.design/images/projects/landing-s21/specifications.png"
+                                    media="(max-width:900px)"
+                                />
+                                <img
+                                    className="modal__img-complete"
+                                    src="https://sebastiangonzalez.design/images/projects/landing-s21/specifications.png"
+                                    loading="lazy"
+                                    alt="ideate"
+                                />
+                            </picture>
+                        </ImageModalZoom>
 
                         <article className="modal__secondary-text-box">
                             <h3 className="heading__300--bold modal__subtitle">
@@ -335,18 +355,23 @@ const LandingPage = () => {
                                 {dataPortfolio.viewContent}
                             </p>
                         </article>
-                        <picture className="modal__img-container mb-20">
-                            <source
-                                srcSet="https://sebastiangonzalez.design/images/projects/landing-s21/360.png"
-                                media="(max-width:900px)"
-                            />
-                            <img
-                                className="modal__img-complete"
-                                src="https://sebastiangonzalez.design/images/projects/landing-s21/360.png"
-                                loading="lazy"
-                                alt="ideate"
-                            />
-                        </picture>
+                        <ImageModalZoom
+                            src="https://sebastiangonzalez.design/images/projects/landing-s21/360.png"
+                            loading="lazy"
+                        >
+                            <picture className="modal__img-container mb-20">
+                                <source
+                                    srcSet="https://sebastiangonzalez.design/images/projects/landing-s21/360.png"
+                                    media="(max-width:900px)"
+                                />
+                                <img
+                                    className="modal__img-complete"
+                                    src="https://sebastiangonzalez.design/images/projects/landing-s21/360.png"
+                                    loading="lazy"
+                                    alt="ideate"
+                                />
+                            </picture>
+                        </ImageModalZoom>
 
                         <article className="modal__secondary-text-box">
                             <h3 className="heading__300--bold modal__subtitle">
@@ -356,18 +381,20 @@ const LandingPage = () => {
                                 {dataPortfolio.compareContent}
                             </p>
                         </article>
-                        <picture className="modal__img-container mb-20">
-                            <source
-                                srcSet="https://sebastiangonzalez.design/images/projects/landing-s21/compare.png"
-                                media="(max-width:900px)"
-                            />
-                            <img
-                                className="modal__img-complete"
-                                src="https://sebastiangonzalez.design/images/projects/landing-s21/compare.png"
-                                loading="lazy"
-                                alt="ideate"
-                            />
-                        </picture>
+                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/landing-s21/compare.png">
+                            <picture className="modal__img-container mb-20">
+                                <source
+                                    srcSet="https://sebastiangonzalez.design/images/projects/landing-s21/compare.png"
+                                    media="(max-width:900px)"
+                                />
+                                <img
+                                    className="modal__img-complete"
+                                    src="https://sebastiangonzalez.design/images/projects/landing-s21/compare.png"
+                                    loading="lazy"
+                                    alt="ideate"
+                                />
+                            </picture>
+                        </ImageModalZoom>
                     </section>
 
                     <picture>
