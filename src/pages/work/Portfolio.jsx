@@ -27,6 +27,32 @@ const Portfolio = forwardRef((props, ref) => {
 
     // Update portfolio data based on the selected tab
     useEffect(() => {
+        let selectedPortfolio
+
+        switch (selected) {
+            case 'all':
+                selectedPortfolio = allPortfolio
+                break
+            case 'ui/visual':
+                selectedPortfolio = uiVisualPortfolio
+                break
+            case 'ds':
+                selectedPortfolio = dsPortfolio
+                break
+            case 'code':
+                selectedPortfolio = codePortfolio
+                break
+            default:
+                selectedPortfolio = allPortfolio
+        }
+
+        // Filter projects based on the showProject property
+        const visibleProjects = selectedPortfolio.filter(
+            (project) => project.showProject === 'yes'
+        )
+        setData(visibleProjects)
+    }, [selected])
+    /*     useEffect(() => {
         switch (selected) {
             case 'all':
                 setData(allPortfolio)
@@ -43,7 +69,7 @@ const Portfolio = forwardRef((props, ref) => {
             default:
                 setData(allPortfolio)
         }
-    }, [selected])
+    }, [selected]) */
 
     // Delay click Tab
     const handleTabChange = (id) => {
@@ -87,6 +113,7 @@ const Portfolio = forwardRef((props, ref) => {
 
                 <article className="section-portfolio__container-grid">
                     {data
+                        .filter((d) => d.showProject === 'yes')
                         .sort((a, b) => a.order - b.order)
                         .map((d) => (
                             <Link

@@ -3,9 +3,12 @@ import './ProjectStyles.scss'
 import { Hub as HubDS } from '../../dataPortfolio'
 import BackButton from '../../components/BackButton'
 import ImageModalZoom from '../../components/ImageModalZoom'
+import { Helmet } from 'react-helmet-async'
 
 const Hub = () => {
     const [dataPortfolio] = useState(HubDS)
+    // Example condition: Check if the page is password-protected or private
+    const isPrivatePage = true
 
     useEffect(() => {
         // Clear the localStorage after the user accesses the page
@@ -14,6 +17,12 @@ const Hub = () => {
 
     return (
         <>
+            <Helmet>
+                {/* Conditionally apply the noindex meta tag */}
+                {isPrivatePage && <meta name="robots" content="noindex" />}
+                <title>{dataPortfolio[0]?.headTitle || 'Hub Project'}</title>
+            </Helmet>
+
             {dataPortfolio.map((dataPortfolio) => (
                 /* CONTAINER */
                 <section key={dataPortfolio.id} className="modal__container">

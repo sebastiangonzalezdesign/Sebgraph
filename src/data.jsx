@@ -9,6 +9,7 @@ export const allPortfolio = [
         bgClass: 'card-background-solve',
         order: '3',
         protected: 'no',
+        showProject: 'yes',
     },
     {
         id: 2,
@@ -19,6 +20,7 @@ export const allPortfolio = [
         bgClass: 'card-background-av',
         order: '4',
         protected: 'no',
+        showProject: 'yes',
     },
     {
         id: 3,
@@ -29,6 +31,7 @@ export const allPortfolio = [
         bgClass: 'card-background-essilor',
         order: '5',
         protected: 'no',
+        showProject: 'yes',
     },
 
     {
@@ -40,6 +43,7 @@ export const allPortfolio = [
         bgClass: 'card-background-landing',
         order: '6',
         protected: 'no',
+        showProject: 'yes',
     },
 
     {
@@ -51,6 +55,7 @@ export const allPortfolio = [
         bgClass: 'card-background-aleph',
         order: '1',
         protected: 'no',
+        showProject: 'yes',
     },
     {
         id: 6,
@@ -61,6 +66,7 @@ export const allPortfolio = [
         bgClass: 'card-background-hub',
         order: '2',
         protected: 'yes',
+        showProject: 'no',
     },
 ]
 
@@ -74,6 +80,7 @@ export const uiVisualPortfolio = [
         bgClass: 'card-background-solve',
         order: '2',
         protected: 'no',
+        showProject: 'yes',
     },
     {
         id: 2,
@@ -84,6 +91,7 @@ export const uiVisualPortfolio = [
         bgClass: 'card-background-av',
         order: '3',
         protected: 'no',
+        showProject: 'yes',
     },
     {
         id: 3,
@@ -94,6 +102,7 @@ export const uiVisualPortfolio = [
         bgClass: 'card-background-essilor',
         order: '4',
         protected: 'no',
+        showProject: 'yes',
     },
 ]
 
@@ -107,6 +116,7 @@ export const codePortfolio = [
         bgClass: 'card-background-solve',
         order: '2',
         protected: 'no',
+        showProject: 'yes',
     },
 ]
 
@@ -120,6 +130,7 @@ export const dsPortfolio = [
         bgClass: 'card-background-hub',
         order: '2',
         protected: 'yes',
+        showProject: 'no',
     },
     {
         id: 5,
@@ -130,5 +141,6 @@ export const dsPortfolio = [
         bgClass: 'card-background-aleph',
         order: '1',
         protected: 'no',
+        showProject: 'yes',
     },
 ]
