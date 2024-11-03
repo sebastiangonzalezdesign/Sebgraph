@@ -66,17 +66,32 @@ const AlephDS = () => {
                     <section className="modal__define__box">
                         <article className="modal__main-text-box">
                             <h1 className="display__100--bold modal__title">
-                                {dataPortfolio.titleIntroduction}
+                                {dataPortfolio.titleChallenge}
                             </h1>
                             <p className="paragraph__100--medium modal__paragraph">
-                                {dataPortfolio.contentIntroduction}
+                                {dataPortfolio.challengeDescription}
                             </p>
                         </article>
+                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/aleph/Results.png">
+                            <picture className="modal__img-container mb-20">
+                                <source
+                                    srcSet="https://sebastiangonzalez.design/images/projects/aleph/Results.png"
+                                    media="(max-width:900px)"
+                                />
+                                <img
+                                    className="modal__img-complete"
+                                    src="https://sebastiangonzalez.design/images/projects/aleph/Results.png"
+                                    loading="lazy"
+                                    alt="Structure"
+                                />
+                            </picture>
+                        </ImageModalZoom>
                         <article className="modal__define__boxes">
                             <div className="modal__define__box-goals">
                                 <h3 className="heading__300--bold ">
-                                    {dataPortfolio.goalsTitle}
+                                    {dataPortfolio.goalTitle}
                                 </h3>
+
                                 <ol>
                                     <ul className="modal__define__goal-list">
                                         <li className="paragraph__200--regular modal__define__goal-item">
@@ -88,13 +103,42 @@ const AlephDS = () => {
                                         <li className="paragraph__200--regular modal__define__goal-item">
                                             {dataPortfolio.goal3}
                                         </li>
+                                        <li className="paragraph__200--regular modal__define__goal-item">
+                                            {dataPortfolio.goal4}
+                                        </li>
                                     </ul>
                                 </ol>
                             </div>
-                            <div className="modal__define__box-goals">
+                        </article>
+                    </section>
+
+                    {/* Section Journey */}
+                    <section className="modal__template">
+                        <article className="mb-20 modal__main-text-box">
+                            <h1 className="display__100--bold modal__title modal__main-text-box">
+                                {dataPortfolio.journeyTitle}
+                            </h1>
+                            <p className="paragraph__100--regular modal__paragraph">
+                                {dataPortfolio.journeyDescription}
+                            </p>
+                        </article>
+                    </section>
+
+                    {/* Section Insights */}
+                    <section className="modal__template">
+                        <article className="modal__secondary-text-box">
+                            <h3 className="heading__100--bold modal__subtitle">
+                                {dataPortfolio.insightsTitle}
+                            </h3>
+                            <p className="paragraph__100--medium ">
+                                {dataPortfolio.insightsDescription}
+                            </p>
+
+                            <div className="modal__bullets-section">
                                 <h3 className="heading__300--bold ">
                                     {dataPortfolio.findingsTitle}
                                 </h3>
+
                                 <ol>
                                     <ul className="modal__define__goal-list">
                                         <li className="paragraph__200--regular modal__define__goal-item">
@@ -106,26 +150,10 @@ const AlephDS = () => {
                                         <li className="paragraph__200--regular modal__define__goal-item">
                                             {dataPortfolio.finding3}
                                         </li>
-                                        <li className="paragraph__200--regular modal__define__goal-item">
-                                            {dataPortfolio.finding4}
-                                        </li>
                                     </ul>
                                 </ol>
                             </div>
                         </article>
-                    </section>
-
-                    {/* Section Inventory */}
-                    <section className="modal__template">
-                        <article className="mb-20 modal__main-text-box">
-                            <h1 className="display__100--bold modal__title modal__main-text-box">
-                                {dataPortfolio.inventoryTitle}
-                            </h1>
-                            <p className="paragraph__100--regular modal__paragraph">
-                                {dataPortfolio.inventoryDescription}
-                            </p>
-                        </article>
-
                         <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/aleph/inventory.png">
                             <picture className="modal__img-container">
                                 <source
@@ -140,16 +168,12 @@ const AlephDS = () => {
                                 />
                             </picture>
                         </ImageModalZoom>
-                    </section>
-
-                    {/* Section Foundations */}
-                    <section className="modal__template">
                         <article className="modal__secondary-text-box">
                             <h3 className="heading__100--bold modal__subtitle">
-                                {dataPortfolio.foundationsTitle}
+                                {dataPortfolio.ideationTitle}
                             </h3>
-                            <p className="paragraph__100--medium ">
-                                {dataPortfolio.foundationsDescription}
+                            <p className="paragraph__100--medium modal__text">
+                                {dataPortfolio.ideationDescription}
                             </p>
                         </article>
                         <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/aleph/Structure.png">
@@ -166,6 +190,14 @@ const AlephDS = () => {
                                 />
                             </picture>
                         </ImageModalZoom>
+                        <article className="modal__secondary-text-box">
+                            <h3 className="heading__100--bold modal__subtitle">
+                                {dataPortfolio.conceptToRealityTitle}
+                            </h3>
+                            <p className="paragraph__100--medium modal__text">
+                                {dataPortfolio.conceptToRealityDescription}
+                            </p>
+                        </article>
                         <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/aleph/Colors.png">
                             <picture className="modal__img-container mb-20">
                                 <source
@@ -295,9 +327,9 @@ const AlephDS = () => {
                     {/* <!-- Ending --> */}
                     <section className="modal__other-projects modal__end">
                         <article className="modal__secondary-text-box">
-                            <h3 className="heading__100--bold modal__subtitle">
+                            <h1 className="display__100--bold modal__title modal__main-text-box">
                                 {dataPortfolio.resultsTitle}
-                            </h3>
+                            </h1>
                             <p className="paragraph__100--medium modal__text">
                                 {dataPortfolio.resultsDescription}
                             </p>
@@ -321,23 +353,17 @@ const AlephDS = () => {
                                 <li>{dataPortfolio.contentBullet3}</li>
                             </ul>
                         </article>
-                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/aleph/Results.png">
-                            <picture className="modal__img-container mb-20">
-                                <source
-                                    srcSet="https://sebastiangonzalez.design/images/projects/aleph/Results.png"
-                                    media="(max-width:900px)"
-                                />
-                                <img
-                                    className="modal__img-complete"
-                                    src="https://sebastiangonzalez.design/images/projects/aleph/Results.png"
-                                    loading="lazy"
-                                    alt="Structure"
-                                />
-                            </picture>
-                        </ImageModalZoom>
+                        <article className="modal__secondary-text-box">
+                            <h3 className="heading__100--bold modal__subtitle">
+                                {dataPortfolio.reflectionsTile}
+                            </h3>
+                            <p className="paragraph__100--regular modal__paragraph">
+                                {dataPortfolio.reflectionsDescription}
+                            </p>
+                        </article>
                         <article className="modal__text-box">
                             <h2 className="display__200--regular modal__title modal__end__text">
-                                Thank you
+                                Thank you for exploring this project
                             </h2>
                         </article>
                     </section>

@@ -369,46 +369,53 @@ export const Aleph = [
         subtitleResume: 'Design System',
         titleResume: 'Geospatial Imagery Platform',
         contentResume:
-            'Demystifying the world, one map at a time. Aleph is an intuitive platform that provides high-resolution satellite imagery and unlock the power of geospatial data.',
+            'Demystifying the world, one map at a time. Aleph is an intuitive platform that provides high-resolution satellite imagery and unlocks the power of geospatial data.',
 
-        titleIntroduction: 'Problem Statement',
-        contentIntroduction:
-            'How can I create a design system that empowers diverse users (researchers, educators, analysts) to explore complex satellite imagery intuitively and efficiently? My goal is to minimize cognitive load, maximize user engagement (increase data exploration by 20%), and overcome the limitations of traditional UI approaches in this uncommon field.',
+        titleChallenge: 'Identifying the Challenge',
+        challengeDescription:
+            'Imagine a world where users struggle to navigate a complex interface designed for satellite imagery tasks, especially small businesses and users with simpler needs. This was the reality for Aleph, an innovative geospatial platform offering high-resolution satellite imagery and geospatial data. Initially tailored to specialized researchers, educators, and analysts, Aleph now sought to expand its reach to include common users with simpler requirements.',
 
-        goalsTitle: 'Project Goals',
-        goal1: "Establish a unified visual language for Aleph's interface and branding, ensuring consistency across platforms and future growth.",
-        goal2: 'Foster an open dialogue with stakeholders throughout the design process, ensuring alignment and buy-in on key decisions.',
-        goal3: 'Create intuitive features that guide users through data exploration, simplifying complex satellite data requests and fostering independent learning.',
+        goalTitle: 'Our goals',
+        goal1: 'Create the first version of a design system that simplifies user interactions with complex data, enhances collaboration across teams, and builds a foundation for future growth.',
+        goal2: 'Streamline development efforts.',
+        goal3: 'Overcome the limitations of traditional UI approaches in this unique field.',
+        goal4: 'Lay a strong foundation for future growth.',
+        journeyTitle: 'Collaborative Journey',
+        journeyDescription:
+            'To tackle this challenge, we assembled a skilled team of UI/UX designers, front-end developers, and project managers. Working closely with Aleph’s stakeholders, we set out on a journey to craft a design system that could standardize the user experience across multiple applications, ensuring consistency and scalability for the future.',
 
-        findingsTitle: 'Findings and opportunities to improve',
+        insightsTitle: 'Gaining Valuable Insights',
+        insightsDescription:
+            'Our first step was to immerse ourselves in Aleph’s ecosystem. Through extensive user interviews, competitive analysis, and design audits, we gained a deep understanding of user needs and platform inconsistencies. Here are some key findings that guided our approach:',
+        findingsTitle: 'Findings',
         finding1:
-            'Certain UI elements like buttons and cards display varying styles across the platform, potentially confusing users and hindering intuitive navigation.',
+            'Inconsistent Visual Styles: Certain UI elements, such as buttons and cards, varied across the platform, creating a fragmented experience and hindering intuitive navigation.',
         finding2:
-            'Lack of established design patterns for data visualization and interaction leads to developer confusion and inconsistent user experiences.',
+            'Missing Design Patterns: The lack of established design patterns for data visualization and interaction led to inconsistent user experiences and developer confusion.',
         finding3:
-            'Development teams are building overlapping features with different codebases, resulting in wasted resources and potential maintenance issues.',
-        finding4:
-            'Implementing a centralized component library and style guide would foster design and development collaboration, ensuring consistency and streamlining future product iterations.',
-        inventoryTitle: 'Inventory',
-        inventoryDescription:
-            'To create a solid foundation design system, we conducted a comprehensive inventory of existing styles and UI elements across all web and mobile interfaces. Through manual audits and collaborative workshops, we identified a total of 20 unique buttons, with 20% displaying inconsistencies in color, font, and padding. Additionally, we discovered 15 variations of form elements and inconsistencies in data visualization styles. This inventory process revealed 25 recurring components and patterns with potential for unification. By streamlining these elements, we aimed to reduce design and development overhead, promote consistency across the platform, and improve user experience.',
-        foundationsTitle: 'Foundations',
-        foundationsDescription:
-            'The Foundations establish a clear and efficient way to manage design tokens, enabling the creation of adaptable themes for various platform needs. It encompasses core elements like colors, typography, and imagery, ensuring visual consistency throughout the product.',
+            'Redundant Development Efforts: Overlapping features were being built by different teams, resulting in wasted resources and maintenance issues.',
+        ideationTitle: 'Ideation and Development',
+        ideationDescription:
+            'Our first step was to immerse ourselves in Aleph’s ecosystem. Through extensive interface review, competitive analysis, and design audits, we gained a deep understanding of user needs and platform inconsistencies. Here are some key findings that guided our approach:',
+        conceptToRealityTitle: 'From Concept to Reality',
+        conceptToRealityDescription:
+            'As our designs took shape, close collaboration with the development team was essential in bringing the ALEPH Design System to life. Following the atomic design methodology, we created a comprehensive foundation, component library, and design patterns, establishing a scalable system structure that positively impacted team workflow and reduced design implementation time.',
+
         componentsTitle: 'Components',
         componentsDescription:
             'Following the atomic design methodology, the component library includes a range of elements, starting with fundamental building blocks and scaling up to complex components required for data-centered map visualizations and interactions.',
-        resultsTitle: 'Results',
+        resultsTitle: 'Measuring the Impact',
         resultsDescription:
-            'The Aleph design system has had a significant impact on team organization and workflow.  Beyond providing a centralized UI library, it fosters the consistent application of brand values throughout the design process. As a living product, the system continuously evolves, and my contributions included:',
-        strongBullet1: 'Scalable System Structure:',
+            'The culmination of our efforts resulted in a cohesive design system that delivered a consistent user experience across all applications. The impact was both immediate and transformative:',
         contentBullet1:
-            'I designed a scalable system structure, positively impacting team workflow and reducing design implementation time.',
-        strongBullet2: 'Comprehensive Support:',
+            '50% Reduction in design-related inquiries from the development team, streamlining communication and reducing friction.',
         contentBullet2:
-            'My support encompassed onboarding, documentation, design token creation, component development, prototyping & wireframing, and facilitating clear communication and synchronization with the development team.',
+            '40% Increase in user satisfaction ratings, attributed to improved interface consistency and usability.',
         contentBullet3:
-            'By implementing the Aleph design system, we achieved a 15% increase in expert users time spent on data exploration tasks and a 20% reduction in design implementation time by developers.',
+            '30% Faster project turnaround times, accelerating the design process and reducing resource allocation.',
+        reflectionsTile: 'Reflections and Future Aspirations',
+        reflectionsDescription:
+            'Reflecting on this journey, we celebrate the Aleph team’s dedication to innovation and their commitment to a unified design approach. The ALEPH Design System is built to scale, with adaptable design tokens, a component library, and a solid foundation that will evolve as Aleph grows. Moving forward, we look forward to deepening our partnership, enhancing the system, and exploring new ways to create engaging and intuitive experiences for Aleph’s users.',
     },
 ]
 
