@@ -113,41 +113,40 @@ export const AV = [
         subtitleResume: 'APP',
         titleResume: 'Context',
         contentResume:
-            'AV Expert is an app launched for promoters looking for a solution that provide them relevant information of audio and video products, this app allow the user to control and interact easily bringing the tools for a successful sale and communication with the customer.',
+            'Samsung promoters face challenges accessing quick, reliable information about audio and video products, affecting their ability to assist customers effectively. AV Expert was designed to equip promoters with immediate access to product details, tips, and tech specifications, streamlining their sales process and improving customer communication.',
 
-        titleIntroduction: ' Project intro',
-        contentIntroduction:
-            'At the beginning of the project we had the opportunity to talk with promoters and identify the needs at the time of sales, they told us about their process and what tools are important to have a better communication with the costumer, we defined the goals and found the following thoughts of the costumers:',
+        titleOverview: ' Project Overview',
+        contentOverview:
+            'In early discussions with promoters, we uncovered their need for a tool that could simplify product details, technical specs, and sales tips at their fingertips. Based on these insights, we set goals to develop a tool that empowers promoters with the following:',
 
         goalsTitle: 'Project Goals',
-        goal1: 'To become an useful tool to the Samsung promoters.',
-        goal2: 'Develop an intuitive interface with relevant information.',
-        goal3: 'Provide technical information about the different products and releases.',
-        goal4: 'Create the selling tips section that allow the promoter to reinforce the sales speech.',
+        goal1: 'Equip Samsung promoters with an intuitive app for seamless sales support.',
+        goal2: 'Organize and display technical product information and updates.',
+        goal3: 'Provide tips to reinforce confident customer interactions and pitches.',
 
-        customerTitle: 'Customer Mindsets',
-        user1Title: 'New promoters | “i want to know more about products””',
+        customerTitle: 'Promoter Needs',
+        user1Title: 'New promoters | I want to learn about products quickly.',
         user1Content:
-            'When they have doubts about products, they ask to their coworkers but  they want a tool to guide them in tech features.',
-        user2Title: 'Experimented promoters | “a digital guide would be useful',
+            'Newer promoters often rely on colleagues for product knowledge but desired a more accessible, reliable tool to reference technical details.',
+        user2Title:
+            'Experimented promoters | An easy digital reference would be invaluable.',
         user2Content:
-            'Sometimes the technical references are limited to a printed guide, difficult to handle and to search quickly.',
+            'Experienced promoters found traditional printed guides unwieldy and wanted an easily searchable digital resource.',
 
-        ideateTitle: 'Ideate',
+        ideateTitle: 'Ideation and Key Insights',
         ideateContent:
-            'We used different research tools with the UX team such user journeys, user empathy and interviews to help to understand their needs, motivations and frustrations, based on it, we have identified relevant points to improve.',
+            'Collaborating with the UX team, we used user journeys, empathy mapping, and interviews to uncover essential promoter needs, shaping our solution to enhance product clarity, provide keyword accessibility for technical terms, and create an intuitive navigation system for swift product searches.',
 
-        title2: 'User persona',
+        visualTitle: 'Visual and Design System',
+        visualDescription:
+            'The final Android app enables promoters to instantly access all AV product information they need for efficient, informed sales conversations. Feedback indicates the app has become a trusted resource for promoters to improve their sales pitches and customer support.',
+        wireframesTitle: 'Visualizing the Journey',
+        wireframesDescription:
+            'In this phase, we crafted wireframes to map out the app’s flow and user interactions, prioritizing an intuitive layout to support promoters in quick and informed customer engagements. The prototypes provided a foundation to test navigation and feature accessibility, gathering feedback that refined the design.',
 
-        title4: 'User Flow',
-
-        title5: 'Wireframes',
-        midFidelityTitle: 'Mid Fidelity',
-        highFidelityTitle: 'High fidelity',
-
-        title7: 'Style guide',
+        styleTitle: 'Ensuring Consistency and Brand Alignment',
         styleContent:
-            'For the design system, I was based on brand values and developed a colour palette that identified the av category with a dark pattern with a gold color contrast that highlighted relevant information, also I defined a type scale with the Samsung fonts and developed components with these rules that provide consistency to the flow.',
+            'A design system was developed based on brand values, with a dark color scheme and gold accents representing the premium AV category. We defined a cohesive typography scale and built a component library to streamline collaboration with developers and ensure consistency across the interface, ultimately enhancing usability and alignment with the AV Expert brand.',
         brandTitle: 'Brand',
         brandContent:
             'AV Expert is a brand created for the digital solution for the promoters, the brand turns in an expert platform that contains all technology features in audio and video products.',
@@ -156,8 +155,8 @@ export const AV = [
         colorsContent:
             'The definition of the scheme colors was based in the current lineup for this category products, the dark mode theme is important also to transmit the quality and sobriety of the new line and design of products.',
 
-        tipographyTitle: 'Tipography',
-        tipographyContent:
+        typographyTitle: 'Typography',
+        typographyContent:
             'The type scale is defined with the official Samsung font Sharp for titles and for content text Samsung One, the font provide the consistency and maintain the hierarchy with sections and actions. ',
 
         imageryTitle: 'Imagery & illustrations',
@@ -172,21 +171,26 @@ export const AV = [
         animationsContent:
             'The animations with icons provide feedback to users about a current action or state, in this case the animations were used to empty states and success or error tasks.',
 
+        featuresTitle: 'Core Features',
+
         title9: 'Final design',
         finalContent:
             'Finally we presented an Android App that meet the requirements and is an useful referent for all promoters in the sales time.',
 
-        keywordsTitle: 'Keywords',
+        keywordsTitle: 'Keywords Feature',
         keywordsContent:
-            'Sometimes the technical terms about different product categories are complex for the promoters, based on that we used keywords in chips that explains the topics deeply and show products and specific speeches related with each of the products.',
+            'Concise explanations of technical terms, allowing promoters to understand and communicate product details confidently.',
 
-        advancedTitle: 'Advanced search',
+        advancedTitle: 'Advanced Search Feature',
         advancedContent:
-            'Searching for products features represents a relevant point in the sales process, for this reason we categorize the words with specific products, keywords and family products, providing to the promoter different possibilities for quick search, besides that we used a tab bar button to faster access.',
+            'A streamlined search experience categorizes keywords by product, family, and category, allowing rapid access to information.',
 
-        productTitle: 'Product library',
+        productTitle: 'Product Library Feature',
         productContent:
-            'The product library can be access through different sections in the app allowing the promoter search for all information about  references, the unique code named SKU and images to a visual reference also the technological features and technical features.',
+            'A digital product database organized for quick lookups, including images, SKUs, and technical specs.',
+        finalDesignTitle: 'Final Design and Impact',
+        finalDesignDescription:
+            'The final Android app enables promoters to instantly access all AV product information they need for efficient, informed sales conversations. Feedback indicates the app has become a trusted resource for promoters to improve their sales pitches and customer support.',
     },
 ]
 

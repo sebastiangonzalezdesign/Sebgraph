@@ -101,14 +101,14 @@ const AvExpert = () => {
                         </article>
                     </section>
 
-                    {/* <!-- Section define --> */}
+                    {/* <!-- Section Project Overview --> */}
                     <section className="modal__define__box">
                         <article className="modal__main-text-box">
                             <h1 className="display__100--bold modal__title">
-                                {dataPortfolio.titleIntroduction}
+                                {dataPortfolio.titleOverview}
                             </h1>
                             <p className="paragraph__100--medium modal__paragraph">
-                                {dataPortfolio.contentIntroduction}
+                                {dataPortfolio.contentOverview}
                             </p>
                         </article>
                         <article className="modal__define__boxes">
@@ -127,9 +127,6 @@ const AvExpert = () => {
                                         <li className="paragraph__200--medium modal__define__goal-item">
                                             {dataPortfolio.goal3}
                                         </li>
-                                        <li className="paragraph__200--medium modal__define__goal-item">
-                                            {dataPortfolio.goal4}
-                                        </li>
                                     </ul>
                                 </ol>
                             </div>
@@ -139,41 +136,49 @@ const AvExpert = () => {
                                 </h3>
 
                                 <div className="define__mindset-box">
-                                    <span className="paragraph__100--bold">
+                                    <span className="heading__200--regular">
                                         {dataPortfolio.user1Title}
                                     </span>
-                                    <p className="paragraph__100--medium">
+                                    <p className="paragraph__200--medium">
                                         {dataPortfolio.user1Content}
                                     </p>
                                 </div>
                                 <div className="define__mindset-box">
-                                    <span className="paragraph__100--bold">
+                                    <span className="heading__200--regular">
                                         {dataPortfolio.user2Title}
                                     </span>
-                                    <p className="paragraph__100--medium">
+                                    <p className="paragraph__200--medium">
                                         {dataPortfolio.user2Content}
                                     </p>
                                 </div>
                             </div>
                         </article>
+                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/av/final-design.png">
+                            <picture className="modal__img-container mb-20">
+                                <source
+                                    srcSet="https://sebastiangonzalez.design/images/projects/av/final-design.png"
+                                    media="(max-width:900px)"
+                                />
+                                <img
+                                    className="modal__img-complete"
+                                    src="https://sebastiangonzalez.design/images/projects/av/final-design.png"
+                                    loading="lazy"
+                                    alt="ideate"
+                                />
+                            </picture>
+                        </ImageModalZoom>
                     </section>
 
-                    {/* <!-- Section ideate --> */}
+                    {/* <!-- Section ideation and Key Insights --> */}
                     <section className="modal__template">
                         <article className="modal__main-text-box">
-                            <h2 className="display__200--bold modal__title">
+                            <h1 className="display__100--bold modal__title">
                                 {dataPortfolio.ideateTitle}
-                            </h2>
+                            </h1>
                             <p className="paragraph__100--medium modal__paragraph">
                                 {dataPortfolio.ideateContent}
                             </p>
                         </article>
-                    </section>
-
-                    <section className="modal__template">
-                        <h1 className="heading__100--bold modal__title modal__main-text-box">
-                            {dataPortfolio.title2}
-                        </h1>
                         <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/av/user-persona.png">
                             <picture className="modal__img-container">
                                 <source
@@ -188,12 +193,6 @@ const AvExpert = () => {
                                 />
                             </picture>
                         </ImageModalZoom>
-                    </section>
-
-                    <section className="modal__template">
-                        <h1 className="heading__100--bold modal__title modal__main-text-box">
-                            {dataPortfolio.title4}
-                        </h1>
                         <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/av/user-flow.png">
                             <picture className="modal__img-container">
                                 <source
@@ -210,15 +209,26 @@ const AvExpert = () => {
                         </ImageModalZoom>
                     </section>
 
+                    {/* <!-- Section Visual and Design System --> */}
                     <section className="modal__template">
                         <article className="modal__main-text-box">
-                            <h1 className="heading__100--bold modal__title ">
-                                {dataPortfolio.title5}
+                            <h1 className="display__100--bold modal__title">
+                                {dataPortfolio.visualTitle}
                             </h1>
-                            <h3 className="heading__300--bold modal__subtitle">
-                                {dataPortfolio.midFidelityTitle}
-                            </h3>
+                            <p className="paragraph__100--medium modal__paragraph">
+                                {dataPortfolio.visualDescription}
+                            </p>
                         </article>
+
+                        <article className="modal__secondary-text-box">
+                            <h3 className="heading__100--bold modal__subtitle">
+                                {dataPortfolio.wireframesTitle}
+                            </h3>
+                            <p className="paragraph__100--medium ">
+                                {dataPortfolio.wireframesDescription}
+                            </p>
+                        </article>
+
                         <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/av/mid-fidelity.png">
                             <picture className="modal__img-container">
                                 <source
@@ -234,9 +244,6 @@ const AvExpert = () => {
                             </picture>
                         </ImageModalZoom>
                         <article className="modal__text-box">
-                            <h3 className="heading__300--bold modal__subtitle">
-                                {dataPortfolio.highFidelityTitle}
-                            </h3>
                             <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/av/high-fidelity.png">
                                 <picture className="modal__img-container">
                                     <source
@@ -255,23 +262,15 @@ const AvExpert = () => {
                     </section>
 
                     <section className="modal__template">
-                        <article className="modal__text-box modal__main-text-box">
-                            <h1 className="heading__100--bold modal__title">
-                                {dataPortfolio.title7}
-                            </h1>
+                        <article className="modal__secondary-text-box">
+                            <h3 className="heading__100--bold modal__subtitle">
+                                {dataPortfolio.styleTitle}
+                            </h3>
                             <p className="paragraph__100--medium modal__paragrapht">
                                 {dataPortfolio.styleContent}
                             </p>
                         </article>
 
-                        <article className="modal__secondary-text-box">
-                            <h3 className="heading__300--bold modal__subtitle">
-                                {dataPortfolio.brandTitle}
-                            </h3>
-                            <p className="paragraph__100--medium modal__paragraph">
-                                {dataPortfolio.brandContent}
-                            </p>
-                        </article>
                         <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/av/brand.png">
                             <picture className="modal__img-container mb-20">
                                 <source
@@ -312,10 +311,10 @@ const AvExpert = () => {
 
                         <article className="modal__secondary-text-box">
                             <h3 className="heading__300--bold modal__subtitle">
-                                {dataPortfolio.tipographyTitle}
+                                {dataPortfolio.typographyTitle}
                             </h3>
                             <p className="paragraph__100--medium modal__paragraph">
-                                {dataPortfolio.tipographyContent}
+                                {dataPortfolio.typographyContent}
                             </p>
                         </article>
                         <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/av/tipography.png">
@@ -409,10 +408,10 @@ const AvExpert = () => {
                     </section>
 
                     <section className="modal__template">
-                        <article className="mb-20 modal__main-text-box">
-                            <h1 className="display__100--bold modal__title">
+                        <article className="mb-20 modal__secondary-text-box">
+                            <h3 className="heading__100--bold modal__subtitle">
                                 {dataPortfolio.title8}
-                            </h1>
+                            </h3>
                             <p className="paragraph__100--medium modal__paragraph">
                                 {dataPortfolio.animationsContent}
                             </p>
@@ -442,29 +441,14 @@ const AvExpert = () => {
                         </article>
                     </section>
 
+                    {/* <!-- Section Core Features --> */}
+
                     <section className="modal__template">
-                        <article className="mb-20 modal__secondary-text-box">
-                            <h1 className="heading__100--bold modal__title modal__text-box">
-                                {dataPortfolio.title9}
+                        <article className="mb-20 modal__main-text-box">
+                            <h1 className="display__100--bold modal__title modal__main-text-box">
+                                {dataPortfolio.featuresTitle}
                             </h1>
-                            <p className="paragraph__100--medium modal__paragraph">
-                                {dataPortfolio.finalContent}
-                            </p>
                         </article>
-                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/av/final-design.png">
-                            <picture className="modal__img-container mb-20">
-                                <source
-                                    srcSet="https://sebastiangonzalez.design/images/projects/av/final-design.png"
-                                    media="(max-width:900px)"
-                                />
-                                <img
-                                    className="modal__img-complete"
-                                    src="https://sebastiangonzalez.design/images/projects/av/final-design.png"
-                                    loading="lazy"
-                                    alt="ideate"
-                                />
-                            </picture>
-                        </ImageModalZoom>
 
                         <article className="modal__secondary-text-box">
                             <h3 className="heading__300--bold modal__subtitle">
@@ -549,11 +533,23 @@ const AvExpert = () => {
                         />
                     </picture>
 
+                    {/* <!-- Section Final Design --> */}
+                    <section className="modal__template">
+                        <article className="modal__main-text-box">
+                            <h1 className="display__100--bold modal__title">
+                                {dataPortfolio.finalDesignTitle}
+                            </h1>
+                            <p className="paragraph__100--medium modal__paragraph">
+                                {dataPortfolio.finalDesignDescription}
+                            </p>
+                        </article>
+                    </section>
+
                     {/* <!-- Ending --> */}
                     <section className="modal__other-projects modal__end">
                         <article className="modal__text-box">
                             <h2 className="display__200--regular modal__title modal__end__text">
-                                Thank you
+                                Thank you for exploring this project
                             </h2>
                         </article>
                     </section>
