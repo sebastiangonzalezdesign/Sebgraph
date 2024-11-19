@@ -154,37 +154,6 @@ const AlephDS = () => {
                                 </ol>
                             </div>
                         </article>
-<<<<<<< HEAD
-                    </section>
-
-                    {/* Section Inventory */}
-                    <section className="modal__template">
-                        <article className="mb-20 modal__main-text-box">
-                            <h1 className="display__100--bold modal__title modal__main-text-box">
-                                {dataPortfolio.inventoryTitle}
-                            </h1>
-                            <p className="paragraph__100--regular modal__paragraph">
-                                {dataPortfolio.inventoryDescription}
-                            </p>
-                        </article>
-
-                        <picture className="modal__img-container">
-                            <source
-                                srcSet="https://sebastiangonzalez.design/images/projects/aleph/inventory.png"
-                                media="(max-width:900px)"
-                            />
-                            <img
-                                className="modal__img-complete"
-                                src="https://sebastiangonzalez.design/images/projects/aleph/inventory.png"
-                                loading="lazy"
-                                alt="inventory"
-                            />
-                        </picture>
-                    </section>
-
-                    {/* Section Foundations */}
-                    <section className="modal__template">
-=======
                         <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/aleph/inventory.png">
                             <picture className="modal__img-container">
                                 <source
@@ -199,7 +168,6 @@ const AlephDS = () => {
                                 />
                             </picture>
                         </ImageModalZoom>
->>>>>>> restricted-project
                         <article className="modal__secondary-text-box">
                             <h3 className="heading__100--bold modal__subtitle">
                                 {dataPortfolio.ideationTitle}
@@ -208,81 +176,6 @@ const AlephDS = () => {
                                 {dataPortfolio.ideationDescription}
                             </p>
                         </article>
-<<<<<<< HEAD
-
-                        <picture className="modal__img-container mb-20">
-                            <source
-                                srcSet="https://sebastiangonzalez.design/images/projects/aleph/Structure.png"
-                                media="(max-width:900px)"
-                            />
-                            <img
-                                className="modal__img-complete"
-                                src="https://sebastiangonzalez.design/images/projects/aleph/Structure.png"
-                                loading="lazy"
-                                alt="Structure"
-                            />
-                        </picture>
-                        <picture className="modal__img-container mb-20">
-                            <source
-                                srcSet="https://sebastiangonzalez.design/images/projects/aleph/Colors.png"
-                                media="(max-width:900px)"
-                            />
-                            <img
-                                className="modal__img-complete"
-                                src="https://sebastiangonzalez.design/images/projects/aleph/Colors.png"
-                                loading="lazy"
-                                alt="Structure"
-                            />
-                        </picture>
-                        <picture className="modal__img-container mb-20">
-                            <source
-                                srcSet="https://sebastiangonzalez.design/images/projects/aleph/Colors2.png"
-                                media="(max-width:900px)"
-                            />
-                            <img
-                                className="modal__img-complete"
-                                src="https://sebastiangonzalez.design/images/projects/aleph/Colors2.png"
-                                loading="lazy"
-                                alt="Structure"
-                            />
-                        </picture>
-                        <picture className="modal__img-container mb-20">
-                            <source
-                                srcSet="https://sebastiangonzalez.design/images/projects/aleph/Typography.png"
-                                media="(max-width:900px)"
-                            />
-                            <img
-                                className="modal__img-complete"
-                                src="https://sebastiangonzalez.design/images/projects/aleph/Typography.png"
-                                loading="lazy"
-                                alt="Structure"
-                            />
-                        </picture>
-                        <picture className="modal__img-container mb-20">
-                            <source
-                                srcSet="https://sebastiangonzalez.design/images/projects/aleph/Spacings.png"
-                                media="(max-width:900px)"
-                            />
-                            <img
-                                className="modal__img-complete"
-                                src="https://sebastiangonzalez.design/images/projects/aleph/Spacings.png"
-                                loading="lazy"
-                                alt="Structure"
-                            />
-                        </picture>
-                        <picture className="modal__img-container mb-20">
-                            <source
-                                srcSet="https://sebastiangonzalez.design/images/projects/aleph/Imagery.png"
-                                media="(max-width:900px)"
-                            />
-                            <img
-                                className="modal__img-complete"
-                                src="https://sebastiangonzalez.design/images/projects/aleph/Imagery.png"
-                                loading="lazy"
-                                alt="Structure"
-                            />
-                        </picture>
-=======
                         <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/aleph/Structure.png">
                             <picture className="modal__img-container mb-20">
                                 <source
@@ -375,7 +268,6 @@ const AlephDS = () => {
                                 />
                             </picture>
                         </ImageModalZoom>
->>>>>>> restricted-project
                     </section>
 
                     {/* Section Components */}
@@ -388,44 +280,6 @@ const AlephDS = () => {
                                 {dataPortfolio.componentsDescription}
                             </p>
                         </article>
-<<<<<<< HEAD
-                        <picture className="modal__img-container mb-20">
-                            <source
-                                srcSet="https://sebastiangonzalez.design/images/projects/aleph/Component-List.png"
-                                media="(max-width:900px)"
-                            />
-                            <img
-                                className="modal__img-complete"
-                                src="https://sebastiangonzalez.design/images/projects/aleph/Component-List.png"
-                                loading="lazy"
-                                alt="Structure"
-                            />
-                        </picture>
-                        <picture className="modal__img-container mb-20">
-                            <source
-                                srcSet="https://sebastiangonzalez.design/images/projects/aleph/Basic-Components.png"
-                                media="(max-width:900px)"
-                            />
-                            <img
-                                className="modal__img-complete"
-                                src="https://sebastiangonzalez.design/images/projects/aleph/Basic-Components.png"
-                                loading="lazy"
-                                alt="Structure"
-                            />
-                        </picture>
-                        <picture className="modal__img-container mb-20">
-                            <source
-                                srcSet="https://sebastiangonzalez.design/images/projects/aleph/Complex-Components.png"
-                                media="(max-width:900px)"
-                            />
-                            <img
-                                className="modal__img-complete"
-                                src="https://sebastiangonzalez.design/images/projects/aleph/Complex-Components.png"
-                                loading="lazy"
-                                alt="Structure"
-                            />
-                        </picture>
-=======
                         <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/aleph/Component-List.png">
                             <picture className="modal__img-container mb-20">
                                 <source
@@ -468,7 +322,6 @@ const AlephDS = () => {
                                 />
                             </picture>
                         </ImageModalZoom>
->>>>>>> restricted-project
                     </section>
 
                     {/* <!-- Ending --> */}
@@ -500,21 +353,6 @@ const AlephDS = () => {
                                 <li>{dataPortfolio.contentBullet3}</li>
                             </ul>
                         </article>
-<<<<<<< HEAD
-
-                        <picture className="modal__img-container mb-20">
-                            <source
-                                srcSet="https://sebastiangonzalez.design/images/projects/aleph/Results.png"
-                                media="(max-width:900px)"
-                            />
-                            <img
-                                className="modal__img-complete"
-                                src="https://sebastiangonzalez.design/images/projects/aleph/Results.png"
-                                loading="lazy"
-                                alt="Structure"
-                            />
-                        </picture>
-=======
                         <article className="modal__secondary-text-box">
                             <h3 className="heading__100--bold modal__subtitle">
                                 {dataPortfolio.reflectionsTile}
@@ -523,7 +361,6 @@ const AlephDS = () => {
                                 {dataPortfolio.reflectionsDescription}
                             </p>
                         </article>
->>>>>>> restricted-project
                         <article className="modal__text-box">
                             <h2 className="display__200--regular modal__title modal__end__text">
                                 Thank you for exploring this project
