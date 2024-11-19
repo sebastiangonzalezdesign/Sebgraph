@@ -1,13 +1,35 @@
 // Data for Thumbnails
 export const allPortfolio = [
     {
+<<<<<<< HEAD
         id: 1,
         key: 'solve',
         title: 'Solve For Tomorrow',
         overview: 'Samsung contest | Web | UI | Lottie',
         img: 'https://sebastiangonzalez.design/images/thumbnails/thumbnail-solve-for-tomorrow2.webp',
         bgClass: 'card-background-solve',
+=======
+        id: 5,
+        key: 'Aleph',
+        title: 'Aleph Design System',
+        overview: 'Design System | Geospatial | Web | UI | Tokens',
+        img: 'https://sebastiangonzalez.design/images/thumbnails/thumbnail-aleph2.webp',
+        bgClass: 'card-background-aleph',
+        order: '1',
+        protected: 'no',
+        showProject: 'yes',
+    },
+    {
+        id: 6,
+        key: 'hub',
+        title: 'Hub Design System',
+        overview: 'Design System | Cruisers | iOS | Android | Tokens',
+        img: 'https://sebastiangonzalez.design/images/thumbnails/thumbnail-hub-design-system.webp',
+        bgClass: 'card-background-hub',
+>>>>>>> restricted-project
         order: '2',
+        protected: 'yes',
+        showProject: 'no',
     },
     {
         id: 2,
@@ -17,7 +39,21 @@ export const allPortfolio = [
         img: 'https://sebastiangonzalez.design/images/thumbnails/thumbnail-av-expert2.webp',
         bgClass: 'card-background-av',
         order: '3',
+        protected: 'no',
+        showProject: 'yes',
     },
+    {
+        id: 1,
+        key: 'solve',
+        title: 'Solve For Tomorrow',
+        overview: 'Samsung contest | Web | UI | Lottie',
+        img: 'https://sebastiangonzalez.design/images/thumbnails/thumbnail-solve-for-tomorrow2.webp',
+        bgClass: 'card-background-solve',
+        order: '4',
+        protected: 'no',
+        showProject: 'yes',
+    },
+
     {
         id: 3,
         key: 'essilor',
@@ -25,7 +61,9 @@ export const allPortfolio = [
         overview: 'Mobile | UI | Mockups',
         img: 'https://sebastiangonzalez.design/images/thumbnails/thumbnail-essilor2.webp',
         bgClass: 'card-background-essilor',
-        order: '4',
+        order: '5',
+        protected: 'no',
+        showProject: 'yes',
     },
 
     {
@@ -35,6 +73,7 @@ export const allPortfolio = [
         overview: 'Samsung launching | Web | UI | Prototyping',
         img: 'https://sebastiangonzalez.design/images/thumbnails/thumbnail-landing-s21-2.webp',
         bgClass: 'card-background-landing',
+<<<<<<< HEAD
         order: '5',
     },
 
@@ -46,11 +85,17 @@ export const allPortfolio = [
         img: 'https://sebastiangonzalez.design/images/thumbnails/thumbnail-aleph2.webp',
         bgClass: 'card-background-aleph',
         order: '1',
+=======
+        order: '6',
+        protected: 'no',
+        showProject: 'yes',
+>>>>>>> restricted-project
     },
 ]
 
 export const uiVisualPortfolio = [
     {
+<<<<<<< HEAD
         id: 1,
         key: 'solve',
         title: 'Solve For Tomorrow',
@@ -60,6 +105,8 @@ export const uiVisualPortfolio = [
         order: '2',
     },
     {
+=======
+>>>>>>> restricted-project
         id: 2,
         key: 'av',
         title: 'AV Expert App',
@@ -67,7 +114,21 @@ export const uiVisualPortfolio = [
         img: 'https://sebastiangonzalez.design/images/thumbnails/thumbnail-av-expert2.webp',
         bgClass: 'card-background-av',
         order: '3',
+        protected: 'no',
+        showProject: 'yes',
     },
+    {
+        id: 1,
+        key: 'solve',
+        title: 'Solve For Tomorrow',
+        overview: 'Samsung contest | Web | UI | Lottie',
+        img: 'https://sebastiangonzalez.design/images/thumbnails/thumbnail-solve-for-tomorrow2.webp',
+        bgClass: 'card-background-solve',
+        order: '4',
+        protected: 'no',
+        showProject: 'yes',
+    },
+
     {
         id: 3,
         key: 'essilor',
@@ -75,7 +136,9 @@ export const uiVisualPortfolio = [
         overview: 'Mobile | UI | Mockups',
         img: 'https://sebastiangonzalez.design/images/thumbnails/thumbnail-essilor2.webp',
         bgClass: 'card-background-essilor',
-        order: '4',
+        order: '5',
+        protected: 'no',
+        showProject: 'yes',
     },
 ]
 
@@ -88,6 +151,8 @@ export const codePortfolio = [
         img: 'https://sebastiangonzalez.design/images/thumbnails/thumbnail-solve-for-tomorrow2.webp',
         bgClass: 'card-background-solve',
         order: '2',
+        protected: 'no',
+        showProject: 'yes',
     },
 ]
 
@@ -100,5 +165,18 @@ export const dsPortfolio = [
         img: 'https://sebastiangonzalez.design/images/thumbnails/thumbnail-aleph2.webp',
         bgClass: 'card-background-aleph',
         order: '1',
+        protected: 'no',
+        showProject: 'yes',
+    },
+    {
+        id: 6,
+        key: 'hub',
+        title: 'Hub Design System',
+        overview: 'Design System | Cruisers | iOS | Android | Tokens',
+        img: 'https://sebastiangonzalez.design/images/thumbnails/thumbnail-hub-design-system.webp',
+        bgClass: 'card-background-hub',
+        order: '2',
+        protected: 'yes',
+        showProject: 'no',
     },
 ]

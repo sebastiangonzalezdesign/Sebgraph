@@ -1,10 +1,16 @@
 import React, { lazy, Suspense } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom' // Ensure Routes is imported correctly
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    Navigate,
+} from 'react-router-dom' // Ensure Routes is imported correctly
 
 import Error404 from '../pages/Error404'
 import ScrollToTop from './ScrollToTop'
 import BackToTopButton from './BackToTopButton'
 import Spinner from './Spinner'
+import ProtectedRoute from './ProtectedRoute'
 
 const NavBar = lazy(() => import('./NavBar'))
 const Footer = lazy(() => import('./Footer'))
@@ -15,10 +21,12 @@ const SolveForTomorrow = lazy(() =>
 const Essilor = lazy(() => import('../pages/projects/Essilor'))
 const Landing = lazy(() => import('../pages/projects/Landing'))
 const AlephDS = lazy(() => import('../pages/projects/Aleph'))
+const HubDS = lazy(() => import('../pages/projects/Hub'))
 
 const About = lazy(() => import('../pages/about/About'))
 const Work = lazy(() => import('../pages/work/Work'))
 const CV = lazy(() => import('../pages/cv/CV'))
+const PasswordPage = lazy(() => import('../pages/PasswordPage'))
 
 const RoutesSite = () => {
     return (
@@ -29,6 +37,11 @@ const RoutesSite = () => {
                 <NavBar />
 
                 <Routes>
+                    {/* Redirect /projects to the Work page and scroll to Portfolio */}
+                    <Route
+                        path="/projects"
+                        element={<Navigate to="/?scrollTo=portfolio" replace />}
+                    />
                     <Route path="/" element={<Work />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/cv" element={<CV />} />
@@ -40,6 +53,23 @@ const RoutesSite = () => {
                     <Route path="/projects/Essilor" element={<Essilor />} />
                     <Route path="/projects/Landing" element={<Landing />} />
                     <Route path="/projects/Aleph" element={<AlephDS />} />
+
+                    {/* Password-protected Hub Design System route */}
+                    <Route
+                        path="/projects/Hub"
+                        element={
+                            <ProtectedRoute>
+                                <HubDS />
+                            </ProtectedRoute>
+                        }
+                    />
+                    {/* Password Page */}
+                    <Route
+                        path="/projects/password-page"
+                        element={<PasswordPage />}
+                    />
+
+                    {/* Catch-all 404 route */}
                     <Route path="*" element={<Error404 />} />
                 </Routes>
 

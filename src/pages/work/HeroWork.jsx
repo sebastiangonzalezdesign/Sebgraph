@@ -48,14 +48,16 @@ const HeroWork = () => {
                             stiffness: 45,
                         }}
                     >
-                        Hi, I'm <strong>Sebastian González, </strong>a UI/Visual
-                        designer with a strong desire to continuously improve my
-                        design system and coding skills to create memorable
-                        digital experiences that connect users to your products.
-                        With a passion for innovation and a deep understanding
-                        of user behavior, I craft exceptional interfaces that
-                        engage and inspire. Let's collaborate to create
-                        something unforgettable.
+                        Hey, I'm <strong>Sebastian González, </strong>a
+                        UI/Visual Designer with 5 years of experience creating
+                        meaningful digital products. I’m all about design
+                        systems and love bringing ideas to life with a bit of
+                        code. My goal is to design interfaces that not only look
+                        great but also feel seamless for users. With a passion
+                        for innovation and a keen understanding of user needs, I
+                        help bridge the gap between design and development.
+                        Let’s collaborate to build something that truly stands
+                        out and connects with your audience.
                     </motion.p>
                 </div>
 

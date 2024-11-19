@@ -45,6 +45,7 @@
         height: auto;
         width: 100%;
         object-fit: cover;
+        cursor: zoom-in;
 
         @include mq(medium) {
             height: auto;
@@ -53,6 +54,19 @@
     }
     &__img-complete:not(:last-child) {
         margin-bottom: 4rem;
+    }
+    &__bullets-section {
+        background-color: $color-neutral-blue-100;
+        border-radius: $size-3;
+        padding: 2rem;
+        display: inherit;
+        flex-direction: column;
+        width: 100%;
+        gap: $size-3;
+
+        & h3 {
+            width: 100;
+        }
     }
     /* ---------- General Text Styles ---------- */
     &__title,
@@ -150,6 +164,17 @@
                 rgba(20, 12, 3, 0.9)
             ),
             url(https://sebastiangonzalez.design/images/projects/aleph/hero-image-aleph.png);
+<<<<<<< HEAD
+=======
+    }
+    &__header-hub {
+        background-image: linear-gradient(
+                to right bottom,
+                rgba(34, 34, 34, 0.9),
+                rgba(20, 12, 3, 0.9)
+            ),
+            url(https://sebastiangonzalez.design/images/projects/hub/hero-image-hub.webp);
+>>>>>>> restricted-project
     }
     /* ----------  End Head content styles ---------- */
 
@@ -290,6 +315,9 @@
             @include mq(large) {
                 width: 100%;
             }
+        }
+        &__box-goals:only-child {
+            width: 100%;
         }
         &__goal-list {
             list-style: none;
