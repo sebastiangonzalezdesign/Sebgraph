@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './ProjectStyles.scss'
 import { Essilor } from '../../dataPortfolio'
 import BackButton from '../../components/BackButton'
+import ImageModalZoom from '../../components/ImageModalZoom'
 
 const EssilorAPP = () => {
     const [dataPortfolio] = useState(Essilor)
@@ -135,6 +136,7 @@ const EssilorAPP = () => {
                                 {dataPortfolio.title2}
                             </h1>
                         </article>
+<<<<<<< HEAD
 
                         <picture className="modal__img-container">
                             <source
@@ -148,6 +150,22 @@ const EssilorAPP = () => {
                                 alt="ideate"
                             />
                         </picture>
+=======
+                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/essilor/empathy-map.png">
+                            <picture className="modal__img-container">
+                                <source
+                                    srcSet="https://sebastiangonzalez.design/images/projects/essilor/empathy-map-responsive.png"
+                                    media="(max-width:900px)"
+                                />
+                                <img
+                                    className="modal__img-complete"
+                                    src="https://sebastiangonzalez.design/images/projects/essilor/empathy-map.png"
+                                    loading="lazy"
+                                    alt="ideate"
+                                />
+                            </picture>
+                        </ImageModalZoom>
+>>>>>>> restricted-project
                     </section>
 
                     <section className="modal__template">
@@ -159,6 +177,7 @@ const EssilorAPP = () => {
                                 {dataPortfolio.midFidelityTitle}
                             </h3>
                         </article>
+<<<<<<< HEAD
                         <picture className="modal__img-container">
                             <source
                                 srcSet="https://sebastiangonzalez.design/images/projects/essilor/mid-fidelity.png"
@@ -171,11 +190,28 @@ const EssilorAPP = () => {
                                 alt="ideate"
                             />
                         </picture>
+=======
+                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/essilor/mid-fidelity.png">
+                            <picture className="modal__img-container">
+                                <source
+                                    srcSet="https://sebastiangonzalez.design/images/projects/essilor/mid-fidelity.png"
+                                    media="(max-width:900px)"
+                                />
+                                <img
+                                    className="modal__img-complete"
+                                    src="https://sebastiangonzalez.design/images/projects/essilor/mid-fidelity.png"
+                                    loading="lazy"
+                                    alt="ideate"
+                                />
+                            </picture>
+                        </ImageModalZoom>
+>>>>>>> restricted-project
                         <article className="modal__secondary-text-box">
                             <h3 className="heading__300--bold modal__subtitle">
                                 {dataPortfolio.highFidelityTitle}
                             </h3>
                         </article>
+<<<<<<< HEAD
                         <picture className="modal__img-container">
                             <source
                                 srcSet="https://sebastiangonzalez.design/images/projects/essilor/high-fidelity.png"
@@ -188,6 +224,22 @@ const EssilorAPP = () => {
                                 alt="ideate"
                             />
                         </picture>
+=======
+                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/essilor/high-fidelity.png">
+                            <picture className="modal__img-container">
+                                <source
+                                    srcSet="https://sebastiangonzalez.design/images/projects/essilor/high-fidelity.png"
+                                    media="(max-width:900px)"
+                                />
+                                <img
+                                    className="modal__img-complete"
+                                    src="https://sebastiangonzalez.design/images/projects/essilor/high-fidelity.png"
+                                    loading="lazy"
+                                    alt="ideate"
+                                />
+                            </picture>
+                        </ImageModalZoom>
+>>>>>>> restricted-project
                     </section>
 
                     <section className="modal__template">
@@ -208,6 +260,7 @@ const EssilorAPP = () => {
                                 {dataPortfolio.brandContent}
                             </p>
                         </article>
+<<<<<<< HEAD
                         <picture className="modal__img-container mb-20">
                             <source
                                 srcSet="https://sebastiangonzalez.design/images/projects/essilor/brand.png"
@@ -220,6 +273,22 @@ const EssilorAPP = () => {
                                 alt="ideate"
                             />
                         </picture>
+=======
+                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/essilor/brand.png">
+                            <picture className="modal__img-container mb-20">
+                                <source
+                                    srcSet="https://sebastiangonzalez.design/images/projects/essilor/brand.png"
+                                    media="(max-width:900px)"
+                                />
+                                <img
+                                    className="modal__img-complete"
+                                    src="https://sebastiangonzalez.design/images/projects/essilor/brand.png"
+                                    loading="lazy"
+                                    alt="ideate"
+                                />
+                            </picture>
+                        </ImageModalZoom>
+>>>>>>> restricted-project
 
                         <article className="modal__secondary-text-box">
                             <h3 className="heading__300--bold modal__subtitle">
@@ -229,6 +298,7 @@ const EssilorAPP = () => {
                                 {dataPortfolio.colorsContent}
                             </p>
                         </article>
+<<<<<<< HEAD
                         <picture className="modal__img-container mb-20">
                             <source
                                 srcSet="https://sebastiangonzalez.design/images/projects/essilor/colors.png"
@@ -241,6 +311,22 @@ const EssilorAPP = () => {
                                 alt="ideate"
                             />
                         </picture>
+=======
+                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/essilor/colors.png">
+                            <picture className="modal__img-container mb-20">
+                                <source
+                                    srcSet="https://sebastiangonzalez.design/images/projects/essilor/colors.png"
+                                    media="(max-width:900px)"
+                                />
+                                <img
+                                    className="modal__img-complete"
+                                    src="https://sebastiangonzalez.design/images/projects/essilor/colors.png"
+                                    loading="lazy"
+                                    alt="ideate"
+                                />
+                            </picture>
+                        </ImageModalZoom>
+>>>>>>> restricted-project
 
                         <article className="modal__secondary-text-box">
                             <h3 className="heading__300--bold modal__subtitle">
@@ -250,6 +336,7 @@ const EssilorAPP = () => {
                                 {dataPortfolio.tipographyContent}
                             </p>
                         </article>
+<<<<<<< HEAD
                         <picture className="modal__img-container mb-20">
                             <source
                                 srcSet="https://sebastiangonzalez.design/images/projects/essilor/tipography.png"
@@ -262,6 +349,22 @@ const EssilorAPP = () => {
                                 alt="ideate"
                             />
                         </picture>
+=======
+                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/essilor/tipography.png">
+                            <picture className="modal__img-container mb-20">
+                                <source
+                                    srcSet="https://sebastiangonzalez.design/images/projects/essilor/tipography.png"
+                                    media="(max-width:900px)"
+                                />
+                                <img
+                                    className="modal__img-complete"
+                                    src="https://sebastiangonzalez.design/images/projects/essilor/tipography.png"
+                                    loading="lazy"
+                                    alt="ideate"
+                                />
+                            </picture>
+                        </ImageModalZoom>
+>>>>>>> restricted-project
 
                         <article className="modal__secondary-text-box">
                             <h3 className="heading__300--bold modal__subtitle">
@@ -271,6 +374,7 @@ const EssilorAPP = () => {
                                 {dataPortfolio.imageryContent}
                             </p>
                         </article>
+<<<<<<< HEAD
                         <picture className="modal__img-container mb-20">
                             <source
                                 srcSet="https://sebastiangonzalez.design/images/projects/essilor/imagery.png"
@@ -283,6 +387,22 @@ const EssilorAPP = () => {
                                 alt="ideate"
                             />
                         </picture>
+=======
+                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/essilor/imagery.png">
+                            <picture className="modal__img-container mb-20">
+                                <source
+                                    srcSet="https://sebastiangonzalez.design/images/projects/essilor/imagery.png"
+                                    media="(max-width:900px)"
+                                />
+                                <img
+                                    className="modal__img-complete"
+                                    src="https://sebastiangonzalez.design/images/projects/essilor/imagery.png"
+                                    loading="lazy"
+                                    alt="ideate"
+                                />
+                            </picture>
+                        </ImageModalZoom>
+>>>>>>> restricted-project
 
                         <article className="modal__secondary-text-box">
                             <h3 className="heading__300--bold modal__subtitle">
@@ -292,6 +412,7 @@ const EssilorAPP = () => {
                                 {dataPortfolio.componentsContent}
                             </p>
                         </article>
+<<<<<<< HEAD
                         <picture className="modal__img-container mb-20">
                             <source
                                 srcSet="https://sebastiangonzalez.design/images/projects/essilor/components.png"
@@ -316,6 +437,36 @@ const EssilorAPP = () => {
                                 alt="ideate"
                             />
                         </picture>
+=======
+                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/essilor/components.png">
+                            <picture className="modal__img-container mb-20">
+                                <source
+                                    srcSet="https://sebastiangonzalez.design/images/projects/essilor/components.png"
+                                    media="(max-width:900px)"
+                                />
+                                <img
+                                    className="modal__img-complete"
+                                    src="https://sebastiangonzalez.design/images/projects/essilor/components.png"
+                                    loading="lazy"
+                                    alt="ideate"
+                                />
+                            </picture>
+                        </ImageModalZoom>
+                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/essilor/icons.png">
+                            <picture className="modal__img-container mb-20">
+                                <source
+                                    srcSet="https://sebastiangonzalez.design/images/projects/essilor/icons.png"
+                                    media="(max-width:900px)"
+                                />
+                                <img
+                                    className="modal__img-complete"
+                                    src="https://sebastiangonzalez.design/images/projects/essilor/icons.png"
+                                    loading="lazy"
+                                    alt="ideate"
+                                />
+                            </picture>
+                        </ImageModalZoom>
+>>>>>>> restricted-project
                     </section>
 
                     <section className="modal__template">
@@ -328,6 +479,7 @@ const EssilorAPP = () => {
                             </p>
                         </article>
 
+<<<<<<< HEAD
                         <picture className="modal__img-container mb-20">
                             <source
                                 srcSet="https://sebastiangonzalez.design/images/projects/essilor/final-design.png"
@@ -340,6 +492,22 @@ const EssilorAPP = () => {
                                 alt="ideate"
                             />
                         </picture>
+=======
+                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/essilor/final-design.png">
+                            <picture className="modal__img-container mb-20">
+                                <source
+                                    srcSet="https://sebastiangonzalez.design/images/projects/essilor/final-design.png"
+                                    media="(max-width:900px)"
+                                />
+                                <img
+                                    className="modal__img-complete"
+                                    src="https://sebastiangonzalez.design/images/projects/essilor/final-design.png"
+                                    loading="lazy"
+                                    alt="ideate"
+                                />
+                            </picture>
+                        </ImageModalZoom>
+>>>>>>> restricted-project
 
                         <article className="modal__secondary-text-box">
                             <h3 className="heading__300--bold modal__subtitle">
@@ -350,6 +518,7 @@ const EssilorAPP = () => {
                             </p>
                         </article>
 
+<<<<<<< HEAD
                         <picture className="modal__img-container mb-20">
                             <source
                                 srcSet="https://sebastiangonzalez.design/images/projects/essilor/scan-code.png"
@@ -362,6 +531,22 @@ const EssilorAPP = () => {
                                 alt="ideate"
                             />
                         </picture>
+=======
+                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/essilor/scan-code.png">
+                            <picture className="modal__img-container mb-20">
+                                <source
+                                    srcSet="https://sebastiangonzalez.design/images/projects/essilor/scan-code.png"
+                                    media="(max-width:900px)"
+                                />
+                                <img
+                                    className="modal__img-complete"
+                                    src="https://sebastiangonzalez.design/images/projects/essilor/scan-code.png"
+                                    loading="lazy"
+                                    alt="ideate"
+                                />
+                            </picture>
+                        </ImageModalZoom>
+>>>>>>> restricted-project
 
                         <article className="modal__secondary-text-box">
                             <h3 className="heading__300--bold modal__subtitle">
@@ -371,6 +556,7 @@ const EssilorAPP = () => {
                                 {dataPortfolio.redeemContent}
                             </p>
                         </article>
+<<<<<<< HEAD
                         <picture className="modal__img-container mb-20">
                             <source
                                 srcSet="https://sebastiangonzalez.design/images/projects/essilor/redeem.png"
@@ -383,6 +569,22 @@ const EssilorAPP = () => {
                                 alt="ideate"
                             />
                         </picture>
+=======
+                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/essilor/redeem.png">
+                            <picture className="modal__img-container mb-20">
+                                <source
+                                    srcSet="https://sebastiangonzalez.design/images/projects/essilor/redeem.png"
+                                    media="(max-width:900px)"
+                                />
+                                <img
+                                    className="modal__img-complete"
+                                    src="https://sebastiangonzalez.design/images/projects/essilor/redeem.png"
+                                    loading="lazy"
+                                    alt="ideate"
+                                />
+                            </picture>
+                        </ImageModalZoom>
+>>>>>>> restricted-project
                     </section>
 
                     <picture>

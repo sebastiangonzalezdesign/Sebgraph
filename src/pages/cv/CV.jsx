@@ -26,38 +26,6 @@ const CV = () => {
 
     return (
         <main className="container-cv">
-            <section className="name-cv">
-                <article className="name-cv__text-box">
-                    <motion.h1
-                        className="display__200--bold"
-                        initial="initial"
-                        animate="animate"
-                        exit="exit"
-                        variants={fadeUpVariants}
-                        transition={{
-                            type: 'spring',
-                            stiffness: 45,
-                        }}
-                    >
-                        Sebastian González
-                    </motion.h1>
-                    <motion.p
-                        className="heading__100--bold"
-                        initial="initial"
-                        animate="animate"
-                        exit="exit"
-                        variants={fadeUpVariants}
-                        transition={{
-                            delay: 0.03,
-                            type: 'spring',
-                            stiffness: 45,
-                        }}
-                    >
-                        Curriculum
-                    </motion.p>
-                </article>
-            </section>
-
             <motion.section
                 className="profile-cv"
                 initial="initial"
@@ -65,7 +33,6 @@ const CV = () => {
                 exit="exit"
                 variants={fadeUpVariants}
                 transition={{
-                    delay: 0.05,
                     type: 'spring',
                     stiffness: 45,
                 }}
@@ -74,23 +41,41 @@ const CV = () => {
                 <article className="profile-cv__text-box">
                     <h2 className="heading__100--bold subtitle">Profile</h2>
                     <p className="paragraph__100--medium">
-                        Experienced UI Designer with expertise in visual design,
-                        design systems, and interaction design for both web and
-                        mobile applications. Dedicated to crafting user-centric
-                        digital products that simplify complex tasks and deliver
-                        meaningful experiences.
+                        UI and Design System Specialist with 5+ years of
+                        experience creating scalable, user-centric digital
+                        products for app and web platforms. Known for bridging
+                        design and development, with expertise in design
+                        systems, interaction design, and cross-functional
+                        collaboration. Currently expanding coding skills (React,
+                        JavaScript) to enhance product development and user
+                        experience. Looking for UX engineering and product
+                        design roles focused on innovation and design systems.
+                        Passionate about delivering high-quality, scalable
+                        design solutions with a keen focus on development
+                        collaboration
                     </p>
                 </article>
             </motion.section>
 
-            <section className="experience-cv">
+            <motion.section
+                className="experience-cv"
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                variants={fadeUpVariants}
+                transition={{
+                    delay: 0.03,
+                    type: 'spring',
+                    stiffness: 45,
+                }}
+            >
                 <img className="icon" src={Experience} alt="experience" />
                 <article className="experience-cv__text-box">
                     <h2 className="heading__100--bold subtitle">Experience</h2>
                     <div className="experience-cv__experience-container">
                         <div className="experience-cv__head-container">
                             <h3 className="heading__300--bold">
-                                Sr Visual | UI Designer
+                                Sr Visual | UI Designer | Design System Designer
                             </h3>
                             <span className="paragraph__300--medium">
                                 Globant | Bogotá | September 2021 - currently
@@ -99,27 +84,31 @@ const CV = () => {
 
                         <ul className="experience-cv__items paragraph">
                             <li className="paragraph__100--regular experience-cv__item">
-                                Develop and maintain design systems for mobile
-                                and web digital products, ensuring effective
-                                communication with stakeholders.
+                                Developed and standardized design systems for
+                                mobile and web, enhancing cross-platform
+                                consistency by 30%.
                             </li>
                             <li className="paragraph__100--regular experience-cv__item">
-                                Translate concepts into visually compelling
+                                Streamlined communication with stakeholders to
+                                establish cohesive visual guidelines, aligning
+                                brand principles with product vision.
+                            </li>
+                            <li className="paragraph__100--regular experience-cv__item">
+                                Translated concepts into visually compelling
                                 designs for products spanning Geo imagery,
                                 well-being, and travel.
                             </li>
                             <li className="paragraph__100--regular experience-cv__item">
-                                Define visual language and guidelines based on
-                                brand principles.{' '}
+                                Partnered with development teams to document and
+                                implement features, enabling a 20% faster
+                                deployment rate supporting prototyping and
+                                documentation, facilitating seamless
+                                implementation.
                             </li>
                             <li className="paragraph__100--regular experience-cv__item">
-                                Apply accessibility criteria throughout design
-                                stages.
-                            </li>
-                            <li className="paragraph__100--regular experience-cv__item">
-                                Prototype products and document features,
-                                facilitating seamless implementation with the
-                                development team.
+                                Led the integration of accessibility standards
+                                across product stages, improving the
+                                accessibility impact.
                             </li>
                         </ul>
                     </div>
@@ -135,33 +124,48 @@ const CV = () => {
 
                         <ul className="experience-cv__items paragraph">
                             <li className="paragraph__100--regular experience-cv__item">
-                                Design interfaces for websites and apps,
-                                implementing new functionalities within
-                                iterative processes for major brands such as
-                                Samsung.
+                                Designed and prototyped interfaces for Samsung’s
+                                digital products, increasing feature usability
+                                by 25%.
                             </li>
                             <li className="paragraph__100--regular experience-cv__item">
-                                Create wireframes and prototypes for diverse
-                                products.
+                                Produced high-fidelity wireframes and
+                                interactive prototypes for landing products.
                             </li>
                             <li className="paragraph__100--regular experience-cv__item">
                                 Develop, manage, and maintain design systems.{' '}
                             </li>
                             <li className="paragraph__100--regular experience-cv__item">
-                                Communicate and collaborate with UX teams,
-                                translating research results into visually
-                                impactful interfaces.
+                                Developed, managed, and maintained design kits
+                                and small systems for products.
                             </li>
                             <li className="paragraph__100--regular experience-cv__item">
-                                Coordinate with the development team to ensure
-                                consistent components.
+                                Coordinated design with UX teams, turning
+                                research insights into impactful interfaces,
+                                which led to 20% user engagement increase.
+                            </li>
+                            <li className="paragraph__100--regular experience-cv__item">
+                                Established an efficient communication process
+                                with the development team to ensure consistent
+                                component and interface implementation.
                             </li>
                         </ul>
                     </div>
                 </article>
-            </section>
+            </motion.section>
 
-            <section className="education-cv">
+            <motion.section
+                className="education-cv"
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                variants={fadeUpVariants}
+                transition={{
+                    delay: 0.05,
+                    type: 'spring',
+                    stiffness: 45,
+                }}
+            >
                 <img className="icon" src={Education} alt="education" />
                 <article className="education-cv__text-box">
                     <h2 className="heading__100--bold subtitle">Education</h2>
@@ -169,7 +173,11 @@ const CV = () => {
                         <h3 className="heading__300--bold education-cv__course-name">
                             Meta Front-End Developer
                         </h3>
-                        <p className="paragraph__100--medium education-cv__university">
+                        <p className="paragraph__200--medium education-cv__university course-description">
+                            Intermediated skills in React, JavaScript, and
+                            responsive design.
+                        </p>
+                        <p className="heading__400--regular education-cv__university">
                             Coursera
                         </p>
                         <p className="paragraph__100--medium">2023.</p>
@@ -197,16 +205,19 @@ const CV = () => {
                     </div>
                     <div className="education-cv__course">
                         <h3 className="heading__300--bold education-cv__course-name">
-                            Graphic design degree.
+                            Graphic Design degree.
                         </h3>
-                        <p className="paragraph__100--medium education-cv__university">
+                        <p className="paragraph__200--medium education-cv__university course-description">
+                            Focus on visual communication and digital products.
+                        </p>
+                        <p className="heading__400--regular education-cv__university">
                             Universidad Los Libertadores.
                         </p>
                         <p className="paragraph__100--medium">2010/2014.</p>
                         <hr />
                     </div>
                 </article>
-            </section>
+            </motion.section>
 
             <section className="skills-cv">
                 <img className="icon" src={Skills} alt="" />
@@ -216,78 +227,91 @@ const CV = () => {
                     <div className="skills-cv__skills-container">
                         <div className="skills-cv__skill">
                             <h3 className="heading__300--bold skills-cv__field">
-                                Professional
+                                Design & Technical Skills
                             </h3>
 
                             <div className="skills-cv__container-items">
                                 <div className="skills-cv__item">
-                                    <Chip label="Time Management" />
+                                    <Chip label="Design Systems" />
                                 </div>
                                 <div className="skills-cv__item">
-                                    <Chip label="Teamwork" />
+                                    <Chip label="Accessibility" />
                                 </div>
                                 <div className="skills-cv__item">
-                                    <Chip label="Flexibility" />
+                                    <Chip label="Responsive design" />
                                 </div>
                                 <div className="skills-cv__item">
-                                    <Chip label="Communication" />
+                                    <Chip label="Prototyping" />
                                 </div>
                                 <div className="skills-cv__item">
-                                    <Chip label="System Thinking" />
+                                    <Chip label="HTML/CSS/SASS" />
+                                </div>
+                                <div className="skills-cv__item">
+                                    <Chip label="JavaScript" />
+                                </div>
+                                <div className="skills-cv__item">
+                                    <Chip label="React" />
+                                </div>
+                                <div className="skills-cv__item">
+                                    <Chip label="Typescript" />
                                 </div>
                             </div>
                         </div>
 
                         <div className="skills-cv__skill">
                             <h3 className="heading__300--bold skills-cv__field">
-                                Technical
+                                Tools
                             </h3>
 
                             <div className="skills-cv__container-items">
                                 <div className="skills-cv__item">
-                                    <Chip
-                                        label="Figma"
-                                        proficiency="Advanced"
-                                    />
+                                    <Chip label="Figma" />
                                 </div>
                                 <div className="skills-cv__item">
                                     <div className="skills-cv__item">
-                                        <Chip
-                                            label="HTML | CSS-SASS"
-                                            proficiency="Intermediate"
-                                        />
+                                        <Chip label="Framer" />
                                     </div>
                                 </div>
                                 <div className="skills-cv__item">
                                     <div className="skills-cv__item">
-                                        <Chip
-                                            label="JavaScript"
-                                            proficiency="Basic"
-                                        />
+                                        <Chip label="Lottie" />
                                     </div>
                                 </div>
                                 <div className="skills-cv__item">
                                     <div className="skills-cv__item">
-                                        <Chip
-                                            label="React"
-                                            proficiency="Basic"
-                                        />
+                                        <Chip label="VS Code" />
                                     </div>
                                 </div>
                                 <div className="skills-cv__item">
                                     <div className="skills-cv__item">
-                                        <Chip
-                                            label="Visual Design"
-                                            proficiency="Advanced"
-                                        />
+                                        <Chip label="GIT/Github" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="skills-cv__skill">
+                            <h3 className="heading__300--bold skills-cv__field">
+                                Soft Skills
+                            </h3>
+
+                            <div className="skills-cv__container-items">
+                                <div className="skills-cv__item">
+                                    <Chip label="Collaboration" />
+                                </div>
+                                <div className="skills-cv__item">
+                                    <div className="skills-cv__item">
+                                        <Chip label=" Problem-Solving" />
                                     </div>
                                 </div>
                                 <div className="skills-cv__item">
                                     <div className="skills-cv__item">
-                                        <Chip
-                                            label="Design Systems"
-                                            proficiency="Intermediate"
-                                        />
+                                        <Chip label="Communication" />
+                                    </div>
+                                </div>
+                                <div className="skills-cv__item">
+                                    <div className="skills-cv__item">
+                                        <Chip label="Adaptability" />
                                     </div>
                                 </div>
                             </div>
@@ -302,10 +326,16 @@ const CV = () => {
                     <h2 className="heading__200--bold subtitle">Languages</h2>
                     <div className="languages-cv__container-items">
                         <div className="languages-cv__item">
-                            <Chip label="English" proficiency="B2" />
+                            <Chip
+                                label="English"
+                                proficiency="Professional Working Proficiency (B2)"
+                            />
                         </div>
                         <div className="languages-cv__item">
-                            <Chip label="Portuguese" proficiency="B2" />
+                            <Chip
+                                label="Portuguese"
+                                proficiency="Limited Working Proficiency(B1)"
+                            />
                         </div>
                         <div className="languages-cv__item">
                             <Chip label="Spanish" proficiency="Native" />

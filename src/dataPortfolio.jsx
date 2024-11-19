@@ -113,41 +113,40 @@ export const AV = [
         subtitleResume: 'APP',
         titleResume: 'Context',
         contentResume:
-            'AV Expert is an app launched for promoters looking for a solution that provide them relevant information of audio and video products, this app allow the user to control and interact easily bringing the tools for a successful sale and communication with the customer.',
+            'Samsung promoters face challenges accessing quick, reliable information about audio and video products, affecting their ability to assist customers effectively. AV Expert was designed to equip promoters with immediate access to product details, tips, and tech specifications, streamlining their sales process and improving customer communication.',
 
-        titleIntroduction: ' Project intro',
-        contentIntroduction:
-            'At the beginning of the project we had the opportunity to talk with promoters and identify the needs at the time of sales, they told us about their process and what tools are important to have a better communication with the costumer, we defined the goals and found the following thoughts of the costumers:',
+        titleOverview: ' Project Overview',
+        contentOverview:
+            'In early discussions with promoters, we uncovered their need for a tool that could simplify product details, technical specs, and sales tips at their fingertips. Based on these insights, we set goals to develop a tool that empowers promoters with the following:',
 
         goalsTitle: 'Project Goals',
-        goal1: 'To become an useful tool to the Samsung promoters.',
-        goal2: 'Develop an intuitive interface with relevant information.',
-        goal3: 'Provide technical information about the different products and releases.',
-        goal4: 'Create the selling tips section that allow the promoter to reinforce the sales speech.',
+        goal1: 'Equip Samsung promoters with an intuitive app for seamless sales support.',
+        goal2: 'Organize and display technical product information and updates.',
+        goal3: 'Provide tips to reinforce confident customer interactions and pitches.',
 
-        customerTitle: 'Customer Mindsets',
-        user1Title: 'New promoters | “i want to know more about products””',
+        customerTitle: 'Promoter Needs',
+        user1Title: 'New promoters | I want to learn about products quickly.',
         user1Content:
-            'When they have doubts about products, they ask to their coworkers but  they want a tool to guide them in tech features.',
-        user2Title: 'Experimented promoters | “a digital guide would be useful',
+            'Newer promoters often rely on colleagues for product knowledge but desired a more accessible, reliable tool to reference technical details.',
+        user2Title:
+            'Experimented promoters | An easy digital reference would be invaluable.',
         user2Content:
-            'Sometimes the technical references are limited to a printed guide, difficult to handle and to search quickly.',
+            'Experienced promoters found traditional printed guides unwieldy and wanted an easily searchable digital resource.',
 
-        ideateTitle: 'Ideate',
+        ideateTitle: 'Ideation and Key Insights',
         ideateContent:
-            'We used different research tools with the UX team such user journeys, user empathy and interviews to help to understand their needs, motivations and frustrations, based on it, we have identified relevant points to improve.',
+            'Collaborating with the UX team, we used user journeys, empathy mapping, and interviews to uncover essential promoter needs, shaping our solution to enhance product clarity, provide keyword accessibility for technical terms, and create an intuitive navigation system for swift product searches.',
 
-        title2: 'User persona',
+        visualTitle: 'Visual and Design System',
+        visualDescription:
+            'The final Android app enables promoters to instantly access all AV product information they need for efficient, informed sales conversations. Feedback indicates the app has become a trusted resource for promoters to improve their sales pitches and customer support.',
+        wireframesTitle: 'Visualizing the Journey',
+        wireframesDescription:
+            'In this phase, we crafted wireframes to map out the app’s flow and user interactions, prioritizing an intuitive layout to support promoters in quick and informed customer engagements. The prototypes provided a foundation to test navigation and feature accessibility, gathering feedback that refined the design.',
 
-        title4: 'User Flow',
-
-        title5: 'Wireframes',
-        midFidelityTitle: 'Mid Fidelity',
-        highFidelityTitle: 'High fidelity',
-
-        title7: 'Style guide',
+        styleTitle: 'Ensuring Consistency and Brand Alignment',
         styleContent:
-            'For the design system, I was based on brand values and developed a colour palette that identified the av category with a dark pattern with a gold color contrast that highlighted relevant information, also I defined a type scale with the Samsung fonts and developed components with these rules that provide consistency to the flow.',
+            'A design system was developed based on brand values, with a dark color scheme and gold accents representing the premium AV category. We defined a cohesive typography scale and built a component library to streamline collaboration with developers and ensure consistency across the interface, ultimately enhancing usability and alignment with the AV Expert brand.',
         brandTitle: 'Brand',
         brandContent:
             'AV Expert is a brand created for the digital solution for the promoters, the brand turns in an expert platform that contains all technology features in audio and video products.',
@@ -156,8 +155,8 @@ export const AV = [
         colorsContent:
             'The definition of the scheme colors was based in the current lineup for this category products, the dark mode theme is important also to transmit the quality and sobriety of the new line and design of products.',
 
-        tipographyTitle: 'Tipography',
-        tipographyContent:
+        typographyTitle: 'Typography',
+        typographyContent:
             'The type scale is defined with the official Samsung font Sharp for titles and for content text Samsung One, the font provide the consistency and maintain the hierarchy with sections and actions. ',
 
         imageryTitle: 'Imagery & illustrations',
@@ -172,21 +171,26 @@ export const AV = [
         animationsContent:
             'The animations with icons provide feedback to users about a current action or state, in this case the animations were used to empty states and success or error tasks.',
 
+        featuresTitle: 'Core Features',
+
         title9: 'Final design',
         finalContent:
             'Finally we presented an Android App that meet the requirements and is an useful referent for all promoters in the sales time.',
 
-        keywordsTitle: 'Keywords',
+        keywordsTitle: 'Keywords Feature',
         keywordsContent:
-            'Sometimes the technical terms about different product categories are complex for the promoters, based on that we used keywords in chips that explains the topics deeply and show products and specific speeches related with each of the products.',
+            'Concise explanations of technical terms, allowing promoters to understand and communicate product details confidently.',
 
-        advancedTitle: 'Advanced search',
+        advancedTitle: 'Advanced Search Feature',
         advancedContent:
-            'Searching for products features represents a relevant point in the sales process, for this reason we categorize the words with specific products, keywords and family products, providing to the promoter different possibilities for quick search, besides that we used a tab bar button to faster access.',
+            'A streamlined search experience categorizes keywords by product, family, and category, allowing rapid access to information.',
 
-        productTitle: 'Product library',
+        productTitle: 'Product Library Feature',
         productContent:
-            'The product library can be access through different sections in the app allowing the promoter search for all information about  references, the unique code named SKU and images to a visual reference also the technological features and technical features.',
+            'A digital product database organized for quick lookups, including images, SKUs, and technical specs.',
+        finalDesignTitle: 'Final Design and Impact',
+        finalDesignDescription:
+            'The final Android app enables promoters to instantly access all AV product information they need for efficient, informed sales conversations. Feedback indicates the app has become a trusted resource for promoters to improve their sales pitches and customer support.',
     },
 ]
 
@@ -369,45 +373,115 @@ export const Aleph = [
         subtitleResume: 'Design System',
         titleResume: 'Geospatial Imagery Platform',
         contentResume:
-            'Demystifying the world, one map at a time. Aleph is an intuitive platform that provides high-resolution satellite imagery and unlock the power of geospatial data.',
+            'Demystifying the world, one map at a time. Aleph is an intuitive platform that provides high-resolution satellite imagery and unlocks the power of geospatial data.',
 
-        titleIntroduction: 'Problem Statement',
-        contentIntroduction:
-            'How can I create a design system that empowers diverse users (researchers, educators, analysts) to explore complex satellite imagery intuitively and efficiently? My goal is to minimize cognitive load, maximize user engagement (increase data exploration by 20%), and overcome the limitations of traditional UI approaches in this uncommon field.',
+        titleChallenge: 'Identifying the Challenge',
+        challengeDescription:
+            'Imagine a world where users struggle to navigate a complex interface designed for satellite imagery tasks, especially small businesses and users with simpler needs. This was the reality for Aleph, an innovative geospatial platform offering high-resolution satellite imagery and geospatial data. Initially tailored to specialized researchers, educators, and analysts, Aleph now sought to expand its reach to include common users with simpler requirements.',
 
-        goalsTitle: 'Project Goals',
-        goal1: "Establish a unified visual language for Aleph's interface and branding, ensuring consistency across platforms and future growth.",
-        goal2: 'Foster an open dialogue with stakeholders throughout the design process, ensuring alignment and buy-in on key decisions.',
-        goal3: 'Create intuitive features that guide users through data exploration, simplifying complex satellite data requests and fostering independent learning.',
+        goalTitle: 'Our goals',
+        goal1: 'Create the first version of a design system that simplifies user interactions with complex data, enhances collaboration across teams, and builds a foundation for future growth.',
+        goal2: 'Streamline development efforts.',
+        goal3: 'Overcome the limitations of traditional UI approaches in this unique field.',
+        goal4: 'Lay a strong foundation for future growth.',
+        journeyTitle: 'Collaborative Journey',
+        journeyDescription:
+            'To tackle this challenge, we assembled a skilled team of UI/UX designers, front-end developers, and project managers. Working closely with Aleph’s stakeholders, we set out on a journey to craft a design system that could standardize the user experience across multiple applications, ensuring consistency and scalability for the future.',
 
-        findingsTitle: 'Findings and opportunities to improve',
+        insightsTitle: 'Gaining Valuable Insights',
+        insightsDescription:
+            'Our first step was to immerse ourselves in Aleph’s ecosystem. Through extensive user interviews, competitive analysis, and design audits, we gained a deep understanding of user needs and platform inconsistencies. Here are some key findings that guided our approach:',
+        findingsTitle: 'Findings',
         finding1:
-            'Certain UI elements like buttons and cards display varying styles across the platform, potentially confusing users and hindering intuitive navigation.',
+            'Inconsistent Visual Styles: Certain UI elements, such as buttons and cards, varied across the platform, creating a fragmented experience and hindering intuitive navigation.',
         finding2:
-            'Lack of established design patterns for data visualization and interaction leads to developer confusion and inconsistent user experiences.',
+            'Missing Design Patterns: The lack of established design patterns for data visualization and interaction led to inconsistent user experiences and developer confusion.',
         finding3:
-            'Development teams are building overlapping features with different codebases, resulting in wasted resources and potential maintenance issues.',
-        finding4:
-            'Implementing a centralized component library and style guide would foster design and development collaboration, ensuring consistency and streamlining future product iterations.',
-        inventoryTitle: 'Inventory',
-        inventoryDescription:
-            'To create a solid foundation design system, we conducted a comprehensive inventory of existing styles and UI elements across all web and mobile interfaces. Through manual audits and collaborative workshops, we identified a total of 20 unique buttons, with 20% displaying inconsistencies in color, font, and padding. Additionally, we discovered 15 variations of form elements and inconsistencies in data visualization styles. This inventory process revealed 25 recurring components and patterns with potential for unification. By streamlining these elements, we aimed to reduce design and development overhead, promote consistency across the platform, and improve user experience.',
-        foundationsTitle: 'Foundations',
-        foundationsDescription:
-            'The Foundations establish a clear and efficient way to manage design tokens, enabling the creation of adaptable themes for various platform needs. It encompasses core elements like colors, typography, and imagery, ensuring visual consistency throughout the product.',
+            'Redundant Development Efforts: Overlapping features were being built by different teams, resulting in wasted resources and maintenance issues.',
+        ideationTitle: 'Ideation and Development',
+        ideationDescription:
+            'Our first step was to immerse ourselves in Aleph’s ecosystem. Through extensive interface review, competitive analysis, and design audits, we gained a deep understanding of user needs and platform inconsistencies. Here are some key findings that guided our approach:',
+        conceptToRealityTitle: 'From Concept to Reality',
+        conceptToRealityDescription:
+            'As our designs took shape, close collaboration with the development team was essential in bringing the ALEPH Design System to life. Following the atomic design methodology, we created a comprehensive foundation, component library, and design patterns, establishing a scalable system structure that positively impacted team workflow and reduced design implementation time.',
+
         componentsTitle: 'Components',
         componentsDescription:
             'Following the atomic design methodology, the component library includes a range of elements, starting with fundamental building blocks and scaling up to complex components required for data-centered map visualizations and interactions.',
-        resultsTitle: 'Results',
+        resultsTitle: 'Measuring the Impact',
         resultsDescription:
-            'The Aleph design system has had a significant impact on team organization and workflow.  Beyond providing a centralized UI library, it fosters the consistent application of brand values throughout the design process. As a living product, the system continuously evolves, and my contributions included:',
-        strongBullet1: 'Scalable System Structure:',
+            'The culmination of our efforts resulted in a cohesive design system that delivered a consistent user experience across all applications. The impact was both immediate and transformative:',
         contentBullet1:
-            'I designed a scalable system structure, positively impacting team workflow and reducing design implementation time.',
-        strongBullet2: 'Comprehensive Support:',
+            '50% Reduction in design-related inquiries from the development team, streamlining communication and reducing friction.',
         contentBullet2:
-            'My support encompassed onboarding, documentation, design token creation, component development, prototyping & wireframing, and facilitating clear communication and synchronization with the development team.',
+            '40% Increase in user satisfaction ratings, attributed to improved interface consistency and usability.',
         contentBullet3:
-            'By implementing the Aleph design system, we achieved a 15% increase in expert users time spent on data exploration tasks and a 20% reduction in design implementation time by developers.',
+            '30% Faster project turnaround times, accelerating the design process and reducing resource allocation.',
+        reflectionsTile: 'Reflections and Future Aspirations',
+        reflectionsDescription:
+            'Reflecting on this journey, we celebrate the Aleph team’s dedication to innovation and their commitment to a unified design approach. The ALEPH Design System is built to scale, with adaptable design tokens, a component library, and a solid foundation that will evolve as Aleph grows. Moving forward, we look forward to deepening our partnership, enhancing the system, and exploring new ways to create engaging and intuitive experiences for Aleph’s users.',
+    },
+]
+
+export const Hub = [
+    {
+        id: 6,
+        key: 'hub',
+        headTitle: 'Hub Design System',
+        roleTitle: 'Role:',
+        role: 'Design System Designer',
+        dateTitle: 'Date:',
+        date: '2024',
+        companyTitle: 'Company:',
+        company: 'Globant',
+
+        subtitleResume: 'Design System',
+        titleResume: 'Hub',
+        contentResume:
+            'Hub is a mobile application designed to organize various activities and services related to a cruise itinerary. The application offers functionalities for both pre-cruise planning and onboard experiences, ensuring users have an enjoyable and seamless journey.',
+
+        titleIntroduction: 'Project Overview',
+        contentIntroduction:
+            'I joined the team to support the Design, Development, and Product teams in improving the current component library and helping to define an official Design System. The library supported components for both iOS and Android.',
+
+        findingsTitle: 'Findings',
+        finding1:
+            'There was an established workflow process to deliver components, but it wasn’t clear enough.',
+        finding2:
+            'The interface used different styles for colors and typography, but there wasn’t a solid foundation guide that was scalable.',
+        finding3:
+            'The handoff process for components was centralized in a single Figma file that worked as a source of truth for developers.',
+        finding4:
+            'The Dev team had the initiative to implement a theme model for the app.',
+        whatIDidTitle: 'What I did?',
+        whatIDidDescription:
+            'First, I organized a process to follow for component requests and handoff to the development team in Figma, clarifying the tasks for the different team members and the Design System Owner.',
+        inventoryTitle: 'Interface Inventory',
+        inventoryDescription:
+            'To have a better understanding of the visual styles used throughout the app, I did an inventory reviewing each component of the interface.',
+        themeImplementationyTitle: 'Theme implementation process',
+        themeImplementationyDescription:
+            'The initial scope to implement themes was intended to consider first colors and typography. It was a shared process of Design/Development to identify the best strategies to implement without affecting the current workflow.',
+        foundationsTitle: 'Foundations',
+        foundationsDescription:
+            'We redefined the system foundations: Colors, Typography, Elevation, Spacings, Icons, and Branding to set a scalable model that allows for improving the consistency and scalability of the component library.',
+        tokensTitle: 'Design Tokens',
+        tokensDescription:
+            'The model was defined with Global and Semantic tokens to simplify the theme implementation. The first tokens were defined for Colors and Typography, documenting categories that simplify and give flexibility to the current interface use cases.',
+        componentsTitle: 'Components Migration',
+        componentsDescription:
+            'After exploring alternatives to implement without affecting the workflow based on a single Figma library, we decided to duplicate the components in a new library and apply the theme separately to have more control during the process and align with the development stages. Then, the components were reviewed along with development during the migration process.',
+        pagesTitle: 'Pages Migration',
+        pagesDescription:
+            'The current Figma Library was linked to many design files that contain flows of the app. To avoid overriding current pages, we defined a process to update the screens with the new library gradually. Once this process was completed, the old library was unpublished.Pages Migration',
+        resultsTitle: 'The Results',
+        resultsBullet1:
+            'The design system adoption increased by developers and product teams.',
+        resultsBullet2:
+            'The handoff process became smoother, reducing the time by token documentation..',
+        resultsBullet3:
+            'The discrepancies between design mockups and implementation were reduced.',
+        resultsBullet4:
+            'The color structure is prepared to add more brand themes.',
     },
 ]

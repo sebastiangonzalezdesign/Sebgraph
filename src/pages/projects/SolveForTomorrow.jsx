@@ -6,6 +6,7 @@ import { default as desarrolloSostenible } from '../../img/desarrollo_sostenible
 import { default as versionesAnteriores } from '../../img/versiones-anteriores.json'
 import { default as recursos } from '../../img/recursos.json'
 import BackButton from '../../components/BackButton'
+import ImageModalZoom from '../../components/ImageModalZoom'
 
 const SolveForTomorrow = () => {
     const [dataPortfolio] = useState(Solve)
@@ -174,6 +175,7 @@ const SolveForTomorrow = () => {
                             {dataPortfolio.title2}
                         </h1>
 
+<<<<<<< HEAD
                         <picture className="modal__img-container">
                             <source
                                 srcSet="https://sebastiangonzalez.design/images/projects/solve/user-persona-responsive.png"
@@ -186,12 +188,29 @@ const SolveForTomorrow = () => {
                                 alt="ideate"
                             />
                         </picture>
+=======
+                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/solve/user-persona-responsive.png">
+                            <picture className="modal__img-container">
+                                <source
+                                    srcSet="https://sebastiangonzalez.design/images/projects/solve/user-persona-responsive.png"
+                                    media="(max-width:900px)"
+                                />
+                                <img
+                                    className="modal__img-complete"
+                                    src="https://sebastiangonzalez.design/images/projects/solve/user-persona.png"
+                                    loading="lazy"
+                                    alt="ideate"
+                                />
+                            </picture>
+                        </ImageModalZoom>
+>>>>>>> restricted-project
                     </section>
 
                     <section className="modal__template">
                         <h1 className="heading__100--bold modal__title modal__main-text-box">
                             {dataPortfolio.title3}
                         </h1>
+<<<<<<< HEAD
 
                         <picture className="modal__img-container">
                             <source
@@ -205,12 +224,29 @@ const SolveForTomorrow = () => {
                                 alt="ideate"
                             />
                         </picture>
+=======
+                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/solve/empathy-map.png">
+                            <picture className="modal__img-container">
+                                <source
+                                    srcSet="https://sebastiangonzalez.design/images/projects/solve/empathy-map.png"
+                                    media="(max-width:900px)"
+                                />
+                                <img
+                                    className="modal__img-complete"
+                                    src="https://sebastiangonzalez.design/images/projects/solve/empathy-map.png"
+                                    loading="lazy"
+                                    alt="ideate"
+                                />
+                            </picture>
+                        </ImageModalZoom>
+>>>>>>> restricted-project
                     </section>
 
                     <section className="modal__template">
                         <h1 className="heading__100--bold modal__title modal__main-text-box">
                             {dataPortfolio.title4}
                         </h1>
+<<<<<<< HEAD
 
                         <picture className="modal__img-container">
                             <source
@@ -224,6 +260,22 @@ const SolveForTomorrow = () => {
                                 alt="ideate"
                             />
                         </picture>
+=======
+                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/solve/user-flow.png">
+                            <picture className="modal__img-container">
+                                <source
+                                    srcSet="https://sebastiangonzalez.design/images/projects/solve/user-flow.png"
+                                    media="(max-width:900px)"
+                                />
+                                <img
+                                    className="modal__img-complete"
+                                    src="https://sebastiangonzalez.design/images/projects/solve/user-flow.png"
+                                    loading="lazy"
+                                    alt="ideate"
+                                />
+                            </picture>
+                        </ImageModalZoom>
+>>>>>>> restricted-project
                     </section>
 
                     <section className="modal__template">
@@ -235,6 +287,7 @@ const SolveForTomorrow = () => {
                                 {dataPortfolio.midFidelityTitle}
                             </h3>
                         </article>
+<<<<<<< HEAD
                         <picture className="modal__img-container">
                             <source
                                 srcSet="https://sebastiangonzalez.design/images/projects/solve/mid-fidelity-wireframes.png"
@@ -247,12 +300,29 @@ const SolveForTomorrow = () => {
                                 alt="ideate"
                             />
                         </picture>
+=======
+                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/solve/mid-fidelity-wireframes.png">
+                            <picture className="modal__img-container">
+                                <source
+                                    srcSet="https://sebastiangonzalez.design/images/projects/solve/mid-fidelity-wireframes.png"
+                                    media="(max-width:900px)"
+                                />
+                                <img
+                                    className="modal__img-complete"
+                                    src="https://sebastiangonzalez.design/images/projects/solve/mid-fidelity-wireframes.png"
+                                    loading="lazy"
+                                    alt="ideate"
+                                />
+                            </picture>
+                        </ImageModalZoom>
+>>>>>>> restricted-project
 
                         <article className="modal__secondary-text-box">
                             <h3 className="heading__300--bold modal__subtitle">
                                 {dataPortfolio.highFidelityTitle}
                             </h3>
                         </article>
+<<<<<<< HEAD
                         <picture className="modal__img-container">
                             <source
                                 srcSet="https://sebastiangonzalez.design/images/projects/solve/high-fidelity-wireframes.png"
@@ -265,6 +335,22 @@ const SolveForTomorrow = () => {
                                 alt="ideate"
                             />
                         </picture>
+=======
+                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/solve/high-fidelity-wireframes.png">
+                            <picture className="modal__img-container">
+                                <source
+                                    srcSet="https://sebastiangonzalez.design/images/projects/solve/high-fidelity-wireframes.png"
+                                    media="(max-width:900px)"
+                                />
+                                <img
+                                    className="modal__img-complete"
+                                    src="https://sebastiangonzalez.design/images/projects/solve/high-fidelity-wireframes.png"
+                                    loading="lazy"
+                                    alt="ideate"
+                                />
+                            </picture>
+                        </ImageModalZoom>
+>>>>>>> restricted-project
                     </section>
 
                     <section className="modal__template">
@@ -276,6 +362,7 @@ const SolveForTomorrow = () => {
                                 {dataPortfolio.moodboardContent}
                             </p>
                         </article>
+<<<<<<< HEAD
 
                         <picture className="modal__img-container">
                             <source
@@ -289,6 +376,22 @@ const SolveForTomorrow = () => {
                                 alt="ideate"
                             />
                         </picture>
+=======
+                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/solve/moodboard.png">
+                            <picture className="modal__img-container">
+                                <source
+                                    srcSet="https://sebastiangonzalez.design/images/projects/solve/moodboard.png"
+                                    media="(max-width:900px)"
+                                />
+                                <img
+                                    className="modal__img-complete"
+                                    src="https://sebastiangonzalez.design/images/projects/solve/moodboard.png"
+                                    loading="lazy"
+                                    alt="ideate"
+                                />
+                            </picture>
+                        </ImageModalZoom>
+>>>>>>> restricted-project
                     </section>
 
                     <section className="modal__template">
@@ -309,6 +412,7 @@ const SolveForTomorrow = () => {
                                 {dataPortfolio.brandContent}
                             </p>
                         </article>
+<<<<<<< HEAD
                         <picture className="modal__img-container mb-20">
                             <source
                                 srcSet="https://sebastiangonzalez.design/images/projects/solve/brand.png"
@@ -321,6 +425,22 @@ const SolveForTomorrow = () => {
                                 alt="ideate"
                             />
                         </picture>
+=======
+                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/solve/brand.png">
+                            <picture className="modal__img-container mb-20">
+                                <source
+                                    srcSet="https://sebastiangonzalez.design/images/projects/solve/brand.png"
+                                    media="(max-width:900px)"
+                                />
+                                <img
+                                    className="modal__img-complete"
+                                    src="https://sebastiangonzalez.design/images/projects/solve/brand.png"
+                                    loading="lazy"
+                                    alt="ideate"
+                                />
+                            </picture>
+                        </ImageModalZoom>
+>>>>>>> restricted-project
 
                         <article className="modal__secondary-text-box">
                             <h3 className="heading__300--bold">
@@ -330,6 +450,7 @@ const SolveForTomorrow = () => {
                                 {dataPortfolio.colorsContent}
                             </p>
                         </article>
+<<<<<<< HEAD
                         <picture className="modal__img-container mb-20">
                             <source
                                 srcSet="https://sebastiangonzalez.design/images/projects/solve/colors.png"
@@ -342,6 +463,22 @@ const SolveForTomorrow = () => {
                                 alt="ideate"
                             />
                         </picture>
+=======
+                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/solve/colors.png">
+                            <picture className="modal__img-container mb-20">
+                                <source
+                                    srcSet="https://sebastiangonzalez.design/images/projects/solve/colors.png"
+                                    media="(max-width:900px)"
+                                />
+                                <img
+                                    className="modal__img-complete"
+                                    src="https://sebastiangonzalez.design/images/projects/solve/colors.png"
+                                    loading="lazy"
+                                    alt="ideate"
+                                />
+                            </picture>
+                        </ImageModalZoom>
+>>>>>>> restricted-project
 
                         <article className="modal__secondary-text-box">
                             <h3 className="heading__300--bold">
@@ -351,6 +488,7 @@ const SolveForTomorrow = () => {
                                 {dataPortfolio.tipographyContent}
                             </p>
                         </article>
+<<<<<<< HEAD
                         <picture className="modal__img-container mb-20">
                             <source
                                 srcSet="https://sebastiangonzalez.design/images/projects/solve/tipography.png"
@@ -363,6 +501,22 @@ const SolveForTomorrow = () => {
                                 alt="ideate"
                             />
                         </picture>
+=======
+                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/solve/tipography.png">
+                            <picture className="modal__img-container mb-20">
+                                <source
+                                    srcSet="https://sebastiangonzalez.design/images/projects/solve/tipography.png"
+                                    media="(max-width:900px)"
+                                />
+                                <img
+                                    className="modal__img-complete"
+                                    src="https://sebastiangonzalez.design/images/projects/solve/tipography.png"
+                                    loading="lazy"
+                                    alt="ideate"
+                                />
+                            </picture>
+                        </ImageModalZoom>
+>>>>>>> restricted-project
 
                         <article className="modal__secondary-text-box">
                             <h3 className="heading__300--bold ">
@@ -372,6 +526,7 @@ const SolveForTomorrow = () => {
                                 {dataPortfolio.imageryContent}
                             </p>
                         </article>
+<<<<<<< HEAD
                         <picture className="modal__img-container mb-20">
                             <source
                                 srcSet="https://sebastiangonzalez.design/images/projects/solve/imagery.png"
@@ -384,6 +539,22 @@ const SolveForTomorrow = () => {
                                 alt="ideate"
                             />
                         </picture>
+=======
+                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/solve/imagery.png">
+                            <picture className="modal__img-container mb-20">
+                                <source
+                                    srcSet="https://sebastiangonzalez.design/images/projects/solve/imagery.png"
+                                    media="(max-width:900px)"
+                                />
+                                <img
+                                    className="modal__img-complete"
+                                    src="https://sebastiangonzalez.design/images/projects/solve/imagery.png"
+                                    loading="lazy"
+                                    alt="ideate"
+                                />
+                            </picture>
+                        </ImageModalZoom>
+>>>>>>> restricted-project
 
                         <article className="modal__secondary-text-box">
                             <h3 className="heading__300--bold">
@@ -393,6 +564,7 @@ const SolveForTomorrow = () => {
                                 {dataPortfolio.componentsContent}
                             </p>
                         </article>
+<<<<<<< HEAD
                         <picture className="modal__img-container mb-20">
                             <source
                                 srcSet="https://sebastiangonzalez.design/images/projects/solve/buttons.png"
@@ -453,6 +625,78 @@ const SolveForTomorrow = () => {
                                 alt="ideate"
                             />
                         </picture>
+=======
+                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/solve/buttons.png">
+                            <picture className="modal__img-container mb-20">
+                                <source
+                                    srcSet="https://sebastiangonzalez.design/images/projects/solve/buttons.png"
+                                    media="(max-width:900px)"
+                                />
+                                <img
+                                    className="modal__img-complete"
+                                    src="https://sebastiangonzalez.design/images/projects/solve/buttons.png"
+                                    loading="lazy"
+                                    alt="ideate"
+                                />
+                            </picture>
+                        </ImageModalZoom>
+                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/solve/forms.png">
+                            <picture className="modal__img-container mb-20">
+                                <source
+                                    srcSet="https://sebastiangonzalez.design/images/projects/solve/forms.png"
+                                    media="(max-width:900px)"
+                                />
+                                <img
+                                    className="modal__img-complete"
+                                    src="https://sebastiangonzalez.design/images/projects/solve/forms.png"
+                                    loading="lazy"
+                                    alt="ideate"
+                                />
+                            </picture>
+                        </ImageModalZoom>
+                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/solve/icons.png">
+                            <picture className="modal__img-container mb-20">
+                                <source
+                                    srcSet="https://sebastiangonzalez.design/images/projects/solve/icons.png"
+                                    media="(max-width:900px)"
+                                />
+                                <img
+                                    className="modal__img-complete"
+                                    src="https://sebastiangonzalez.design/images/projects/solve/icons.png"
+                                    loading="lazy"
+                                    alt="ideate"
+                                />
+                            </picture>
+                        </ImageModalZoom>
+                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/solve/cards.png">
+                            <picture className="modal__img-container mb-20">
+                                <source
+                                    srcSet="https://sebastiangonzalez.design/images/projects/solve/cards.png"
+                                    media="(max-width:900px)"
+                                />
+                                <img
+                                    className="modal__img-complete"
+                                    src="https://sebastiangonzalez.design/images/projects/solve/cards.png"
+                                    loading="lazy"
+                                    alt="ideate"
+                                />
+                            </picture>
+                        </ImageModalZoom>
+                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/solve/organisms.png">
+                            <picture className="modal__img-container">
+                                <source
+                                    srcSet="https://sebastiangonzalez.design/images/projects/solve/organisms.png"
+                                    media="(max-width:900px)"
+                                />
+                                <img
+                                    className="modal__img-complete"
+                                    src="https://sebastiangonzalez.design/images/projects/solve/organisms.png"
+                                    loading="lazy"
+                                    alt="ideate"
+                                />
+                            </picture>
+                        </ImageModalZoom>
+>>>>>>> restricted-project
                     </section>
 
                     <section className="modal__template">
@@ -507,6 +751,7 @@ const SolveForTomorrow = () => {
                                 {dataPortfolio.formContent}
                             </p>
                         </article>
+<<<<<<< HEAD
 
                         <picture className="modal__img-container mb-20">
                             <source
@@ -520,6 +765,22 @@ const SolveForTomorrow = () => {
                                 alt="ideate"
                             />
                         </picture>
+=======
+                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/solve/form.png">
+                            <picture className="modal__img-container mb-20">
+                                <source
+                                    srcSet="https://sebastiangonzalez.design/images/projects/solve/form.png"
+                                    media="(max-width:900px)"
+                                />
+                                <img
+                                    className="modal__img-complete"
+                                    src="https://sebastiangonzalez.design/images/projects/solve/form.png"
+                                    loading="lazy"
+                                    alt="ideate"
+                                />
+                            </picture>
+                        </ImageModalZoom>
+>>>>>>> restricted-project
 
                         <article className="modal__secondary-text-box">
                             <h3 className="heading__300--bold ">
@@ -529,6 +790,7 @@ const SolveForTomorrow = () => {
                                 {dataPortfolio.previousContent}
                             </p>
                         </article>
+<<<<<<< HEAD
                         <picture className="modal__img-container mb-20">
                             <source
                                 srcSet="https://sebastiangonzalez.design/images/projects/solve/previous-versions.png"
@@ -541,6 +803,23 @@ const SolveForTomorrow = () => {
                                 alt="ideate"
                             />
                         </picture>
+=======
+
+                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/solve/previous-versions.png">
+                            <picture className="modal__img-container mb-20">
+                                <source
+                                    srcSet="https://sebastiangonzalez.design/images/projects/solve/previous-versions.png"
+                                    media="(max-width:900px)"
+                                />
+                                <img
+                                    className="modal__img-complete"
+                                    src="https://sebastiangonzalez.design/images/projects/solve/previous-versions.png"
+                                    loading="lazy"
+                                    alt="ideate"
+                                />
+                            </picture>
+                        </ImageModalZoom>
+>>>>>>> restricted-project
 
                         <article className="modal__secondary-text-box">
                             <h3 className="heading__300--bold ">
@@ -550,6 +829,7 @@ const SolveForTomorrow = () => {
                                 {dataPortfolio.resourcesContent}
                             </p>
                         </article>
+<<<<<<< HEAD
                         <picture className="modal__img-container mb-20">
                             <source
                                 srcSet="https://sebastiangonzalez.design/images/projects/solve/resources.png"
@@ -562,6 +842,22 @@ const SolveForTomorrow = () => {
                                 alt="ideate"
                             />
                         </picture>
+=======
+                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/solve/resources.png">
+                            <picture className="modal__img-container mb-20">
+                                <source
+                                    srcSet="https://sebastiangonzalez.design/images/projects/solve/resources.png"
+                                    media="(max-width:900px)"
+                                />
+                                <img
+                                    className="modal__img-complete"
+                                    src="https://sebastiangonzalez.design/images/projects/solve/resources.png"
+                                    loading="lazy"
+                                    alt="ideate"
+                                />
+                            </picture>
+                        </ImageModalZoom>
+>>>>>>> restricted-project
                     </section>
 
                     <picture>

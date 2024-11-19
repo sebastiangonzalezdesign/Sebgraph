@@ -1,5 +1,11 @@
 @use '../abstracts/' as *;
 
+// background color classes for Thumbnails
+
+.card-background-hub {
+    background-color: $card-background-hub;
+}
+
 .card-background-aleph {
     background-color: $card-background-aleph;
 }

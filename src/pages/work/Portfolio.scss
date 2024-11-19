@@ -13,6 +13,22 @@
         flex-direction: column;
         gap: $size-3;
     }
+
+    &__title-and-icon {
+        align-items: center;
+        display: flex;
+        gap: $size-3;
+
+        &__lock-icon {
+            width: $size-7;
+            stroke-width: 2px;
+            padding: $size-1;
+            background-color: $color-fixed-white;
+            border-radius: 50%;
+            color: $color-neutral-blue-500;
+        }
+    }
+
     &__heading {
         color: $body-text-color;
         position: relative;

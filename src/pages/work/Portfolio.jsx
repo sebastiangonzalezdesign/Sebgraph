@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react'
+import React, { useEffect, useState, useRef, forwardRef } from 'react'
 import { Link } from 'react-router-dom'
 import './Portfolio.scss'
 import PortfolioList from './PortfolioList'
@@ -8,8 +8,9 @@ import {
     codePortfolio,
     dsPortfolio,
 } from '../../data'
+import { LockClosedIcon } from '@heroicons/react/24/outline'
 
-export default function Portfolio() {
+const Portfolio = forwardRef((props, ref) => {
     const [selected, setSelected] = useState('all')
     const [data, setData] = useState([])
     const [delayedSelected, setDelayedSelected] = useState('all')
@@ -26,6 +27,32 @@ export default function Portfolio() {
 
     // Update portfolio data based on the selected tab
     useEffect(() => {
+        let selectedPortfolio
+
+        switch (selected) {
+            case 'all':
+                selectedPortfolio = allPortfolio
+                break
+            case 'ui/visual':
+                selectedPortfolio = uiVisualPortfolio
+                break
+            case 'ds':
+                selectedPortfolio = dsPortfolio
+                break
+            case 'code':
+                selectedPortfolio = codePortfolio
+                break
+            default:
+                selectedPortfolio = allPortfolio
+        }
+
+        // Filter projects based on the showProject property
+        const visibleProjects = selectedPortfolio.filter(
+            (project) => project.showProject === 'yes'
+        )
+        setData(visibleProjects)
+    }, [selected])
+    /*     useEffect(() => {
         switch (selected) {
             case 'all':
                 setData(allPortfolio)
@@ -42,7 +69,7 @@ export default function Portfolio() {
             default:
                 setData(allPortfolio)
         }
-    }, [selected])
+    }, [selected]) */
 
     // Delay click Tab
     const handleTabChange = (id) => {
@@ -53,7 +80,7 @@ export default function Portfolio() {
     }
 
     return (
-        <section id="work" className="section-portfolio">
+        <section ref={ref} id="work" className="section-portfolio">
             <div className="section-portfolio__heading-container">
                 <h2 className="heading__100--bold section-portfolio__heading">
                     Work
@@ -86,22 +113,30 @@ export default function Portfolio() {
 
                 <article className="section-portfolio__container-grid">
                     {data
+                        .filter((d) => d.showProject === 'yes')
                         .sort((a, b) => a.order - b.order)
                         .map((d) => (
                             <Link
-                                to={`/projects/${d.key}`}
+                                to={
+                                    d.protected === 'yes'
+                                        ? '/projects/password-page'
+                                        : `/projects/${d.key}`
+                                }
                                 ref={refProject}
                                 id={d.id}
-                                key={d.id}
+                                key={d.key}
                                 className={`section-portfolio__card-project link ${d.bgClass}`}
                             >
                                 <div className="section-portfolio__text-card">
                                     <div className="head-text">
                                         <h2
                                             id={d.id}
-                                            className="heading__200--bold"
+                                            className="heading__200--bold section-portfolio__title-and-icon"
                                         >
                                             {d.title}
+                                            {d.protected === 'yes' && (
+                                                <LockClosedIcon className="section-portfolio__title-and-icon__lock-icon" />
+                                            )}
                                         </h2>
                                         <span className="paragraph__200--medium overview">
                                             {d.overview}
@@ -122,4 +157,6 @@ export default function Portfolio() {
             </div>
         </section>
     )
-}
+})
+
+export default Portfolio
