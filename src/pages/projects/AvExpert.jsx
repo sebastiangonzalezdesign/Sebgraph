@@ -153,102 +153,15 @@ const AvExpert = () => {
                                 </div>
                             </div>
                         </article>
-<<<<<<< HEAD
-                    </section>
-
-                    {/* <!-- Section ideate --> */}
-                    <section className="modal__template">
-                        <article className="modal__main-text-box">
-                            <h2 className="display__200--bold modal__title">
-                                {dataPortfolio.ideateTitle}
-                            </h2>
-                            <p className="paragraph__100--medium modal__paragraph">
-                                {dataPortfolio.ideateContent}
-                            </p>
-                        </article>
-                    </section>
-
-                    <section className="modal__template">
-                        <h1 className="heading__100--bold modal__title modal__main-text-box">
-                            {dataPortfolio.title2}
-                        </h1>
-
-                        <picture className="modal__img-container">
-                            <source
-                                srcSet="https://sebastiangonzalez.design/images/projects/av/user-persona-responsive.png"
-                                media="(max-width:900px)"
-                            />
-                            <img
-                                className="modal__img-complete"
-                                src="https://sebastiangonzalez.design/images/projects/av/user-persona.png"
-                                loading="lazy"
-                                alt="ideate"
-                            />
-                        </picture>
-                    </section>
-
-                    <section className="modal__template">
-                        <h1 className="heading__100--bold modal__title modal__main-text-box">
-                            {dataPortfolio.title4}
-                        </h1>
-
-                        <picture className="modal__img-container">
-                            <source
-                                srcSet="https://sebastiangonzalez.design/images/projects/av/user-flow.png"
-                                media="(max-width:900px)"
-                            />
-                            <img
-                                className="modal__img-complete"
-                                src="https://sebastiangonzalez.design/images/projects/av/user-flow.png"
-                                loading="lazy"
-                                alt="ideate"
-                            />
-                        </picture>
-                    </section>
-
-                    <section className="modal__template">
-                        <article className="modal__main-text-box">
-                            <h1 className="heading__100--bold modal__title ">
-                                {dataPortfolio.title5}
-                            </h1>
-                            <h3 className="heading__300--bold modal__subtitle">
-                                {dataPortfolio.midFidelityTitle}
-                            </h3>
-                        </article>
-                        <picture className="modal__img-container">
-                            <source
-                                srcSet="https://sebastiangonzalez.design/images/projects/av/mid-fidelity.png"
-                                media="(max-width:900px)"
-                            />
-                            <img
-                                className="modal__img-complete"
-                                src="https://sebastiangonzalez.design/images/projects/av/mid-fidelity.png"
-                                loading="lazy"
-                                alt="ideate"
-                            />
-                        </picture>
-                        <article className="modal__text-box">
-                            <h3 className="heading__300--bold modal__subtitle">
-                                {dataPortfolio.highFidelityTitle}
-                            </h3>
-                            <picture className="modal__img-container">
-                                <source
-                                    srcSet="https://sebastiangonzalez.design/images/projects/av/high-fidelity.png"
-=======
                         <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/av/final-design.png">
                             <picture className="modal__img-container mb-20">
                                 <source
                                     srcSet="https://sebastiangonzalez.design/images/projects/av/final-design.png"
->>>>>>> restricted-project
                                     media="(max-width:900px)"
                                 />
                                 <img
                                     className="modal__img-complete"
-<<<<<<< HEAD
-                                    src="https://sebastiangonzalez.design/images/projects/av/high-fidelity.png"
-=======
                                     src="https://sebastiangonzalez.design/images/projects/av/final-design.png"
->>>>>>> restricted-project
                                     loading="lazy"
                                     alt="ideate"
                                 />
@@ -358,28 +271,6 @@ const AvExpert = () => {
                             </p>
                         </article>
 
-<<<<<<< HEAD
-                        <article className="modal__secondary-text-box">
-                            <h3 className="heading__300--bold modal__subtitle">
-                                {dataPortfolio.brandTitle}
-                            </h3>
-                            <p className="paragraph__100--medium modal__paragraph">
-                                {dataPortfolio.brandContent}
-                            </p>
-                        </article>
-                        <picture className="modal__img-container mb-20">
-                            <source
-                                srcSet="https://sebastiangonzalez.design/images/projects/av/brand.png"
-                                media="(max-width:900px)"
-                            />
-                            <img
-                                className="modal__img-complete"
-                                src="https://sebastiangonzalez.design/images/projects/av/brand.png"
-                                loading="lazy"
-                                alt="ideate"
-                            />
-                        </picture>
-=======
                         <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/av/brand.png">
                             <picture className="modal__img-container mb-20">
                                 <source
@@ -394,7 +285,6 @@ const AvExpert = () => {
                                 />
                             </picture>
                         </ImageModalZoom>
->>>>>>> restricted-project
 
                         <article className="modal__secondary-text-box">
                             <h3 className="heading__300--bold modal__subtitle">
@@ -404,20 +294,6 @@ const AvExpert = () => {
                                 {dataPortfolio.colorsContent}
                             </p>
                         </article>
-<<<<<<< HEAD
-                        <picture className="modal__img-container mb-20">
-                            <source
-                                srcSet="https://sebastiangonzalez.design/images/projects/av/colors.png"
-                                media="(max-width:900px)"
-                            />
-                            <img
-                                className="modal__img-complete"
-                                src="https://sebastiangonzalez.design/images/projects/av/colors.png"
-                                loading="lazy"
-                                alt="ideate"
-                            />
-                        </picture>
-=======
                         <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/av/colors.png">
                             <picture className="modal__img-container mb-20">
                                 <source
@@ -432,7 +308,6 @@ const AvExpert = () => {
                                 />
                             </picture>
                         </ImageModalZoom>
->>>>>>> restricted-project
 
                         <article className="modal__secondary-text-box">
                             <h3 className="heading__300--bold modal__subtitle">
@@ -442,20 +317,6 @@ const AvExpert = () => {
                                 {dataPortfolio.typographyContent}
                             </p>
                         </article>
-<<<<<<< HEAD
-                        <picture className="modal__img-container mb-20">
-                            <source
-                                srcSet="https://sebastiangonzalez.design/images/projects/av/tipography.png"
-                                media="(max-width:900px)"
-                            />
-                            <img
-                                className="modal__img-complete"
-                                src="https://sebastiangonzalez.design/images/projects/av/tipography.png"
-                                loading="lazy"
-                                alt="ideate"
-                            />
-                        </picture>
-=======
                         <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/av/tipography.png">
                             <picture className="modal__img-container mb-20">
                                 <source
@@ -470,7 +331,6 @@ const AvExpert = () => {
                                 />
                             </picture>
                         </ImageModalZoom>
->>>>>>> restricted-project
 
                         <article className="modal__secondary-text-box">
                             <h3 className="heading__300--bold modal__subtitle">
@@ -480,20 +340,6 @@ const AvExpert = () => {
                                 {dataPortfolio.imageryContent}
                             </p>
                         </article>
-<<<<<<< HEAD
-                        <picture className="modal__img-container-dark mb-20">
-                            <source
-                                srcSet="https://sebastiangonzalez.design/images/projects/av/imagery.png"
-                                media="(max-width:900px)"
-                            />
-                            <img
-                                className="modal__img-complete"
-                                src="https://sebastiangonzalez.design/images/projects/av/imagery.png"
-                                loading="lazy"
-                                alt="ideate"
-                            />
-                        </picture>
-=======
                         <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/av/imagery.png">
                             <picture className="modal__img-container-dark mb-20">
                                 <source
@@ -508,7 +354,6 @@ const AvExpert = () => {
                                 />
                             </picture>
                         </ImageModalZoom>
->>>>>>> restricted-project
 
                         <article className="modal__secondary-text-box">
                             <h3 className="heading__300--bold modal__subtitle">
@@ -518,44 +363,6 @@ const AvExpert = () => {
                                 {dataPortfolio.componentsContent}
                             </p>
                         </article>
-<<<<<<< HEAD
-                        <picture className="modal__img-container-dark mb-20">
-                            <source
-                                srcSet="https://sebastiangonzalez.design/images/projects/av/components.png"
-                                media="(max-width:900px)"
-                            />
-                            <img
-                                className="modal__img-complete"
-                                src="https://sebastiangonzalez.design/images/projects/av/components.png"
-                                loading="lazy"
-                                alt="ideate"
-                            />
-                        </picture>
-                        <picture className="modal__img-container-dark mb-20">
-                            <source
-                                srcSet="https://sebastiangonzalez.design/images/projects/av/cards.png"
-                                media="(max-width:900px)"
-                            />
-                            <img
-                                className="modal__img-complete"
-                                src="https://sebastiangonzalez.design/images/projects/av/cards.png"
-                                loading="lazy"
-                                alt="ideate"
-                            />
-                        </picture>
-                        <picture className="modal__img-container-dark mb-20">
-                            <source
-                                srcSet="https://sebastiangonzalez.design/images/projects/av/icons.png"
-                                media="(max-width:900px)"
-                            />
-                            <img
-                                className="modal__img-complete"
-                                src="https://sebastiangonzalez.design/images/projects/av/icons.png"
-                                loading="lazy"
-                                alt="ideate"
-                            />
-                        </picture>
-=======
                         <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/av/components.png">
                             <picture className="modal__img-container-dark mb-20">
                                 <source
@@ -598,7 +405,6 @@ const AvExpert = () => {
                                 />
                             </picture>
                         </ImageModalZoom>
->>>>>>> restricted-project
                     </section>
 
                     <section className="modal__template">
@@ -637,27 +443,12 @@ const AvExpert = () => {
 
                     {/* <!-- Section Core Features --> */}
 
-<<<<<<< HEAD
-                        <picture className="modal__img-container mb-20">
-                            <source
-                                srcSet="https://sebastiangonzalez.design/images/projects/av/final-design.png"
-                                media="(max-width:900px)"
-                            />
-                            <img
-                                className="modal__img-complete"
-                                src="https://sebastiangonzalez.design/images/projects/av/final-design.png"
-                                loading="lazy"
-                                alt="ideate"
-                            />
-                        </picture>
-=======
                     <section className="modal__template">
                         <article className="mb-20 modal__main-text-box">
                             <h1 className="display__100--bold modal__title modal__main-text-box">
                                 {dataPortfolio.featuresTitle}
                             </h1>
                         </article>
->>>>>>> restricted-project
 
                         <article className="modal__secondary-text-box">
                             <h3 className="heading__300--bold modal__subtitle">
@@ -667,21 +458,6 @@ const AvExpert = () => {
                                 {dataPortfolio.keywordsContent}
                             </p>
                         </article>
-<<<<<<< HEAD
-
-                        <picture className="modal__img-container mb-20">
-                            <source
-                                srcSet="https://sebastiangonzalez.design/images/projects/av/keywords.png"
-                                media="(max-width:900px)"
-                            />
-                            <img
-                                className="modal__img-complete"
-                                src="https://sebastiangonzalez.design/images/projects/av/keywords.png"
-                                loading="lazy"
-                                alt="ideate"
-                            />
-                        </picture>
-=======
                         <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/av/keywords.png">
                             <picture className="modal__img-container mb-20">
                                 <source
@@ -696,7 +472,6 @@ const AvExpert = () => {
                                 />
                             </picture>
                         </ImageModalZoom>
->>>>>>> restricted-project
 
                         <article className="modal__secondary-text-box">
                             <h3 className="heading__300--bold modal__subtitle">
@@ -706,20 +481,6 @@ const AvExpert = () => {
                                 {dataPortfolio.advancedContent}
                             </p>
                         </article>
-<<<<<<< HEAD
-                        <picture className="modal__img-container mb-20">
-                            <source
-                                srcSet="https://sebastiangonzalez.design/images/projects/av/advanced-search.png"
-                                media="(max-width:900px)"
-                            />
-                            <img
-                                className="modal__img-complete"
-                                src="https://sebastiangonzalez.design/images/projects/av/advanced-search.png"
-                                loading="lazy"
-                                alt="ideate"
-                            />
-                        </picture>
-=======
                         <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/av/advanced-search.png">
                             <picture className="modal__img-container mb-20">
                                 <source
@@ -734,7 +495,6 @@ const AvExpert = () => {
                                 />
                             </picture>
                         </ImageModalZoom>
->>>>>>> restricted-project
 
                         <article className="modal__secondary-text-box">
                             <h3 className="heading__300--bold modal__subtitle">
@@ -744,20 +504,6 @@ const AvExpert = () => {
                                 {dataPortfolio.productContent}
                             </p>
                         </article>
-<<<<<<< HEAD
-                        <picture className="modal__img-container mb-20">
-                            <source
-                                srcSet="https://sebastiangonzalez.design/images/projects/av/product-library.png"
-                                media="(max-width:900px)"
-                            />
-                            <img
-                                className="modal__img-complete"
-                                src="https://sebastiangonzalez.design/images/projects/av/product-library.png"
-                                loading="lazy"
-                                alt="ideate"
-                            />
-                        </picture>
-=======
                         <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/av/product-library.png">
                             <picture className="modal__img-container mb-20">
                                 <source
@@ -772,7 +518,6 @@ const AvExpert = () => {
                                 />
                             </picture>
                         </ImageModalZoom>
->>>>>>> restricted-project
                     </section>
 
                     <picture>

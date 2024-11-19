@@ -1,14 +1,6 @@
 // Data for Thumbnails
 export const allPortfolio = [
     {
-<<<<<<< HEAD
-        id: 1,
-        key: 'solve',
-        title: 'Solve For Tomorrow',
-        overview: 'Samsung contest | Web | UI | Lottie',
-        img: 'https://sebastiangonzalez.design/images/thumbnails/thumbnail-solve-for-tomorrow2.webp',
-        bgClass: 'card-background-solve',
-=======
         id: 5,
         key: 'Aleph',
         title: 'Aleph Design System',
@@ -26,7 +18,6 @@ export const allPortfolio = [
         overview: 'Design System | Cruisers | iOS | Android | Tokens',
         img: 'https://sebastiangonzalez.design/images/thumbnails/thumbnail-hub-design-system.webp',
         bgClass: 'card-background-hub',
->>>>>>> restricted-project
         order: '2',
         protected: 'yes',
         showProject: 'no',
@@ -73,40 +64,14 @@ export const allPortfolio = [
         overview: 'Samsung launching | Web | UI | Prototyping',
         img: 'https://sebastiangonzalez.design/images/thumbnails/thumbnail-landing-s21-2.webp',
         bgClass: 'card-background-landing',
-<<<<<<< HEAD
-        order: '5',
-    },
-
-    {
-        id: 5,
-        key: 'Aleph',
-        title: 'Aleph Design System',
-        overview: 'Design System | Geospatial | Web | UI | Tokens',
-        img: 'https://sebastiangonzalez.design/images/thumbnails/thumbnail-aleph2.webp',
-        bgClass: 'card-background-aleph',
-        order: '1',
-=======
         order: '6',
         protected: 'no',
         showProject: 'yes',
->>>>>>> restricted-project
     },
 ]
 
 export const uiVisualPortfolio = [
     {
-<<<<<<< HEAD
-        id: 1,
-        key: 'solve',
-        title: 'Solve For Tomorrow',
-        overview: 'Samsung contest | Web | UI | Lottie',
-        img: 'https://sebastiangonzalez.design/images/thumbnails/thumbnail-solve-for-tomorrow2.webp',
-        bgClass: 'card-background-solve',
-        order: '2',
-    },
-    {
-=======
->>>>>>> restricted-project
         id: 2,
         key: 'av',
         title: 'AV Expert App',
