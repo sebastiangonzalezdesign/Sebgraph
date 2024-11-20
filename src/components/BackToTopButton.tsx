@@ -1,10 +1,10 @@
 import React, { useState, useContext, useEffect } from 'react'
 import './BackToTopButton.scss'
 import { ArrowUpIcon } from '@heroicons/react/24/outline'
-import ThemeContext from '../context/ThemeContext'
+import useTheme from '../hooks/useTheme'
 
 const BackToTopButton = () => {
-    const { theme } = useContext(ThemeContext)
+    const { theme } = useTheme()
     const [top, setTop] = useState(false)
 
     // Add scroll event listener on mount, remove on unmount

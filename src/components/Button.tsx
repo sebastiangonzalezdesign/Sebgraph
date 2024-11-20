@@ -13,17 +13,33 @@ const STYLES = ['btn--primary', 'btn--secondary']
 
 const SIZE = ['btn--lg', 'btn--md']
 
-export const Button = ({
+interface ButtonProps {
+    children: React.ReactNode
+    type?: 'button' | 'submit' | 'reset'
+    onClick?: React.MouseEventHandler<HTMLButtonElement>
+    onMouseOver?: React.MouseEventHandler<HTMLButtonElement>
+    onMouseOut?: React.MouseEventHandler<HTMLButtonElement>
+    onMouseLeave?: React.MouseEventHandler<HTMLButtonElement>
+    buttonStyle?: 'btn--primary' | 'btn--secondary'
+    buttonSize?: 'btn--lg' | 'btn--md'
+    iconLeft?: React.ReactElement
+    iconRight?: React.ReactElement
+    fixedPosition?: boolean
+    className?: string
+}
+
+export const Button: React.FC<ButtonProps> = ({
     children,
-    type,
-    onClick,
-    onMouseOver,
-    onMouseOut,
-    buttonStyle,
-    buttonSize,
+    type = 'button', // Default to 'button'
+    onClick = () => {}, // Default no-op function
+    onMouseOver = () => {}, // Default no-op function
+    onMouseOut = () => {}, // Default no-op function
+    buttonStyle = 'btn--primary', // Default style
+    buttonSize = 'btn--lg', // Default size
     iconLeft,
     iconRight,
-    fixedPosition,
+    fixedPosition = false, // Default to false
+    className = '',
 }) => {
     const checkButtonStyle = STYLES.includes(buttonStyle)
         ? buttonStyle
@@ -33,7 +49,7 @@ export const Button = ({
 
     return (
         <button
-            className={`btn  ${checkButtonStyle} ${checkButtonSize} ${
+            className={`btn  ${checkButtonStyle} ${checkButtonSize} ${className} ${
                 fixedPosition ? 'btn--fixed' : ''
             }`}
             onClick={onClick}

@@ -1,4 +1,10 @@
-export const Solve = [
+// Structure data of a project content
+export type ProjectContent = {
+    id: number
+    [key: string]: string | number
+}
+
+export const Solve: ProjectContent[] = [
     {
         id: 1,
         key: 'solve',
@@ -98,7 +104,7 @@ export const Solve = [
     },
 ]
 
-export const AV = [
+export const AV: ProjectContent[] = [
     {
         id: 2,
         key: 'av',
@@ -194,7 +200,7 @@ export const AV = [
     },
 ]
 
-export const Essilor = [
+export const Essilor: ProjectContent[] = [
     {
         id: 3,
         key: 'essilor',
@@ -252,8 +258,8 @@ export const Essilor = [
         colorsContent:
             'The definition of the scheme colors was based in the current lineup for this category products, the dark mode theme is important also to transmit the quality and sobriety of the new line and design of products.',
 
-        tipographyTitle: 'Tipography',
-        tipographyContent:
+        typographyTitle: 'Typography',
+        typographyContent:
             'The type scale is defined with the official Essilor fonts Akhand sans for titles or highlighted texts and Noto sans for body text and content.',
 
         imageryTitle: 'Imagery & illustrations',
@@ -278,7 +284,7 @@ export const Essilor = [
     },
 ]
 
-export const Landing = [
+export const Landing: ProjectContent[] = [
     {
         id: 4,
         key: 'Landing',
@@ -358,7 +364,7 @@ export const Landing = [
     },
 ]
 
-export const Aleph = [
+export const Aleph: ProjectContent[] = [
     {
         id: 5,
         key: 'Aleph',
@@ -423,7 +429,7 @@ export const Aleph = [
     },
 ]
 
-export const Hub = [
+export const Hub: ProjectContent[] = [
     {
         id: 6,
         key: 'hub',

@@ -2,7 +2,12 @@ import React from 'react'
 import './Chip.scss'
 import '../styles/ConfigStyles/utilities/_index.scss'
 
-const Chip = ({ label, proficiency }) => {
+interface ChipProps {
+    label: string
+    proficiency?: string
+}
+
+const Chip: React.FC<ChipProps> = ({ label, proficiency }) => {
     return (
         <div className="chip">
             <span className=" button__300--bold label">{label}</span>

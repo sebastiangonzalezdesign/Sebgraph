@@ -6,7 +6,7 @@ const Portfolio = lazy(() => import('./Portfolio'))
 const Contact = lazy(() => import('./contact/Contact'))
 
 const Work = () => {
-    const portfolioRef = useRef(null) // Reference to the Portfolio section
+    const portfolioRef = useRef<HTMLDivElement>(null) // Reference to the Portfolio section
     const location = useLocation() // Get the location object
 
     useEffect(() => {

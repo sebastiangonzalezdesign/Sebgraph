@@ -3,13 +3,20 @@ import './Hero.scss'
 import { Suspense } from 'react'
 import Rive from '@rive-app/react-canvas'
 import HeroAnimation from '../img/hero.riv'
+import Spinner from './Spinner'
 
-export default function Hero() {
+interface HeroProps {
+    className?: string
+}
+
+const Hero: React.FC<HeroProps> = ({ className }) => {
     return (
-        <Suspense>
-            <div className="hero-container">
+        <Suspense fallback={<Spinner />}>
+            <div className={`hero-container ${className || ''}`}>
                 <Rive src={HeroAnimation} />
             </div>
         </Suspense>
     )
 }
+
+export default Hero

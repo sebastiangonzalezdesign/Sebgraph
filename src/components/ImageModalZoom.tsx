@@ -1,9 +1,20 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, ReactNode } from 'react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { motion, AnimatePresence } from 'framer-motion' // Added AnimatePresence
 import './ImageModalZoom.scss'
 
-const ImageModalZoom = ({ children, src }) => {
+// Prop types definition
+interface ImageModalZoomProps {
+    children: ReactNode
+    src: string
+    loading?: 'lazy' | 'eager' // Optional loading prop with specific values
+}
+
+const ImageModalZoom = ({
+    children,
+    src,
+    loading = 'lazy',
+}: ImageModalZoomProps) => {
     const [isOpen, setIsOpen] = useState(false)
 
     const toggleModal = () => {

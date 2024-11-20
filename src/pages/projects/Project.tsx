@@ -1,10 +1,13 @@
-import React from 'react'
 import './ProjectStyles.scss'
 import { useContext } from 'react'
 import ThemeContext from '../../context/ThemeContext'
 
-const Project = ({ children }) => {
-    const { theme } = useContext(ThemeContext)
+interface ProjectProps {
+    children: React.ReactNode
+}
+
+const Project: React.FC<ProjectProps> = ({ children }) => {
+    const { theme } = useContext(ThemeContext) || { theme: '' }
 
     return (
         <section

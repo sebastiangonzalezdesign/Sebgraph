@@ -2,7 +2,6 @@ import './Footer.scss'
 import LinkedInIcon from '../img/linkedin-icon.svg?react'
 import InstagramIcon from '../img/instagram-icon.svg?react'
 import MailIcon from '../img/mail-icon.svg?react'
-import React from 'react'
 import Logo from '../img/logo-footer.svg'
 
 const Footer = () => {
@@ -29,7 +28,6 @@ const Footer = () => {
                             target="_blank"
                             rel="noreferrer"
                             aria-label="View Linkedin profile"
-                            alt="Linkdin"
                         >
                             <LinkedInIcon className="footer__svg" />
                         </a>
@@ -40,7 +38,6 @@ const Footer = () => {
                             target="_blank"
                             rel="noreferrer"
                             aria-label="View Instagram profile"
-                            alt="Instagram"
                         >
                             <InstagramIcon className="footer__svg" />
                         </a>
@@ -50,7 +47,6 @@ const Footer = () => {
                             target="_blank"
                             rel="noreferrer"
                             aria-label="Send Email to Sebastian"
-                            alt="Sebastian's Email"
                         >
                             <MailIcon className="footer__svg" />
                         </a>

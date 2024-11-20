@@ -29,12 +29,12 @@ const PasswordPage = () => {
         fetchPassword()
     }, [])
 
-    const handlePasswordChange = (e) => {
+    const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setInputPassword(e.target.value)
-        setErrorMessage('') // Clear error message on input change
+        setErrorMessage('')
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
 
         // Check if the input field is empty
@@ -105,7 +105,7 @@ const PasswordPage = () => {
 
                         <Button
                             buttonStyle="btn--primary"
-                            buttonSize="btn--large"
+                            buttonSize="btn--lg"
                             type="submit"
                         >
                             Submit
