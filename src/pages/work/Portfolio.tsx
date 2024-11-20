@@ -10,12 +10,25 @@ import {
 } from '../../data'
 import { LockClosedIcon } from '@heroicons/react/24/outline'
 
-const Portfolio = forwardRef((props, ref) => {
-    const [selected, setSelected] = useState('all')
-    const [data, setData] = useState([])
-    const [delayedSelected, setDelayedSelected] = useState('all')
+//Interface types
+interface PortfolioItem {
+    id: string
+    key: string
+    title: string
+    overview: string
+    img: string
+    bgClass: string
+    order: number
+    showProject: 'yes' | 'no'
+    protected: 'yes' | 'no'
+}
 
-    const refProject = useRef()
+const Portfolio = forwardRef<HTMLDivElement, {}>((props, ref) => {
+    const [selected, setSelected] = useState<string>('all')
+    const [data, setData] = useState<PortfolioItem[]>([])
+    const [delayedSelected, setDelayedSelected] = useState<string>('all')
+
+    const refProject = useRef<HTMLAnchorElement | null>(null)
 
     // Project list
     const list = [
@@ -27,7 +40,7 @@ const Portfolio = forwardRef((props, ref) => {
 
     // Update portfolio data based on the selected tab
     useEffect(() => {
-        let selectedPortfolio
+        let selectedPortfolio: PortfolioItem[]
 
         switch (selected) {
             case 'all':
@@ -50,29 +63,12 @@ const Portfolio = forwardRef((props, ref) => {
         const visibleProjects = selectedPortfolio.filter(
             (project) => project.showProject === 'yes'
         )
+
         setData(visibleProjects)
     }, [selected])
-    /*     useEffect(() => {
-        switch (selected) {
-            case 'all':
-                setData(allPortfolio)
-                break
-            case 'ui/visual':
-                setData(uiVisualPortfolio)
-                break
-            case 'ds':
-                setData(dsPortfolio)
-                break
-            case 'code':
-                setData(codePortfolio)
-                break
-            default:
-                setData(allPortfolio)
-        }
-    }, [selected]) */
 
     // Delay click Tab
-    const handleTabChange = (id) => {
+    const handleTabChange = (id: string) => {
         setSelected(id)
         setTimeout(() => {
             setDelayedSelected(id)

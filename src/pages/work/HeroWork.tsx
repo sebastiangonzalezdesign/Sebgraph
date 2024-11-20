@@ -16,7 +16,13 @@ const fadeUpVariants = {
 }
 
 const HeroWork = () => {
-    const { theme } = useContext(ThemeContext)
+    const context = useContext(ThemeContext)
+
+    if (!context) {
+        return <div>Loading...</div>
+    }
+
+    const { theme } = context
 
     return (
         <section className={`section-hero ${theme}`}>
@@ -77,7 +83,7 @@ const HeroWork = () => {
                         <Button
                             type="button"
                             buttonStyle="btn--secondary"
-                            buttonSize="btn--large"
+                            buttonSize="btn--lg"
                         >
                             Contact me
                         </Button>
@@ -86,7 +92,7 @@ const HeroWork = () => {
                         <Button
                             type="button"
                             buttonStyle="btn--primary"
-                            buttonSize="btn--large"
+                            buttonSize="btn--lg"
                         >
                             Download CV
                         </Button>

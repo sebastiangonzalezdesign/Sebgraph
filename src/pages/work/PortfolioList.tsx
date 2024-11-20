@@ -1,7 +1,20 @@
 import React from 'react'
 import './PortfolioList.scss'
 
-export default function PortfolioList({ id, title, active, handleTabChange }) {
+// Props definition
+interface PortfolioListProps {
+    id: string // Adjust the type based on your use case
+    title: string
+    active: boolean
+    handleTabChange: (id: string) => void
+}
+
+export default function PortfolioList({
+    id,
+    title,
+    active,
+    handleTabChange,
+}: PortfolioListProps) {
     return (
         <React.Fragment>
             <input

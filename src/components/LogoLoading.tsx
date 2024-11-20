@@ -36,7 +36,7 @@ const gradientVariants = {
             duration: 3, // Length of time for the animation
             ease: 'easeInOut',
             repeat: Infinity, // Repeat forever
-            repeatType: 'reverse', // Reverse the animation to go back and forth
+            repeatType: 'reverse' as 'reverse', // Reverse the animation to go back and forth
         },
     },
 }

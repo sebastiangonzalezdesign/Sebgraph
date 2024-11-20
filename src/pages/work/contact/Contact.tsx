@@ -53,7 +53,7 @@ const Contact = () => {
                                 className="contact-container__email-btn"
                                 type="button"
                                 buttonStyle="btn--secondary"
-                                buttonSize="btn--large"
+                                buttonSize="btn--lg"
                             >
                                 Email me
                             </Button>

@@ -364,7 +364,7 @@ const CV = () => {
                         <Button
                             type="button"
                             buttonStyle="btn--secondary"
-                            buttonSize="btn--large"
+                            buttonSize="btn--lg"
                         >
                             View PDF online
                         </Button>
@@ -374,7 +374,7 @@ const CV = () => {
                         <Button
                             type="button"
                             buttonStyle="btn--primary"
-                            buttonSize="btn--large"
+                            buttonSize="btn--lg"
                         >
                             Download PDF
                         </Button>

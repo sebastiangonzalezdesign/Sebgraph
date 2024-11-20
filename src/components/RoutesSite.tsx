@@ -15,8 +15,8 @@ import ProtectedRoute from './ProtectedRoute'
 const NavBar = lazy(() => import('./NavBar'))
 const Footer = lazy(() => import('./Footer'))
 const AvExpert = lazy(() => import('../pages/projects/AvExpert'))
-const SolveForTomorrow = lazy(() =>
-    import('../pages/projects/SolveForTomorrow.jsx')
+const SolveForTomorrow = lazy(
+    () => import('../pages/projects/SolveForTomorrow.js')
 )
 const Essilor = lazy(() => import('../pages/projects/Essilor'))
 const Landing = lazy(() => import('../pages/projects/Landing'))

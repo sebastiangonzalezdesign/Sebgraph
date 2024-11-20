@@ -1,12 +1,11 @@
-import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Button } from './Button'
 import { ArrowLeftIcon } from '@heroicons/react/24/outline'
-import ThemeContext from '../context/ThemeContext'
 import './BackButton'
+import useTheme from '../hooks/useTheme'
 
 const BackButton = () => {
-    const { theme } = useContext(ThemeContext)
+    const { theme } = useTheme()
     const navigate = useNavigate()
 
     const goBack = () => {
