@@ -1,1 +1,0 @@
-import{j as s,r,w as e}from"./vendor-Ceir11wb.js";const o="/assets/hero-5a84noLB.riv";function t(){return s.jsx(r.Suspense,{children:s.jsx("div",{className:"hero-container",children:s.jsx(e,{src:o})})})}export{t as default};
