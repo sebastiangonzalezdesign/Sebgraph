@@ -1,24 +1,41 @@
 @use '../styles/ConfigStyles/abstracts' as *;
 @use '../styles/ConfigStyles/base' as *;
 @use '../styles/ConfigStyles/layout' as *;
+@use '../styles/ConfigStyles/utilities/' as *;
 
 .error-section {
-    margin: auto;
-    width: 80%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     text-align: center;
-    margin-top: 4rem;
+    padding: $size-12;
+    align-items: center;
 
-    & .img img {
-        width: 50rem;
+    @include mq(medium) {
+        flex-direction: column;
+    }
+
+    &__content-box {
+        display: flex;
+        flex-direction: column;
+        gap: $size-6;
+        min-width: 40%;
+    }
+
+    &__text-box {
+        display: flex;
+        flex-direction: column;
+        gap: $size-2;
+
+        & p {
+            color: $color-text-secondary;
+        }
+    }
+
+    &__img img {
+        width: 80%;
 
         @include mq(small) {
             width: 100%;
         }
-    }
-    &.img {
-        justify-content: center;
     }
 }
