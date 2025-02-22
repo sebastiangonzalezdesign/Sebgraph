@@ -12,7 +12,7 @@ const Error404 = () => {
             <p className="paragraph">
                 The page you are looking is not available
             </p>
-            <a href="https://sebgraph.co/">
+            <a href="https://sebastiangonzalez.design/">
                 <Button>Back to home</Button>
             </a>
         </section>
