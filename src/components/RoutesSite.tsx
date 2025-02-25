@@ -1,10 +1,5 @@
 import React, { lazy, Suspense } from 'react'
-import {
-    BrowserRouter as Router,
-    Routes,
-    Route,
-    Navigate,
-} from 'react-router-dom' // Ensure Routes is imported correctly
+import { Routes, Route, Navigate } from 'react-router-dom' // Ensure Routes is imported correctly
 
 import Error404 from '../pages/Error404'
 import ScrollToTop from './ScrollToTop'
@@ -31,51 +26,46 @@ const PasswordPage = lazy(() => import('../pages/PasswordPage'))
 const RoutesSite = () => {
     return (
         <Suspense fallback={<Spinner duration={5000} />}>
-            <Router>
-                <ScrollToTop />
+            <ScrollToTop />
 
-                <NavBar />
+            <NavBar />
 
-                <Routes>
-                    {/* Redirect /projects to the Work page and scroll to Portfolio */}
-                    <Route
-                        path="/projects"
-                        element={<Navigate to="/?scrollTo=portfolio" replace />}
-                    />
-                    <Route path="/" element={<Work />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/cv" element={<CV />} />
-                    <Route
-                        path="/projects/solve"
-                        element={<SolveForTomorrow />}
-                    />
-                    <Route path="/projects/AV" element={<AvExpert />} />
-                    <Route path="/projects/Essilor" element={<Essilor />} />
-                    <Route path="/projects/Landing" element={<Landing />} />
-                    <Route path="/projects/Aleph" element={<AlephDS />} />
+            <Routes>
+                {/* Redirect /projects to the Work page and scroll to Portfolio */}
+                <Route
+                    path="/projects"
+                    element={<Navigate to="/?scrollTo=portfolio" replace />}
+                />
+                <Route path="/" element={<Work />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/cv" element={<CV />} />
+                <Route path="/projects/solve" element={<SolveForTomorrow />} />
+                <Route path="/projects/AV" element={<AvExpert />} />
+                <Route path="/projects/Essilor" element={<Essilor />} />
+                <Route path="/projects/Landing" element={<Landing />} />
+                <Route path="/projects/Aleph" element={<AlephDS />} />
 
-                    {/* Password-protected Hub Design System route */}
-                    <Route
-                        path="/projects/Hub"
-                        element={
-                            <ProtectedRoute>
-                                <HubDS />
-                            </ProtectedRoute>
-                        }
-                    />
-                    {/* Password Page */}
-                    <Route
-                        path="/projects/password-page"
-                        element={<PasswordPage />}
-                    />
+                {/* Password-protected Hub Design System route */}
+                <Route
+                    path="/projects/Hub"
+                    element={
+                        <ProtectedRoute>
+                            <HubDS />
+                        </ProtectedRoute>
+                    }
+                />
+                {/* Password Page */}
+                <Route
+                    path="/projects/password-page"
+                    element={<PasswordPage />}
+                />
 
-                    {/* Catch-all 404 route */}
-                    <Route path="*" element={<Error404 />} />
-                </Routes>
+                {/* Catch-all 404 route */}
+                <Route path="*" element={<Error404 />} />
+            </Routes>
 
-                <BackToTopButton />
-                <Footer />
-            </Router>
+            <BackToTopButton />
+            <Footer />
         </Suspense>
     )
 }
