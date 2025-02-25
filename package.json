@@ -1,7 +1,7 @@
 {
-    "name": "sebgraph-portfolio",
+    "name": "sebastian-gonzalez-portfolio",
     "version": "0.1.0",
-    "homepage": "https://sebgraph.co/",
+    "homepage": "https://sebastiangonzalez.design/",
     "private": true,
     "dependencies": {
         "@heroicons/react": "^2.1.5",
