@@ -22,11 +22,7 @@ const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
     }
 
     // If access is not granted, redirect to password page
-    return hasAccess ? (
-        children
-    ) : (
-        <Navigate to="/projects/password-page" replace />
-    )
+    return hasAccess ? children : <Navigate to="/projects/password-page" />
 }
 
 export default ProtectedRoute
