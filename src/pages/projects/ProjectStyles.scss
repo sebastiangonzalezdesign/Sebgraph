@@ -78,19 +78,22 @@
         color: $color-text-secondary;
     }
     &__main-text-box {
-        width: 80%;
+        max-width: 140rem;
+        width: 100%;
+        //padding: $size-11;
         display: flex;
         gap: $size-10;
-        overflow: hidden;
+
         @include mq(medium) {
             flex-direction: column;
+            //padding: $size-8;
         }
     }
     &__secondary-text-box {
-        width: 80%;
         flex-direction: column;
         display: flex;
         gap: $size-3;
+        max-width: 75rem;
     }
     /* ---------- Head content styles ---------- */
     &__header {
@@ -182,7 +185,8 @@
         margin: 4rem;
         background-color: $color-neutral-blue-100;
         justify-content: center;
-        max-width: 140rem;
+        width: 100%;
+        max-width: 75rem;
         display: flex;
         padding: 4rem;
 
@@ -252,6 +256,8 @@
             flex-direction: column;
             text-align: left;
             gap: $size-10;
+            padding: $size-11;
+            max-width: 75rem;
 
             & h3,
             ol,
@@ -263,6 +269,7 @@
 
             @include mq(large) {
                 width: 100%;
+                padding: $size-8;
             }
         }
         /*         &__box:not(:last-child) {
@@ -291,11 +298,9 @@
         &__boxes {
             display: flex;
             gap: 3rem;
-            width: 80%;
-            @include mq(large) {
+            @include mq(medium) {
                 flex-direction: column;
                 width: 100%;
-                padding: 0 2rem;
             }
         }
         &__box-goals {
@@ -350,15 +355,15 @@
         gap: $size-11;
         justify-content: center;
         flex-direction: column;
-        padding: 4rem 0;
-        width: 100%;
+        padding: $size-11;
         align-items: center;
+        max-width: 75rem;
 
         @include mq(medium) {
             width: 100%;
             margin: 0;
-
             margin-bottom: 4rem;
+            padding: $size-8;
         }
     }
 
@@ -381,11 +386,12 @@
         justify-content: center;
         flex-direction: column;
         padding: 4rem;
+        padding: $size-11;
         @include mq(medium) {
             width: 100%;
             margin: 0;
-            padding: 2rem;
             margin-bottom: 4rem;
+            padding: $size-8;
         }
     }
 

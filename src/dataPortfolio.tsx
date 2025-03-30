@@ -465,7 +465,7 @@ export const Hub: ProjectContent[] = [
         inventoryTitle: 'Interface Inventory',
         inventoryDescription:
             'To have a better understanding of the visual styles used throughout the app, I did an inventory reviewing each component of the interface.',
-        themeImplementationyTitle: 'Theme implementation process',
+        themeImplementationyTitle: 'Theme setup',
         themeImplementationyDescription:
             'The initial scope to implement themes was intended to consider first colors and typography. It was a shared process of Design/Development to identify the best strategies to implement without affecting the current workflow.',
         foundationsTitle: 'Foundations',
