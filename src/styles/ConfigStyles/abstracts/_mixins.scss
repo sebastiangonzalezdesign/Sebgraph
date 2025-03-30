@@ -33,3 +33,13 @@
     font-weight: $card-heading-font-weight;
     line-height: $card-heading-line-height;
 }
+
+// Responsive typography display and headings mixin
+
+@mixin responsive-type($large-size, $small-size) {
+    font-size: $large-size;
+
+    @include mq(small) {
+        font-size: $small-size;
+    }
+}

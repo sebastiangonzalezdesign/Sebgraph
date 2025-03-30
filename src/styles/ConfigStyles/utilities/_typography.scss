@@ -7,13 +7,13 @@
             font-family: $font-family-accent;
             font-weight: $font-weight-default;
             line-height: $line-height-heading;
-            font-size: $font-size-900;
+            @include responsive-type($font-size-900, $font-size-800);
         }
         &--bold {
             font-family: $font-family-accent;
             font-weight: $font-weight-bold;
             line-height: $line-height-heading;
-            font-size: $font-size-900;
+            @include responsive-type($font-size-900, $font-size-800);
         }
     }
 
@@ -22,13 +22,13 @@
             font-family: $font-family-accent;
             font-weight: $font-weight-default;
             line-height: $line-height-heading;
-            font-size: $font-size-800;
+            @include responsive-type($font-size-800, $font-size-700);
         }
         &--bold {
             font-family: $font-family-accent;
             font-weight: $font-weight-bold;
             line-height: $line-height-heading;
-            font-size: $font-size-800;
+            @include responsive-type($font-size-800, $font-size-700);
         }
     }
 }
@@ -40,13 +40,13 @@
             font-family: $font-family-accent;
             font-weight: $font-weight-default;
             line-height: $line-height-heading;
-            font-size: $font-size-700;
+            @include responsive-type($font-size-700, $font-size-600);
         }
         &--bold {
             font-family: $font-family-accent;
             font-weight: $font-weight-bold;
             line-height: $line-height-heading;
-            font-size: $font-size-700;
+            @include responsive-type($font-size-700, $font-size-600);
         }
     }
 
@@ -55,13 +55,13 @@
             font-family: $font-family-accent;
             font-weight: $font-weight-default;
             line-height: $line-height-heading;
-            font-size: $font-size-600;
+            @include responsive-type($font-size-600, $font-size-500);
         }
         &--bold {
             font-family: $font-family-accent;
             font-weight: $font-weight-bold;
             line-height: $line-height-heading;
-            font-size: $font-size-600;
+            @include responsive-type($font-size-600, $font-size-500);
         }
     }
     &__300 {
@@ -69,13 +69,13 @@
             font-family: $font-family-accent;
             font-weight: $font-weight-default;
             line-height: $line-height-heading;
-            font-size: $font-size-500;
+            @include responsive-type($font-size-500, $font-size-400);
         }
         &--bold {
             font-family: $font-family-accent;
             font-weight: $font-weight-bold;
             line-height: $line-height-heading;
-            font-size: $font-size-500;
+            @include responsive-type($font-size-500, $font-size-400);
         }
     }
     &__400 {
@@ -83,13 +83,13 @@
             font-family: $font-family-accent;
             font-weight: $font-weight-default;
             line-height: $line-height-heading;
-            font-size: $font-size-400;
+            @include responsive-type($font-size-400, $font-size-300);
         }
         &--bold {
             font-family: $font-family-accent;
             font-weight: $font-weight-bold;
             line-height: $line-height-heading;
-            font-size: $font-size-400;
+            @include responsive-type($font-size-400, $font-size-300);
         }
     }
 }
