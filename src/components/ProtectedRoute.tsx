@@ -7,22 +7,16 @@ interface ProtectedRouteProps {
 }
 
 const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
-    const [hasAccess, setHasAccess] = useState(false)
-    const [loading, setLoading] = useState(true)
+    // Always check current localStorage value directly in the component logic
+    const hasAccess = localStorage.getItem('projectAccess') === 'true'
+    console.log('ProtectedRoute checking access (direct check):', hasAccess)
 
-    useEffect(() => {
-        // Check if access is stored in localStorage
-        const accessGranted = localStorage.getItem('projectAccess') === 'true'
-        setHasAccess(accessGranted)
-        setLoading(false)
-    }, [])
-
-    if (loading) {
-        return <Spinner /> // Show a loading spinner while checking access
+    // Check immediately, don't rely on state
+    if (hasAccess) {
+        return <>{children}</>
+    } else {
+        return <Navigate to="/projects/password-page" replace />
     }
-
-    // If access is not granted, redirect to password page
-    return hasAccess ? children : <Navigate to="/projects/password-page" />
 }
 
 export default ProtectedRoute

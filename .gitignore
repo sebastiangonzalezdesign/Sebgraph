@@ -19,6 +19,24 @@
 .env.test.local
 .env.production.local
 
+# logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Sensitive files - be more specific to allow example files
+/functions/hash-password.js
+/functions/verifyPassword.js
+/functions/credentials.js
+/functions/secret*.js
+/functions/*key*.json
+/functions/serviceAccount*.json
+/functions/.env
+
+# Allow example files
+!/functions/*.example.js
+
+# Firebase cache and configs
+.firebase/
+.firebaserc
+firebase-debug.log

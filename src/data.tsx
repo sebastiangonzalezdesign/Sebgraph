@@ -33,7 +33,7 @@ export const allPortfolio: PortfolioItem[] = [
         bgClass: 'card-background-hub',
         order: 2,
         protected: 'yes',
-        showProject: 'no',
+        showProject: 'yes',
     },
     {
         id: '2',
