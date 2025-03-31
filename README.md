@@ -1,13 +1,13 @@
 <!-- How to add a new project -->
 
--- Thumbnail --
+# Thumbnail
 
 1. Add the thumbnail information in data.jsx under the appropriate category.
 2. Use the "protected" property to add password protection to the project.
 3. Use the "showProject" property to control whether the project is visible. If you don’t want the project indexed by search engines, use <Helmet> to add the conditional noindex logic in each project file.
 4. Add the new background color in abstracts/\_colors.scss, then in \_tokens.scss, and finally add the new class in utilities/\_cards.scss.
 
--- Project --
+# Project
 
 1. Duplicate an existing project file and rename it. Example: pages/projects/NewProject.jsx.
 2. In components/RouterSite.jsx, import the newly created project file and set up the route to ensure it displays correctly when the thumbnail is clicked.
@@ -38,3 +38,12 @@ This folder contains Firebase Functions that manage password protection for proj
 3. The entered password is compared with the stored hash using bcrypt
 4. If the comparison succeeds, access is granted to protected projects
 5. For security, the actual password is never stored anywhere, only a secure hash
+
+## Environment Setup
+
+This project requires Firebase configuration. Copy the `.env.example` file to `.env` and update with your Firebase credentials:
+
+```bash
+cp .env.example .env
+# Then edit .env with your Firebase configuration
+```

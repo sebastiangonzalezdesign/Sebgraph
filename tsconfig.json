@@ -13,6 +13,6 @@
         "skipLibCheck": true,
         "typeRoots": ["./node_modules/@types", "./src/types"]
     },
-    "include": ["src", "custom.d.ts"],
+    "include": ["src", "custom.d.ts", "src/**/*.d.ts", "vite-env.d.ts"],
     "exclude": ["node_modules"]
 }
