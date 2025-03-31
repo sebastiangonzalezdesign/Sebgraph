@@ -11,7 +11,7 @@ export default defineConfig({
             overlay: false, // Disables the overlay that shows errors
         },
     },
-    envPrefix: 'REACT_APP_',
+
     // This changes the output dir from dist to build
     // Comment this out if it isn't relevant for your project
     build: {
@@ -52,5 +52,8 @@ export default defineConfig({
                 silenceDeprecations: ['mixed-decls'], // Using the modern Dart Sass API
             },
         },
+    },
+    define: {
+        'process.env': process.env,
     },
 })

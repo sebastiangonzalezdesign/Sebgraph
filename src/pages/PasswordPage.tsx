@@ -1,12 +1,12 @@
-import React, { useState } from 'react'
-import { functions } from '../../firebase' // Import your firebase config
+import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { functions } from '../../firebase' // Import your firebase config
+import { httpsCallable, Functions } from 'firebase/functions'
 import './PasswordPage.scss'
 import Hub from './projects/Hub'
 import BackButton from '../components/BackButton'
 import { Button } from '../components/Button'
 import { LockClosedIcon } from '@heroicons/react/24/outline'
-import { httpsCallable } from 'firebase/functions' // Only import httpsCallable, remove getFunctions
 
 interface VerifyPasswordResponse {
     success: boolean
@@ -15,8 +15,19 @@ interface VerifyPasswordResponse {
 const PasswordPage = () => {
     const [inputPassword, setInputPassword] = useState('')
     const [accessGranted, setAccessGranted] = useState(false)
-    const [errorMessage, setErrorMessage] = useState('') // State for error message
+    const [errorMessage, setErrorMessage] = useState('')
+    const [isFirebaseReady, setIsFirebaseReady] = useState(!!functions)
     const navigate = useNavigate()
+
+    // Check if Firebase is ready
+    useEffect(() => {
+        if (functions) {
+            setIsFirebaseReady(true)
+        } else {
+            console.error('Firebase Functions not initialized correctly')
+            setErrorMessage('Service unavailable. Please try again later.')
+        }
+    }, [])
 
     const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setInputPassword(e.target.value)
@@ -28,6 +39,14 @@ const PasswordPage = () => {
 
         if (!inputPassword) {
             setErrorMessage('Please fill out the password field.')
+            return
+        }
+
+        if (!functions || !isFirebaseReady) {
+            setErrorMessage('Service unavailable. Please try again later.')
+            console.error(
+                'Cannot verify password: Firebase Functions not available'
+            )
             return
         }
 
@@ -55,9 +74,6 @@ const PasswordPage = () => {
                 // 3. Use only ONE navigation method (prefer navigate for React Router)
                 console.log('Navigating to /projects/Hub')
                 navigate('/projects/Hub', { replace: true })
-
-                // Don't navigate with window.location as well!
-                // window.location.href = '/projects/Hub' - REMOVE THIS
             } else {
                 console.log('Password incorrect')
                 setErrorMessage('Incorrect password. Please try again.')
@@ -67,10 +83,12 @@ const PasswordPage = () => {
             setErrorMessage('An error occurred while verifying the password.')
         }
     }
+
+    // Rest of component remains the same
     return (
         <div className="password-page">
             <BackButton />
-
+            {/* Rest of your JSX stays the same */}
             <div className="password-page__container">
                 <div className="password-page__text-box">
                     <LockClosedIcon className="password-page__icon" />
@@ -111,6 +129,7 @@ const PasswordPage = () => {
                         buttonStyle="btn--primary"
                         buttonSize="btn--lg"
                         type="submit"
+                        disabled={!isFirebaseReady}
                     >
                         Submit
                     </Button>

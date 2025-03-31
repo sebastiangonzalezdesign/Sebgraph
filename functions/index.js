@@ -1,11 +1,17 @@
 const functions = require('firebase-functions')
 const admin = require('firebase-admin')
 
-// Initialize Firebase - make sure this happens before importing any modules that use admin
+// Initialize Firebase
 admin.initializeApp()
 
 // Import the verifyPassword function
 const { verifyPassword } = require('./verifyPassword')
 
-// Export as an HTTP callable function
-exports.verifyPassword = functions.https.onCall(verifyPassword)
+// Export as a callable function
+exports.verifyPassword = functions.https.onCall(async (data, context) => {
+    // Simply pass through to your implementation
+    return await verifyPassword(data, context)
+})
+
+// Log for debugging
+functions.logger.log('Firebase Functions initialized')

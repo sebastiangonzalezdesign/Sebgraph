@@ -21,6 +21,8 @@ credentials.js
 secret*.js
 *key*.json
 serviceAccount*.json
+password-reminder.txt
+.env
 
 # Allow example files
 !*.example.js

@@ -26,6 +26,7 @@ interface ButtonProps {
     iconRight?: React.ReactElement
     fixedPosition?: boolean
     className?: string
+    disabled?: boolean // Add this line to support the disabled prop
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -40,6 +41,7 @@ export const Button: React.FC<ButtonProps> = ({
     iconRight,
     fixedPosition = false, // Default to false
     className = '',
+    disabled = false, // Add default value for disabled prop
 }) => {
     const checkButtonStyle = STYLES.includes(buttonStyle)
         ? buttonStyle
@@ -49,13 +51,14 @@ export const Button: React.FC<ButtonProps> = ({
 
     return (
         <button
-            className={`btn  ${checkButtonStyle} ${checkButtonSize} ${className} ${
+            className={`btn ${checkButtonStyle} ${checkButtonSize} ${className} ${
                 fixedPosition ? 'btn--fixed' : ''
-            }`}
+            } ${disabled ? 'btn--disabled' : ''}`}
             onClick={onClick}
             onMouseOver={onMouseOver}
             onMouseOut={onMouseOut}
             type={type}
+            disabled={disabled} // Add the disabled attribute
         >
             <div className="btn-icon-container">
                 {iconLeft && (
@@ -77,3 +80,6 @@ export const Button: React.FC<ButtonProps> = ({
         </button>
     )
 }
+
+// Export the ButtonProps type
+export type { ButtonProps }
