@@ -7,6 +7,7 @@ import { Button } from '../../components/Button'
 import Cv from '../../documents/cv-sebastian-gonzalez.pdf'
 const Hero = lazy(() => import('../../components/Hero'))
 import { motion } from 'framer-motion'
+import { trackEvent } from '../../services/analytics'
 
 // Framer Motion Variables
 const fadeUpVariants = {
@@ -40,7 +41,7 @@ const HeroWork = () => {
                             stiffness: 45,
                         }}
                     >
-                        Creating digital experiences
+                        UI Designer focused on Systems, Code & AI
                     </motion.h1>
                     <motion.p
                         className="paragraph__100--regular section-hero__paragraph"
@@ -54,16 +55,17 @@ const HeroWork = () => {
                             stiffness: 45,
                         }}
                     >
-                        Hey, I'm <strong>Sebastian González, </strong>a
-                        UI/Visual Designer with 5 years of experience creating
-                        meaningful digital products. I’m all about design
-                        systems and love bringing ideas to life with a bit of
-                        code. My goal is to design interfaces that not only look
-                        great but also feel seamless for users. With a passion
-                        for innovation and a keen understanding of user needs, I
-                        help bridge the gap between design and development.
-                        Let’s collaborate to build something that truly stands
-                        out and connects with your audience.
+                        Hey, I'm <strong>Sebastian González, </strong>a UI
+                        Designer with a strong visual and UX foundation, focused
+                        on scalable design systems and front-end experiences. I
+                        bring ideas to life by bridging design and development
+                        through thoughtful interfaces, systems thinking, and
+                        code. I’m also exploring how AI can simplify systems and
+                        enhance user experiences.
+                        <br />
+                        <span className="paragraph__100--regular">
+                            Based in Bogotá, Colombia — collaborating globally.
+                        </span>
                     </motion.p>
                 </div>
 
@@ -84,8 +86,15 @@ const HeroWork = () => {
                             type="button"
                             buttonStyle="btn--secondary"
                             buttonSize="btn--lg"
+                            onClick={() =>
+                                trackEvent({
+                                    action: "Click Let's Talk",
+                                    category: 'Hero',
+                                    label: 'LetsTalkButton',
+                                })
+                            }
                         >
-                            Contact me
+                            Lets talk
                         </Button>
                     </a>
                     <a href={Cv} rel="noreferrer" download="">
@@ -93,6 +102,13 @@ const HeroWork = () => {
                             type="button"
                             buttonStyle="btn--primary"
                             buttonSize="btn--lg"
+                            onClick={() =>
+                                trackEvent({
+                                    action: 'Download CV',
+                                    category: 'Hero',
+                                    label: 'DownloadCVButton',
+                                })
+                            }
                         >
                             Download CV
                         </Button>

@@ -1,4 +1,7 @@
-import React, { Fragment, lazy, useEffect, useRef } from 'react'
+import React, { Fragment, lazy, useEffect, useRef, useCallback } from 'react'
+import { trackEvent } from '../../services/analytics'
+import SEO from '../../components/SEO'
+import { seoConfig } from '../../seoConfig'
 import { useLocation } from 'react-router-dom' // Import useLocation
 
 const HeroWork = lazy(() => import('./HeroWork'))
@@ -8,6 +11,26 @@ const Contact = lazy(() => import('./contact/Contact'))
 const Work = () => {
     const portfolioRef = useRef<HTMLDivElement>(null) // Reference to the Portfolio section
     const location = useLocation() // Get the location object
+
+    // Scroll-to-end tracking
+    useEffect(() => {
+        let hasTracked = false
+        const handleScroll = () => {
+            if (hasTracked) return
+            const scrollPosition = window.innerHeight + window.scrollY
+            const threshold = 100 // px from bottom
+            if (scrollPosition >= document.body.offsetHeight - threshold) {
+                trackEvent({
+                    action: 'Reached End of Home',
+                    category: 'Scroll',
+                    label: 'HomePage',
+                })
+                hasTracked = true
+            }
+        }
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [])
 
     useEffect(() => {
         // Check if the query parameter is `scrollTo=portfolio`
@@ -19,15 +42,20 @@ const Work = () => {
     }, [location])
 
     return (
-        <main className="container-home">
-            <HeroWork />
-
-            {/* Add a ref to the Portfolio section */}
-
-            <Portfolio ref={portfolioRef} />
-
-            <Contact />
-        </main>
+        <>
+            <SEO
+                title={seoConfig.home.title}
+                description={seoConfig.home.description}
+                url={seoConfig.home.url}
+                robots={seoConfig.home.robots}
+            />
+            <main className="container-home">
+                <HeroWork />
+                {/* Add a ref to the Portfolio section */}
+                <Portfolio ref={portfolioRef} />
+                <Contact />
+            </main>
+        </>
     )
 }
 

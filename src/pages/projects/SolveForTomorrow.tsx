@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { Solve } from '../../dataPortfolio'
+import { trackPageView } from '../../services/analytics'
 import './ProjectStyles.scss'
 import lottie from 'lottie-web'
 import { default as desarrolloSostenible } from '../../img/desarrollo_sostenible.json'
@@ -13,6 +14,11 @@ const SolveForTomorrow = () => {
     const container1 = useRef(null)
     const container2 = useRef(null)
     const container3 = useRef(null)
+
+    // Analytics pageview
+    useEffect(() => {
+        trackPageView('/projects/solvefortomorrow')
+    }, [])
 
     /* Lottie */
     useEffect(() => {

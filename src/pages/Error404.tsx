@@ -1,8 +1,13 @@
 import { Button } from '../components/Button'
+import { useEffect } from 'react'
+import { trackPageView } from '../services/analytics'
 import Error from '../../src/img/error.svg'
 import './Error.scss'
 
 const Error404 = () => {
+    useEffect(() => {
+        trackPageView('/404')
+    }, [])
     return (
         <section className="error-section section-hero bg-white mt-40">
             <figure className="error-section__img">

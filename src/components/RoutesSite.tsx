@@ -1,5 +1,6 @@
-import React, { lazy, Suspense } from 'react'
-import { Routes, Route, Navigate } from 'react-router-dom' // Ensure Routes is imported correctly
+import React, { lazy, Suspense, useEffect } from 'react'
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
+import { trackPageView } from '../services/analytics'
 
 import Error404 from '../pages/Error404'
 import ScrollToTop from './ScrollToTop'
@@ -24,12 +25,16 @@ const CV = lazy(() => import('../pages/cv/CV'))
 const PasswordPage = lazy(() => import('../pages/PasswordPage'))
 
 const RoutesSite = () => {
+    const location = useLocation()
+
+    useEffect(() => {
+        trackPageView(location.pathname + location.search)
+    }, [location])
+
     return (
         <Suspense fallback={<Spinner duration={5000} />}>
             <ScrollToTop />
-
             <NavBar />
-
             <Routes>
                 {/* Redirect /projects to the Work page and scroll to Portfolio */}
                 <Route

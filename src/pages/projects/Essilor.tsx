@@ -1,11 +1,16 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './ProjectStyles.scss'
+import { trackPageView } from '../../services/analytics'
 import { Essilor } from '../../dataPortfolio'
 import BackButton from '../../components/BackButton'
 import ImageModalZoom from '../../components/ImageModalZoom'
 
 const EssilorAPP = () => {
     const [dataPortfolio] = useState(Essilor)
+
+    useEffect(() => {
+        trackPageView('/projects/essilor')
+    }, [])
 
     return (
         <>

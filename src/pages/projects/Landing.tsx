@@ -1,11 +1,16 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './ProjectStyles.scss'
+import { trackPageView } from '../../services/analytics'
 import { Landing } from '../../dataPortfolio'
 import BackButton from '../../components/BackButton'
 import ImageModalZoom from '../../components/ImageModalZoom'
 
 const LandingPage = () => {
     const [dataPortfolio] = useState(Landing)
+
+    useEffect(() => {
+        trackPageView('/projects/landing')
+    }, [])
 
     return (
         <>

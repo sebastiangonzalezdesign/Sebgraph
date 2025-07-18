@@ -2,12 +2,16 @@ import React from 'react'
 import ReactDOM from 'react-dom/client' // Change the import here
 import './index.scss'
 import App from './App'
+import { initGA } from './services/analytics'
 
 const rootElement = document.getElementById('root')
 
 if (!rootElement) {
     throw new Error("Root element with id 'root' not found")
 }
+
+// Initialize Google Analytics
+initGA()
 
 // Create a root element
 const root = ReactDOM.createRoot(rootElement)

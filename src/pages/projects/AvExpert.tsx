@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
+import { trackPageView } from '../../services/analytics'
 import './ProjectStyles.scss'
 import { AV } from '../../dataPortfolio'
 import lottie from 'lottie-web'
@@ -13,6 +14,11 @@ const AvExpert = () => {
     const container1 = useRef(null)
     const container2 = useRef(null)
     const container3 = useRef(null)
+
+    // Analytics pageview
+    useEffect(() => {
+        trackPageView('/projects/avexpert')
+    }, [])
 
     useEffect(() => {
         if (container1.current) {

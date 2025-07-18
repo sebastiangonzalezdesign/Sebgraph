@@ -1,14 +1,25 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './ProjectStyles.scss'
 import { Aleph } from '../../dataPortfolio'
+import { trackPageView } from '../../services/analytics'
+import SEO from '../../components/SEO'
 import BackButton from '../../components/BackButton'
 import ImageModalZoom from '../../components/ImageModalZoom'
 
 const AlephDS = () => {
     const [dataPortfolio] = useState(Aleph)
 
+    useEffect(() => {
+        trackPageView('/projects/aleph')
+    }, [])
+
     return (
         <>
+            <SEO
+                title="Aleph Project"
+                description="A detailed case study of the Aleph project."
+                url="https://sebastiangonzalez.design/projects/aleph"
+            />
             {dataPortfolio.map((dataPortfolio) => (
                 /* CONTAINER */
                 <section key={dataPortfolio.id} className="modal__container">

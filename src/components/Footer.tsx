@@ -3,6 +3,7 @@ import LinkedInIcon from '../img/linkedin-icon.svg?react'
 import InstagramIcon from '../img/instagram-icon.svg?react'
 import MailIcon from '../img/mail-icon.svg?react'
 import Logo from '../img/logo-footer.svg'
+import { trackEvent } from '../services/analytics'
 
 const Footer = () => {
     return (
@@ -28,6 +29,13 @@ const Footer = () => {
                             target="_blank"
                             rel="noreferrer"
                             aria-label="View Linkedin profile"
+                            onClick={() =>
+                                trackEvent({
+                                    action: 'Click Social Link',
+                                    category: 'Footer',
+                                    label: 'LinkedIn',
+                                })
+                            }
                         >
                             <LinkedInIcon className="footer__svg" />
                         </a>
@@ -38,6 +46,13 @@ const Footer = () => {
                             target="_blank"
                             rel="noreferrer"
                             aria-label="View Instagram profile"
+                            onClick={() =>
+                                trackEvent({
+                                    action: 'Click Social Link',
+                                    category: 'Footer',
+                                    label: 'Instagram',
+                                })
+                            }
                         >
                             <InstagramIcon className="footer__svg" />
                         </a>
@@ -47,6 +62,13 @@ const Footer = () => {
                             target="_blank"
                             rel="noreferrer"
                             aria-label="Send Email to Sebastian"
+                            onClick={() =>
+                                trackEvent({
+                                    action: 'Click Social Link',
+                                    category: 'Footer',
+                                    label: 'Email',
+                                })
+                            }
                         >
                             <MailIcon className="footer__svg" />
                         </a>

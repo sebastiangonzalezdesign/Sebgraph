@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { trackPageView, trackEvent } from '../services/analytics'
 import { useNavigate } from 'react-router-dom'
 import { functions } from '../../firebase' // Import your firebase config
 import { httpsCallable, Functions } from 'firebase/functions'
@@ -21,6 +22,13 @@ const PasswordPage = () => {
 
     // Check if Firebase is ready
     useEffect(() => {
+        trackPageView('/password')
+        // Track private project access attempt
+        trackEvent({
+            action: 'Attempt Private Project Access',
+            category: 'Access',
+            label: 'PasswordPage',
+        })
         if (functions) {
             setIsFirebaseReady(true)
         } else {

@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef, forwardRef } from 'react'
+import { trackEvent } from '../../services/analytics'
 import { Link } from 'react-router-dom'
 import './Portfolio.scss'
 import PortfolioList from './PortfolioList'
@@ -122,6 +123,13 @@ const Portfolio = forwardRef<HTMLDivElement, {}>((props, ref) => {
                                 id={d.id}
                                 key={d.key}
                                 className={`section-portfolio__card-project link ${d.bgClass}`}
+                                onClick={() =>
+                                    trackEvent({
+                                        action: 'Open Project',
+                                        category: 'Portfolio',
+                                        label: d.title,
+                                    })
+                                }
                             >
                                 <div className="section-portfolio__text-card">
                                     <div className="head-text">
