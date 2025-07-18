@@ -35,7 +35,11 @@ const NavBar = () => {
     return (
         <header className={color ? 'header header-bg' : 'header'}>
             <nav className="navbar">
-                <a href="/" className="header__logo-box">
+                <a
+                    href="/"
+                    className="header__logo-box"
+                    aria-label="Homepage - Sebastian Gonzalez Logo"
+                >
                     <svg
                         className="header__icon"
                         width="48"

@@ -123,42 +123,38 @@ const SolveForTomorrow = () => {
                                 <h3 className="heading__300--bold">
                                     {dataPortfolio.goalsTitle}
                                 </h3>
-                                <ol>
-                                    <ul className="modal__define__goal-list">
-                                        <li className="paragraph__200--medium modal__define__goal-item">
-                                            {dataPortfolio.goal1}
-                                        </li>
-                                        <li className="paragraph__200--medium modal__define__goal-item">
-                                            {dataPortfolio.goal2}
-                                        </li>
-                                        <li className="paragraph__200--medium modal__define__goal-item">
-                                            {dataPortfolio.goal3}
-                                        </li>
-                                        <li className="paragraph__200--medium modal__define__goal-item">
-                                            {dataPortfolio.goal4}
-                                        </li>
-                                    </ul>
+                                <ol className="modal__define__goal-list">
+                                    <li className="paragraph__200--medium modal__define__goal-item">
+                                        {dataPortfolio.goal1}
+                                    </li>
+                                    <li className="paragraph__200--medium modal__define__goal-item">
+                                        {dataPortfolio.goal2}
+                                    </li>
+                                    <li className="paragraph__200--medium modal__define__goal-item">
+                                        {dataPortfolio.goal3}
+                                    </li>
+                                    <li className="paragraph__200--medium modal__define__goal-item">
+                                        {dataPortfolio.goal4}
+                                    </li>
                                 </ol>
                             </div>
                             <div className="modal__define__box-goals">
                                 <h3 className="heading__300--bold ">
                                     {dataPortfolio.customerTitle}
                                 </h3>
-                                <ol>
-                                    <ul className="modal__define__goal-list">
-                                        <li className="paragraph__200--regular modal__define__goal-item">
-                                            {dataPortfolio.user1Title}
-                                        </li>
-                                        <li className="paragraph__200--regular modal__define__goal-item">
-                                            {dataPortfolio.user1Content}
-                                        </li>
-                                        <li className="paragraph__200--regular modal__define__goal-item">
-                                            {dataPortfolio.user2Title}
-                                        </li>
-                                        <li className="paragraph__200--regular modal__define__goal-item">
-                                            {dataPortfolio.user2Content}
-                                        </li>
-                                    </ul>
+                                <ol className="modal__define__goal-list">
+                                    <li className="paragraph__200--regular modal__define__goal-item">
+                                        {dataPortfolio.user1Title}
+                                    </li>
+                                    <li className="paragraph__200--regular modal__define__goal-item">
+                                        {dataPortfolio.user1Content}
+                                    </li>
+                                    <li className="paragraph__200--regular modal__define__goal-item">
+                                        {dataPortfolio.user2Title}
+                                    </li>
+                                    <li className="paragraph__200--regular modal__define__goal-item">
+                                        {dataPortfolio.user2Content}
+                                    </li>
                                 </ol>
                             </div>
                         </article>

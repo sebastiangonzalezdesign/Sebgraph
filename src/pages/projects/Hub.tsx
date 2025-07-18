@@ -94,21 +94,19 @@ const Hub = () => {
                                 <h3 className="heading__300--bold ">
                                     {dataPortfolio.findingsTitle}
                                 </h3>
-                                <ol>
-                                    <ul className="modal__define__goal-list">
-                                        <li className="paragraph__200--regular modal__define__goal-item">
-                                            {dataPortfolio.finding1}
-                                        </li>
-                                        <li className="paragraph__200--regular modal__define__goal-item">
-                                            {dataPortfolio.finding2}
-                                        </li>
-                                        <li className="paragraph__200--regular modal__define__goal-item">
-                                            {dataPortfolio.finding3}
-                                        </li>
-                                        <li className="paragraph__200--regular modal__define__goal-item">
-                                            {dataPortfolio.finding4}
-                                        </li>
-                                    </ul>
+                                <ol className="modal__define__goal-list">
+                                    <li className="paragraph__200--regular modal__define__goal-item">
+                                        {dataPortfolio.finding1}
+                                    </li>
+                                    <li className="paragraph__200--regular modal__define__goal-item">
+                                        {dataPortfolio.finding2}
+                                    </li>
+                                    <li className="paragraph__200--regular modal__define__goal-item">
+                                        {dataPortfolio.finding3}
+                                    </li>
+                                    <li className="paragraph__200--regular modal__define__goal-item">
+                                        {dataPortfolio.finding4}
+                                    </li>
                                 </ol>
                             </div>
                         </article>

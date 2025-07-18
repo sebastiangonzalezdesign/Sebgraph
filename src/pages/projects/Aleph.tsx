@@ -103,21 +103,19 @@ const AlephDS = () => {
                                     {dataPortfolio.goalTitle}
                                 </h3>
 
-                                <ol>
-                                    <ul className="modal__define__goal-list">
-                                        <li className="paragraph__200--regular modal__define__goal-item">
-                                            {dataPortfolio.goal1}
-                                        </li>
-                                        <li className="paragraph__200--regular modal__define__goal-item">
-                                            {dataPortfolio.goal2}
-                                        </li>
-                                        <li className="paragraph__200--regular modal__define__goal-item">
-                                            {dataPortfolio.goal3}
-                                        </li>
-                                        <li className="paragraph__200--regular modal__define__goal-item">
-                                            {dataPortfolio.goal4}
-                                        </li>
-                                    </ul>
+                                <ol className="modal__define__goal-list">
+                                    <li className="paragraph__200--regular modal__define__goal-item">
+                                        {dataPortfolio.goal1}
+                                    </li>
+                                    <li className="paragraph__200--regular modal__define__goal-item">
+                                        {dataPortfolio.goal2}
+                                    </li>
+                                    <li className="paragraph__200--regular modal__define__goal-item">
+                                        {dataPortfolio.goal3}
+                                    </li>
+                                    <li className="paragraph__200--regular modal__define__goal-item">
+                                        {dataPortfolio.goal4}
+                                    </li>
                                 </ol>
                             </div>
                         </article>
@@ -150,18 +148,16 @@ const AlephDS = () => {
                                     {dataPortfolio.findingsTitle}
                                 </h3>
 
-                                <ol>
-                                    <ul className="modal__define__goal-list">
-                                        <li className="paragraph__200--regular modal__define__goal-item">
-                                            {dataPortfolio.finding1}
-                                        </li>
-                                        <li className="paragraph__200--regular modal__define__goal-item">
-                                            {dataPortfolio.finding2}
-                                        </li>
-                                        <li className="paragraph__200--regular modal__define__goal-item">
-                                            {dataPortfolio.finding3}
-                                        </li>
-                                    </ul>
+                                <ol className="modal__define__goal-list">
+                                    <li className="paragraph__200--regular modal__define__goal-item">
+                                        {dataPortfolio.finding1}
+                                    </li>
+                                    <li className="paragraph__200--regular modal__define__goal-item">
+                                        {dataPortfolio.finding2}
+                                    </li>
+                                    <li className="paragraph__200--regular modal__define__goal-item">
+                                        {dataPortfolio.finding3}
+                                    </li>
                                 </ol>
                             </div>
                         </article>
