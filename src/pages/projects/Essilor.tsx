@@ -4,6 +4,8 @@ import { trackPageView } from '../../services/analytics'
 import { Essilor } from '../../dataPortfolio'
 import BackButton from '../../components/BackButton'
 import ImageModalZoom from '../../components/ImageModalZoom'
+import SEO from '../../components/SEO'
+import { seoConfig } from '../../seoConfig'
 
 const EssilorAPP = () => {
     const [dataPortfolio] = useState(Essilor)
@@ -14,6 +16,7 @@ const EssilorAPP = () => {
 
     return (
         <>
+            <SEO {...seoConfig.essilor} />
             {dataPortfolio.map((dataPortfolio) => (
                 /* CONTAINER */
                 <section key={dataPortfolio.id} className="modal__container">

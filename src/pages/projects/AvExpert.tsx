@@ -8,6 +8,8 @@ import { default as calificacionInicio } from '../../img/calificacion-inicio.jso
 import { default as calificacionFin } from '../../img/calificacion-fin.json'
 import BackButton from '../../components/BackButton'
 import ImageModalZoom from '../../components/ImageModalZoom'
+import SEO from '../../components/SEO'
+import { seoConfig } from '../../seoConfig'
 
 const AvExpert = () => {
     const [dataPortfolio] = useState(AV)
@@ -54,6 +56,7 @@ const AvExpert = () => {
 
     return (
         <>
+            <SEO {...seoConfig.avexpert} />
             {dataPortfolio.map((dataPortfolio) => (
                 /* CONTAINER */
                 <section key={dataPortfolio.id} className="modal__container">

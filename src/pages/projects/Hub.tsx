@@ -3,7 +3,8 @@ import './ProjectStyles.scss'
 import { Hub as HubDS } from '../../dataPortfolio'
 import BackButton from '../../components/BackButton'
 import ImageModalZoom from '../../components/ImageModalZoom'
-import { Helmet } from 'react-helmet-async'
+import SEO from '../../components/SEO'
+import { seoConfig } from '../../seoConfig'
 
 const Hub = () => {
     const [dataPortfolio] = useState(HubDS)
@@ -17,12 +18,7 @@ const Hub = () => {
 
     return (
         <>
-            <Helmet>
-                {/* Conditionally apply the noindex meta tag */}
-                {isPrivatePage && <meta name="robots" content="noindex" />}
-                <title>{dataPortfolio[0]?.headTitle || 'Hub Project'}</title>
-            </Helmet>
-
+            <SEO {...seoConfig.hub} />
             {dataPortfolio.map((dataPortfolio) => (
                 /* CONTAINER */
                 <section key={dataPortfolio.id} className="modal__container">

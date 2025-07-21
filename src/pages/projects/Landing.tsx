@@ -4,6 +4,8 @@ import { trackPageView } from '../../services/analytics'
 import { Landing } from '../../dataPortfolio'
 import BackButton from '../../components/BackButton'
 import ImageModalZoom from '../../components/ImageModalZoom'
+import SEO from '../../components/SEO'
+import { seoConfig } from '../../seoConfig'
 
 const LandingPage = () => {
     const [dataPortfolio] = useState(Landing)
@@ -14,6 +16,7 @@ const LandingPage = () => {
 
     return (
         <>
+            <SEO {...seoConfig.landing} />
             {dataPortfolio.map((dataPortfolio) => (
                 /* CONTAINER */
                 <section key={dataPortfolio.id} className="modal__container">

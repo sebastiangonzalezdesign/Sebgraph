@@ -30,6 +30,7 @@ const SEO: React.FC<SEOProps> = ({
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="robots" content={robots} />
+        <link rel="canonical" href={url} />
         {/* Open Graph */}
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />

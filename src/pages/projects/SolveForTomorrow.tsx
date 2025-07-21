@@ -8,6 +8,8 @@ import { default as versionesAnteriores } from '../../img/versiones-anteriores.j
 import { default as recursos } from '../../img/recursos.json'
 import BackButton from '../../components/BackButton'
 import ImageModalZoom from '../../components/ImageModalZoom'
+import SEO from '../../components/SEO'
+import { seoConfig } from '../../seoConfig'
 
 const SolveForTomorrow = () => {
     const [dataPortfolio] = useState(Solve)
@@ -55,6 +57,7 @@ const SolveForTomorrow = () => {
 
     return (
         <>
+            <SEO {...seoConfig.solvefortomorrow} />
             {dataPortfolio.map((dataPortfolio) => (
                 /* CONTAINER */
                 <section key={dataPortfolio.id} className="modal__container">
