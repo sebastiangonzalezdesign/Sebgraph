@@ -112,7 +112,7 @@ const Portfolio = forwardRef<HTMLDivElement, {}>((props, ref) => {
                     {data
                         .filter((d) => d.showProject === 'yes')
                         .sort((a, b) => a.order - b.order)
-                        .map((d) => (
+                        .map((d, i) => (
                             <Link
                                 to={
                                     d.protected === 'yes'
@@ -152,7 +152,9 @@ const Portfolio = forwardRef<HTMLDivElement, {}>((props, ref) => {
                                         className="section-portfolio__img"
                                         src={d.img}
                                         alt="Tech"
-                                        loading="lazy"
+                                        {...(i === 0
+                                            ? { fetchPriority: 'high' }
+                                            : { loading: 'lazy' })}
                                     />
                                 </div>
                             </Link>
