@@ -16,11 +16,28 @@ export default defineConfig({
     // Comment this out if it isn't relevant for your project
     build: {
         outDir: 'dist',
+        sourcemap: true, // Enable source maps for bundle analysis
         chunkSizeWarningLimit: 2000, // Adjust chunk size warning limit
         rollupOptions: {
             output: {
                 manualChunks(id) {
+                    // Split major libraries into separate chunks
                     if (id.includes('node_modules')) {
+                        if (id.includes('react') || id.includes('react-dom')) {
+                            return 'react-vendor'
+                        }
+                        if (id.includes('framer-motion')) {
+                            return 'framer-motion'
+                        }
+                        if (id.includes('lottie-web')) {
+                            return 'lottie'
+                        }
+                        if (id.includes('firebase')) {
+                            return 'firebase'
+                        }
+                        if (id.includes('heroicons')) {
+                            return 'heroicons'
+                        }
                         return 'vendor'
                     }
                 },

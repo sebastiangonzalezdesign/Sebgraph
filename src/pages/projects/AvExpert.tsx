@@ -1,8 +1,8 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { trackPageView } from '../../services/analytics'
 import './ProjectStyles.scss'
 import { AV } from '../../dataPortfolio'
-import lottie from 'lottie-web'
+import { useLottie } from '../../hooks/useLottie'
 import { default as busqueda } from '../../img/busqueda.json'
 import { default as calificacionInicio } from '../../img/calificacion-inicio.json'
 import { default as calificacionFin } from '../../img/calificacion-fin.json'
@@ -13,45 +13,13 @@ import { seoConfig } from '../../seoConfig'
 
 const AvExpert = () => {
     const [dataPortfolio] = useState(AV)
-    const container1 = useRef(null)
-    const container2 = useRef(null)
-    const container3 = useRef(null)
+    const container1 = useLottie(busqueda)
+    const container2 = useLottie(calificacionInicio)
+    const container3 = useLottie(calificacionFin)
 
     // Analytics pageview
     useEffect(() => {
         trackPageView('/projects/avexpert')
-    }, [])
-
-    useEffect(() => {
-        if (container1.current) {
-            lottie.loadAnimation({
-                container: container1.current,
-                renderer: 'svg',
-                loop: true,
-                autoplay: true,
-                animationData: busqueda,
-            })
-        }
-
-        if (container2.current) {
-            lottie.loadAnimation({
-                container: container2.current,
-                renderer: 'svg',
-                loop: true,
-                autoplay: true,
-                animationData: calificacionInicio,
-            })
-        }
-
-        if (container3.current) {
-            lottie.loadAnimation({
-                container: container3.current,
-                renderer: 'svg',
-                loop: true,
-                autoplay: true,
-                animationData: calificacionFin,
-            })
-        }
     }, [])
 
     return (

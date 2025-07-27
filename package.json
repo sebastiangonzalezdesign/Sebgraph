@@ -6,12 +6,9 @@
     "dependencies": {
         "@heroicons/react": "^2.1.5",
         "@rive-app/react-canvas": "^4.14.4",
-        "@splinetool/react-spline": "^4.0.0",
-        "@splinetool/runtime": "^1.9.28",
         "@testing-library/jest-dom": "^6.5.0",
         "@testing-library/react": "^16.0.1",
         "@testing-library/user-event": "^14.5.2",
-        "aos": "^2.3.4",
         "css-loader": "^7.1.2",
         "dotenv": "^16.4.7",
         "firebase": "^10.14.0",
@@ -22,7 +19,6 @@
         "react-dom": "^18.3.1",
         "react-ga4": "^2.1.0",
         "react-helmet-async": "^2.0.5",
-        "react-loader-spinner": "^6.1.6",
         "react-router-dom": "^7.2.0",
         "sass": "^1.79.4",
         "use-local-storage": "^3.0.0",
@@ -32,6 +28,7 @@
     "scripts": {
         "start": "vite",
         "build": "vite build",
+        "build:critical": "npm run build && npx critical dist/index.html --inline --base=dist/ --width 1300 --height 900 --extract",
         "test": "vite test",
         "predeploy": "npm run build",
         "deploy": "gh-pages -d build",
@@ -61,6 +58,8 @@
         "@types/react-dom": "^18.3.1",
         "@vitejs/plugin-react": "^4.3.2",
         "@vitejs/plugin-react-refresh": "^1.3.6",
+        "critical": "^7.2.1",
+        "source-map-explorer": "^2.5.3",
         "typescript": "^5.6.3",
         "vite": "^5.4.8",
         "vite-plugin-svgr": "^4.3.0"

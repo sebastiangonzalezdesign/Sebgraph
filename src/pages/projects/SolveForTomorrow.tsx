@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Solve } from '../../dataPortfolio'
 import { trackPageView } from '../../services/analytics'
 import './ProjectStyles.scss'
-import lottie from 'lottie-web'
+import { useLottie } from '../../hooks/useLottie'
 import { default as desarrolloSostenible } from '../../img/desarrollo_sostenible.json'
 import { default as versionesAnteriores } from '../../img/versiones-anteriores.json'
 import { default as recursos } from '../../img/recursos.json'
@@ -13,46 +13,13 @@ import { seoConfig } from '../../seoConfig'
 
 const SolveForTomorrow = () => {
     const [dataPortfolio] = useState(Solve)
-    const container1 = useRef(null)
-    const container2 = useRef(null)
-    const container3 = useRef(null)
+    const container1 = useLottie(desarrolloSostenible)
+    const container2 = useLottie(versionesAnteriores)
+    const container3 = useLottie(recursos)
 
     // Analytics pageview
     useEffect(() => {
         trackPageView('/projects/solvefortomorrow')
-    }, [])
-
-    /* Lottie */
-    useEffect(() => {
-        if (container1.current) {
-            lottie.loadAnimation({
-                container: container1.current,
-                renderer: 'svg',
-                loop: true,
-                autoplay: true,
-                animationData: desarrolloSostenible,
-            })
-        }
-
-        if (container2.current) {
-            lottie.loadAnimation({
-                container: container2.current,
-                renderer: 'svg',
-                loop: true,
-                autoplay: true,
-                animationData: versionesAnteriores,
-            })
-        }
-
-        if (container3.current) {
-            lottie.loadAnimation({
-                container: container3.current,
-                renderer: 'svg',
-                loop: true,
-                autoplay: true,
-                animationData: recursos,
-            })
-        }
     }, [])
 
     return (
