@@ -81,7 +81,10 @@ const HeroWork = () => {
                     }}
                     className="section-hero__btn-container"
                 >
-                    <a href="mailto:sebgraph7@gmail.com" className="email">
+                    <a
+                        href="mailto:info@sebastiangonzalez.design"
+                        className="email"
+                    >
                         <Button
                             type="button"
                             buttonStyle="btn--secondary"

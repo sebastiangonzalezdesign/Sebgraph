@@ -58,7 +58,7 @@ const Footer = () => {
                         </a>
                         <a
                             className="footer__social-item"
-                            href="mailto:sebgraph7@gmail.com"
+                            href="mailto:info@sebastiangonzalez.design"
                             target="_blank"
                             rel="noreferrer"
                             aria-label="Send Email to Sebastian"

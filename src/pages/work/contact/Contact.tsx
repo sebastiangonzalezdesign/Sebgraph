@@ -7,7 +7,7 @@ import { useRive } from '@rive-app/react-canvas'
 
 const Contact = () => {
     const [copySuccess, setCopySuccess] = useState(false)
-    const email = 'sebgraph7@gmail.com'
+    const email = 'info@sebastiangonzalez.design'
 
     /* Rive animation */
     const { RiveComponent } = useRive({
