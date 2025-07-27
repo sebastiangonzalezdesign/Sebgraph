@@ -42,7 +42,7 @@ const Footer = () => {
 
                         <a
                             className="footer__social-item"
-                            href="https://www.instagram.com/sebgraph/"
+                            href="https://www.instagram.com/sebastiangonzalezdesign/"
                             target="_blank"
                             rel="noreferrer"
                             aria-label="View Instagram profile"
