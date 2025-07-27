@@ -25,7 +25,7 @@ const Footer = () => {
                     <div className="footer__social-icons">
                         <a
                             className="footer__social-item"
-                            href="https://www.linkedin.com/in/sebgraph"
+                            href="https://www.linkedin.com/in/sebastiangonzalezdesign/"
                             target="_blank"
                             rel="noreferrer"
                             aria-label="View Linkedin profile"
