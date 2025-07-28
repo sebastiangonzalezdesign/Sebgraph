@@ -48,6 +48,7 @@ const Work = () => {
                 description={seoConfig.home.description}
                 url={seoConfig.home.url}
                 robots={seoConfig.home.robots}
+                structuredData={seoConfig.home.structuredData}
             />
             <main className="container-home">
                 <HeroWork />

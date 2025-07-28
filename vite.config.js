@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react'
 import svgrPlugin from 'vite-plugin-svgr'
 import envCompatible from 'vite-plugin-env-compatible'
 import path from 'path'
+import { copyFileSync } from 'fs'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -58,6 +59,21 @@ export default defineConfig({
                 // ...svgr options (https://react-svgr.com/docs/options/)
             },
         }),
+        // Custom plugin to copy .htaccess file
+        {
+            name: 'copy-htaccess',
+            closeBundle() {
+                try {
+                    copyFileSync('public/.htaccess', 'dist/.htaccess')
+                    console.log('✅ .htaccess file copied to dist folder')
+                } catch (error) {
+                    console.warn(
+                        '⚠️ Could not copy .htaccess file:',
+                        error.message
+                    )
+                }
+            },
+        },
     ],
     assetsInclude: ['**/*.riv'],
 

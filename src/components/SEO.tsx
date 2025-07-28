@@ -9,6 +9,7 @@ interface SEOProps {
     type?: string
     twitterCardType?: string
     robots?: string
+    structuredData?: object
 }
 
 const defaultImage =
@@ -25,6 +26,7 @@ const SEO: React.FC<SEOProps> = ({
     type = defaultType,
     twitterCardType = defaultTwitterCard,
     robots = 'index, follow',
+    structuredData,
 }) => (
     <Helmet>
         <title>{title}</title>
@@ -43,6 +45,12 @@ const SEO: React.FC<SEOProps> = ({
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={image} />
         <meta name="twitter:url" content={url} />
+        {/* Structured Data */}
+        {structuredData && (
+            <script type="application/ld+json">
+                {JSON.stringify(structuredData)}
+            </script>
+        )}
     </Helmet>
 )
 

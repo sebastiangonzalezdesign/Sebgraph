@@ -44,11 +44,36 @@ const RoutesSite = () => {
                 <Route path="/" element={<Work />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/cv" element={<CV />} />
-                <Route path="/projects/solve" element={<SolveForTomorrow />} />
-                <Route path="/projects/AV" element={<AvExpert />} />
-                <Route path="/projects/Essilor" element={<Essilor />} />
-                <Route path="/projects/Landing" element={<Landing />} />
-                <Route path="/projects/Aleph" element={<AlephDS />} />
+                <Route
+                    path="/projects/solvefortomorrow"
+                    element={<SolveForTomorrow />}
+                />
+                <Route
+                    path="/projects/solve"
+                    element={
+                        <Navigate to="/projects/solvefortomorrow" replace />
+                    }
+                />
+                <Route path="/projects/avexpert" element={<AvExpert />} />
+                <Route
+                    path="/projects/AV"
+                    element={<Navigate to="/projects/avexpert" replace />}
+                />
+                <Route path="/projects/essilor" element={<Essilor />} />
+                <Route
+                    path="/projects/Essilor"
+                    element={<Navigate to="/projects/essilor" replace />}
+                />
+                <Route path="/projects/landing" element={<Landing />} />
+                <Route
+                    path="/projects/Landing"
+                    element={<Navigate to="/projects/landing" replace />}
+                />
+                <Route path="/projects/aleph" element={<AlephDS />} />
+                <Route
+                    path="/projects/Aleph"
+                    element={<Navigate to="/projects/aleph" replace />}
+                />
 
                 {/* Password-protected Hub Design System route */}
                 <Route
