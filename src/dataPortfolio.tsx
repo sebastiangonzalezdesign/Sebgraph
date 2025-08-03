@@ -491,3 +491,84 @@ export const Hub: ProjectContent[] = [
             'The color structure is prepared to add more brand themes.',
     },
 ]
+
+export const Startoken: ProjectContent[] = [
+    {
+        id: 7,
+        key: 'startoken',
+        headTitle: 'Startoken',
+        roleTitle: 'Role:',
+        role: 'UI Design · Frontend Dev · Design System Strategy',
+        dateTitle: 'Date:',
+        date: '2025',
+        companyTitle: 'Company:',
+        company: 'Personal work',
+
+        subtitleResume: 'Design Token Generator & Naming Tool',
+        titleResume: 'Startoken',
+        contentResume:
+            'A lightweight web app built to help designers and developers define, manage, and export design tokens with consistency. Startoken streamlines token naming, theme structuring, and code generation, bridging the gap between design systems and implementation.',
+
+        titleIntroduction: 'The Challenge',
+        contentIntroduction:
+            'As a designer with a strong interest in coding, I’ve had the opportunity to contribute to design system initiatives across multiple platforms. A recurring issue I observed: teams often struggled to align on naming design tokens, especially during the early stages of creation and adoption.',
+
+        goalsTitle: 'Project Goals',
+        goal1: 'Enable designers and developers to kickstart scalable design tokens.',
+        goal2: 'Improve understanding and collaboration between teams during design system creation.',
+        goal3: 'Provide a starter structure that can be adapted to different project sizes and tech stacks.',
+        goal4: 'Highlight the importance of consistent naming for design system adoption.',
+
+        researchTitle: 'Research & Concept',
+        researchDescription:
+            'I began by evaluating existing tools, reviewing best practices from mature systems, and analyzing community resources. I realized that most teams needed help at two critical points:',
+        feature1: 'Starting with a meaningful naming strategy.',
+        feature2: 'Creating a flexible, reusable token structure.',
+        conceptDescription:
+            'This insight led to the concept of Startoken: a platform to generate design token templates and learn naming conventions through real use cases.',
+
+        feedbackTitle: 'Early Feedback & Insights',
+        feedbackDescription:
+            'While this project is still in development, I gathered early impressions from peers and reflected on key design challenges. These initial insights helped shape the token structure and UI decisions:',
+        feedback1:
+            'A few designers expressed interest in easily switching between light and dark modes. This led to creating a scalable, theme-agnostic token system.',
+        feedback2:
+            'Deciding between semantic and primitive naming sparked internal debate, I chose a semantic structure to improve clarity across teams.',
+        feedback3:
+            'Feedback highlighted a desire to sync design tokens with tools like Figma. This inspired exploration into token automation strategies.',
+
+        keyFeaturesTitle: 'Key Features',
+        feature1Title: 'Design Token Template Generator',
+        feature1Description:
+            'This feature allows users to generate design token templates quickly, ensuring consistency across projects.',
+        feature2Title: 'Flexible Token Structure',
+        feature2Description:
+            'The token structure is designed to be flexible and reusable, making it easy to adapt to different project needs.',
+        feature3Title: 'My Libraries',
+        feature3Description:
+            'Users can save generated token templates or naming patterns. This library allows revisiting, exporting, or evolving saved structures.',
+
+        techStackTitle: 'Tech Stack',
+        techStackDescription:
+            'Designed from scratch in Figma, the project uses React + SCSS for the front-end, powered by a modular internal design system. The back-end is built with Supabase, deployed on Vercel, and supported by GitHub Copilot for productivity boosts.',
+
+        earlyImpactTitle: 'Early Impact',
+        earlyImpactDescription:
+            'The MVP has seen promising engagement from peers and early testers. Initial feedback and usage data (via Google Analytics) confirm:',
+        earlyImpactBullet1: 'Increased understanding of token structuring.',
+        earlyImpactBullet2: 'Faster setup for design system contributors.',
+        earlyImpactBullet3: 'Reduction in confusion around token names.',
+
+        reflectionsTitle: 'Reflections & What’s Next',
+        reflectionsDescription:
+            'This project allowed me to bridge design systems and code, shipping a real product with measurable value. Moving forward, I plan to:',
+        reflectionsBullet1: 'Continue user testing and expand export formats.',
+        reflectionsBullet2:
+            'Integrate with Figma Tokens Plugin and developer tools.',
+        reflectionsBullet3:
+            'Explore AI-driven naming suggestions to boost workflows.',
+
+        finalReflection:
+            'Startoken showcases my ability to build tools that translate design intent into scalable, usable code, aligning with hybrid roles where design and front-end development meet.',
+    },
+]

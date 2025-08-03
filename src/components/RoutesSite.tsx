@@ -18,6 +18,7 @@ const Essilor = lazy(() => import('../pages/projects/Essilor'))
 const Landing = lazy(() => import('../pages/projects/Landing'))
 const AlephDS = lazy(() => import('../pages/projects/Aleph'))
 const HubDS = lazy(() => import('../pages/projects/Hub'))
+const Startoken = lazy(() => import('../pages/projects/Startoken'))
 
 const About = lazy(() => import('../pages/about/About'))
 const Work = lazy(() => import('../pages/work/Work'))
@@ -73,6 +74,11 @@ const RoutesSite = () => {
                 <Route
                     path="/projects/Aleph"
                     element={<Navigate to="/projects/aleph" replace />}
+                />
+                <Route path="/projects/startoken" element={<Startoken />} />
+                <Route
+                    path="/projects/Startoken"
+                    element={<Navigate to="/projects/startoken" replace />}
                 />
 
                 {/* Password-protected Hub Design System route */}

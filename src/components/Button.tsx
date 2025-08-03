@@ -17,8 +17,8 @@ interface ButtonProps {
     children: React.ReactNode
     type?: 'button' | 'submit' | 'reset'
     onClick?: React.MouseEventHandler<HTMLButtonElement>
-    onMouseOver?: React.MouseEventHandler<HTMLButtonElement>
-    onMouseOut?: React.MouseEventHandler<HTMLButtonElement>
+    onMouseOver?: React.MouseEventHandler<HTMLButtonElement | HTMLAnchorElement>
+    onMouseOut?: React.MouseEventHandler<HTMLButtonElement | HTMLAnchorElement>
     onMouseLeave?: React.MouseEventHandler<HTMLButtonElement>
     buttonStyle?: 'btn--primary' | 'btn--secondary'
     buttonSize?: 'btn--lg' | 'btn--md'
@@ -26,7 +26,10 @@ interface ButtonProps {
     iconRight?: React.ReactElement
     fixedPosition?: boolean
     className?: string
-    disabled?: boolean // Add this line to support the disabled prop
+    disabled?: boolean
+    href?: string // Add href prop for links
+    target?: string // Add target prop for link behavior
+    rel?: string // Add rel prop for security
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -42,6 +45,9 @@ export const Button: React.FC<ButtonProps> = ({
     fixedPosition = false, // Default to false
     className = '',
     disabled = false, // Add default value for disabled prop
+    href,
+    target = '_blank', // Default to open in new tab
+    rel = 'noopener noreferrer', // Default security attributes
 }) => {
     const checkButtonStyle = STYLES.includes(buttonStyle)
         ? buttonStyle
@@ -49,6 +55,46 @@ export const Button: React.FC<ButtonProps> = ({
 
     const checkButtonSize = SIZE.includes(buttonSize) ? buttonSize : SIZE[0]
 
+    const buttonContent = (
+        <div className="btn-icon-container">
+            {iconLeft && (
+                <span className="btn__icon btn__icon--left">
+                    {React.cloneElement(iconLeft, { className: 'h-5 w-5' })}
+                </span>
+            )}
+
+            {children}
+
+            {iconRight && (
+                <span className="btn__icon btn__icon--right">
+                    {React.cloneElement(iconRight, {
+                        className: 'h-5 w-5',
+                    })}
+                </span>
+            )}
+        </div>
+    )
+
+    // If href is provided, render as a link
+    if (href) {
+        return (
+            <a
+                href={href}
+                target={target}
+                rel={rel}
+                className={`btn ${checkButtonStyle} ${checkButtonSize} ${className} ${
+                    fixedPosition ? 'btn--fixed' : ''
+                } ${disabled ? 'btn--disabled' : ''}`}
+                onMouseOver={onMouseOver}
+                onMouseOut={onMouseOut}
+                style={{ textDecoration: 'none' }}
+            >
+                {buttonContent}
+            </a>
+        )
+    }
+
+    // Otherwise, render as a button
     return (
         <button
             className={`btn ${checkButtonStyle} ${checkButtonSize} ${className} ${
@@ -60,23 +106,7 @@ export const Button: React.FC<ButtonProps> = ({
             type={type}
             disabled={disabled} // Add the disabled attribute
         >
-            <div className="btn-icon-container">
-                {iconLeft && (
-                    <span className="btn__icon btn__icon--left">
-                        {React.cloneElement(iconLeft, { className: 'h-5 w-5' })}
-                    </span>
-                )}
-
-                {children}
-
-                {iconRight && (
-                    <span className="btn__icon btn__icon--right">
-                        {React.cloneElement(iconRight, {
-                            className: 'h-5 w-5',
-                        })}
-                    </span>
-                )}
-            </div>
+            {buttonContent}
         </button>
     )
 }

@@ -1,0 +1,114 @@
+.video-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: var(--color-neutral-100);
+
+    &:hover {
+        .video {
+            transform: scale(1.02);
+        }
+    }
+}
+
+.video {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    transform: scale(0.98);
+
+    &--loaded {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    &--loading {
+        opacity: 0;
+    }
+}
+
+.video-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-neutral-50);
+    backdrop-filter: blur(4px);
+    z-index: 1;
+}
+
+.video-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--color-neutral-200);
+    border-top: 3px solid var(--color-primary-500);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.video-error {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-neutral-100);
+    color: var(--color-text-secondary);
+    font-size: 14px;
+    z-index: 1;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .video-container {
+        border-radius: 4px;
+    }
+
+    .video-spinner {
+        width: 32px;
+        height: 32px;
+        border-width: 2px;
+    }
+}
+
+/* High performance optimizations */
+.video {
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .video {
+        transition: none;
+        transform: none !important;
+    }
+
+    .video-container:hover .video {
+        transform: none;
+    }
+
+    .video-spinner {
+        animation: none;
+    }
+}

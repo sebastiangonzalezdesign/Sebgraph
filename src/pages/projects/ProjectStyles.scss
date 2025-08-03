@@ -55,6 +55,41 @@
     &__img-complete:not(:last-child) {
         margin-bottom: 4rem;
     }
+
+    /* ---------- Video Styles ---------- */
+    &__video {
+        margin: 2rem 0;
+        width: 100%;
+        max-width: 100%;
+        border-radius: $size-2;
+        box-shadow: $box-shadow-1;
+
+        .video-container {
+            background-color: $color-neutral-50;
+            border-radius: $size-2;
+            overflow: hidden;
+
+            @include mq(medium) {
+                border-radius: $size-1;
+            }
+        }
+
+        .video {
+            width: 100%;
+            height: auto;
+            display: block;
+
+            &:focus {
+                outline: 2px solid $color-primary-500;
+                outline-offset: 2px;
+            }
+        }
+
+        @include mq(medium) {
+            margin: 1.5rem 0;
+        }
+    }
+
     &__bullets-section {
         background-color: $color-neutral-blue-100;
         border-radius: $size-3;
@@ -94,6 +129,7 @@
         display: flex;
         gap: $size-3;
         max-width: 75rem;
+        width: 100%;
     }
     /* ---------- Head content styles ---------- */
     &__header {
@@ -175,6 +211,15 @@
                 rgba(20, 12, 3, 0.9)
             ),
             url(https://sebastiangonzalez.design/images/projects/hub/hero-image-hub.webp);
+    }
+
+    &__header-startoken {
+        background-image: linear-gradient(
+                to right bottom,
+                rgba(34, 34, 34, 0.9),
+                rgba(20, 12, 3, 0.9)
+            ),
+            url(https://sebastiangonzalez.design/images/projects/startoken/hero-image-startoken.webp);
     }
     /* ----------  End Head content styles ---------- */
 
@@ -432,6 +477,16 @@
             margin: 0;
             padding: 2rem;
         }
+    }
+
+    &__button-project {
+        width: fit-content;
+    }
+
+    &__final-reflection {
+        padding: 16px;
+        background-color: $color-primary-200;
+        border-top-left-radius: 8px;
     }
 }
 

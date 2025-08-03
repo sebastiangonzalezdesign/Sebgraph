@@ -154,6 +154,7 @@ $light: (
         'av': $-clr-yellow-1000,
         'essilor': $-clr-purple-800,
         'landing': $-clr-gray-700,
+        'startoken': $-clr-blue-1000,
     ),
     'fixed': (
         'white': $-clr-white,
@@ -238,6 +239,7 @@ $dark: (
         'av': $-clr-yellow-1000,
         'essilor': $-clr-purple-800,
         'landing': $-clr-gray-700,
+        'startoken': $-clr-blue-1000,
     ),
     'fixed': (
         'white': $-clr-white,
@@ -315,6 +317,7 @@ $color-brand-solve: var(--brand-solve);
 $color-brand-av: var(--brand-av);
 $color-brand-essilor: var(--brand-essilor);
 $color-brand-landing: var(--brand-landing);
+$color-brand-startoken: var(--brand-startoken);
 
 $color-fixed-white: var(--fixed-white);
 $color-fixed-black: var(--fixed-black);

@@ -63,8 +63,9 @@ const HeroWork = () => {
                         code. I’m also exploring how AI can simplify systems and
                         enhance user experiences.
                         <br />
-                        <span className="paragraph__100--regular">
-                            Based in Bogotá, Colombia — collaborating globally.
+                        <br />
+                        <span className="paragraph__100--bold">
+                            Based in Bogotá, Colombia • collaborating globally.
                         </span>
                     </motion.p>
                 </div>

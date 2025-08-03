@@ -93,6 +93,13 @@ export const seoConfig = {
         url: 'https://sebastiangonzalez.design/projects/solvefortomorrow',
         robots: 'index, follow',
     },
+    startoken: {
+        title: 'Startoken Design System – Sebastian González',
+        description:
+            'Design token naming methodology for design systems. Unblock token naming conventions and create scalable design token architecture.',
+        url: 'https://sebastiangonzalez.design/projects/startoken',
+        robots: 'index, follow',
+    },
     // Example for a protected/private page
     hub: {
         title: 'Hub Design System – Sebastian González',
