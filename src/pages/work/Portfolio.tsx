@@ -153,7 +153,7 @@ const Portfolio = forwardRef<HTMLDivElement, {}>((props, ref) => {
                                         src={d.img}
                                         alt="Tech"
                                         {...(i === 0
-                                            ? { fetchPriority: 'high' }
+                                            ? { fetchpriority: 'high' as any }
                                             : { loading: 'lazy' })}
                                     />
                                 </div>

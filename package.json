@@ -1,6 +1,7 @@
 {
     "name": "sebastian-gonzalez-portfolio",
     "version": "0.1.0",
+    "type": "module",
     "homepage": "https://sebastiangonzalez.design/",
     "private": true,
     "dependencies": {
