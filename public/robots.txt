@@ -2,7 +2,5 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow: /projects/hub
-Disallow: /assets/cv-sebastian-gonzalez-CEC9bqgx.pdf
-Allow: /
 
 Sitemap: https://sebastiangonzalez.design/sitemap.xml
