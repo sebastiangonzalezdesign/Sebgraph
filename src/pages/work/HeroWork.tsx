@@ -41,7 +41,7 @@ const HeroWork = () => {
                             stiffness: 45,
                         }}
                     >
-                        UI Designer focused on Systems, Code & AI
+                        UI Designer focused on Systems & Code
                     </motion.h1>
                     <motion.p
                         className="paragraph__100--regular section-hero__paragraph"
