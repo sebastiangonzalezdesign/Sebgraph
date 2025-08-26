@@ -41,7 +41,7 @@ const HeroWork = () => {
                             stiffness: 45,
                         }}
                     >
-                        UI Designer focused on Systems & Code
+                        UI Designer for Design Systems & Products
                     </motion.h1>
                     <motion.p
                         className="paragraph__100--regular section-hero__paragraph"
@@ -55,13 +55,13 @@ const HeroWork = () => {
                             stiffness: 45,
                         }}
                     >
-                        Hey, I'm <strong>Sebastian González, </strong>a UI
-                        Designer with a strong visual and UX foundation, focused
-                        on scalable design systems and front-end experiences. I
-                        bring ideas to life by bridging design and development
-                        through thoughtful interfaces, systems thinking, and
-                        code. I’m also exploring how AI can simplify systems and
-                        enhance user experiences.
+                        UI Designer with 5+ years of experience, combining a
+                        strong visual and UX foundation with expertise in
+                        scalable design systems and front-end collaboration. I
+                        bridge design and development through thoughtful
+                        interfaces, systems thinking, and code. Currently
+                        exploring how AI can streamline workflows and enhance
+                        digital experiences across web and mobile.
                         <br />
                         <br />
                         <span className="paragraph__100--bold">
