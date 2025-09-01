@@ -1,0 +1,43 @@
+@use '../styles/ConfigStyles/abstracts' as *;
+
+.card {
+    background: $color-neutral-100;
+    border: 1px solid $color-neutral-300;
+    border-radius: $border-radius-2;
+    padding: $size-8;
+    transition: all 0.3s ease;
+
+    &--hover {
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: $box-shadow-2;
+            border-color: $color-primary-200;
+        }
+    }
+
+    &--clickable {
+        border: none;
+        background: transparent;
+        text-align: left;
+        width: 100%;
+
+        .card {
+            background: $color-neutral-100;
+            border: 1px solid $color-neutral-300;
+        }
+    }
+}
+
+// Dark mode support
+:global(.dark) {
+    .card {
+        background: $color-neutral-800;
+        border-color: $color-neutral-700;
+
+        &--hover:hover {
+            background: $color-neutral-700;
+            border-color: $color-primary-400;
+        }
+    }
+}

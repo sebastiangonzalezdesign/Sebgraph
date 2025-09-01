@@ -1,0 +1,373 @@
+@use '../../styles/ConfigStyles/abstracts' as *;
+@use '../../styles/ConfigStyles/utilities' as *;
+
+.motion-ui-kit {
+    // Add padding to account for fixed header
+    padding-top: 80px; // Height of the fixed header
+
+    // Hero section inherits from BaseHero
+
+    // Overview section
+    &__overview {
+        padding: $size-10 0;
+        background: $color-neutral-100;
+        text-align: center;
+
+        &-text {
+            max-width: 42rem;
+            margin: 0 auto;
+            color: $color-neutral-700;
+        }
+    }
+
+    // Features section
+    &__features {
+        padding: $size-12 0;
+        background: $color-neutral-50;
+
+        .muik-features__grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: $size-8;
+            margin-top: $size-10;
+
+            @include mq(large) {
+                grid-template-columns: repeat(2, 1fr);
+                gap: $size-6;
+            }
+
+            @include mq(medium) {
+                grid-template-columns: 1fr;
+                gap: $size-6;
+            }
+        }
+
+        .muik-feature-card {
+            &__icon {
+                width: $size-12;
+                height: $size-12;
+                color: $color-primary-600;
+                margin-bottom: $size-6;
+
+                svg {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            &__title {
+                margin-bottom: $size-4;
+                color: $color-neutral-900;
+            }
+
+            &__description {
+                color: $color-neutral-600;
+                line-height: 1.6;
+            }
+        }
+    }
+
+    // Comparison section
+    &__comparison {
+        padding: $size-12 0;
+        background: $color-neutral-100;
+
+        &-table {
+            margin-top: $size-10;
+            overflow: hidden;
+        }
+
+        &-header {
+            background: $color-gradient-purple;
+            border-radius: $size-2;
+            color: $color-text-default;
+            padding: $size-6;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: $size-4;
+            align-items: center;
+
+            @include mq(medium) {
+                grid-template-columns: 1.5fr 1fr 1fr;
+                padding: $size-4;
+                gap: $size-2;
+            }
+        }
+
+        &-header-cell {
+            text-align: center;
+
+            &:first-child {
+                text-align: left;
+            }
+
+            &--pro {
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: $border-radius-1;
+                position: relative;
+                padding: $size-2;
+            }
+        }
+
+        &-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: $size-4;
+            align-items: center;
+            padding: $size-5 $size-6;
+            border-bottom: 1px solid $color-neutral-200;
+
+            @include mq(medium) {
+                grid-template-columns: 1.5fr 1fr 1fr;
+                padding: $size-4;
+                gap: $size-2;
+            }
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+
+        &-cell {
+            text-align: center;
+
+            &:first-child {
+                text-align: left;
+                color: $color-neutral-800;
+            }
+
+            &--pro {
+                background: rgba($color-primary-100, 0.5);
+                border-radius: $border-radius-1;
+                padding: $size-3 $size-4;
+                font-weight: 500;
+                color: $color-primary-800;
+            }
+
+            // Icon styling for comparison table
+            svg {
+                width: 20px;
+                height: 20px;
+                display: inline-block;
+            }
+        }
+
+        // Header icon styling
+        &-header-cell--pro svg {
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            margin-left: $size-1;
+        }
+    }
+
+    // CTA section
+    &__cta {
+        padding: $size-12 0;
+        background: $color-background-default;
+        color: $color-text-default;
+        text-align: center;
+
+        &-buttons {
+            display: flex;
+            gap: $size-6;
+            justify-content: center;
+            margin-top: $size-8;
+            flex-wrap: wrap;
+
+            @include mq(medium) {
+                flex-direction: column;
+                align-items: center;
+                gap: $size-4;
+            }
+        }
+    }
+
+    // Pro signup section
+    &__pro-signup {
+        padding: $size-12 0;
+        background: $color-neutral-50;
+        text-align: center;
+
+        &-description {
+            margin: $size-6 auto $size-10;
+            color: $color-neutral-600;
+        }
+
+        // Add spacing between elements without flexbox
+        .motion-ui-kit__section-title {
+            margin-bottom: $size-8;
+        }
+
+        .motion-ui-kit__pro-description {
+            margin-bottom: $size-8;
+        }
+    }
+
+    // Footer section
+    &__footer {
+        padding: $size-8 0 $size-4;
+        background: $color-neutral-100;
+        text-align: center;
+        border-bottom: 1px solid $color-neutral-200;
+
+        &-tagline {
+            color: $color-neutral-600;
+            font-style: italic;
+        }
+    }
+
+    // Section titles
+    &__section-title {
+        text-align: center;
+        margin-bottom: $size-2;
+        color: inherit;
+    }
+
+    // Button hover fix - ensure hover effects work properly
+    .btn {
+        &:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        &.btn--primary:hover {
+            background-color: $button-primary-background-hover;
+            color: $button-primary-color-hover;
+        }
+
+        &.btn--secondary:hover {
+            background-color: $button-secondary-background-hover;
+            border-color: $button-secondary-border-hover;
+            color: $button-secondary-color-hover;
+
+            // Ensure icons and text maintain proper color
+            .btn__icon svg {
+                color: $button-secondary-color-hover;
+            }
+        }
+    }
+
+    // Signup form
+    &__signup-form {
+        width: 100%;
+        max-width: 40rem; // Add max-width for better control
+        margin: 0 auto;
+        text-align: center;
+        padding: $size-8;
+        flex-shrink: 0; // Prevent flex container from shrinking this element
+
+        h3 {
+            margin-bottom: $size-6;
+            color: $color-neutral-800;
+        }
+    }
+
+    &__input-group {
+        display: flex;
+        gap: $size-4;
+        align-items: flex-start; // Changed from 'end' to 'flex-start'
+
+        @include mq(medium) {
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .input__container {
+            flex: 1;
+            margin-bottom: 0;
+        }
+
+        // Ensure button stays aligned to top of input
+        .btn {
+            margin-top: 0;
+            align-self: flex-start;
+            height: 3rem; // Match input height
+        }
+    }
+
+    &__error {
+        color: $color-text-error;
+        font-size: 14px;
+        font-weight: 400;
+        margin-top: 10px;
+        padding-left: 12px;
+    }
+}
+
+// Dark mode support
+:global(.dark) {
+    .motion-ui-kit {
+        &__overview {
+            background: $color-neutral-800;
+
+            &-text {
+                color: $color-neutral-300;
+            }
+        }
+
+        &__features {
+            background: $color-neutral-900;
+
+            .muik-feature-card {
+                &__title {
+                    color: $color-neutral-100;
+                }
+
+                &__description {
+                    color: $color-neutral-400;
+                }
+
+                &__icon {
+                    color: $color-primary-400;
+                }
+            }
+        }
+
+        &__comparison {
+            background: $color-neutral-800;
+
+            &-row {
+                border-color: $color-neutral-700;
+            }
+
+            &-cell:first-child {
+                color: $color-neutral-200;
+            }
+
+            &-cell--pro {
+                background: rgba($color-primary-400, 0.2);
+                color: $color-primary-300;
+            }
+
+            &-header-cell--pro {
+                background: rgba(255, 255, 255, 0.15);
+            }
+        }
+
+        &__pro-signup {
+            background: $color-neutral-900;
+
+            &-description {
+                color: $color-neutral-400;
+            }
+        }
+
+        &__footer {
+            background: $color-neutral-800;
+            border-color: $color-neutral-700;
+
+            &-tagline {
+                color: $color-neutral-400;
+            }
+        }
+
+        &__signup-form h3 {
+            color: $color-neutral-200;
+        }
+
+        &__section-title {
+            color: inherit;
+        }
+    }
+}

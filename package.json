@@ -27,7 +27,7 @@
         "web-vitals": "^4.2.3"
     },
     "scripts": {
-        "start": "vite",
+        "dev": "vite",
         "build": "vite build",
         "prepare-assets": "node ./scripts/prepare-assets.js || echo 'no assets to prepare'",
         "build:critical": "npm run prepare-assets && npm run build && npx critical dist/index.html --inline --base=dist/ --width 1300 --height 900 --extract",

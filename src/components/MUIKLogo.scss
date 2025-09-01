@@ -1,0 +1,58 @@
+// MUIK Logo component styles
+.muik-logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    &__svg {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    // Size variants
+    &--sm {
+        width: 3rem;
+        height: auto;
+    }
+
+    &--md {
+        width: 4rem;
+        height: auto;
+    }
+
+    &--lg {
+        width: 16rem;
+        height: auto;
+    }
+
+    // Hover effects
+    &:hover {
+        .muik-logo__svg {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+    }
+
+    // Animation states
+    .muik-logo__svg {
+        transition: transform 0.3s ease;
+    }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+    .muik-logo {
+        &--lg {
+            width: 4rem;
+        }
+
+        &--md {
+            width: 3rem;
+        }
+
+        &--sm {
+            width: 2.5rem;
+        }
+    }
+}

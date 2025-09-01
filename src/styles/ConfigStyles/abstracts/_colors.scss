@@ -146,6 +146,17 @@ $light: (
         '800': $-clr-red-800,
         '900': $-clr-red-900,
     ),
+    'success': (
+        '100': $-clr-green-100,
+        '200': $-clr-green-200,
+        '300': $-clr-green-300,
+        '400': $-clr-green-400,
+        '500': $-clr-green-500,
+        '600': $-clr-green-600,
+        '700': $-clr-green-700,
+        '800': $-clr-green-800,
+        '900': $-clr-green-900,
+    ),
     'brand': (
         'hub': $-clr-blue-500,
         'hub-ds': $-clr-blue-500,
@@ -231,6 +242,17 @@ $dark: (
         '800': $-clr-red-300,
         '900': $-clr-red-200,
     ),
+    'success': (
+        '100': $-clr-green-900,
+        '200': $-clr-green-800,
+        '300': $-clr-green-700,
+        '400': $-clr-green-600,
+        '500': $-clr-green-500,
+        '600': $-clr-green-300,
+        '700': $-clr-green-400,
+        '800': $-clr-green-300,
+        '900': $-clr-green-200,
+    ),
     'brand': (
         'hub': $-clr-blue-500,
         'hub-ds': $-clr-blue-500,
@@ -309,6 +331,16 @@ $color-error-600: var(--error-600);
 $color-error-700: var(--error-700);
 $color-error-800: var(--error-800);
 $color-error-900: var(--error-900);
+
+$color-success-100: var(--success-100);
+$color-success-200: var(--success-200);
+$color-success-300: var(--success-300);
+$color-success-400: var(--success-400);
+$color-success-500: var(--success-500);
+$color-success-600: var(--success-600);
+$color-success-700: var(--success-700);
+$color-success-800: var(--success-800);
+$color-success-900: var(--success-900);
 
 $color-brand-hub: var(--brand-hub);
 $color-brand-hub-ds: var(--brand-hub-ds);

@@ -100,6 +100,14 @@ export const seoConfig = {
         url: 'https://sebastiangonzalez.design/projects/startoken',
         robots: 'index, follow',
     },
+    // MUIK Motion UI Kit landing page
+    motionUIKit: {
+        title: 'Motion UI Kit – Free React Animation Library by Sebastian González',
+        description:
+            'A free + pro-ready library of polished UI micro-interactions for React & Framer Motion. Dark mode first, copy-paste components, and smooth 60fps animations.',
+        url: 'https://sebastiangonzalez.design/motion-ui-kit',
+        robots: 'index, follow',
+    },
     // Example for a protected/private page
     hub: {
         title: 'Hub Design System – Sebastian González',

@@ -1,0 +1,107 @@
+@use '../styles/ConfigStyles/abstracts' as *;
+@use '../styles/ConfigStyles/utilities' as utilities;
+
+.input {
+    &__container {
+        position: relative;
+        width: 100%;
+        margin-bottom: $size-4;
+    }
+
+    &__label {
+        &--static {
+            display: block;
+            margin-bottom: $size-2;
+            font-family: $font-family-base;
+            font-weight: $font-weight-semi-bold;
+            font-size: $font-size-300;
+            line-height: $line-height-body;
+            color: $color-neutral-700;
+        }
+    }
+
+    // Base input styles matching PasswordPage
+    color: $color-neutral-900;
+    height: 56px;
+    width: 100%;
+    padding: 12px 10px;
+    font-size: 16px;
+    border: 1px solid $color-neutral-300;
+    border-radius: 4px;
+    outline: none;
+    background-color: $color-neutral-100;
+    transition: border-color 0.2s ease;
+    font-family: $font-family-base;
+    font-weight: $font-weight-default;
+    line-height: $line-height-body;
+
+    &:focus {
+        border: 2px solid $color-primary-500;
+    }
+
+    &:disabled {
+        background-color: $color-neutral-200;
+        color: $color-neutral-500;
+        cursor: not-allowed;
+    }
+
+    // Floating label variant - matching PasswordPage exactly
+    &--floating {
+        /* Move label when input is focused or valid (has content) */
+        &:focus + .input__label,
+        &:valid + .input__label {
+            top: 12px; // Move label up
+            left: 10px; // Keep consistent left position
+            transform: translateY(0); // Remove vertical centering when active
+            font-size: 12px; // Shrink label size
+            color: $color-primary-800;
+        }
+
+        + .input__label {
+            position: absolute;
+            top: 50%; /* Centered initially */
+            left: 10px;
+            transform: translateY(-50%); /* Adjusts vertical center */
+            font-size: 16px;
+            color: $color-neutral-600;
+            pointer-events: none; /* Makes the label unclickable */
+            transition: 0.2s ease all; /* Smooth transition for the label */
+            white-space: nowrap; /* Prevent label text wrapping */
+        }
+    }
+
+    &__error {
+        color: $color-text-error;
+        margin-top: 10px;
+        font-family: $font-family-base;
+        font-weight: $font-weight-bold;
+        font-size: $font-size-300;
+        line-height: $line-height-body;
+    }
+}
+
+// Dark mode support
+:global(.dark) {
+    .input {
+        color: $color-neutral-100;
+        background-color: $color-neutral-800;
+        border-color: $color-neutral-600;
+
+        &:focus {
+            border-color: $color-primary-400;
+        }
+
+        &--floating + .input__label {
+            color: $color-neutral-400;
+        }
+
+        &--floating:focus + .input__label,
+        &--floating:valid + .input__label {
+            color: $color-primary-400;
+        }
+
+        &__label--static {
+            color: $color-neutral-300;
+        }
+    }
+}

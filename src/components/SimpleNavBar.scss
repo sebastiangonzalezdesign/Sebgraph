@@ -1,0 +1,84 @@
+@use '../styles/ConfigStyles/abstracts' as *;
+
+.simple-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: transparent;
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+
+    &--bg {
+        background: rgba($color-neutral-100, 0.8);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba($color-neutral-300, 0.3);
+    }
+}
+
+.simple-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $size-4 $size-6;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @media (max-width: 768px) {
+        padding: $size-3 $size-4;
+    }
+}
+
+.simple-header__logo-box {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: $color-neutral-900;
+    transition: transform 0.2s ease;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.simple-header__icon {
+    width: 40px;
+    height: 40px;
+
+    .svg-bg {
+        fill: $color-primary-500;
+    }
+
+    .svg-foreground {
+        fill: $color-neutral-100;
+    }
+}
+
+.simple-header__actions {
+    display: flex;
+    align-items: center;
+}
+
+// Dark mode support
+:global(.dark) {
+    .simple-header {
+        &--bg {
+            background: rgba($color-neutral-900, 0.8);
+            border-bottom: 1px solid rgba($color-neutral-700, 0.3);
+        }
+    }
+
+    .simple-header__logo-box {
+        color: $color-neutral-100;
+    }
+
+    .simple-header__icon {
+        .svg-bg {
+            fill: $color-primary-400;
+        }
+
+        .svg-foreground {
+            fill: $color-neutral-900;
+        }
+    }
+}

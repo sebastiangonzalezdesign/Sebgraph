@@ -1,36 +1,14 @@
 import './Button.scss'
 import React from 'react'
 import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/outline'
+import { ButtonProps } from '../types'
 
-// Framer Motion Variables
-const fadeUpVariants = {
-    initial: { opacity: 0, y: 200 }, // Initial state
-    animate: { opacity: 1, y: 0 }, // Animation state
-    exit: { opacity: 0, y: 0 }, // Exit state
-}
+// Import shared animation variants
+import { fadeUpVariants } from '../animations/motionVariants'
 
 const STYLES = ['btn--primary', 'btn--secondary']
 
 const SIZE = ['btn--lg', 'btn--md']
-
-interface ButtonProps {
-    children: React.ReactNode
-    type?: 'button' | 'submit' | 'reset'
-    onClick?: React.MouseEventHandler<HTMLButtonElement>
-    onMouseOver?: React.MouseEventHandler<HTMLButtonElement | HTMLAnchorElement>
-    onMouseOut?: React.MouseEventHandler<HTMLButtonElement | HTMLAnchorElement>
-    onMouseLeave?: React.MouseEventHandler<HTMLButtonElement>
-    buttonStyle?: 'btn--primary' | 'btn--secondary'
-    buttonSize?: 'btn--lg' | 'btn--md'
-    iconLeft?: React.ReactElement
-    iconRight?: React.ReactElement
-    fixedPosition?: boolean
-    className?: string
-    disabled?: boolean
-    href?: string // Add href prop for links
-    target?: string // Add target prop for link behavior
-    rel?: string // Add rel prop for security
-}
 
 export const Button: React.FC<ButtonProps> = ({
     children,
@@ -57,17 +35,19 @@ export const Button: React.FC<ButtonProps> = ({
 
     const buttonContent = (
         <div className="btn-icon-container">
-            {iconLeft && (
+            {iconLeft && React.isValidElement(iconLeft) && (
                 <span className="btn__icon btn__icon--left">
-                    {React.cloneElement(iconLeft, { className: 'h-5 w-5' })}
+                    {React.cloneElement(iconLeft as React.ReactElement<any>, {
+                        className: 'h-5 w-5',
+                    })}
                 </span>
             )}
 
             {children}
 
-            {iconRight && (
+            {iconRight && React.isValidElement(iconRight) && (
                 <span className="btn__icon btn__icon--right">
-                    {React.cloneElement(iconRight, {
+                    {React.cloneElement(iconRight as React.ReactElement<any>, {
                         className: 'h-5 w-5',
                     })}
                 </span>

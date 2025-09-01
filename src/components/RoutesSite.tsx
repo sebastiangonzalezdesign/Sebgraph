@@ -24,6 +24,7 @@ const About = lazy(() => import('../pages/about/About'))
 const Work = lazy(() => import('../pages/work/Work'))
 const CV = lazy(() => import('../pages/cv/CV'))
 const PasswordPage = lazy(() => import('../pages/PasswordPage'))
+const MotionUIKit = lazy(() => import('../pages/motion-ui-kit/MotionUIKit'))
 
 const RoutesSite = () => {
     const location = useLocation()
@@ -45,6 +46,10 @@ const RoutesSite = () => {
                 <Route path="/" element={<Work />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/cv" element={<CV />} />
+
+                {/* Hidden MUIK Motion UI Kit landing page */}
+                <Route path="/motion-ui-kit" element={<MotionUIKit />} />
+
                 <Route
                     path="/projects/solvefortomorrow"
                     element={<SolveForTomorrow />}

@@ -1,11 +1,13 @@
 import './NavBar.scss'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import React from 'react'
 import { Bars3BottomRightIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import DarkMode from './dark-mode/DarkMode'
 
 const NavBar = () => {
+    const location = useLocation()
+    const isSimpleVariant = location.pathname === '/motion-ui-kit'
     // State to track header color
     const [color, setColor] = useState(false)
     // State for mobile navigation
@@ -33,7 +35,11 @@ const NavBar = () => {
     const handleNav = () => setNav(!nav)
 
     return (
-        <header className={color ? 'header header-bg' : 'header'}>
+        <header
+            className={`${color ? 'header header-bg' : 'header'} ${
+                isSimpleVariant ? 'header--simple' : ''
+            }`}
+        >
             <nav className="navbar">
                 <a
                     href="/"
@@ -65,82 +71,89 @@ const NavBar = () => {
                     </svg>
                 </a>
 
-                <div className="header__menu">
-                    <nav className="header__navigation">
-                        <ul
-                            className={
-                                nav ? 'header__list active' : 'header__list'
-                            }
-                        >
-                            <li
+                {/* Only show navigation menu if not simple variant */}
+                {!isSimpleVariant && (
+                    <div className="header__menu">
+                        <nav className="header__navigation">
+                            <ul
                                 className={
-                                    nav
-                                        ? 'header__item text-animation'
-                                        : 'header__item'
+                                    nav ? 'header__list active' : 'header__list'
                                 }
-                                onClick={handleNav}
                             >
-                                <NavLink
-                                    className={({ isActive }) =>
-                                        isActive
-                                            ? 'header__link link-active'
-                                            : 'header__link'
+                                <li
+                                    className={
+                                        nav
+                                            ? 'header__item text-animation'
+                                            : 'header__item'
                                     }
-                                    to="/"
+                                    onClick={handleNav}
                                 >
-                                    Work
-                                </NavLink>
-                            </li>
-                            <li
-                                className={
-                                    nav
-                                        ? 'header__item text-animation'
-                                        : 'header__item'
-                                }
-                                onClick={handleNav}
-                            >
-                                <NavLink
-                                    className={({ isActive }) =>
-                                        isActive
-                                            ? 'header__link link-active'
-                                            : 'header__link'
+                                    <NavLink
+                                        className={({ isActive }) =>
+                                            isActive
+                                                ? 'header__link link-active'
+                                                : 'header__link'
+                                        }
+                                        to="/"
+                                    >
+                                        Work
+                                    </NavLink>
+                                </li>
+                                <li
+                                    className={
+                                        nav
+                                            ? 'header__item text-animation'
+                                            : 'header__item'
                                     }
-                                    to="/about"
+                                    onClick={handleNav}
                                 >
-                                    About
-                                </NavLink>
-                            </li>
-                            <li
-                                className={
-                                    nav
-                                        ? 'header__item text-animation'
-                                        : 'header__item'
-                                }
-                                onClick={handleNav}
-                            >
-                                <NavLink
-                                    className={({ isActive }) =>
-                                        isActive
-                                            ? 'header__link link-active'
-                                            : 'header__link'
+                                    <NavLink
+                                        className={({ isActive }) =>
+                                            isActive
+                                                ? 'header__link link-active'
+                                                : 'header__link'
+                                        }
+                                        to="/about"
+                                    >
+                                        About
+                                    </NavLink>
+                                </li>
+                                <li
+                                    className={
+                                        nav
+                                            ? 'header__item text-animation'
+                                            : 'header__item'
                                     }
-                                    to="/cv"
+                                    onClick={handleNav}
                                 >
-                                    CV
-                                </NavLink>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
+                                    <NavLink
+                                        className={({ isActive }) =>
+                                            isActive
+                                                ? 'header__link link-active'
+                                                : 'header__link'
+                                        }
+                                        to="/cv"
+                                    >
+                                        CV
+                                    </NavLink>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                )}
+
                 <div className="header__actions-container">
                     <DarkMode />
-                    <div className="hamburger" onClick={handleNav}>
-                        {!nav ? (
-                            <Bars3BottomRightIcon className="icon" />
-                        ) : (
-                            <XMarkIcon className="icon" />
-                        )}
-                    </div>
+                    {/* Only show hamburger menu if not simple variant */}
+                    {!isSimpleVariant && (
+                        <div className="hamburger" onClick={handleNav}>
+                            {!nav ? (
+                                <Bars3BottomRightIcon className="icon" />
+                            ) : (
+                                <XMarkIcon className="icon" />
+                            )}
+                        </div>
+                    )}
                 </div>
             </nav>
         </header>

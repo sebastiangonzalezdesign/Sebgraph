@@ -1,0 +1,108 @@
+@use '../styles/ConfigStyles/abstracts' as *;
+@use '../styles/ConfigStyles/base' as *;
+@use '../styles/ConfigStyles/layout' as *;
+@use '../styles/ConfigStyles/utilities' as *;
+
+// BaseHero component styles - extends existing hero patterns
+.section-hero {
+    position: relative;
+    align-items: center;
+    height: auto;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    gap: $size-6;
+    padding: $size-8 0;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @include mq(medium) {
+        height: auto;
+        flex-direction: column;
+        padding: $size-6 $size-4;
+    }
+
+    &__text-container {
+        width: 60%;
+        margin-top: 2rem;
+
+        @include mq(medium) {
+            width: 100%;
+            margin-top: 0;
+            text-align: center;
+        }
+
+        &__text {
+            margin-bottom: $size-8;
+
+            & h1 {
+                margin-bottom: $size-6;
+                color: $color-text-default;
+            }
+
+            & p {
+                color: $color-text-default;
+            }
+
+            @include mq(medium) {
+                text-align: center;
+            }
+        }
+    }
+
+    &__btn-container {
+        max-width: 100%;
+        display: flex;
+        gap: $size-4;
+
+        @include mq(medium) {
+            justify-content: center;
+        }
+
+        @include mq(small) {
+            flex-direction: column;
+        }
+
+        .btn {
+            flex-wrap: wrap;
+            min-width: 200px;
+
+            @include mq(small) {
+                width: 100%;
+                min-width: auto;
+            }
+        }
+    }
+
+    &__animation-container {
+        width: 40%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include mq(medium) {
+            width: 100%;
+            margin-top: $size-6;
+        }
+    }
+
+    &__subtitle {
+        display: block;
+        margin-bottom: 1rem;
+        color: var(--color-text-secondary);
+        font-weight: var(--font-weight-semi-bold);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+    }
+
+    &__animation {
+        // Container for animation component
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+    }
+}
