@@ -5,7 +5,7 @@
     &__container {
         position: relative;
         width: 100%;
-        margin-bottom: $size-4;
+        margin-bottom: $size-6; /* Extra space for error messages */
     }
 
     &__label {
@@ -51,8 +51,6 @@
         &:focus + .input__label,
         &:valid + .input__label {
             top: 12px; // Move label up
-            left: 10px; // Keep consistent left position
-            transform: translateY(0); // Remove vertical centering when active
             font-size: 12px; // Shrink label size
             color: $color-primary-800;
         }
@@ -66,17 +64,20 @@
             color: $color-neutral-600;
             pointer-events: none; /* Makes the label unclickable */
             transition: 0.2s ease all; /* Smooth transition for the label */
-            white-space: nowrap; /* Prevent label text wrapping */
         }
     }
 
     &__error {
+        position: absolute;
+        bottom: -22px; /* Position below the input */
+        left: 0;
         color: $color-text-error;
-        margin-top: 10px;
         font-family: $font-family-base;
         font-weight: $font-weight-bold;
         font-size: $font-size-300;
         line-height: $line-height-body;
+        width: 100%;
+        text-align: start;
     }
 }
 

@@ -115,13 +115,13 @@ export const MUIKLogo: React.FC<MUIKLogoProps> = ({
                 {/* M left vertical line - Black (First: 0s delay) */}
                 <motion.path
                     d="M0.214539 5.33332C0.214539 3.86056 1.40845 2.66666 2.88121 2.66666V2.66666C4.35396 2.66666 5.54787 3.86056 5.54787 5.33332V26.6667C5.54787 28.1394 4.35396 29.3333 2.88121 29.3333V29.3333C1.40845 29.3333 0.214539 28.1394 0.214539 26.6667V5.33332Z"
-                    fill="black"
+                    fill="var(--muik-logo-text-color)"
                     variants={
                         animated ? createVerticalPathVariants(0) : undefined
                     }
                     initial={animated ? 'initial' : undefined}
                     animate={animated ? 'animate' : undefined}
-                    style={{ color: 'black' }}
+                    style={{ color: 'var(--muik-logo-text-color)' }}
                 />
 
                 {/* U curved bottom - Blue (Second: 0.6s delay) */}
@@ -137,13 +137,13 @@ export const MUIKLogo: React.FC<MUIKLogoProps> = ({
                 {/* I vertical line bottom - Black (Third: 1.2s delay) */}
                 <motion.path
                     d="M32.2145 26.6667C32.2145 28.1394 31.0206 29.3333 29.5479 29.3333V29.3333C28.0751 29.3333 26.8812 28.1394 26.8812 26.6667V23.2786C27.6664 23.7336 28.575 24 29.5479 24C30.5207 24 31.4293 23.7336 32.2145 23.2786V26.6667Z"
-                    fill="black"
+                    fill="var(--muik-logo-text-color)"
                     variants={
                         animated ? createVerticalPathVariants(1.2) : undefined
                     }
                     initial={animated ? 'initial' : undefined}
                     animate={animated ? 'animate' : undefined}
-                    style={{ color: 'black' }}
+                    style={{ color: 'var(--muik-logo-text-color)' }}
                 />
 
                 {/* K main vertical line - Blue (Fourth: 1.8s delay) */}
@@ -161,21 +161,21 @@ export const MUIKLogo: React.FC<MUIKLogoProps> = ({
                 {/* K diagonal stroke 1 - Black (Fifth: 2.4s delay) */}
                 <motion.path
                     d="M37.1906 19.2855C35.9152 18.5491 35.4782 16.9182 36.2145 15.6427C36.9509 14.3673 38.5818 13.9303 39.8573 14.6667L54.8812 24.7145C56.1566 25.4509 56.5936 27.0818 55.8573 28.3573C55.1209 29.6327 53.49 30.0697 52.2145 29.3333L37.1906 19.2855Z"
-                    fill="black"
+                    fill="var(--muik-logo-text-color)"
                     variants={animated ? createPathVariants(2.4) : undefined}
                     initial={animated ? 'initial' : undefined}
                     animate={animated ? 'animate' : undefined}
-                    style={{ color: 'black' }}
+                    style={{ color: 'var(--muik-logo-text-color)' }}
                 />
 
                 {/* K diagonal stroke 2 - Black (Sixth: 3.0s delay) */}
                 <motion.path
                     d="M40.5381 18.4096C39.4967 19.451 37.8082 19.451 36.7668 18.4096C35.7254 17.3682 35.7254 15.6797 36.7668 14.6383L50.3608 2.7269C51.4022 1.6855 53.0906 1.6855 54.132 2.7269C55.1734 3.7683 55.1734 5.45674 54.132 6.49813L40.5381 18.4096Z"
-                    fill="black"
+                    fill="var(--muik-logo-text-color)"
                     variants={animated ? createPathVariants(3.0) : undefined}
                     initial={animated ? 'initial' : undefined}
                     animate={animated ? 'animate' : undefined}
-                    style={{ color: 'black' }}
+                    style={{ color: 'var(--muik-logo-text-color)' }}
                 />
 
                 {/* I dot - Blue (Last: 3.8s delay) */}

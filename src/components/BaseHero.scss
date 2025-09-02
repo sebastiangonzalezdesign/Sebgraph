@@ -23,8 +23,9 @@
     }
 
     &__text-container {
-        width: 60%;
+        //width: 60%;
         margin-top: 2rem;
+        padding: $size-4;
 
         @include mq(medium) {
             width: 100%;
@@ -74,7 +75,7 @@
         }
     }
 
-    &__animation-container {
+    &__animation {
         width: 40%;
         height: 100%;
         display: flex;
@@ -84,6 +85,28 @@
         @include mq(medium) {
             width: 100%;
             margin-top: $size-6;
+            // Increase minimum height on mobile for better visibility
+            min-height: 300px;
+        }
+
+        @include mq(small) {
+            min-height: 250px;
+            // Ensure animation components scale properly on mobile
+            & > * {
+                width: 100%;
+                max-width: 100%;
+                min-width: 280px;
+            }
+        }
+
+        // Container for animation component
+        & > * {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 600px;
+            height: auto;
         }
     }
 
@@ -94,15 +117,5 @@
         font-weight: var(--font-weight-semi-bold);
         text-transform: uppercase;
         letter-spacing: 0.1em;
-    }
-
-    &__animation {
-        // Container for animation component
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        max-width: 600px;
-        height: auto;
     }
 }

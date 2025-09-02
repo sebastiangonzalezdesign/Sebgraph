@@ -20,6 +20,7 @@ export const Input: React.FC<InputProps> = ({
     onValueChange,
     onChange,
     type,
+    placeholder,
     ...props
 }) => {
     const [value, setValue] = useState('')
@@ -96,7 +97,8 @@ export const Input: React.FC<InputProps> = ({
                     value={value}
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    // Use required for :valid pseudo-class to work (like PasswordPage)
+                    // No placeholder for floating labels (like PasswordPage)
+                    // Use required for :valid pseudo-class to work
                     required
                     autoComplete={
                         type === 'email' ? 'email' : props.autoComplete
@@ -120,6 +122,7 @@ export const Input: React.FC<InputProps> = ({
                 value={value}
                 onChange={handleChange}
                 onBlur={handleBlur}
+                placeholder={placeholder}
                 // Use required for consistency
                 required
                 autoComplete={type === 'email' ? 'email' : props.autoComplete}

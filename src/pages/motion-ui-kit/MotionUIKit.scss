@@ -290,8 +290,39 @@
         color: $color-text-error;
         font-size: 14px;
         font-weight: 400;
-        margin-top: 10px;
-        padding-left: 12px;
+        margin-top: 20px;
+        text-align: start;
+
+        &--warning {
+            color: $color-accent-700;
+        }
+    }
+
+    &__success {
+        text-align: center;
+
+        &-icon {
+            width: $size-12;
+            height: $size-12;
+            margin: 0 auto $size-6;
+            color: $color-success-600;
+
+            svg {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        h3 {
+            margin-bottom: $size-4;
+            color: $color-neutral-800;
+        }
+
+        p {
+            color: $color-neutral-600;
+            margin-bottom: $size-6;
+            line-height: 1.6;
+        }
     }
 }
 
@@ -364,6 +395,24 @@
 
         &__signup-form h3 {
             color: $color-neutral-200;
+        }
+
+        &__success {
+            h3 {
+                color: $color-neutral-200;
+            }
+
+            p {
+                color: $color-neutral-400;
+            }
+
+            &-icon {
+                color: $color-success-400;
+            }
+        }
+
+        &__error--warning {
+            color: $color-accent-400;
         }
 
         &__section-title {

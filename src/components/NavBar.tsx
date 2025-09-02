@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import React from 'react'
 import { Bars3BottomRightIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import DarkMode from './dark-mode/DarkMode'
+import { trackEvent } from '../services/analytics'
 
 const NavBar = () => {
     const location = useLocation()
@@ -32,7 +33,18 @@ const NavBar = () => {
         }
     }, []) // Empty dependency array means it runs once when the component mounts
 
-    const handleNav = () => setNav(!nav)
+    const handleNav = () => {
+        setNav(!nav)
+    }
+
+    const handleNavClick = (section: string) => {
+        handleNav()
+        trackEvent({
+            action: 'Navigation Click',
+            category: 'Navigation',
+            label: section,
+        })
+    }
 
     return (
         <header
@@ -86,7 +98,7 @@ const NavBar = () => {
                                             ? 'header__item text-animation'
                                             : 'header__item'
                                     }
-                                    onClick={handleNav}
+                                    onClick={() => handleNavClick('Work')}
                                 >
                                     <NavLink
                                         className={({ isActive }) =>
@@ -105,7 +117,7 @@ const NavBar = () => {
                                             ? 'header__item text-animation'
                                             : 'header__item'
                                     }
-                                    onClick={handleNav}
+                                    onClick={() => handleNavClick('About')}
                                 >
                                     <NavLink
                                         className={({ isActive }) =>
@@ -124,7 +136,7 @@ const NavBar = () => {
                                             ? 'header__item text-animation'
                                             : 'header__item'
                                     }
-                                    onClick={handleNav}
+                                    onClick={() => handleNavClick('CV')}
                                 >
                                     <NavLink
                                         className={({ isActive }) =>

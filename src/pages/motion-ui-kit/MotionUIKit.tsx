@@ -74,6 +74,8 @@ const MotionUIKit: React.FC = () => {
     const [email, setEmail] = useState('')
     const [emailValid, setEmailValid] = useState(false)
     const [submitError, setSubmitError] = useState('')
+    const [errorType, setErrorType] = useState<'error' | 'warning'>('error')
+    const [isSubmitted, setIsSubmitted] = useState(false)
 
     if (!context) {
         return <div>Loading...</div>
@@ -88,11 +90,13 @@ const MotionUIKit: React.FC = () => {
 
         if (!email) {
             setSubmitError('Please enter your email address.')
+            setErrorType('error')
             return
         }
 
         if (!emailValid) {
             setSubmitError('Please enter a valid email address.')
+            setErrorType('error')
             return
         }
 
@@ -121,7 +125,14 @@ const MotionUIKit: React.FC = () => {
             console.log('📋 Response data:', data)
 
             if (!response.ok) {
-                throw new Error(data.error || 'Signup failed')
+                const errorData = data.error || 'Signup failed'
+
+                // Handle specific error types
+                if (response.status === 409 || errorData.includes('already')) {
+                    throw new Error('This email is already on our waitlist!')
+                }
+
+                throw new Error(errorData)
             }
 
             // Track successful signup
@@ -131,15 +142,33 @@ const MotionUIKit: React.FC = () => {
                 label: 'EmailSignup',
             })
 
-            // Show success message
-            alert(
-                "Thanks! We'll notify you when Pro launches. Check your email for confirmation!"
-            )
+            // Show success state
+            setIsSubmitted(true)
             setEmail('')
             setEmailValid(false)
         } catch (error) {
             console.error('❌ Signup error:', error)
-            setSubmitError('Something went wrong. Please try again.')
+
+            // Set specific error message based on error type
+            if (error instanceof Error) {
+                if (error.message.includes('already on our waitlist')) {
+                    setSubmitError(
+                        'This email is already on our waitlist! Check your inbox for confirmation.'
+                    )
+                    setErrorType('warning')
+                } else if (error.message.includes('Failed to fetch')) {
+                    setSubmitError(
+                        'Network error. Please check your connection and try again.'
+                    )
+                    setErrorType('error')
+                } else {
+                    setSubmitError(error.message)
+                    setErrorType('error')
+                }
+            } else {
+                setSubmitError('Something went wrong. Please try again.')
+                setErrorType('error')
+            }
 
             // Track failed signup
             trackEvent({
@@ -172,13 +201,13 @@ const MotionUIKit: React.FC = () => {
             </Button>
 
             <Button
-                href="#download"
+                href="https://sebastiangonzalez5.gumroad.com/l/motion-ui-kit"
                 buttonStyle="btn--secondary"
                 buttonSize="btn--lg"
                 iconRight={<ArrowDownTrayIcon />}
                 onClick={() =>
                     trackEvent({
-                        action: 'Click Download Free',
+                        action: 'Click Download Free in Gumroad',
                         category: 'MUIK',
                         label: 'HeroDownloadButton',
                     })
@@ -373,7 +402,7 @@ const MotionUIKit: React.FC = () => {
                         variants={fadeUpVariants}
                     >
                         <Button
-                            href="#" // TODO: Add Gumroad link
+                            href="https://sebastiangonzalez5.gumroad.com/l/motion-ui-kit"
                             buttonStyle="btn--primary"
                             buttonSize="btn--lg"
                             iconRight={<ArrowDownTrayIcon />}
@@ -435,35 +464,120 @@ const MotionUIKit: React.FC = () => {
 
                     <motion.div variants={fadeUpVariants}>
                         <Card className="motion-ui-kit__signup-form">
-                            <h3 className="heading__300--bold">
-                                Get early access to Pro features
-                            </h3>
-                            <form onSubmit={handleEmailSubmit} noValidate>
-                                <div className="motion-ui-kit__input-group">
-                                    <Input
-                                        type="email"
-                                        label="Enter your email"
-                                        value={email}
-                                        onValueChange={(value, isValid) => {
-                                            setEmail(value)
-                                            setEmailValid(isValid)
-                                            setSubmitError('')
-                                        }}
-                                    />
-                                    <Button
-                                        type="submit"
-                                        buttonStyle="btn--primary"
-                                        buttonSize="btn--lg"
+                            {!isSubmitted ? (
+                                <>
+                                    <h3 className="heading__300--bold">
+                                        Get early access to Pro features
+                                    </h3>
+                                    <form
+                                        onSubmit={handleEmailSubmit}
+                                        noValidate
                                     >
-                                        Join Early Access
-                                    </Button>
-                                </div>
-                                {submitError && (
-                                    <div className="motion-ui-kit__error">
-                                        {submitError}
-                                    </div>
-                                )}
-                            </form>
+                                        <div className="motion-ui-kit__input-group">
+                                            <Input
+                                                type="email"
+                                                label="Enter your email"
+                                                value={email}
+                                                onValueChange={(
+                                                    value,
+                                                    isValid
+                                                ) => {
+                                                    setEmail(value)
+                                                    setEmailValid(isValid)
+                                                    setSubmitError('')
+                                                    setErrorType('error')
+                                                }}
+                                            />
+                                            <Button
+                                                type="submit"
+                                                buttonStyle="btn--primary"
+                                                buttonSize="btn--lg"
+                                            >
+                                                Join Early Access
+                                            </Button>
+                                        </div>
+                                        {submitError && (
+                                            <div
+                                                className={`motion-ui-kit__error ${
+                                                    errorType === 'warning'
+                                                        ? 'motion-ui-kit__error--warning'
+                                                        : ''
+                                                }`}
+                                            >
+                                                {submitError}
+                                            </div>
+                                        )}
+                                    </form>
+                                </>
+                            ) : (
+                                <motion.div
+                                    className="motion-ui-kit__success"
+                                    initial={{ opacity: 0, y: 30 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{
+                                        duration: 0.5,
+                                        ease: 'easeOut',
+                                    }}
+                                >
+                                    <motion.div
+                                        className="motion-ui-kit__success-icon"
+                                        initial={{ scale: 0, opacity: 0 }}
+                                        animate={{ scale: 1, opacity: 1 }}
+                                        transition={{
+                                            type: 'spring',
+                                            stiffness: 200,
+                                            damping: 20,
+                                            delay: 0.1,
+                                        }}
+                                    >
+                                        <CheckCircleIcon />
+                                    </motion.div>
+                                    <motion.h3
+                                        className="heading__300--bold"
+                                        initial={{ y: 20, opacity: 0 }}
+                                        animate={{ y: 0, opacity: 1 }}
+                                        transition={{
+                                            delay: 0.3,
+                                            duration: 0.4,
+                                            ease: 'easeOut',
+                                        }}
+                                    >
+                                        Thanks for joining!
+                                    </motion.h3>
+                                    <motion.p
+                                        className="paragraph__200--regular"
+                                        initial={{ y: 20, opacity: 0 }}
+                                        animate={{ y: 0, opacity: 1 }}
+                                        transition={{
+                                            delay: 0.4,
+                                            duration: 0.4,
+                                            ease: 'easeOut',
+                                        }}
+                                    >
+                                        We'll notify you when Pro launches.
+                                        Check your email for confirmation!
+                                    </motion.p>
+                                    <motion.div
+                                        initial={{ y: 20, opacity: 0 }}
+                                        animate={{ y: 0, opacity: 1 }}
+                                        transition={{
+                                            delay: 0.5,
+                                            duration: 0.4,
+                                            ease: 'easeOut',
+                                        }}
+                                    >
+                                        <Button
+                                            buttonStyle="btn--secondary"
+                                            buttonSize="btn--md"
+                                            onClick={() =>
+                                                setIsSubmitted(false)
+                                            }
+                                        >
+                                            Sign up another email
+                                        </Button>
+                                    </motion.div>
+                                </motion.div>
+                            )}
                         </Card>
                     </motion.div>
                 </div>

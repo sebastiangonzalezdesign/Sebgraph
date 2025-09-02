@@ -1,8 +1,13 @@
+@use '../styles/ConfigStyles/abstracts' as *;
+
 // MUIK Logo component styles
 .muik-logo {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+
+    // CSS custom properties for SVG colors
+    --muik-logo-text-color: #{$color-text-default};
 
     &__svg {
         display: block;
