@@ -19,6 +19,7 @@ const Landing = lazy(() => import('../pages/projects/Landing'))
 const AlephDS = lazy(() => import('../pages/projects/Aleph'))
 const HubDS = lazy(() => import('../pages/projects/Hub'))
 const Startoken = lazy(() => import('../pages/projects/Startoken'))
+const MUIK = lazy(() => import('../pages/projects/MUIK'))
 
 const About = lazy(() => import('../pages/about/About'))
 const Work = lazy(() => import('../pages/work/Work'))
@@ -84,6 +85,11 @@ const RoutesSite = () => {
                 <Route
                     path="/projects/Startoken"
                     element={<Navigate to="/projects/startoken" replace />}
+                />
+                <Route path="/projects/MUIK" element={<MUIK />} />
+                <Route
+                    path="/projects/MUIK"
+                    element={<Navigate to="/projects/MUIK" replace />}
                 />
 
                 {/* Password-protected Hub Design System route */}

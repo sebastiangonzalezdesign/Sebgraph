@@ -59,6 +59,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+    <url>
+    <loc>https://sebastiangonzalez.design/projects/MUIK</loc>
+    <lastmod>2025-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://sebastiangonzalez.design/assets/cv-sebastian-gonzalez-vIgh5JXi.pdf</loc>
     <lastmod>2025-08-18</lastmod>

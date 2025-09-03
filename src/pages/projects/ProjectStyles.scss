@@ -221,6 +221,14 @@
             ),
             url(https://sebastiangonzalez.design/images/projects/startoken/hero-image-startoken.webp);
     }
+    &__header-MUIK {
+        background-image: linear-gradient(
+                to right bottom,
+                rgba(34, 34, 34, 0.9),
+                rgba(20, 12, 3, 0.9)
+            ),
+            url(https://sebastiangonzalez.design/images/projects/MUIK/hero-image-MUIK.webp);
+    }
     /* ----------  End Head content styles ---------- */
 
     /* ----------  Project Info Section ---------- */
@@ -536,4 +544,17 @@
     display: flex;
 
     width: 100%;
+}
+
+/* MUIK Styles */
+.MUIKLogo {
+    max-width: 400px !important;
+    width: 100% !important;
+}
+.MUIK-container {
+    gap: 24px;
+}
+
+.list-MUIK {
+    padding: 24px;
 }

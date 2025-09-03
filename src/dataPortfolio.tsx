@@ -572,3 +572,27 @@ export const Startoken: ProjectContent[] = [
             'Startoken showcases my ability to build tools that translate design intent into scalable, usable code, aligning with hybrid roles where design and front-end development meet.',
     },
 ]
+
+export const MUIK: ProjectContent[] = [
+    {
+        id: 7,
+        key: 'Motion UI Kit',
+        headTitle: 'Motion UI Kit',
+        roleTitle: 'Role:',
+        role: 'UI Design · Frontend Dev · Design System Strategy',
+        dateTitle: 'Date:',
+        date: '2025',
+        companyTitle: 'Company:',
+        company: 'Personal Product',
+
+        subtitleResume: 'Build Better UIs Faster',
+        titleResume: 'MUIK',
+        contentResume:
+            'Motion UI Kit is a free-first library of React components built with a design system mindset. It was created for developers and designers who struggle to find clear, scalable guidelines for motion in design systems. The kit applies system thinking to animations, making micro-interactions consistent, accessible, and easy to implement.',
+
+        bullet1: 'Built with Framer Motion for smooth, accessible animations',
+        bullet2: 'Design tokens + system principles for scalability',
+        bullet3: 'Dark mode first, responsive architecture',
+        bullet4: 'Available in Free + Pro versions',
+    },
+]
