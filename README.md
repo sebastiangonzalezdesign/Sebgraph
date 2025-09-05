@@ -1,50 +1,92 @@
-<!-- How to add a new project -->
+# Sebastian González - Portfolio
 
-# Thumbnail
+A modern, responsive portfolio website showcasing UI/UX design work and front-end development projects.
 
-1. Add the thumbnail information in data.jsx under the appropriate category.
-2. Use the "protected" property to add password protection to the project if required.
-3. Use the "showProject" property to control whether the project is visible. If you don’t want the project indexed by search engines, use the SEO component and update `seoConfig` to set `robots: 'noindex, nofollow'` for that project.
-4. Add the new background color in abstracts/\_colors.scss, then in \_tokens.scss, and finally add the new class in utilities/\_cards.scss.
+🌐 **Live Site:** [sebastiangonzalez.design](https://sebastiangonzalez.design)
 
-# Project
+## About
 
-1. Duplicate an existing project file and rename it. Example: pages/projects/NewProject.tsx.
-2. In components/RouterSite.tsx, import the newly created project file and set up the route to ensure it displays correctly when the thumbnail is clicked.
-3. Edit the content of the new project file as needed.
-4. After making changes, rebuild your project and upload the updated build and files to your hosting provider to deploy the new project.
+This portfolio demonstrates expertise in:
+- **UI/UX Design** - Design systems, user interfaces, and digital experiences
+- **Front-end Development** - React, TypeScript, and modern web technologies
+- **Design Systems** - Scalable component libraries and design tokens
+- **Motion Design** - Smooth animations and micro-interactions
 
-# Password Protection Functions
+## Tech Stack
 
-This folder contains Firebase Functions that manage password protection for projects in the portfolio.
+- **Framework:** React 18 + TypeScript
+- **Styling:** SCSS with design system architecture
+- **Animation:** Framer Motion
+- **Build Tool:** Vite
+- **Routing:** React Router DOM
+- **SEO:** React Helmet Async
+- **Analytics:** Google Analytics 4
 
-## Changing the Portfolio Password
+## Features
 
-1. Copy the example file: `cp hash-password.example.js hash-password.js`
-2. Edit `hash-password.js` and replace the placeholder with your desired password
-3. Run the script: `node hash-password.js`
-4. Copy the generated hash
-5. Update the hash in Firebase Firestore:
-    - Collection: `settings`
-    - Document: `access`
-    - Field: `passwordHash`
-6. Test the new password on your site
+- ✨ **Responsive Design** - Optimized for all devices
+- 🌙 **Dark/Light Mode** - Smooth theme switching
+- 🎨 **Design System** - Consistent tokens and components
+- 📱 **Progressive Web App** - Fast loading and mobile-optimized
+- 🔍 **SEO Optimized** - Structured data and meta tags
+- 📊 **Analytics Integration** - User behavior tracking
+- 🎭 **Motion UI** - Delightful animations and transitions
 
-**Important: Never commit hash-password.js to Git**
+## Projects Showcase
 
-## How it works
+The portfolio includes case studies for:
+- **Design Systems** - Scalable component libraries
+- **Mobile Applications** - iOS/Android app designs
+- **Web Applications** - Complex dashboard interfaces
+- **Landing Pages** - Marketing and product pages
+- **Motion UI Kit** - Animation component library
 
-1. When a user enters a password on the password page, it's sent to a Firebase Function
-2. The function retrieves the stored hash from Firestore
-3. The entered password is compared with the stored hash using bcrypt
-4. If the comparison succeeds, access is granted to protected projects
-5. For security, the actual password is never stored anywhere, only a secure hash
+## Architecture
 
-## Environment Setup
+Built with a modular, scalable architecture:
 
-This project requires Firebase configuration. Copy the `.env.example` file to `.env` and update with your Firebase credentials:
+```
+src/
+├── components/        # Reusable UI components
+├── pages/            # Route-based page components
+├── styles/           # SCSS design system
+├── animations/       # Framer Motion variants
+├── services/         # API and analytics
+└── types/           # TypeScript definitions
+```
+
+## Getting Started
 
 ```bash
-cp .env.example .env
-# Then edit .env with your Firebase configuration
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run serve
 ```
+
+## Performance
+
+- ⚡ **Lighthouse Score:** 95+ across all metrics
+- 🚀 **Core Web Vitals:** Optimized loading and interactivity
+- 📦 **Bundle Optimization:** Code splitting and lazy loading
+- 🖼️ **Image Optimization:** WebP format and lazy loading
+
+## Contact
+
+**Sebastian González**  
+UI Designer & Design System Developer
+
+- 🌐 [sebastiangonzalez.design](https://sebastiangonzalez.design)
+- 💼 [LinkedIn](https://linkedin.com/in/sebastian-gonzalez-design)
+- 🔧 [GitHub](https://github.com/sebastiangonzalezdesign)
+
+---
+
+*This portfolio is continuously updated with new projects and improvements. Built with attention to detail, performance, and user experience.*

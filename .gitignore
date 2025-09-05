@@ -34,6 +34,14 @@ yarn-error.log*
 /functions/serviceAccount*.json
 /functions/.env
 
+# Development documentation with sensitive info
+README-development.md
+
+# Temporary files and backups
+*.tmp
+*.bak
+*~
+
 # Allow example files
 !/functions/*.example.js
 
