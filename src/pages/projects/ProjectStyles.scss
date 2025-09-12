@@ -491,6 +491,27 @@
         width: fit-content;
     }
 
+    &__button-group {
+        display: flex;
+        gap: $flex-group-gap; // 1rem from your tokens
+        align-items: center;
+        flex-wrap: wrap;
+
+        @include mq(medium) {
+            flex-direction: column;
+            align-items: stretch;
+            gap: $gutter-small; // 1rem from your tokens
+        }
+
+        .modal__button-project {
+            flex: 1;
+
+            @include mq(medium) {
+                width: 100%;
+            }
+        }
+    }
+
     &__final-reflection {
         padding: 16px;
         background-color: $color-primary-200;

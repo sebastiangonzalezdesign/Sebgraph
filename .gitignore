@@ -49,3 +49,4 @@ README-development.md
 .firebase/
 .firebaserc
 firebase-debug.log
+firebase-debug.*.log

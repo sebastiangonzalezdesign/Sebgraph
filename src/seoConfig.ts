@@ -108,6 +108,14 @@ export const seoConfig = {
         url: 'https://sebastiangonzalez.design/motion-ui-kit',
         robots: 'index, follow',
     },
+    // MUIK Project case study (different from landing page)
+    muikProject: {
+        title: 'Motion UI Kit Design System Project – Sebastian González',
+        description:
+            'Design system case study: Building a comprehensive UI component library with React, TypeScript, and Framer Motion. Design tokens, dark mode, and micro-interactions.',
+        url: 'https://sebastiangonzalez.design/projects/MUIK',
+        robots: 'index, follow',
+    },
     // Example for a protected/private page
     hub: {
         title: 'Hub Design System – Sebastian González',

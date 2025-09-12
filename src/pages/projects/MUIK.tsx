@@ -18,7 +18,7 @@ const MUIK = () => {
 
     return (
         <Fragment>
-            <SEO {...seoConfig.motionUIKit} />
+            <SEO {...seoConfig.muikProject} />
             {dataPortfolio.map((dataPortfolio) => (
                 /* CONTAINER */
                 <section key={dataPortfolio.id} className="modal__container">
@@ -73,16 +73,28 @@ const MUIK = () => {
                                     <li>{dataPortfolio.bullet3}</li>
                                     <li>{dataPortfolio.bullet4}</li>
                                 </ul>
-                                <Button
-                                    className="modal__button-project"
-                                    href="https://motion.sebastiangonzalez.design/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    aria-label="Visit the live MUIK project (opens in new tab)"
-                                    iconRight={<ArrowTopRightOnSquareIcon />}
-                                >
-                                    Visit the live project
-                                </Button>
+                                <div className="modal__button-group">
+                                    <Button
+                                        className="modal__button-project"
+                                        href="https://motion.sebastiangonzalez.design/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="Visit the live MUIK project (opens in new tab)"
+                                        iconRight={
+                                            <ArrowTopRightOnSquareIcon />
+                                        }
+                                    >
+                                        Visit the live project
+                                    </Button>
+                                    <Button
+                                        className="modal__button-project"
+                                        href="/motion-ui-kit"
+                                        aria-label="Learn more about Motion UI Kit"
+                                        buttonStyle="btn--secondary"
+                                    >
+                                        Learn more about Motion UI Kit
+                                    </Button>
+                                </div>
                             </div>
                         </article>
                     </section>

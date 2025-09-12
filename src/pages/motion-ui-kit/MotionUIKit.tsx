@@ -599,6 +599,18 @@ const MotionUIKit: React.FC = () => {
                         Motion UI Kit — Free & Pro-ready motion components for
                         React
                     </motion.p>
+                    <motion.div
+                        variants={fadeUpVariants}
+                        style={{ marginTop: '1rem' }}
+                    >
+                        <Button
+                            href="/projects/MUIK"
+                            buttonStyle="btn--secondary"
+                            buttonSize="btn--sm"
+                        >
+                            View the design case study
+                        </Button>
+                    </motion.div>
                 </div>
             </motion.section>
         </main>

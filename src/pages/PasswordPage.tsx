@@ -7,7 +7,11 @@ import './PasswordPage.scss'
 import Hub from './projects/Hub'
 import BackButton from '../components/BackButton'
 import { Button } from '../components/Button'
-import { LockClosedIcon } from '@heroicons/react/24/outline'
+import {
+    LockClosedIcon,
+    EyeIcon,
+    EyeSlashIcon,
+} from '@heroicons/react/24/outline'
 
 interface VerifyPasswordResponse {
     success: boolean
@@ -18,6 +22,7 @@ const PasswordPage = () => {
     const [accessGranted, setAccessGranted] = useState(false)
     const [errorMessage, setErrorMessage] = useState('')
     const [isFirebaseReady, setIsFirebaseReady] = useState(!!functions)
+    const [showPassword, setShowPassword] = useState(false)
     const navigate = useNavigate()
 
     // Check if Firebase is ready
@@ -32,7 +37,9 @@ const PasswordPage = () => {
         if (functions) {
             setIsFirebaseReady(true)
         } else {
-            console.error('Firebase Functions not initialized correctly')
+            if (import.meta.env.DEV) {
+                console.error('Firebase Functions not initialized correctly')
+            }
             setErrorMessage('Service unavailable. Please try again later.')
         }
     }, [])
@@ -40,6 +47,10 @@ const PasswordPage = () => {
     const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setInputPassword(e.target.value)
         setErrorMessage('')
+    }
+
+    const togglePasswordVisibility = () => {
+        setShowPassword(!showPassword)
     }
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -52,27 +63,38 @@ const PasswordPage = () => {
 
         if (!functions || !isFirebaseReady) {
             setErrorMessage('Service unavailable. Please try again later.')
-            console.error(
-                'Cannot verify password: Firebase Functions not available'
-            )
+            if (import.meta.env.DEV) {
+                console.error(
+                    'Cannot verify password: Firebase Functions not available'
+                )
+            }
             return
         }
 
         try {
-            console.log('Sending password:', { password: inputPassword })
+            if (import.meta.env.DEV) {
+                console.log('Sending password:', { password: inputPassword })
+            }
 
+            // Use the callable function (better for Firebase)
             const verifyPassword = httpsCallable(functions, 'verifyPassword')
             const result = await verifyPassword({ password: inputPassword })
 
-            console.log('Function result:', result)
-            console.log('Result data:', result.data)
+            if (import.meta.env.DEV) {
+                console.log('Function result:', result)
+                console.log('Result data:', result.data)
+            }
 
             const { success } = result.data as VerifyPasswordResponse
 
-            console.log('Authentication success:', success)
+            if (import.meta.env.DEV) {
+                console.log('Authentication success:', success)
+            }
 
             if (success) {
-                console.log('Access granted, setting localStorage')
+                if (import.meta.env.DEV) {
+                    console.log('Access granted, setting localStorage')
+                }
                 // 1. First set localStorage
                 localStorage.setItem('projectAccess', 'true')
 
@@ -80,14 +102,20 @@ const PasswordPage = () => {
                 setAccessGranted(true)
 
                 // 3. Use only ONE navigation method (prefer navigate for React Router)
-                console.log('Navigating to /projects/Hub')
+                if (import.meta.env.DEV) {
+                    console.log('Navigating to /projects/Hub')
+                }
                 navigate('/projects/Hub', { replace: true })
             } else {
-                console.log('Password incorrect')
+                if (import.meta.env.DEV) {
+                    console.log('Password incorrect')
+                }
                 setErrorMessage('Incorrect password. Please try again.')
             }
         } catch (error) {
-            console.error('Error verifying password:', error)
+            if (import.meta.env.DEV) {
+                console.error('Error verifying password:', error)
+            }
             setErrorMessage('An error occurred while verifying the password.')
         }
     }
@@ -114,7 +142,7 @@ const PasswordPage = () => {
                     <div className="password-page__input-container">
                         <input
                             className="password-page__input"
-                            type="password"
+                            type={showPassword ? 'text' : 'password'}
                             id="password"
                             value={inputPassword}
                             onChange={handlePasswordChange}
@@ -126,6 +154,20 @@ const PasswordPage = () => {
                         >
                             Enter Password
                         </label>
+                        <button
+                            type="button"
+                            className="password-page__toggle-button"
+                            onClick={togglePasswordVisibility}
+                            aria-label={
+                                showPassword ? 'Hide password' : 'Show password'
+                            }
+                        >
+                            {showPassword ? (
+                                <EyeIcon className="password-page__toggle-icon" />
+                            ) : (
+                                <EyeSlashIcon className="password-page__toggle-icon" />
+                            )}
+                        </button>
                         {errorMessage && (
                             <p className="password-page__error-message paragraph__300--bold">
                                 {errorMessage}
