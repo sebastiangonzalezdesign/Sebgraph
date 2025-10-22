@@ -50,3 +50,8 @@ README-development.md
 .firebaserc
 firebase-debug.log
 firebase-debug.*.log
+
+# Astro local artifacts
+/astro/node_modules
+/astro/package-lock.json
+/astro/.cache
