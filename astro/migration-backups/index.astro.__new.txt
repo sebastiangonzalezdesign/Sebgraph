@@ -1,0 +1,2 @@
+Archived backup of src/pages/index.astro.__new
+Original file moved out of src and stored for safekeeping. If you need the full content, check your VCS history or request a full copy.

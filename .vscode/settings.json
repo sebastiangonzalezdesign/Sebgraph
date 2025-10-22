@@ -1,0 +1,12 @@
+{
+    "files.exclude": {
+        "**/astro/migration-backups/**": true,
+        "**/astro/src/**/__new*": true,
+        "**/astro/src/**/*.fixed*": true,
+        "**/astro/src/**/*.final*": true,
+        "**/astro/src/**/_*.astro*": true
+    },
+    "search.exclude": {
+        "**/astro/migration-backups/**": true
+    }
+}

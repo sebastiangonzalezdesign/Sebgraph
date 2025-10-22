@@ -1,0 +1,28 @@
+---
+import SEO from '../components/SEO.astro'
+import { buildWebSiteSchema, buildPersonSchema, seoConfig } from '../lib/seo'
+
+export let title: string = seoConfig.home.title
+export let description: string = seoConfig.home.description
+export let canonicalUrl: string = seoConfig.home.url
+export let image: string = ''
+export let structured: any[] = []
+
+const defaultStructured = [buildWebSiteSchema(canonicalUrl), buildPersonSchema()]
+const mergedStructured = (structured && structured.length > 0) ? structured : defaultStructured
+const jsonLd = (mergedStructured && mergedStructured.length > 0) ? JSON.stringify(mergedStructured, null, 2) : ''
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <SEO title={title} description={description} canonicalUrl={canonicalUrl} image={image} structured={mergedStructured} jsonLd={jsonLd} />
+  {jsonLd ? <script type="application/ld+json" set:html={jsonLd}></script> : null}
+  <link rel="icon" href="/favicon.ico" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
