@@ -135,3 +135,89 @@ export function buildBreadcrumbSchema(
 export function mergeStructuredData(items = []) {
     return items.filter(Boolean)
 }
+
+// AI-focused schema builders
+export type CreativeWorkInput = {
+    name: string
+    description: string
+    url?: string
+    image?: string
+    keywords?: string[]
+    datePublished?: string
+    authorName?: string
+}
+
+export function buildCreativeWork({
+    name,
+    description,
+    url,
+    image,
+    keywords,
+    datePublished,
+    authorName = 'Sebastian González',
+}: CreativeWorkInput) {
+    const schema: any = {
+        '@context': 'https://schema.org',
+        '@type': 'CreativeWork',
+        name,
+        description,
+        url: url ?? undefined,
+        image: image ?? undefined,
+        author: {
+            '@type': 'Person',
+            name: authorName,
+        },
+        datePublished: datePublished ?? undefined,
+    }
+    if (keywords && keywords.length > 0) schema.keywords = keywords.join(', ')
+    return schema
+}
+
+export type SoftwareSourceCodeInput = {
+    name: string
+    description: string
+    url?: string
+    codeRepository?: string
+    language?: string
+    keywords?: string[]
+}
+
+export function buildSoftwareSourceCode({
+    name,
+    description,
+    url,
+    codeRepository,
+    language,
+    keywords,
+}: SoftwareSourceCodeInput) {
+    const schema: any = {
+        '@context': 'https://schema.org',
+        '@type': 'SoftwareSourceCode',
+        name,
+        description,
+        url: url ?? undefined,
+        codeRepository: codeRepository ?? undefined,
+    }
+    if (language) schema.programmingLanguage = language
+    if (keywords && keywords.length > 0) schema.keywords = keywords.join(', ')
+    return schema
+}
+
+export type FAQItem = { question: string; answer: string }
+
+export function buildFAQSchema(items: FAQItem[] = []) {
+    if (!items || items.length === 0) return null
+
+    return {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: items.map((it) => ({
+            '@type': 'Question',
+            name: it.question,
+            acceptedAnswer: {
+                '@type': 'Answer',
+                text: it.answer,
+            },
+        })),
+    }
+}

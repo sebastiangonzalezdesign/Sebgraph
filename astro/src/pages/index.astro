@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.clean2.astro';
+import ReactHero from '../components/ReactHero.jsx';
+import { buildWebSiteSchema, buildPersonSchema, buildCreativeWork, buildSoftwareSourceCode } from '../lib/seo';
+
+const structured = [
+  buildWebSiteSchema('https://sebastiangonzalez.design/'),
+  buildPersonSchema(),
+  buildCreativeWork({
+    name: "Sebastian González — Portfolio",
+    description: "Portfolio showcasing projects, design systems, and UI work by Sebastian González.",
+    url: 'https://sebastiangonzalez.design/',
+    keywords: ['UI Design', 'Design Systems', 'Frontend', 'React', 'TypeScript'],
+  }),
+  buildSoftwareSourceCode({
+    name: 'Motion UI Kit',
+    description: 'A library of polished UI micro-interactions for React & Framer Motion.',
+    url: 'https://sebastiangonzalez.design/motion-ui-kit',
+    codeRepository: 'https://github.com/sebasgonzac/motion-ui-kit',
+    language: 'TypeScript',
+  }),
+];
+---
+
+<Layout title="Sebastian González — Portfolio" description="UI/UX Designer & Front-end developer" structured={structured}>
+  <main>
+    <h1>Welcome to the Astro migration preview</h1>
+    <p>This page demonstrates embedding an existing React component inside Astro.</p>
+    <ReactHero client:load />
+  </main>
+</Layout>
+
+
+
+
+

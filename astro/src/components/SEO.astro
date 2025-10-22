@@ -1,17 +1,25 @@
 ---
-const { title, description, url, image, type = 'website', robots = 'index, follow', structured = [] } = Astro.props
+export let title: string = '';
+export let description: string = '';
+export let canonicalUrl: string = '/';
+export let image: string = '';
+export let type: string = 'website';
+export let robots: string = 'index, follow';
+export let structured: any[] = [];
+export let jsonLd: string = ''
 ---
-<head>
+
+
   <title>{title}</title>
   <meta name="description" content={description} />
   <meta name="robots" content={robots} />
-  <link rel="canonical" href={url} />
+  <link rel="canonical" href={canonicalUrl} />
 
   <!-- Open Graph -->
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:type" content={type} />
-  <meta property="og:url" content={url} />
+  <meta property="og:url" content={canonicalUrl} />
   {image && <meta property="og:image" content={image} />}
 
   <!-- Twitter -->
@@ -21,9 +29,4 @@ const { title, description, url, image, type = 'website', robots = 'index, follo
   {image && <meta name="twitter:image" content={image} />}
 
   <!-- Structured Data (server-rendered) -->
-  {structured && structured.length > 0 && (
-    <script type="application/ld+json">
-      {JSON.stringify(structured)}
-    </script>
-  )}
-</head>
+  {jsonLd ? <script type="application/ld+json" set:html={jsonLd}></script> : null}
