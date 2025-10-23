@@ -55,3 +55,7 @@ firebase-debug.*.log
 /astro/node_modules
 /astro/package-lock.json
 /astro/.cache
+/astro/
+
+# VS Code workspace settings (local)
+/.vscode/
