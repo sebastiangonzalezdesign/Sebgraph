@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import './ProjectStyles.scss'
 import { Hub as HubDS } from '../../dataPortfolio'
 import BackButton from '../../components/BackButton'
 import ImageModalZoom from '../../components/ImageModalZoom'
@@ -14,6 +13,11 @@ const Hub = () => {
     useEffect(() => {
         // Clear the localStorage after the user accesses the page
         localStorage.removeItem('projectAccess')
+    }, [])
+
+    // Dynamically import shared project styles to reduce critical CSS in prerender
+    useEffect(() => {
+        import('./ProjectStyles.scss')
     }, [])
 
     return (
@@ -56,6 +60,8 @@ const Hub = () => {
                                 className="project-info__img"
                                 src="https://sebastiangonzalez.design/images/projects/hub/project-hub.webp"
                                 loading="lazy"
+                                width={1000}
+                                height={360}
                                 alt="Design System"
                             />
                             <div className="project-info__text-box">
@@ -128,6 +134,8 @@ const Hub = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/hub/process.webp"
                                     loading="lazy"
+                                    width={1920}
+                                    height={1080}
                                     alt="What I did?"
                                 />
                             </picture>
@@ -154,6 +162,8 @@ const Hub = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/hub/inventory.webp"
                                     loading="lazy"
+                                    width={1920}
+                                    height={1080}
                                     alt="Interface inventory"
                                 />
                             </picture>
@@ -190,6 +200,8 @@ const Hub = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/hub/foundations.webp"
                                     loading="lazy"
+                                    width={1920}
+                                    height={1080}
                                     alt="Foundations"
                                 />
                             </picture>
@@ -215,6 +227,8 @@ const Hub = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/hub/tokens.webp"
                                     loading="lazy"
+                                    width={1920}
+                                    height={1080}
                                     alt="Design Tokens"
                                 />
                             </picture>
@@ -240,6 +254,8 @@ const Hub = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/hub/components.webp"
                                     loading="lazy"
+                                    width={1920}
+                                    height={1080}
                                     alt="Components Migration"
                                 />
                             </picture>
@@ -265,6 +281,8 @@ const Hub = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/hub/pages.webp"
                                     loading="lazy"
+                                    width={1920}
+                                    height={1080}
                                     alt="Pages Migration"
                                 />
                             </picture>

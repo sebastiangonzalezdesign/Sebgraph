@@ -33,6 +33,8 @@ const NavBar = () => {
         }
     }, []) // Empty dependency array means it runs once when the component mounts
 
+    // NavBar styles are loaded statically to preserve original behavior
+
     const handleNav = () => {
         setNav(!nav)
     }

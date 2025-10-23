@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef, forwardRef } from 'react'
 import { trackEvent } from '../../services/analytics'
 import { Link } from 'react-router-dom'
-import './Portfolio.scss'
+// Portfolio styles will be loaded dynamically to reduce critical CSS in prerender snapshots
 import PortfolioList from './PortfolioList'
 import {
     allPortfolio,
@@ -75,6 +75,11 @@ const Portfolio = forwardRef<HTMLDivElement, {}>((props, ref) => {
             setDelayedSelected(id)
         }, 160) // Adjust delay to match the glider movement duration
     }
+
+    // Dynamically load page styles on the client to keep critical CSS smaller during prerender
+    useEffect(() => {
+        import('./Portfolio.scss')
+    }, [])
 
     return (
         <section ref={ref} id="work" className="section-portfolio">
@@ -152,6 +157,8 @@ const Portfolio = forwardRef<HTMLDivElement, {}>((props, ref) => {
                                         className="section-portfolio__img"
                                         src={d.img}
                                         alt="Tech"
+                                        width={600}
+                                        height={360}
                                         {...(i === 0
                                             ? { fetchpriority: 'high' as any }
                                             : { loading: 'lazy' })}

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import './ProjectStyles.scss'
 import { Aleph } from '../../dataPortfolio'
 import { trackPageView } from '../../services/analytics'
 import SEO from '../../components/SEO'
@@ -12,6 +11,11 @@ const AlephDS = () => {
 
     useEffect(() => {
         trackPageView('/projects/aleph')
+    }, [])
+
+    // Dynamically load project styles to reduce critical CSS in prerender
+    useEffect(() => {
+        import('./ProjectStyles.scss')
     }, [])
 
     return (
@@ -57,6 +61,8 @@ const AlephDS = () => {
                                 className="project-info__img"
                                 src="https://sebastiangonzalez.design/images/projects/aleph/project.png"
                                 loading="lazy"
+                                width={1000}
+                                height={360}
                                 alt="Geospatial"
                             />
                             <div className="project-info__text-box">
@@ -93,6 +99,8 @@ const AlephDS = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/aleph/Results.png"
                                     loading="lazy"
+                                    width={2000}
+                                    height={1117}
                                     alt="Structure"
                                 />
                             </picture>
@@ -171,6 +179,8 @@ const AlephDS = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/aleph/inventory.png"
                                     loading="lazy"
+                                    width={2000}
+                                    height={1117}
                                     alt="inventory"
                                 />
                             </picture>
@@ -193,6 +203,8 @@ const AlephDS = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/aleph/Structure.png"
                                     loading="lazy"
+                                    width={2000}
+                                    height={1117}
                                     alt="Structure"
                                 />
                             </picture>
@@ -215,6 +227,8 @@ const AlephDS = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/aleph/Colors.png"
                                     loading="lazy"
+                                    width={2000}
+                                    height={1117}
                                     alt="Structure"
                                 />
                             </picture>
@@ -229,6 +243,8 @@ const AlephDS = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/aleph/Colors2.png"
                                     loading="lazy"
+                                    width={2000}
+                                    height={1117}
                                     alt="Structure"
                                 />
                             </picture>
@@ -243,6 +259,8 @@ const AlephDS = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/aleph/Typography.png"
                                     loading="lazy"
+                                    width={2000}
+                                    height={1800}
                                     alt="Structure"
                                 />
                             </picture>
@@ -257,6 +275,8 @@ const AlephDS = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/aleph/Spacings.png"
                                     loading="lazy"
+                                    width={2000}
+                                    height={1117}
                                     alt="Structure"
                                 />
                             </picture>
@@ -271,6 +291,8 @@ const AlephDS = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/aleph/Imagery.png"
                                     loading="lazy"
+                                    width={2000}
+                                    height={1117}
                                     alt="Structure"
                                 />
                             </picture>
@@ -297,6 +319,8 @@ const AlephDS = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/aleph/Component-List.png"
                                     loading="lazy"
+                                    width={2000}
+                                    height={1117}
                                     alt="Structure"
                                 />
                             </picture>
@@ -311,6 +335,8 @@ const AlephDS = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/aleph/Basic-Components.png"
                                     loading="lazy"
+                                    width={2000}
+                                    height={1117}
                                     alt="Structure"
                                 />
                             </picture>
@@ -325,6 +351,8 @@ const AlephDS = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/aleph/Complex-Components.png"
                                     loading="lazy"
+                                    width={2000}
+                                    height={1117}
                                     alt="Structure"
                                 />
                             </picture>

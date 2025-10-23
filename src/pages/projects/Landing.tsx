@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import './ProjectStyles.scss'
 import { trackPageView } from '../../services/analytics'
 import { Landing } from '../../dataPortfolio'
 import BackButton from '../../components/BackButton'
@@ -12,6 +11,11 @@ const LandingPage = () => {
 
     useEffect(() => {
         trackPageView('/projects/landing')
+    }, [])
+
+    // Dynamically load project styles to keep critical CSS smaller during prerender
+    useEffect(() => {
+        import('./ProjectStyles.scss')
     }, [])
 
     return (
@@ -57,6 +61,8 @@ const LandingPage = () => {
                                 className="project-info__img"
                                 src="https://sebastiangonzalez.design/images/projects/landing-s21/project.png"
                                 loading="lazy"
+                                width={1000}
+                                height={360}
                                 alt="AV Expert project"
                             />
                             <div className="project-info__text-box">
@@ -143,6 +149,8 @@ const LandingPage = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/landing-s21/mid-fidelity.png"
                                     loading="lazy"
+                                    width={1985}
+                                    height={684}
                                     alt="ideate"
                                 />
                             </picture>
@@ -162,6 +170,8 @@ const LandingPage = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/landing-s21/high-fidelity.png"
                                     loading="lazy"
+                                    width={1985}
+                                    height={684}
                                     alt="ideate"
                                 />
                             </picture>
@@ -196,6 +206,8 @@ const LandingPage = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/landing-s21/brand.png"
                                     loading="lazy"
+                                    width={349}
+                                    height={166}
                                     alt="ideate"
                                 />
                             </picture>
@@ -219,6 +231,8 @@ const LandingPage = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/landing-s21/colors.png"
                                     loading="lazy"
+                                    width={1985}
+                                    height={684}
                                     alt="ideate"
                                 />
                             </picture>
@@ -242,6 +256,8 @@ const LandingPage = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/landing-s21/tipography.png"
                                     loading="lazy"
+                                    width={2000}
+                                    height={1117}
                                     alt="ideate"
                                 />
                             </picture>
@@ -265,6 +281,8 @@ const LandingPage = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/landing-s21/imagery.png"
                                     loading="lazy"
+                                    width={2000}
+                                    height={1117}
                                     alt="ideate"
                                 />
                             </picture>
@@ -288,6 +306,8 @@ const LandingPage = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/landing-s21/components.png"
                                     loading="lazy"
+                                    width={2000}
+                                    height={1117}
                                     alt="ideate"
                                 />
                             </picture>
@@ -302,6 +322,8 @@ const LandingPage = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/landing-s21/icons.png"
                                     loading="lazy"
+                                    width={2000}
+                                    height={1117}
                                     alt="ideate"
                                 />
                             </picture>
@@ -328,6 +350,8 @@ const LandingPage = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/landing-s21/final-design.png"
                                     loading="lazy"
+                                    width={1966}
+                                    height={1226}
                                     alt="ideate"
                                 />
                             </picture>
@@ -351,6 +375,8 @@ const LandingPage = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/landing-s21/specifications.png"
                                     loading="lazy"
+                                    width={2000}
+                                    height={1117}
                                     alt="ideate"
                                 />
                             </picture>
@@ -377,6 +403,8 @@ const LandingPage = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/landing-s21/360.png"
                                     loading="lazy"
+                                    width={1966}
+                                    height={1226}
                                     alt="ideate"
                                 />
                             </picture>
@@ -400,6 +428,8 @@ const LandingPage = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/landing-s21/compare.png"
                                     loading="lazy"
+                                    width={1608}
+                                    height={1982}
                                     alt="ideate"
                                 />
                             </picture>
@@ -415,6 +445,8 @@ const LandingPage = () => {
                             className="modal__img-complete"
                             src="https://sebastiangonzalez.design/images/projects/landing-s21/final-img.png"
                             loading="lazy"
+                            width={1966}
+                            height={1226}
                             alt="prototyping"
                         />
                     </picture>

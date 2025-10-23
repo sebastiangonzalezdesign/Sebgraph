@@ -1,0 +1,217 @@
+@use '../styles/ConfigStyles/abstracts' as *;
+@use '../styles/ConfigStyles/base' as *;
+@use '../styles/ConfigStyles/layout' as *;
+
+/*
+  NavBar lazy: non-essential visual polish, animations, simple-variant visual
+  tweaks and dark-mode overrides. Loaded after mount so the critical CSS
+  footprint stays small but the UI still looks polished after hydration.
+*/
+
+/* Simple variant rules and backdrop */
+.header--simple {
+    background: transparent;
+
+    &.header-bg {
+        background: rgba($color-neutral-100, 0.8);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba($color-neutral-300, 0.3);
+    }
+
+    .navbar {
+        justify-content: space-between;
+        padding: $size-4 $size-6;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        @media (max-width: 768px) {
+            padding: $size-3 $size-4;
+        }
+    }
+}
+
+/* Dark mode tweaks for simple variant */
+:global(.dark) {
+    .header--simple {
+        &.header-bg {
+            background: rgba($color-neutral-900, 0.8);
+            border-bottom: 1px solid rgba($color-neutral-700, 0.3);
+        }
+
+        .header__logo-box {
+            color: $color-neutral-100;
+        }
+
+        .header__icon {
+            .svg-bg {
+                fill: $color-primary-400;
+            }
+
+            .svg-foreground {
+                fill: $color-neutral-900;
+            }
+        }
+    }
+}
+
+/* Activate list when hamburger toggles */
+.header .active {
+    opacity: 1;
+    display: flex;
+}
+
+.header .text-animation {
+    @include mq(large) {
+        animation: 0.5s moveInBottom ease;
+    }
+}
+
+.header-bg {
+    background-color: $color-opacity-blue-100;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+/* Minor hover polish for hamburger moved here */
+.hamburger {
+    &:hover {
+        border: 1px solid $color-primary-400;
+        background-color: $color-primary-100;
+    }
+}
+@use '../styles/ConfigStyles/abstracts' as *;
+@use '../styles/ConfigStyles/base' as *;
+@use '../styles/ConfigStyles/layout' as *;
+
+/*
+  Lazy NavBar styles: animations, mobile menu, overlays and non-critical polish.
+  Loaded on mount via dynamic import to keep the initial critical CSS small.
+*/
+.header {
+    &__list {
+        @include mq(medium) {
+            position: absolute;
+            height: 100vh;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            background-color: $color-neutral-blue-100;
+            left: 0;
+            top: 0;
+            transition: 0.4s ease;
+            opacity: 0;
+            display: none;
+        }
+    }
+
+    /* Additional non-critical helpers (animations, polish) are placed in this lazy file. */
+
+    .header__logo-box {
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    .header__icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .header__actions-container {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.hamburger {
+    border: 1px solid $color-neutral-400;
+    background-color: $color-neutral-50;
+    border-radius: $border-radius-1;
+    cursor: pointer;
+    color: var(--hamburger-button-color);
+    height: $size-9;
+    width: $size-9;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index: 9999;
+    transition: all 0.3s ease;
+
+    &:hover {
+        border: 1px solid $color-primary-400;
+        background-color: $color-primary-100;
+    }
+    @include mq(medium) {
+        display: flex;
+    }
+
+    & .icon {
+        margin: auto;
+        width: $size-6;
+        height: $size-6;
+    }
+}
+
+/* Simple variant rules and backdrop */
+.header--simple {
+    background: transparent;
+
+    &.header-bg {
+        background: rgba($color-neutral-100, 0.8);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba($color-neutral-300, 0.3);
+    }
+
+    .navbar {
+        justify-content: space-between;
+        padding: $size-4 $size-6;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        @media (max-width: 768px) {
+            padding: $size-3 $size-4;
+        }
+    }
+}
+
+/* Dark mode tweaks for simple variant */
+:global(.dark) {
+    .header--simple {
+        &.header-bg {
+            background: rgba($color-neutral-900, 0.8);
+            border-bottom: 1px solid rgba($color-neutral-700, 0.3);
+        }
+
+        .header__logo-box {
+            color: $color-neutral-100;
+        }
+
+        .header__icon {
+            .svg-bg {
+                fill: $color-primary-400;
+            }
+
+            .svg-foreground {
+                fill: $color-neutral-900;
+            }
+        }
+    }
+}
+
+/* Activate list when hamburger toggles */
+.header .active {
+    opacity: 1;
+    display: flex;
+}
+
+.header .text-animation {
+    @include mq(large) {
+        animation: 0.5s moveInBottom ease;
+    }
+}
+
+.header-bg {
+    background-color: $color-opacity-blue-100;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}

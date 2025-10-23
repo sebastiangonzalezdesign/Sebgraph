@@ -1,5 +1,4 @@
-import React, { useContext, useState } from 'react'
-import './MotionUIKit.scss'
+import React, { useContext, useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import ThemeContext from '../../context/ThemeContext'
 import SEO from '../../components/SEO'
@@ -71,6 +70,11 @@ const comparisonFeatures = [
 
 const MotionUIKit: React.FC = () => {
     const context = useContext(ThemeContext)
+    // Dynamically load the page stylesheet to keep critical CSS small for initial render/prerender.
+    // This moves heavy styles out of the main critical CSS bundle and loads them when the page mounts.
+    useEffect(() => {
+        import('./MotionUIKit.scss')
+    }, [])
     const [email, setEmail] = useState('')
     const [emailValid, setEmailValid] = useState(false)
     const [submitError, setSubmitError] = useState('')

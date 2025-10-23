@@ -141,6 +141,43 @@ const Video: React.FC<VideoProps> = ({
     if (!src) {
         return null
     }
+    // Detect headless / prerender environment (Puppeteer/Playwright usually set webdriver)
+    const isHeadless =
+        typeof navigator !== 'undefined' &&
+        // navigator.webdriver is a common flag for headless browsers
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
+        Boolean((navigator as any).webdriver)
+
+    // If running in a headless prerenderer, avoid loading remote video files
+    // which often fail in the headless environment and produce noisy console errors.
+    if (isHeadless) {
+        if (poster) {
+            return (
+                <div className={`video-container ${className}`}>
+                    <img
+                        src={poster}
+                        alt={alt}
+                        width={width}
+                        height={height}
+                        style={{
+                            width: width || '100%',
+                            height: height || 'auto',
+                        }}
+                    />
+                </div>
+            )
+        }
+
+        // Render a non-loading placeholder when no poster is available.
+        return (
+            <div className={`video-container ${className}`}>
+                <div className="video-placeholder">
+                    <div className="video-spinner"></div>
+                </div>
+            </div>
+        )
+    }
 
     return (
         <div className={`video-container ${className}`}>

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { trackPageView } from '../../services/analytics'
-import './ProjectStyles.scss'
 import { AV } from '../../dataPortfolio'
 import { useLottie } from '../../hooks/useLottie'
 import { default as busqueda } from '../../img/busqueda.json'
@@ -20,6 +19,11 @@ const AvExpert = () => {
     // Analytics pageview
     useEffect(() => {
         trackPageView('/projects/avexpert')
+    }, [])
+
+    // Load project styles dynamically to keep critical CSS small during prerender
+    useEffect(() => {
+        import('./ProjectStyles.scss')
     }, [])
 
     return (
@@ -65,6 +69,8 @@ const AvExpert = () => {
                                 className="project-info__img"
                                 src="https://sebastiangonzalez.design/images/projects/av/project.png"
                                 loading="lazy"
+                                width={1200}
+                                height={800}
                                 alt="AV Expert project"
                             />
                             <div className="project-info__text-box">
@@ -141,6 +147,8 @@ const AvExpert = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/av/final-design.png"
                                     loading="lazy"
+                                    width={1200}
+                                    height={800}
                                     alt="ideate"
                                 />
                             </picture>
@@ -167,6 +175,8 @@ const AvExpert = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/av/user-persona.png"
                                     loading="lazy"
+                                    width={1200}
+                                    height={800}
                                     alt="ideate"
                                 />
                             </picture>
@@ -181,6 +191,8 @@ const AvExpert = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/av/user-flow.png"
                                     loading="lazy"
+                                    width={1200}
+                                    height={800}
                                     alt="ideate"
                                 />
                             </picture>
@@ -217,6 +229,8 @@ const AvExpert = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/av/mid-fidelity.png"
                                     loading="lazy"
+                                    width={1200}
+                                    height={800}
                                     alt="ideate"
                                 />
                             </picture>
@@ -232,6 +246,8 @@ const AvExpert = () => {
                                         className="modal__img-complete"
                                         src="https://sebastiangonzalez.design/images/projects/av/high-fidelity.png"
                                         loading="lazy"
+                                        width={1200}
+                                        height={800}
                                         alt="ideate"
                                     />
                                 </picture>
@@ -259,6 +275,8 @@ const AvExpert = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/av/brand.png"
                                     loading="lazy"
+                                    width={1200}
+                                    height={800}
                                     alt="ideate"
                                 />
                             </picture>
@@ -282,6 +300,8 @@ const AvExpert = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/av/colors.png"
                                     loading="lazy"
+                                    width={1200}
+                                    height={800}
                                     alt="ideate"
                                 />
                             </picture>
@@ -305,6 +325,8 @@ const AvExpert = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/av/tipography.png"
                                     loading="lazy"
+                                    width={1200}
+                                    height={800}
                                     alt="ideate"
                                 />
                             </picture>
@@ -328,6 +350,8 @@ const AvExpert = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/av/imagery.png"
                                     loading="lazy"
+                                    width={1200}
+                                    height={800}
                                     alt="ideate"
                                 />
                             </picture>
@@ -351,6 +375,8 @@ const AvExpert = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/av/components.png"
                                     loading="lazy"
+                                    width={1200}
+                                    height={800}
                                     alt="ideate"
                                 />
                             </picture>
@@ -365,6 +391,8 @@ const AvExpert = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/av/cards.png"
                                     loading="lazy"
+                                    width={1200}
+                                    height={800}
                                     alt="ideate"
                                 />
                             </picture>
@@ -379,6 +407,8 @@ const AvExpert = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/av/icons.png"
                                     loading="lazy"
+                                    width={1200}
+                                    height={800}
                                     alt="ideate"
                                 />
                             </picture>
@@ -446,6 +476,8 @@ const AvExpert = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/av/keywords.png"
                                     loading="lazy"
+                                    width={2000}
+                                    height={1117}
                                     alt="ideate"
                                 />
                             </picture>
@@ -469,6 +501,8 @@ const AvExpert = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/av/advanced-search.png"
                                     loading="lazy"
+                                    width={2000}
+                                    height={1117}
                                     alt="ideate"
                                 />
                             </picture>
@@ -492,6 +526,8 @@ const AvExpert = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/av/product-library.png"
                                     loading="lazy"
+                                    width={2000}
+                                    height={1117}
                                     alt="ideate"
                                 />
                             </picture>
@@ -507,6 +543,8 @@ const AvExpert = () => {
                             className="modal__img-complete"
                             src="https://sebastiangonzalez.design/images/projects/av/final-img.png"
                             loading="lazy"
+                            width={1200}
+                            height={800}
                             alt="prototyping"
                         />
                     </picture>

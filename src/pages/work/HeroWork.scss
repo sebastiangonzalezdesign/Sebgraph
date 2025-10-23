@@ -4,6 +4,7 @@
 @use '../../styles/ConfigStyles/utilities' as *;
 
 .section-hero {
+    padding-block: $hero-padding;
     position: relative;
     align-items: center;
     height: auto;

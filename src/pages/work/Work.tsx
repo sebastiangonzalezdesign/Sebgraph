@@ -12,6 +12,11 @@ const Work = () => {
     const portfolioRef = useRef<HTMLDivElement>(null) // Reference to the Portfolio section
     const location = useLocation() // Get the location object
 
+    // Lazy-load homepage-specific styles after hydration to reduce critical CSS
+    useEffect(() => {
+        import('./home.page.scss')
+    }, [])
+
     // Scroll-to-end tracking
     useEffect(() => {
         let hasTracked = false

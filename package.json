@@ -78,6 +78,12 @@
             "/projects/aleph",
             "/projects/avexpert"
         ],
+        "renderAfterTime": 5000,
+        "puppeteerArgs": [
+            "--no-sandbox",
+            "--disable-setuid-sandbox",
+            "--disable-dev-shm-usage"
+        ],
         "exclude": [
             "/projects/hub"
         ]

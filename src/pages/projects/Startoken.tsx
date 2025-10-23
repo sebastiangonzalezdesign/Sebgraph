@@ -1,5 +1,4 @@
 import React, { Fragment, useState, useEffect } from 'react'
-import './ProjectStyles.scss'
 import { Startoken as StartokenDS } from '../../dataPortfolio'
 import { trackPageView } from '../../services/analytics'
 import BackButton from '../../components/BackButton'
@@ -15,6 +14,11 @@ const Startoken = () => {
 
     useEffect(() => {
         trackPageView('/projects/startoken')
+    }, [])
+
+    // Dynamically load project styles so large CSS isn't inlined during prerender
+    useEffect(() => {
+        import('./ProjectStyles.scss')
     }, [])
 
     return (
@@ -60,6 +64,8 @@ const Startoken = () => {
                                 className="project-info__img"
                                 src="https://sebastiangonzalez.design/images/projects/startoken/project-startoken.webp"
                                 loading="lazy"
+                                width={1000}
+                                height={360}
                                 alt="Design System"
                             />
                             <div className="project-info__text-box">
@@ -143,6 +149,8 @@ const Startoken = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/startoken/research.webp"
                                     loading="lazy"
+                                    width={1920}
+                                    height={1080}
                                     alt="What I did?"
                                 />
                             </picture>
@@ -182,6 +190,8 @@ const Startoken = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/startoken/insights.webp"
                                     loading="lazy"
+                                    width={1920}
+                                    height={1080}
                                     alt="What I did?"
                                 />
                             </picture>
@@ -208,7 +218,7 @@ const Startoken = () => {
                         <Video
                             src="https://sebastiangonzalez.design/images/projects/startoken/token-generator.mp4"
                             className="modal__video"
-                            poster="" // Optional: Add poster image URL
+                            poster="https://sebastiangonzalez.design/images/projects/startoken/project-startoken.webp"
                             muted={true}
                             loop={true}
                             autoPlay={true}
@@ -228,7 +238,7 @@ const Startoken = () => {
                         <Video
                             src="https://sebastiangonzalez.design/images/projects/startoken/naming-playground.mp4"
                             className="modal__video"
-                            poster="" // Optional: Add poster image URL
+                            poster="https://sebastiangonzalez.design/images/projects/startoken/research.webp"
                             muted={true}
                             loop={true}
                             autoPlay={true}
@@ -249,7 +259,7 @@ const Startoken = () => {
                         <Video
                             src="https://sebastiangonzalez.design/images/projects/startoken/my-library.mp4"
                             className="modal__video"
-                            poster="" // Optional: Add poster image URL
+                            poster="https://sebastiangonzalez.design/images/projects/startoken/early-impact.webp"
                             muted={true}
                             loop={true}
                             autoPlay={true}
@@ -279,6 +289,8 @@ const Startoken = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/startoken/tech-stack.webp"
                                     loading="lazy"
+                                    width={1920}
+                                    height={1080}
                                     alt="Foundations"
                                 />
                             </picture>
@@ -313,6 +325,8 @@ const Startoken = () => {
                                         className="modal__img-complete"
                                         src="https://sebastiangonzalez.design/images/projects/startoken/early-impact.webp"
                                         loading="lazy"
+                                        width={1920}
+                                        height={1080}
                                         alt="Foundations"
                                     />
                                 </picture>

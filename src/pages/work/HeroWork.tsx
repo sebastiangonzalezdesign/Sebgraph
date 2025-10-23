@@ -19,6 +19,9 @@ const fadeUpVariants = {
 const HeroWork = () => {
     const context = useContext(ThemeContext)
 
+    // HeroWork styles are imported statically so the hero illustration and layout
+    // are available immediately and animations render correctly.
+
     if (!context) {
         return <div>Loading...</div>
     }

@@ -1,5 +1,6 @@
-import './ProjectStyles.scss'
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
+// Project styles are loaded dynamically by pages that use this template to
+// keep critical CSS small during prerender.
 import ThemeContext from '../../context/ThemeContext'
 
 interface ProjectProps {
@@ -25,6 +26,10 @@ interface ProjectProps {
 
 const Project: React.FC<ProjectProps> = ({ children }) => {
     const { theme } = useContext(ThemeContext) || { theme: '' }
+
+    useEffect(() => {
+        import('./ProjectStyles.scss')
+    }, [])
 
     return (
         <section

@@ -73,6 +73,11 @@ npm run build
 npm run serve
 ```
 
+## Deployment
+
+For alternative deployment instructions (cPanel, ZIP upload, FTP/SFTP and verification checklist) see: `docs/advanced.md`.
+This repository's production build runs `react-snap` in `postbuild` and produces a `dist/` folder ready for static hosting.
+
 ## Performance
 
 -   ⚡ **Lighthouse Score:** 95+ across all metrics

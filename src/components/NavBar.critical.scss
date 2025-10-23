@@ -1,0 +1,133 @@
+@use '../styles/ConfigStyles/abstracts' as *;
+@use '../styles/ConfigStyles/base' as *;
+@use '../styles/ConfigStyles/layout' as *;
+
+/*
+  NavBar critical: contains layout, positioning, logo, link styles and
+  hamburger basic display so the header keeps correct placement and
+  above-the-fold behavior. Keep this minimal but functional.
+*/
+.header {
+    position: fixed;
+    align-content: center;
+    width: 100%;
+    text-align: center;
+    height: $size-13;
+    z-index: 99;
+    transition: 0.2s ease-in;
+
+    &__navigation {
+        z-index: 1500;
+    }
+
+    &__logo-box {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        outline: none;
+        width: auto;
+        height: auto;
+        font-weight: $font-weight-bold;
+        gap: 0.625rem;
+        font-size: $font-size-500;
+        z-index: 9999;
+        color: $color-icon-background-default;
+
+        & .svg-foreground {
+            fill: $color-neutral-100;
+        }
+    }
+    &__icon {
+        width: $size-10;
+        transition: color 0.3s ease;
+        &:hover {
+            color: $color-icon-background-hover;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        text-align: center;
+        width: 100%;
+        gap: $size-8;
+    }
+    &__item {
+        width: auto;
+        cursor: pointer;
+        transition: all 0.4s ease-in-out;
+    }
+
+    &__link {
+        font-size: $navbar-link-font-size;
+        font-family: $navbar-link-font-family;
+        font-weight: $navbar-link-font-weight;
+        line-height: $line-height-body;
+        padding: $navbar-link-padding;
+        text-decoration: none;
+        color: $navbar-link-color-default;
+        transition: all 0.4s;
+
+        &:link,
+        &:visited {
+            color: $navbar-link-color-default;
+            text-decoration: none;
+        }
+        &:hover,
+        &:active {
+            background-color: $navbar-link-background-hover;
+            color: $navbar-link-color-default;
+            border-radius: $navbar-link-border-radius;
+        }
+    }
+    &__actions-container {
+        display: flex;
+        gap: $size-4;
+    }
+}
+
+.link-active {
+    background-color: $navbar-link-background-active;
+    border-radius: $link-border-radius;
+    font-weight: 600;
+}
+
+/* Keep hamburger display rules so mobile menu remains accessible */
+.hamburger {
+    border: 1px solid $color-neutral-400;
+    background-color: $color-neutral-50;
+    border-radius: $border-radius-1;
+    cursor: pointer;
+    color: var(--hamburger-button-color);
+    height: $size-9;
+    width: $size-9;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index: 9999;
+    transition: all 0.3s ease;
+
+    & .icon {
+        margin: auto;
+        width: $size-6;
+        height: $size-6;
+    }
+
+    @include mq(medium) {
+        display: flex;
+    }
+}
+
+/* Preserve the header active state behavior */
+.header .active {
+    top: 0;
+    transition: 0.5s ease;
+    display: flex;
+    opacity: 1;
+}

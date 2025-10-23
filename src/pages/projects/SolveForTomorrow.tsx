@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Solve } from '../../dataPortfolio'
 import { trackPageView } from '../../services/analytics'
-import './ProjectStyles.scss'
 import { useLottie } from '../../hooks/useLottie'
 import { default as desarrolloSostenible } from '../../img/desarrollo_sostenible.json'
 import { default as versionesAnteriores } from '../../img/versiones-anteriores.json'
@@ -20,6 +19,11 @@ const SolveForTomorrow = () => {
     // Analytics pageview
     useEffect(() => {
         trackPageView('/projects/solvefortomorrow')
+    }, [])
+
+    // Dynamically load project styles to avoid large critical CSS in prerender
+    useEffect(() => {
+        import('./ProjectStyles.scss')
     }, [])
 
     return (
@@ -65,6 +69,8 @@ const SolveForTomorrow = () => {
                                 className="project-info__img"
                                 src="https://sebastiangonzalez.design/images/projects/solve/project.png"
                                 loading="lazy"
+                                width={1000}
+                                height={360}
                                 alt="AV Expert project"
                             />
                             <div className="project-info__text-box">
@@ -160,6 +166,8 @@ const SolveForTomorrow = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/solve/user-persona.png"
                                     loading="lazy"
+                                    width={2000}
+                                    height={1117}
                                     alt="ideate"
                                 />
                             </picture>
@@ -180,6 +188,8 @@ const SolveForTomorrow = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/solve/empathy-map.png"
                                     loading="lazy"
+                                    width={2000}
+                                    height={1117}
                                     alt="ideate"
                                 />
                             </picture>
@@ -200,6 +210,8 @@ const SolveForTomorrow = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/solve/user-flow.png"
                                     loading="lazy"
+                                    width={2000}
+                                    height={1117}
                                     alt="ideate"
                                 />
                             </picture>
@@ -225,6 +237,8 @@ const SolveForTomorrow = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/solve/mid-fidelity-wireframes.png"
                                     loading="lazy"
+                                    width={2000}
+                                    height={1117}
                                     alt="ideate"
                                 />
                             </picture>
@@ -245,6 +259,8 @@ const SolveForTomorrow = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/solve/high-fidelity-wireframes.png"
                                     loading="lazy"
+                                    width={2000}
+                                    height={1117}
                                     alt="ideate"
                                 />
                             </picture>
@@ -270,6 +286,8 @@ const SolveForTomorrow = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/solve/moodboard.png"
                                     loading="lazy"
+                                    width={2000}
+                                    height={1117}
                                     alt="ideate"
                                 />
                             </picture>
@@ -304,6 +322,8 @@ const SolveForTomorrow = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/solve/brand.png"
                                     loading="lazy"
+                                    width={2000}
+                                    height={1117}
                                     alt="ideate"
                                 />
                             </picture>
@@ -327,6 +347,8 @@ const SolveForTomorrow = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/solve/colors.png"
                                     loading="lazy"
+                                    width={2000}
+                                    height={1117}
                                     alt="ideate"
                                 />
                             </picture>
@@ -350,6 +372,8 @@ const SolveForTomorrow = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/solve/tipography.png"
                                     loading="lazy"
+                                    width={2000}
+                                    height={1117}
                                     alt="ideate"
                                 />
                             </picture>
@@ -373,6 +397,8 @@ const SolveForTomorrow = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/solve/imagery.png"
                                     loading="lazy"
+                                    width={2000}
+                                    height={1117}
                                     alt="ideate"
                                 />
                             </picture>
@@ -396,6 +422,8 @@ const SolveForTomorrow = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/solve/buttons.png"
                                     loading="lazy"
+                                    width={2000}
+                                    height={1117}
                                     alt="ideate"
                                 />
                             </picture>
@@ -410,6 +438,8 @@ const SolveForTomorrow = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/solve/forms.png"
                                     loading="lazy"
+                                    width={2000}
+                                    height={1117}
                                     alt="ideate"
                                 />
                             </picture>
@@ -424,6 +454,8 @@ const SolveForTomorrow = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/solve/icons.png"
                                     loading="lazy"
+                                    width={2000}
+                                    height={1117}
                                     alt="ideate"
                                 />
                             </picture>
@@ -438,6 +470,8 @@ const SolveForTomorrow = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/solve/cards.png"
                                     loading="lazy"
+                                    width={2000}
+                                    height={1117}
                                     alt="ideate"
                                 />
                             </picture>
@@ -452,6 +486,8 @@ const SolveForTomorrow = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/solve/organisms.png"
                                     loading="lazy"
+                                    width={2000}
+                                    height={1117}
                                     alt="ideate"
                                 />
                             </picture>
@@ -520,6 +556,8 @@ const SolveForTomorrow = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/solve/form.png"
                                     loading="lazy"
+                                    width={2000}
+                                    height={1117}
                                     alt="ideate"
                                 />
                             </picture>
@@ -544,6 +582,8 @@ const SolveForTomorrow = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/solve/previous-versions.png"
                                     loading="lazy"
+                                    width={2000}
+                                    height={1117}
                                     alt="ideate"
                                 />
                             </picture>
@@ -567,6 +607,8 @@ const SolveForTomorrow = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/solve/resources.png"
                                     loading="lazy"
+                                    width={2000}
+                                    height={1117}
                                     alt="ideate"
                                 />
                             </picture>
@@ -582,6 +624,8 @@ const SolveForTomorrow = () => {
                             className="modal__img-complete"
                             src="https://sebastiangonzalez.design/images/projects/solve/final-img.png"
                             loading="lazy"
+                            width={2000}
+                            height={1117}
                             alt="prototyping"
                         />
                     </picture>

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import './ProjectStyles.scss'
 import { trackPageView } from '../../services/analytics'
 import { Essilor } from '../../dataPortfolio'
 import BackButton from '../../components/BackButton'
@@ -12,6 +11,11 @@ const EssilorAPP = () => {
 
     useEffect(() => {
         trackPageView('/projects/essilor')
+    }, [])
+
+    // Load project styles dynamically to reduce critical CSS in prerender
+    useEffect(() => {
+        import('./ProjectStyles.scss')
     }, [])
 
     return (
@@ -57,6 +61,8 @@ const EssilorAPP = () => {
                                 className="project-info__img"
                                 src="https://sebastiangonzalez.design/images/projects/essilor/project.png"
                                 loading="lazy"
+                                width={1000}
+                                height={360}
                                 alt="AV Expert project"
                             />
                             <div className="project-info__text-box">
@@ -155,6 +161,8 @@ const EssilorAPP = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/essilor/empathy-map.png"
                                     loading="lazy"
+                                    width={2000}
+                                    height={1117}
                                     alt="ideate"
                                 />
                             </picture>
@@ -180,6 +188,8 @@ const EssilorAPP = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/essilor/mid-fidelity.png"
                                     loading="lazy"
+                                    width={2000}
+                                    height={1117}
                                     alt="ideate"
                                 />
                             </picture>
@@ -199,6 +209,8 @@ const EssilorAPP = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/essilor/high-fidelity.png"
                                     loading="lazy"
+                                    width={2000}
+                                    height={1117}
                                     alt="ideate"
                                 />
                             </picture>
@@ -233,6 +245,8 @@ const EssilorAPP = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/essilor/brand.png"
                                     loading="lazy"
+                                    width={2000}
+                                    height={1117}
                                     alt="ideate"
                                 />
                             </picture>
@@ -256,6 +270,8 @@ const EssilorAPP = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/essilor/colors.png"
                                     loading="lazy"
+                                    width={2000}
+                                    height={1117}
                                     alt="ideate"
                                 />
                             </picture>
@@ -279,6 +295,8 @@ const EssilorAPP = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/essilor/tipography.png"
                                     loading="lazy"
+                                    width={2000}
+                                    height={1117}
                                     alt="ideate"
                                 />
                             </picture>
@@ -302,6 +320,8 @@ const EssilorAPP = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/essilor/imagery.png"
                                     loading="lazy"
+                                    width={2000}
+                                    height={1117}
                                     alt="ideate"
                                 />
                             </picture>
@@ -325,6 +345,8 @@ const EssilorAPP = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/essilor/components.png"
                                     loading="lazy"
+                                    width={2000}
+                                    height={1117}
                                     alt="ideate"
                                 />
                             </picture>
@@ -339,6 +361,8 @@ const EssilorAPP = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/essilor/icons.png"
                                     loading="lazy"
+                                    width={2000}
+                                    height={1117}
                                     alt="ideate"
                                 />
                             </picture>
@@ -365,6 +389,8 @@ const EssilorAPP = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/essilor/final-design.png"
                                     loading="lazy"
+                                    width={2000}
+                                    height={1117}
                                     alt="ideate"
                                 />
                             </picture>
@@ -389,6 +415,8 @@ const EssilorAPP = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/essilor/scan-code.png"
                                     loading="lazy"
+                                    width={2000}
+                                    height={1117}
                                     alt="ideate"
                                 />
                             </picture>
@@ -412,6 +440,8 @@ const EssilorAPP = () => {
                                     className="modal__img-complete"
                                     src="https://sebastiangonzalez.design/images/projects/essilor/redeem.png"
                                     loading="lazy"
+                                    width={2000}
+                                    height={1117}
                                     alt="ideate"
                                 />
                             </picture>
@@ -427,6 +457,8 @@ const EssilorAPP = () => {
                             className="modal__img-complete"
                             src="https://sebastiangonzalez.design/images/projects/essilor/final-img.png"
                             loading="lazy"
+                            width={2000}
+                            height={1117}
                             alt="prototyping"
                         />
                     </picture>

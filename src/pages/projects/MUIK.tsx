@@ -1,5 +1,4 @@
 import React, { Fragment, useState, useEffect } from 'react'
-import './ProjectStyles.scss'
 import { MUIK as MUIKDS } from '../../dataPortfolio'
 import { trackPageView } from '../../services/analytics'
 import BackButton from '../../components/BackButton'
@@ -14,6 +13,11 @@ const MUIK = () => {
 
     useEffect(() => {
         trackPageView('/projects/MUIK')
+    }, [])
+
+    // Dynamically import project styles to avoid inflating critical CSS
+    useEffect(() => {
+        import('./ProjectStyles.scss')
     }, [])
 
     return (

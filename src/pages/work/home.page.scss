@@ -1,0 +1,65 @@
+@use '../../styles/ConfigStyles/abstracts' as *;
+@use '../../styles/ConfigStyles/utilities' as *;
+
+.container-home {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: $size-6;
+    margin: auto;
+    width: 100%;
+    padding: 0;
+
+    grid-template-areas:
+        'info info info info'
+        'portfolio portfolio portfolio portfolio'
+        'contact contact contact contact';
+
+    @include mq(medium) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            'info info'
+            'portfolio portfolio '
+            'contact contact';
+    }
+
+    .section-hero {
+        grid-area: info;
+        margin-top: 3rem;
+        margin: auto;
+        max-width: 75rem;
+        width: 100%;
+        padding: 0 1.5rem;
+        overflow: hidden;
+    }
+    .section-portfolio {
+        grid-area: portfolio;
+        margin: auto;
+
+        max-width: 75rem;
+        width: 100%;
+        padding: $size-8 $size-6;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 49.4%;
+            width: 100vw;
+            height: 100%;
+            background-color: $color-neutral-blue-100;
+            transform: translateX(-50%);
+            z-index: -1;
+            @include mq(medium) {
+                left: 49.2%;
+            }
+        }
+    }
+    .section-contact {
+        grid-area: contact;
+        margin: auto;
+        background-color: var(--light-primary-hover);
+        width: 100%;
+    }
+}
