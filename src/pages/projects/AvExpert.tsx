@@ -24,7 +24,10 @@ const AvExpert = () => {
 
     return (
         <>
-            <SEO {...seoConfig.avexpert} />
+            <SEO
+                {...seoConfig.avexpert}
+                structuredData={seoConfig.avexpert.structuredData}
+            />
             {dataPortfolio.map((dataPortfolio) => (
                 /* CONTAINER */
                 <section key={dataPortfolio.id} className="modal__container">

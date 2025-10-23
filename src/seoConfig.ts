@@ -42,6 +42,19 @@ export const seoConfig = {
             'Get to know more about Sebastian González, a UI/Visual designer passionate about coding, design systems, and shaping digital experiences through technology.',
         url: 'https://sebastiangonzalez.design/about',
         robots: 'index, follow',
+        structuredData: {
+            '@context': 'https://schema.org',
+            '@type': 'Person',
+            name: 'Sebastian González',
+            jobTitle: 'UI Designer & Design System Developer',
+            description:
+                'UI designer passionate about coding, design systems, and shaping digital experiences through technology.',
+            url: 'https://sebastiangonzalez.design/about',
+            sameAs: [
+                'https://github.com/sebasgonzac',
+                'https://linkedin.com/in/sebastian-gonzalez-design',
+            ],
+        },
     },
     cv: {
         title: 'Resume – Sebastian González',
@@ -49,6 +62,19 @@ export const seoConfig = {
             "Download Sebastian's resume and explore experience, skills, and tools. Specialized in UI design, design systems, and front-end development.",
         url: 'https://sebastiangonzalez.design/cv',
         robots: 'index, follow',
+        structuredData: {
+            '@context': 'https://schema.org',
+            '@type': 'Person',
+            name: 'Sebastian González',
+            jobTitle: 'UI & Design System Specialist',
+            description:
+                'UI & Design System Specialist with experience building scalable, user-centered digital products.',
+            url: 'https://sebastiangonzalez.design/cv',
+            sameAs: [
+                'https://github.com/sebasgonzac',
+                'https://linkedin.com/in/sebastian-gonzalez-design',
+            ],
+        },
     },
     projects: {
         title: 'Projects – Sebastian González',
@@ -56,6 +82,7 @@ export const seoConfig = {
             'Explore UI design and front-end projects by Sebastian González. From scalable systems to creative visuals, see how design meets code.',
         url: 'https://sebastiangonzalez.design/projects',
         robots: 'index, follow',
+        structuredData: undefined,
     },
     // Project pages with better descriptions
     aleph: {
@@ -64,6 +91,23 @@ export const seoConfig = {
             'Design system project for satellite imagery platform. Creating intuitive interfaces for complex geospatial data and enhancing user collaboration across teams.',
         url: 'https://sebastiangonzalez.design/projects/aleph',
         robots: 'index, follow',
+        structuredData: {
+            '@context': 'https://schema.org',
+            '@type': 'CreativeWork',
+            name: 'Aleph Design System',
+            url: 'https://sebastiangonzalez.design/projects/aleph',
+            description:
+                'Design system project for a geospatial imagery platform focusing on usable UI and scalable design tokens.',
+            author: {
+                '@type': 'Person',
+                name: 'Sebastian González',
+                url: 'https://sebastiangonzalez.design/',
+            },
+            provider: {
+                '@type': 'Organization',
+                name: 'Sebastian González Design',
+            },
+        },
     },
     avexpert: {
         title: 'AV Expert Mobile App – Sebastian González',
@@ -71,6 +115,26 @@ export const seoConfig = {
             'Mobile app design for AV promoters. Dark UI with gold accents, component library, and enhanced product search for customer engagement.',
         url: 'https://sebastiangonzalez.design/projects/avexpert',
         robots: 'index, follow',
+        structuredData: {
+            '@context': 'https://schema.org',
+            '@type': 'MobileApplication',
+            name: 'AV Expert',
+            url: 'https://sebastiangonzalez.design/projects/avexpert',
+            description:
+                'Mobile app design for AV promoters featuring a dark theme with gold accents, a component library and improved product search for customer engagement.',
+            author: {
+                '@type': 'Person',
+                name: 'Sebastian González',
+                url: 'https://sebastiangonzalez.design/',
+            },
+            provider: {
+                '@type': 'Organization',
+                name: 'Sebastian González Design',
+            },
+            applicationCategory: 'BusinessApplication',
+            operatingSystem: 'iOS, Android',
+            image: 'https://sebastiangonzalez.design/assets/avexpert/cover.png',
+        },
     },
     essilor: {
         title: 'Essilor Mobile App – Sebastian González',
@@ -78,6 +142,7 @@ export const seoConfig = {
             'Mobile application design for Essilor optical business partners. Interface design focused on commercial process and brand consistency.',
         url: 'https://sebastiangonzalez.design/projects/essilor',
         robots: 'index, follow',
+        structuredData: undefined,
     },
     landing: {
         title: 'Samsung S21 Landing Page – Sebastian González',
@@ -85,6 +150,7 @@ export const seoConfig = {
             'Landing page design for Samsung S21 contest. Web interface with Lottie animations and brand-consistent visual design.',
         url: 'https://sebastiangonzalez.design/projects/landing',
         robots: 'index, follow',
+        structuredData: undefined,
     },
     solvefortomorrow: {
         title: 'Solve For Tomorrow Contest – Sebastian González',
@@ -92,6 +158,7 @@ export const seoConfig = {
             'Samsung Solve For Tomorrow contest platform design. Interactive web interface with Lottie animations for student and teacher project submissions.',
         url: 'https://sebastiangonzalez.design/projects/solvefortomorrow',
         robots: 'index, follow',
+        structuredData: undefined,
     },
     startoken: {
         title: 'Startoken Design System – Sebastian González',
@@ -99,6 +166,7 @@ export const seoConfig = {
             'Design token naming methodology for design systems. Unblock token naming conventions and create scalable design token architecture.',
         url: 'https://sebastiangonzalez.design/projects/startoken',
         robots: 'index, follow',
+        structuredData: undefined,
     },
     // MUIK Motion UI Kit landing page
     motionUIKit: {
@@ -107,6 +175,7 @@ export const seoConfig = {
             'A free + pro-ready library of polished UI micro-interactions for React & Framer Motion. Dark mode first, copy-paste components, and smooth 60fps animations.',
         url: 'https://sebastiangonzalez.design/motion-ui-kit',
         robots: 'index, follow',
+        structuredData: undefined,
     },
     // MUIK Project case study (different from landing page)
     muikProject: {
@@ -115,6 +184,7 @@ export const seoConfig = {
             'Design system case study: Building a comprehensive UI component library with React, TypeScript, and Framer Motion. Design tokens, dark mode, and micro-interactions.',
         url: 'https://sebastiangonzalez.design/projects/MUIK',
         robots: 'index, follow',
+        structuredData: undefined,
     },
     // Example for a protected/private page
     hub: {
@@ -122,5 +192,6 @@ export const seoConfig = {
         description: 'This project is protected.',
         url: 'https://sebastiangonzalez.design/projects/hub',
         robots: 'noindex, nofollow',
+        structuredData: undefined,
     },
 }
