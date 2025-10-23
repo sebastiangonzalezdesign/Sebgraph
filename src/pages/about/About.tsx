@@ -62,6 +62,7 @@ const About = () => {
                 description={seoConfig.about.description}
                 url={seoConfig.about.url}
                 robots={seoConfig.about.robots}
+                structuredData={seoConfig.about.structuredData}
             />
             <main className="container-about">
                 <section className="hero-about">

@@ -19,7 +19,10 @@ const Startoken = () => {
 
     return (
         <Fragment>
-            <SEO {...seoConfig.startoken} />
+            <SEO
+                {...seoConfig.startoken}
+                structuredData={seoConfig.startoken.structuredData}
+            />
             {dataPortfolio.map((dataPortfolio) => (
                 /* CONTAINER */
                 <section key={dataPortfolio.id} className="modal__container">

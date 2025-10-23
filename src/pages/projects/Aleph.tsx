@@ -3,6 +3,7 @@ import './ProjectStyles.scss'
 import { Aleph } from '../../dataPortfolio'
 import { trackPageView } from '../../services/analytics'
 import SEO from '../../components/SEO'
+import { seoConfig } from '../../seoConfig'
 import BackButton from '../../components/BackButton'
 import ImageModalZoom from '../../components/ImageModalZoom'
 
@@ -16,9 +17,8 @@ const AlephDS = () => {
     return (
         <>
             <SEO
-                title="Aleph Project"
-                description="A detailed case study of the Aleph project."
-                url="https://sebastiangonzalez.design/projects/aleph"
+                {...seoConfig.aleph}
+                structuredData={seoConfig.aleph.structuredData}
             />
             {dataPortfolio.map((dataPortfolio) => (
                 /* CONTAINER */

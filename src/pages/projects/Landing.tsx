@@ -16,7 +16,10 @@ const LandingPage = () => {
 
     return (
         <>
-            <SEO {...seoConfig.landing} />
+            <SEO
+                {...seoConfig.landing}
+                structuredData={seoConfig.landing.structuredData}
+            />
             {dataPortfolio.map((dataPortfolio) => (
                 /* CONTAINER */
                 <section key={dataPortfolio.id} className="modal__container">

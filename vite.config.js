@@ -16,6 +16,12 @@ export default defineConfig({
     // This changes the output dir from dist to build
     // Comment this out if it isn't relevant for your project
     build: {
+        // Target an older ECMAScript version so tools like react-snap's
+        // headless Chromium (puppeteer) don't choke on newer syntax
+        // such as optional chaining (?.) or nullish coalescing (??).
+        // es2019 is a conservative choice that still supports modern
+        // JS features while triggering esbuild to compile newer syntax.
+        target: 'es2019',
         outDir: 'dist',
         sourcemap: true, // Enable source maps for bundle analysis
         chunkSizeWarningLimit: 2000, // Adjust chunk size warning limit

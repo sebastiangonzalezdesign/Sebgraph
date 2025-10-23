@@ -24,7 +24,10 @@ const SolveForTomorrow = () => {
 
     return (
         <>
-            <SEO {...seoConfig.solvefortomorrow} />
+            <SEO
+                {...seoConfig.solvefortomorrow}
+                structuredData={seoConfig.solvefortomorrow.structuredData}
+            />
             {dataPortfolio.map((dataPortfolio) => (
                 /* CONTAINER */
                 <section key={dataPortfolio.id} className="modal__container">

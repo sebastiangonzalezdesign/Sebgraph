@@ -16,7 +16,10 @@ const EssilorAPP = () => {
 
     return (
         <>
-            <SEO {...seoConfig.essilor} />
+            <SEO
+                {...seoConfig.essilor}
+                structuredData={seoConfig.essilor.structuredData}
+            />
             {dataPortfolio.map((dataPortfolio) => (
                 /* CONTAINER */
                 <section key={dataPortfolio.id} className="modal__container">

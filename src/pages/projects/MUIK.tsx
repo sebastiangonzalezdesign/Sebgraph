@@ -18,7 +18,10 @@ const MUIK = () => {
 
     return (
         <Fragment>
-            <SEO {...seoConfig.muikProject} />
+            <SEO
+                {...seoConfig.muikProject}
+                structuredData={seoConfig.muikProject.structuredData}
+            />
             {dataPortfolio.map((dataPortfolio) => (
                 /* CONTAINER */
                 <section key={dataPortfolio.id} className="modal__container">

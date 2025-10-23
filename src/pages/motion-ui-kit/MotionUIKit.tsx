@@ -220,7 +220,10 @@ const MotionUIKit: React.FC = () => {
 
     return (
         <main className={`motion-ui-kit ${theme}`}>
-            <SEO {...seoConfig.motionUIKit} />
+            <SEO
+                {...seoConfig.motionUIKit}
+                structuredData={seoConfig.motionUIKit.structuredData}
+            />
 
             {/* Hero Section */}
             <BaseHero

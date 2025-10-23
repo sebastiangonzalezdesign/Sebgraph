@@ -55,6 +55,19 @@
         />
     </head>
     <body>
+        <script>
+            // Prevent Vite's preload error from throwing during prerendering
+            // (react-snap / headless Chromium may occasionally fail to load
+            // local assets during snapshotting). This listener simply prevents
+            // the default behavior so prerendering can continue.
+            window.addEventListener('vite:preloadError', function (e) {
+                try {
+                    e.preventDefault()
+                } catch (err) {
+                    /* ignore */
+                }
+            })
+        </script>
         <noscript>You need to enable JavaScript to run this app.</noscript>
         <div id="root"></div>
 
