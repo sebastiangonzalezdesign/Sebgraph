@@ -1,2 +1,0 @@
-/* archived: see astro/migration-backups/Layout.astro.final.bak */
-import SEO from '../components/SEO.astro'
