@@ -1,0 +1,56 @@
+name: CI — build & SEO smoke
+
+on:
+    push:
+        branches: [main]
+    pull_request:
+        branches: [main]
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            - name: Use Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: '20'
+                  cache: 'npm'
+
+            - name: Install dependencies
+              run: npm ci
+
+            - name: Typecheck
+              run: npx -y tsc --noEmit
+
+            - name: Build (vite + react-snap)
+              run: npm run build
+
+            - name: Verify structured data exists in built pages
+              run: |
+                  set -euo pipefail
+                  files=(
+                    "dist/index.html"
+                    "dist/about/index.html"
+                    "dist/projects/aleph/index.html"
+                    "dist/projects/avexpert/index.html"
+                    "dist/cv/index.html"
+                  )
+                  missing=()
+                  for f in "${files[@]}"; do
+                    if [ ! -f "$f" ]; then
+                      missing+=("$f (missing)")
+                      continue
+                    fi
+                    if ! grep -q 'application/ld+json' "$f"; then
+                      missing+=("$f (no json-ld)")
+                    fi
+                  done
+                  if [ ${#missing[@]} -ne 0 ]; then
+                    echo "ERROR: Missing structured data or files:" >&2
+                    printf '%s\n' "${missing[@]}" >&2
+                    exit 1
+                  fi
+                  echo "✅ All structured-data checks passed"
