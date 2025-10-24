@@ -3,6 +3,8 @@ import { motion } from 'framer-motion'
 import React, { useEffect, useState } from 'react'
 import SEO from '../../components/SEO'
 import { seoConfig } from '../../seoConfig'
+import { Helmet } from 'react-helmet-async'
+import { Button } from '../../components/Button'
 
 const About = () => {
     // Framer Motion Variables
@@ -64,8 +66,19 @@ const About = () => {
                 robots={seoConfig.about.robots}
                 structuredData={seoConfig.about.structuredData}
             />
+
+            {/* Preload avatar for slightly faster LCP and set decode async */}
+            <Helmet>
+                <link rel="preload" as="image" href={avatarUrl} />
+            </Helmet>
+
             <main className="container-about">
-                <section className="hero-about">
+                {/* (summary removed — content appears in contact block below) */}
+
+                <section
+                    className="hero-about"
+                    aria-labelledby="about-hero-heading"
+                >
                     <article className="hero-about__hero-container">
                         <motion.div
                             className="hero-about__text"
@@ -78,14 +91,17 @@ const About = () => {
                                 stiffness: 45,
                             }}
                         >
-                            {/* Static Text */}
-                            <motion.h1 className="display__200--bold section-hero__heading">
+                            {/* Primary page heading (only one H1 on the page) */}
+                            <motion.h1
+                                id="about-hero-heading"
+                                className="display__200--bold section-hero__heading"
+                            >
                                 Hi! I'm Sebastian
                             </motion.h1>
 
-                            {/* Carousel Text Animation */}
+                            {/* Carousel Text Animation uses H2 to preserve hierarchy */}
                             <motion.div className="hero-about__text-carousel">
-                                <motion.h1
+                                <motion.h2
                                     className="display__100--bold"
                                     key={currentIndex} // Ensure re-render on text change
                                     initial="initial"
@@ -95,10 +111,11 @@ const About = () => {
                                     transition={carouselVariants.transition}
                                 >
                                     {texts[currentIndex]}
-                                </motion.h1>
+                                </motion.h2>
                             </motion.div>
                         </motion.div>
                     </article>
+
                     <article className="hero-about__description">
                         <motion.figure
                             className="hero-about__img-container"
@@ -116,6 +133,10 @@ const About = () => {
                                 className="hero-about__img-container__img"
                                 src={avatarUrl}
                                 alt="Sebastian González's avatar"
+                                width={320}
+                                height={320}
+                                loading="eager"
+                                decoding="async"
                             />
                         </motion.figure>
                         <motion.p
@@ -142,6 +163,48 @@ const About = () => {
                         </motion.p>
                     </article>
                 </section>
+
+                {/* Contact-style full width section similar to Work contact */}
+                <div className="profile">
+                    <section className="section-contact about-contact-section">
+                        <div className="contact-container">
+                            <div className="contact-container__heading">
+                                <div className="section-portfolio__heading-container">
+                                    <h2 className="heading__100--bold section-portfolio__heading">
+                                        Want to collaborate?
+                                        <span className="section-portfolio__heading-decoration"></span>
+                                    </h2>
+                                </div>
+                                <p className="paragraph__100--regular contact-container__paragraph">
+                                    Sebastian González is a UI/Visual designer
+                                    focused on design systems, product
+                                    interfaces and front-end collaboration. He
+                                    blends visual craft with production code to
+                                    ship polished experiences.
+                                </p>
+                            </div>
+
+                            <div className="section-portfolio__divider"></div>
+
+                            <div className="contact-container__btns">
+                                <a
+                                    href={`mailto:info@sebastiangonzalez.design`}
+                                    className="email"
+                                    style={{ width: '100%' }}
+                                >
+                                    <Button
+                                        className="contact-container__email-btn"
+                                        type="button"
+                                        buttonStyle="btn--secondary"
+                                        buttonSize="btn--lg"
+                                    >
+                                        Get in touch.
+                                    </Button>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
             </main>
         </>
     )

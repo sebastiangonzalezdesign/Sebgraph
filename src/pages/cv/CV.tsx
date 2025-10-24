@@ -50,6 +50,10 @@ const CV = () => {
         <>
             <SEO {...seoConfig.cv} />
             <main className="container-cv">
+                {/* Page-level H1 for accessibility (visually hidden) */}
+                <h1 className="sr-only">
+                    Curriculum Vitae — Sebastian González
+                </h1>
                 <motion.section
                     className="profile-cv"
                     initial="initial"
@@ -61,23 +65,61 @@ const CV = () => {
                         stiffness: 45,
                     }}
                 >
-                    <img className="icon" src={Profile} alt="profile" />
+                    <img
+                        className="icon"
+                        src={Profile}
+                        alt="Profile icon"
+                        loading="eager"
+                    />
                     <article className="profile-cv__text-box">
                         <h2 className="heading__100--bold subtitle">Profile</h2>
-                        <p className="paragraph__100--medium">
-                            UI & Design System Specialist with 5+ years of
-                            experience building scalable, user-centered digital
-                            products for web and mobile platforms. Skilled in
-                            bridging design and development, with expertise in
-                            design systems, interaction design, and
-                            cross-functional collaboration. Currently expanding
-                            coding skills (React, JavaScript) to enhance product
-                            development and user experience. Looking for UX
-                            engineering and product design roles focused on
-                            innovation and design systems. Passionate about
-                            delivering high-quality, scalable design solutions
-                            with a keen focus on development collaboration
+                        {/* Short summary before profile for quick readability */}
+                        <p className="paragraph__100--medium cv-summary">
+                            UI & Design System Specialist focused on building
+                            scalable interfaces and design systems. I bridge
+                            design and front-end to ship polished, production
+                            ready experiences.
                         </p>
+
+                        <p className="paragraph__100--medium">
+                            With 5+ years of experience building scalable,
+                            user-centered digital products for web and mobile
+                            platforms. Skilled in bridging design and
+                            development, with expertise in design systems,
+                            interaction design, and cross-functional
+                            collaboration. Currently expanding coding skills
+                            (React, JavaScript) to enhance product development
+                            and user experience. Looking for UX engineering and
+                            product design roles focused on innovation and
+                            design systems. Passionate about delivering
+                            high-quality, scalable design solutions with a keen
+                            focus on development collaboration
+                        </p>
+
+                        {/* Crosslink to portfolio */}
+                        <div
+                            className="profile-cv__actions"
+                            style={{ marginTop: '1rem' }}
+                        >
+                            <a
+                                href="/projects"
+                                onClick={() =>
+                                    trackEvent({
+                                        action: 'Open Projects from CV',
+                                        category: 'Navigation',
+                                        label: 'CVPage',
+                                    })
+                                }
+                            >
+                                <Button
+                                    type="button"
+                                    buttonStyle="btn--secondary"
+                                    buttonSize="btn--md"
+                                >
+                                    View projects
+                                </Button>
+                            </a>
+                        </div>
                     </article>
                 </motion.section>
 
@@ -93,7 +135,12 @@ const CV = () => {
                         stiffness: 45,
                     }}
                 >
-                    <img className="icon" src={Experience} alt="experience" />
+                    <img
+                        className="icon"
+                        src={Experience}
+                        alt="Experience icon"
+                        loading="lazy"
+                    />
                     <article className="experience-cv__text-box">
                         <h2 className="heading__100--bold subtitle">
                             Experience
@@ -199,7 +246,12 @@ const CV = () => {
                         stiffness: 45,
                     }}
                 >
-                    <img className="icon" src={Education} alt="education" />
+                    <img
+                        className="icon"
+                        src={Education}
+                        alt="Education icon"
+                        loading="lazy"
+                    />
                     <article className="education-cv__text-box">
                         <h2 className="heading__100--bold subtitle">
                             Education
@@ -256,7 +308,12 @@ const CV = () => {
                 </motion.section>
 
                 <section className="skills-cv">
-                    <img className="icon" src={Skills} alt="" />
+                    <img
+                        className="icon"
+                        src={Skills}
+                        alt="Skills icon"
+                        loading="lazy"
+                    />
                     <article className="skills-cv__skills-section-container">
                         <h2 className="heading__100--bold subtitle">Skills</h2>
 
@@ -362,7 +419,12 @@ const CV = () => {
                 </section>
 
                 <section className="languages-cv">
-                    <img className="icon" src={Languages} alt="language" />
+                    <img
+                        className="icon"
+                        src={Languages}
+                        alt="Languages icon"
+                        loading="lazy"
+                    />
                     <article className="languages-cv__text-box">
                         <h2 className="heading__200--bold subtitle">
                             Languages
@@ -388,29 +450,38 @@ const CV = () => {
                 </section>
 
                 <section className="hobbies-cv">
-                    <img className="icon" src={Hobbies} alt="hobbies" />
+                    <img
+                        className="icon"
+                        src={Hobbies}
+                        alt="Hobbies icon"
+                        loading="lazy"
+                    />
                     <div className="hobbies-cv__text-box">
                         <h2 className="heading__200--bold subtitle">Hobbies</h2>
                         <div className="hobbies-cv__icons">
                             <img
                                 className="hobbies-cv__icon"
                                 src={Soccer}
-                                alt=""
+                                alt="Soccer icon"
+                                loading="lazy"
                             />
                             <img
                                 className="hobbies-cv__icon"
                                 src={Ride}
-                                alt=""
+                                alt="Biking icon"
+                                loading="lazy"
                             />
                             <img
                                 className="hobbies-cv__icon"
                                 src={Paint}
-                                alt=""
+                                alt="Painting icon"
+                                loading="lazy"
                             />
                             <img
                                 className="hobbies-cv__icon"
                                 src={Cook}
-                                alt=""
+                                alt="Cooking icon"
+                                loading="lazy"
                             />
                         </div>
                     </div>

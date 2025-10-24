@@ -2,6 +2,8 @@
 @use '../../styles/ConfigStyles/base' as *;
 @use '../../styles/ConfigStyles/layout' as *;
 
+/* (grid placement via wrapper .profile will be used instead) */
+
 .hero-about {
     align-items: center;
     display: flex;
@@ -71,6 +73,85 @@
                 -50%
             ); // Move the image back by half its size
             object-fit: cover;
+        }
+    }
+}
+
+/* About contact-style full width section overrides */
+.about-contact-section {
+    /* Full-bleed without creating horizontal scroll.
+         Use a position/offset technique and border-box so padding
+         doesn't add to the visual width (avoids scrollbar overflow). */
+    display: flex;
+    padding: $section-padding 0; /* vertical padding; inner container handles horizontal */
+    box-sizing: border-box;
+    background: transparent;
+    margin: $size-8 0;
+
+    /* Inner surface that visually looks like a card and contains the content */
+    .contact-container {
+        max-width: none; /* let it span full width similar to hero */
+        max-width: 800px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: $size-8;
+        padding: $section-padding $gutter-horizontal;
+        background: $card-background-default; /* neutral card background from tokens */
+        border-radius: $card-border-radius;
+        box-shadow: $card-box-shadow;
+        margin: 0 auto;
+        box-sizing: border-box; /* include padding in element width to avoid overflow */
+
+        @include mq(medium) {
+            flex-direction: column;
+            text-align: center;
+            gap: $size-6;
+        }
+
+        &__heading {
+            width: 100%;
+            flex: 1 1 auto;
+            text-align: left;
+            @include mq(medium) {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        &__paragraph,
+        .about-summary {
+            color: $color-text-secondary;
+            margin: 0;
+        }
+
+        &__btns {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex: 0 0 auto;
+            width: auto;
+
+            @include mq(medium) {
+                justify-content: center;
+                width: 100%;
+            }
+
+            a.email {
+                display: inline-block;
+                width: auto;
+            }
+        }
+
+        /* Ensure the Button inside the contact fills on small screens */
+        Button,
+        .contact-container__email-btn {
+            width: 220px;
+            @include mq(small) {
+                width: 100%;
+            }
         }
     }
 }
