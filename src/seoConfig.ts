@@ -106,6 +106,8 @@ export const seoConfig = {
             'Design system project for satellite imagery platform. Creating intuitive interfaces for complex geospatial data and enhancing user collaboration across teams.',
         url: 'https://sebastiangonzalez.design/projects/aleph',
         robots: 'index, follow',
+        image: 'https://sebastiangonzalez.design/images/projects/aleph/project.png',
+        type: 'article',
         structuredData: {
             '@context': 'https://schema.org',
             '@type': 'CreativeWork',
@@ -157,6 +159,8 @@ export const seoConfig = {
             'Mobile application design for Essilor optical business partners. Interface design focused on commercial process and brand consistency.',
         url: 'https://sebastiangonzalez.design/projects/essilor',
         robots: 'index, follow',
+        image: 'https://sebastiangonzalez.design/images/projects/essilor/project.png',
+        type: 'article',
         structuredData: undefined,
     },
     landing: {
@@ -165,6 +169,8 @@ export const seoConfig = {
             'Landing page design for Samsung S21 contest. Web interface with Lottie animations and brand-consistent visual design.',
         url: 'https://sebastiangonzalez.design/projects/landing',
         robots: 'index, follow',
+        image: 'https://sebastiangonzalez.design/images/projects/landing/project.png',
+        type: 'article',
         structuredData: undefined,
     },
     solvefortomorrow: {
@@ -173,6 +179,8 @@ export const seoConfig = {
             'Samsung Solve For Tomorrow contest platform design. Interactive web interface with Lottie animations for student and teacher project submissions.',
         url: 'https://sebastiangonzalez.design/projects/solvefortomorrow',
         robots: 'index, follow',
+        image: 'https://sebastiangonzalez.design/images/projects/solvefortomorrow/project.png',
+        type: 'article',
         structuredData: undefined,
     },
     startoken: {
@@ -181,6 +189,8 @@ export const seoConfig = {
             'Design token naming methodology for design systems. Unblock token naming conventions and create scalable design token architecture.',
         url: 'https://sebastiangonzalez.design/projects/startoken',
         robots: 'index, follow',
+        image: 'https://sebastiangonzalez.design/images/projects/startoken/project.png',
+        type: 'article',
         structuredData: undefined,
     },
     // MUIK Motion UI Kit landing page
@@ -190,6 +200,8 @@ export const seoConfig = {
             'A free + pro-ready library of polished UI micro-interactions for React & Framer Motion. Dark mode first, copy-paste components, and smooth 60fps animations.',
         url: 'https://sebastiangonzalez.design/motion-ui-kit',
         robots: 'index, follow',
+        image: 'https://sebastiangonzalez.design/images/projects/motion-ui-kit/cover.png',
+        type: 'website',
         structuredData: undefined,
     },
     // MUIK Project case study (different from landing page)
@@ -199,6 +211,8 @@ export const seoConfig = {
             'Design system case study: Building a comprehensive UI component library with React, TypeScript, and Framer Motion. Design tokens, dark mode, and micro-interactions.',
         url: 'https://sebastiangonzalez.design/projects/MUIK',
         robots: 'index, follow',
+        image: 'https://sebastiangonzalez.design/images/projects/MUIK/project.png',
+        type: 'article',
         structuredData: undefined,
     },
     // Example for a protected/private page
