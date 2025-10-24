@@ -161,7 +161,26 @@ export const seoConfig = {
         robots: 'index, follow',
         image: 'https://sebastiangonzalez.design/images/projects/essilor/project.png',
         type: 'article',
-        structuredData: undefined,
+        structuredData: {
+            '@context': 'https://schema.org',
+            '@type': 'MobileApplication',
+            name: 'Essilor Mobile App',
+            url: 'https://sebastiangonzalez.design/projects/essilor',
+            description:
+                'Mobile application for Essilor business partners focused on commercial workflows and consistent brand experience.',
+            author: {
+                '@type': 'Person',
+                name: 'Sebastian González',
+                url: 'https://sebastiangonzalez.design/',
+            },
+            provider: {
+                '@type': 'Organization',
+                name: 'Sebastian González Design',
+            },
+            applicationCategory: 'BusinessApplication',
+            operatingSystem: 'iOS, Android',
+            image: 'https://sebastiangonzalez.design/images/projects/essilor/project.png',
+        },
     },
     landing: {
         title: 'Samsung S21 Landing Page – Sebastian González',
@@ -171,7 +190,26 @@ export const seoConfig = {
         robots: 'index, follow',
         image: 'https://sebastiangonzalez.design/images/projects/landing/project.png',
         type: 'article',
-        structuredData: undefined,
+        structuredData: {
+            '@context': 'https://schema.org',
+            '@type': 'SoftwareApplication',
+            name: 'Samsung S21 Landing Page',
+            url: 'https://sebastiangonzalez.design/projects/landing',
+            description:
+                'Interactive landing page showcasing Samsung S21 visuals with Lottie animations and progressive UX.',
+            author: {
+                '@type': 'Person',
+                name: 'Sebastian González',
+                url: 'https://sebastiangonzalez.design/',
+            },
+            provider: {
+                '@type': 'Organization',
+                name: 'Sebastian González Design',
+            },
+            applicationCategory: 'WebApplication',
+            operatingSystem: 'Web',
+            image: 'https://sebastiangonzalez.design/images/projects/landing/project.png',
+        },
     },
     solvefortomorrow: {
         title: 'Solve For Tomorrow Contest – Sebastian González',
@@ -181,7 +219,26 @@ export const seoConfig = {
         robots: 'index, follow',
         image: 'https://sebastiangonzalez.design/images/projects/solvefortomorrow/project.png',
         type: 'article',
-        structuredData: undefined,
+        structuredData: {
+            '@context': 'https://schema.org',
+            '@type': 'SoftwareApplication',
+            name: 'Solve For Tomorrow Platform',
+            url: 'https://sebastiangonzalez.design/projects/solvefortomorrow',
+            description:
+                'Contest platform for students and teachers with interactive submissions and community features.',
+            author: {
+                '@type': 'Person',
+                name: 'Sebastian González',
+                url: 'https://sebastiangonzalez.design/',
+            },
+            provider: {
+                '@type': 'Organization',
+                name: 'Sebastian González Design',
+            },
+            applicationCategory: 'EducationApplication',
+            operatingSystem: 'Web',
+            image: 'https://sebastiangonzalez.design/images/projects/solvefortomorrow/project.png',
+        },
     },
     startoken: {
         title: 'Startoken Design System – Sebastian González',
@@ -191,7 +248,23 @@ export const seoConfig = {
         robots: 'index, follow',
         image: 'https://sebastiangonzalez.design/images/projects/startoken/project.png',
         type: 'article',
-        structuredData: undefined,
+        structuredData: {
+            '@context': 'https://schema.org',
+            '@type': 'CreativeWork',
+            name: 'Startoken Design Tokens',
+            url: 'https://sebastiangonzalez.design/projects/startoken',
+            description:
+                'Design token naming methodology and architecture for scalable design systems.',
+            author: {
+                '@type': 'Person',
+                name: 'Sebastian González',
+                url: 'https://sebastiangonzalez.design/',
+            },
+            provider: {
+                '@type': 'Organization',
+                name: 'Sebastian González Design',
+            },
+        },
     },
     // MUIK Motion UI Kit landing page
     motionUIKit: {
@@ -213,7 +286,26 @@ export const seoConfig = {
         robots: 'index, follow',
         image: 'https://sebastiangonzalez.design/images/projects/MUIK/project.png',
         type: 'article',
-        structuredData: undefined,
+        structuredData: {
+            '@context': 'https://schema.org',
+            '@type': 'SoftwareApplication',
+            name: 'Motion UI Kit',
+            url: 'https://sebastiangonzalez.design/projects/MUIK',
+            description:
+                'A library of UI micro-interactions for React & Framer Motion; includes components, tokens, and usage patterns.',
+            author: {
+                '@type': 'Person',
+                name: 'Sebastian González',
+                url: 'https://sebastiangonzalez.design/',
+            },
+            provider: {
+                '@type': 'Organization',
+                name: 'Sebastian González Design',
+            },
+            applicationCategory: 'DeveloperTool',
+            operatingSystem: 'Web',
+            image: 'https://sebastiangonzalez.design/images/projects/MUIK/project.png',
+        },
     },
     // Example for a protected/private page
     hub: {
