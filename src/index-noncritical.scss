@@ -1,0 +1,13 @@
+// The full global styles previously loaded synchronously are now moved here
+// This file will be dynamically imported after hydration so non-critical rules
+// don't bloat the critical CSS inlined by react-snap.
+
+@use './styles/ConfigStyles/abstracts' as *;
+@use './styles/ConfigStyles/base' as *;
+@use './styles/ConfigStyles/layout' as *;
+@use './styles/ConfigStyles/utilities' as *;
+
+/*
+  index-noncritical.scss intentionally mirrors the previous src/index.scss
+  so it contains the full set of utilities/layout rules which are safe to defer.
+*/

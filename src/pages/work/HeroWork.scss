@@ -1,7 +1,9 @@
 @use '../../styles/ConfigStyles/abstracts' as *;
-@use '../../styles/ConfigStyles/base' as *;
-@use '../../styles/ConfigStyles/layout' as *;
-@use '../../styles/ConfigStyles/utilities' as *;
+
+// Note: keep only the abstracts (variables, mixins, tokens) here so the
+// component CSS doesn't pull in the full utilities/layout bundles into the
+// critical chunk. Larger utility and layout rules are loaded from
+// index-noncritical.scss which is imported lazily.
 
 .section-hero {
     padding-block: $hero-padding;

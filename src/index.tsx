@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client' // Change the import here
-import './index.scss'
+import './index-critical.scss'
 import App from './App'
 import { initGA } from './services/analytics'
 

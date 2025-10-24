@@ -14,7 +14,10 @@ const Work = () => {
 
     // Lazy-load homepage-specific styles after hydration to reduce critical CSS
     useEffect(() => {
+        // load the home page styling and the rest of the global (non-critical) styles
+        // after hydration. This keeps the inlined critical CSS small for react-snap.
         import('./home.page.scss')
+        import('../../index-noncritical.scss')
     }, [])
 
     // Scroll-to-end tracking

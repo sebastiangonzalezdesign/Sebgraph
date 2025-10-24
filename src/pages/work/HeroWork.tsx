@@ -34,7 +34,7 @@ const HeroWork = () => {
             <article className="section-hero__text-container">
                 <div className="section-hero__text-container__text">
                     <motion.h1
-                        id="work"
+                        id="hero-heading"
                         className="display__100--bold section-hero__heading"
                         variants={fadeUpVariants}
                         initial="initial"
@@ -47,6 +47,10 @@ const HeroWork = () => {
                     >
                         UI Designer for Design Systems & Products
                     </motion.h1>
+                    <h2 className="sr-only">
+                        Introduction — UI Designer for Design Systems &amp;
+                        Products
+                    </h2>
                     <motion.p
                         className="paragraph__100--regular section-hero__paragraph"
                         variants={fadeUpVariants}
@@ -89,6 +93,7 @@ const HeroWork = () => {
                     <a
                         href="mailto:info@sebastiangonzalez.design"
                         className="email"
+                        aria-label="Email Sebastian Gonzalez — Let's talk"
                     >
                         <Button
                             type="button"
@@ -102,10 +107,15 @@ const HeroWork = () => {
                                 })
                             }
                         >
-                            Lets talk
+                            Let's talk
                         </Button>
                     </a>
-                    <a href={Cv} rel="noreferrer" download="">
+                    <a
+                        href={Cv}
+                        rel="noreferrer"
+                        download=""
+                        aria-label="Download Sebastian Gonzalez CV"
+                    >
                         <Button
                             type="button"
                             buttonStyle="btn--primary"

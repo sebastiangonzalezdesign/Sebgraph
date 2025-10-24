@@ -8,32 +8,47 @@ export const seoConfig = {
         robots: 'index, follow',
         structuredData: {
             '@context': 'https://schema.org',
-            '@type': 'Person',
-            name: 'Sebastian González',
-            jobTitle: 'UI Designer & Design System Developer',
-            description:
-                'UI designer focused on scalable design systems and front-end development',
-            url: 'https://sebastiangonzalez.design/',
-            sameAs: [
-                'https://github.com/sebasgonzac',
-                'https://linkedin.com/in/sebastian-gonzalez-design',
+            '@graph': [
+                {
+                    '@type': 'Person',
+                    name: 'Sebastian González',
+                    jobTitle: 'UI Designer & Design System Developer',
+                    description:
+                        'UI designer focused on scalable design systems and front-end development',
+                    url: 'https://sebastiangonzalez.design/',
+                    sameAs: [
+                        'https://github.com/sebasgonzac',
+                        'https://linkedin.com/in/sebastian-gonzalez-design',
+                    ],
+                    worksFor: {
+                        '@type': 'Organization',
+                        name: 'Sebastian González Design',
+                    },
+                    knowsAbout: [
+                        'UI Design',
+                        'Design Systems',
+                        'Frontend Development',
+                        'React',
+                        'TypeScript',
+                    ],
+                    address: {
+                        '@type': 'Place',
+                        addressLocality: 'Bogotá',
+                        addressCountry: 'Colombia',
+                    },
+                },
+                {
+                    '@type': 'WebSite',
+                    name: 'Sebastian González – UI Designer & Design System Developer',
+                    url: 'https://sebastiangonzalez.design/',
+                    description:
+                        'Portfolio and case studies by Sebastian González — UI design, design systems and front-end collaboration.',
+                    publisher: {
+                        '@type': 'Organization',
+                        name: 'Sebastian González Design',
+                    },
+                },
             ],
-            worksFor: {
-                '@type': 'Organization',
-                name: 'Sebastian González Design',
-            },
-            knowsAbout: [
-                'UI Design',
-                'Design Systems',
-                'Frontend Development',
-                'React',
-                'TypeScript',
-            ],
-            address: {
-                '@type': 'Place',
-                addressLocality: 'Bogotá',
-                addressCountry: 'Colombia',
-            },
         },
     },
     about: {

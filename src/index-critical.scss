@@ -1,0 +1,12 @@
+@use './styles/ConfigStyles/abstracts' as *;
+// Load only the minimal base pieces needed for first paint (variables, reset, fonts, root rules)
+@use './styles/ConfigStyles/base/reset' as *;
+@use './styles/ConfigStyles/base/font-face' as *;
+@use './styles/ConfigStyles/base/root' as *;
+@use './styles/ConfigStyles/base/general' as *;
+
+/*
+  index-critical.scss should include only the very small set of rules necessary
+  for the initial render (variables, font-face declarations, reset and basic root)
+  All other global/layout/utilities will be loaded lazily from index-noncritical.scss
+*/
