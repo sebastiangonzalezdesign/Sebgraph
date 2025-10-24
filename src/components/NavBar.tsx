@@ -46,6 +46,12 @@ const NavBar = () => {
             category: 'Navigation',
             label: section,
         })
+        // notify top-level that navigation has started so we can show a spinner
+        try {
+            window.dispatchEvent(new CustomEvent('app:navigateStart'))
+        } catch (e) {
+            // ignore if CustomEvent is not supported
+        }
     }
 
     return (

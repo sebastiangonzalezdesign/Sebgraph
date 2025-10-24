@@ -1,6 +1,7 @@
 import './HeroWork.scss'
 import '../../styles/ConfigStyles/utilities/_index.scss'
 import { Suspense, lazy, useContext } from 'react'
+import Spinner from '../../components/Spinner'
 import ThemeContext from '../../context/ThemeContext'
 import React from 'react'
 import { Button } from '../../components/Button'
@@ -23,7 +24,7 @@ const HeroWork = () => {
     // are available immediately and animations render correctly.
 
     if (!context) {
-        return <div>Loading...</div>
+        return <Spinner />
     }
 
     const { theme } = context
@@ -135,7 +136,7 @@ const HeroWork = () => {
                     stiffness: 45,
                 }}
             >
-                <Suspense fallback={<div>Loading...</div>}>
+                <Suspense fallback={<Spinner />}>
                     <Hero className="section-hero__3d" />
                 </Suspense>
             </motion.div>
