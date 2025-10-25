@@ -102,6 +102,22 @@ const MUIK = () => {
                                         Learn more about Motion UI Kit
                                     </Button>
                                 </div>
+                                <p
+                                    className="paragraph__100--medium"
+                                    style={{ marginTop: '0.75rem' }}
+                                >
+                                    Note: the interactive demo is hosted on a
+                                    separate subdomain (
+                                    <a
+                                        href="https://motion.sebastiangonzalez.design"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        motion.sebastiangonzalez.design
+                                    </a>
+                                    ). This demo is maintained independently but
+                                    is part of the Motion UI Kit project.
+                                </p>
                             </div>
                         </article>
                     </section>

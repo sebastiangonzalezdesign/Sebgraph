@@ -275,7 +275,25 @@ export const seoConfig = {
         robots: 'index, follow',
         image: 'https://sebastiangonzalez.design/images/projects/motion-ui-kit/cover.png',
         type: 'website',
-        structuredData: undefined,
+        structuredData: {
+            '@context': 'https://schema.org',
+            '@type': 'CreativeWork',
+            name: 'Motion UI Kit (landing)',
+            url: 'https://motion.sebastiangonzalez.design/',
+            description:
+                'Landing and lead capture for Motion UI Kit. Live demo and interactive examples are hosted at motion.sebastiangonzalez.design.',
+            creator: {
+                '@type': 'Person',
+                name: 'Sebastian González',
+                url: 'https://sebastiangonzalez.design/',
+            },
+            isPartOf: {
+                '@type': 'WebSite',
+                name: 'Sebastian González Portfolio',
+                url: 'https://sebastiangonzalez.design/',
+            },
+            sameAs: ['https://motion.sebastiangonzalez.design/'],
+        },
     },
     // MUIK Project case study (different from landing page)
     muikProject: {
@@ -305,6 +323,7 @@ export const seoConfig = {
             applicationCategory: 'DeveloperTool',
             operatingSystem: 'Web',
             image: 'https://sebastiangonzalez.design/images/projects/MUIK/project.png',
+            sameAs: ['https://motion.sebastiangonzalez.design/'],
         },
     },
     // Example for a protected/private page
