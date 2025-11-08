@@ -89,7 +89,7 @@ const MUIK = () => {
                         </article>
                     </section>
 
-                    {/* TL;DR Summary */}
+                    {/* Focus Summary */}
                     <section className="modal__tldr-section">
                         <div className="modal__role-tags">
                             <span className="modal__role-tag">
@@ -109,7 +109,7 @@ const MUIK = () => {
                             className="paragraph__100--bold"
                             style={{ marginBottom: '1rem' }}
                         >
-                            TL;DR: Focused on making motion reusable, tokenized,
+                            Focus: Focused on making motion reusable, tokenized,
                             and accessible — defining animation tokens for
                             easing, duration, and scale to standardize motion
                             behaviors across apps.

@@ -85,7 +85,7 @@ const AlephDS = () => {
                         </article>
                     </section>
 
-                    {/* TL;DR Summary */}
+                    {/* Focus Summary */}
                     <section className="modal__tldr-section">
                         <div className="modal__role-tags">
                             <span className="modal__role-tag">
@@ -103,7 +103,7 @@ const AlephDS = () => {
                             className="paragraph__100--bold"
                             style={{ marginBottom: '1rem' }}
                         >
-                            TL;DR: Built a cross-platform design system from
+                            Focus: Built a cross-platform design system from
                             scratch to unify map-based tools, improving design
                             consistency and developer efficiency by 30%.
                         </p>

@@ -87,7 +87,7 @@ const Startoken = () => {
                         </article>
                     </section>
 
-                    {/* TL;DR Summary */}
+                    {/* Focus Summary */}
                     <section className="modal__tldr-section">
                         <div className="modal__role-tags">
                             <span className="modal__role-tag">
@@ -107,7 +107,7 @@ const Startoken = () => {
                             className="paragraph__100--bold"
                             style={{ marginBottom: '1rem' }}
                         >
-                            TL;DR: Experimented with automating token generation
+                            Focus: Experimented with automating token generation
                             for naming and structure consistency. The tool
                             exports ready-to-use JSON/CSS templates, bridging
                             design and development workflows.

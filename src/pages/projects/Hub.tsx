@@ -78,7 +78,7 @@ const Hub = () => {
                         </article>
                     </section>
 
-                    {/* TL;DR Summary */}
+                    {/* Focus Summary */}
                     <section className="modal__tldr-section">
                         <div className="modal__role-tags">
                             <span className="modal__role-tag">
@@ -96,7 +96,7 @@ const Hub = () => {
                             className="paragraph__100--bold"
                             style={{ marginBottom: '1rem' }}
                         >
-                            TL;DR: Redesigned and scaled a mobile design system
+                            Focus: Redesigned and scaled a mobile design system
                             with robust theming architecture, reducing UI
                             duplication by 40% across mobile and web platforms.
                         </p>
