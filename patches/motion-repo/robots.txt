@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# If you generate a sitemap for the subdomain, point to it here
+Sitemap: https://motion.sebastiangonzalez.design/sitemap.xml

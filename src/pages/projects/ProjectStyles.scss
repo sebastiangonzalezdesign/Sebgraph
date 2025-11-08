@@ -517,6 +517,99 @@
         background-color: $color-primary-200;
         border-top-left-radius: 8px;
     }
+
+    /* ---------- Project Summary Styles ---------- */
+    &__tldr-section {
+        background: $color-background-gradient1;
+        border-radius: $border-radius-1;
+        padding: $size-6;
+        margin-bottom: $size-8;
+        max-width: 75rem;
+        width: 100%;
+
+        @include mq(medium) {
+            padding: $size-4;
+            margin-bottom: $size-6;
+        }
+    }
+
+    &__role-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $size-2;
+        margin-bottom: $size-4;
+
+        @include mq(medium) {
+            gap: $size-1;
+            margin-bottom: $size-3;
+        }
+    }
+
+    &__role-tag {
+        background-color: $color-background-primary-default;
+        color: $color-text-primary-default;
+        border: solid 1px $color-border-primary-default;
+        padding: $size-1 $size-3;
+        border-radius: $border-radius-full;
+        font-size: $font-size-200;
+        font-weight: $font-weight-semi-bold;
+        font-family: $font-family-accent;
+
+        @include mq(medium) {
+            font-size: $font-size-100;
+            padding: $size-1 $size-2;
+        }
+    }
+
+    &__collaboration-callout {
+        background-color: $color-background-primary-default;
+        border-radius: $border-radius-2;
+        padding: $size-4;
+        margin: $size-6 0;
+
+        @include mq(medium) {
+            padding: $size-3;
+            margin: $size-4 0;
+        }
+    }
+
+    &__impact-highlight {
+        background-color: $color-success-100;
+        border-radius: $border-radius-2;
+        padding: $size-4;
+        margin: $size-6 0;
+
+        @include mq(medium) {
+            padding: $size-3;
+            margin: $size-4 0;
+        }
+    }
+
+    &__impact-list {
+        list-style: none;
+        text-align: left;
+        margin: 0;
+        padding: 0;
+
+        li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: $size-2;
+            gap: $size-2;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            .impact-icon {
+                width: $size-5;
+                height: $size-5;
+                flex-shrink: 0;
+                margin-top: 2px;
+                color: $color-primary-600;
+            }
+        }
+    }
 }
 
 .prototype {

@@ -7,7 +7,12 @@ import SEO from '../../components/SEO'
 import { seoConfig } from '../../seoConfig'
 import { Button } from '../../components/Button'
 import Video from '../../components/Video'
-import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline'
+import {
+    ArrowTopRightOnSquareIcon,
+    RocketLaunchIcon,
+    BoltIcon,
+    WrenchScrewdriverIcon,
+} from '@heroicons/react/24/outline'
 
 const Startoken = () => {
     const [dataPortfolio] = useState(StartokenDS)
@@ -80,6 +85,41 @@ const Startoken = () => {
                                 </p>
                             </div>
                         </article>
+                    </section>
+
+                    {/* TL;DR Summary */}
+                    <section className="modal__tldr-section">
+                        <div className="modal__role-tags">
+                            <span className="modal__role-tag">
+                                Design Technologist
+                            </span>
+                            <span className="modal__role-tag">
+                                React + Supabase
+                            </span>
+                            <span className="modal__role-tag">
+                                Token Automation
+                            </span>
+                            <span className="modal__role-tag">
+                                Figma Plugins
+                            </span>
+                        </div>
+                        <p
+                            className="paragraph__100--bold"
+                            style={{ marginBottom: '1rem' }}
+                        >
+                            TL;DR: Experimented with automating token generation
+                            for naming and structure consistency. The tool
+                            exports ready-to-use JSON/CSS templates, bridging
+                            design and development workflows.
+                        </p>
+                        <div className="modal__collaboration-callout">
+                            <p className="paragraph__200--medium">
+                                <strong>Tech Stack & Vision:</strong> Built with
+                                React + Supabase; currently exploring Figma
+                                plugin integration to streamline
+                                design-to-development handoff processes.
+                            </p>
+                        </div>
                     </section>
 
                     {/* <!-- Section challenge --> */}
@@ -363,6 +403,48 @@ const Startoken = () => {
                                 <li>{dataPortfolio.reflectionsBullet3}</li>
                             </ul>
                         </article>
+
+                        {/* Design Technologist Positioning */}
+                        <div className="modal__impact-highlight">
+                            <h4
+                                className="heading__200--bold"
+                                style={{ marginBottom: '1rem' }}
+                            >
+                                Design Technologist Impact
+                            </h4>
+                            <p
+                                className="paragraph__200--medium"
+                                style={{ marginBottom: '1rem' }}
+                            >
+                                This experimental tool demonstrates my approach
+                                to bridging design and development through
+                                automation and systematic thinking.
+                            </p>
+                            <ul className="paragraph__200--medium modal__impact-list">
+                                <li>
+                                    <RocketLaunchIcon className="impact-icon" />
+                                    <span>
+                                        Live React app showcasing technical
+                                        implementation skills
+                                    </span>
+                                </li>
+                                <li>
+                                    <BoltIcon className="impact-icon" />
+                                    <span>
+                                        Automated workflows that reduce manual
+                                        token creation time
+                                    </span>
+                                </li>
+                                <li>
+                                    <WrenchScrewdriverIcon className="impact-icon" />
+                                    <span>
+                                        Currently exploring Figma plugin
+                                        integration for seamless design-dev
+                                        handoff
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
 
                         <div className="modal__final-reflection">
                             <h4 className="paragraph__100--bold">

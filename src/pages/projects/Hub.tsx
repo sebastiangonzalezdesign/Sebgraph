@@ -78,6 +78,40 @@ const Hub = () => {
                         </article>
                     </section>
 
+                    {/* TL;DR Summary */}
+                    <section className="modal__tldr-section">
+                        <div className="modal__role-tags">
+                            <span className="modal__role-tag">
+                                Design Systems
+                            </span>
+                            <span className="modal__role-tag">
+                                Theme Architecture
+                            </span>
+                            <span className="modal__role-tag">
+                                Mobile & Web
+                            </span>
+                            <span className="modal__role-tag">Foundations</span>
+                        </div>
+                        <p
+                            className="paragraph__100--bold"
+                            style={{ marginBottom: '1rem' }}
+                        >
+                            TL;DR: Redesigned and scaled a mobile design system
+                            with robust theming architecture, reducing UI
+                            duplication by 40% across mobile and web platforms.
+                        </p>
+                        <div className="modal__collaboration-callout">
+                            <p className="paragraph__200--medium">
+                                <strong>Engineering Partnership:</strong>{' '}
+                                Collaborated closely with front-end teams using
+                                Storybook and token pipelines to ensure
+                                Figma-to-code parity across Jetpack Compose
+                                (Android), SwiftUI (iOS), and React (Web)
+                                implementations.
+                            </p>
+                        </div>
+                    </section>
+
                     {/* <!-- Section define --> */}
                     <section className="modal__define__box">
                         <article className="modal__main-text-box">
@@ -307,6 +341,30 @@ const Hub = () => {
                                 <li>{dataPortfolio.resultsBullet4}</li>
                             </ul>
                         </article>
+
+                        {/* System Outcomes */}
+                        <div className="modal__impact-highlight">
+                            <h4
+                                className="heading__200--bold"
+                                style={{ marginBottom: '1rem' }}
+                            >
+                                System Impact & Future Readiness
+                            </h4>
+                            <p
+                                className="paragraph__200--medium"
+                                style={{ marginBottom: '1rem' }}
+                            >
+                                The design system reduced duplicated UI patterns
+                                by ~40% and improved consistency across mobile
+                                and web platforms.
+                            </p>
+                            <p className="paragraph__200--medium">
+                                <strong>Future Foundation:</strong> Built
+                                foundations for future dark mode and
+                                localization support, establishing scalable
+                                architecture for international expansion.
+                            </p>
+                        </div>
 
                         <article className="modal__text-box">
                             <h2 className="display__200--regular modal__title modal__end__text">

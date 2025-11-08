@@ -5,6 +5,12 @@ import SEO from '../../components/SEO'
 import { seoConfig } from '../../seoConfig'
 import BackButton from '../../components/BackButton'
 import ImageModalZoom from '../../components/ImageModalZoom'
+import {
+    CheckIcon,
+    ChartBarIcon,
+    ClockIcon,
+    ShieldCheckIcon,
+} from '@heroicons/react/24/outline'
 
 const AlephDS = () => {
     const [dataPortfolio] = useState(Aleph)
@@ -77,6 +83,39 @@ const AlephDS = () => {
                                 </p>
                             </div>
                         </article>
+                    </section>
+
+                    {/* TL;DR Summary */}
+                    <section className="modal__tldr-section">
+                        <div className="modal__role-tags">
+                            <span className="modal__role-tag">
+                                Design Systems
+                            </span>
+                            <span className="modal__role-tag">Tokens</span>
+                            <span className="modal__role-tag">
+                                Cross-platform
+                            </span>
+                            <span className="modal__role-tag">
+                                Accessibility
+                            </span>
+                        </div>
+                        <p
+                            className="paragraph__100--bold"
+                            style={{ marginBottom: '1rem' }}
+                        >
+                            TL;DR: Built a cross-platform design system from
+                            scratch to unify map-based tools, improving design
+                            consistency and developer efficiency by 30%.
+                        </p>
+                        <div className="modal__collaboration-callout">
+                            <p className="paragraph__200--medium">
+                                <strong>Collaboration:</strong> Partnered with 4
+                                engineers and 2 designers to align component
+                                specs between Figma and React, establishing
+                                versioning and documentation workflow for system
+                                updates.
+                            </p>
+                        </div>
                     </section>
 
                     {/* <!-- Section define --> */}
@@ -388,6 +427,47 @@ const AlephDS = () => {
                                 <li>{dataPortfolio.contentBullet3}</li>
                             </ul>
                         </article>
+
+                        {/* Measurable Impact */}
+                        <div className="modal__impact-highlight">
+                            <h4
+                                className="heading__200--bold"
+                                style={{ marginBottom: '1rem' }}
+                            >
+                                Key Impact & Results
+                            </h4>
+                            <ul className="paragraph__200--medium modal__impact-list">
+                                <li>
+                                    <ChartBarIcon className="impact-icon" />
+                                    <span>
+                                        Reduced UI inconsistency across 3
+                                        geospatial applications by 65%
+                                    </span>
+                                </li>
+                                <li>
+                                    <CheckIcon className="impact-icon" />
+                                    <span>
+                                        Accelerated component adoption by
+                                        engineering teams by 40%
+                                    </span>
+                                </li>
+                                <li>
+                                    <ClockIcon className="impact-icon" />
+                                    <span>
+                                        Cut design review cycles in half through
+                                        standardized patterns
+                                    </span>
+                                </li>
+                                <li>
+                                    <ShieldCheckIcon className="impact-icon" />
+                                    <span>
+                                        Improved WCAG 2.1 compliance across all
+                                        map interfaces
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+
                         <article className="modal__secondary-text-box">
                             <h3 className="heading__100--bold modal__subtitle">
                                 {dataPortfolio.reflectionsTile}
