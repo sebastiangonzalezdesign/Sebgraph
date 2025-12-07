@@ -57,7 +57,9 @@ const ImageModalZoom = ({
                     >
                         <motion.div
                             className="modal-zoom__content"
-                            onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the modal content
+                            onClick={(e: React.MouseEvent) =>
+                                e.stopPropagation()
+                            } // Prevent closing when clicking inside the modal content
                             initial={{ scale: 0.8 }}
                             animate={{ scale: 1 }}
                             exit={{ scale: 0.8 }}
