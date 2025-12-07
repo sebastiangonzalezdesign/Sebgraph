@@ -160,7 +160,7 @@ const Portfolio = forwardRef<HTMLDivElement, {}>((props, ref) => {
                                         width={600}
                                         height={360}
                                         {...(i === 0
-                                            ? { fetchpriority: 'high' as any }
+                                            ? { fetchPriority: 'high' as any }
                                             : { loading: 'lazy' })}
                                     />
                                 </div>
