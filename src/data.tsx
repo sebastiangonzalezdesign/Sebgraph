@@ -27,7 +27,7 @@ export const allPortfolio: PortfolioItem[] = [
     {
         id: '7',
         key: 'startoken',
-        title: 'Unblock Token namings',
+        title: 'Startoken — Design Token Pipeline (Figma → Code)',
         overview: 'Design System | Design Tokens | Naming',
         img: 'https://sebastiangonzalez.design/images/thumbnails/thumbnail-startoken2.webp',
         bgClass: 'card-background-startoken',
@@ -157,7 +157,7 @@ export const codePortfolio: PortfolioItem[] = [
     {
         id: '7',
         key: 'startoken',
-        title: 'Unblock Token namings',
+        title: 'Startoken — Design Token Pipeline (Figma → Code)',
         overview: 'Design System | Design Tokens | Naming',
         img: 'https://sebastiangonzalez.design/images/thumbnails/thumbnail-startoken2.webp',
         bgClass: 'card-background-startoken',
@@ -193,7 +193,7 @@ export const dsPortfolio: PortfolioItem[] = [
     {
         id: '7',
         key: 'startoken',
-        title: 'Unblock Token namings',
+        title: 'Startoken — Design Token Pipeline (Figma → Code)',
         overview: 'Design System | Design Tokens | Naming',
         img: 'https://sebastiangonzalez.design/images/thumbnails/thumbnail-startoken2.webp',
         bgClass: 'card-background-startoken',

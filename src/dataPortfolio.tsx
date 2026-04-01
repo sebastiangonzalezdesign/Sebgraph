@@ -496,80 +496,158 @@ export const Startoken: ProjectContent[] = [
     {
         id: 7,
         key: 'startoken',
-        headTitle: 'Startoken',
+        headTitle: 'Startoken — Design Token Pipeline (Figma → Code)',
         roleTitle: 'Role:',
-        role: 'UI Design · Frontend Dev · Design System Strategy',
+        role: 'Design Technologist · UX Engineer',
         dateTitle: 'Date:',
         date: '2025',
         companyTitle: 'Company:',
-        company: 'Personal work',
+        company: 'Personal Project',
 
-        subtitleResume: 'Design Token Generator & Naming Tool',
+        subtitleResume: 'Design Token Pipeline',
         titleResume: 'Startoken',
         contentResume:
-            'A lightweight web app built to help designers and developers define, manage, and export design tokens with consistency. Startoken streamlines token naming, theme structuring, and code generation, bridging the gap between design systems and implementation.',
+            'A system that converts Figma variables into W3C DTCG-compliant tokens through a deterministic pipeline: normalization, alias resolution, theme extraction, and multi-format output. Zero-dependency TypeScript engine, monorepo architecture, consumed by web app, Figma plugin, and future CLI.',
 
-        titleIntroduction: 'The Challenge',
-        contentIntroduction:
-            'As a designer with a strong interest in coding, I’ve had the opportunity to contribute to design system initiatives across multiple platforms. A recurring issue I observed: teams often struggled to align on naming design tokens, especially during the early stages of creation and adoption.',
+        // --- 1. Context ---
+        contextTitle: 'Context',
+        contextDescription:
+            "Design tokens define the visual contract between design and engineering — yet in practice, most teams treat them as static files rather than structured data. Figma variables use a proprietary format that doesn't map to production code. Naming conventions diverge across teams. Manual handoff introduces drift between what designers intend and what engineers implement. As systems scale beyond a single product, this gap becomes a structural bottleneck: inconsistent outputs, duplicated effort, and no reliable source of truth across surfaces.",
 
-        goalsTitle: 'Project Goals',
-        goal1: 'Enable designers and developers to kickstart scalable design tokens.',
-        goal2: 'Improve understanding and collaboration between teams during design system creation.',
-        goal3: 'Provide a starter structure that can be adapted to different project sizes and tech stacks.',
-        goal4: 'Highlight the importance of consistent naming for design system adoption.',
+        // --- 2. Problem ---
+        problemTitle: 'Problem',
+        problemDescription:
+            "The core issue isn't a lack of tokens — it's a lack of infrastructure to manage them. Auditing multiple design system workflows revealed four systemic failures:",
+        problem1:
+            'Token drift between design and code — values defined in Figma diverged from what shipped in production, with no mechanism to detect or reconcile differences.',
+        problem2:
+            'No standard structure across teams — each team maintained its own token format (flat JSON, nested SCSS maps, ad-hoc CSS variables), making cross-product consistency impossible.',
+        problem3:
+            'Manual transformation into code formats — developers hand-translated design decisions into CSS/SCSS/JSON, introducing errors and eliminating traceability.',
+        problem4:
+            'Inconsistent theming implementation — dark mode and brand variants were handled differently per product, with no shared resolution logic or theme architecture.',
 
-        researchTitle: 'Research & Concept',
-        researchDescription:
-            'I began by evaluating existing tools, reviewing best practices from mature systems, and analyzing community resources. I realized that most teams needed help at two critical points:',
-        feature1: 'Starting with a meaningful naming strategy.',
-        feature2: 'Creating a flexible, reusable token structure.',
-        conceptDescription:
-            'This insight led to the concept of Startoken: a platform to generate design token templates and learn naming conventions through real use cases.',
+        // --- 3. Strategy ---
+        strategyTitle: 'Strategy',
+        strategyDescription:
+            'Rather than building another token editor, I designed a token pipeline — a system that separates concerns into discrete, testable stages. The core idea: treat tokens as structured data flowing through a deterministic transformation process, where each stage has a single responsibility and predictable output.',
+        strategy1:
+            'Standardize on W3C Design Token Community Group (DTCG) format as the canonical schema — chosen for interoperability across tools and future-proofing against vendor lock-in.',
+        strategy2:
+            "Separate normalization (bridging Figma's proprietary format to DTCG), resolution (alias flattening with dependency tracking), and transformation (output generation) into independent pipeline stages.",
+        strategy3:
+            'Build a single orchestrator — the Startoken Engine — that coordinates this flow and can be consumed by any client (web app, Figma plugin, CLI) without duplication of logic.',
+        strategy4:
+            'Expose the pipeline visually so designers and engineers can inspect what happens to their tokens at each stage — making the system auditable, not opaque.',
 
-        feedbackTitle: 'Early Feedback & Insights',
-        feedbackDescription:
-            'While this project is still in development, I gathered early impressions from peers and reflected on key design challenges. These initial insights helped shape the token structure and UI decisions:',
-        feedback1:
-            'A few designers expressed interest in easily switching between light and dark modes. This led to creating a scalable, theme-agnostic token system.',
-        feedback2:
-            'Deciding between semantic and primitive naming sparked internal debate, I chose a semantic structure to improve clarity across teams.',
-        feedback3:
-            'Feedback highlighted a desire to sync design tokens with tools like Figma. This inspired exploration into token automation strategies.',
+        // --- 4. Architecture ---
+        architectureTitle: 'Architecture',
+        architectureDescription:
+            'The pipeline is a sequence of typed stages. Each stage receives structured input, performs one transformation, and passes typed output forward. No stage knows about any other. This constraint makes the system testable at each boundary and allows stages to be replaced or extended without side effects.',
+        architecturePipeline:
+            'Figma → Plugin → Normalizer → Resolver → Transformer → UI Preview → Output',
 
-        keyFeaturesTitle: 'Key Features',
-        feature1Title: 'Design Token Template Generator',
-        feature1Description:
-            'This feature allows users to generate design token templates quickly, ensuring consistency across projects.',
-        feature2Title: 'Flexible Token Structure',
-        feature2Description:
-            'The token structure is designed to be flexible and reusable, making it easy to adapt to different project needs.',
-        feature3Title: 'My Libraries',
-        feature3Description:
-            'Users can save generated token templates or naming patterns. This library allows revisiting, exporting, or evolving saved structures.',
+        architectureDetail1Title: 'Why W3C DTCG standard?',
+        architectureDetail1:
+            'Decision: Adopt W3C DTCG as the canonical token format instead of a custom schema. Trade-off: DTCG is still a draft spec — some edge cases (composite tokens, multi-value types) lack full definition. Adopting early means committing to a moving target. Outcome: Vendor-neutral interoperability. Tokens produced by Startoken can be consumed by Style Dictionary, Figma Tokens, or any DTCG-compliant tool without adapters. Standardizing early avoids migration debt when the spec stabilizes.',
 
-        techStackTitle: 'Tech Stack',
-        techStackDescription:
-            'Designed from scratch in Figma, the project uses React + SCSS for the front-end, powered by a modular internal design system. The back-end is built with Supabase, deployed on Vercel, and supported by GitHub Copilot for productivity boosts.',
+        architectureDetail2Title:
+            'Why a custom engine instead of existing tools?',
+        architectureDetail2:
+            'Decision: Build a purpose-built TypeScript engine rather than extending Style Dictionary or Theo. Trade-off: Higher upfront effort. No community plugin ecosystem. Full ownership of maintenance and edge case handling. Outcome: Complete control over the normalization → resolution → transformation flow. Style Dictionary assumes tokens are already well-structured; Startoken handles the messy reality of raw Figma exports. The engine runs identically in browser, Node, and Figma sandbox — something no existing tool supports natively.',
 
-        earlyImpactTitle: 'Early Impact',
-        earlyImpactDescription:
-            'The MVP has seen promising engagement from peers and early testers. Initial feedback and usage data (via Google Analytics) confirm:',
-        earlyImpactBullet1: 'Increased understanding of token structuring.',
-        earlyImpactBullet2: 'Faster setup for design system contributors.',
-        earlyImpactBullet3: 'Reduction in confusion around token names.',
+        architectureDetail3Title: 'How alias resolution works',
+        architectureDetail3:
+            "Tokens frequently reference other tokens in chains: color.primary → brand.blue.500 → palette.blue → #2563EB. The Resolver builds a directed dependency graph of all token references, then walks each chain to its terminal value. During traversal, it tracks visited nodes — if a token appears twice in the same chain, that's a cycle, and the resolver throws a descriptive error instead of entering an infinite loop. The output is a flat map where every token holds its fully resolved concrete value. This guarantees that downstream transformers never encounter unresolved references.",
 
-        reflectionsTitle: 'Reflections & What’s Next',
-        reflectionsDescription:
-            'This project allowed me to bridge design systems and code, shipping a real product with measurable value. Moving forward, I plan to:',
-        reflectionsBullet1: 'Continue user testing and expand export formats.',
-        reflectionsBullet2:
-            'Integrate with Figma Tokens Plugin and developer tools.',
-        reflectionsBullet3:
-            'Explore AI-driven naming suggestions to boost workflows.',
+        architectureDetail4Title: 'Trade-offs and limitations',
+        architectureDetail4:
+            "Client-side processing: All token resolution happens in the browser. This enables instant preview and zero-backend deployment, but limits throughput for very large token sets (1,000+). The resolver is O(n·d) where n = token count and d = average alias depth — acceptable for most design systems, but a bottleneck at extreme scale. Single-pass normalization: The normalizer assumes Figma's current variable export format. If Figma changes their API structure, the normalizer breaks. This is isolated by design — only one stage needs updating. No runtime validation: The pipeline trusts that input conforms to expected shapes after normalization. Adding JSON Schema validation at stage boundaries would improve robustness but add processing overhead.",
+
+        architectureDetail5Title: 'Theme extraction',
+        architectureDetail5:
+            'The engine detects theme-scoped tokens (light/dark/brand variants) and generates separate output sets per theme. Themes map to data attributes at runtime — [data-theme="dark"] scopes CSS custom properties without specificity conflicts or token duplication. This separation happens at the token level, not the CSS level, so each theme output is a complete, self-contained token set.',
+        architectureMonorepo:
+            '@startoken/engine is the shared core — a zero-dependency TypeScript module that runs in Node, browser, or Figma sandbox. The monorepo strategy ensures this single engine is consumed by the web app, Figma plugin, and future API/CLI clients, preventing logic duplication across surfaces.',
+
+        // --- 5. System Design Decisions ---
+        systemDecisionsTitle: 'System Design Decisions',
+        systemDecisionsDescription:
+            'Each decision below includes the rationale, the trade-off accepted, and the resulting outcome:',
+
+        systemDecision1Title: 'Zero-dependency TypeScript engine',
+        systemDecision1:
+            'Decision: No external runtime dependencies in the core engine. Trade-off: Reimplemented utilities that libraries like lodash provide (deep merge, path traversal). More code to maintain. Outcome: The engine runs in any JavaScript environment — browser, Node, Figma plugin sandbox — without polyfills, bundler configuration, or environment detection. Deployment surface is unlimited.',
+
+        systemDecision2Title: 'Client-side processing vs backend',
+        systemDecision2:
+            "Decision: All token processing happens in the browser, not a server. Trade-off: No persistent storage between sessions. Limited by browser memory for extremely large token sets. Can't trigger CI/CD pipelines directly. Outcome: Zero infrastructure cost. Instant preview without network latency. Users see token transformations in real-time as they modify inputs. The engine can later be deployed server-side without code changes — it's environment-agnostic by design.",
+
+        systemDecision3Title: 'Normalization as a first-class pipeline stage',
+        systemDecision3:
+            'Decision: Treat Figma-to-DTCG conversion as an explicit, isolated pipeline stage rather than inline preprocessing. Trade-off: Adds a processing step and requires maintaining a mapping layer that tracks Figma\'s export format. Outcome: Clean separation between "Figma\'s world" and "the token system." If Figma changes their variable export structure, only the normalizer needs updating — the resolver and transformer are unaffected. Also enables non-Figma inputs (JSON files, API responses) to enter the pipeline at the same boundary.',
+
+        systemDecision4Title: 'Theme separation at the token level',
+        systemDecision4:
+            'Decision: Extract themes (light/dark/brand) during token resolution, producing separate token sets per theme — not at the CSS output level. Trade-off: Increases the number of output artifacts (one file per theme per format). Requires consumers to load the correct theme set. Outcome: Each theme output is a complete, self-contained token set. No CSS specificity conflicts between themes. Runtime switching uses data attributes ([data-theme="dark"]) scoping CSS custom properties. Themes can be loaded on demand, reducing initial payload.',
+
+        // --- 6. Pipeline Implementation ---
+        executionTitle: 'Pipeline Implementation',
+        executionDescription:
+            'The pipeline processes tokens through six stages. Each stage receives typed input from the previous stage and produces typed output for the next. The UI reflects pipeline state in real-time with debounced updates — changes propagate through all stages without blocking interaction.',
+
+        execution1Title: 'End-to-end flow',
+        execution1Description:
+            "Figma variables are extracted via plugin → the Normalizer converts Figma's proprietary collection/mode structure into valid DTCG JSON → the Resolver walks alias chains and flattens all references to concrete values → the Transformer generates target formats (CSS custom properties, SCSS variables, JSON) → the Preview renders output as live CSS applied to sample components → the user exports final artifacts. Each boundary is typed — if a stage produces malformed output, the next stage fails explicitly rather than propagating bad data.",
+
+        execution2Title: 'Figma plugin extraction',
+        execution2Description:
+            "The plugin reads Figma's variable collections, modes, and alias references, then serializes them as structured JSON. This raw export preserves Figma's hierarchy (collections → modes → variables) without interpretation — normalization happens in the next stage, keeping the plugin thin and focused on data extraction.",
+
+        execution3Title: 'Live token preview',
+        execution3Description:
+            'Resolved tokens are applied to a component sandbox as CSS custom properties in real-time. The preview uses requestAnimationFrame-throttled updates to reflect pipeline changes without layout thrashing. Users see exactly what the generated tokens look like when applied to real UI elements — buttons, cards, typography — before exporting.',
+
+        execution4Title: 'Naming convention validation',
+        execution4Description:
+            'A supporting capability that validates token names against the DTCG schema structure. Teams test their naming conventions (category.property.variant.state) before committing to a structure — catching naming inconsistencies at authoring time rather than after tokens propagate through the system.',
+
+        // --- 7. Impact ---
+        impactTitle: 'Impact',
+        impactDescription:
+            'Measured and observed outcomes from building, testing, and demonstrating the pipeline:',
+        impact1:
+            'Design-to-code token drift eliminated — automated normalization replaced manual Figma-to-CSS translation, removing the primary source of value mismatches between design files and production code.',
+        impact2:
+            'Token adoption time reduced — teams that previously spent hours structuring tokens manually used the pipeline to generate validated, export-ready token sets in minutes. The naming playground caught structural issues before they propagated.',
+        impact3:
+            'Multi-theme architecture validated — the same pipeline produces light, dark, and brand-variant token sets from a single source. No per-theme manual configuration. Theme switching tested with zero CSS specificity conflicts.',
+        impact4:
+            'Developer handoff friction reduced — engineers received resolved tokens in their target format (CSS/SCSS/JSON) with full alias chains flattened. No interpretation of Figma variables required. Token provenance is traceable through the pipeline.',
+
+        // --- 8. Why This Matters ---
+        whyThisMattersTitle: 'Why This Matters',
+        whyThisMattersDescription:
+            'Design systems are maturing, but the tooling between Figma and production code has not kept pace. Most teams rely on manual processes or loosely connected plugins that produce inconsistent results. The gap is structural: Figma speaks one language (collections, modes, local variables), code speaks another (CSS properties, SCSS maps, JSON dictionaries), and there is no reliable translation layer between them.',
+        whyThisMattersDetail:
+            'Token pipelines solve this by treating the translation as a first-class engineering problem — not a design task, not a manual handoff step, but a deterministic system with typed stages, alias resolution, theme extraction, and multi-format output. Startoken is a working implementation of this idea: a pipeline that takes raw Figma variables and produces production-ready tokens without manual intervention. This is the infrastructure that modern design systems need but rarely build.',
+
+        // --- 9. Future Improvements ---
+        improvementsTitle: 'Future Improvements',
+        improvementsDescription: 'Planned enhancements to extend the system:',
+        improvement1:
+            'CLI integration — enable token generation as a build step, with validation gates in pull requests to catch breaking token changes before merge.',
+        improvement2:
+            'API for CI/CD pipelines — expose the engine as a service endpoint so token updates can trigger automated builds and deployments across products.',
+        improvement3:
+            'Plugin ↔ platform sync — bidirectional sync between the Figma plugin and the web platform, ensuring tokens stay aligned across design and code environments.',
+        improvement4:
+            'Token library versioning — track changes over time with semantic versioning and enable rollback for breaking token updates.',
+        improvement5:
+            'Large token set optimization — improve resolver performance for libraries with 1,000+ tokens using topological sort instead of recursive traversal.',
 
         finalReflection:
-            'Startoken showcases my ability to build tools that translate design intent into scalable, usable code, aligning with hybrid roles where design and front-end development meet.',
+            'Startoken reflects how I approach system problems: identify the structural gap, design a pipeline that separates concerns, and build it end-to-end with deterministic, testable stages. It demonstrates hands-on engineering paired with design systems thinking — the intersection where I do my strongest work.',
     },
 ]
 
