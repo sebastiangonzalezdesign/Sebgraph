@@ -42,13 +42,6 @@ const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
     const token = localStorage.getItem('projectAccessToken')
     const hasValidToken = isTokenValid(token || '')
 
-    if (import.meta.env.DEV) {
-        console.log('ProtectedRoute checking token:', {
-            hasToken: !!token,
-            isValid: hasValidToken,
-        })
-    }
-
     if (hasValidToken) {
         return <>{children}</>
     } else {

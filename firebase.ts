@@ -6,36 +6,6 @@ import {
     connectFunctionsEmulator,
 } from 'firebase/functions'
 
-// More detailed logging to help debug environment variable issues (dev only)
-if (import.meta.env.DEV) {
-    console.log('Firebase environment loading status:', {
-        apiKey: import.meta.env.VITE_FIREBASE_API_KEY ? 'defined' : 'missing',
-        authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN
-            ? 'defined'
-            : 'missing',
-        projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID
-            ? 'defined'
-            : 'missing',
-        storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET
-            ? 'defined'
-            : 'missing',
-        messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID
-            ? 'defined'
-            : 'missing',
-        appId: import.meta.env.VITE_FIREBASE_APP_ID ? 'defined' : 'missing',
-        measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
-            ? 'defined'
-            : 'missing',
-    })
-}
-
-// Check if essential variables are missing (dev only)
-if (import.meta.env.DEV && !import.meta.env.VITE_FIREBASE_PROJECT_ID) {
-    console.error(
-        'CRITICAL: Firebase project ID is missing from environment variables!'
-    )
-}
-
 // Your web app's Firebase configuration
 const firebaseConfig = {
     apiKey: import.meta.env.VITE_FIREBASE_API_KEY,

@@ -74,50 +74,25 @@ const PasswordPage = () => {
         }
 
         try {
-            if (import.meta.env.DEV) {
-                console.log('Sending password:', { password: inputPassword })
-            }
-
             // Use the callable function (better for Firebase)
             const verifyPassword = httpsCallable(functions, 'verifyPassword')
             const result = await verifyPassword({ password: inputPassword })
 
-            if (import.meta.env.DEV) {
-                console.log('Function result:', result)
-                console.log('Result data:', result.data)
-            }
-
             const { success, token } = result.data as VerifyPasswordResponse
 
-            if (import.meta.env.DEV) {
-                console.log('Authentication success:', success)
-            }
-
             if (success && token) {
-                if (import.meta.env.DEV) {
-                    console.log('Access granted, storing JWT token')
-                }
                 // Store JWT token in localStorage
                 localStorage.setItem('projectAccessToken', token)
 
                 // Set state (but don't render Hub directly)
                 setAccessGranted(true)
 
-                // Use only ONE navigation method (prefer navigate for React Router)
-                if (import.meta.env.DEV) {
-                    console.log('Navigating to /projects/Hub')
-                }
+                // Navigate to Hub
                 navigate('/projects/Hub', { replace: true })
             } else {
-                if (import.meta.env.DEV) {
-                    console.log('Password incorrect')
-                }
                 setErrorMessage('Incorrect password. Please try again.')
             }
         } catch (error) {
-            if (import.meta.env.DEV) {
-                console.error('Error verifying password:', error)
-            }
             setErrorMessage('An error occurred while verifying the password.')
         }
     }

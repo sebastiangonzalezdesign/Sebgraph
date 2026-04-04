@@ -20,9 +20,13 @@ const { verifyPassword } = require('./verifyPassword')
 
 // Export as a callable function (original approach)
 exports.verifyPassword = functions.https.onCall(async (data, context) => {
-    // Simply pass through to your implementation
+    // Firebase onCall automatically deserializes the request
+    // data should contain { password: "..." }
     return await verifyPassword(data, context)
 })
+
+// Also export the raw function for HTTP endpoint
+exports.verifyPasswordDirect = verifyPassword
 
 // Export as HTTP function with explicit CORS support (backup approach)
 exports.verifyPasswordHttp = functions.https.onRequest(async (req, res) => {
