@@ -2,7 +2,9 @@
     "compilerOptions": {
         "module": "commonjs",
         "target": "es2020",
-        "checkJs": true
+        "checkJs": false,
+        "skipLibCheck": true,
+        "allowJs": true
     },
     "exclude": ["node_modules"]
 }

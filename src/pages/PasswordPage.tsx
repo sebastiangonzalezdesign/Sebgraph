@@ -15,6 +15,8 @@ import {
 
 interface VerifyPasswordResponse {
     success: boolean
+    token?: string
+    error?: string
 }
 
 const PasswordPage = () => {
@@ -85,23 +87,23 @@ const PasswordPage = () => {
                 console.log('Result data:', result.data)
             }
 
-            const { success } = result.data as VerifyPasswordResponse
+            const { success, token } = result.data as VerifyPasswordResponse
 
             if (import.meta.env.DEV) {
                 console.log('Authentication success:', success)
             }
 
-            if (success) {
+            if (success && token) {
                 if (import.meta.env.DEV) {
-                    console.log('Access granted, setting localStorage')
+                    console.log('Access granted, storing JWT token')
                 }
-                // 1. First set localStorage
-                localStorage.setItem('projectAccess', 'true')
+                // Store JWT token in localStorage
+                localStorage.setItem('projectAccessToken', token)
 
-                // 2. Set state (but don't render Hub directly)
+                // Set state (but don't render Hub directly)
                 setAccessGranted(true)
 
-                // 3. Use only ONE navigation method (prefer navigate for React Router)
+                // Use only ONE navigation method (prefer navigate for React Router)
                 if (import.meta.env.DEV) {
                     console.log('Navigating to /projects/Hub')
                 }
