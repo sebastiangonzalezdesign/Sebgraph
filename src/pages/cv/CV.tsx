@@ -75,25 +75,27 @@ const CV = () => {
                         <h2 className="heading__100--bold subtitle">Profile</h2>
                         {/* Short summary before profile for quick readability */}
                         <p className="paragraph__100--medium cv-summary">
-                            UI & Design System Specialist focused on building
-                            scalable interfaces and design systems. I bridge
-                            design and front-end to ship polished, production
-                            ready experiences.
+                            UI Designer specialized in design systems, focused
+                            on building scalable interfaces and bridging design
+                            with frontend implementation.
                         </p>
 
                         <p className="paragraph__100--medium">
-                            With 5+ years of experience building scalable,
-                            user-centered digital products for web and mobile
-                            platforms. Skilled in bridging design and
-                            development, with expertise in design systems,
-                            interaction design, and cross-functional
-                            collaboration. Currently expanding coding skills
-                            (React, JavaScript) to enhance product development
-                            and user experience. Looking for UX engineering and
-                            product design roles focused on innovation and
-                            design systems. Passionate about delivering
-                            high-quality, scalable design solutions with a keen
-                            focus on development collaboration
+                            I bring a strong foundation in visual design and
+                            system thinking, combined with hands-on experience
+                            working with design tokens, component systems, and
+                            frontend technologies (React, JavaScript).
+                        </p>
+
+                        <p className="paragraph__100--medium">
+                            Recently, I’ve been designing and building systems
+                            that connect design to code - including token
+                            pipelines, design system tooling, and
+                            frontend-integrated workflows.
+                        </p>
+
+                        <p className="paragraph__100--medium">
+                            Based in Bogotá, collaborating globally.
                         </p>
 
                         {/* Crosslink to portfolio */}
@@ -124,6 +126,54 @@ const CV = () => {
                 </motion.section>
 
                 <motion.section
+                    className="featured-project-cv"
+                    initial="initial"
+                    animate="animate"
+                    exit="exit"
+                    variants={fadeUpVariants}
+                    transition={{
+                        delay: 0.02,
+                        type: 'spring',
+                        stiffness: 45,
+                    }}
+                >
+                    <article className="featured-project-cv__text-box">
+                        <span className="heading__200--bold featured-project-cv__label">
+                            Selected Project
+                        </span>
+                        <h3 className="heading__300--bold featured-project-cv__title">
+                            Startoken — Design Token Pipeline System
+                        </h3>
+                        <p className="paragraph__100--medium featured-project-cv__description">
+                            Designed and built an end-to-end system that
+                            transforms Figma variables into production-ready CSS
+                            variables. Includes a custom TypeScript engine for
+                            normalization, alias resolution, and multi-theme
+                            output, along with a Figma plugin for real-time
+                            synchronization.
+                        </p>
+                        <a
+                            href="/projects/startoken"
+                            onClick={() =>
+                                trackEvent({
+                                    action: 'View Featured Project from CV',
+                                    category: 'Navigation',
+                                    label: 'CVPage',
+                                })
+                            }
+                        >
+                            <Button
+                                type="button"
+                                buttonStyle="btn--secondary"
+                                buttonSize="btn--md"
+                            >
+                                View full project
+                            </Button>
+                        </a>
+                    </article>
+                </motion.section>
+
+                <motion.section
                     className="experience-cv"
                     initial="initial"
                     animate="animate"
@@ -148,43 +198,88 @@ const CV = () => {
                         <div className="experience-cv__experience-container">
                             <div className="experience-cv__head-container">
                                 <h3 className="heading__300--bold">
-                                    Sr Visual | UI Designer | Design System
-                                    Designer
+                                    Design System Designer
                                 </h3>
                                 <span className="paragraph__300--medium">
-                                    Globant | Bogotá | September 2021 -
-                                    currently
+                                    BlueCloud (Affirm) | Remote | December 2025
+                                    - Present
                                 </span>
                             </div>
 
                             <ul className="experience-cv__items paragraph">
                                 <li className="paragraph__100--regular experience-cv__item">
-                                    Developed and standardized design systems
-                                    for mobile and web, enhancing cross-platform
-                                    consistency by 30%.
+                                    Contributing to the evolution of a scalable
+                                    design system used across product teams,
+                                    focusing on consistency, performance, and
+                                    implementation quality.
                                 </li>
                                 <li className="paragraph__100--regular experience-cv__item">
-                                    Streamlined communication with stakeholders
-                                    to establish cohesive visual guidelines,
-                                    aligning brand principles with product
-                                    vision.
+                                    Bridging design and engineering by aligning
+                                    design tokens, components, and frontend
+                                    implementation workflows.
                                 </li>
                                 <li className="paragraph__100--regular experience-cv__item">
-                                    Translated concepts into visually compelling
-                                    designs for products spanning Geo imagery,
-                                    well-being, and travel.
+                                    Supporting the integration of design tokens
+                                    into production codebases, aligning token
+                                    structures with real frontend implementation
+                                    constraints.
                                 </li>
                                 <li className="paragraph__100--regular experience-cv__item">
-                                    Partnered with development teams to document
-                                    and implement features, enabling a 20%
-                                    faster deployment rate supporting
-                                    prototyping and documentation, facilitating
-                                    seamless implementation.
+                                    Collaborating closely with frontend
+                                    engineers to ensure accurate component
+                                    behavior, states, and accessibility
+                                    standards.
                                 </li>
                                 <li className="paragraph__100--regular experience-cv__item">
-                                    Led the integration of accessibility
-                                    standards across product stages, improving
-                                    the accessibility impact.
+                                    Driving improvements in system documentation
+                                    and usage patterns to reduce inconsistencies
+                                    across teams.
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div className="experience-cv__experience-container">
+                            <div className="experience-cv__head-container">
+                                <h3 className="heading__300--bold">
+                                    Sr Visual | UI Designer | Design System
+                                    Designer
+                                </h3>
+                                <span className="paragraph__300--medium">
+                                    Globant | Bogotá | September 2021 - December
+                                    2025
+                                </span>
+                            </div>
+
+                            <ul className="experience-cv__items paragraph">
+                                <li className="paragraph__100--regular experience-cv__item">
+                                    Designed and scaled UI components within
+                                    design systems for mobile and web platforms,
+                                    enhancing cross-product consistency and
+                                    reducing component deprecation by 30%.
+                                </li>
+                                <li className="paragraph__100--regular experience-cv__item">
+                                    Aligned design token strategies with
+                                    engineering workflows, bridging Figma design
+                                    specifications to production component
+                                    implementation across multiple product
+                                    teams.
+                                </li>
+                                <li className="paragraph__100--regular experience-cv__item">
+                                    Established design-to-code protocols and
+                                    documentation standards, enabling a 20%
+                                    faster deployment rate and reducing
+                                    implementation mismatches.
+                                </li>
+                                <li className="paragraph__100--regular experience-cv__item">
+                                    Partnered with frontend engineers on
+                                    responsive design patterns and component
+                                    behavior specifications for Geo, well-being,
+                                    and travel products.
+                                </li>
+                                <li className="paragraph__100--regular experience-cv__item">
+                                    Led accessibility integration across design
+                                    system components, ensuring WCAG compliance
+                                    and testing standards across product stages.
                                 </li>
                             </ul>
                         </div>
@@ -202,32 +297,34 @@ const CV = () => {
 
                             <ul className="experience-cv__items paragraph">
                                 <li className="paragraph__100--regular experience-cv__item">
-                                    Designed and prototyped interfaces for
-                                    Samsung’s digital products, increasing
-                                    feature usability by 25%.
+                                    Designed and prototyped scalable component
+                                    systems for Samsung's digital products,
+                                    increasing feature usability and
+                                    cross-platform consistency by 25%.
                                 </li>
                                 <li className="paragraph__100--regular experience-cv__item">
                                     Produced high-fidelity wireframes and
-                                    interactive prototypes for landing products.
-                                </li>
-                                <li className="paragraph__100--regular experience-cv__item">
-                                    Develop, manage, and maintain design
-                                    systems.{' '}
+                                    interactive prototypes aligned with system
+                                    specifications for landing and product
+                                    pages.
                                 </li>
                                 <li className="paragraph__100--regular experience-cv__item">
                                     Developed, managed, and maintained design
-                                    kits and small systems for products.
+                                    systems and component libraries,
+                                    establishing naming conventions and token
+                                    structures for multiple products.
                                 </li>
                                 <li className="paragraph__100--regular experience-cv__item">
-                                    Coordinated design with UX teams, turning
-                                    research insights into impactful interfaces,
-                                    which led to 20% user engagement increase.
+                                    Coordinated design system evolution with UX
+                                    and engineering teams, translating research
+                                    insights into scalable component patterns,
+                                    driving 20% user engagement increase.
                                 </li>
                                 <li className="paragraph__100--regular experience-cv__item">
-                                    Established an efficient communication
-                                    process with the development team to ensure
-                                    consistent component and interface
-                                    implementation.
+                                    Established design-to-development handoff
+                                    processes with the engineering team to
+                                    ensure consistent component behavior and
+                                    visual fidelity across implementations.
                                 </li>
                             </ul>
                         </div>
@@ -261,8 +358,8 @@ const CV = () => {
                                 Meta Front-End Developer
                             </h3>
                             <p className="paragraph__200--medium education-cv__university course-description">
-                                Intermediated skills in React, JavaScript, and
-                                responsive design.
+                                Intermediate proficiency in React, JavaScript,
+                                and responsive design.
                             </p>
                             <p className="heading__400--regular education-cv__university">
                                 Coursera
@@ -320,33 +417,42 @@ const CV = () => {
                         <div className="skills-cv__skills-container">
                             <div className="skills-cv__skill">
                                 <h3 className="heading__300--bold skills-cv__field">
-                                    Design & Technical Skills
+                                    Design Systems
                                 </h3>
 
                                 <div className="skills-cv__container-items">
                                     <div className="skills-cv__item">
-                                        <Chip label="Design Systems" />
+                                        <Chip label="Design Tokens Architecture" />
+                                    </div>
+                                    <div className="skills-cv__item">
+                                        <Chip label="Component Systems" />
+                                    </div>
+                                    <div className="skills-cv__item">
+                                        <Chip label="Theming (Light/Dark)" />
                                     </div>
                                     <div className="skills-cv__item">
                                         <Chip label="Accessibility" />
                                     </div>
+                                </div>
+                            </div>
+
+                            <div className="skills-cv__skill">
+                                <h3 className="heading__300--bold skills-cv__field">
+                                    Frontend & Technical
+                                </h3>
+
+                                <div className="skills-cv__container-items">
                                     <div className="skills-cv__item">
-                                        <Chip label="Responsive design" />
+                                        <Chip label="HTML / CSS / SCSS" />
                                     </div>
                                     <div className="skills-cv__item">
-                                        <Chip label="Prototyping" />
-                                    </div>
-                                    <div className="skills-cv__item">
-                                        <Chip label="HTML/CSS/SASS" />
-                                    </div>
-                                    <div className="skills-cv__item">
-                                        <Chip label="JavaScript" />
+                                        <Chip label="JavaScript / TypeScript" />
                                     </div>
                                     <div className="skills-cv__item">
                                         <Chip label="React" />
                                     </div>
                                     <div className="skills-cv__item">
-                                        <Chip label="Typescript" />
+                                        <Chip label="Design-to-code workflows" />
                                     </div>
                                 </div>
                             </div>
@@ -361,56 +467,16 @@ const CV = () => {
                                         <Chip label="Figma" />
                                     </div>
                                     <div className="skills-cv__item">
-                                        <div className="skills-cv__item">
-                                            <Chip label="Framer" />
-                                        </div>
+                                        <Chip label="Git / GitHub" />
                                     </div>
                                     <div className="skills-cv__item">
-                                        <div className="skills-cv__item">
-                                            <Chip label="Lottie" />
-                                        </div>
+                                        <Chip label="VS Code" />
                                     </div>
                                     <div className="skills-cv__item">
-                                        <div className="skills-cv__item">
-                                            <Chip label="VS Code" />
-                                        </div>
+                                        <Chip label="Framer / Lottie" />
                                     </div>
                                     <div className="skills-cv__item">
-                                        <div className="skills-cv__item">
-                                            <Chip label="GIT/Github" />
-                                        </div>
-                                    </div>
-                                    <div className="skills-cv__item">
-                                        <div className="skills-cv__item">
-                                            <Chip label="Github Copilot" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="skills-cv__skill">
-                                <h3 className="heading__300--bold skills-cv__field">
-                                    Soft Skills
-                                </h3>
-
-                                <div className="skills-cv__container-items">
-                                    <div className="skills-cv__item">
-                                        <Chip label="Collaboration" />
-                                    </div>
-                                    <div className="skills-cv__item">
-                                        <div className="skills-cv__item">
-                                            <Chip label=" Problem-Solving" />
-                                        </div>
-                                    </div>
-                                    <div className="skills-cv__item">
-                                        <div className="skills-cv__item">
-                                            <Chip label="Communication" />
-                                        </div>
-                                    </div>
-                                    <div className="skills-cv__item">
-                                        <div className="skills-cv__item">
-                                            <Chip label="Adaptability" />
-                                        </div>
+                                        <Chip label="Storybook" />
                                     </div>
                                 </div>
                             </div>

@@ -13,6 +13,27 @@
     background-color: $color-neutral-blue-100;
 }
 
+.featured-project-cv {
+    background-color: $color-neutral-blue-100;
+
+    &__label {
+        color: $color-primary-600;
+        text-transform: uppercase;
+        font-size: 0.875rem;
+        letter-spacing: 0.05em;
+        margin-bottom: $gutter-small;
+        display: block;
+    }
+
+    &__title {
+        margin-bottom: $gutter-small;
+    }
+
+    &__description {
+        margin-bottom: $gutter-medium;
+    }
+}
+
 .experience-cv {
     background-image: $color-gradient-purple;
     &__head-container {

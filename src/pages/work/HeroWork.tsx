@@ -67,9 +67,13 @@ const HeroWork = () => {
                         strong visual and UX foundation with expertise in
                         scalable design systems and front-end collaboration. I
                         bridge design and development through thoughtful
-                        interfaces, systems thinking, and code. Currently
-                        exploring how AI can streamline workflows and enhance
-                        digital experiences across web and mobile.
+                        interfaces, systems thinking, and code. Recently, I've
+                        been focusing on building tools and systems that bridge
+                        design and engineering, including design token pipelines
+                        and frontend integrations that connect Figma directly to
+                        production code. Currently exploring how AI can
+                        streamline workflows and enhance digital experiences
+                        across web and mobile.
                         <br />
                         <br />
                         <span className="paragraph__100--bold">

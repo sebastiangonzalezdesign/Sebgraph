@@ -92,19 +92,16 @@ const Startoken = () => {
                     <section className="modal__tldr-section">
                         <div className="modal__role-tags">
                             <span className="modal__role-tag">
-                                Design Technologist
+                                Design Systems
                             </span>
                             <span className="modal__role-tag">
-                                W3C DTCG Tokens
+                                Design Tokens
                             </span>
-                            <span className="modal__role-tag">
-                                Zero-Dep TypeScript Engine
-                            </span>
+                            <span className="modal__role-tag">Frontend</span>
+                            <span className="modal__role-tag">TypeScript</span>
+                            <span className="modal__role-tag">Pipeline</span>
                             <span className="modal__role-tag">
                                 Figma Plugin
-                            </span>
-                            <span className="modal__role-tag">
-                                Monorepo Architecture
                             </span>
                         </div>
                         <p
@@ -192,19 +189,19 @@ const Startoken = () => {
                                 </ol>
                             </div>
                         </article>
-                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/startoken/research.webp">
+                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/startoken/pipeline-architecture.webp">
                             <picture className="modal__img-container">
                                 <source
-                                    srcSet="https://sebastiangonzalez.design/images/projects/startoken/research.webp"
+                                    srcSet="https://sebastiangonzalez.design/images/projects/startoken/pipeline-architecture.webp"
                                     media="(max-width:900px)"
                                 />
                                 <img
                                     className="modal__img-complete"
-                                    src="https://sebastiangonzalez.design/images/projects/startoken/research.webp"
+                                    src="https://sebastiangonzalez.design/images/projects/startoken/pipeline-architecture.webp"
                                     loading="lazy"
                                     width={1920}
                                     height={1080}
-                                    alt="Startoken strategy and research"
+                                    alt="Design Token Pipeline Architecture"
                                 />
                             </picture>
                         </ImageModalZoom>
@@ -283,23 +280,6 @@ const Startoken = () => {
                                 {dataPortfolio.architectureMonorepo}
                             </p>
                         </div>
-
-                        <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/startoken/tech-stack.webp">
-                            <picture className="modal__img-container">
-                                <source
-                                    srcSet="https://sebastiangonzalez.design/images/projects/startoken/tech-stack.webp"
-                                    media="(max-width:900px)"
-                                />
-                                <img
-                                    className="modal__img-complete"
-                                    src="https://sebastiangonzalez.design/images/projects/startoken/tech-stack.webp"
-                                    loading="lazy"
-                                    width={1920}
-                                    height={1080}
-                                    alt="Startoken architecture and tech stack"
-                                />
-                            </picture>
-                        </ImageModalZoom>
                     </section>
 
                     {/* Section 5: System Design Decisions */}
@@ -373,9 +353,9 @@ const Startoken = () => {
                             </p>
                         </article>
                         <Video
-                            src="https://sebastiangonzalez.design/images/projects/startoken/token-generator.mp4"
+                            src="https://sebastiangonzalez.design/images/projects/startoken/end-end-app.mp4"
                             className="modal__video"
-                            poster="https://sebastiangonzalez.design/images/projects/startoken/project-startoken.webp"
+                            poster="https://sebastiangonzalez.design/images/projects/startoken/end-end-app.webp"
                             muted={true}
                             loop={true}
                             autoPlay={true}
@@ -392,6 +372,17 @@ const Startoken = () => {
                                 {dataPortfolio.execution2Description}
                             </p>
                         </article>
+                        <Video
+                            src="https://sebastiangonzalez.design/images/projects/startoken/Figma-plugin.mp4"
+                            className="modal__video"
+                            poster="https://sebastiangonzalez.design/images/projects/startoken/Figma-plugin.webp"
+                            muted={true}
+                            loop={true}
+                            autoPlay={true}
+                            controls={false}
+                            preload="metadata"
+                            loading="lazy"
+                        />
 
                         {/* Execution 3: Token Preview */}
                         <article className="modal__secondary-text-box">
@@ -403,9 +394,9 @@ const Startoken = () => {
                             </p>
                         </article>
                         <Video
-                            src="https://sebastiangonzalez.design/images/projects/startoken/naming-playground.mp4"
+                            src="https://sebastiangonzalez.design/images/projects/startoken/preview.mp4"
                             className="modal__video"
-                            poster="https://sebastiangonzalez.design/images/projects/startoken/research.webp"
+                            poster="https://sebastiangonzalez.design/images/projects/startoken/preview.webp"
                             muted={true}
                             loop={true}
                             autoPlay={true}
