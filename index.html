@@ -86,7 +86,18 @@
         <div id="root"></div>
 
         <script type="module" src="/src/index.tsx"></script>
-        <!-- If you load GA4/Tag Manager directly, ensure async loading -->
-        <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-T39HMTQHH2"></script> -->
+        <!-- Direct GA4 script for early detection -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-T39HMTQHH2"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || []
+            function gtag() {
+                dataLayer.push(arguments)
+            }
+            gtag('js', new Date())
+            gtag('config', 'G-T39HMTQHH2')
+        </script>
     </body>
 </html>

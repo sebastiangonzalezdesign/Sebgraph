@@ -75,8 +75,14 @@
         "include": [
             "/",
             "/about",
+            "/cv",
             "/projects/aleph",
-            "/projects/avexpert"
+            "/projects/avexpert",
+            "/projects/essilor",
+            "/projects/landing",
+            "/projects/startoken",
+            "/projects/MUIK",
+            "/projects/solvefortomorrow"
         ],
         "renderAfterTime": 5000,
         "puppeteerArgs": [
