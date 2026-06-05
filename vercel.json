@@ -1,8 +1,39 @@
 {
+    "trailingSlash": false,
     "redirects": [
         {
             "source": "/projects/solve",
             "destination": "/projects/solvefortomorrow",
+            "permanent": true
+        },
+        {
+            "source": "/projects/av",
+            "destination": "/projects/avexpert",
+            "permanent": true
+        },
+        {
+            "source": "/projects/AV",
+            "destination": "/projects/avexpert",
+            "permanent": true
+        },
+        {
+            "source": "/projects/Aleph",
+            "destination": "/projects/aleph",
+            "permanent": true
+        },
+        {
+            "source": "/projects/Essilor",
+            "destination": "/projects/essilor",
+            "permanent": true
+        },
+        {
+            "source": "/projects/Landing",
+            "destination": "/projects/landing",
+            "permanent": true
+        },
+        {
+            "source": "/projects/Startoken",
+            "destination": "/projects/startoken",
             "permanent": true
         }
     ],
