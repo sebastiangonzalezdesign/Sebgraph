@@ -7,6 +7,7 @@ import './PasswordPage.scss'
 import Hub from './projects/Hub'
 import BackButton from '../components/BackButton'
 import { Button } from '../components/Button'
+import SEO from '../components/SEO'
 import {
     LockClosedIcon,
     EyeIcon,
@@ -100,6 +101,12 @@ const PasswordPage = () => {
     // Rest of component remains the same
     return (
         <div className="password-page">
+            <SEO
+                title="Access Required – Sebastian González"
+                description="This project requires a password."
+                url="https://sebastiangonzalez.design/projects/password-page"
+                robots="noindex, nofollow"
+            />
             <BackButton />
             {/* Rest of your JSX stays the same */}
             <div className="password-page__container">

@@ -2,5 +2,6 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow: /projects/hub
+Disallow: /projects/password-page
 
 Sitemap: https://sebastiangonzalez.design/sitemap.xml

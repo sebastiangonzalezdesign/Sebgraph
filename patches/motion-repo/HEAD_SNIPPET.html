@@ -39,5 +39,8 @@
     content="https://motion.sebastiangonzalez.design/preview.png"
 />
 
-<!-- Optional: canonical for documentation subpages -- add appropriate canonical tags per route -->
-<!-- Example: <link rel="canonical" href="https://motion.sebastiangonzalez.design/docs/button" /> -->
+<!-- REQUIRED: Add a unique canonical per route to avoid "Duplicate without user-selected canonical" in Search Console -->
+<!-- Each page/route must render its own canonical pointing to its own URL, e.g.: -->
+<!-- <link rel="canonical" href="https://motion.sebastiangonzalez.design/examples/experience-demo" /> -->
+<!-- <link rel="canonical" href="https://motion.sebastiangonzalez.design/docs/button" /> -->
+<!-- In a React/Vue SPA, inject this dynamically per route using react-helmet or equivalent -->

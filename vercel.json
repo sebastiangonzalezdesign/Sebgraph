@@ -2,6 +2,54 @@
     "trailingSlash": false,
     "redirects": [
         {
+            "source": "/projects/av/",
+            "destination": "/projects/avexpert",
+            "permanent": true
+        },
+        {
+            "source": "/projects/avexpert/",
+            "destination": "/projects/avexpert",
+            "permanent": true
+        },
+        {
+            "source": "/projects/aleph/",
+            "destination": "/projects/aleph",
+            "permanent": true
+        },
+        {
+            "source": "/projects/MUIK/",
+            "destination": "/projects/MUIK",
+            "permanent": true
+        },
+        {
+            "source": "/projects/essilor/",
+            "destination": "/projects/essilor",
+            "permanent": true
+        },
+        {
+            "source": "/projects/landing/",
+            "destination": "/projects/landing",
+            "permanent": true
+        },
+        {
+            "source": "/projects/solvefortomorrow/",
+            "destination": "/projects/solvefortomorrow",
+            "permanent": true
+        },
+        {
+            "source": "/projects/startoken/",
+            "destination": "/projects/startoken",
+            "permanent": true
+        },
+        {
+            "source": "/motion-ui-kit/",
+            "destination": "/motion-ui-kit",
+            "permanent": true
+        },
+        { "source": "/about/", "destination": "/about", "permanent": true },
+        { "source": "/cv/", "destination": "/cv", "permanent": true },
+        { "source": "/projects/", "destination": "/", "permanent": true },
+        {
             "source": "/projects/solve",
             "destination": "/projects/solvefortomorrow",
             "permanent": true
