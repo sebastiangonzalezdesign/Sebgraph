@@ -19,6 +19,10 @@
         height: auto;
         flex-direction: column;
     }
+
+    &__eyebrow {
+        color: $color-text-secondary;
+    }
     &__text-container {
         width: 60%;
         margin-top: 5rem;
@@ -31,6 +35,7 @@
         }
         &__text {
             margin-bottom: $size-11;
+            margin-top: $size-4;
 
             & h1 {
                 margin-bottom: $size-6;

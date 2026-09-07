@@ -32,6 +32,9 @@ const HeroWork = () => {
     return (
         <section className={`section-hero ${theme}`}>
             <article className="section-hero__text-container">
+                <motion.span className="section-hero__eyebrow paragraph__400--bold">
+                    DESIGN SYSTEMS · UX/UI · DESIGN ENGINEERING
+                </motion.span>
                 <div className="section-hero__text-container__text">
                     <motion.h1
                         id="hero-heading"
@@ -45,7 +48,8 @@ const HeroWork = () => {
                             stiffness: 45,
                         }}
                     >
-                        UI Designer for Design Systems & Products
+                        Designing systems at the intersection of UX, design and
+                        code
                     </motion.h1>
                     <h2 className="sr-only">
                         Introduction — UI Designer for Design Systems &amp;
@@ -63,17 +67,12 @@ const HeroWork = () => {
                             stiffness: 45,
                         }}
                     >
-                        UI Designer with 5+ years of experience, combining a
-                        strong visual and UX foundation with expertise in
-                        scalable design systems and front-end collaboration. I
-                        bridge design and development through thoughtful
-                        interfaces, systems thinking, and code. Recently, I've
-                        been focusing on building tools and systems that bridge
-                        design and engineering, including design token pipelines
-                        and frontend integrations that connect Figma directly to
-                        production code. Currently exploring how AI can
-                        streamline workflows and enhance digital experiences
-                        across web and mobile.
+                        I’m a Design Systems Designer with 5+ years of
+                        experience combining visual and interaction design with
+                        scalable interfaces, components and design foundations.
+                        My work spans UX/UI, accessibility and design systems,
+                        with hands-on frontend implementation using React and
+                        TypeScript.
                         <br />
                         <br />
                         <span className="paragraph__100--bold">

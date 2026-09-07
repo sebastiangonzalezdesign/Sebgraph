@@ -3,6 +3,7 @@ import { trackEvent } from '../../services/analytics'
 import { Link } from 'react-router-dom'
 // Portfolio styles will be loaded dynamically to reduce critical CSS in prerender snapshots
 import PortfolioList from './PortfolioList'
+import Tag from '../../components/Tag'
 import {
     allPortfolio,
     uiVisualPortfolio,
@@ -16,7 +17,9 @@ interface PortfolioItem {
     id: string
     key: string
     title: string
-    overview: string
+    category: string
+    type: string
+    tags: string[]
     img: string
     bgClass: string
     order: number
@@ -28,15 +31,18 @@ const Portfolio = forwardRef<HTMLDivElement, {}>((props, ref) => {
     const [selected, setSelected] = useState<string>('all')
     const [data, setData] = useState<PortfolioItem[]>([])
     const [delayedSelected, setDelayedSelected] = useState<string>('all')
+    const [gliderWidth, setGliderWidth] = useState<number>(0)
+    const [gliderLeft, setGliderLeft] = useState<number>(0)
 
     const refProject = useRef<HTMLAnchorElement | null>(null)
+    const refTabsContainer = useRef<HTMLDivElement | null>(null)
 
     // Project list
     const list = [
         { id: 'all', title: 'All' },
         { id: 'ui/visual', title: 'UI/Visual' },
-        { id: 'ds', title: 'DS' },
-        { id: 'code', title: 'Code' },
+        { id: 'ds', title: 'Design Systems' },
+        { id: 'code', title: 'Design + Code' },
     ]
 
     // Update portfolio data based on the selected tab
@@ -81,6 +87,29 @@ const Portfolio = forwardRef<HTMLDivElement, {}>((props, ref) => {
         import('./Portfolio.scss')
     }, [])
 
+    // Measure active tab width and position for glider
+    useEffect(() => {
+        const measureGliderDimensions = () => {
+            if (refTabsContainer.current) {
+                const activeTab = refTabsContainer.current.querySelector(
+                    '.section-portfolio__tab.active'
+                ) as HTMLElement
+                if (activeTab) {
+                    setGliderWidth(activeTab.offsetWidth)
+                    setGliderLeft(activeTab.offsetLeft)
+                }
+            }
+        }
+
+        // Initial measurement
+        measureGliderDimensions()
+
+        // Re-measure on window resize
+        window.addEventListener('resize', measureGliderDimensions)
+        return () =>
+            window.removeEventListener('resize', measureGliderDimensions)
+    }, [selected])
+
     return (
         <section ref={ref} id="work" className="section-portfolio">
             <div className="section-portfolio__heading-container">
@@ -92,7 +121,7 @@ const Portfolio = forwardRef<HTMLDivElement, {}>((props, ref) => {
 
             <div className="section-portfolio__projects-container">
                 {/* Rendering the tabs using PortfolioList */}
-                <div className="section-portfolio__tabs">
+                <div className="section-portfolio__tabs" ref={refTabsContainer}>
                     {list.map((item) => (
                         <PortfolioList
                             key={item.id}
@@ -105,10 +134,11 @@ const Portfolio = forwardRef<HTMLDivElement, {}>((props, ref) => {
                     <span
                         className="section-portfolio__glider"
                         style={{
-                            transform: `translateX(${
-                                list.findIndex((item) => item.id === selected) *
-                                100
-                            }%)`,
+                            transform: `translateX(${gliderLeft}px)`,
+                            width:
+                                gliderWidth > 0
+                                    ? `${gliderWidth}px`
+                                    : undefined,
                         }}
                     ></span>
                 </div>
@@ -147,9 +177,25 @@ const Portfolio = forwardRef<HTMLDivElement, {}>((props, ref) => {
                                                 <LockClosedIcon className="section-portfolio__title-and-icon__lock-icon" />
                                             )}
                                         </h2>
-                                        <span className="paragraph__200--medium overview">
-                                            {d.overview}
-                                        </span>
+                                        <h3 className="heading__300--regular section-portfolio__category-type">
+                                            {d.category} · {d.type}
+                                        </h3>
+                                        <div className="section-portfolio__tags-container">
+                                            {d.tags.map((tag, tagIndex) => (
+                                                <React.Fragment key={tag}>
+                                                    <Tag
+                                                        label={tag}
+                                                        variant="default"
+                                                    />
+                                                    {tagIndex <
+                                                        d.tags.length - 1 && (
+                                                        <span className="section-portfolio__tags-separator">
+                                                            ·
+                                                        </span>
+                                                    )}
+                                                </React.Fragment>
+                                            ))}
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="section-portfolio__img-container">

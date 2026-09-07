@@ -1,0 +1,27 @@
+@use '../styles/ConfigStyles/abstracts' as *;
+
+.tag {
+    display: inline-block;
+    padding: $size-1 $size-2;
+    font-size: $card-overview-font-size;
+    font-weight: $font-weight-default;
+    color: white !important;
+    border-radius: $border-radius-full;
+    width: fit-content;
+    white-space: nowrap;
+    backdrop-filter: blur(8px);
+    position: relative;
+    z-index: 2;
+
+    &--default {
+        background-color: rgba(255, 255, 255, 0.12);
+        color: white !important;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    &--accent {
+        background-color: rgba($color-primary-100, 0.3);
+        color: $color-primary-600 !important;
+        border: 1px solid rgba($color-primary-600, 0.2);
+    }
+}
