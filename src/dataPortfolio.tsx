@@ -370,7 +370,7 @@ export const Aleph: ProjectContent[] = [
         key: 'Aleph',
         headTitle: 'Aleph Design System',
         roleTitle: 'Role:',
-        role: 'UI Design - Design systems',
+        role: 'UI Design, Design Systems, Design System Strategy',
         dateTitle: 'Date:',
         date: '2022',
         companyTitle: 'Company:',
@@ -379,11 +379,15 @@ export const Aleph: ProjectContent[] = [
         subtitleResume: 'Design System',
         titleResume: 'Geospatial Imagery Platform',
         contentResume:
-            'Demystifying the world, one map at a time. Aleph is an intuitive platform that provides high-resolution satellite imagery and unlocks the power of geospatial data.',
+            'Aleph was a design system created to bring greater consistency and scalability to a growing product ecosystem. I worked on the visual and system design, helping define foundations, components and patterns that could be reused across the product experience.',
+        contentResume2:
+            'The project involved working with designers and stakeholders to understand existing patterns, identify inconsistencies and turn them into a more cohesive system.',
 
         titleChallenge: 'Identifying the Challenge',
         challengeDescription:
-            'Imagine a world where users struggle to navigate a complex interface designed for satellite imagery tasks, especially small businesses and users with simpler needs. This was the reality for Aleph, an innovative geospatial platform offering high-resolution satellite imagery and geospatial data. Initially tailored to specialized researchers, educators, and analysts, Aleph now sought to expand its reach to include common users with simpler requirements.',
+            'As the product evolved, different parts of the experience had developed their own visual patterns and UI decisions. This made consistency harder to maintain and created repeated design work across teams.',
+        challengeDescription2:
+            'The goal was to identify those patterns, understand where they diverged, and create a system that could provide a shared foundation without limiting the needs of individual product areas.',
 
         goalTitle: 'Our goals',
         goal1: 'Create the first version of a design system that simplifies user interactions with complex data, enhances collaboration across teams, and builds a foundation for future growth.',
@@ -392,7 +396,7 @@ export const Aleph: ProjectContent[] = [
         goal4: 'Lay a strong foundation for future growth.',
         journeyTitle: 'Collaborative Journey',
         journeyDescription:
-            'To tackle this challenge, we assembled a skilled team of UI/UX designers, front-end developers, and project managers. Working closely with Aleph’s stakeholders, we set out on a journey to craft a design system that could standardize the user experience across multiple applications, ensuring consistency and scalability for the future.',
+            'The system was developed collaboratively rather than designed in isolation. I worked with designers and other stakeholders to review existing patterns, identify inconsistencies and align on reusable solutions.',
 
         insightsTitle: 'Gaining Valuable Insights',
         insightsDescription:
@@ -404,28 +408,30 @@ export const Aleph: ProjectContent[] = [
             'Missing Design Patterns: The lack of established design patterns for data visualization and interaction led to inconsistent user experiences and developer confusion.',
         finding3:
             'Redundant Development Efforts: Overlapping features were being built by different teams, resulting in wasted resources and maintenance issues.',
-        ideationTitle: 'Ideation and Development',
+        ideationTitle: 'System Exploration and Development',
         ideationDescription:
-            'Our first step was to immerse ourselves in Aleph’s ecosystem. Through extensive interface review, competitive analysis, and design audits, we gained a deep understanding of user needs and platform inconsistencies. Here are some key findings that guided our approach:',
+            'Once the main patterns were identified, I explored how they could be translated into reusable components and foundations. The process involved iterating on structure and visual language before bringing the pieces together into a more cohesive system.',
         conceptToRealityTitle: 'From Concept to Reality',
         conceptToRealityDescription:
-            'As our designs took shape, close collaboration with the development team was essential in bringing the ALEPH Design System to life. Following the atomic design methodology, we created a comprehensive foundation, component library, and design patterns, establishing a scalable system structure that positively impacted team workflow and reduced design implementation time.',
+            'The work evolved from identifying inconsistencies into a more structured system of foundations, components and reusable patterns. These pieces provided a common visual language that could be applied across different product experiences.',
 
         componentsTitle: 'Components',
         componentsDescription:
             'Following the atomic design methodology, the component library includes a range of elements, starting with fundamental building blocks and scaling up to complex components required for data-centered map visualizations and interactions.',
-        resultsTitle: 'Measuring the Impact',
+        resultsTitle: 'Impact',
         resultsDescription:
             'The culmination of our efforts resulted in a cohesive design system that delivered a consistent user experience across all applications. The impact was both immediate and transformative:',
+        strongBullet1: '50% Reduction',
         contentBullet1:
-            '50% Reduction in design-related inquiries from the development team, streamlining communication and reducing friction.',
+            'in design-related inquiries from the development team, streamlining communication and reducing friction.',
+        strongBullet2: '40% Increase',
         contentBullet2:
-            '40% Increase in user satisfaction ratings, attributed to improved interface consistency and usability.',
+            'in user satisfaction ratings, attributed to improved interface consistency and usability.',
         contentBullet3:
             '30% Faster project turnaround times, accelerating the design process and reducing resource allocation.',
-        reflectionsTile: 'Reflections and Future Aspirations',
+        reflectionsTile: 'Reflection',
         reflectionsDescription:
-            'Reflecting on this journey, we celebrate the Aleph team’s dedication to innovation and their commitment to a unified design approach. The ALEPH Design System is built to scale, with adaptable design tokens, a component library, and a solid foundation that will evolve as Aleph grows. Moving forward, we look forward to deepening our partnership, enhancing the system, and exploring new ways to create engaging and intuitive experiences for Aleph’s users.',
+            'The project reinforced how much of Design Systems work happens beyond the components themselves, understanding existing patterns, aligning people around shared decisions and creating enough structure for the system to evolve over time.',
     },
 ]
 
@@ -444,11 +450,13 @@ export const Hub: ProjectContent[] = [
         subtitleResume: 'Design System',
         titleResume: 'Hub',
         contentResume:
-            'Hub is a mobile application designed to organize various activities and services related to a cruise itinerary. The application offers functionalities for both pre-cruise planning and onboard experiences, ensuring users have an enjoyable and seamless journey.',
+            'Hub is a mobile application designed to organize various activities and services related to a cruise itinerary, supporting both pre-cruise planning and onboard experiences.',
+        contentResume2:
+            'I worked on redesigning and scaling its design system, focusing on foundations, theming, design tokens and component migration across the product.',
 
         titleIntroduction: 'Project Overview',
         contentIntroduction:
-            'I joined the team to support the Design, Development, and Product teams in improving the current component library and helping to define an official Design System. The library supported components for both iOS and Android.',
+            'I joined the team to support the redesign and scaling of the Hub Design System. The first step was understanding the existing product, identifying inconsistencies and establishing what needed to change before introducing the new system.',
 
         findingsTitle: 'Findings',
         finding1:
@@ -459,36 +467,38 @@ export const Hub: ProjectContent[] = [
             'The handoff process for components was centralized in a single Figma file that worked as a source of truth for developers.',
         finding4:
             'The Dev team had the initiative to implement a theme model for the app.',
-        whatIDidTitle: 'What I did?',
+        whatIDidTitle: 'System Audit & Migration',
         whatIDidDescription:
-            'First, I organized a process to follow for component requests and handoff to the development team in Figma, clarifying the tasks for the different team members and the Design System Owner.',
+            'To better understand the existing system and needs, I organized a process for component requests and handoff to the development team in Figma, clarifying the workflow and alignment between design and development.',
+
         inventoryTitle: 'Interface Inventory',
         inventoryDescription:
-            'To have a better understanding of the visual styles used throughout the app, I did an inventory reviewing each component of the interface.',
+            'To better understand the visual styles used throughout the app, I reviewed the existing interface and identified patterns that needed to be consolidated into the new system.',
+
         themeImplementationyTitle: 'Theme setup',
         themeImplementationyDescription:
-            'The initial scope to implement themes was intended to consider first colors and typography. It was a shared process of Design/Development to identify the best strategies to implement without affecting the current workflow.',
+            'The initial scope was to implement themes based on the existing brand colors and typography. This created a shared process for defining and applying the visual system across the product.',
         foundationsTitle: 'Foundations',
         foundationsDescription:
-            'We redefined the system foundations: Colors, Typography, Elevation, Spacings, Icons, and Branding to set a scalable model that allows for improving the consistency and scalability of the component library.',
+            'Foundations were redefined across colors, typography, elevation, spacing, icons and branding to establish a scalable model for the entire component library.',
         tokensTitle: 'Design Tokens',
         tokensDescription:
-            'The model was defined with Global and Semantic tokens to simplify the theme implementation. The first tokens were defined for Colors and Typography, documenting categories that simplify and give flexibility to the current interface use cases.',
+            'Global tokens define reusable values, while semantic tokens connect those values to their intended UI meaning. Initial tokens focused on colors and typography, creating a flexible foundation for the interface.',
         componentsTitle: 'Components Migration',
         componentsDescription:
-            'After exploring alternatives to implement without affecting the workflow based on a single Figma library, we decided to duplicate the components in a new library and apply the theme separately to have more control during the process and align with the development stages. Then, the components were reviewed along with development during the migration process.',
+            'After exploring alternatives, I worked through the existing component library and identified where components needed to be updated or replaced as part of the migration to the new system. Components were reviewed together with development to align Figma specs with implementation.',
         pagesTitle: 'Pages Migration',
         pagesDescription:
-            'The current Figma Library was linked to many design files that contain flows of the app. To avoid overriding current pages, we defined a process to update the screens with the new library gradually. Once this process was completed, the old library was unpublished.Pages Migration',
+            'The current product screens also needed to be aligned with the new system. I reviewed existing pages and identified where the new foundations, tokens and components needed to replace older patterns.',
         resultsTitle: 'The Results',
         resultsBullet1:
-            'The design system adoption increased by developers and product teams.',
+            'Design system adoption increased among developers and product teams.',
         resultsBullet2:
-            'The handoff process became smoother, reducing the time by token documentation..',
+            'The handoff process became smoother through token documentation and standardized patterns.',
         resultsBullet3:
-            'The discrepancies between design mockups and implementation were reduced.',
+            'Discrepancies between design mockups and implementation were reduced.',
         resultsBullet4:
-            'The color structure is prepared to add more brand themes.',
+            'The color structure is prepared to support additional brand themes.',
     },
 ]
 
@@ -496,125 +506,145 @@ export const Startoken: ProjectContent[] = [
     {
         id: 7,
         key: 'startoken',
-        headTitle: 'Startoken — Design Token Pipeline System',
+        headTitle: 'Startoken, Design Token Pipeline',
         roleTitle: 'Role:',
-        role: 'Design Technologist · UX Engineer',
+        role: 'Design Systems · Design Tokens · Frontend Implementation',
         dateTitle: 'Date:',
         date: '2025',
         companyTitle: 'Company:',
-        company: 'Personal Project',
+        company: 'Personal Product',
 
-        subtitleResume: 'Design Token Pipeline System',
+        subtitleResume: 'Simple & Smart Token Naming',
         titleResume: 'Startoken',
         tagline:
-            'From Figma variables to production-ready CSS variables through a custom token engine',
+            'From Figma variables to production-ready tokens through a custom pipeline',
         contentResume:
-            'Designed and built an end-to-end pipeline that transforms design tokens from Figma into structured, theme-aware outputs for web applications. Includes a custom TypeScript engine for normalization, alias resolution, and multi-theme transformation, bridging design systems and frontend implementation.',
+            'I built Startoken to explore a problem I kept seeing in design systems: the gap between how tokens are created in design tools and how they eventually need to work in code. I wanted to make token naming and transformation more predictable while keeping the system flexible enough to support different themes, platforms and implementation needs.',
+        contentResume2:
+            'The project grew from a naming tool into a broader token pipeline, connecting Figma variables with structured, code-ready output.',
 
         // --- 1. Context ---
         contextTitle: 'Context',
         contextDescription:
-            "Design tokens define the visual contract between design and engineering, yet in practice, most teams treat them as static files rather than structured data. Figma variables use a proprietary format that doesn't map to production code. Naming conventions diverge across teams. Manual handoff introduces drift between what designers intend and what engineers implement. As systems scale beyond a single product, this gap becomes a structural bottleneck: inconsistent outputs, duplicated effort, and no reliable source of truth across surfaces.",
+            "Design tokens sit between design and implementation, but the two sides don't always speak the same language. Figma variables can describe a system well inside a design tool, while production code needs predictable names, formats, relationships and outputs.",
+        contextDescription2:
+            'I wanted to explore what a token workflow could look like when those constraints are considered from the beginning.',
 
         // --- 2. Problem ---
         problemTitle: 'Problem',
         problemDescription:
-            "The core issue isn't a lack of tokens, it's a lack of infrastructure to manage them. Auditing multiple design system workflows revealed four systemic failures:",
-        problem1:
-            'Token drift between design and code, values defined in Figma diverged from what shipped in production, with no mechanism to detect or reconcile differences.',
-        problem2:
-            'No standard structure across teams, each team maintained its own token format (flat JSON, nested SCSS maps, ad-hoc CSS variables), making cross-product consistency impossible.',
+            'The more a design system grows, the harder it becomes to keep token naming and output consistent across themes, platforms and codebases. I was particularly interested in four problems:',
+        problem1: 'Different naming conventions between design and code',
+        problem2: 'Transforming tokens into multiple formats',
         problem3:
-            'Manual transformation into code formats, developers hand-translated design decisions into CSS/SCSS/JSON, introducing errors and eliminating traceability.',
+            'Resolving relationships between primitive and semantic values',
         problem4:
-            'Inconsistent theming implementation, dark mode and brand variants were handled differently per product, with no shared resolution logic or theme architecture.',
+            'Keeping theme-specific information from becoming difficult to maintain',
 
         // --- 3. Strategy ---
         strategyTitle: 'Strategy',
         strategyDescription:
-            'Rather than building another token editor, I designed a token pipeline, a system that separates concerns into discrete, testable stages. The core idea: treat tokens as structured data flowing through a deterministic transformation process, where each stage has a single responsibility and predictable output.',
+            'Rather than building another interface for editing tokens, I designed a pipeline that could take structured token data and transform it through a series of predictable steps.',
+        strategy1Title: 'Start with a standard',
         strategy1:
-            'Standardize on W3C Design Token Community Group (DTCG) format as the canonical schema, chosen for interoperability across tools and future-proofing against vendor lock-in.',
+            'Use the W3C Design Tokens Community Group format as the foundation for token structure and interoperability.',
+        strategy2Title: 'Separate concerns',
         strategy2:
-            "Separate normalization (bridging Figma's proprietary format to DTCG), resolution (alias flattening with dependency tracking), and transformation (output generation) into independent pipeline stages.",
+            'Keep extraction, normalization, transformation and output as distinct stages instead of combining them into one process.',
+        strategy3Title: 'Resolve relationships',
         strategy3:
-            'Build a single orchestrator, the Startoken Engine that coordinates this flow and can be consumed by any client (web app, Figma plugin, CLI) without duplication of logic.',
+            'Support aliases and token references so semantic tokens can build on primitive values without duplicating them.',
+        strategy4Title: 'Keep the pipeline extensible',
         strategy4:
-            'Expose the pipeline visually so designers and engineers can inspect what happens to their tokens at each stage — making the system auditable, not opaque.',
+            'Design the transformations so additional outputs and workflows can be added without rebuilding the entire system.',
 
         // --- 4. Architecture ---
         architectureTitle: 'Architecture',
         architectureDescription:
-            'The pipeline is a sequence of typed stages. Each stage receives structured input, performs one transformation, and passes typed output forward. No stage knows about any other. This constraint makes the system testable at each boundary and allows stages to be replaced or extended without side effects.',
+            'The pipeline is organized as a sequence of independent stages. Each stage transforms or validates the token data before passing it forward, making the system easier to reason about and extend.',
         architecturePipeline:
             'Figma → Plugin → Normalizer → Resolver → Transformer → UI Preview → Output',
 
         architectureDetail1Title: 'Why W3C DTCG standard?',
         architectureDetail1:
-            'Decision: Adopt W3C DTCG as the canonical token format instead of a custom schema. Trade-off: DTCG is still a draft spec — some edge cases (composite tokens, multi-value types) lack full definition. Adopting early means committing to a moving target. Outcome: Vendor-neutral interoperability. Tokens produced by Startoken can be consumed by Style Dictionary, Figma Tokens, or any DTCG-compliant tool without adapters. Standardizing early avoids migration debt when the spec stabilizes.',
+            'Decision: Adopt W3C DTCG as the canonical token format instead of a custom schema. Trade-off: DTCG is still a draft spec, some edge cases (composite tokens, multi-value types) lack full definition. Adopting early means committing to a moving target. Outcome: Vendor-neutral interoperability. Tokens produced by Startoken can be consumed by Style Dictionary, Figma Tokens, or any DTCG-compliant tool without adapters. Standardizing early avoids migration debt when the spec stabilizes.',
 
         architectureDetail2Title:
             'Why a custom engine instead of existing tools?',
         architectureDetail2:
-            'Decision: Build a purpose-built TypeScript engine rather than extending Style Dictionary or Theo. Trade-off: Higher upfront effort. No community plugin ecosystem. Full ownership of maintenance and edge case handling. Outcome: Complete control over the normalization → resolution → transformation flow. Style Dictionary assumes tokens are already well-structured; Startoken handles the messy reality of raw Figma exports. The engine runs identically in browser, Node, and Figma sandbox — something no existing tool supports natively.',
+            'Decision: Build a purpose-built TypeScript engine rather than extending Style Dictionary or Theo. Trade-off: Higher upfront effort. No community plugin ecosystem. Full ownership of maintenance and edge case handling. Outcome: Complete control over the normalization → resolution → transformation flow. Style Dictionary assumes tokens are already well-structured; Startoken handles the messy reality of raw Figma exports. The engine runs identically in browser, Node, and Figma sandbox, something no existing tool supports natively.',
 
         architectureDetail3Title: 'How alias resolution works',
         architectureDetail3:
-            "Tokens frequently reference other tokens in chains: color.primary → brand.blue.500 → palette.blue → #2563EB. The Resolver builds a directed dependency graph of all token references, then walks each chain to its terminal value. During traversal, it tracks visited nodes — if a token appears twice in the same chain, that's a cycle, and the resolver throws a descriptive error instead of entering an infinite loop. The output is a flat map where every token holds its fully resolved concrete value. This guarantees that downstream transformers never encounter unresolved references.",
+            "Tokens frequently reference other tokens in chains: color.primary → brand.blue.500 → palette.blue → #2563EB. The Resolver builds a directed dependency graph of all token references, then walks each chain to its terminal value. During traversal, it tracks visited nodes, if a token appears twice in the same chain, that's a cycle, and the resolver throws a descriptive error instead of entering an infinite loop. The output is a flat map where every token holds its fully resolved concrete value. This guarantees that downstream transformers never encounter unresolved references.",
 
         architectureDetail4Title: 'Trade-offs and limitations',
         architectureDetail4:
-            "Client-side processing: All token resolution happens in the browser. This enables instant preview and zero-backend deployment, but limits throughput for very large token sets (1,000+). The resolver is O(n·d) where n = token count and d = average alias depth — acceptable for most design systems, but a bottleneck at extreme scale. Single-pass normalization: The normalizer assumes Figma's current variable export format. If Figma changes their API structure, the normalizer breaks. This is isolated by design — only one stage needs updating. No runtime validation: The pipeline trusts that input conforms to expected shapes after normalization. Adding JSON Schema validation at stage boundaries would improve robustness but add processing overhead.",
+            "Client-side processing: All token resolution happens in the browser. This enables instant preview and zero-backend deployment, but limits throughput for very large token sets (1,000+). The resolver is O(n·d) where n = token count and d = average alias depth, acceptable for most design systems, but a bottleneck at extreme scale. Single-pass normalization: The normalizer assumes Figma's current variable export format. If Figma changes their API structure, the normalizer breaks. This is isolated by design, only one stage needs updating. No runtime validation: The pipeline trusts that input conforms to expected shapes after normalization. Adding JSON Schema validation at stage boundaries would improve robustness but add processing overhead.",
 
         architectureDetail5Title: 'Theme extraction',
         architectureDetail5:
-            'The engine detects theme-scoped tokens (light/dark/brand variants) and generates separate output sets per theme. Themes map to data attributes at runtime — [data-theme="dark"] scopes CSS custom properties without specificity conflicts or token duplication. This separation happens at the token level, not the CSS level, so each theme output is a complete, self-contained token set.',
+            'The engine detects theme-scoped tokens (light/dark/brand variants) and generates separate output sets per theme. Themes map to data attributes at runtime, [data-theme="dark"] scopes CSS custom properties without specificity conflicts or token duplication. This separation happens at the token level, not the CSS level, so each theme output is a complete, self-contained token set.',
         architectureMonorepo:
-            '@startoken/engine is the shared core — a zero-dependency TypeScript module that runs in Node, browser, or Figma sandbox. The monorepo strategy ensures this single engine is consumed by the web app, Figma plugin, and future API/CLI clients, preventing logic duplication across surfaces.',
+            '@startoken/engine is the shared core, a zero-dependency TypeScript module that runs in Node, browser, or Figma sandbox. The monorepo strategy ensures this single engine is consumed by the web app, Figma plugin, and future API/CLI clients, preventing logic duplication across surfaces.',
 
         // --- 5. System Design Decisions ---
         systemDecisionsTitle: 'System Design Decisions',
         systemDecisionsDescription:
-            'Each decision below includes the rationale, the trade-off accepted, and the resulting outcome:',
+            'Each decision below reflects a trade-off between flexibility, maintainability and implementation complexity.',
 
         systemDecision1Title: 'Zero-dependency TypeScript engine',
         systemDecision1:
-            'Decision: No external runtime dependencies in the core engine. Trade-off: Reimplemented utilities that libraries like lodash provide (deep merge, path traversal). More code to maintain. Outcome: The engine runs in any JavaScript environment — browser, Node, Figma plugin sandbox — without polyfills, bundler configuration, or environment detection. Deployment surface is unlimited.',
+            'Decision: No external runtime dependencies in the core engine. Trade-off: Reimplemented utilities that libraries like lodash provide (deep merge, path traversal). More code to maintain. Outcome: The engine runs in any JavaScript environment, browser, Node, Figma plugin sandbox, without polyfills, bundler configuration, or environment detection. Deployment surface is unlimited.',
 
         systemDecision2Title: 'Client-side processing vs backend',
         systemDecision2:
-            "Decision: All token processing happens in the browser, not a server. Trade-off: No persistent storage between sessions. Limited by browser memory for extremely large token sets. Can't trigger CI/CD pipelines directly. Outcome: Zero infrastructure cost. Instant preview without network latency. Users see token transformations in real-time as they modify inputs. The engine can later be deployed server-side without code changes — it's environment-agnostic by design.",
+            "Decision: All token processing happens in the browser, not a server. Trade-off: No persistent storage between sessions. Limited by browser memory for extremely large token sets. Can't trigger CI/CD pipelines directly. Outcome: Zero infrastructure cost. Instant preview without network latency. Users see token transformations in real-time as they modify inputs. The engine can later be deployed server-side without code changes, it's environment-agnostic by design.",
 
         systemDecision3Title: 'Normalization as a first-class pipeline stage',
         systemDecision3:
-            'Decision: Treat Figma-to-DTCG conversion as an explicit, isolated pipeline stage rather than inline preprocessing. Trade-off: Adds a processing step and requires maintaining a mapping layer that tracks Figma\'s export format. Outcome: Clean separation between "Figma\'s world" and "the token system." If Figma changes their variable export structure, only the normalizer needs updating — the resolver and transformer are unaffected. Also enables non-Figma inputs (JSON files, API responses) to enter the pipeline at the same boundary.',
+            'Decision: Treat Figma-to-DTCG conversion as an explicit, isolated pipeline stage rather than inline preprocessing. Trade-off: Adds a processing step and requires maintaining a mapping layer that tracks Figma\'s export format. Outcome: Clean separation between "Figma\'s world" and "the token system." If Figma changes their variable export structure, only the normalizer needs updating, the resolver and transformer are unaffected. Also enables non-Figma inputs (JSON files, API responses) to enter the pipeline at the same boundary.',
 
         systemDecision4Title: 'Theme separation at the token level',
         systemDecision4:
-            'Decision: Extract themes (light/dark/brand) during token resolution, producing separate token sets per theme — not at the CSS output level. Trade-off: Increases the number of output artifacts (one file per theme per format). Requires consumers to load the correct theme set. Outcome: Each theme output is a complete, self-contained token set. No CSS specificity conflicts between themes. Runtime switching uses data attributes ([data-theme="dark"]) scoping CSS custom properties. Themes can be loaded on demand, reducing initial payload.',
+            'Decision: Extract themes (light/dark/brand) during token resolution, producing separate token sets per theme, not at the CSS output level. Trade-off: Increases the number of output artifacts (one file per theme per format). Requires consumers to load the correct theme set. Outcome: Each theme output is a complete, self-contained token set. No CSS specificity conflicts between themes. Runtime switching uses data attributes ([data-theme="dark"]) scoping CSS custom properties. Themes can be loaded on demand, reducing initial payload.',
 
         // --- 6. Pipeline Implementation ---
         executionTitle: 'Pipeline Implementation',
         executionDescription:
-            'The pipeline processes tokens through six stages. Each stage receives typed input from the previous stage and produces typed output for the next. The UI reflects pipeline state in real-time with debounced updates — changes propagate through all stages without blocking interaction.',
+            'The final pipeline connects the previous decisions into an end-to-end flow: Figma variables are extracted, normalized, transformed and resolved before being prepared for output.',
 
         execution1Title: 'End-to-end flow',
         execution1Description:
-            "Figma variables are extracted via plugin → the Normalizer converts Figma's proprietary collection/mode structure into valid DTCG JSON → the Resolver walks alias chains and flattens all references to concrete values → the Transformer generates target formats (CSS custom properties, SCSS variables, JSON) → the Preview renders output as live CSS applied to sample components → the user exports final artifacts. Each boundary is typed — if a stage produces malformed output, the next stage fails explicitly rather than propagating bad data.",
+            'The implementation turns the system from a set of design decisions into a working pipeline. Each stage has a specific responsibility, which makes it possible to inspect and validate the data as it moves through the process.',
 
         execution2Title: 'Figma plugin extraction',
         execution2Description:
-            "The plugin reads Figma's variable collections, modes, and alias references, then serializes them as structured JSON. This raw export preserves Figma's hierarchy (collections → modes → variables) without interpretation — normalization happens in the next stage, keeping the plugin thin and focused on data extraction.",
+            'The Figma plugin extends the pipeline back to the design side, extracting variables and preparing them for the same token workflow. This connects the source of the design decisions with the transformation and validation steps used downstream.',
 
         execution3Title: 'Live token preview',
         execution3Description:
-            'Resolved tokens are applied to a component sandbox as CSS custom properties in real-time. The preview uses requestAnimationFrame-throttled updates to reflect pipeline changes without layout thrashing. Users see exactly what the generated tokens look like when applied to real UI elements — buttons, cards, typography — before exporting.',
+            'Resolved tokens are applied to sample components as CSS custom properties. The preview updates as tokens move through the pipeline, allowing validation before export.',
 
         execution4Title: 'Naming convention validation',
         execution4Description:
-            'A supporting capability that validates token names against the DTCG schema structure. Teams test their naming conventions (category.property.variant.state) before committing to a structure, catching naming inconsistencies at authoring time rather than after tokens propagate through the system.',
+            'Teams can test and validate naming conventions before applying them to the full token set. This catches structural inconsistencies early.',
 
-        // --- 7. Impact ---
+        // --- 7. Outcome ---
+        outcomeTitle: 'Outcome',
+        outcomeDescription:
+            'Startoken became more than a naming experiment. It gave me a working way to explore how design tokens can move from Figma into structured, code-ready data while keeping naming, relationships and themes under control.',
+        outcomeDetail:
+            'More importantly, building the pipeline helped me understand the decisions that sit between a design-system specification and the code that consumes it.',
+
+        // --- 8. What I Learned ---
+        learnedTitle: 'What I learned',
+        learnedDescription1:
+            'The biggest lesson was that a token pipeline is less about converting files and more about defining clear boundaries between design decisions and implementation decisions. Working through those boundaries in code changed how I think about token architecture, naming and system flexibility.',
+        learnedDescription2: '',
+        learnedDescription3: '',
+
+        // --- 9. Impact ---
         impactTitle: 'Impact',
         impactDescription:
             'Measured and observed outcomes from building, testing, and demonstrating the pipeline:',
@@ -638,7 +668,7 @@ export const Startoken: ProjectContent[] = [
         improvementsTitle: 'Future Improvements',
         improvementsDescription: 'Planned enhancements to extend the system:',
         improvement1:
-            'CLI integration — enable token generation as a build step, with validation gates in pull requests to catch breaking token changes before merge.',
+            'CLI integration, enable token generation as a build step, with validation gates in pull requests to catch breaking token changes before merge.',
         improvement2:
             'API for CI/CD pipelines, expose the engine as a service endpoint so token updates can trigger automated builds and deployments across products.',
         improvement3:
@@ -649,7 +679,7 @@ export const Startoken: ProjectContent[] = [
             'Large token set optimization, improve resolver performance for libraries with 1,000+ tokens using topological sort instead of recursive traversal.',
 
         finalReflection:
-            'Startoken reflects how I approach system problems: identify the structural gap, design a pipeline that separates concerns, and build it end-to-end with deterministic, testable stages. It demonstrates hands-on engineering paired with design systems thinking — the intersection where I do my strongest work.',
+            'Startoken reflects how I approach system problems: identify the structural gap, design a pipeline that separates concerns, and build it end-to-end with deterministic, testable stages. It demonstrates hands-on engineering paired with design systems thinking, the intersection where I do my strongest work.',
     },
 ]
 
@@ -659,20 +689,79 @@ export const MUIK: ProjectContent[] = [
         key: 'Motion UI Kit',
         headTitle: 'Motion UI Kit',
         roleTitle: 'Role:',
-        role: 'UI Design · Frontend Dev · Design System Strategy',
+        role: 'UI Design · Design Systems · Frontend Implementation',
         dateTitle: 'Date:',
         date: '2025',
         companyTitle: 'Company:',
         company: 'Personal Product',
 
-        subtitleResume: 'Build Better UIs Faster',
+        // Introduction Section
+        subtitleResume: 'Exploring motion as a system',
         titleResume: 'MUIK',
         contentResume:
-            'Motion UI Kit is a free-first library of React components built with a design system mindset. It was created for developers and designers who struggle to find clear, scalable guidelines for motion in design systems. The kit applies system thinking to animations, making micro-interactions consistent, accessible, and easy to implement.',
+            'I built Motion UI Kit as an exploration of how motion could work as part of a design system, rather than being added separately to each component. I wanted to define reusable rules for things like easing, duration and scale, and then see how those decisions could translate into working React components.',
 
-        bullet1: 'Built with Framer Motion for smooth, accessible animations',
-        bullet2: 'Design tokens + system principles for scalability',
-        bullet3: 'Dark mode first, responsive architecture',
-        bullet4: 'Available in Free + Pro versions',
+        bullet1: 'Reusable motion patterns built with React and Framer Motion',
+        bullet2: 'Animation tokens for easing, duration and scale',
+        bullet3: 'Responsive and dark-mode architecture',
+        bullet4: 'Motion patterns designed with accessibility in mind',
+
+        // Focus Section
+        focusTitle: 'Focus',
+        focusContent:
+            'I wanted motion to be reusable instead of something each team solves differently. I explored animation tokens for easing, duration and scale, and used them to define more consistent motion patterns.',
+
+        // From System to Implementation Section
+        implementationTitle: 'From system to implementation',
+        implementationContent:
+            "I didn't want the project to stop at documentation. I built the examples in React and used Framer Motion to test how the motion rules behaved in real components. This became a way to validate whether the system was actually reusable, rather than just looking good in a spec.",
+
+        // Technical Approach Section
+        technicalTitle: 'Technical approach',
+
+        techBlock1Title: 'React + Framer Motion',
+        techBlock1Content:
+            'Components were built in React, with Framer Motion handling the animation layer and allowing the motion patterns to be tested in a working interface.',
+
+        techBlock2Title: 'Motion tokens',
+        techBlock2Content:
+            'Animation decisions such as duration, easing and scale were treated as reusable system values instead of component-specific values.',
+
+        techBlock3Title: 'Component thinking',
+        techBlock3Content:
+            'I structured the examples around reusable patterns rather than one-off animations, so the same principles could be applied across different components.',
+
+        techBlock4Title: 'Responsive + dark mode',
+        techBlock4Content:
+            'The interface was designed to work across viewport sizes and themes, keeping the motion examples consistent as the UI changes.',
+
+        // Accessibility Section
+        accessibilityTitle: 'Accessibility',
+        accessibilityContent:
+            'Motion also made me think about when animation should be reduced or avoided. I considered reduced-motion behavior so the interactions could support the interface without becoming a barrier to using it.',
+
+        // Try the System Section
+        trySystemTitle: 'Try the system',
+        trySystemContent:
+            'The project is available as an interactive demo where the motion patterns can be experienced directly in working components.',
+        trySystemNote:
+            'The interactive demo is hosted separately and maintained as part of the Motion UI Kit project.',
+
+        // Why Make Motion a System Section
+        whyMotionTitle: 'Why make motion a system?',
+        whyMotionContent:
+            'Treating motion as part of the design system makes it easier to reuse decisions instead of recreating them for every component.',
+
+        whyMotionBenefit1: 'Consistent easing and timing',
+        whyMotionBenefit2: 'Reusable interaction patterns',
+        whyMotionBenefit3: 'Clearer guidance for designers and developers',
+
+        // What I Learned Section
+        learnedTitle: 'What I learned',
+        learnedContent1:
+            'Building the project helped me understand where a motion system needs rules and where it still needs flexibility. Implementing the components in React also changed some of my design decisions, especially around reusable patterns, states and how much control a component should expose.',
+
+        learnedContent2:
+            'It reinforced something I find valuable about working between design and code: implementation is not only a final step. It can reveal better decisions about the system itself.',
     },
 ]

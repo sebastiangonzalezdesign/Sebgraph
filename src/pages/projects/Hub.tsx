@@ -74,6 +74,9 @@ const Hub = () => {
                                 <p className="paragraph__100--medium">
                                     {dataPortfolio.contentResume}
                                 </p>
+                                <p className="paragraph__100--medium">
+                                    {dataPortfolio.contentResume2}
+                                </p>
                             </div>
                         </article>
                     </section>
@@ -97,8 +100,8 @@ const Hub = () => {
                             style={{ marginBottom: '1rem' }}
                         >
                             Focus: Redesigned and scaled a mobile design system
-                            with robust theming architecture, reducing UI
-                            duplication by 40% across mobile and web platforms.
+                            with theming architecture that reduced duplication
+                            across mobile and web platforms.
                         </p>
                         <div className="modal__collaboration-callout">
                             <p className="paragraph__200--medium">
@@ -354,9 +357,10 @@ const Hub = () => {
                                 className="paragraph__200--medium"
                                 style={{ marginBottom: '1rem' }}
                             >
-                                The design system reduced duplicated UI patterns
-                                by ~40% and improved consistency across mobile
-                                and web platforms.
+                                The migration established a more structured
+                                foundation for the product, bringing
+                                foundations, tokens, themes and reusable
+                                components into a more consistent system.
                             </p>
                             <p className="paragraph__200--medium">
                                 <strong>Future Foundation:</strong> Built

@@ -5,12 +5,6 @@ import SEO from '../../components/SEO'
 import { seoConfig } from '../../seoConfig'
 import BackButton from '../../components/BackButton'
 import ImageModalZoom from '../../components/ImageModalZoom'
-import {
-    CheckIcon,
-    ChartBarIcon,
-    ClockIcon,
-    ShieldCheckIcon,
-} from '@heroicons/react/24/outline'
 
 const AlephDS = () => {
     const [dataPortfolio] = useState(Aleph)
@@ -81,6 +75,9 @@ const AlephDS = () => {
                                 <p className="paragraph__100--medium">
                                     {dataPortfolio.contentResume}
                                 </p>
+                                <p className="paragraph__100--medium">
+                                    {dataPortfolio.contentResume2}
+                                </p>
                             </div>
                         </article>
                     </section>
@@ -100,12 +97,12 @@ const AlephDS = () => {
                             </span>
                         </div>
                         <p
-                            className="paragraph__100--bold"
+                            className="paragraph__100--medium"
                             style={{ marginBottom: '1rem' }}
                         >
-                            Focus: Built a cross-platform design system from
-                            scratch to unify map-based tools, improving design
-                            consistency and developer efficiency by 30%.
+                            Creating a scalable visual language and reusable
+                            component system while bringing consistency to
+                            existing product experiences.
                         </p>
                         <div className="modal__collaboration-callout">
                             <p className="paragraph__200--medium">
@@ -126,6 +123,9 @@ const AlephDS = () => {
                             </h1>
                             <p className="paragraph__100--medium modal__paragraph">
                                 {dataPortfolio.challengeDescription}
+                            </p>
+                            <p className="paragraph__100--medium modal__paragraph">
+                                {dataPortfolio.challengeDescription2}
                             </p>
                         </article>
                         <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/aleph/Results.png">
@@ -427,46 +427,6 @@ const AlephDS = () => {
                                 <li>{dataPortfolio.contentBullet3}</li>
                             </ul>
                         </article>
-
-                        {/* Measurable Impact */}
-                        <div className="modal__impact-highlight">
-                            <h4
-                                className="heading__200--bold"
-                                style={{ marginBottom: '1rem' }}
-                            >
-                                Key Impact & Results
-                            </h4>
-                            <ul className="paragraph__200--medium modal__impact-list">
-                                <li>
-                                    <ChartBarIcon className="impact-icon" />
-                                    <span>
-                                        Reduced UI inconsistency across 3
-                                        geospatial applications by 65%
-                                    </span>
-                                </li>
-                                <li>
-                                    <CheckIcon className="impact-icon" />
-                                    <span>
-                                        Accelerated component adoption by
-                                        engineering teams by 40%
-                                    </span>
-                                </li>
-                                <li>
-                                    <ClockIcon className="impact-icon" />
-                                    <span>
-                                        Cut design review cycles in half through
-                                        standardized patterns
-                                    </span>
-                                </li>
-                                <li>
-                                    <ShieldCheckIcon className="impact-icon" />
-                                    <span>
-                                        Improved WCAG 2.1 compliance across all
-                                        map interfaces
-                                    </span>
-                                </li>
-                            </ul>
-                        </div>
 
                         <article className="modal__secondary-text-box">
                             <h3 className="heading__100--bold modal__subtitle">

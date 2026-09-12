@@ -101,8 +101,19 @@ const Portfolio = forwardRef<HTMLDivElement, {}>((props, ref) => {
             }
         }
 
-        // Initial measurement
-        measureGliderDimensions()
+        // Wait for fonts to load and DOM to settle
+        if (document.fonts && document.fonts.ready) {
+            document.fonts.ready.then(() => {
+                requestAnimationFrame(() => {
+                    measureGliderDimensions()
+                })
+            })
+        } else {
+            // Fallback for browsers that don't support FontFaceSet
+            requestAnimationFrame(() => {
+                measureGliderDimensions()
+            })
+        }
 
         // Re-measure on window resize
         window.addEventListener('resize', measureGliderDimensions)

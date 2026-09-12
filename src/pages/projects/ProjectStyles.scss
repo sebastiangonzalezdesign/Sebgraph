@@ -325,6 +325,47 @@
                 padding: $size-8;
             }
         }
+
+        /* Horizontal layout modifier for sections with title on left, content on right */
+        /* Horizontal layout modifier for sections with title on left, content on right */
+        &__box--horizontal {
+            flex-direction: row;
+            align-items: flex-start;
+            gap: $size-11;
+
+            @include mq(large) {
+                flex-direction: column;
+                align-items: center;
+                gap: $size-10;
+            }
+
+            & .modal__main-text-box {
+                flex: 0 0 35%;
+                min-width: 0;
+
+                @include mq(large) {
+                    flex: 1;
+                    width: 100%;
+                }
+            }
+
+            & .modal__define__boxes {
+                flex: 1;
+                display: flex;
+                flex-direction: row;
+
+                @include mq(large) {
+                    flex: 1;
+                    width: 100%;
+                    flex-direction: column;
+                }
+
+                & .modal__define__box-goals {
+                    width: 100%;
+                }
+            }
+        }
+
         /*         &__box:not(:last-child) {
             margin-right: 4rem;
             @include mq(medium) {
@@ -374,6 +415,25 @@
         &__box-goals:only-child {
             width: 100%;
         }
+
+        /* 2x2 grid layout for technical approach cards */
+        &__boxes--grid2x2 {
+            display: grid !important;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            width: 100%;
+            flex-direction: row;
+
+            @include mq(large) {
+                grid-template-columns: 1fr;
+            }
+
+            & .modal__define__box-goals {
+                width: 100%;
+                margin: 0;
+            }
+        }
+
         &__goal-list {
             list-style: none;
             flex-direction: column;
@@ -496,11 +556,13 @@
         gap: $flex-group-gap; // 1rem from your tokens
         align-items: center;
         flex-wrap: wrap;
+        max-width: 25rem;
 
         @include mq(medium) {
             flex-direction: column;
             align-items: stretch;
             gap: $gutter-small; // 1rem from your tokens
+            max-width: 100%;
         }
 
         .modal__button-project {

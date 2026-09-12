@@ -84,6 +84,9 @@ const Startoken = () => {
                                 <p className="paragraph__100--medium">
                                     {dataPortfolio.contentResume}
                                 </p>
+                                <p className="paragraph__100--medium">
+                                    {dataPortfolio.contentResume2}
+                                </p>
                             </div>
                         </article>
                     </section>
@@ -97,30 +100,21 @@ const Startoken = () => {
                             <span className="modal__role-tag">
                                 Design Tokens
                             </span>
-                            <span className="modal__role-tag">Frontend</span>
-                            <span className="modal__role-tag">TypeScript</span>
+                            <span className="modal__role-tag">Standards</span>
+                            <span className="modal__role-tag">Validation</span>
                             <span className="modal__role-tag">Pipeline</span>
-                            <span className="modal__role-tag">
-                                Figma Plugin
-                            </span>
+                            <span className="modal__role-tag">TypeScript</span>
                         </div>
                         <p
-                            className="paragraph__100--bold"
+                            className="paragraph__100--medium"
                             style={{ marginBottom: '1rem' }}
                         >
-                            Focus: Designed and built an end-to-end token
-                            pipeline that normalizes Figma variables into
-                            W3C-compliant tokens, resolves aliases, extracts
-                            themes, and outputs production-ready CSS/JSON/SCSS.
+                            A system for moving design tokens from Figma through
+                            predictable transformation stages into production
+                            code. The pipeline handles normalization, alias
+                            resolution, theme extraction, and multi-format
+                            output as discrete, testable steps.
                         </p>
-                        <div className="modal__collaboration-callout">
-                            <p className="paragraph__200--medium">
-                                <strong>System Architecture:</strong> Built as a
-                                zero-dependency TypeScript engine
-                                (@startoken/engine) shared across web app, Figma
-                                plugin, and future CLI via monorepo strategy.
-                            </p>
-                        </div>
                     </section>
 
                     {/* Section 1: Context */}
@@ -131,6 +125,9 @@ const Startoken = () => {
                             </h1>
                             <p className="paragraph__100--medium modal__paragraph">
                                 {dataPortfolio.contextDescription}
+                            </p>
+                            <p className="paragraph__100--medium modal__paragraph">
+                                {dataPortfolio.contextDescription2}
                             </p>
                         </article>
                     </section>
@@ -173,22 +170,59 @@ const Startoken = () => {
                                 <p className="paragraph__100--regular modal__paragraph">
                                     {dataPortfolio.strategyDescription}
                                 </p>
-                                <ol className="modal__define__goal-list">
-                                    <li className="paragraph__200--regular modal__define__goal-item">
-                                        {dataPortfolio.strategy1}
-                                    </li>
-                                    <li className="paragraph__200--regular modal__define__goal-item">
-                                        {dataPortfolio.strategy2}
-                                    </li>
-                                    <li className="paragraph__200--regular modal__define__goal-item">
-                                        {dataPortfolio.strategy3}
-                                    </li>
-                                    <li className="paragraph__200--regular modal__define__goal-item">
-                                        {dataPortfolio.strategy4}
-                                    </li>
-                                </ol>
                             </div>
                         </article>
+
+                        <article className="modal__secondary-text-box">
+                            <h3 className="heading__100--bold modal__subtitle">
+                                {dataPortfolio.strategy1Title}
+                            </h3>
+                            <p className="paragraph__100--medium modal__text">
+                                {dataPortfolio.strategy1}
+                            </p>
+                        </article>
+
+                        <article className="modal__secondary-text-box">
+                            <h3 className="heading__100--bold modal__subtitle">
+                                {dataPortfolio.strategy2Title}
+                            </h3>
+                            <p className="paragraph__100--medium modal__text">
+                                {dataPortfolio.strategy2}
+                            </p>
+                        </article>
+
+                        <article className="modal__secondary-text-box">
+                            <h3 className="heading__100--bold modal__subtitle">
+                                {dataPortfolio.strategy3Title}
+                            </h3>
+                            <p className="paragraph__100--medium modal__text">
+                                {dataPortfolio.strategy3}
+                            </p>
+                        </article>
+
+                        <article className="modal__secondary-text-box">
+                            <h3 className="heading__100--bold modal__subtitle">
+                                {dataPortfolio.strategy4Title}
+                            </h3>
+                            <p className="paragraph__100--medium modal__text">
+                                {dataPortfolio.strategy4}
+                            </p>
+                        </article>
+                    </section>
+
+                    {/* Section 4: Architecture */}
+                    <section className="modal__template">
+                        <article className="mb-20 modal__main-text-box">
+                            <h1 className="display__100--bold modal__title modal__main-text-box">
+                                {dataPortfolio.architectureTitle}
+                            </h1>
+                            <div className="modal__define__box-goals">
+                                <p className="paragraph__100--regular modal__paragraph">
+                                    {dataPortfolio.architectureDescription}
+                                </p>
+                            </div>
+                        </article>
+
                         <ImageModalZoom src="https://sebastiangonzalez.design/images/projects/startoken/pipeline-architecture.webp">
                             <picture className="modal__img-container">
                                 <source
@@ -205,23 +239,6 @@ const Startoken = () => {
                                 />
                             </picture>
                         </ImageModalZoom>
-                    </section>
-
-                    {/* Section 4: Architecture */}
-                    <section className="modal__template">
-                        <article className="mb-20 modal__main-text-box">
-                            <h1 className="display__100--bold modal__title modal__main-text-box">
-                                {dataPortfolio.architectureTitle}
-                            </h1>
-                            <div className="modal__define__box-goals">
-                                <p className="paragraph__100--regular modal__paragraph">
-                                    {dataPortfolio.architectureDescription}
-                                </p>
-                                <p className="paragraph__100--bold">
-                                    {dataPortfolio.architecturePipeline}
-                                </p>
-                            </div>
-                        </article>
 
                         {/* Architecture detail: Alias Resolution */}
                         <article className="modal__secondary-text-box">
@@ -416,7 +433,48 @@ const Startoken = () => {
                         </article>
                     </section>
 
-                    {/* Section 7: Impact */}
+                    {/* Section 7: Outcome */}
+                    <section className="modal__template">
+                        <article className="mb-20 modal__main-text-box">
+                            <h1 className="display__100--bold modal__title modal__main-text-box">
+                                {dataPortfolio.outcomeTitle}
+                            </h1>
+                            <div className="modal__define__box-goals">
+                                <p className="paragraph__100--regular modal__paragraph">
+                                    {dataPortfolio.outcomeDescription}
+                                </p>
+                                <p className="paragraph__100--regular modal__paragraph">
+                                    {dataPortfolio.outcomeDetail}
+                                </p>
+                            </div>
+                        </article>
+                    </section>
+
+                    {/* Section 8: What I Learned */}
+                    <section className="modal__template">
+                        <article className="mb-20 modal__main-text-box">
+                            <h1 className="display__100--bold modal__title modal__main-text-box">
+                                {dataPortfolio.learnedTitle}
+                            </h1>
+                            <div className="modal__define__box-goals">
+                                <p className="paragraph__100--regular modal__paragraph">
+                                    {dataPortfolio.learnedDescription1}
+                                </p>
+                                {dataPortfolio.learnedDescription2 && (
+                                    <p className="paragraph__100--regular modal__paragraph">
+                                        {dataPortfolio.learnedDescription2}
+                                    </p>
+                                )}
+                                {dataPortfolio.learnedDescription3 && (
+                                    <p className="paragraph__100--regular modal__paragraph">
+                                        {dataPortfolio.learnedDescription3}
+                                    </p>
+                                )}
+                            </div>
+                        </article>
+                    </section>
+
+                    {/* Section 9: Impact */}
                     <section className="modal__other-projects modal__end">
                         <article className="modal__secondary-text-box">
                             <h3 className="display__100--bold modal__subtitle">
