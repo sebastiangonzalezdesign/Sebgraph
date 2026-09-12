@@ -77,11 +77,20 @@ const PasswordPage = () => {
         try {
             // Use the callable function (better for Firebase)
             const verifyPassword = httpsCallable(functions, 'verifyPassword')
-            console.log('[PasswordPage] Calling verifyPassword function...')
+            if (import.meta.env.DEV) {
+                console.log('[PasswordPage] Calling verifyPassword function...')
+            }
             const result = await verifyPassword({ password: inputPassword })
 
-            console.log('[PasswordPage] Function result:', result.data)
-            const { success, token, error } = result.data as VerifyPasswordResponse
+            // Only log in development mode (don't expose token in production console)
+            if (import.meta.env.DEV) {
+                console.log(
+                    '[PasswordPage] Function result - success:',
+                    result.data.success
+                )
+            }
+            const { success, token, error } =
+                result.data as VerifyPasswordResponse
 
             if (success && token) {
                 // Store JWT token in localStorage
@@ -94,11 +103,15 @@ const PasswordPage = () => {
                 navigate('/projects/Hub', { replace: true })
             } else if (error) {
                 // Server returned specific error
-                console.warn('[PasswordPage] Function error:', error)
+                if (import.meta.env.DEV) {
+                    console.warn('[PasswordPage] Function error:', error)
+                }
                 if (error.includes('Incorrect')) {
                     setErrorMessage('Incorrect password. Please try again.')
                 } else if (error.includes('configuration')) {
-                    setErrorMessage('Service configuration error. Please contact support.')
+                    setErrorMessage(
+                        'Service configuration error. Please contact support.'
+                    )
                 } else {
                     setErrorMessage(error)
                 }
@@ -106,11 +119,15 @@ const PasswordPage = () => {
                 setErrorMessage('Incorrect password. Please try again.')
             }
         } catch (error: any) {
-            console.error('[PasswordPage] Function call error:', error)
-            
+            if (import.meta.env.DEV) {
+                console.error('[PasswordPage] Function call error:', error)
+            }
+
             // Check for specific error types
             if (error.code === 'unavailable') {
-                setErrorMessage('Service unavailable. Please check your connection and try again.')
+                setErrorMessage(
+                    'Service unavailable. Please check your connection and try again.'
+                )
             } else if (error.code === 'unauthenticated') {
                 setErrorMessage('Authentication error. Please try again.')
             } else if (error.code === 'permission-denied') {
@@ -118,7 +135,9 @@ const PasswordPage = () => {
             } else if (error.message) {
                 setErrorMessage(`Error: ${error.message}`)
             } else {
-                setErrorMessage('An error occurred while verifying the password.')
+                setErrorMessage(
+                    'An error occurred while verifying the password.'
+                )
             }
         }
     }
