@@ -77,9 +77,11 @@ const PasswordPage = () => {
         try {
             // Use the callable function (better for Firebase)
             const verifyPassword = httpsCallable(functions, 'verifyPassword')
+            console.log('[PasswordPage] Calling verifyPassword function...')
             const result = await verifyPassword({ password: inputPassword })
 
-            const { success, token } = result.data as VerifyPasswordResponse
+            console.log('[PasswordPage] Function result:', result.data)
+            const { success, token, error } = result.data as VerifyPasswordResponse
 
             if (success && token) {
                 // Store JWT token in localStorage
@@ -90,11 +92,34 @@ const PasswordPage = () => {
 
                 // Navigate to Hub
                 navigate('/projects/Hub', { replace: true })
+            } else if (error) {
+                // Server returned specific error
+                console.warn('[PasswordPage] Function error:', error)
+                if (error.includes('Incorrect')) {
+                    setErrorMessage('Incorrect password. Please try again.')
+                } else if (error.includes('configuration')) {
+                    setErrorMessage('Service configuration error. Please contact support.')
+                } else {
+                    setErrorMessage(error)
+                }
             } else {
                 setErrorMessage('Incorrect password. Please try again.')
             }
-        } catch (error) {
-            setErrorMessage('An error occurred while verifying the password.')
+        } catch (error: any) {
+            console.error('[PasswordPage] Function call error:', error)
+            
+            // Check for specific error types
+            if (error.code === 'unavailable') {
+                setErrorMessage('Service unavailable. Please check your connection and try again.')
+            } else if (error.code === 'unauthenticated') {
+                setErrorMessage('Authentication error. Please try again.')
+            } else if (error.code === 'permission-denied') {
+                setErrorMessage('Permission denied. Please contact support.')
+            } else if (error.message) {
+                setErrorMessage(`Error: ${error.message}`)
+            } else {
+                setErrorMessage('An error occurred while verifying the password.')
+            }
         }
     }
 
