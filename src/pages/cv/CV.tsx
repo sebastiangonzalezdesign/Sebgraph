@@ -75,27 +75,15 @@ const CV = () => {
                         <h2 className="heading__100--bold subtitle">Profile</h2>
                         {/* Short summary before profile for quick readability */}
                         <p className="paragraph__100--medium cv-summary">
-                            UI Designer specialized in design systems, focused
-                            on building scalable interfaces and bridging design
-                            with frontend implementation.
-                        </p>
-
-                        <p className="paragraph__100--medium">
-                            I bring a strong foundation in visual design and
-                            system thinking, combined with hands-on experience
-                            working with design tokens, component systems, and
-                            frontend technologies (React, JavaScript).
-                        </p>
-
-                        <p className="paragraph__100--medium">
-                            Recently, I’ve been designing and building systems
-                            that connect design to code - including token
-                            pipelines, design system tooling, and
-                            frontend-integrated workflows.
-                        </p>
-
-                        <p className="paragraph__100--medium">
-                            Based in Bogotá, collaborating globally.
+                            UI/Visual Designer with 5+ years of experience
+                            focused on Design Systems, scalable interfaces and
+                            product experiences. I combine strong visual design
+                            with systems thinking, accessibility and frontend
+                            collaboration. My work connects design foundations,
+                            components and tokens with implementation workflows,
+                            while my personal projects continue to deepen my
+                            experience with React, TypeScript and design-to-code
+                            workflows.
                         </p>
 
                         {/* Crosslink to portfolio */}
@@ -145,10 +133,10 @@ const CV = () => {
                             Startoken — Design Token Pipeline System
                         </h3>
                         <p className="paragraph__100--medium featured-project-cv__description">
-                            Designed and built an end-to-end system that
-                            transforms Figma variables into production-ready CSS
-                            variables. Includes a custom TypeScript engine for
-                            normalization, alias resolution, and multi-theme
+                            Design token and front-end system that transforms
+                            Figma variables into production-ready CSS variables.
+                            Includes a custom TypeScript engine for
+                            normalization, alias resolution and multi-theme
                             output, along with a Figma plugin for real-time
                             synchronization.
                         </p>
@@ -208,32 +196,31 @@ const CV = () => {
 
                             <ul className="experience-cv__items paragraph">
                                 <li className="paragraph__100--regular experience-cv__item">
-                                    Contributing to the evolution of a scalable
-                                    design system used across product teams,
-                                    focusing on consistency, performance, and
-                                    implementation quality.
+                                    Contributed to the evolution of a scalable
+                                    Design System used across product teams,
+                                    supporting foundations, components and
+                                    system consistency.
                                 </li>
                                 <li className="paragraph__100--regular experience-cv__item">
-                                    Bridging design and engineering by aligning
-                                    design tokens, components, and frontend
-                                    implementation workflows.
+                                    Collaborated with frontend engineers to
+                                    align design components, tokens and
+                                    implementation workflows across product
+                                    teams.
                                 </li>
                                 <li className="paragraph__100--regular experience-cv__item">
-                                    Supporting the integration of design tokens
-                                    into production codebases, aligning token
-                                    structures with real frontend implementation
-                                    constraints.
+                                    Supported the integration of design tokens
+                                    and component patterns into production
+                                    workflows, helping maintain consistency
+                                    between design and implementation.
                                 </li>
                                 <li className="paragraph__100--regular experience-cv__item">
-                                    Collaborating closely with frontend
-                                    engineers to ensure accurate component
-                                    behavior, states, and accessibility
-                                    standards.
+                                    Improved Design System documentation and
+                                    patterns to make system guidance clearer and
+                                    easier to use.
                                 </li>
                                 <li className="paragraph__100--regular experience-cv__item">
-                                    Driving improvements in system documentation
-                                    and usage patterns to reduce inconsistencies
-                                    across teams.
+                                    Supported accessibility considerations
+                                    across components and product experiences.
                                 </li>
                             </ul>
                         </div>
@@ -254,8 +241,7 @@ const CV = () => {
                                 <li className="paragraph__100--regular experience-cv__item">
                                     Designed and scaled UI components within
                                     design systems for mobile and web platforms,
-                                    enhancing cross-product consistency and
-                                    reducing component deprecation by 30%.
+                                    enhancing cross-product consistency.
                                 </li>
                                 <li className="paragraph__100--regular experience-cv__item">
                                     Aligned design token strategies with
@@ -266,9 +252,9 @@ const CV = () => {
                                 </li>
                                 <li className="paragraph__100--regular experience-cv__item">
                                     Established design-to-code protocols and
-                                    documentation standards, enabling a 20%
-                                    faster deployment rate and reducing
-                                    implementation mismatches.
+                                    documentation standards to reduce
+                                    implementation mismatches and improve
+                                    consistency.
                                 </li>
                                 <li className="paragraph__100--regular experience-cv__item">
                                     Partnered with frontend engineers on
@@ -279,7 +265,7 @@ const CV = () => {
                                 <li className="paragraph__100--regular experience-cv__item">
                                     Led accessibility integration across design
                                     system components, ensuring WCAG compliance
-                                    and testing standards across product stages.
+                                    and testing standards.
                                 </li>
                             </ul>
                         </div>
@@ -299,8 +285,7 @@ const CV = () => {
                                 <li className="paragraph__100--regular experience-cv__item">
                                     Designed and prototyped scalable component
                                     systems for Samsung's digital products,
-                                    increasing feature usability and
-                                    cross-platform consistency by 25%.
+                                    enhancing cross-platform consistency.
                                 </li>
                                 <li className="paragraph__100--regular experience-cv__item">
                                     Produced high-fidelity wireframes and
@@ -317,8 +302,7 @@ const CV = () => {
                                 <li className="paragraph__100--regular experience-cv__item">
                                     Coordinated design system evolution with UX
                                     and engineering teams, translating research
-                                    insights into scalable component patterns,
-                                    driving 20% user engagement increase.
+                                    insights into scalable component patterns.
                                 </li>
                                 <li className="paragraph__100--regular experience-cv__item">
                                     Established design-to-development handoff
@@ -358,8 +342,9 @@ const CV = () => {
                                 Meta Front-End Developer
                             </h3>
                             <p className="paragraph__200--medium education-cv__university course-description">
-                                Intermediate proficiency in React, JavaScript,
-                                and responsive design.
+                                Front-end development fundamentals covering
+                                HTML, CSS, JavaScript, React, accessibility and
+                                responsive design.
                             </p>
                             <p className="heading__400--regular education-cv__university">
                                 Coursera
@@ -417,21 +402,36 @@ const CV = () => {
                         <div className="skills-cv__skills-container">
                             <div className="skills-cv__skill">
                                 <h3 className="heading__300--bold skills-cv__field">
-                                    Design Systems
+                                    Design
                                 </h3>
 
                                 <div className="skills-cv__container-items">
                                     <div className="skills-cv__item">
-                                        <Chip label="Design Tokens Architecture" />
+                                        <Chip label="Design Systems" />
+                                    </div>
+                                    <div className="skills-cv__item">
+                                        <Chip label="Design Token Architecture" />
                                     </div>
                                     <div className="skills-cv__item">
                                         <Chip label="Component Systems" />
                                     </div>
                                     <div className="skills-cv__item">
-                                        <Chip label="Theming (Light/Dark)" />
+                                        <Chip label="Theming" />
                                     </div>
                                     <div className="skills-cv__item">
                                         <Chip label="Accessibility" />
+                                    </div>
+                                    <div className="skills-cv__item">
+                                        <Chip label="Responsive Design" />
+                                    </div>
+                                    <div className="skills-cv__item">
+                                        <Chip label="Interaction Design" />
+                                    </div>
+                                    <div className="skills-cv__item">
+                                        <Chip label="Visual Design" />
+                                    </div>
+                                    <div className="skills-cv__item">
+                                        <Chip label="Prototyping" />
                                     </div>
                                 </div>
                             </div>
@@ -443,16 +443,22 @@ const CV = () => {
 
                                 <div className="skills-cv__container-items">
                                     <div className="skills-cv__item">
-                                        <Chip label="HTML / CSS / SCSS" />
+                                        <Chip label="HTML/CSS/SCSS" />
                                     </div>
                                     <div className="skills-cv__item">
-                                        <Chip label="JavaScript / TypeScript" />
+                                        <Chip label="JavaScript" />
+                                    </div>
+                                    <div className="skills-cv__item">
+                                        <Chip label="TypeScript" />
                                     </div>
                                     <div className="skills-cv__item">
                                         <Chip label="React" />
                                     </div>
                                     <div className="skills-cv__item">
                                         <Chip label="Design-to-code workflows" />
+                                    </div>
+                                    <div className="skills-cv__item">
+                                        <Chip label="Git/GitHub" />
                                     </div>
                                 </div>
                             </div>
@@ -467,16 +473,19 @@ const CV = () => {
                                         <Chip label="Figma" />
                                     </div>
                                     <div className="skills-cv__item">
-                                        <Chip label="Git / GitHub" />
+                                        <Chip label="Storybook" />
                                     </div>
                                     <div className="skills-cv__item">
                                         <Chip label="VS Code" />
                                     </div>
                                     <div className="skills-cv__item">
-                                        <Chip label="Framer / Lottie" />
+                                        <Chip label="Framer" />
                                     </div>
                                     <div className="skills-cv__item">
-                                        <Chip label="Storybook" />
+                                        <Chip label="Lottie" />
+                                    </div>
+                                    <div className="skills-cv__item">
+                                        <Chip label="AI-assisted development" />
                                     </div>
                                 </div>
                             </div>

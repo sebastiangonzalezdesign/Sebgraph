@@ -40,10 +40,10 @@ const About = () => {
 
     // Array of texts to cycle through
     const texts = [
-        'I try to code my ideas.',
+        "I'm trying to get good at tennis.",
+        'I like to think in systems.',
+        'I like to turn ideas into code.',
         'I like to illustrate.',
-        'I love biking.',
-        'I like to apply system thinking.',
     ]
 
     const [currentIndex, setCurrentIndex] = useState(0)
@@ -151,15 +151,30 @@ const About = () => {
                                 stiffness: 45,
                             }}
                         >
-                            I’m Sebastian González, a UI/Visual Designer
-                            passionate about crafting meaningful digital
-                            experiences. With over 5 years of experience, I’ve
-                            worked with brands like Samsung, continually
-                            refining my design and coding skills. My current
-                            focus is on scalable design systems and how emerging
-                            technologies like AI can enhance the way we build
-                            interfaces. Let’s work together to create something
-                            thoughtful, beautiful, and impactful.
+                            I'm Sebastian González, a UI/Visual Designer focused
+                            on Design Systems and the space between design and
+                            code. With 5+ years of experience, I've worked
+                            across digital products and with global brands,
+                            building my experience in visual design, scalable
+                            systems and frontend collaboration.
+                        </motion.p>
+                        <motion.p
+                            className="paragraph__100--medium profile__paragraph"
+                            initial="initial"
+                            animate="animate"
+                            exit="exit"
+                            variants={fadeUpVariants}
+                            transition={{
+                                delay: 0.3,
+                                type: 'spring',
+                                stiffness: 45,
+                            }}
+                        >
+                            I'm especially interested in how systems can make
+                            interfaces more consistent, accessible and easier to
+                            build. Outside of client work, I like exploring
+                            these ideas through personal projects where I can
+                            design, build and experiment with code.
                         </motion.p>
                     </article>
                 </section>
@@ -176,11 +191,10 @@ const About = () => {
                                     </h2>
                                 </div>
                                 <p className="paragraph__100--regular contact-container__paragraph">
-                                    Sebastian González is a UI/Visual designer
-                                    focused on design systems, product
-                                    interfaces and front-end collaboration. He
-                                    blends visual craft with production code to
-                                    ship polished experiences.
+                                    I’m interested in working on products where
+                                    design, systems and technology come
+                                    together. If you’re building something in
+                                    that space, I’d love to hear about it.
                                 </p>
                             </div>
 
