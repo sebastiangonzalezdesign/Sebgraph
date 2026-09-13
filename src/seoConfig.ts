@@ -1,9 +1,9 @@
 // Central SEO config for all main and project pages
 export const seoConfig = {
     home: {
-        title: 'Sebastian González – UI Designer & Design System Developer',
+        title: 'Sebastian González — Design Systems Designer | Design Technologist',
         description:
-            "I'm a UI designer focused on scalable design systems and front-end development. Let's build smarter interfaces together. Based in Bogotá, working remotely.",
+            'Design Systems Designer focused on scalable interfaces, design systems, accessibility, and the intersection of design and code. Based in Bogotá, Colombia.',
         url: 'https://sebastiangonzalez.design/',
         robots: 'index, follow',
         structuredData: {
@@ -12,9 +12,9 @@ export const seoConfig = {
                 {
                     '@type': 'Person',
                     name: 'Sebastian González',
-                    jobTitle: 'UI Designer & Design System Developer',
+                    jobTitle: 'Design Systems Designer',
                     description:
-                        'UI designer focused on scalable design systems and front-end development',
+                        'Design Systems Designer focused on scalable interfaces, design systems, accessibility, and the intersection of design and code',
                     url: 'https://sebastiangonzalez.design/',
                     sameAs: [
                         'https://github.com/sebasgonzac',
@@ -25,11 +25,12 @@ export const seoConfig = {
                         name: 'Sebastian González Design',
                     },
                     knowsAbout: [
-                        'UI Design',
                         'Design Systems',
-                        'Frontend Development',
+                        'UI Design',
+                        'Component Architecture',
                         'React',
                         'TypeScript',
+                        'Accessibility',
                     ],
                     address: {
                         '@type': 'Place',
@@ -39,10 +40,10 @@ export const seoConfig = {
                 },
                 {
                     '@type': 'WebSite',
-                    name: 'Sebastian González – UI Designer & Design System Developer',
+                    name: 'Sebastian González — Design Systems Designer | Design Technologist',
                     url: 'https://sebastiangonzalez.design/',
                     description:
-                        'Portfolio and case studies by Sebastian González — UI design, design systems and front-end collaboration.',
+                        'Portfolio and case studies by Sebastian González — Design Systems, UI design, and design-to-code collaboration.',
                     publisher: {
                         '@type': 'Organization',
                         name: 'Sebastian González Design',
@@ -52,18 +53,18 @@ export const seoConfig = {
         },
     },
     about: {
-        title: 'About – Sebastian González',
+        title: 'About — Sebastian González | Design Systems Designer',
         description:
-            'Get to know more about Sebastian González, a UI/Visual designer passionate about coding, design systems, and shaping digital experiences through technology.',
+            'I combine visual design with systems thinking, accessibility, and frontend collaboration to build scalable digital experiences and design systems.',
         url: 'https://sebastiangonzalez.design/about',
         robots: 'index, follow',
         structuredData: {
             '@context': 'https://schema.org',
             '@type': 'Person',
             name: 'Sebastian González',
-            jobTitle: 'UI Designer & Design System Developer',
+            jobTitle: 'Design Systems Designer',
             description:
-                'UI designer passionate about coding, design systems, and shaping digital experiences through technology.',
+                'I combine visual design with systems thinking, accessibility, and frontend collaboration to build scalable digital experiences and design systems.',
             url: 'https://sebastiangonzalez.design/about',
             sameAs: [
                 'https://github.com/sebasgonzac',
@@ -72,18 +73,18 @@ export const seoConfig = {
         },
     },
     cv: {
-        title: 'Resume – Sebastian González',
+        title: 'CV — Sebastian González | Design Systems Designer',
         description:
-            "Download Sebastian's resume and explore experience, skills, and tools. Specialized in UI design, design systems, and front-end development.",
+            'UI/Visual Designer specializing in Design Systems, component architecture, accessibility, and design-to-code workflows. View my experience.',
         url: 'https://sebastiangonzalez.design/cv',
         robots: 'index, follow',
         structuredData: {
             '@context': 'https://schema.org',
             '@type': 'Person',
             name: 'Sebastian González',
-            jobTitle: 'UI & Design System Specialist',
+            jobTitle: 'Design Systems Designer',
             description:
-                'UI & Design System Specialist with experience building scalable, user-centered digital products.',
+                'UI/Visual Designer specializing in Design Systems, component architecture, accessibility, and design-to-code workflows.',
             url: 'https://sebastiangonzalez.design/cv',
             sameAs: [
                 'https://github.com/sebasgonzac',
@@ -101,9 +102,9 @@ export const seoConfig = {
     },
     // Project pages with better descriptions
     aleph: {
-        title: 'Aleph Design System – Sebastian González',
+        title: 'Aleph — Enterprise Design System for Geospatial Interfaces',
         description:
-            'Design system project for satellite imagery platform. Creating intuitive interfaces for complex geospatial data and enhancing user collaboration across teams.',
+            'Design System for enterprise geospatial platform. Building scalable components, design foundations, design tokens, and interfaces for complex data visualization.',
         url: 'https://sebastiangonzalez.design/projects/aleph',
         robots: 'index, follow',
         image: 'https://sebastiangonzalez.design/images/projects/aleph/project.png',
@@ -114,7 +115,7 @@ export const seoConfig = {
             name: 'Aleph Design System',
             url: 'https://sebastiangonzalez.design/projects/aleph',
             description:
-                'Design system project for a geospatial imagery platform focusing on usable UI and scalable design tokens.',
+                'Design System for enterprise geospatial platform with scalable components, design foundations, and design tokens.',
             author: {
                 '@type': 'Person',
                 name: 'Sebastian González',
@@ -241,9 +242,9 @@ export const seoConfig = {
         },
     },
     startoken: {
-        title: 'Startoken Design System – Sebastian González',
+        title: 'Startoken — Design Token Pipeline & Figma Integration',
         description:
-            'Design token naming methodology for design systems. Unblock token naming conventions and create scalable design token architecture.',
+            'A design token pipeline built with TypeScript that connects Figma variables to production-ready CSS, with token normalization, aliases, and multi-theme support.',
         url: 'https://sebastiangonzalez.design/projects/startoken',
         robots: 'index, follow',
         image: 'https://sebastiangonzalez.design/images/projects/startoken/project.png',
@@ -251,10 +252,10 @@ export const seoConfig = {
         structuredData: {
             '@context': 'https://schema.org',
             '@type': 'CreativeWork',
-            name: 'Startoken Design Tokens',
+            name: 'Startoken Design Token Pipeline',
             url: 'https://sebastiangonzalez.design/projects/startoken',
             description:
-                'Design token naming methodology and architecture for scalable design systems.',
+                'Design token pipeline built with TypeScript that transforms Figma variables into production-ready CSS with token normalization and multi-theme support.',
             author: {
                 '@type': 'Person',
                 name: 'Sebastian González',
@@ -297,9 +298,9 @@ export const seoConfig = {
     },
     // MUIK Project case study (different from landing page)
     muikProject: {
-        title: 'Motion UI Kit Design System Project – Sebastian González',
+        title: 'Motion UI Kit — React Motion & Design System',
         description:
-            'Design system case study: Building a comprehensive UI component library with React, TypeScript, and Framer Motion. Design tokens, dark mode, and micro-interactions.',
+            'A React component library exploring motion in design systems, with Framer Motion, design tokens, accessibility, responsive components, and interactive UI patterns.',
         url: 'https://sebastiangonzalez.design/projects/MUIK',
         robots: 'index, follow',
         image: 'https://sebastiangonzalez.design/images/projects/MUIK/project.png',
@@ -310,7 +311,7 @@ export const seoConfig = {
             name: 'Motion UI Kit',
             url: 'https://sebastiangonzalez.design/projects/MUIK',
             description:
-                'A library of UI micro-interactions for React & Framer Motion; includes components, tokens, and usage patterns.',
+                'React component library with Framer Motion micro-interactions, design tokens, accessibility, and interactive UI patterns.',
             author: {
                 '@type': 'Person',
                 name: 'Sebastian González',
@@ -328,8 +329,9 @@ export const seoConfig = {
     },
     // Example for a protected/private page
     hub: {
-        title: 'Hub Design System – Sebastian González',
-        description: 'This project is protected.',
+        title: 'Hub — Design System Audit & Migration Project',
+        description:
+            'Design System audit and migration project. Foundations, token architecture, component consolidation, and cross-platform consistency.',
         url: 'https://sebastiangonzalez.design/projects/hub',
         robots: 'noindex, nofollow',
         structuredData: undefined,

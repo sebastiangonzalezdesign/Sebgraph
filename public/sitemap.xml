@@ -54,6 +54,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://sebastiangonzalez.design/projects/startoken</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://sebastiangonzalez.design/motion-ui-kit</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>monthly</changefreq>
